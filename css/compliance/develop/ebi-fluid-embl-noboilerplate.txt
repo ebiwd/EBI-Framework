@@ -1,5 +1,0 @@
-ebi-global.css
-ebi-visual.css
-984-24-col-fluid.css
-embl-petrol-colours.css
-
