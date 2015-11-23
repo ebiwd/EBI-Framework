@@ -1,47 +1,34 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 -->
-  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> --> <!-- Not yet implemented -->
 
   <title>[page-title] &lt; [service-name] &lt; EMBL-EBI</title>
   <meta name="description" content="EMBL-EBI"><!-- Describe what this page is about -->
   <meta name="keywords" content="bioinformatics, europe, institute"><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
   <meta name="author" content="EMBL-EBI"><!-- Your [project-name] here -->
 
-  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/boilerplate-style.css">
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-global.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-visual.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/984-24-col-fluid.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="../../move-to-cdn/css/ebi-global.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="../../move-to-cdn/css/ebi-visual.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="../../move-to-cdn/fonts/fonts.css" type="text/css" media="screen">
+<!--   <link rel="stylesheet" href="http://www.ebi.ac.uk/web_guidelines/css/compliance/develop/984-24-col-fluid.css" type="text/css" media="screen"> -->
   
+  <link rel="stylesheet" href="../../move-to-cdn/libraries/foundation-6/css/foundation.css" type="text/css" media="screen">
+
+
   <!-- you can replace this with [projectname]-colours.css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
   <!-- also inform ES so we can host your colour palette file -->
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/embl-petrol-colours.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="../../move-to-cdn/css/embl-petrol-colours.css" type="text/css" media="screen">
   
   <!-- for production the above can be replaced with -->
   <!--
   <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css">
   -->
-
-  <style type="text/css">
-    /* You have the option of setting a maximum width for your page, and making sure everything is centered */
-    /* body { max-width: 1600px; margin: 0 auto; } */
-  </style>
   
   <!-- end CSS-->
 
@@ -54,7 +41,7 @@
   <!-- <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.minified.2.1.6.js"></script> -->
   
   <!-- custom build (lacks most of the "advanced" HTML5 support -->
-  <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.custom.49274.js"></script>    
+  <script src="http://www.ebi.ac.uk/web_guidelines/js/libs/modernizr.custom.49274.js"></script>    
 
 </head>
 
@@ -68,72 +55,77 @@
     </ul>
   </div>
 
-  <div id="wrapper" class="container_24">
+  <div id="local-masthead">
     <header>
-      <div id="global-masthead" class="masthead grid_24">
-      <!--This has to be one line and no newline characters-->
-      <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png" alt="EMBL European Bioinformatics Institute"></a>
-
-      <nav>
-        <ul id="global-nav">
-          <!-- set active class as appropriate -->
-          <li class="first active" id="services"><a href="//www.ebi.ac.uk/services">Services</a></li>
-          <li id="research"><a href="//www.ebi.ac.uk/research">Research</a></li>
-          <li id="training"><a href="//www.ebi.ac.uk/training">Training</a></li>
-          <li id="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></li>
-          <li id="about" class="last"><a href="//www.ebi.ac.uk/about">About us</a></li>
-        </ul>
-      </nav>
-      
-    </div>
     
-    <div id="local-masthead" class="masthead grid_24 nomenu">
-      
-      <!-- local-title -->
+      <div id="global-masthead" class="clearfix">
+        <!--This has to be one line and no newline characters-->
+        <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png" alt="EMBL European Bioinformatics Institute"></a>
 
-      <div class="grid_24 alpha" id="local-title">
-        <h1><a href="[service-url]" title="Back to [service-name] homepage">Compliance Templates</a></h1>
+        <nav>
+          <ul id="global-nav">
+            <!-- set active class as appropriate -->
+            <li class="first active" id="services"><a href="//www.ebi.ac.uk/services">Services</a></li>
+            <li id="research"><a href="//www.ebi.ac.uk/research">Research</a></li>
+            <li id="training"><a href="//www.ebi.ac.uk/training">Training</a></li>
+            <li id="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></li>
+            <li id="about" class="last"><a href="//www.ebi.ac.uk/about">About us</a></li>
+          </ul>
+        </nav>
+        
       </div>
-      
-      <!-- /local-title -->
+    
+      <div class="masthead nomenu">
+        
+        <!-- local-title -->
+        <div class="row" id="local-title">
+          <h1><a href="[service-url]" title="Back to [service-name] homepage">Compliance Templates</a></h1>
+        </div>
+        
+        <!-- /local-title -->
 
-      <!-- /local-nav -->
+        <!-- local-nav -->
 
-      <nav>
-        <ul class="grid_24" id="local-nav">
-          <li class="first"><a href="index.html">Home</a></li>
-          <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a></li>
-            <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a></li>
-            <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a></li>
-            <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a></li>
-          <!-- If you need to include functional (as opposed to purely navigational) links in your local menu,
-               add them here, and give them a class of "functional". Remember: you'll need a class of "last" for
-               whichever one will show up last... 
-               For example: -->
-        </ul>
+        <nav>
+          <ul class="" id="local-nav">
+            <div class="row">
+              <li class="first"><a href="index.html">Home</a></li>
+              <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a></li>
+                <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a></li>
+                <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a></li>
+                <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a></li>
+              <!-- If you need to include functional (as opposed to purely navigational) links in your local menu,
+                   add them here, and give them a class of "functional". Remember: you'll need a class of "last" for
+                   whichever one will show up last... 
+                   For example: -->
+            </div>
+          </ul>
 
-      </nav>    
+        </nav>    
 
-      <!-- /local-nav -->
+        <!-- /local-nav -->
+      </div>
+
+  
+      </header>
 
     </div>
-    </header>
                
-    <div id="content" role="main" class="grid_24 clearfix">
+    <div id="content" role="main" class="row clearfix">
       
     <!-- Suggested layout containers -->
      
      <section>
         <h2>Fluid Width</h2>
         
-        <div class="grid_12 alpha">
+        <div class="large-6 columns">
           <h3>Code</h3>          
           <ul>
             <li><a href="ebi-level2-boilerplate-blank-fluid.txt">ebi-level2-boilerplate-blank-fluid.txt</a></li>
           </ul>
         </div>
 
-        <div class="grid_12 omega">
+        <div class="large-6 columns">
           <h3>Examples</h3>          
           <ul>
             <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a> - big, empty space between header and footer</li>
@@ -157,16 +149,16 @@
     <footer>
     <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
       <!--
-      <div id="local-footer" class="grid_24 clearfix">
+      <div id="local-footer" class="row clearfix">
         <p>How to reference this page: ...</p>
       </div>
       -->
     <!-- End optional local footer -->
     
-    <div id="global-footer" class="grid_24">
+    <div id="global-footer" class="row">
             
       <nav id="global-nav-expanded">
-        <div class="grid_4 alpha">
+        <div class="large-2 columns">
           <a href="http://www.ebi.ac.uk" title="EMBL-EBI"><img src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.png" alt="EMBL European Bioinformatics Institute"></a>
           <ul>
             <li class="first"><a href="//www.ebi.ac.uk/about/news">News</a></li>
@@ -176,7 +168,7 @@
           </ul>
         </div>
         
-        <div class="grid_4">
+        <div class="large-2 columns">
           <h3 class="services"><a href="//www.ebi.ac.uk/services">Services</a></h3>
           <ul>
             <li class="first"><a href="//www.ebi.ac.uk/services">By topic</a></li>
@@ -185,7 +177,7 @@
           </ul>
         </div>
         
-        <div class="grid_4">
+        <div class="large-2 columns">
           <h3 class="research"><a href="//www.ebi.ac.uk/research">Research</a></h3>
           <ul>
             <li class="first"><a href="//www.ebi.ac.uk/research">Overview</a></li>
@@ -195,7 +187,7 @@
           </ul>
         </div>
         
-        <div class="grid_4">
+        <div class="large-2 columns">
           <h3 class="training"><a href="//www.ebi.ac.uk/training">Training</a></h3>
           <ul>
             <li class="first"><a href="//www.ebi.ac.uk/training">Overview</a></li>
@@ -206,7 +198,7 @@
           </ul>      
         </div>
         
-        <div class="grid_4">
+        <div class="large-2 columns">
           <h3 class="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></h3>
           <ul>
             <li class="first"><a href="//www.ebi.ac.uk/industry">Overview</a></li>
@@ -217,7 +209,7 @@
           </ul>
         </div>
         
-        <div class="grid_4 omega">
+        <div class="large-2 columns">
           <h3 class="about"><a href="//www.ebi.ac.uk/about">About us</a></h3>
           <ul>
             <li class="first"><a href="//www.ebi.ac.uk/about">Overview</a></li>
@@ -247,14 +239,13 @@
   </div> <!--! end of #wrapper -->
 
 
-  <!-- JavaScript at the bottom for fast page loading -->
+  <!-- JavaScript -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <!--
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.6.2.min.js"><\/script>')</script>
   -->
-
 
   <!-- Your custom JavaScript file scan go here... change names accordingly -->
   <!--
@@ -275,14 +266,6 @@
     });
   </script>
   -->
-
-
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7 ]>
-    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-  <![endif]-->
   
 </body>
 </html>

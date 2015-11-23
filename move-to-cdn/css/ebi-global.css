@@ -1,28 +1,14 @@
-/* @media screen { */
-	/*
-	 	
-	 	ebi-global.css
-	 	
-	 	Style rules for common EBI website elements - global and local headers and footers
-	 	
-	 	~ generic masthead rules
-	 	~ masthead menus
-	 	~ global masthead
-	 		~ global menu
-	 		~ global search
-	 	~ local masthead
-	 		~ local menu
-	 		~ local search
-	 	~ local footer
-	 	~ global footer
-	 		(includes global expanded nav)
-	 		
-	
-		AUTHOR: Francis Rowland
-		DATE:   Feb 2012
-	
-	*/
-	
+/*
+ 	
+ 	ebi-global.css
+ 	
+ 	Style rules for common EBI website elements - global and local headers and footers
+ 	
+	AUTHOR: Francis Rowland
+	DATE:   Feb 2012
+
+*/
+
 	/* 
 		SITE-WIDE MASTHEAD LAYOUT AND SIZE
 		Generic rules for global and local mastheads
@@ -30,8 +16,6 @@
 	 */ 	
 	div#global-masthead,
 	div#global-masthead nav { height: auto; }
-	div#global-masthead nav { float: right; }
-	
 	div#global-masthead p { margin: 0; }
 	
 	/* 
@@ -42,7 +26,6 @@
 	div.masthead ul { 
 		margin: 0;
 		padding: 0;
-		float: left;
 		list-style: none;
 	}
 	
@@ -59,7 +42,6 @@
 	
 	div.masthead ul li abbr { border-bottom: 0 none; }
 	
-	
 	/*
 		GLOBAL MASTHEAD
 	==================================
@@ -75,10 +57,7 @@
 	}
 	
 	div#global-masthead img { padding-left: 0.69em; }
-	
-	div#global-masthead p {
-	}
-	
+
 	div#global-masthead p#logo a,
 	div#global-masthead p#logo a:link,
 	div#global-masthead p#logo a:visited { border: 0 none; }
@@ -126,65 +105,60 @@
 		border-top: 3px solid white; 
 		height: 20px
 	}
+
+	/* custom colour for Services */
+	div#global-masthead ul li#services a:hover,
+	div#global-masthead ul li#services a:active,
+	div#global-masthead ul li#services a:focus,
+	div#global-masthead ul li.active#services a,
+	div#global-masthead ul li.active-trail#services a { 
+		border-top-color: #207a7a; 
+	}
 	
+	/* custom colour for Research */
+	div#global-masthead ul li#research a:hover,
+	div#global-masthead ul li#research a:active,
+	div#global-masthead ul li#research a:focus,
+	div#global-masthead ul li#research.active a,
+	div#global-masthead ul li#research.active-trail a { 
+		border-top-color: #71b360;
+	}
 	
-		/* custom colour for Services */
-		div#global-masthead ul li#services a:hover,
-		div#global-masthead ul li#services a:active,
-		div#global-masthead ul li#services a:focus,
-		div#global-masthead ul li.active#services a,
-		div#global-masthead ul li.active-trail#services a { 
-			border-top-color: #207a7a; 
-		}
-		
-		/* custom colour for Research */
-		div#global-masthead ul li#research a:hover,
-		div#global-masthead ul li#research a:active,
-		div#global-masthead ul li#research a:focus,
-		div#global-masthead ul li#research.active a,
-		div#global-masthead ul li#research.active-trail a { 
-			/* border-top-color: #e3823e;  */	/* Not allowed to use orange! */
-			border-top-color: #71b360;
-		}
-		
-		/* custom colour for Training */
-		div#global-masthead ul li#training a:hover,
-		div#global-masthead ul li#training a:active,
-		div#global-masthead ul li#training a:focus,
-		div#global-masthead ul li#training.active a,
-		div#global-masthead ul li#training.active-trail a { 
-			border-top-color: #fab700; 
-		}
-		
-		/* custom colour for Industry */
-		div#global-masthead ul li#industry a:hover,
-		div#global-masthead ul li#industry a:active,
-		div#global-masthead ul li#industry a:focus,
-		div#global-masthead ul li#industry.active a,
-	    div#global-masthead ul li#industry.active-trail a { 
-			border-top-color: #346189; 
-		}
-    div#global-masthead ul li#industry {
-      display: none !important;
-    }
-		
-		/* custom colour for About us */
-		div#global-masthead ul li#about a:hover,
-		div#global-masthead ul li#about a:active,
-		div#global-masthead ul li#about a:focus,
-		div#global-masthead ul li#about.active a,
-		div#global-masthead ul li#about.active-trail a {
-	  		border-top-color: #207a7a; 
-		}
-	  /* custom colour for About us (Drupal) */
-		div#global-masthead ul li#about-us a:hover,
-		div#global-masthead ul li#about-us a:active,
-		div#global-masthead ul li#about-us a:focus,
-		div#global-masthead ul li#about-us.active a,
-		div#global-masthead ul li#about-us.active-trail a { 
-			border-top-color: #207a7a; 
-		}
+	/* custom colour for Training */
+	div#global-masthead ul li#training a:hover,
+	div#global-masthead ul li#training a:active,
+	div#global-masthead ul li#training a:focus,
+	div#global-masthead ul li#training.active a,
+	div#global-masthead ul li#training.active-trail a { 
+		border-top-color: #fab700; 
+	}
 	
+	/* custom colour for Industry */
+	div#global-masthead ul li#industry a:hover,
+	div#global-masthead ul li#industry a:active,
+	div#global-masthead ul li#industry a:focus,
+	div#global-masthead ul li#industry.active a,
+    div#global-masthead ul li#industry.active-trail a { 
+		border-top-color: #346189; 
+	}
+  div#global-masthead ul li#industry {
+    display: none !important;
+  }
+	
+	/* custom colour for About us */
+	div#global-masthead ul li#about a:hover,
+	div#global-masthead ul li#about a:active,
+	div#global-masthead ul li#about a:focus,
+	div#global-masthead ul li#about.active a,
+	div#global-masthead ul li#about.active-trail a,
+	div#global-masthead ul li#about-us a:hover,
+	div#global-masthead ul li#about-us a:active,
+	div#global-masthead ul li#about-us a:focus,
+	div#global-masthead ul li#about-us.active a,
+	div#global-masthead ul li#about-us.active-trail a { 
+		border-top-color: #207a7a; 
+	}
+
 	
 	/* Customisation for the GLOBAL search */
 	form#global-search {
@@ -232,8 +206,6 @@
 		
 		border:0 none;
 		filter:none;
-	
-		/* font-size: 93%;	 */
     float: left;
 	}
 	
@@ -248,55 +220,32 @@
 	
 	/*
 		LOCAL MASTHEAD
-	==================================
-	*/
-	
-	
-	div#local-masthead { 
-		border-bottom: 3px solid #eee;
-	}
-	
-	
+	==================================*/
 	
 	div#skip-to,
 	div#local-title-logo h1 { 
-		left: -5000px;
 		top: -5000px;
 		position: absolute;
 	}
 	
-	
 	div#local-masthead h1 span {
 		font-size: 49.2%;	/* h1 font-size is 370%, and I want 182%, so 0.492 * 370... */
-		margin-left: 32px;
 		letter-spacing: normal;
 		color: inherit;
 	}
 	.level1 div#local-masthead h1 span {
 		font-size: 75%;
-		margin-left: 18px;
-		letter-spacing: normal;
-    color: inherit;
   }
-	
 	
 	/* Local menu styling */
 	div#local-masthead nav {}
 	
 	div#local-masthead ul { 
-		margin-top:-5px;
-		height: auto;
 		width: 100%;
-		background-color: #111111;
-		background-color: rgba(17, 17, 17, 0.4);  
-	}
-	.oldie div#local-masthead ul { 
-		background-color: transparent;
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#66111111',EndColorStr='#66111111') !important; 					
 	}
 	div#local-masthead ul li {
 		border-color: transparent;
-		border-right: 1px dotted #f8f8f8;
+		border-right: 1px solid #f8f8f8;
 	}
 	
 	div#local-masthead ul li.active,
@@ -306,13 +255,9 @@
 	
 	div#local-masthead ul li.last { border-right: 0 none; }
 	
-	div#local-masthead ul li a {
-	}
-	
 	div#local-masthead ul li a,
 	div#local-masthead ul li a:link,
 	div#local-masthead ul li a:visited { 
-		border-bottom: 3px solid transparent;
 		color: #f6f6f6;
 	}
 		
@@ -321,16 +266,12 @@
 	div#local-masthead ul li.active-trail a:link,
 	div#local-masthead ul li.active a:visited,
 	div#local-masthead ul li.active-trail a:visited {
-		padding-top: 2px;
-		border-bottom: 3px solid #666;
 		background-color: #111;
 	}
 	
 	div#local-masthead ul li a:hover,
 	div#local-masthead ul li a:focus,
 	div#local-masthead ul li a:active {
-		border-bottom: 3px solid #71b360;
-		color: #fff;
 	 	background-color: #333;
 	}
 	
@@ -343,49 +284,41 @@
 	body div#local-title p,
 	body div#local-title a {
 	  color: #fff;
-	  text-shadow: 1px 1px #666;
 	}
 	
 	body.section-about div#local-masthead {
-		background: #60bdc4 url(../../../images/banners/EBI_ABOUT_Banner.jpg) top right no-repeat;
+		background: #60bdc4;
 	}
 	body.section-industry div#local-masthead {
-		background: #83a3c9 url(../../../images/banners/EBI_INDUSTRY_Banner.jpg) top right no-repeat;
+		background: #83a3c9;
 	}
 	body.section-research div#local-masthead {
-		background: #a8d793 url(../../../images/banners/EBI_RESEARCH_Banner.jpg) top right no-repeat;
+		background: #a8d793;
 	}
 	body.section-research div#local-title h1,
 	body.section-research div#local-title p,
 	body.section-research div#local-title a {
 	  color: #222;
-	  text-shadow: 1px 1px #ccc;
 	}
 	body.section-services div#local-masthead {
-		background: #60bdc4 url(../../../images/banners/EBI_SERVICES_Banner.jpg) top right no-repeat;
+		background: #60bdc4;
 	}
 	body.section-training div#local-masthead {
-		background: #f9e292 url(../../../images/banners/EBI_TRAINING_Banner.jpg) top right no-repeat;
+		background: #f9e292;
 	}
 	body.section-training div#local-title h1,
 	body.section-training div#local-title p,
 	body.section-training div#local-title a {
 	  color: #222;
-	  text-shadow: 1px 1px #ccc;
 	}
 	body.section-home div#local-masthead {
-		background: #1d8086 url(../../../images/banners/EBI_HOMEPAGE_Banner.jpg) top right no-repeat;
+		background: #1d8086;
 	}
-	
 	
 	ul#local-nav li.functional { 
 		float: right;
 		background-color: #444;
     background-color: rgba(17,17,17,0.4);
-	}
-	.oldie ul#local-nav li.functional { 
-		background-color: transparent;
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#66111111',EndColorStr='#66111111') !important; 					
 	}
 	
 	
@@ -405,7 +338,6 @@
 	div#local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
 	
 	/* Local search */
-	
 	div#local-search form fieldset,
 	form#local-search fieldset {
 		background-color: #ffffff;
@@ -423,15 +355,7 @@
 	form#local-search fieldset div.left { width:80%; margin-right:2%; float:left; }
 	div#local-search form fieldset div.right, 
 	form#local-search fieldset div.right { width:18%; float:left; text-align:center; }
-	
-	/* A touch of RWD */
-	@media only screen and (min-width: 1100px) {
-			div#local-search form,
-	  		form#local-search { float: right; }
-			div#local-search form fieldset,
-	  		form#local-search fieldset { max-width:440px; }
-	  	}
-	
+		
 	div#local-search form fieldset input.form-submit,
 	div#local-search form fieldset input.submit,
 	form#local-search fieldset input.submit { display: inline; margin: 0.3em 0.2em 0.1em 0.2em; }
@@ -462,21 +386,14 @@
 	
 	nav#breadcrumb { margin-top: 4px; }
 	
-
 	
 	/*
 		FOOTER
-	
 	*/	
 	div#local-footer,
 	div#global-footer {
 		background-color: white;
 		background-color: rgba(255, 255, 255, 0.85);
-	}
-	.oldie div#local-footer,
-	.oldie div#global-footer {
-	  background-color: transparent;
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#d9ffffff',EndColorStr='#d9ffffff');
 	}
 	#ebi-footer-meta { 
 	  padding-bottom: 1px; 
@@ -487,8 +404,6 @@
 		LOCAL FOOTER
 	===============================
 	 */
-	
-	
 	div#local-footer { 
 		background-color: #fff;
 		border-top: 2px solid #eee;
@@ -505,16 +420,14 @@
 	}
 	
 	#global-footer h3 {
-		/* font-size: 108%; */			/* 14px */
 		font-size: 123.1%;			/* 16px */
 		margin-bottom: 5px;
 		color: #333;
 	} 
 	
 	#global-footer p { 
-		font-size: 100%;			/* 13px */
-	    margin: 0 0 5px 0;
-	 }
+	   margin: 0 0 5px 0;
+	}
 	 
 	#global-footer ul {
 		font-size: 85%;	/* 11px */ 
@@ -522,7 +435,7 @@
 		list-style: none;
 	}	
 	 
-	#global-footer a { border-bottom: 0 none; }
+	#global-footer a { border-bottom: none; }
 	
 	#global-footer ul li a,
 	#ebi-footer-meta p a { padding: 2px 4px 2px 0; }
@@ -535,19 +448,13 @@
 	#ebi-footer-meta p a:hover,
 	#ebi-footer-meta p a:focus,
 	#ebi-footer-meta p a:active {
-		-moz-border-radius: 3px;
-		-khtml-border-radius: 3px;
-		-webkit-border-radius: 3px;
-		border-radius: 3px;
-		
-		background-color: #e4e4e4;
+		border-bottom: 1px dashed #e4e4e4;
 	}
 	
 	#ebi-footer-meta { font-size: 85%;	/* 11px */ }
 	
 	#ebi-footer-meta p.address { color: #888; }
 	#ebi-footer-meta p.legal { margin-bottom: 9px; }
-	
 	
 	#global-nav-expanded img { 
 		padding-left: 0.7em;
@@ -564,25 +471,58 @@
 	
 	#global-nav-expanded .grid_4 h3 { padding: 0; }
 	#global-nav-expanded .grid_4 h3 a { 
-	display: block;
-	padding: 0.5em 0.3em 0 0.3em;  	
+		display: block;
+		padding: 0.5em 0.3em 0 0.3em;  	
 	}
 	#global-nav-expanded .grid_4 h3 a:hover,
 	#global-nav-expanded .grid_4 h3 a:focus,
 	#global-nav-expanded .grid_4 h3 a:active { background-color: #ddd; }
 
 
-/*}*/
+/* 
+ * HTML5 ✰ Boilerplate
+ *
+ */
 
+/* icon to indicate link is a PDF file */
+a span.link-pdf { background: url(http://www.ebi.ac.uk/inc/images/icon_pdf.gif) right center no-repeat; padding: 0 18px 0 0; }
+h1 a span.link-pdf,
+h2 a span.link-pdf,
+h3 a span.link-pdf,
+h4 a span.link-pdf,
+h5 a span.link-pdf,
+h6 a span.link-pdf { display:none; }
 
-	
-	/*
-		Set sensible minimum heights for small and large screens
-	*/
-	@media screen and (min-height: 600px) {
-		div#content { min-height: 250px; }
-	}
-	
-	@media screen and (min-height: 1000px) {
-		div#content { min-height: 450px; }
-	}
+/* ===== print styles =======================================================
+   Print styles.
+   ========================================================================== */
+
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  /*a[href]:after { content: " (" attr(href) ")"; color: #ccc; }*/	/* [FR] [21/01/2013] removed: I would prefer a JS solution that adds all links as footnotes... */
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  th { font-weight: bold; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+  
+  div#skip-to,
+  div#global-masthead nav,
+  div#local-masthead nav,
+  form#local-search,
+  div#global-footer,
+  div#search_ebi,
+  div#shortcuts,
+  div#ebi_search_results { display: none; }  
+  
+  div.panels-flexible-column-last,
+  div.panels-flexible-region-last { display: none; }	/* Sometimes it's column, sometimes it's region! */
+  div.panels-flexible-column-first,
+  div.panels-flexible-region-first { width: 100%; }
+}
