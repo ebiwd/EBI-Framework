@@ -1,0 +1,309 @@
+/*
+ Tweaks made to target specific pages or other narrow use cases.
+ */
+body.mobile-ready-message  {
+}
+
+/* section specific tweaks */
+
+div.view-id-press_releases div.views-row {
+    width: 98%; float: none; margin: 0;
+}
+
+div.view-id-press_releases div.views-row img {
+    width: 100%;
+}
+
+body.page-services div.highlight {
+    height: auto !important;
+}
+
+.view-people-and-groups dd {
+    font-size: 100%;
+    margin-bottom: .5em;
+}
+
+.view-people-and-groups dt {
+    font-family: verdana;
+    margin: 0;
+    font-size: 100%;
+}
+
+/************     404 page     ***************/
+body.page-not-found #local-masthead,
+body.page-not-found h2.title-mobile,
+body.page-not-found .field-item.even p { display: none; }
+
+body.page-not-found h2.alert { color: #FF810E; text-align: center; }
+body.page-not-found h2.alert:before {
+  margin: 0 0 .2em 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 4em;
+}
+
+/************     Styles for Training     ***************/
+div#training-filters-mobile {
+  padding-left: 10px;
+  margin-bottom: 4px;
+  vertical-align: baseline;
+  font-size: 12px;
+  flex-wrap: nowrap;
+  flex-grow: 2;
+}
+
+/* Hide filters and events teaser fields */
+#ebi-training-filters-filters-form { display: none; }
+
+body #ebi-training-filters-filters-form {
+  position: absolute;
+  top: 10px;
+  
+  z-index: 10;
+  width: 200px;
+}
+body #ebi-training-filters-filters-form>div { background: #000; padding: 5px 0 10px 10px;}
+body #ebi-training-filters-filters-form label { color: #fff;}
+body #ebi-training-filters-filters-form label.option { color: #ccc; }
+
+.event-teaser .event-date { display: none; }
+
+.event-teaser .event-date {
+  border: none;
+  width: 1.8em;
+}
+
+.event-date .calendarpage {
+  height: 0px;
+  background-color: none;
+}
+
+.event-date .calendarpage .ick {
+  background: none;
+}
+
+
+.event-teaser .event-date {
+  margin: 0px;
+  top: 0px;
+  padding: 0 2px;
+}
+
+/** training tabs **/
+body.page-training.subsection-overview .tabs { margin: 0 0 0 2%; width:90%; border-bottom: 1px solid #888; }
+body.page-training.subsection-overview .tabs a {
+  display: inline-block;
+  background: #AAA;
+  border: none;
+  color: #fff;
+  padding: 2px 8px;
+  margin: 0 -4px 0 4px;
+}
+body.page-training.subsection-overview .tabs a.active { background: #fab700; }
+
+@media (min-width: 800px) {
+  body.page-training.subsection-overview .tabs { display: none; }
+  .train-online-tab-pane, .training-events-tab-pane { display: block !important; }
+}
+
+/** Styles for Training online  **/
+.course-teaser {
+    margin-bottom: 2em;
+}
+
+.course-teaser span {
+  display: inline-block;
+  width: 85%;
+}
+
+.course-teaser .start-now {
+  margin: 0 9px 0 0px;
+      width: 10%;
+}
+
+.event-teaser-details {
+  width: 100%;
+}
+  
+/************     Styles for News     ***************/
+@media (min-width: 420px) {
+  body.subsection-news div.view-id-press_releases p.image { float: left; margin-top: -9px; max-width: 30vw;}
+  body.subsection-news div.view-id-press_releases h4.title { display: inline; padding: 0; }
+  body.subsection-news div.view-id-press_releases div.views-row { clear: both; display: block; }
+}
+
+/* correct feed icon position */
+body.page-about-news-service-news a.feed-icon, body.page-about-news-press-releases a.feed-icon, body.page-about-events a.feed-icon {
+  position: relative; top: -6px; left: 10px;
+  float: right;
+  height: 17px; width: 23px;
+  margin-right: 10px;
+}
+
+/************     Styles for Front     ***************/
+@media (min-width: 660px) and (max-width: 800px) {
+    body.front .container_24 .grid_8,
+    body.front .container_24 .alpha.grid_8 {
+        float: left;
+        width: 33%;
+        display: inline-block;
+        margin: 0;
+    }
+    body.front .container_24 .panels-flexible-column-service-1.panels-flexible-column.omega.grid_8 {
+        width: 99%; padding-left: 1%;
+    }
+    body.front .container_24 .panels-flexible-column-service-1.panels-flexible-column.omega.grid_8 div div {
+        float: left; width: 48%;
+    }
+    body.front .container_24 .panels-flexible-column-service-1.panels-flexible-column.omega.grid_8 div div div {
+        width: 100%;
+    }
+
+}
+@media (min-width: 800px) {
+    body.front .container_24 .grid_8,
+    body.front .container_24 .alpha.grid_8 {
+        float: left;
+        width: 33%;
+        display: inline-block;
+        margin: 0;
+    }
+}
+@media (max-width: 659px) {
+/*
+  body.front div.view-id-press_releases p.image { float: left; margin-top: -9px; max-width: 30vw;}
+  body.front div.view-id-press_releases h4.title { display: inline; padding: 0; }
+  body.front div.view-id-press_releases div.views-row { clear: both; display: block; }
+*/
+}
+
+/************     Styles for /research     ***************/
+@media (max-width: 600px) {
+  body.section-research.subsection-overview .view-research-leader-overview .views-row {
+    width: 98%;
+  }
+}
+
+/************     Styles for /about     ***************/
+/*@media (max-width: 800px) {*/
+  body.page-about.subsection-overview .caption.caption-right {
+    min-width: 150px; width: 30%; float: right;
+  }
+/*}*/
+
+/************     Styles for /research/XXX/members     ***************/
+@media (max-width: 580px) {
+  body.page-research .view-research-team-members .views-row {
+    width: 49%; margin-right: 1%;
+    height: 190px;
+    font-size: 10px;
+  }
+}
+
+/************     Styles for /about/travel     ***************/
+@media (max-width: 380px) {
+  body.section-about.subsection-travel img.float-l {
+    width: 100%;
+    float: none;
+  }
+  body.section-about.subsection-travel a img {
+    float: none !important;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 800px) {
+  body.section-about.subsection-travel .panels-flexible-region-about_us-right_ div {
+    width: 100%;
+  }
+  body.section-about.subsection-travel .panels-flexible-region-about_us-right_ div div.panel-pane {
+    width: 49%; padding-right: 1%; float: left;
+  }
+}
+
+/************     Styles for /about/events     ***************/
+body.responsive-done.section-about .featured-event {
+    width: 99%;
+}
+body.responsive-done.page-about-events-seminars #upcoming-wraper {
+  margin: 0;
+  padding: 1em 0;
+}
+
+body.responsive-done.page-about-events .node-panel,
+body.responsive-done.page-about-events-seminars .node-panel {
+  margin: 0 .75em;
+}
+body.page-about-events #hero-unit,
+body.page-about-events-seminars #seminars-hero-unit {
+  margin: 0; padding: 0;
+}
+
+body.page-about-events #upcoming-wraper .filter.select2-container { width: 100% !important; }
+@media (max-width: 500px) {
+  body.page-about-events #hero-unit,
+  body.page-about-events-seminars #seminars-hero-unit {
+    background: none;
+  }
+
+  body.page-about-events #upcoming-wraper .logo-area img,
+  body.page-about-events .topic-bar { display: none; }
+
+  body.page-about-events .featured-event-group {
+    padding: 1em 1em 0 1em;
+  }
+
+  body.page-about-events .explore-topics.topic-style,
+  body.page-about-events .explore-topics.topic-area { margin-left: 1em; width: 90%; min-width: 90%; border-right: none; }
+  /*body.page-about-events .explore-topics.topic-area .set a { display: block; }*/
+
+  body.page-about-events .select2-container-multi .select2-choices .select2-search-field input,
+  body.page-about-events input.select2-input.select2-default { max-width: 85vw !important; width: 85vw !important; }
+  body.page-about-events #upcoming-wraper .filter #filter-buttons { max-width: 90%; width: 90%; padding: 0; }
+  body.page-about-events #hero-unit .inner,
+  body.page-about-events-seminars #hero-unit .inner {
+    width: 90%; max-width: 90%;
+    margin: 0; 
+  }
+  .upcoming-event a .event-type {
+    margin-left: 34px;
+  }
+  .upcoming-event a .event-register { display: inline-block; }
+  #past-events-content-placeholder { padding: 1em 0; }
+  body.page-about-events-seminars .upcoming-event a .event-name { margin-left: 0; }
+}
+/************     Styles for /about/events/archive     ***************/
+
+body.page-about-events-archive #upcoming-wraper .logo-area { display: none; }
+body.page-about-events-archive #upcoming-wraper { margin: 0; border-top: none; }
+body.page-about-events-archive .node-panel { margin: 0 1em; }
+
+@media (max-width: 500px) {
+  body.page-about-events-archive #upcoming-wraper .filter.select2-container { width: 100% !important; }
+  body.page-about-events-archive input.select2-input.select2-default { max-width: 100% !important; width: 100% !important; }
+  body.page-about-events-archive #upcoming-wraper .filter #filter-buttons { max-width: 90%; width: 90%; padding: 0; }
+
+}
+
+/************     Styles for /about/events/seminars     ***************/
+@media (max-width: 800px) {
+  .seminars-previous h4, .seminars-previous p, .seminars-about-series h4, .seminars-about-series p { width: 90%; }
+  .seminars-previous:before, .seminars-about-series:before { height: 81px; }
+  #past-events-content-placeholder, body.page-about-events-seminars #upcoming-wraper,
+  .nominate-speaker, .upcoming-seminars, .seminar-types { margin: 0; }
+  .seminar-types .seminar-type-block { width: 90%; }
+  .seminars-previous h4, .seminars-previous p, .seminars-about-series h4, .seminars-about-series p { padding: 0; }
+  .nominate-speaker h5 { padding: 0; margin-left: 0; }
+
+  body.page-about-events-seminars #seminars-hero-unit { display: none; }
+  body.page-about-events-seminars #upcoming-wraper { border-top: none; }
+}
+
+/************     Styles for /support     ***************/
+body.page-support .container_24 .grid_16 { width: 98%; max-width: 430px; }
+body.page-support form#feedback_form textarea#message,
+body.page-support form#feedback_form input#subject,
+body.page-support select#topic {
+  max-width: 400px !important;
+  width: 90%;
+}

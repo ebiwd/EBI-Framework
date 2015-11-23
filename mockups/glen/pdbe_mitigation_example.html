@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng">
+    <head>
+        <title>PDBe Protein Data Bank in Europe</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="robots" content="index,follow"/>
+        <meta name="googlebot" content="all"/>
+        <!--meta http-equiv="cache-control" content="public"/-->
+        <!-- this is to check what is happening in ie7 -->
+        <!--  <script type='text/javascript' src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script> -->
+        <meta name="keywords"  content="EMBL EBI PDBe PDB Protein Data Bank Europe,
+              Protein Database Europe, MSD, Macromolecular Structure Database, 3D structure" />
+        <meta name="description"  content=" EMBL EBI PDBe - Protein Data Bank Europe is
+              a European resource for PDB protein structure deposition and
+              PDB structure annotation to the wwPDB . We provide powerful 3D structure
+              search services and analysis tools for PDB data related to
+              protein nucleic acid carbohydrate small molecule ligand drug antibiotics
+              structures. We integrate data from Interpro Uniprot GO CATH SCOP Pfam
+              through
+              the SIFTS project to enrich the data held in the Protein Data Bank"/>
+
+        <meta name="author" content="PDBe Protein Data Bank Europe" />
+        <meta name="google-site-verification" content="q0FTPhAwLixFGuAtcZGekvzusnHiWOxjlMKAa5-rha8" />
+        <meta property="fb:admins" content="153011668068957" />
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+        <link rel="shortcut icon" type="image/x-icon" href="http://www.ebi.ac.uk/pdbe/docs/images/favicon.ico"/>
+        <link rel="search" type="application/opensearchdescription+xml" title="PDBe Search" href="http://www.ebi.ac.uk/pdbe/docs/pdbe-view.xml" />
+
+        <!-- EMBL-EBI specific -->
+        <script type="text/javascript" src="http://www.ebi.ac.uk/inc/js/contents.js"></script>
+        <!--        <link rel="stylesheet" href="http://www.ebi.ac.uk/inc/css/contents.css" type="text/css" />
+                <link rel="stylesheet" href="http://www.ebi.ac.uk/inc/css/userstyles.css" type="text/css" />
+                <link rel="stylesheet" href="http://www.ebi.ac.uk/inc/css/sidebars.css" type="text/css" />-->
+
+        <!-- Sam Skin CSS -->
+        <!-- Combo-handled YUI CSS files: -->
+        <!--link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.8.2r1/build/fonts/fonts-min.css&2.8.2r1/build/tabview/assets/skins/sam/tabview.css&2.8.2r1/build/container/assets/container.css&2.8.2r1/build/reset-fonts-grids/reset-fonts-grids.css&2.8.2r1/build/assets/skins/sam/skin.css&2.8.2r1/build/assets/skins/sam/button.css"/-->
+        <link type="text/css" rel="stylesheet" href="/pdbe/css/index-combo-min.css"/>
+        <!-- Combo-handled YUI JS files: -->
+        <!--script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.2r1/build/yahoo-dom-event/yahoo-dom-event.js&2.8.2r1/build/element/element-min.js&2.8.2r1/build/connection/connection-min.js&2.8.2r1/build/container/container-min.js&2.8.2r1/build/menu/menu-min.js&2.8.2r1/build/button/button-min.js&2.8.2r1/build/datasource/datasource-min.js&2.8.2r1/build/paginator/paginator-min.js&2.8.2r1/build/datatable/datatable-min.js&2.8.2r1/build/history/history-min.js&2.8.2r1/build/json/json-min.js&2.8.2r1/build/progressbar/progressbar-min.js&2.8.2r1/build/tabview/tabview-min.js&2.8.2r1/build/treeview/treeview-min.js"></script-->
+        <!--script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.2r1/build/yahoo-dom-event/yahoo-dom-event.js&2.8.2r1/build/element/element-min.js&2.8.2r1/build/button/button-min.js&2.8.2r1/build/connection/connection_core-min.js&2.8.2r1/build/container/container-min.js&2.8.2r1/build/history/history-min.js&2.8.2r1/build/tabview/tabview-min.js"></script-->
+        <script type="text/javascript" src="/pdbe/js/index-combo-min.js"></script>
+
+
+
+        <link type="text/css" rel="stylesheet" href="/pdbe/css/pdbe.css"/>
+        <link type="text/css" rel="stylesheet" href="/pdbe/css/pdbe-search.css"/>
+        <link rel="stylesheet" type="text/css" href="/pdbe/css/pdbeSidePanels.css"/>
+        <link type="text/css" rel="stylesheet" href="/pdbe/css/pdbeContent.css"/>
+
+        <!--        <link type="text/css" rel="stylesheet" href="/pdbe/css/frontier/ebi-global.css"/>
+                <link type="text/css" rel="stylesheet" href="/pdbe/css/frontier/local-custom.css"/>-->
+
+        <link type="text/css" rel="stylesheet" href="/pdbe/css/frontier/ebi-mitigation.css"/>
+        <link type="text/css" rel="stylesheet" href="/pdbe/css/frontier/embl-petrol-colours.css"/>
+
+        <style type="text/css">
+            html, body {
+                min-width: 900px;
+                font-size: 9pt;
+                line-height: inherit;
+            }
+            @media print {
+                body, .contents, .header, .contentsarea, .head {
+                    position: relative;
+                    font-size: 9pt;
+                }
+            }
+            #yui-history-iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1px;
+                height: 1px;
+                visibility: hidden;
+            }
+
+        </style>
+        <script type="text/javascript">
+            function recordLinkUse(category, action, label) {
+                //alert(category+", "+action+", "+label);
+                try {
+                    _gaq.push(['_trackEvent', category, action, label]);
+                }catch(err){}
+            }
+        </script>
+        <script type="text/javascript" src="/pdbe/js/pdbeSidePanels.js"></script>
+        <script type="text/javascript" src="/pdbe/js/pdbe-search.js"></script>
+        <script type="text/javascript" src="/pdbe/js/tools.js"></script>
+        <script type="text/javascript" src="/pdbe/js/centerContent.js"></script>
+        <script type="text/javascript" src="/pdbe/js/raphael-min.js"></script>
+
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="/pdbe/css/ie7.css">
+        <![endif]-->
+    </head>
+    <body class="yui-skin-sam" onload="if(navigator.userAgent.indexOf('MSIE') != -1) {document.getElementById('head').allowTransparency = true; };setIndexViewTab();">
+        <!--[if IE]>
+            <iframe id="yui-history-iframe" src="/pdbe/assets/blank.html"></iframe>
+        <![endif]-->
+
+        <input id="yui-history-field" type="hidden"/>
+
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-16614786-2']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+        <div id="doc3" class="yui-t7" style="margin: 0px">
+            <div id="hd" style="position: relative;">
+                <!-- Header -->
+                <div class="headerdiv" id="headerdiv">
+                    <!--                    <div id="wrapper" class="container_24">-->
+
+                    <div id="global-masthead" class="masthead grid_24">
+                        <!-- <p>EMBL-EBI &diams;</p> -->
+                        <p id="logo">
+                            <!--This has to be one line and no newline characters-->
+                            <a href="/" title="Go to the EMBL-EBI homepage">
+                                <img src="http://frontier.ebi.ac.uk/sites/ebi.ac.uk/themes/custom/ebiomega/logo.png" alt="European Bioinformatics Institute"/>
+                            </a>
+                        </p>
+
+                        <nav>
+                            <ul id="global-nav">
+                                <li class="first" id="services">
+                                    <a href="/services" title="">Services</a>
+                                </li>
+                                <li id="research">
+                                    <a href="/research" title="">Research</a>
+                                </li>
+                                <li id="training">
+                                    <a href="/training" title="">Training</a>
+                                </li>
+                                <li id="funding">
+                                    <a href="/funding" title="">Funding</a>
+                                </li>
+                                <li id="about" class="last">
+                                    <a href="/about-us" title="">About us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div id="local-masthead" class="masthead grid_24 _nomenu">
+
+                        <!-- CHOOSE -->
+
+                        <div class="grid_12 alpha" id="local-title-logo">
+                            
+                            <h1>Title</h1>
+                            <p>
+                                <img src="http://dopey.ebi.ac.uk:8085/scrubs/dummy_logo_48.png" alt="" width="" height="" class="logo"/>
+                                <span class="strapline">Strapline</span>
+                            </p>
+<!--                            <h2 style="display: inline;" class="grid_12 strapline">Bringing Structure to Biology</h2>-->
+                            
+                            
+                        </div>
+
+
+                        <!-- OR... -->
+
+                        <!--                        
+                            <div class="grid_12 alpha" id="local-title">
+                                <h1>[title]</h1>
+                            </div>
+                        -->
+                        <!-- -->
+
+                        <div class="grid_12 omega">
+                            <form id="local-search" name="local-search" action="#" method="post">
+
+                                <fieldset>
+
+                                    <label>
+                                        <input type="text" name="first" id="local-searchbox" />
+                                    </label>	
+
+                                    <input type="submit" name="submit" value="Search" class="submit" />	
+                                </fieldset>
+
+                            </form>
+                        </div>
+
+                        <nav>
+                            <ul class="grid_24" id="local-nav">
+                                <li class="first"><a href="#" title="">Home</a></li>
+                                <li><a href="#" title="">Item 2</a></li>
+                                <li><a href="#" title="">Item 3</a></li>
+                                <li><a href="#" title="">Item 4</a></li>
+                                <li class="last"><a href="#" title="">About [title]</a></li>
+                            </ul>
+                        </nav>	
+                    </div>	
+
+                    <!--                    <div id="local-masthead" class="masthead nomenu gradient">
+                                            <div class="" id="local-title">
+                                                <section>
+                                                    <div class="" id="local-title-logo">
+                                                        <h1>PDBe | Home</h1>
+                                                        <p>
+                                                            <a href="http://pdbe.org" style="border-bottom-width: 0px;" title="">
+                                                                <img alt="PDBe" class="logo" width="200px" src="./images/pdbe_logo.png" />
+                                                            </a>
+                                                        </p>
+                                                        <h2 class="strapline">Bringing Structure to Biology</h2>
+                                                    </div>
+                                                    <div class="float-r">
+                                                        <form id="local-search">
+                                                            <fieldset>
+                                                                <div class="form">
+                                                                    <label>
+                                                                        <input class="field" id="local-searchbox" name="query" onblur="displaySearchPDBe(this);" onfocus="hideSearchPDBe(this);" size="30" type="text" value=" Term | accession | service name" />
+                                                                    </label>
+                                                                    <input alt="Search PDBe" class="submit" 
+                                                                           id="searchsubmit" 
+                                                                           title="Search PDBe" 
+                                                                           type="submit" value="Search" 
+                                                                           onclick="screenForAccessionCode();recordLinkUse('Search', 'click-searchBar', 'Basic'); return false;"/>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                    
+                                                    </div>
+                    
+                                                </section>
+                                            </div>
+                                        </div>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+            <div id="bd" style="position: relative;">
+                <div id="contents" class="contents">
+                    <!--noscript-->
+                    <table>
+                        <tr>
+                            <td id="contentLeft" valign="top" style="padding-left: 1em;">
+                                <div id="leftContent" style="">
+                                    <div id="pdbeTools"></div>
+                                </div>
+                            </td>
+                            <td id="contentMain" width="100%" valign="top">
+                                <table width="100%">
+                                    <tr>
+                                        <td id="mainbottom" style="padding: 0 1.5em 0 1em;">
+                                            <div id="pdbeCenterContent" class="tab0" style="">
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td id="contentRight" valign="top" style="padding-right: 1em;">
+                                <!-- Right Panels -->
+                                <div id="rightContent" style="">
+                                    <table border="0">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div id="quips"></div>
+                                                    <div id="newsListing"></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="footerdiv" id="footerdiv">
+                                    <footer>
+                                        <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+                                        <!--
+                                        <div id="local-footer" class="grid_24 clearfix">
+                                                
+                                        </div>
+                                        -->
+                                        <!-- End optional local footer -->
+
+                                        <div id="global-footer" class="grid_24 clearfix">
+
+                                            <section id="global-nav-expanded">
+
+                                                <div class="grid_4 alpha">
+                                                    <h3 class="explore">Explore</h3>
+                                                </div>
+
+                                                <div class="grid_4">
+                                                    <h3 class="services"><a href="/services" title="">Services</a></h3>
+                                                </div>
+
+                                                <div class="grid_4">
+                                                    <h3 class="research"><a href="/research" title="">Research</a></h3>
+                                                </div>
+
+                                                <div class="grid_4">
+                                                    <h3 class="training"><a href="/training" title="">Training</a></h3>
+                                                </div>
+
+                                                <div class="grid_4">
+                                                    <h3 class="funding"><a href="/funding" title="">Funding</a></h3>
+                                                </div>
+
+                                                <div class="grid_4 omega">
+                                                    <h3 class="about"><a href="/about-us" title="">About us</a></h3>
+                                                </div>
+                                            </section>
+
+                                        </div>
+
+                                        <div class="grid_24">
+                                            <section id="ebi-footer-meta">
+                                                <p> © EMBL-EBI European Bioinformatics Institute | <a href="#" title="">Privacy</a> | <a href="#" title="">Cookies</a> | <a href="#" title="">Terms of use</a></p>
+                                            </section>
+                                        </div>
+
+                                    </footer>
+
+                                </div>
+
+                            </td>
+                        </tr>
+                    </table>
+                    <!--/noscript-->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

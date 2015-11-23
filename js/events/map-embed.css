@@ -1,0 +1,41 @@
+  #event-venue { height:350px; }
+  .gm-style-iw * { display: block; width: 100%; }
+  .gm-style-iw {
+    top: 0 !important;
+    left: 0 !important;
+    padding: 15px 37px 0 15px;
+    width: 170px !important; 
+  }
+  .gm-style-iw h4, .gm-style-iw p { margin: 0; padding: 0; }
+  .gm-style-iw a { /*color: #fff;*/ }
+  .map-info-window.with-image { margin-top: 100px;  }
+  .map-info-window { /* margin-bottom: -12px; fails in ie/ff */ overflow: hidden;}
+
+  .image-wrapper {
+    width: 222px;
+    height: 120px;
+    overflow: hidden;
+    position: absolute;
+    margin-top: -122px;
+    margin-left: -15px;
+    top: 116px; /* needed by safari  */
+    left:16px;  /* needed by safari  */
+  }
+  .image-wrapper img {
+
+  }
+  .gm-style-iw,
+  .gm-style .gm-iw {
+    /*color: #fff;*/
+    font-family: verdana, sans-serif;
+    font-size: 12px !important;
+  }
+
+  .gm-style-iw p {
+    display: inline-block;
+  }
+
+
+#hidden-map-data { display: none; }
+
+#event-venue-link { text-align: right; font-size: 12px; }

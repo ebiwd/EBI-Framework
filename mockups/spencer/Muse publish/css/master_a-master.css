@@ -1,0 +1,212 @@
+#u492
+{
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	position: relative;
+	background: transparent url("../images/ebi_research_button.jpg") no-repeat left top;
+}
+
+#u492:hover
+{
+	background-image: url("../images/ebi_research_button2.jpg");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#u492:active
+{
+	background-image: url("../images/ebi_research_button.jpg");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#u492.MuseLinkActive
+{
+	background-image: url("../images/ebi_research_button.jpg");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#u505
+{
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	position: relative;
+	background: transparent url("../images/ebi_training_button.jpg") no-repeat left top;
+}
+
+#u505:hover
+{
+	background-image: url("../images/ebi_training_button2.jpg");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#u505.MuseLinkActive
+{
+	background-image: url("../images/ebi_training_button2.jpg");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#u529
+{
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	position: relative;
+	background: transparent url("../images/ebi_about_button.jpg") no-repeat left top;
+}
+
+#u529:hover
+{
+	background-image: url("../images/ebi_about_button2.jpg");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#u529.MuseLinkActive
+{
+	background-image: url("../images/ebi_about_button2.jpg");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#u2329
+{
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	position: relative;
+	background: transparent url("../images/ebi_services_button.jpg") no-repeat left top;
+}
+
+#u2329:hover
+{
+	background-image: url("../images/ebi_services_button.png");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#u2329.MuseLinkActive
+{
+	background-image: url("../images/ebi_services_button.png");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#u2959
+{
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	position: relative;
+	background: transparent url("../images/ebi_industry_button.jpg") no-repeat left top;
+}
+
+#u2959:hover
+{
+	background-image: url("../images/ebi_industry_button2.jpg");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#u2959.MuseLinkActive
+{
+	background-image: url("../images/ebi_industry_button2.jpg");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#u476,#u2859
+{
+	position: relative;
+}
+
+#u476_img,#u2859_img
+{
+	vertical-align: top;
+}
+
+#u3426-5
+{
+	color: #777777;
+	font-size: 12px;
+	font-family: Verdana, Tahoma, Geneva, sans-serif;
+	position: relative;
+}
+
+#u1539
+{
+	border-color: #000000;
+	background-color: #E7E7E7;
+	position: relative;
+}
+

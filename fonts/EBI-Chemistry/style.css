@@ -1,0 +1,51 @@
+@font-face {
+	font-family: 'EBI-Chemistry';
+	src:url('fonts/EBI-Chemistry.eot');
+	src:url('fonts/EBI-Chemistry.eot?#iefix') format('embedded-opentype'),
+		url('fonts/EBI-Chemistry.woff') format('woff'),
+		url('fonts/EBI-Chemistry.ttf') format('truetype'),
+		url('fonts/EBI-Chemistry.svg#EBI-Chemistry') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'EBI-Chemistry';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-direction_unknown, .icon-direction_right, .icon-direction_left, .icon-direction_reversible {
+	font-family: 'EBI-Chemistry';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-direction_unknown:before {
+	content: "\55";
+}
+.icon-direction_right:before {
+	content: "\72";
+}
+.icon-direction_left:before {
+	content: "\6c";
+}
+.icon-direction_reversible:before {
+	content: "\52";
+}

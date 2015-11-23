@@ -1,0 +1,203 @@
+@font-face {
+	font-family: 'EBI-Functional';
+	src:url('fonts/EBI-Functional.eot');
+	src:url('fonts/EBI-Functional.eot?#iefix') format('embedded-opentype'),
+		url('fonts/EBI-Functional.svg#EBI-Functional') format('svg'),
+		url('fonts/EBI-Functional.woff') format('woff'),
+		url('fonts/EBI-Functional.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'EBI-Functional';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-compare:before, .icon-untitled:before, .icon-untitled-2:before, .icon-untitled-3:before, .icon-untitled-4:before, .icon-untitled-5:before, .icon-untitled-6:before, .icon-untitled-7:before, .icon-untitled-8:before, .icon-untitled-9:before, .icon-untitled-10:before, .icon-untitled-11:before, .icon-untitled-12:before, .icon-untitled-13:before, .icon-untitled-14:before, .icon-untitled-15:before, .icon-untitled-16:before, .icon-untitled-17:before, .icon-untitled-18:before, .icon-untitled-19:before, .icon-untitled-20:before, .icon-untitled-21:before, .icon-untitled-22:before, .icon-untitled-23:before, .icon-untitled-24:before, .icon-untitled-25:before, .icon-untitled-26:before, .icon-untitled-27:before, .icon-untitled-28:before, .icon-untitled-29:before, .icon-untitled-30:before, .icon-untitled-31:before, .icon-untitled-32:before, .icon-untitled-33:before, .icon-untitled-34:before, .icon-untitled-35:before, .icon-untitled-36:before, .icon-untitled-37:before, .icon-untitled-38:before, .icon-untitled-39:before, .icon-untitled-40:before, .icon-untitled-41:before, .icon-untitled-42:before, .icon-untitled-43:before, .icon-untitled-44:before, .icon-untitled-45:before, .icon-untitled-46:before, .icon-untitled-47:before, .icon-untitled-48:before, .icon-untitled-49:before, .icon-untitled-50:before, .icon-untitled-51:before, .icon-untitled-52:before, .icon-untitled-53:before, .icon-collapse_closed:before, .icon-collapse_open:before {
+	font-family: 'EBI-Functional';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-compare:before {
+	content: "\4f";
+}
+.icon-untitled:before {
+	content: "\2f";
+}
+.icon-untitled-2:before {
+	content: "\2b";
+}
+.icon-untitled-3:before {
+	content: "\29";
+}
+.icon-untitled-4:before {
+	content: "\69";
+}
+.icon-untitled-5:before {
+	content: "\41";
+}
+.icon-untitled-6:before {
+	content: "\7a";
+}
+.icon-untitled-7:before {
+	content: "\28";
+}
+.icon-untitled-8:before {
+	content: "\61";
+}
+.icon-untitled-9:before {
+	content: "\62";
+}
+.icon-untitled-10:before {
+	content: "\78";
+}
+.icon-untitled-11:before {
+	content: "\5c";
+}
+.icon-untitled-12:before {
+	content: "\63";
+}
+.icon-untitled-13:before {
+	content: "\44";
+}
+.icon-untitled-14:before {
+	content: "\64";
+}
+.icon-untitled-15:before {
+	content: "\3d";
+}
+.icon-untitled-16:before {
+	content: "\65";
+}
+.icon-untitled-17:before {
+	content: "\66";
+}
+.icon-untitled-18:before {
+	content: "\5b";
+}
+.icon-untitled-19:before {
+	content: "\46";
+}
+.icon-untitled-20:before {
+	content: "\30";
+}
+.icon-untitled-21:before {
+	content: "\5d";
+}
+.icon-untitled-22:before {
+	content: "\6b";
+}
+.icon-untitled-23:before {
+	content: "\4c";
+}
+.icon-untitled-24:before {
+	content: "\6c";
+}
+.icon-untitled-25:before {
+	content: "\6d";
+}
+.icon-untitled-26:before {
+	content: "\3e";
+}
+.icon-untitled-27:before {
+	content: "\76";
+}
+.icon-untitled-28:before {
+	content: "\3c";
+}
+.icon-untitled-29:before {
+	content: "\50";
+}
+.icon-untitled-30:before {
+	content: "\7d";
+}
+.icon-untitled-31:before {
+	content: "\52";
+}
+.icon-untitled-32:before {
+	content: "\2d";
+}
+.icon-untitled-33:before {
+	content: "\53";
+}
+.icon-untitled-34:before {
+	content: "\31";
+}
+.icon-untitled-35:before {
+	content: "\6e";
+}
+.icon-untitled-36:before {
+	content: "\73";
+}
+.icon-untitled-37:before {
+	content: "\6f";
+}
+.icon-untitled-38:before {
+	content: "\54";
+}
+.icon-untitled-39:before {
+	content: "\74";
+}
+.icon-untitled-40:before {
+	content: "\68";
+}
+.icon-untitled-41:before {
+	content: "\7b";
+}
+.icon-untitled-42:before {
+	content: "\55";
+}
+.icon-untitled-43:before {
+	content: "\2a";
+}
+.icon-untitled-44:before {
+	content: "\5f";
+}
+.icon-untitled-45:before {
+	content: "\37";
+}
+.icon-untitled-46:before {
+	content: "\36";
+}
+.icon-untitled-47:before {
+	content: "\35";
+}
+.icon-untitled-48:before {
+	content: "\34";
+}
+.icon-untitled-49:before {
+	content: "\33";
+}
+.icon-untitled-50:before {
+	content: "\32";
+}
+.icon-untitled-51:before {
+	content: "\72";
+}
+.icon-untitled-52:before {
+	content: "\75";
+}
+.icon-untitled-53:before {
+	content: "\77";
+}
+.icon-collapse_closed:before {
+	content: "\39";
+}
+.icon-collapse_open:before {
+	content: "\38";
+}

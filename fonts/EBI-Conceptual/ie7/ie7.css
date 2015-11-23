@@ -1,0 +1,27 @@
+.icon-chemical {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x62;');
+}
+.icon-systems {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x79;');
+}
+.icon-expression {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x67;');
+}
+.icon-proteins {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x50;');
+}
+.icon-crossdomain {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x63;');
+}
+.icon-ontology {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6f;');
+}
+.icon-literature {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6c;');
+}
+.icon-dna {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x64;');
+}
+.icon-structures {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x73;');
+}

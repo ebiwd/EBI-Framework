@@ -1,0 +1,213 @@
+@font-face {
+	font-family: 'EBI-Species';
+	src:url('fonts/EBI-Species.eot?-7z7swc');
+	src:url('fonts/EBI-Species.eot?#iefix-7z7swc') format('embedded-opentype'),
+		url('fonts/EBI-Species.woff?-7z7swc') format('woff'),
+		url('fonts/EBI-Species.ttf?-7z7swc') format('truetype'),
+		url('fonts/EBI-Species.svg?-7z7swc#EBI-Species') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'EBI-Species';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-barley:before {
+	content: "\35";
+}
+
+.icon-rice:before {
+	content: "\36";
+}
+
+.icon-anolis:before {
+	content: "\37";
+}
+
+.icon-monodelphis:before {
+	content: "\39";
+}
+
+.icon-papio:before {
+	content: "\38";
+}
+
+.icon-amoeba:before {
+	content: "\30";
+}
+
+.icon-mosquito:before {
+	content: "\31";
+}
+
+.icon-diatom:before {
+	content: "\32";
+}
+
+.icon-kangaroorat:before {
+	content: "\33";
+}
+
+.icon-louse:before {
+	content: "\34";
+}
+
+.icon-rabbit:before {
+	content: "\74";
+}
+
+.icon-worm:before {
+	content: "\57";
+}
+
+.icon-zebrafish:before {
+	content: "\5a";
+}
+
+.icon-yeast:before {
+	content: "\59";
+}
+
+.icon-spider:before {
+	content: "\53";
+}
+
+.icon-scorpion:before {
+	content: "\73";
+}
+
+.icon-rat:before {
+	content: "\52";
+}
+
+.icon-plant:before {
+	content: "\50";
+}
+
+.icon-pig:before {
+	content: "\70";
+}
+
+.icon-mouse:before {
+	content: "\4d";
+}
+
+.icon-monkey:before {
+	content: "\72";
+}
+
+.icon-human:before {
+	content: "\48";
+}
+
+.icon-horse:before {
+	content: "\68";
+}
+
+.icon-fungus:before {
+	content: "\75";
+}
+
+.icon-frog:before {
+	content: "\66";
+}
+
+.icon-fly:before {
+	content: "\46";
+}
+
+.icon-dog:before {
+	content: "\64";
+}
+
+.icon-cow:before {
+	content: "\43";
+}
+
+.icon-corn:before {
+	content: "\63";
+}
+
+.icon-chicken:before {
+	content: "\6b";
+}
+
+.icon-cat:before {
+	content: "\41";
+}
+
+.icon-bug:before {
+	content: "\62";
+}
+
+.icon-virus:before {
+	content: "\76";
+}
+
+.icon-pufferfish:before {
+	content: "\45";
+}
+
+.icon-hedgehog:before {
+	content: "\6f";
+}
+
+.icon-guineapig:before {
+	content: "\67";
+}
+
+.icon-gorilla:before {
+	content: "\47";
+}
+
+.icon-bird:before {
+	content: "\6e";
+}
+
+.icon-elephant:before {
+	content: "\65";
+}
+
+.icon-dolphin:before {
+	content: "\44";
+}
+
+.icon-armadillo:before {
+	content: "\6c";
+}
+
+.icon-alpaca:before {
+	content: "\61";
+}
+
+.icon-wallaby:before {
+	content: "\77";
+}
+
+.icon-platypus:before {
+	content: "\55";
+}
+
+.icon-chimpanzee:before {
+	content: "\69";
+}
+
+.icon-brassica:before {
+	content: "\42";
+}
+
+.icon-ecoli:before {
+	content: "\4c";
+}
+

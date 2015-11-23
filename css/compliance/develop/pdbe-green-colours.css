@@ -1,0 +1,151 @@
+/*
+        Colour palette: EMBL-EBI Green
+        Details: Accented Analogic from ColourSchemeDesigner
+        http://colorschemedesigner.com/#2J42yeQqvw0w0
+*/
+
+
+/* Color
+===================================================*/
+
+div#topbar {
+    background-color: #74b360;
+    border-bottom: 1px solid #222222; /* ==== not in palette ==== */
+}
+
+a:link {
+    color: #1c295d;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #896b25;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222222; /* ==== not in palette ==== */
+}
+
+h1 { color: #f7f7f7; } /* ==== not in palette ==== */
+
+h2 {
+    color: #74b360;
+}
+
+h3 {
+    color: #976269;
+}
+
+th {
+    background-color: #afd9a2; /* #d3b671; */
+    background-color: rgba(112, 189, 189, 0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#afd9a2', EndColorStr='#afd9a2');
+}
+
+a.special { background-color: #e9d7ae; }
+
+form input.submit {
+    border-color: #638658;	/* P2 */
+
+    background-color: #74b360;	/* colour P1 */
+    background-image: -moz-linear-gradient(top, #a0d98e, #74b360);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #a0d98e),color-stop(1, #74b360));
+    background-image: -webkit-linear-gradient(#a0d98e, #74b360);
+    background-image: linear-gradient(top, #a0d98e, #74b360);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#a0d98e', EndColorStr='#74b360');
+
+    color: #f8f8f8; /* ==== not in palette ==== */
+    text-shadow: #145251 0 1px 1px; /* ==== not in palette ==== */
+}
+
+form input.submit:hover,
+form input.submit:focus,
+form input.submit:active { background: #74b360; }
+
+div.box { border: 10px solid #e9d7ae; }
+
+div#local-masthead { background-color: #d8e5d8; }
+
+
+/* For use on the EBI homepage... */
+div#local-masthead.gradient {
+    /*background-color: #afd9a2;*/
+/*    background-image: -moz-linear-gradient(top, #afd9a2, #9adede);   ==== not in palette ====
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #afd9a2),color-stop(1, #9adede));
+    background-image: -webkit-linear-gradient(#afd9a2, #9adede);
+    background-image: linear-gradient(top, #afd9a2, #9adede);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#afd9a2', EndColorStr='#9adede'); */
+
+    /*    rgb(216,229,216) = #d8e5d8;
+    rgb(175,217,162) = #afd9a2;*/
+
+    background-image: linear-gradient(left , rgb(216,229,216) 0%, rgb(175,217,162) 66%);
+    background-image: -o-linear-gradient(left , rgb(216,229,216) 0%, rgb(175,217,162) 66%);
+    background-image: -moz-linear-gradient(left , rgb(216,229,216) 0%, rgb(175,217,162) 66%);
+    background-image: -webkit-linear-gradient(left , rgb(216,229,216) 0%, rgb(175,217,162) 66%);
+    background-image: -ms-linear-gradient(left , rgb(216,229,216) 0%, rgb(175,217,162) 66%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0, rgb(216,229,216)),
+        color-stop(0.66, rgb(175,217,162))
+        );
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#afd9a2', EndColorStr='#d8e5d8');*/
+
+}
+
+
+
+/* Colour the faux-underline for local menu items */
+div#local-masthead ul li a:hover,
+div#local-masthead ul li a:focus,
+div#local-masthead ul li a:active {
+    border-bottom: 3px solid #74b360;
+}
+
+
+
+/* testing masthead combos */
+/* div#local { background-color: #afd9a2; } */
+
+div#mastheads div#local h1 { color: #222222; } /* ==== not in palette ==== */
+
+
+/* Trying out some things for the expand/collapse global masthead */
+body.expander div#global { border-bottom: 1px solid #111111; } /* ==== not in palette ==== */
+
+body.expander div#local { border-top: 1px solid #70D3D3; } /* ==== not in palette ==== */
+
+
+/* Palette color codes */
+
+.primary-1 { background-color: #74b360 }
+.primary-2 { background-color: #638658 }
+.primary-3 { background-color: #34741f }
+.primary-4 { background-color: #a0d98e }
+.primary-5 { background-color: #afd9a2 }
+
+.secondary-a-1 { background-color: #556190 }
+.secondary-a-2 { background-color: #4b516c }
+.secondary-a-3 { background-color: #1c295d }
+.secondary-a-4 { background-color: #8a96c7 }
+.secondary-a-5 { background-color: #9ba3c7 }
+
+.secondary-b-1 { background-color: #d3b671 }
+.secondary-b-2 { background-color: #9e8e67 }
+.secondary-b-3 { background-color: #896b25 }
+.secondary-b-4 { background-color: #e9d198 }
+.secondary-b-5 { background-color: #e9d7ae }
+
+.complement-1 { background-color: #c96c79 }
+.complement-2 { background-color: #976269 }
+.complement-3 { background-color: #832330 }
+.complement-4 { background-color: #e495a0 }
+.complement-5 { background-color: #e4aab2 }
+
+/* end */
+

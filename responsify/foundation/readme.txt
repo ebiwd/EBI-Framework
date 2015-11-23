@@ -1,0 +1,1 @@
+This is a bare-bones subset of the Foundation framework to pilot responsive columns.

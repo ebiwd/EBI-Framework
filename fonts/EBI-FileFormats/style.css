@@ -1,0 +1,116 @@
+@font-face {
+	font-family: 'EBI-FileFormats';
+	src:url('fonts/EBI-FileFormats.eot');
+	src:url('fonts/EBI-FileFormats.eot?#iefix') format('embedded-opentype'),
+		url('fonts/EBI-FileFormats.svg#EBI-FileFormats') format('svg'),
+		url('fonts/EBI-FileFormats.woff') format('woff'),
+		url('fonts/EBI-FileFormats.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'EBI-FileFormats';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-file_ZIP:before, .icon-untitled:before, .icon-untitled-2:before, .icon-untitled-3:before, .icon-untitled-4:before, .icon-untitled-5:before, .icon-untitled-6:before, .icon-untitled-7:before, .icon-untitled-8:before, .icon-untitled-9:before, .icon-untitled-10:before, .icon-untitled-11:before, .icon-untitled-12:before, .icon-untitled-13:before, .icon-untitled-14:before, .icon-untitled-15:before, .icon-untitled-16:before, .icon-untitled-17:before, .icon-untitled-18:before, .icon-untitled-19:before, .icon-untitled-20:before, .icon-untitled-21:before, .icon-untitled-22:before, .icon-untitled-23:before, .icon-untitled-24:before, .icon-untitled-25:before, .icon-untitled-26:before {
+	font-family: 'EBI-FileFormats';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-file_ZIP:before {
+	content: "\5a";
+}
+.icon-untitled:before {
+	content: "\33";
+}
+.icon-untitled-2:before {
+	content: "\78";
+}
+.icon-untitled-3:before {
+	content: "\64";
+}
+.icon-untitled-4:before {
+	content: "\74";
+}
+.icon-untitled-5:before {
+	content: "\76";
+}
+.icon-untitled-6:before {
+	content: "\73";
+}
+.icon-untitled-7:before {
+	content: "\58";
+}
+.icon-untitled-8:before {
+	content: "\44";
+}
+.icon-untitled-9:before {
+	content: "\72";
+}
+.icon-untitled-10:before {
+	content: "\31";
+}
+.icon-untitled-11:before {
+	content: "\32";
+}
+.icon-untitled-12:before {
+	content: "\70";
+}
+.icon-untitled-13:before {
+	content: "\6f";
+}
+.icon-untitled-14:before {
+	content: "\4f";
+}
+.icon-untitled-15:before {
+	content: "\4d";
+}
+.icon-untitled-16:before {
+	content: "\4a";
+}
+.icon-untitled-17:before {
+	content: "\49";
+}
+.icon-untitled-18:before {
+	content: "\47";
+}
+.icon-untitled-19:before {
+	content: "\46";
+}
+.icon-untitled-20:before {
+	content: "\66";
+}
+.icon-untitled-21:before {
+	content: "\61";
+}
+.icon-untitled-22:before {
+	content: "\63";
+}
+.icon-untitled-23:before {
+	content: "\52";
+}
+.icon-untitled-24:before {
+	content: "\43";
+}
+.icon-untitled-25:before {
+	content: "\42";
+}
+.icon-untitled-26:before {
+	content: "\41";
+}

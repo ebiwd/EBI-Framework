@@ -1,0 +1,1359 @@
+html
+{
+	background: #FFFFFF url("../images/background.jpg") repeat left top scroll;
+}
+
+#page
+{
+	z-index: 1;
+	width: 975px;
+	min-height: 822.9999999999995px;
+	background-image: none;
+	border-style: none;
+	border-color: #000000;
+	background-color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#page_position_content
+{
+	margin-bottom: -686px;
+}
+
+#u476
+{
+	z-index: 3;
+	width: 975px;
+	margin-right: -975px;
+}
+
+#u492
+{
+	z-index: 5;
+	width: 77px;
+	height: 30px;
+	margin-right: -77px;
+	left: 498px;
+}
+
+#u492:hover
+{
+	margin: 0px -77px 0px 0px;
+}
+
+#u492:active
+{
+	margin: 0px -77px 0px 0px;
+}
+
+#u492.MuseLinkActive
+{
+	margin: 0px -77px 0px 0px;
+}
+
+#u505
+{
+	z-index: 6;
+	width: 70px;
+	height: 30px;
+	margin-right: -70px;
+	left: 577px;
+}
+
+#u505:hover
+{
+	margin: 0px -70px 0px 0px;
+}
+
+#u505.MuseLinkActive
+{
+	margin: 0px -70px 0px 0px;
+}
+
+#u529
+{
+	z-index: 7;
+	width: 72px;
+	height: 30px;
+	margin-right: -72px;
+	left: 723px;
+}
+
+#u529:hover
+{
+	margin: 0px -72px 0px 0px;
+}
+
+#u2329
+{
+	z-index: 8;
+	width: 72px;
+	height: 30px;
+	margin-right: -72px;
+	left: 424px;
+}
+
+#u529.MuseLinkActive,#u2329:hover
+{
+	margin: 0px -72px 0px 0px;
+}
+
+#u2959
+{
+	z-index: 9;
+	width: 72px;
+	height: 30px;
+	margin-right: -72px;
+	left: 649px;
+}
+
+#u2329.MuseLinkActive,#u2959:hover
+{
+	margin: 0px -72px 0px 0px;
+}
+
+#u2959.MuseLinkActive
+{
+	margin: 0px -72px 0px 0px;
+}
+
+#ppu1852
+{
+	width: 0.01px;
+	top: -2px;
+	margin-bottom: -2px;
+	position: relative;
+}
+
+#u1852
+{
+	z-index: 92;
+	width: 975px;
+	position: relative;
+	margin-right: -975px;
+}
+
+#u1935
+{
+	z-index: 102;
+	width: 74px;
+	height: 29px;
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	position: relative;
+	margin-right: -74px;
+	margin-top: 130px;
+	background: transparent url("../images/subnav_training.jpg") no-repeat left top;
+}
+
+#u1935:hover
+{
+	background-image: url("../images/subnav_training2.jpg");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin: 130px -74px 0px 0px;
+}
+
+#u1935:active
+{
+	background-image: url("../images/subnav_training.jpg");
+	background-size: contain !important;
+	-webkit-background-size: contain;
+	-o-background-size: contain;
+	-khtml-background-size: contain;
+	-ms-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin: 130px -74px 0px 0px;
+}
+
+#u1858-4
+{
+	z-index: 94;
+	margin-left: 10px;
+	margin-top: 8px;
+	position: relative;
+}
+
+#ppu3037
+{
+	width: 0.01px;
+	margin-left: 9px;
+	margin-top: 10px;
+	position: relative;
+}
+
+#pu3037
+{
+	width: 0.01px;
+	position: relative;
+	margin-right: -1px;
+	margin-top: 1px;
+	left: 655px;
+}
+
+#u3037
+{
+	z-index: 113;
+	width: 301px;
+	margin-left: 1px;
+	position: relative;
+}
+
+#u3035
+{
+	z-index: 106;
+	width: 301px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: #F1F1F1;
+	padding-bottom: 5px;
+	top: -1px;
+	margin-bottom: -1px;
+	position: relative;
+}
+
+#u3035:hover
+{
+	background-color: #DEDEDE;
+	width: 301px;
+	min-height: 0px;
+	margin: 0px 0px -1px;
+}
+
+#u3036-6
+{
+	z-index: 107;
+	position: relative;
+	width: 56px;
+	margin-right: -56px;
+	margin-top: 5px;
+	left: 8px;
+}
+
+#u3041
+{
+	z-index: 115;
+	width: 301px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: #F1F1F1;
+	padding-bottom: 5px;
+	top: -2px;
+	margin-bottom: -2px;
+	position: relative;
+}
+
+#u3041:hover
+{
+	background-color: #DEDEDE;
+	width: 301px;
+	min-height: 0px;
+	margin: 0px 0px -2px;
+}
+
+#u3041:active
+{
+	background-color: #F1F1F1;
+	width: 301px;
+	min-height: 0px;
+	margin: 0px 0px -2px;
+}
+
+#u3047-6
+{
+	z-index: 119;
+	position: relative;
+	width: 78px;
+	margin-right: -78px;
+	margin-top: 8px;
+	left: 8px;
+}
+
+#u3042
+{
+	z-index: 116;
+	width: 301px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: #F1F1F1;
+	padding-bottom: 5px;
+	top: -1px;
+	margin-bottom: -1px;
+	position: relative;
+}
+
+#u3042:hover
+{
+	background-color: #DEDEDE;
+	width: 301px;
+	min-height: 0px;
+	margin: 0px 0px -1px;
+}
+
+#u3035:active,#u3042:active
+{
+	background-color: #F1F1F1;
+	width: 301px;
+	min-height: 0px;
+	margin: 0px 0px -1px;
+}
+
+#u3048-6
+{
+	z-index: 125;
+	position: relative;
+	width: 74px;
+	margin-right: -74px;
+	margin-top: 4px;
+	left: 8px;
+}
+
+#pu3043
+{
+	width: 0.01px;
+	top: -1px;
+	margin-bottom: -1px;
+	position: relative;
+}
+
+#u3043
+{
+	z-index: 117;
+	width: 301px;
+	height: 41px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: #F1F1F1;
+	position: relative;
+	margin-right: -303px;
+}
+
+#u3043:hover
+{
+	background-color: #DEDEDE;
+	width: 301px;
+	height: 41px;
+	min-height: 0px;
+	margin: 0px -303px 0px 0px;
+}
+
+#u3043:active
+{
+	background-color: #F1F1F1;
+	width: 301px;
+	height: 41px;
+	min-height: 0px;
+	margin: 0px -303px 0px 0px;
+}
+
+#u3049-8
+{
+	z-index: 131;
+	position: relative;
+	width: 226px;
+	margin-right: -226px;
+	margin-top: 5px;
+	left: 9px;
+}
+
+#u3044
+{
+	z-index: 118;
+	width: 301px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: #F1F1F1;
+	padding-bottom: 5px;
+	top: -4px;
+	margin-bottom: -4px;
+	position: relative;
+}
+
+#u3044:hover
+{
+	background-color: #DEDEDE;
+	width: 301px;
+	min-height: 0px;
+	margin: 0px 0px -4px;
+}
+
+#u3044:active
+{
+	background-color: #F1F1F1;
+	width: 301px;
+	min-height: 0px;
+	margin: 0px 0px -4px;
+}
+
+#u3050-6
+{
+	z-index: 139;
+	position: relative;
+	width: 272px;
+	margin-right: -272px;
+	margin-top: 8px;
+	left: 8px;
+}
+
+#pu1777
+{
+	width: 0.01px;
+	margin-left: 1px;
+	top: -6px;
+	margin-bottom: -6px;
+	position: relative;
+}
+
+#u1777
+{
+	z-index: 20;
+	width: 301px;
+	position: relative;
+	margin-right: -301px;
+	margin-top: 5px;
+}
+
+#u2330-3
+{
+	z-index: 103;
+	width: 5px;
+	position: relative;
+	margin-right: -5px;
+	left: 140px;
+}
+
+#u1866
+{
+	z-index: 100;
+	width: 300px;
+	margin-left: 1px;
+	margin-top: 40px;
+	position: relative;
+}
+
+#u1835-3
+{
+	z-index: 22;
+	width: 5px;
+	position: relative;
+	margin-right: -5px;
+	margin-top: 200px;
+	left: 432px;
+}
+
+#u1779
+{
+	z-index: 25;
+	width: 648px;
+	position: relative;
+	margin-right: -648px;
+}
+
+#ppu1830
+{
+	width: 0.01px;
+	margin-left: 10px;
+	position: relative;
+}
+
+#pu1830
+{
+	width: 0.01px;
+	position: relative;
+	margin-right: -1px;
+	margin-top: 25px;
+}
+
+#u1830
+{
+	z-index: 90;
+	width: 647px;
+	position: relative;
+}
+
+#u1852_img,#u3037_img,#u1777_img,#u1866_img,#u1779_img,#u1830_img
+{
+	vertical-align: top;
+}
+
+#accordionu1787
+{
+	z-index: 27;
+	width: 656px;
+	border-color: #7F7F7F;
+	margin-top: 1px;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#accordionu1787_position_content
+{
+	margin-bottom: -1px;
+}
+
+#u1819
+{
+	z-index: 28;
+	width: 656px;
+	position: relative;
+}
+
+#u1820-3
+{
+	z-index: 29;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/latest_off.jpg") no-repeat left top;
+}
+
+#u1820-3:hover
+{
+	background-image: url("../images/latest_on.jpg");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1820-3:active
+{
+	background-image: url("../images/latest_on.jpg");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1820-3.AccordionPanelTabOpen
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+	background: #FFFFFF url("../images/latest_on_radio.jpg") no-repeat left top;
+}
+
+#u1821
+{
+	z-index: 32;
+	width: 654px;
+	height: 420px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#u2263
+{
+	z-index: 33;
+	width: 656px;
+	position: relative;
+}
+
+#u2264-3
+{
+	z-index: 34;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/nuc_off.png") no-repeat left top;
+}
+
+#u2264-3:hover
+{
+	background-image: url("../images/nuc_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u2264-3:active
+{
+	background-image: url("../images/nuc_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u2264-3.AccordionPanelTabOpen
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+	background: #FFFFFF url("../images/nuc_on_radio.jpg") no-repeat left top;
+}
+
+#u2265
+{
+	z-index: 37;
+	width: 654px;
+	height: 420px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#u2157
+{
+	z-index: 38;
+	width: 656px;
+	position: relative;
+}
+
+#u2158-3
+{
+	z-index: 39;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/func_off.png") no-repeat left top;
+}
+
+#u2158-3:hover
+{
+	background-image: url("../images/func_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u2158-3:active
+{
+	background-image: url("../images/func_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u2158-3.AccordionPanelTabOpen
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+	background: #FFFFFF url("../images/func_on_radio.jpg") no-repeat left top;
+}
+
+#u2159
+{
+	z-index: 42;
+	width: 654px;
+	height: 420px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#u1825
+{
+	z-index: 43;
+	width: 656px;
+	position: relative;
+}
+
+#u1827-3
+{
+	z-index: 44;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/prot_off.png") no-repeat left top;
+}
+
+#u1827-3:hover
+{
+	background-image: url("../images/prot_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1827-3:active
+{
+	background-image: url("../images/prot_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1827-3.AccordionPanelTabOpen
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+	background: #FFFFFF url("../images/prot_on_radio.jpg") no-repeat left top;
+}
+
+#u1826
+{
+	z-index: 47;
+	width: 654px;
+	height: 420px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#u1791
+{
+	z-index: 48;
+	width: 656px;
+	position: relative;
+}
+
+#u1793-3
+{
+	z-index: 49;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/bio_off.png") no-repeat left top;
+}
+
+#u1793-3:hover
+{
+	background-image: url("../images/bio_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1793-3:active
+{
+	background-image: url("../images/bio_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1793-3.AccordionPanelTabOpen
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+	background: #FFFFFF url("../images/bio_on_radio.jpg") no-repeat left top;
+}
+
+#u1792
+{
+	z-index: 52;
+	width: 654px;
+	height: 420px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#u1797
+{
+	z-index: 53;
+	width: 656px;
+	position: relative;
+}
+
+#u1799-3
+{
+	z-index: 54;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/small_off.png") no-repeat left top;
+}
+
+#u1799-3:hover
+{
+	background-image: url("../images/small_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1799-3:active
+{
+	background-image: url("../images/small_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1799-3.AccordionPanelTabOpen
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+	background: #FFFFFF url("../images/small_on_radio.jpg") no-repeat left top;
+}
+
+#u1798
+{
+	z-index: 57;
+	width: 654px;
+	height: 420px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#u1800
+{
+	z-index: 58;
+	width: 656px;
+	position: relative;
+}
+
+#u1802-3
+{
+	z-index: 59;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/path_off.png") no-repeat left top;
+}
+
+#u1802-3:hover
+{
+	background-image: url("../images/path_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1802-3:active
+{
+	background-image: url("../images/path_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1802-3.AccordionPanelTabOpen
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+	background: #FFFFFF url("../images/path_on_radio.jpg") no-repeat left top;
+}
+
+#u1801
+{
+	z-index: 62;
+	width: 654px;
+	height: 420px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#u1816
+{
+	z-index: 63;
+	width: 656px;
+	position: relative;
+}
+
+#u1817-3
+{
+	z-index: 64;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/lit_off.png") no-repeat left top;
+}
+
+#u1817-3:hover
+{
+	background-image: url("../images/lit_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1817-3:active
+{
+	background-image: url("../images/lit_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1817-3.AccordionPanelTabOpen
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+	background: #FFFFFF url("../images/lit_on_radio.jpg") no-repeat left top;
+}
+
+#u1818
+{
+	z-index: 67;
+	width: 654px;
+	height: 420px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#u1822
+{
+	z-index: 68;
+	width: 656px;
+	position: relative;
+}
+
+#u1824-3
+{
+	z-index: 69;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/ont_off.png") no-repeat left top;
+}
+
+#u1824-3:hover
+{
+	background-image: url("../images/ont_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1824-3:active
+{
+	background-image: url("../images/ont_on.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1824-3.AccordionPanelTabOpen
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+	background: #FFFFFF url("../images/ont_on_radio.jpg") no-repeat left top;
+}
+
+#u1823
+{
+	z-index: 72;
+	width: 654px;
+	height: 420px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#u1788
+{
+	z-index: 73;
+	width: 656px;
+	position: relative;
+}
+
+#u1790-3
+{
+	z-index: 74;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/pat_off.png") no-repeat left top;
+}
+
+#u1790-3:hover
+{
+	background-image: url("../images/pat_over.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1790-3:active
+{
+	background-image: url("../images/pat_over.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1790-3.AccordionPanelTabOpen
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+	background: #FFFFFF url("../images/pat_over_radio.jpg") no-repeat left top;
+}
+
+#u1789
+{
+	z-index: 77;
+	width: 654px;
+	height: 420px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#u2280
+{
+	z-index: 78;
+	width: 656px;
+	position: relative;
+}
+
+#u2282-3
+{
+	z-index: 79;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/general_off.jpg") no-repeat left top;
+}
+
+#u2282-3:hover
+{
+	background-image: url("../images/general_on.jpg");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u2282-3:active
+{
+	background-image: url("../images/general_on.jpg");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u2282-3.AccordionPanelTabOpen
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+	background: #FFFFFF url("../images/general_on_radio.jpg") no-repeat left top;
+}
+
+#u2281
+{
+	z-index: 82;
+	width: 654px;
+	height: 420px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	position: relative;
+	background: #FFFFFF url("../images/ebi_training_online_content.jpg") no-repeat left top;
+}
+
+#u1821:hover,#u2265:hover,#u2159:hover,#u1826:hover,#u1792:hover,#u1798:hover,#u1801:hover,#u1818:hover,#u1823:hover,#u1789:hover,#u2281:hover
+{
+	background-repeat: no-repeat;
+	background-position: left top;
+	width: 654px;
+	height: 420px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u1794
+{
+	z-index: 83;
+	width: 656px;
+	position: relative;
+}
+
+#u1796-3
+{
+	z-index: 84;
+	width: 656px;
+	min-height: 29px;
+	border-color: #FFFFFF;
+	color: #999999;
+	line-height: 1;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	position: relative;
+	background: #FFFFFF url("../images/bottom.png") no-repeat left top;
+}
+
+#u1796-3:hover
+{
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1796-3:active
+{
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#u1796-3.AccordionPanelTabOpen
+{
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-color: #FFFFFF;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 29px;
+	margin: 0px;
+}
+
+#pu1795_position_content
+{
+	margin-top: -1336px;
+	margin-bottom: 1337px;
+}
+
+#u1795
+{
+	z-index: 88;
+	margin-top: 1336px;
+	position: relative;
+}
+
+#u1795-2
+{
+	z-index: 89;
+	top: -1px;
+	margin-bottom: -1px;
+	position: relative;
+}
+
+#u1858-4_img,#u3036-6_img,#u3047-6_img,#u3048-6_img,#u3049-8_img,#u3050-6_img,#u1795_img,#u1795-2_img
+{
+	display: block;
+	vertical-align: top;
+}
+
+.AccordionPanelTab /* accordion */
+{
+	cursor: pointer;
+}
+
+#u1864
+{
+	z-index: 98;
+	width: 301px;
+	position: relative;
+	margin-right: -301px;
+	left: 663px;
+}
+
+#u1864_clip
+{
+	overflow: hidden;
+	width: 301px;
+	height: 245px;
+}
+
+#u1864_img
+{
+	margin-top: -43px;
+}
+
+#master-footer
+{
+	width: 0.01px;
+	margin-top: 48px;
+	position: relative;
+}
+
+#master-header,#pu1852,#pu1795,#pu2859
+{
+	width: 0.01px;
+	position: relative;
+}
+
+#u2859
+{
+	z-index: 12;
+	width: 975px;
+	margin-right: -975px;
+}
+
+#u3426-5
+{
+	z-index: 14;
+	width: 79px;
+	min-height: 15px;
+	margin-right: -79px;
+	margin-top: 203px;
+	left: 10px;
+}
+
+#u1539
+{
+	z-index: 11;
+	width: 975px;
+	height: 337px;
+	top: -4px;
+	margin-bottom: -4px;
+}
+
+body
+{
+	padding-bottom: 686px;
+}
+

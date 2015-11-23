@@ -1,0 +1,48 @@
+.icon-windows {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x77;');
+}
+.icon-orcid {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4f;');
+}
+.icon-apple {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x41;');
+}
+.icon-linux {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x58;');
+}
+.icon-flickr {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x66;');
+}
+.icon-slideshare {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x53;');
+}
+.icon-wordpress {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x50;');
+}
+.icon-blogger {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x42;');
+}
+.icon-facebook {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x46;');
+}
+.icon-googleplus {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x47;');
+}
+.icon-linkedin {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4c;');
+}
+.icon-rss {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x52;');
+}
+.icon-twitter {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x54;');
+}
+.icon-vimeo {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x56;');
+}
+.icon-weibo {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x57;');
+}
+.icon-youtube {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x59;');
+}

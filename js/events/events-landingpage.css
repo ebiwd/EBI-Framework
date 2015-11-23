@@ -1,0 +1,536 @@
+/* TODO: wrap these selectors with the page class
+
+body.section-about.subsection-events {
+
+}
+
+
+  dark green: 0b7b7d;
+*/
+a, a:link {
+  border-bottom: none;
+  color: #666;
+}
+a:hover {
+  color: #03B4B7;
+}
+a:hover img {
+  opacity: .9;
+}
+.node-panel {
+  margin: 0 23px 0 35px;
+}
+
+h3 {
+  /*color: #0b7b7d;*/
+  color: #000;
+  font-size: 13px;
+  padding: 0;
+  font-family: verdana;
+  font-weight: bold;
+}
+
+#hero-unit {
+  background: #0b7b7d;
+  width: 100%;
+  height: 370px;
+  position: relative;
+  background: url('images/Events_page_HERO.jpg') 50% 50%;
+  background-size: cover;
+  margin: 0 -35px 13px;
+  padding: 0 35px;
+}
+
+#hero-unit .inner {
+  min-width: 300px;
+  background: #fff; /* fallback */
+  background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,1) 30%);
+
+  max-width: 336px;
+  width: 33%; 
+  margin-left: 3%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#hero-unit .inner h2 {
+  font-size: 3em;
+}
+
+#hero-unit .inner p a {
+  border-bottom: 1px dotted #0b7b7d; 
+}
+
+#hero-unit p {
+  margin: 0 1em 0;
+}
+
+#hero-unit p.button {
+  margin: 1em 1.5em;
+}
+
+#hero-unit p.button a {
+  color: #fff;
+  border-bottom: none;
+}
+
+#hero-unit .logo {
+  width: 175px;
+  margin-top: 1.5em;
+  position: relative;
+  top: 5px;
+  left: 2px;
+}
+
+.featured-event-group {
+  padding: 2em 2em 0 2em;
+}
+
+.featured-event {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 1% 3em 0;
+}
+.featured-event:last-child {
+  width: 49%;
+  margin-right: 0;
+}
+
+.featured-event .image-wrapper {
+  height: 112px;
+  overflow:hidden;
+}
+
+
+.featured-event h2,
+.featured-event p {
+  padding: 0;
+}
+
+a.featured-event:hover h2 { color: #03B4B7; }
+a.featured-event:hover .button { background: #03B4B7; }
+
+.button {
+  background: #0b7b7d;
+  color: #fff;
+  display: inline-block;
+  padding: 2px 5px;
+}
+
+a.button { color: #fff; }
+
+.button:hover {
+  background: #03B4B7;
+}
+
+  #featured-events-content-placeholder{
+    border-bottom: 1px solid #999;
+    margin-bottom: 2em;
+  }
+
+
+  #upcoming-wraper {
+    margin-top: 3em;
+    border-top: 1px solid #999;
+    padding-top: 1em;
+  }
+
+  #upcoming-wraper input.filter {
+    width: 400px;
+  }
+
+  #upcoming-wraper .logo { width: 170px; }  
+  #upcoming-wraper .logo-area { 
+    font-family: 'HelveticaNeueLT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    line-height: 49px;
+    vertical-align: bottom;
+    margin-right: 20px;
+    margin-bottom: .7em;
+    display: inline-block;
+  }  
+  #upcoming-wraper .filter {
+    display: inline-block; 
+  }
+
+  #upcoming-wraper .filter.select2-container { 
+    width: 500px !important;
+    font-size: 20px;
+  } 
+
+  #upcoming-wraper .filter #filter-buttons {
+    margin-top: .35em;
+    color: #555;
+  }
+  #upcoming-wraper .filter #filter-buttons input[type="radio"] {
+    margin: 0 6px 0 13px;
+    position: relative;
+    top: -1px;    
+  }
+
+  #upcoming-events-content-placeholder {
+    margin: 1em 0 0 0;
+  }
+
+  #upcoming-events-content-placeholder h3 {
+    margin: 2em 0 1em;
+    line-height: 16px;
+  }
+
+  .upcoming-event {
+    line-height: 16px;
+  }
+
+  .upcoming-event a.main-link {
+    text-decoration: none;
+    color: #111;
+    border-bottom: none;
+    display: block;
+    padding: 9px 0;
+  }
+  .upcoming-event a.main-link:hover {
+    background: #efefef;
+  }
+
+  .upcoming-event a .event-name {
+    min-width: 300px;
+    width: 34%;
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  .upcoming-event a .event-date,
+  .upcoming-event a .event-type {
+    /*color: rgb(54,107,113);*/
+    position: static;
+    display: inline-block;
+    padding: 0;
+    font-size: 100%;
+    font-weight: normal;
+    float: none;
+    width: 12%;
+    min-width: 100px;
+    max-width: 130px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .upcoming-event a .event-name:before { font-family: 'EBI-Generic';
+    color: #0b7b7d;
+    font-size: 19px;
+    position: relative;
+    top: 1px;
+    margin-left: -19px;
+    left: -8px; }
+  .upcoming-event a .event-name.course:before { content: "G"; }
+  .upcoming-event a .event-name.seminar:before { content: "t"; }
+  .upcoming-event a .event-name.training:before { content: "A"; }
+  .upcoming-event a .event-name.event:before { content: "}"; }
+  .upcoming-event a .event-name.webinar:before { content: "T"; }
+  .upcoming-event a .event-register { color: #0b7b7d; vertical-align: top; }
+  .upcoming-event a:hover .event-register { border-bottom: 1px dashed #0b7b7d; }
+
+  .hidden {
+    display: none;
+  }
+
+  .topic-icons {
+    margin-bottom: 2em;
+    margin-top: -.5em;
+  }
+
+  .explore-topics {
+    display: inline-block;
+    width: 30%;
+    min-width: 320px;
+  }
+  .explore-topics.topic-area {
+    width: 55%;
+    margin-right: 3em;
+    min-width: 485px;
+    margin-left: 2em;
+    border-right: 1px solid #999;
+  }
+
+  .explore-topics.topic-style {
+    vertical-align: top;
+  }
+
+  .explore-topics .item {
+    min-width: 152px;
+    display: inline-block;
+    margin-bottom: -3px;
+    width: 29%;
+  }
+
+  .explore-topics a:hover .item {
+    text-decoration: underline;
+  }
+  
+  .explore-topics .item span.icon.icon-generic,
+  .explore-topics .item span.icon.icon-conceptual {
+    font-size: 18px;
+    position: relative;
+    line-height: 2em;
+    display: inline-block;
+  }
+
+  .explore-topics .item span.icon.icon-conceptual {
+    top: 7px;
+  }
+
+  .explore-topics .item span.icon.icon-generic {
+    margin-top: 3px;
+    top: 2px;
+  }
+
+  .explore-topics .item span.icon.icon-generic:before,
+  .explore-topics .item span.icon.icon-conceptual:before {
+    color: #0b7b7d;
+  }
+
+  .explore-topics .select2-container {
+    min-width: 269px;
+    margin-left: 1em;
+  }
+
+  #upcoming-wraper .select2-container-multi .select2-choices .select2-search-choice {
+    font-size: 13px;
+    margin-top: 7px;
+  }
+
+  .events-archive-link {
+    margin-top: 3em;
+  }
+
+  .topic-bar {
+    background: #0b7b7d;
+    color: #fff;
+    width: 80%;
+    position: fixed;
+    bottom: -100px;
+    z-index: 100;
+    left: 0;
+    padding: 12px 10%;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+  }
+
+  .topic-bar.active {
+    bottom: 0;
+  }
+
+  .lifefilter-drop { display: none !important; }
+
+/* seminars styles */
+body.page-about-events-seminars .upcoming-event a.main-link .event-image,
+body.page-about-events-seminars #upcoming-wraper #upcoming-events-content-placeholder .event-image {
+  display: inline-block;
+  border: 1px solid #ddd;
+  height: 33px;
+  max-height: 33px;
+  overflow: hidden;
+  width: 30px;
+}
+body.page-about-events-seminars .upcoming-event a.main-link .event-image img,
+body.page-about-events-seminars #upcoming-wraper #upcoming-events-content-placeholder .event-image img {
+  width: 34px;
+  margin: 0 0 0 -2px;
+  max-width: initial;
+}
+body.page-about-events-seminars #upcoming-wraper #upcoming-events-content-placeholder .event-image:empty {
+  border: none;
+}
+
+body.page-about-events-seminars .upcoming-event a.main-link,
+body.page-about-events-seminars .upcoming-event a.main-link .event-date {
+  color: #999;
+  min-width: 220px;
+}
+body.page-about-events-seminars .upcoming-event a .event-name {
+  min-width: 275px;
+  max-width: 300px;
+  margin-left: 10px;
+}
+body.page-about-events-seminars .upcoming-event a.main-link .name {
+  color: #222;
+  font-style: italic;
+}
+#past-events-content-placeholder,
+body.page-about-events-seminars #upcoming-wraper {
+  margin: 0 80px;
+  clear: both;
+  padding: 1em 20px;
+}
+
+#past-events-content-placeholder {
+  margin-bottom: 2em;
+  position: relative;
+  top: -1em;
+}
+
+
+.seminars-hero-unit a {
+  border-bottom: 1px dotted #0b7b7d; 
+}
+
+.seminars-hero-unit {
+  height: 300px;
+  margin: 0 3% 0 90px;
+}
+
+.seminars-hero-unit h2 {
+  padding-top: 2em;
+}
+
+.seminars-hero-unit:before {
+    font-family: 'EBI-Generic';
+    color: #0b7b7d;
+    font-size: 230px;
+    content: "t";
+    float: right;
+    text-align: right;
+    width: 20%;
+    margin: 12px 5% -219px 0;
+    border-bottom: 10px solid #0b7b7d;
+    line-height: 224px;
+}
+
+.seminars-previous:before,
+.seminars-about-series:before { 
+  font-family: 'EBI-Generic';
+  color: #999;
+  font-size: 100px;
+  margin-left: -19px;
+  display: inline-block;
+  float: left;
+}
+
+.seminars-about-series:before { 
+  content: "?";
+}
+
+.seminars-previous:before {
+  content: "{";
+}
+
+.seminars-previous h4,
+.seminars-previous p,
+.seminars-about-series h4,
+.seminars-about-series p {display: inline-block; width: 90%; width: 85%; padding-left: 20px;}
+
+.seminars-previous h4,
+.seminars-about-series h4 {margin-top: 2.5em; margin-bottom: 0;}
+.seminars-previous p,
+.seminars-about-series p {max-width: 700px;color: #777;}
+
+a.link,
+a .link {
+  color: #0b7b7d;
+}
+a.link:hover,
+.seminars-about-series a:hover .link {
+  border-bottom: 1px dotted #777;
+}
+
+.upcoming-seminars,
+.seminar-types {
+  margin: 0 100px;
+  clear: both;
+}
+.seminar-types h5 {
+  color: #0b7b7d;
+  padding: 0;
+  font-family: verdana, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  clear: both;
+}
+.seminar-types .seminar-type-block {
+  display: inline-block;
+  width: 45%;
+  margin-right: 3%;
+  margin-bottom: 1em;
+  vertical-align: top;
+}
+
+.nominate-speaker {
+  margin-left: 80px;
+}
+.nominate-speaker h5 {
+  margin: 1em 0 0 10px;
+}
+
+body.page-about-events-seminars .featured-event h2 {
+  clear: none;
+}
+body.page-about-events-seminars .featured-event img {
+  float: left;
+  margin: 10px 1em 75px 0;
+  width: 70px;
+  border: 1px solid #ddd;
+}
+
+label { font-weight: normal; }
+
+
+/* events archive */
+body.page-about-events-archive #upcoming-wraper { border: none; }
+#archived-events-content-placeholder {  margin-top: 3em; }
+body.page-about-events-archive .upcoming-event a .event-name { width: 50%; }
+body.page-about-events-archive #upcoming-wraper .filter.select2-container { width: 650px !important; }
+
+/* topic page */
+body.page-training-topic section>h2,
+body.page-training-topic #upcoming-wraper #s2id_livefilter,
+body.page-about-topic section>h2,
+body.page-about-topic #upcoming-wraper #s2id_livefilter {
+  display: none;
+}
+
+body.page-training-topic #upcoming-wraper,
+body.page-about-topic #upcoming-wraper {
+  margin: 0 1em 0;
+  border-top: none;
+  padding-top: 0;
+}
+
+body.page-training-topic .select2-choice,
+body.page-about-topic .select2-choice {
+  padding: .2em .35em;
+  position: relative;
+  top: -2px;
+}
+body.page-training-topic .select2-container .select2-choice .select2-arrow b,
+body.page-about-topic .select2-container .select2-choice .select2-arrow b {
+  background-position-y: 8px;
+}
+
+body.page-training-topic .select2-container .select2-choice > .select2-chosen,
+body.page-about-topic .select2-container .select2-choice > .select2-chosen {
+  margin-top: 2px;
+  overflow: visible;
+  color: #0b7b7d;
+}
+
+body.page-about-topic #upcoming-wraper .filter {
+    display: inline-block;
+    margin: 0 0 1em;
+}
+
+body.page-about-topic #local-masthead h1 span {
+  display: none;
+}
+
+body.page-about-events .featured-event {
+ vertical-align: top;
+}
+
+body.page-about-events .image-wrapper {
+ height: 112px;
+ overflow:hidden;
+}

@@ -1,0 +1,16 @@
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+    SetOutputFilter DEFLATE
+  </FilesMatch>
+
+  AddType font/ttf .ttf
+  AddType font/eot .eot
+  AddType font/otf .otf
+  AddType font/woff .woff
+  AddType image/svg+xml .svg
+
+#  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject application/x-font-ttf image/svg+xml
+
+  DirectoryIndex index.html demo.html

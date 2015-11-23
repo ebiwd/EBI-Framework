@@ -1,0 +1,366 @@
+ /***** 
+  *
+  * Make the EBI Drupal theme somewhat responsive ... 
+  * 2015-09-17
+  *
+  * This only runs if it's been flagged as a mobile device, 
+  * so no media query is used at the global level.
+  *
+  *****/
+ 
+/* hide it all until we render */
+/* this needs to be move higher in the bootstrap, perhaps onto the html template ...*/
+/*    body:before {
+  content: "Loading... add spinner?";
+  margin: 45vh 10vw;
+  height: 10vh;
+  width: 80vw;
+  display: block;
+  text-align: center;
+  color: #fff;
+  background: #60bdc4;
+}
+body.responsive-done:before {
+  display: none;
+}
+*/
+/* trim the background image off */
+body { margin: 0; padding: 0; width: 100%; }
+/* no background for header */
+div#local-masthead { background-image: none !important; }
+
+/* change the logo to svg, where supported */
+html.svg div#global-masthead a.no-underline {
+  width: 102px;
+  height: 33px;
+  margin: 6px 0 0 9px;
+  display: inline-block;
+  float: left;
+  background: url(EMBL_EBI-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body div#global-masthead a.no-underline img { margin: 6px 0 0 9px; }
+html.svg div#global-masthead a.no-underline img { display:none; }
+
+body div#local-title h1 a, body div#local-title h1 { text-shadow: none; }
+body h1 li { list-style: none; }
+
+/* correct header sizes */
+body h1 { font-size: 320%; margin: .25em 0 .2em; font-weight: 200; font-family: 'Helvetica Neue'; }
+body h2 { font-size: 160%; }
+body h3 { font-size: 140%; }
+
+h2.title-mobile {
+  font-size: 180%;
+}
+
+/* feeling a bit chunky on mobile ... */
+* { -webkit-font-smoothing: antialiased;  -moz-osx-font-smoothing: grayscale; }
+
+body.level1 div#local-masthead h1 > span { display: block; margin: 0; }
+div#local-masthead > #local-title { width: 98%; } /* Title should always fill the width of the space */
+
+/* new masthead */
+div#global-masthead {
+    border-bottom: none;
+    padding: 0 0 4px;
+}
+div#global-masthead a {
+  border-bottom: none;
+  color: #fff;
+  font-size: 9px;
+}
+#masthead-mobile {
+  float: right;
+  font-size: 1.3em;
+}
+#masthead-mobile a {
+  display: inline-block;
+  margin: 0 0 -4px 0;
+  height: 40px;
+  line-height: 13px;
+  vertical-align: middle;
+  padding: 6px 4px 0px;
+  width: 40px;
+  text-align: center;
+  /* overflow: hidden; */
+}
+#masthead-mobile a:before {
+  font-size: 18px;
+  margin-bottom: 9px;
+  display: block;
+  top: 3px;
+  left: 3px;
+  position: relative;
+}
+/* correct header icon sizes */
+/* some font items are bigger than others :-( */
+#masthead-mobile a#masthead-mobile-training:before,
+#masthead-mobile a#masthead-mobile-services:before {
+  font-size: 20px; top: 1px;
+}
+
+/* support icons on old browsers ... */
+/* We remove the IE support for "local" as this isn't needed on mobile ... */
+@font-face {
+  font-family: 'EBI-Generic';
+  src:url('../fonts/EBI-Generic/fonts/EBI-Generic.eot');
+  src:url('../fonts/EBI-Generic/fonts/EBI-Generic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/EBI-Generic/fonts/EBI-Generic.woff') format('woff'),
+    url('../fonts/EBI-Generic/fonts/EBI-Generic.svg#EBI-Generic') format('svg'),
+    url('../fonts/EBI-Generic/fonts/EBI-Generic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'EBI-Functional';
+  src:url('../fonts/EBI-Functional/fonts/EBI-Functional.eot');
+  src:url('../fonts/EBI-Functional/fonts/EBI-Functional.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/EBI-Functional/fonts/EBI-Functional.woff') format('woff'),
+    url('../fonts/EBI-Functional/fonts/EBI-Functional.svg#EBI-Generic') format('svg'),
+    url('../fonts/EBI-Functional/fonts/EBI-Functional.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+#masthead-mobile a.active { /*width: auto;*/ }
+#masthead-mobile a.active:before { color: #fff; }
+ 
+#masthead-mobile a#masthead-mobile-services { border-bottom: 3px solid #60bdc4; }
+#masthead-mobile a#masthead-mobile-research { border-bottom: 3px solid #73A95B; }
+#masthead-mobile a#masthead-mobile-training { border-bottom: 3px solid #fab700; }
+#masthead-mobile a#masthead-mobile-about { border-bottom: 3px solid #60bdc4; }
+#masthead-mobile a#masthead-mobile-search { border-bottom: 3px solid #000; }
+
+#masthead-mobile a#masthead-mobile-services.active { background: #60bdc4; border-bottom: 3px solid #FFF; }
+#masthead-mobile a#masthead-mobile-research.active { background: #73A95B; border-bottom: 3px solid #FFF; }
+#masthead-mobile a#masthead-mobile-training.active { background: #fab700; border-bottom: 3px solid #FFF; }
+#masthead-mobile a#masthead-mobile-about.active { background: #60bdc4; border-bottom: 3px solid #FFF; }
+#masthead-mobile a#masthead-mobile-search.active { background: #000; border-bottom: 3px solid #FFF; }
+
+#masthead-mobile a.active::after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px 20px 0 20px;
+    border-color: #FFF transparent transparent transparent;
+    content: "";
+    top: 8px;
+    position: relative;
+    display: block;
+    z-index: 9;
+}
+
+#masthead-mobile div {
+  display: inline-block;
+}
+
+/* global search */
+form#global-search {
+  position: absolute;
+  right: 0;
+  background-color: #000;
+  padding: .8em .25em 1.1em;
+  margin-top: 3.5em;
+  z-index: 10;
+} 
+form#global-search input.submit:active,
+form#global-search input.submit {
+  background-image: none;
+  width: auto;
+  background: #FFF;
+  color: #333;
+  height: 27px;
+  padding: 1px 11px;
+  margin: 0 0 0 5px;
+}
+form#global-search input.submit:active { color: #EEE; background: #555; }
+
+form#global-search input#global-searchbox {
+  border: 0;
+  height: 24px;
+  width: 120px;
+}
+/* level 2 nav */
+/*.menu-level-2 #local-nav { height: 1em; }*/
+#local-nav-mobile {
+  background: rgba(0,0,0, 0.1);
+  padding: 0 1% 0 0;
+  width: 99%;
+  border-top: 1px solid rgba(0,0,0,.05);
+}
+#local-nav-mobile a { color: #fff; margin: .3em 0 .4em 10px; display: inline-flex;}
+
+div#local-masthead ul#local-nav { margin-top: 0; background-color: rgba(0,0,0, 0.1); display: none; border-top: 1px solid rgba(255,255,255,.3);}
+div#local-masthead ul#local-nav li {
+  width: 50%;
+  display: block;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  border-right: 1px solid rgba(255,255,255,.3);
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: -1px;
+  margin-left: 0;
+  max-height: 35px;
+  overflow: hidden;
+}
+@media (min-width: 600px) {
+  div#local-masthead ul#local-nav li {
+    width: 33.333333%;
+  }
+}
+div#local-masthead ul#local-nav li.active {   }
+div#local-masthead ul#local-nav li a.active-trail.active { background: none; }
+div#local-masthead ul#local-nav li a.active-trail.active:before { border-left: 2px solid #fff; display:inline-block; content: ""; height: 22px; margin: 0 5px -5px 0; background: #fff;}
+div#local-masthead ul#local-nav li a, 
+div#local-masthead ul#local-nav li a:link, 
+div#local-masthead ul#local-nav li a:visited {
+  width: 100%;
+  padding: .5em 0 .5em 3%;
+  border-bottom: none !important;
+  margin-left: -5px;
+  padding-left: 10px;
+}
+div#local-masthead ul li.active, div#local-masthead ul li.active-trail { background: none; }
+
+div#local-masthead ul li.active a, div#local-masthead ul li.active a:link, div#local-masthead ul li.active-trail a:link {
+  padding-top: 0;
+}
+
+/* local search */
+form#local-search {
+  position: absolute;
+  right: 0;
+  top: 3em;
+  background-color: #000;
+  padding: 0;
+  margin-top: 2.3em;
+}
+body form#local-search fieldset { padding: 0; background: none; border: none; color: #fff; }
+body form#local-search fieldset a { color: #fff; }
+div#local-search-mobile { float: right; width: 24px; overflow: hidden;}
+div#local-search-mobile a { border: none; font-size: 14px; margin: 0; }
+div#local-search-mobile a:before { color: #fff; padding: 5px; }
+
+div#local-search-mobile a.flyout-nav.active:before { background: #000; color: #fff; }
+/*.flyout-nav.active .label { color: #fff; }*/
+
+/* level 3 nav */
+.third-level {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+h2.title-mobile {
+  font-size: 200%;
+  color: #000;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+div#newSubnav-nav-mobile {
+  padding-left: 10px;
+  margin-bottom: 4px;
+  vertical-align: baseline;
+  font-size: 12px;
+  flex-wrap: nowrap;
+  flex-grow: 2;
+}
+div#newSubnav-nav-mobile li { list-style: none; float: right; }
+div#newSubnav-nav-mobile a { color: #000; }
+div#newSubnav-nav-mobile a.icon {
+  float: right;
+  border-bottom: none;
+  /* width: 15px; */
+  height: 15px;
+  overflow: hidden;
+  margin-right: 10px;
+  color: #666;
+}
+
+body .shortcuts.submenu {
+  position: absolute;
+  top: 10px; 
+  z-index: 10;
+  width: 200px;
+}
+body .shortcuts.submenu>div { background: #000; }
+body .shortcuts.submenu h3 { display: none; }
+body .shortcuts.submenu a { color: #fff; border: none; padding: 7px 0 7px 10px; }
+body .shortcuts.submenu a:hover { background: #444; }
+body .shortcuts.submenu ul { padding: 0; }
+body .shortcuts.submenu li { list-style: none; padding: 0; margin: 0; }
+body .shortcuts.submenu li.active-trail { border-left: 2px solid #fff; margin: .25em 0 0 4px; }
+
+
+
+/* section for mobile menu solution */
+#global-search,
+#global-nav,
+#breadcrumb,
+.menu-level-2 #local-nav,
+#content > section > h2,
+form#local-search,
+/*.shortcuts,*/
+.shortcuts.submenu { display: none; }
+
+/* footer two-column layout */
+#global-footer .grid_4.alpha, #global-footer .grid_4, #global-footer .grid_4.omega {
+  width: 48%; min-height: 135px;
+}
+@media (min-width: 800px) {
+  #global-footer .grid_4.alpha, #global-footer .grid_4, #global-footer .grid_4.omega {
+    width: 31%;
+  }
+}
+
+/* utility classes */
+.arrow             { width: 0; height: 0; }
+.arrow.up          { border-left: 4px solid transparent; border-right: 4px solid transparent; border-bottom: 4px solid #FFF; top: -9px; }
+.arrow.up.black    { border-bottom: 4px solid #000; }
+.arrow.down        { border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid #FFF; top: 10px; }
+.arrow.down.black  { border-top: 4px solid #000; }
+.flyout-nav .arrow { position: relative; margin-right: -10px; left: 3px; }
+
+.menu-level-2 .arrow.up { top: 7px; }
+
+/* override as it seems to do weird things ... */
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12, .grid_13, .grid_14, .grid_15, .grid_16, .grid_17, .grid_18, .grid_19, .grid_20, .grid_21, .grid_22, .grid_23, .grid_24 {
+  position: static;
+}
+
+/* clean up input buttons */
+body form input.submit {    
+  border: 1px solid #fff; /* P2 */
+  background: #000; /* colour P1 */
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* overrides for section specific areas ... */
+/* training */
+body.section-training div#local-masthead { background: #fab700; }
+body.section-training div#local-title a { text-shadow: none; color: #fff; }
+
+/* tweaks for smaller screens */
+@media (max-width: 355px) {
+    
+    /* shrink menu item text for small screens */
+    div#local-masthead ul#local-nav li { font-size: 3.75vw; height: 35px;} 
+    /* Condense the nav bar */
+    /*html.svg div#global-masthead a.no-underline { zoom: .9; margin: 10px 0 0 7px;}*/
+    html div#global-masthead a.no-underline { zoom: .75; margin-top: 15px !important; display: inline-block; width: auto; }
+    /*div#global-masthead { zoom: .85; }*/
+    div#global-masthead a { font-size: 2.5vw; width: 35px; }
+/*
+    div#global-masthead a.no-underline { height: 28px; }
+    div#global-masthead a { color: rgba(0,0,0,0); }
+    #masthead-mobile a { height: 28px; width: 38px; padding: 12px 0px 0px; }
+*/
+    #masthead-mobile a.active::after { display: none; }
+}

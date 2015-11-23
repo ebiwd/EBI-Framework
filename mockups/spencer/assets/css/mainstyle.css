@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body {
+	background-image: url(../images/background.jpg);
+	background-repeat: repeat;
+	
+}
+.wrapper {
+	height: auto;
+	width: 975px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.mainnav {
+	background-repeat: no-repeat;
+	height: 31px;
+	width: 975px;
+}
+	
+
+.holder {
+	height: auto;
+	width: auto;
+}
+.header {
+	background-image: url(../images/header_home.jpg);
+	background-repeat: no-repeat;
+	height: auto;
+	width: 975px;
+}
+.content {
+	background-repeat: no-repeat;
+	float: left;
+	height: auto;
+	width: 975px;
+}
+.footer {
+	background-image: url(../images/footer.jpg);
+	background-repeat: no-repeat;
+	height: auto;
+	width: 975px;
+}
