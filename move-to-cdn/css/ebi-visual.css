@@ -10,252 +10,22 @@
   */
   /* Typography
   ===================================================*/
-
-  /* Using a different font face for <h1> text */
   h1, h2, h3, h4, h5, h6 {
-      font-family: 'HelveticaNeueLT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 9px 0;
+    font-family: 'HelveticaNeueLT Pro', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
   }
-  h1 {
-      margin: 20px 0;
-      /* line-height: 125%; */
-  }
-  h1.strapline { font-size: 277% }  /* ~40px */
-  h2 {
-      font-size: 277%;
-    line-height: 1.11; /* ~40px */
-  }
-  h2.strapline { font-size: 182%;  /* 24px */ }
-  body.table-layout td h2 {
-    font-size: 277%;
-    line-height: 1.11; /* ~40px */
-  }
-  td h2,
-  body.table-layout table.data td h2 { font-size: 257%; } /*  36 / 14 * 100  */
-  p, ul, ol {
-      /* font-size: 108%; */
-      font-size: 100%;  /* 13px equivalent */
-      margin:0 0 20px 0;  /* margins will collapse into one another */
-  }
-  nav ul { font-size: 108%; }    /* 14px equivalent */
-  /* make definition terms stand out: comes out looking like <h4> */
-  dt {
-    font-family: 'HelveticaNeueLT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin: 9px 0;
-    padding: 0 9px;
-    clear: both;
-    line-height: 1.2;
-    font-size: 138.5%;
-  } 
-  div#global-masthead p {
-    font-size: 123.1%;
-    font-family: 'HelveticaNeueLT Pro', Helvetica, Arial, sans-serif;
-  }
-  blockquote {
-    font-size: 100%;
-    margin: 19px 9px;
-    padding: 10px 9px;
-    border-left: 3px solid #eee;
-  }
-  /*  Intro, Outro
-    These are arguably special kinds of highlight areas.
-    They are usually only featured on the main pages of top-level parts of the website.
-  */
-  #intro,
-  #outro {
-    background-color: #ededed;
-    display: block;
-    padding-bottom: 9px;
-    -moz-border-radius: 5px;
-    -khtml-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-  }
-  #intro h2 {
-	margin: 0;
-    margin-bottom: 5px;
-	padding-top: 13px;
-	border-bottom: 1px solid #ccc;
-  }
-  
-   #intro h2>p,
-   #outro>p,
-   .highlight>p { padding-top:1em; }
-  
-  .shortcuts h3 {
-    border-bottom: 0 none;
-    font-size: 138.5%;
-    line-height: inherit;
-    background-color: #DDD;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 7px;
-    padding-bottom:1px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-    -khtml-border-radius-topleft: 5px;
-    -khtml-border-radius-topright: 5px;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  .shortcuts.submenu h3 {
-    background-color: #222;
-    color: #eee;
-  }
-  .shortcuts #ebi_search_results h3 { font-size: 123.1%; }
-  .shortcuts ul { padding: 0.69em 1.4em; }
-  .shortcuts div.half {
-    float:left;
-    width: 50%;
-    padding: 0.69em 0em;
-  }
-  .shortcuts>div,
-  div.highlight {
-    width: auto;
-    background: #ededed;
-    padding-bottom: 10px;
-    margin: 0 9px 9px 9px;
-    overflow: visible;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  .shortcuts.transparent>div { background: transparent; }
-  .shortcuts.image>div p { padding: 0; }
-  .shortcuts.image>div a {
-    display: block;
-    border-bottom: 3px solid white;
-  }
-  .shortcuts.image>div a:hover,
-  .shortcuts.image>div a:focus,
-  .shortcuts.image>div a:active { border-bottom-color: #207a7a; }
-  div.highlight {
-    border: 4px solid #ddd;
-    -moz-border-radius: 5px;
-    -khtml-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-  }
-  body.level1 .shortcuts>div { max-width: 400px; } /* Only works since body.level1 max-width is set to 1200px... */
-  /* In most Level 1 cases, we want the images to fill the container */
-  body.level1 .shortcuts>div { padding-bottom: 0; }
-  body.level1 .shortcuts img {
-    margin:0;
-    padding: 0;
-  }
-  .shortcuts>div ul.split {
-    float: left;
-    width: 42%;
-    margin: 0 1%;
-    list-style: none;
-    padding: 9px 0 9px 9px;  /* Add some breathing space */
-  }
-  .shortcuts>div ul li a { display: block; border-bottom-color: #ccc; }
-  /* Highlight
-  This might refer to a whole block of content or it might just be a few words that we want to highlight
-  */
-  div.highlight {
-    overflow: visible;
-    margin: 0;
-  }
-  div.highlight h3 {
-    border-bottom: 0 none;
-    line-height: inherit;
-    background-color: #DDD;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  body.page-services div.highlight {
-    margin-bottom: 9px;
-  }
-  body.page-services div.highlight h3 {
-    background-color: transparent;
-    margin-top:5px;
-    margin-bottom: 4px;
-    font-size: 161.6%;
-  }
-  html.fontface body.page-services div.highlight .icon:before {
-    float:left;
-    height: 100px;
-  }
-  body.page-services div.highlight p {
-    text-align: left;
-    padding: 0 0 0 9px;
-    margin: 0;
-  }
-  #intro h2,
-  .shortcuts h3,
-  #outro h3,
-  div.highlight h3 { color: #333; }
-  #intro,
-  #outro,
-  .shortcuts,
-  .highlight {
-      margin-left: 0;
-      margin-right: 0;
-  }
-  .shortcuts>div {
-      margin-left: 0;
-      margin-right: 0;
-  }
-  .alpha #intro,
-  .alpha #outro,
-  .alpha .shortcuts,
-  .alpha .highlight {
-      margin-left: 9px;
-  }
-  .omega #intro,
-  .omega #outro,
-  .omega .shortcuts,
-  .omega .highlight {
-      margin-right: 9px;
-  }
-  form table th,
-  form table td,
-  td p,
-  th p,
-  ul ul,
-  ol ol,
-  ol ul,
-  ul ol,
-  ul ul ul,
-  ol ol ol { font-size: 100%; }
-  
-  ul { list-style-type: circle; }
-  
+    
   li { word-wrap: break-word; }
   
-  code,
-  pre {
-    font-size: 100%; /* font-family already declared in boilerplate CSS */
-  }
-  
-  /* IMAGES */  
-  section img { margin: 7px 0; }
   /* Logo images */
-  
-  /* Center images */
-  .center { margin: 0 auto; }
-
-  .text-highlight {
-    color: #222;
-    background-color: #f3f3f3;
-    padding: 0 0.2em;
-  }
+  .ebi-logo {}
   
   /* pad in page content */
   body.table-layout table {
     padding: 0;
   }
   
-  h1, h2, h3, h4, h5, h6, p,
-  form,
-  table, body.table-layout table.data  { padding: 0 9px; }
   /* --- Links --- */
   a,
-  a:link,
   a:visited {
     border-bottom-width: 1px;
     border-bottom-style: dotted;
@@ -271,8 +41,8 @@
     padding: 0.1em 0.3em;
   }
   a.image,
-  a.image:link,
   a.image:visited { border-bottom: 0 none; }
+
 
   /* Colour
   ===================================================*/
@@ -283,7 +53,7 @@
   }
   h4 { color: #666666; }
   /* --- Links --- */
-  a,a:link {
+  a {
     color:#3e3e3e;
     }
   a:visited {
@@ -294,4 +64,10 @@
   a:active {
     color: #000;
   }
+  .text-highlight {
+    color: #FFF;
+    background-color: #888;
+    padding: 0 0.2em;
+  }
+
 

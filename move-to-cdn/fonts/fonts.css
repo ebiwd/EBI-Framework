@@ -91,9 +91,11 @@
   font-style: normal;
 }
 html.fontface .icon {
-      text-decoration: none;
-      font-style: normal;
-  }
+  text-decoration: none;
+  font-style: normal;
+  text-rendering: optimizeLegibility !important;
+}
+html.fontface  .icon-conceptual,
 html.fontface  .icon-conceptual:before {
   font-family: 'EBI-Conceptual';
   font-size: 138.5%;
@@ -101,6 +103,7 @@ html.fontface  .icon-conceptual:before {
   content: attr(data-icon);
   margin: 0 0.3em 0 0;
 }
+html.fontface  .icon-functional,
 html.fontface  .icon-functional:before {
   font-family: 'EBI-Functional';
   font-size: 100%;
@@ -108,7 +111,8 @@ html.fontface  .icon-functional:before {
   content: attr(data-icon);
   margin: 0 0.3em 0 0;
 }
-html.fontface  .icon-static:before, /* deprecated, included for back-compatibility */
+/*html.fontface  .icon-static:before,*/ /* deprecated, included for back-compatibility */
+html.fontface  .icon-generic,
 html.fontface  .icon-generic:before {
   font-family: 'EBI-Generic';
   font-size: 100%;
@@ -116,6 +120,7 @@ html.fontface  .icon-generic:before {
   content: attr(data-icon);
   margin: 0 0.3em 0 0;
 }
+html.fontface  .icon-species,
 html.fontface  .icon-species:before {
   font-family: 'EBI-Species';
   font-size: 100%;
@@ -123,6 +128,7 @@ html.fontface  .icon-species:before {
   content: attr(data-icon);
   margin: 0 0.3em 0 0;
 }
+html.fontface  .icon-socialmedia,
 html.fontface  .icon-socialmedia:before {
   font-family: 'EBI-SocialMedia';
   font-size: 100%;
@@ -130,6 +136,7 @@ html.fontface  .icon-socialmedia:before {
   content: attr(data-icon);
   margin: 0 0.3em 0 0;
 }
+html.fontface  .icon-fileformats,
 html.fontface  .icon-fileformats:before {
   font-family: 'EBI-FileFormats';
   font-size: 123.1%;
@@ -137,6 +144,7 @@ html.fontface  .icon-fileformats:before {
   content: attr(data-icon);
   margin: 0 0.3em 0 0;
 }
+html.fontface  .icon-chemistry,
 html.fontface  .icon-chemistry:before {
   font-family: 'EBI-Chemistry';
   font-size: 100%;

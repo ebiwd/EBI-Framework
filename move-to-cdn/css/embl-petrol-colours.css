@@ -22,23 +22,22 @@ h3 { color: #444444; }
 
 a.special { background-color: #7cd17c; }
 
-form input.submit {		
-	border-color: #295c5c;	/* P2 */	
-	background-color: #207a7a;	/* colour P1 */
+.button {		
+	background-color: #207a7a;
 	color: #f8f8f8;
 }	
+.button:hover,
+.button:focus,
+.button:active { background: #207a7a; }
 
-form input.submit:hover,
-form input.submit:focus,
-form input.submit:active { background: #207a7a; }
 div#local-masthead { background-color: #70BDBD; }
 
 /* testing masthead combos */
 div#mastheads div#local h1 { color: #222; }
 
 /* Trying out some things for the expand/collapse global masthead */
-body.expander div#global { border-bottom: 1px solid #111; }
-body.expander div#local { border-top: 1px solid #70D3D3; }
+body.expander div#global { border-bottom-color: #111; }
+body.expander div#local { border-top-color: #70D3D3; }
 
 /* Palette color codes */
 .primary-1 { background-color: #207A7A }

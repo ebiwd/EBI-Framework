@@ -33,15 +33,8 @@
   <!-- end CSS-->
 
 
-  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
-       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-  
-  <!-- Full build -->
-  <!-- <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.minified.2.1.6.js"></script> -->
-  
-  <!-- custom build (lacks most of the "advanced" HTML5 support -->
-  <script src="http://www.ebi.ac.uk/web_guidelines/js/libs/modernizr.custom.49274.js"></script>    
+  <!-- All JavaScript at the bottom, except for Modernizr -->
+  <script src="../../move-to-cdn/libraries/modernizr/modernizr.custom.49274.js"></script>    
 
 </head>
 
@@ -60,50 +53,68 @@
     
       <div id="global-masthead" class="clearfix">
         <!--This has to be one line and no newline characters-->
-        <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png" alt="EMBL European Bioinformatics Institute"></a>
+        <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>
 
         <nav>
-          <ul id="global-nav">
+          <ul id="global-nav" class="menu">
             <!-- set active class as appropriate -->
-            <li class="first active" id="services"><a href="//www.ebi.ac.uk/services">Services</a></li>
-            <li id="research"><a href="//www.ebi.ac.uk/research">Research</a></li>
-            <li id="training"><a href="//www.ebi.ac.uk/training">Training</a></li>
-            <li id="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></li>
-            <li id="about" class="last"><a href="//www.ebi.ac.uk/about">About us</a></li>
+            <li class="active" id="services"><a href="//www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="t"></i> Services</a></li>
+            <li id="research"><a href="//www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon="t"></i> Research</a></li>
+            <li id="training"><a href="//www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>
+            <li id="about" class="last"><a href="//www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="t"></i> About us</a></li>
+            <li>
+              <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">
+                <fieldset>  
+                  <label class="float-left">
+                    <input type="text" name="query" id="global-searchbox">
+                  </label>  
+                  <input type="submit" name="submit" value="[" class="button icon icon-generic">  
+                  <input type="hidden" name="db" value="allebi" checked="checked">  
+                  <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
+                </fieldset>
+              </form>        
+            </li>
           </ul>
         </nav>
-        
+
       </div>
     
-      <div class="masthead nomenu">
-        
+      <div class="masthead row">
         <!-- local-title -->
-        <div class="row" id="local-title">
+        <div class="columns medium-7" id="local-title">
           <h1><a href="[service-url]" title="Back to [service-name] homepage">Compliance Templates</a></h1>
         </div>
-        
         <!-- /local-title -->
 
+        <!-- local-search -->
+        <!-- if you do not have a local-search, delete the following form -->
+        <form id="local-search" class="columns medium-5" name="local-search" action="[search-action]" method="post">
+          <fieldset class="float-right">
+            <label class="float-left"><input type="text" name="first" id="local-searchbox"></label>
+            <input type="submit" name="submit" value="[" class="button icon icon-generic">  
+            <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search -->
+            <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>
+          </fieldset>
+          <!-- Include some example searchterms - keep them short and few. -->
+          <div class="clearfix float-right show-for-large">Examples: <a href="[search-url-1]">[search-text-1]</a>, <a href="[search-url-1]">[search-text-2]</a>, <a href="[search-url-1]">[search-text-3]</a></div>
+        </form>
+        <!-- /local-search -->
+
         <!-- local-nav -->
-
         <nav>
-          <ul class="" id="local-nav">
-            <div class="row">
-              <li class="first"><a href="index.html">Home</a></li>
-              <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a></li>
-                <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a></li>
-                <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a></li>
-                <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a></li>
-              <!-- If you need to include functional (as opposed to purely navigational) links in your local menu,
-                   add them here, and give them a class of "functional". Remember: you'll need a class of "last" for
-                   whichever one will show up last... 
-                   For example: -->
-            </div>
+          <ul class="menu float-left" data-description="navigational">
+            <li><a href="#">Home</a></li>
+            <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a></li>
+            <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a></li>
+            <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a></li>
+            <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a></li>
           </ul>
-
+          <ul class="menu align-right" data-description="functional">
+            <li class="functional"><a href="#">Share this</a></li>
+          </ul>
         </nav>    
-
         <!-- /local-nav -->
+
       </div>
 
   
@@ -111,129 +122,65 @@
 
     </div>
                
-    <div id="content" role="main" class="row clearfix">
+    <div id="content" role="main" class="row">
       
-    <!-- Suggested layout containers -->
-     
-     <section>
-        <h2>Fluid Width</h2>
-        
-        <div class="large-6 columns">
-          <h3>Code</h3>          
-          <ul>
-            <li><a href="ebi-level2-boilerplate-blank-fluid.txt">ebi-level2-boilerplate-blank-fluid.txt</a></li>
-          </ul>
-        </div>
+      <!-- Suggested layout containers -->
+       
+       <section>
+          <h2>Fluid Width</h2>
 
-        <div class="large-6 columns">
-          <h3>Examples</h3>          
-          <ul>
-            <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a> - big, empty space between header and footer</li>
-            <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a> - for content-driven pages deeper in your site's hierarchy, the sidebar could contain secondary navigation</li>
-            <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a> - an example of dividing the page into four broad content areas</li>
-            <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a> - an example page with filters or facets for your results in a left-hand sidebar, and a right-hand sidebar for global results</li>
-          </ul>
-          <h3>Search Results Examples</h3>          
-          <ul>
-            <li><a href="ebi-search-results-complete.html">Search Results Complete</a> - template for a basic search results page </li>
-            <li><a href="ebi-no-search-results.html">No Search Results</a> - template for a page of zero results </li>
-          </ul>
-        </div>
-                          
-    </section> 
-    <!-- End suggested layout containers -->
+          <div class="row">
+          
+            <div class="large-6 columns">
+              <h3>Code</h3>          
+              <ul>
+                <li><a href="ebi-level2-boilerplate-blank-fluid.txt">ebi-level2-boilerplate-blank-fluid.txt</a></li>
+              </ul>
+            </div>
+
+            <div class="large-6 columns">
+              <h3>Examples</h3>          
+              <ul>
+                <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a> - big, empty space between header and footer</li>
+                <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a> - for content-driven pages deeper in your site's hierarchy, the sidebar could contain secondary navigation</li>
+                <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a> - an example of dividing the page into four broad content areas</li>
+                <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a> - an example page with filters or facets for your results in a left-hand sidebar, and a right-hand sidebar for global results</li>
+              </ul>
+              <h3>Search Results Examples</h3>          
+              <ul>
+                <li><a href="ebi-search-results-complete.html">Search Results Complete</a> - template for a basic search results page </li>
+                <li><a href="ebi-no-search-results.html">No Search Results</a> - template for a page of zero results </li>
+              </ul>
+            </div>
+
+          </div>
+                            
+      </section> 
+      <!-- End suggested layout containers -->
       
     </div>
     
     
     <footer>
-    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
-      <!--
-      <div id="local-footer" class="row clearfix">
-        <p>How to reference this page: ...</p>
+      <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+      <div id="local-footer">
+        <div class="reference">
+          <p>How to reference this page: ...</p>
+        </div>
       </div>
-      -->
-    <!-- End optional local footer -->
-    
-    <div id="global-footer" class="row">
-            
-      <nav id="global-nav-expanded">
-        <div class="large-2 columns">
-          <a href="http://www.ebi.ac.uk" title="EMBL-EBI"><img src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.png" alt="EMBL European Bioinformatics Institute"></a>
-          <ul>
-            <li class="first"><a href="//www.ebi.ac.uk/about/news">News</a></li>
-            <li><a href="//www.ebi.ac.uk/about/brochures">Brochures</a></li>
-            <li><a href="//www.ebi.ac.uk/about/contact">Contact us</a>
-            <li class="last"><a href="http://intranet.ebi.ac.uk">Intranet</a></li>
-          </ul>
-        </div>
-        
-        <div class="large-2 columns">
-          <h3 class="services"><a href="//www.ebi.ac.uk/services">Services</a></h3>
-          <ul>
-            <li class="first"><a href="//www.ebi.ac.uk/services">By topic</a></li>
-            <li><a href="//www.ebi.ac.uk/services/all">By name (A-Z)</a></li>
-            <li class="last"><a href="//www.ebi.ac.uk/support">Help &amp; Support</a></li>
-          </ul>
-        </div>
-        
-        <div class="large-2 columns">
-          <h3 class="research"><a href="//www.ebi.ac.uk/research">Research</a></h3>
-          <ul>
-            <li class="first"><a href="//www.ebi.ac.uk/research">Overview</a></li>
-            <li><a href="//www.ebi.ac.uk/research/publications">Publications</a></li>
-            <li><a href="//www.ebi.ac.uk/research/groups">Research groups</a></li>
-            <li class="last"><a href="//www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="//www.ebi.ac.uk/research/eipp">PhDs</a></li>
-          </ul>
-        </div>
-        
-        <div class="large-2 columns">
-          <h3 class="training"><a href="//www.ebi.ac.uk/training">Training</a></h3>
-          <ul>
-            <li class="first"><a href="//www.ebi.ac.uk/training">Overview</a></li>
-            <li><a href="//www.ebi.ac.uk/training/handson">Train at EBI</a></li>
-            <li><a href="//www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li>
-            <li><a href="//www.ebi.ac.uk/training/online">Train online</a></li>
-            <li class="last"><a href="//www.ebi.ac.uk/training/contact-us">Contact organisers</a></li>
-          </ul>      
-        </div>
-        
-        <div class="large-2 columns">
-          <h3 class="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></h3>
-          <ul>
-            <li class="first"><a href="//www.ebi.ac.uk/industry">Overview</a></li>
-            <li><a href="//www.ebi.ac.uk/industry/private">Members Area</a></li>
-            <li><a href="//www.ebi.ac.uk/industry/workshops">Workshops</a></li>
-            <li><a href="//www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li>
-            <li class="last"><a href="//www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li>
-          </ul>
-        </div>
-        
-        <div class="large-2 columns">
-          <h3 class="about"><a href="//www.ebi.ac.uk/about">About us</a></h3>
-          <ul>
-            <li class="first"><a href="//www.ebi.ac.uk/about">Overview</a></li>
-            <li><a href="//www.ebi.ac.uk/about/leadership">Leadership</a></li>
-            <li><a href="//www.ebi.ac.uk/about/funding">Funding</a></li>
-            <li><a href="//www.ebi.ac.uk/about/background">Background</a></li>
-            <li><a href="//www.ebi.ac.uk/about/partnerships">Collaboration</a></li>
-            <li><a href="//www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li>
-            <li><a href="//www.ebi.ac.uk/about/people">People &amp; groups</a></li>
-            <li><a href="//www.ebi.ac.uk/about/news">News</a></li>
-            <li><a href="//www.ebi.ac.uk/about/events">Events</a></li>
-            <li><a href="//www.ebi.ac.uk/about/travel">Visit us</a></li>
-            <li class="last"><a href="//www.ebi.ac.uk/about/contact">Contact us</a></li>
-          </ul>
-        </div>
-        
-      </nav>
-      
-      <section id="ebi-footer-meta">
-        <p class="address">EMBL-EBI, Wellcome Trust Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp; &nbsp; +44 (0)1223 49 44 44</p>
-        <p class="legal">Copyright &copy; EMBL-EBI 2013 | EBI is an outstation of the <a href="http://www.embl.org">European Molecular Biology Laboratory</a> | <a href="/about/privacy">Privacy</a> | <a href="/about/cookies">Cookies</a> | <a href="/about/terms-of-use">Terms of use</a></p>  
-      </section>
+      <!-- End optional local footer -->
 
-    </div>
+      <div id="global-footer">
+              
+        <nav id="global-nav-expanded" class="row">
+          <!-- Footer will be automatically inserted by footer.js -->
+        </nav>
+        
+        <section id="ebi-footer-meta" class="row">
+          <!-- Footer meta will be automatically inserted by footer.js -->
+        </section>
+
+      </div>
     
     </footer>
   </div> <!--! end of #wrapper -->
@@ -243,18 +190,20 @@
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <!--
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
   -->
+  <!-- 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../move-to-cdn/libraries/foundation-6/js/foundation.js"></script>
+   -->
 
   <!-- Your custom JavaScript file scan go here... change names accordingly -->
   <!--
   <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
   <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
   -->
-  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/cookiebanner.js"></script>  
-  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/foot.js"></script>
-  <!-- end scripts-->
+  <script defer="defer" src="../../move-to-cdn/js/cookiebanner.js"></script>  
+  <script defer="defer" src="../../move-to-cdn/js/foot.js"></script>
 
   <!-- Google Analytics details... -->    
   <!-- Change UA-XXXXX-X to be your site's ID -->
