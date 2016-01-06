@@ -13,28 +13,27 @@
 
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="../../move-to-cdn/css/ebi-global.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="../../move-to-cdn/css/ebi-visual.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="../../move-to-cdn/fonts/fonts.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="../../move-to-cdn/css/ebi-global.css" type="text/css" media="all">
+  <link rel="stylesheet" href="../../move-to-cdn/fonts/fonts.css" type="text/css" media="all">
 <!--   <link rel="stylesheet" href="http://www.ebi.ac.uk/web_guidelines/css/compliance/develop/984-24-col-fluid.css" type="text/css" media="screen"> -->
-  
-  <link rel="stylesheet" href="../../move-to-cdn/libraries/foundation-6/css/foundation.css" type="text/css" media="screen">
+
+  <link rel="stylesheet" href="../../move-to-cdn/libraries/foundation-6/css/foundation.css" type="text/css" media="all">
 
 
   <!-- you can replace this with [projectname]-colours.css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
   <!-- also inform ES so we can host your colour palette file -->
-  <link rel="stylesheet" href="../../move-to-cdn/css/embl-petrol-colours.css" type="text/css" media="screen">
-  
+  <link rel="stylesheet" href="../../move-to-cdn/css/embl-petrol-colours.css" type="text/css" media="all">
+
   <!-- for production the above can be replaced with -->
   <!--
   <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css">
   -->
-  
+
   <!-- end CSS-->
 
 
   <!-- All JavaScript at the bottom, except for Modernizr -->
-  <script src="../../move-to-cdn/libraries/modernizr/modernizr.custom.49274.js"></script>    
+  <script src="../../move-to-cdn/libraries/modernizr/modernizr.custom.49274.js"></script>
 
 </head>
 
@@ -50,7 +49,7 @@
 
   <div id="local-masthead">
     <header>
-    
+
       <div id="global-masthead" class="clearfix">
         <!--This has to be one line and no newline characters-->
         <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>
@@ -64,21 +63,21 @@
             <li id="about" class="last"><a href="//www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="t"></i> About us</a></li>
             <li>
               <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">
-                <fieldset>  
+                <fieldset>
                   <label class="float-left">
                     <input type="text" name="query" id="global-searchbox">
-                  </label>  
-                  <input type="submit" name="submit" value="[" class="button icon icon-generic">  
-                  <input type="hidden" name="db" value="allebi" checked="checked">  
+                  </label>
+                  <input type="submit" name="submit" value="[" class="button icon icon-generic">
+                  <input type="hidden" name="db" value="allebi" checked="checked">
                   <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
                 </fieldset>
-              </form>        
+              </form>
             </li>
           </ul>
         </nav>
 
       </div>
-    
+
       <div class="masthead row">
         <!-- local-title -->
         <div class="columns medium-7" id="local-title">
@@ -91,7 +90,7 @@
         <form id="local-search" class="columns medium-5" name="local-search" action="[search-action]" method="post">
           <fieldset class="float-right">
             <label class="float-left"><input type="text" name="first" id="local-searchbox"></label>
-            <input type="submit" name="submit" value="[" class="button icon icon-generic">  
+            <input type="submit" name="submit" value="[" class="button icon icon-generic">
             <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search -->
             <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>
           </fieldset>
@@ -112,41 +111,41 @@
           <ul class="menu align-right" data-description="functional">
             <li class="functional"><a href="#">Share this</a></li>
           </ul>
-        </nav>    
+        </nav>
         <!-- /local-nav -->
 
       </div>
 
-  
+
       </header>
 
     </div>
-               
+
     <div id="content" role="main" class="row">
-      
+
       <!-- Suggested layout containers -->
-       
+
        <section>
           <h2>Fluid Width</h2>
 
           <div class="row">
-          
+
             <div class="large-6 columns">
-              <h3>Code</h3>          
+              <h3>Code</h3>
               <ul>
                 <li><a href="ebi-level2-boilerplate-blank-fluid.txt">ebi-level2-boilerplate-blank-fluid.txt</a></li>
               </ul>
             </div>
 
             <div class="large-6 columns">
-              <h3>Examples</h3>          
+              <h3>Examples</h3>
               <ul>
                 <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a> - big, empty space between header and footer</li>
                 <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a> - for content-driven pages deeper in your site's hierarchy, the sidebar could contain secondary navigation</li>
                 <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a> - an example of dividing the page into four broad content areas</li>
                 <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a> - an example page with filters or facets for your results in a left-hand sidebar, and a right-hand sidebar for global results</li>
               </ul>
-              <h3>Search Results Examples</h3>          
+              <h3>Search Results Examples</h3>
               <ul>
                 <li><a href="ebi-search-results-complete.html">Search Results Complete</a> - template for a basic search results page </li>
                 <li><a href="ebi-no-search-results.html">No Search Results</a> - template for a page of zero results </li>
@@ -154,34 +153,34 @@
             </div>
 
           </div>
-                            
-      </section> 
+
+      </section>
       <!-- End suggested layout containers -->
-      
+
     </div>
-    
-    
+
+
     <footer>
       <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
       <div id="local-footer">
-        <div class="reference">
-          <p>How to reference this page: ...</p>
+        <div class="row">
+          <span class="reference">How to reference this page: ...</span>
         </div>
       </div>
       <!-- End optional local footer -->
 
       <div id="global-footer">
-              
+
         <nav id="global-nav-expanded" class="row">
           <!-- Footer will be automatically inserted by footer.js -->
         </nav>
-        
+
         <section id="ebi-footer-meta" class="row">
           <!-- Footer meta will be automatically inserted by footer.js -->
         </section>
 
       </div>
-    
+
     </footer>
   </div> <!--! end of #wrapper -->
 
@@ -192,7 +191,7 @@
   <!--
   <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
   -->
-  <!-- 
+  <!--
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="../../move-to-cdn/libraries/foundation-6/js/foundation.js"></script>
    -->
@@ -202,10 +201,10 @@
   <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
   <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
   -->
-  <script defer="defer" src="../../move-to-cdn/js/cookiebanner.js"></script>  
+  <script defer="defer" src="../../move-to-cdn/js/cookiebanner.js"></script>
   <script defer="defer" src="../../move-to-cdn/js/foot.js"></script>
 
-  <!-- Google Analytics details... -->    
+  <!-- Google Analytics details... -->
   <!-- Change UA-XXXXX-X to be your site's ID -->
   <!--
   <script>
@@ -215,6 +214,6 @@
     });
   </script>
   -->
-  
+
 </body>
 </html>

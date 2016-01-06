@@ -1,20 +1,78 @@
 /*
- 	
+
  	ebi-global.css
- 	
+
  	Style rules for common EBI website elements - global and local headers and footers
- 	
+
 	AUTHOR: Francis Rowland
 	DATE:   Feb 2012
 
 */
 
-	/* 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'HelveticaNeueLT Pro', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+}
+
+li { word-wrap: break-word; }
+
+/* Logo images */
+.ebi-logo {}
+
+/* pad in page content */
+body.table-layout table {
+  padding: 0;
+}
+
+/* --- Links --- */
+a,
+a:visited {
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  border-bottom-color: inherit;
+}
+a:hover,
+a:focus,
+a:active { border-bottom-style: solid; }
+a.special {
+  font-style: italic;
+  border-bottom-style:double;
+  border-bottom-width: 3px;
+  padding: 0.1em 0.3em;
+}
+a.image,
+a.image:visited { border-bottom: 0 none; }
+
+/* Colour - defaults to be reset by custom stylesheet
+===================================================*/
+div#global-masthead { background-color: #333; }
+h1, h2, h3, h4, h5, h6 {
+    color: #222222;
+}
+h4 { color: #666666; }
+/* --- Links --- */
+a {
+  color:#3e3e3e;
+  }
+a:visited {
+  color: #666;
+  }
+a:hover,
+a:focus,
+a:active {
+  color: #000;
+}
+.text-highlight {
+  color: #FFF;
+  background-color: #888;
+  padding: 0 0.2em;
+}
+
+	/*
 		SITE-WIDE MASTHEAD LAYOUT AND SIZE
 		Generic rules for global and local mastheads
 	===================================================
-	 */ 	
-		
+	 */
+
 	/*
 		GLOBAL MASTHEAD
 	==================================
@@ -22,8 +80,8 @@
 	#local-title a,
 	nav a,
 	nav a:hover { border-bottom: none; }
-	
-	/* Global menu styling */		
+
+	/* Global menu styling */
 	#global-masthead ul li a:hover,
 	#global-masthead ul li a:active,
 	#global-masthead ul li a:focus,
@@ -38,28 +96,28 @@
 	#global-masthead ul li#services a:active,
 	#global-masthead ul li#services a:focus,
 	#global-masthead ul li.active#services a,
-	#global-masthead ul li.active-trail#services a { 
-		border-top-color: #207a7a; 
+	#global-masthead ul li.active-trail#services a {
+		border-top-color: #207a7a;
 	}
-	
+
 	/* custom colour for Research */
 	#global-masthead ul li#research a:hover,
 	#global-masthead ul li#research a:active,
 	#global-masthead ul li#research a:focus,
 	#global-masthead ul li#research.active a,
-	#global-masthead ul li#research.active-trail a { 
+	#global-masthead ul li#research.active-trail a {
 		border-top-color: #71b360;
 	}
-	
+
 	/* custom colour for Training */
 	#global-masthead ul li#training a:hover,
 	#global-masthead ul li#training a:active,
 	#global-masthead ul li#training a:focus,
 	#global-masthead ul li#training.active a,
-	#global-masthead ul li#training.active-trail a { 
-		border-top-color: #fab700; 
+	#global-masthead ul li#training.active-trail a {
+		border-top-color: #fab700;
 	}
-		
+
 	/* custom colour for About us */
 	#global-masthead ul li#about a:hover,
 	#global-masthead ul li#about a:active,
@@ -70,8 +128,8 @@
 	#global-masthead ul li#about-us a:active,
 	#global-masthead ul li#about-us a:focus,
 	#global-masthead ul li#about-us.active a,
-	#global-masthead ul li#about-us.active-trail a { 
-		border-top-color: #207a7a; 
+	#global-masthead ul li#about-us.active-trail a {
+		border-top-color: #207a7a;
 	}
 
 	header .masthead {
@@ -85,21 +143,21 @@
 		top: -5000px;
 		position: absolute;
 	}
-	
+
 	/* Local menu styling */
 	#local-masthead nav {}
-	
+
 	#local-masthead ul li {
 		border-right: 1px solid #f8f8f8;
 	}
-	
+
 	#local-masthead h1,
 	#local-masthead p,
 	#local-masthead a {
 		color: #fff;
 	}
 	}
-		
+
 	#local-masthead ul li.active a,
 	#local-masthead ul li.active-trail a,
 	#local-masthead ul li.active a:visited,
@@ -109,13 +167,13 @@
 	#local-masthead ul li a:active {
 		background-color: #111;
 	}
-	
-	#local-search { font-size:80%; }	
-	
-	#content { 
+
+	#local-search { font-size:80%; }
+
+	#content {
 		padding: 0.5rem 1rem 1.5rem;
-	}	
-		
+	}
+
 	nav#breadcrumb { margin-top: 4px; }
 
 	body.section-about #local-masthead {
@@ -146,8 +204,8 @@
 	body.section-home #local-masthead {
 		background: #1d8086;
 	}
-			
-	/* Custom styling for different local masthead */		
+
+	/* Custom styling for different local masthead */
 	#local-title.logo-only img,
 	#local-title.logo-title img,
 	#local-title.logo-title-strapline img { float: left; margin: 1em 0.69em 0.69em; }
@@ -158,49 +216,49 @@
 	#local-title.logo-title-strapline h1 { display: inline; line-height: 100%; }
 	#local-title.logo-title-strapline h1 { font-size: 270%; }
 	#local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
-		
-	/* 
+
+	/*
 		LOCAL FOOTER
 	=============================== */
-	#local-footer { 
+	#local-footer {
 		border-top: 2px solid #eee;
 	}
-	
-	/* 
+
+	/*
 		GLOBAL FOOTER
 	================================ */
-	#global-footer { 
+	#global-footer {
 		border-top: 5px solid #eee;
-		padding-top: .5rem; 
+		padding-top: .5rem;
 	}
 
 	#global-footer a {
 		color: #333;
 	}
-	
+
 	#global-footer h5 {
 		margin-bottom: 5px;
-	} 
-	
-	#global-footer p { 
+	}
+
+	#global-footer p {
 	   margin: 0 0 5px 0;
 	}
-	 
+
 	#global-footer ul {
 		margin-left: 0;
-		font-size: 85%;	
+		font-size: 85%;
 		list-style: none;
-	}	
-	 	
+	}
+
 	#global-footer a:hover,
 	#global-footer a:focus,
 	#global-footer a:active{
 		border-bottom: 1px dashed #e4e4e4;
 	}
-	
+
 	#ebi-footer-meta { font-size: 85%; margin-bottom: 9px;}
 	#ebi-footer-meta p.address { color: #888; }
-	
+
 /* icon to indicate link is a PDF file */
 a span.link-pdf { background: url(http://www.ebi.ac.uk/inc/images/icon_pdf.gif) right center no-repeat; padding: 0 18px 0 0; }
 h1 a span.link-pdf,
@@ -210,23 +268,9 @@ h4 a span.link-pdf,
 h5 a span.link-pdf,
 h6 a span.link-pdf { display:none; }
 
-/* ===== print styles ======================================================= */
-
+/* print styles */
 @media print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-  a, a:visited { text-decoration: underline; }
-  /*a[href]:after { content: " (" attr(href) ")"; color: #ccc; }*/	/* [FR] [21/01/2013] removed: I would prefer a JS solution that adds all links as footnotes... */
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
-  th { font-weight: bold; }
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
-  
+  a, a:visited { border-bottom: none; }
   #skip-to,
   #global-masthead nav,
   #local-masthead nav,
@@ -234,10 +278,5 @@ h6 a span.link-pdf { display:none; }
   #global-footer,
   #search_ebi,
   #shortcuts,
-  #ebi_search_results { display: none; }  
-  
-  div.panels-flexible-column-last,
-  div.panels-flexible-region-last { display: none; }	/* Sometimes it's column, sometimes it's region! */
-  div.panels-flexible-column-first,
-  div.panels-flexible-region-first { width: 100%; }
+  #ebi_search_results { display: none; }
 }
