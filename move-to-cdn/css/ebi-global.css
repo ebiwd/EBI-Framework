@@ -1,17 +1,10 @@
 /*
-
- 	ebi-global.css
-
- 	Style rules for common EBI website elements - global and local headers and footers
-
-	AUTHOR: Francis Rowland
-	DATE:   Feb 2012
-
+  ebi-global.css
+  Style rules for common EBI website elements - global and local headers and footers.
+  These build atop and tweak Foundation's base styles, which we do not directly edit.
 */
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'HelveticaNeueLT Pro', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-}
+body h1, body h2, body h3 { font-weight: 200; }
 
 li { word-wrap: break-word; }
 
@@ -67,194 +60,198 @@ a:active {
   padding: 0 0.2em;
 }
 
-	/*
-		SITE-WIDE MASTHEAD LAYOUT AND SIZE
-		Generic rules for global and local mastheads
-	===================================================
-	 */
+  /*
+    SITE-WIDE MASTHEAD LAYOUT AND SIZE
+    Generic rules for global and local mastheads
+  ===================================================
+   */
 
-	/*
-		GLOBAL MASTHEAD
-	==================================
-	*/
-	#local-title a,
-	nav a,
-	nav a:hover { border-bottom: none; }
+  /*
+    GLOBAL MASTHEAD
+  ==================================
+  */
+  #local-title a,
+  nav a,
+  nav a:hover { border-bottom: none; }
 
-	/* Global menu styling */
-	#global-masthead ul li a:hover,
-	#global-masthead ul li a:active,
-	#global-masthead ul li a:focus,
-	#global-masthead ul li.active a,
-	#global-masthead ul li.active-trail a {
-		border-top: 3px solid white;
-		margin-bottom: -3px;
-	}
-
-	/* custom colour for Services */
-	#global-masthead ul li#services a:hover,
-	#global-masthead ul li#services a:active,
-	#global-masthead ul li#services a:focus,
-	#global-masthead ul li.active#services a,
-	#global-masthead ul li.active-trail#services a {
-		border-top-color: #207a7a;
-	}
-
-	/* custom colour for Research */
-	#global-masthead ul li#research a:hover,
-	#global-masthead ul li#research a:active,
-	#global-masthead ul li#research a:focus,
-	#global-masthead ul li#research.active a,
-	#global-masthead ul li#research.active-trail a {
-		border-top-color: #71b360;
-	}
-
-	/* custom colour for Training */
-	#global-masthead ul li#training a:hover,
-	#global-masthead ul li#training a:active,
-	#global-masthead ul li#training a:focus,
-	#global-masthead ul li#training.active a,
-	#global-masthead ul li#training.active-trail a {
-		border-top-color: #fab700;
-	}
-
-	/* custom colour for About us */
-	#global-masthead ul li#about a:hover,
-	#global-masthead ul li#about a:active,
-	#global-masthead ul li#about a:focus,
-	#global-masthead ul li#about.active a,
-	#global-masthead ul li#about.active-trail a,
-	#global-masthead ul li#about-us a:hover,
-	#global-masthead ul li#about-us a:active,
-	#global-masthead ul li#about-us a:focus,
-	#global-masthead ul li#about-us.active a,
-	#global-masthead ul li#about-us.active-trail a {
-		border-top-color: #207a7a;
-	}
-
-	header .masthead {
-    padding-top: 2em;
+  /* Global menu styling */
+  #global-masthead ul li a:hover,
+  #global-masthead ul li a:active,
+  #global-masthead ul li a:focus,
+  #global-masthead ul li.active a,
+  #global-masthead ul li.active-trail a {
+    border-top: 3px solid white;
+    margin-bottom: -3px;
   }
 
-	/*
-		LOCAL MASTHEAD
-	==================================*/
-	#skip-to {
-		top: -5000px;
-		position: absolute;
-	}
+  /* custom colour for Services */
+  #global-masthead ul li#services a:hover,
+  #global-masthead ul li#services a:active,
+  #global-masthead ul li#services a:focus,
+  #global-masthead ul li.active#services a,
+  #global-masthead ul li.active-trail#services a {
+    border-top-color: #207a7a;
+  }
 
-	/* Local menu styling */
-	#local-masthead nav {}
+  /* custom colour for Research */
+  #global-masthead ul li#research a:hover,
+  #global-masthead ul li#research a:active,
+  #global-masthead ul li#research a:focus,
+  #global-masthead ul li#research.active a,
+  #global-masthead ul li#research.active-trail a {
+    border-top-color: #71b360;
+  }
 
-	#local-masthead ul li {
-		border-right: 1px solid #f8f8f8;
-	}
+  /* custom colour for Training */
+  #global-masthead ul li#training a:hover,
+  #global-masthead ul li#training a:active,
+  #global-masthead ul li#training a:focus,
+  #global-masthead ul li#training.active a,
+  #global-masthead ul li#training.active-trail a {
+    border-top-color: #fab700;
+  }
 
-	#local-masthead h1,
-	#local-masthead p,
-	#local-masthead a {
-		color: #fff;
-	}
+  /* custom colour for About us */
+  #global-masthead ul li#about a:hover,
+  #global-masthead ul li#about a:active,
+  #global-masthead ul li#about a:focus,
+  #global-masthead ul li#about.active a,
+  #global-masthead ul li#about.active-trail a,
+  #global-masthead ul li#about-us a:hover,
+  #global-masthead ul li#about-us a:active,
+  #global-masthead ul li#about-us a:focus,
+  #global-masthead ul li#about-us.active a,
+  #global-masthead ul li#about-us.active-trail a {
+    border-top-color: #207a7a;
+  }
 
-	#local-masthead ul li.active a,
-	#local-masthead ul li.active-trail a,
-	#local-masthead ul li.active a:visited,
-	#local-masthead ul li.active-trail a:visited,
-	#local-masthead ul li a:hover,
-	#local-masthead ul li a:focus,
-	#local-masthead ul li a:active {
-		background-color: #111;
-	}
+  header .masthead {
+    padding-top: 1rem;
+    color: #fff;
+  }
 
-	#local-search { font-size:80%; }
+  /*
+    LOCAL MASTHEAD
+  ==================================*/
+  #skip-to {
+    top: -5000px;
+    position: absolute;
+  }
 
-	#content {
-		padding: 0.5rem 1rem 1.5rem;
-	}
+  /* Local menu styling */
+  #local-masthead nav { font-size: .9rem; }
 
-	body.section-about #local-masthead {
-		background: #60bdc4;
-	}
-	body.section-industry #local-masthead {
-		background: #83a3c9;
-	}
-	body.section-research #local-masthead {
-		background: #a8d793;
-	}
-	body.section-research #local-title h1,
-	body.section-research #local-title p,
-	body.section-research #local-title a {
-	  color: #222;
-	}
-	body.section-services #local-masthead {
-		background: #60bdc4;
-	}
-	body.section-training #local-masthead {
-		background: #f9e292;
-	}
-	body.section-training #local-title h1,
-	body.section-training #local-title p,
-	body.section-training #local-title a {
-	  color: #222;
-	}
-	body.section-home #local-masthead {
-		background: #1d8086;
-	}
+  #local-masthead nav ul.menu li { border-right: 1px solid #f8f8f8; }
 
-	/* Custom styling for different local masthead */
-	#local-title.logo-only img,
-	#local-title.logo-title img,
-	#local-title.logo-title-strapline img { float: left; margin: 1em 0.69em 0.69em; }
-	#local-title.logo-title span,
-	#local-title.logo-title-strapline span { display:block; margin: 1em 0 0.69em 0; float:left; }
-	#local-title.logo-title span { margin-top: 2.3em; }
-	#local-title.logo-title h1,
-	#local-title.logo-title-strapline h1 { display: inline; line-height: 100%; }
-	#local-title.logo-title-strapline h1 { font-size: 270%; }
-	#local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
+  #local-masthead h1,
+  #local-masthead p,
+  #local-masthead a {
+    color: #fff;
+  }
 
-	/*
-		LOCAL FOOTER
-	=============================== */
-	#local-footer {
-		border-top: 2px solid #eee;
-	}
+  #local-masthead ul li.active a,
+  #local-masthead ul li.active-trail a,
+  #local-masthead ul li.active a:visited,
+  #local-masthead ul li.active-trail a:visited,
+  #local-masthead ul li a:hover,
+  #local-masthead ul li a:focus,
+  #local-masthead ul li a:active {
+    background-color: #111;
+  }
 
-	/*
-		GLOBAL FOOTER
-	================================ */
-	#global-footer {
-		border-top: 5px solid #eee;
-		padding-top: .5rem;
-	}
+  #local-search { font-size:80%; }
 
-	#global-footer a {
-		color: #333;
-	}
+  #content {
+    padding: 0.5rem 0 1.5rem;
+  }
 
-	#global-footer h5 {
-		margin-bottom: 5px;
-	}
+  #local-masthead ul.breadcrumbs li { color: #fff; }
+  #local-masthead ul.breadcrumbs li.disabled { opacity: .7; }
 
-	#global-footer p {
-	   margin: 0 0 5px 0;
-	}
+  body.section-about #local-masthead {
+    background: #60bdc4;
+  }
+  body.section-industry #local-masthead {
+    background: #83a3c9;
+  }
+  body.section-research #local-masthead {
+    background: #a8d793;
+  }
+  body.section-research #local-title h1,
+  body.section-research #local-title p,
+  body.section-research #local-title a {
+    color: #222;
+  }
+  body.section-services #local-masthead {
+    background: #60bdc4;
+  }
+  body.section-training #local-masthead {
+    background: #f9e292;
+  }
+  body.section-training #local-title h1,
+  body.section-training #local-title p,
+  body.section-training #local-title a {
+    color: #222;
+  }
+  body.section-home #local-masthead {
+    background: #1d8086;
+  }
 
-	#global-footer ul {
-		margin-left: 0;
-		font-size: 85%;
-		list-style: none;
-	}
+  /* Custom styling for different local masthead */
+  #local-title.logo-only img,
+  #local-title.logo-title img,
+  #local-title.logo-title-strapline img { float: left; margin: 1em 0.69em 0.69em; }
+  #local-title.logo-title span,
+  #local-title.logo-title-strapline span { display:block; margin: 1em 0 0.69em 0; float:left; }
+  #local-title.logo-title span { margin-top: 2.3em; }
+  #local-title.logo-title h1,
+  #local-title.logo-title-strapline h1 { display: inline; line-height: 100%; }
+  #local-title.logo-title-strapline h1 { font-size: 270%; }
+  #local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
 
-	#global-footer a:hover,
-	#global-footer a:focus,
-	#global-footer a:active{
-		border-bottom: 1px dashed #e4e4e4;
-	}
+  /*
+    LOCAL FOOTER
+  =============================== */
+  #local-footer {
+    border-top: 2px solid #eee;
+  }
 
-	#ebi-footer-meta { font-size: 85%; margin-bottom: 9px;}
-	#ebi-footer-meta p.address { color: #888; }
+  /*
+    GLOBAL FOOTER
+  ================================ */
+  #global-footer {
+    border-top: 5px solid #eee;
+    padding-top: .5rem;
+  }
+
+  #global-footer a {
+    color: #333;
+  }
+
+  #global-footer h5 {
+    margin-bottom: 5px;
+  }
+
+  #global-footer p {
+     margin: 0 0 5px 0;
+  }
+
+  #global-footer ul {
+    margin-left: 0;
+    font-size: 85%;
+    list-style: none;
+  }
+
+  #global-footer a:hover,
+  #global-footer a:focus,
+  #global-footer a:active{
+    border-bottom: 1px dashed #e4e4e4;
+  }
+
+  #ebi-footer-meta { font-size: 85%; margin-bottom: 9px;}
+  #ebi-footer-meta p.address { color: #888; }
+
+  .serif { font-family: 'minion pro', 'georgia', serif;  font-size: 1.1rem; }
 
 /* icon to indicate link is a PDF file */
 a span.link-pdf { background: url(http://www.ebi.ac.uk/inc/images/icon_pdf.gif) right center no-repeat; padding: 0 18px 0 0; }

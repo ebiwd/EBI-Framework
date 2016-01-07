@@ -1,7 +1,4 @@
-/* Copyright (c) EMBL-EBI 2013
-   Authors: 
-   Peter Walter (pwalter@ebi.ac.uk)
-*/
+/* Copyright (c) EMBL-EBI 2016 */
 
 (function cookieBanner() {
    function setCookie(c_name, value, exdays) {
@@ -28,44 +25,14 @@
     }
   }
 
-  function slide(element, property, start, end, duration, units) {
-/*
-    var s = element.style;
-    s[property] = start + units;
-    
-    var pos = start;
-    var frame = 0;
-    var framerate = 25;
-    var one_second = 1000;
-    var interval = one_second*duration/framerate;
-    var totalframes = one_second*duration/interval;
-    var increment = (end-start)/totalframes;
-    var tween = function () {
-      frame++;
-      pos += increment;
-      s[property] = Math.round(pos) + units;
-      if (frame < totalframes) {
-        setTimeout(tween,interval);
-      }
-    }
-    tween();
-*/
-    var s = element.style;
-    s[property] = end + units;
-  }
   function createStyles() {
     var head = document.head || document.getElementsByTagName('head')[0];
     var style = document.createElement('style');
       
     style.type = 'text/css';
     var css = "" +
-    "  #cookie-banner {position:absolute;top:-9999px;background-color:#444;width:100%;border-bottom:5px solid #444;left:0;}" +
-    "  #cookie-banner .container_24 {max-width:800px;margin:0 auto;}" +
-    "  #cookie-banner h1 {font-size:medium;color:#ddd;margin:5px 0;font-family:Verdana,sans-serif;}" +
-    "  #cookie-banner p {margin:5px 0;color:#eee;font-size:smaller;font-family:Verdana,sans-serif;line-height:1.538;}" +
-    "  #cookie-banner a {color:#fff;}" +
-    "  #cookie-banner a#cookie-dismiss {float:right;margin:0.5em 0 0.5em 0.5em;padding:3px 9px;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;font-size:108%;border-width:1px;box-shadow:0px 2px 2px #adadad;-moz-box-shadow:0px 2px 2px #adadad;-khtml-box-shadow:0px 2px 2px #adadad;-webkit-box-shadow:0px 2px 2px #adadad;width:auto;*padding-top:0px;*padding-bottom:0px;border-color:#295c5c;background-color:#207a7a;background-image:-moz-linear-gradient(top, #54bdbd, #207a7a);background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0, #54bdbd),color-stop(1, #207a7a));background-image:-webkit-linear-gradient(#54bdbd, #207a7a);background-image:linear-gradient(top, #54bdbd, #207a7a);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#54bdbd', EndColorStr='#207a7a');color:#f8f8f8;text-shadow:#145251 0 1px 1px;display:inline;text-decoration:none;}" +
-    "";
+    "  #cookie-banner {position:fixed;background-color:#444;width:100%;left:0;color:#eee;}" +
+    "  #cookie-banner a {color:#fff;}";
 
     if (style.styleSheet){
       style.styleSheet.cssText = css;
@@ -81,29 +48,29 @@
     var inner = document.createElement('div');
 
     banner.id = "cookie-banner";
-    wrapper.className = "container_24";
-    inner.className = "grid_24";
-    inner.innerHTML = "" +
-    "  <p><a id='cookie-dismiss' href='#'>OK</a>" +
+    wrapper.className = "row";
+    wrapper.innerHTML = "" +
     "  This website uses cookies. By continuing to browse this site, you are agreeing to the use of our site cookies. " +
-    "  To find out more, see our <a href='//www.ebi.ac.uk/about/terms-of-use'>Terms of Use</a>.</p>" +
+    "  To find out more, see our <a href='//www.ebi.ac.uk/about/terms-of-use'>Terms of Use</a>." +
+    "  <div id='cookie-dismiss' class='button'><a href='#'>OK</a></div>" +
     "";
 
     document.body.appendChild(banner);
     banner.appendChild(wrapper);
-    wrapper.appendChild(inner);
   }
 
   function openBanner() {
     var height = document.getElementById('cookie-banner').offsetHeight;
-    slide(document.getElementById('cookie-banner'), 'top', -height, 0, 0.25, 'px');
-    slide(document.body, 'paddingTop', 0, height, 0.25, 'px');
+    var heightBrowser = window.innerHeight;
+    console.log(heightBrowser-height);
+    document.getElementById('cookie-banner').style.top = heightBrowser-height+'px';
+    document.body.style.paddingBottom = height+'px';
   }
   
   function closeBanner() {
     var height = document.getElementById('cookie-banner').offsetHeight;
-    slide(document.getElementById('cookie-banner'), 'top', 0, -9999, 0.25, 'px');
-    slide(document.body, 'paddingTop', height, 0, 0.25, 'px');
+    document.getElementById('cookie-banner').style.top = '-9999px';
+    document.body.style.paddingBottom = '0';
   }
   
   function init() {
