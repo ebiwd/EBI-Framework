@@ -138,29 +138,49 @@
            </ul>
          </nav>
 
-          <h2>Fluid Width</h2>
+          <h2>EBI Framework documention and style guide</h2>
 
           <div class="row">
 
-            <div class="large-6 columns">
-              <h3>Code</h3>
+
+            <div class="columns medium-9 medium-push-3">
+              <p>This collection of materials will give you guidance on how to build web pages and content that comply with EMBL-EBI:</p>
               <ul>
-                <li><a href="ebi-level2-boilerplate-blank-fluid.txt">ebi-level2-boilerplate-blank-fluid.txt</a></li>
+                <li>visual look</li>
+                <li>semantic structure</li>
+                <li>writing guidelines</li>
               </ul>
+              <p>And it should help you build the tools faster than if you were to make it from scratch</p>
+              <h3>Requirements and what you get</h3>
+              <p>The framework is built with modern best practices and targets browsers shipped within the past three years, though other browsers should still handle the content and appearance well (graceful degredation). The framework is also mobile responsive, so you won't have to spend too much time adapting for mobile.</p>
+              <p>We've use the Foundation Framework (version 6) as a baseline to accelerate our own development, and it will help you create better looking and working tool tips, forms, sliders, and modal boxes.</p>
+              <p>But we've taken care to make the implemntation non-intrusive, so if you don't want to use these features, they won't likely get in your way.</p>
+              <p>A note on JavaScript: The framework does not require jQuery, but if you do use it you will get more nice to haves and your life may be easier all around. The jQuery functionality is enable by default. For more see the section on disabling JavaScript addons (you'll comment out two lines -- need to write this...)</p>
             </div>
 
-            <div class="large-6 columns">
-              <h3>Examples</h3>
-              <ul>
-                <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a> - big, empty space between header and footer</li>
-                <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a> - for content-driven pages deeper in your site's hierarchy, the sidebar could contain secondary navigation</li>
-                <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a> - an example of dividing the page into four broad content areas</li>
-                <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a> - an example page with filters or facets for your results in a left-hand sidebar, and a right-hand sidebar for global results</li>
-              </ul>
-              <h3>Search Results Examples</h3>
-              <ul>
-                <li><a href="ebi-search-results-complete.html">Search Results Complete</a> - template for a basic search results page </li>
-                <li><a href="ebi-no-search-results.html">No Search Results</a> - template for a page of zero results </li>
+            <div class="columns medium-3 medium-pull-9">
+              <ul class="menu vertical">
+                <li><a href="#" class="active">About</a></li>
+                <li><a href="#">Design patterns</a></li>
+                <ul class="nested vertical menu">
+                  <li><a href="#">Navigation</a></li>
+                  <ul class="nested vertical menu">
+                    <li><a href="#">Menus</a></li>
+                    <li><a href="#">Breadcrumbs</a></li>
+                  </ul>
+                  <li><a href="#">Content</a></li>
+                  <li><a href="#">Grid</a></li>
+                  <li><a href="#">Colour</a></li>
+                  <li><a href="#">Typography</a></li>
+                  <li><a href="#">Icons</a></li>
+                  <li><a href="#">Images</a></li>
+                  <li><a href="#">Feedback</a></li>
+                  <li><a href="#">Helper classes</a></li>
+                </ul>
+                <li><a href="#">Writing</a></li>
+                <li><a href="#">Browser compatibility</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Accesibility</a></li>
               </ul>
             </div>
 
@@ -203,10 +223,8 @@
   <!--
   <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
   -->
-  <!--
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="../../move-to-cdn/libraries/foundation-6/js/foundation.js"></script>
-   -->
 
   <!-- Your custom JavaScript file scan go here... change names accordingly -->
   <!--

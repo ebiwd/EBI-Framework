@@ -156,7 +156,6 @@ a:active {
 	#local-masthead a {
 		color: #fff;
 	}
-	}
 
 	#local-masthead ul li.active a,
 	#local-masthead ul li.active-trail a,
@@ -173,8 +172,6 @@ a:active {
 	#content {
 		padding: 0.5rem 1rem 1.5rem;
 	}
-
-	nav#breadcrumb { margin-top: 4px; }
 
 	body.section-about #local-masthead {
 		background: #60bdc4;
