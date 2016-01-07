@@ -81,7 +81,6 @@ a:active {
   #global-masthead ul li.active a,
   #global-masthead ul li.active-trail a {
     border-top: 3px solid white;
-    margin-bottom: -3px;
   }
 
   /* custom colour for Services */

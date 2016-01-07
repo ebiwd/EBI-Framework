@@ -42,6 +42,7 @@
 
     head.appendChild(style);
   }
+
   function createBanner() {
     var banner = document.createElement('div');
     var wrapper = document.createElement('div');
@@ -63,13 +64,14 @@
     var height = document.getElementById('cookie-banner').offsetHeight;
     var heightBrowser = window.innerHeight;
     console.log(heightBrowser-height);
+    document.getElementById('cookie-banner').style.display = 'block';
     document.getElementById('cookie-banner').style.top = heightBrowser-height+'px';
     document.body.style.paddingBottom = height+'px';
   }
   
   function closeBanner() {
     var height = document.getElementById('cookie-banner').offsetHeight;
-    document.getElementById('cookie-banner').style.top = '-9999px';
+    document.getElementById('cookie-banner').style.display = 'none';
     document.body.style.paddingBottom = '0';
   }
   
@@ -79,24 +81,10 @@
 
         createStyles();
         createBanner();
-        openBanner();
-        
-      if (window.addEventListener) {
-        window.addEventListener('resize', openBanner, false);
-      }
-      else if (window.attachEvent) {
-        window.attachEvent('onresize', openBanner);
-      }
+        openBanner(); 
 
-      document.getElementById('cookie-dismiss').onclick = function() {
+        document.getElementById('cookie-dismiss').onclick = function() {
           setCookie('cookies-accepted', 'true', 90);
-
-          if (window.addEventListener) {
-            window.removeEventListener('resize', openBanner, false);
-          }
-          else if (window.attachEvent) {
-            window.detachEvent('onresize', openBanner);
-          }
 
           closeBanner();
           return false;
@@ -108,12 +96,6 @@
     }
   }
 
-  // attach to onload event
-  if (window.addEventListener) {
-    window.addEventListener('load', init, false);
-  }
-  else if (window.attachEvent) {
-    window.attachEvent('onload', init);
-  }
+  init();
   
 })();
