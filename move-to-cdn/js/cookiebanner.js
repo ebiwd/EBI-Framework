@@ -1,8 +1,7 @@
-/* Copyright (c) EMBL-EBI 2016 */
+/* Copyright (c) EMBL-EBI 2016; Authors: Peter Walter, Ken Hawkins */
 
 (function cookieBanner() {
    function setCookie(c_name, value, exdays) {
-
     var exdate = new Date();
     var c_value;
     exdate.setDate(exdate.getDate() + exdays);
@@ -76,7 +75,6 @@
   function init() {
     try {
       if (getCookie('cookies-accepted') !== 'true') {
-
         createStyles();
         createBanner();
         openBanner(); 
