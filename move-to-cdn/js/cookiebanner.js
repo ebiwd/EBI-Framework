@@ -31,8 +31,9 @@
       
     style.type = 'text/css';
     var css = "" +
-    "  #cookie-banner {position:fixed;background-color:#444;width:100%;left:0;color:#eee;}" +
-    "  #cookie-banner a {color:#fff;}";
+    "  #cookie-banner {position:fixed;background-color:#111;width:100%;padding:.75rem;left:0;bottom:0;color:#eee;}" +
+    "  #cookie-banner a {color:#fff;}" +
+    "  .text {margin-right:2em;}";
 
     if (style.styleSheet){
       style.styleSheet.cssText = css;
@@ -51,9 +52,9 @@
     banner.id = "cookie-banner";
     wrapper.className = "row";
     wrapper.innerHTML = "" +
-    "  This website uses cookies. By continuing to browse this site, you are agreeing to the use of our site cookies. " +
-    "  To find out more, see our <a href='//www.ebi.ac.uk/about/terms-of-use'>Terms of Use</a>." +
-    "  <div id='cookie-dismiss' class='button'><a href='#'>OK</a></div>" +
+    "  <div class='text'>This website uses cookies. By continuing to browse this site, you are agreeing to the use of our site cookies. " +
+    "  To find out more, see our <a href='//www.ebi.ac.uk/about/terms-of-use'>Terms of Use</a>.</div>" +
+    "  <div id='cookie-dismiss'>  <button class='close-button' style='top: 0.3rem; color:#fff;' aria-label='Close alert' type='button'><span aria-hidden='true'>&times;</span></button></div>" +
     "";
 
     document.body.appendChild(banner);
@@ -62,10 +63,7 @@
 
   function openBanner() {
     var height = document.getElementById('cookie-banner').offsetHeight;
-    var heightBrowser = window.innerHeight;
-    console.log(heightBrowser-height);
     document.getElementById('cookie-banner').style.display = 'block';
-    document.getElementById('cookie-banner').style.top = heightBrowser-height+'px';
     document.body.style.paddingBottom = height+'px';
   }
   
@@ -83,9 +81,9 @@
         createBanner();
         openBanner(); 
 
-        document.getElementById('cookie-dismiss').onclick = function() {
-          setCookie('cookies-accepted', 'true', 90);
+        setCookie('cookies-accepted', 'true', 90); // show cookie message only once
 
+        document.getElementById('cookie-dismiss').onclick = function() {
           closeBanner();
           return false;
         };
