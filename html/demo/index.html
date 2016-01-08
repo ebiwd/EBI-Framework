@@ -55,44 +55,37 @@
         <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>
 
         <nav>
-          <ul id="global-nav" class="menu">
-            <!-- set active class as appropriate -->
-            <li class="active" id="services"><a href="//www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="t"></i> Services</a></li>
-            <li id="research"><a href="//www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon="t"></i> Research</a></li>
-            <li id="training"><a href="//www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>
-            <li id="about" class="last"><a href="//www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="t"></i> About us</a></li>
-            <li>
-              <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">
-                <fieldset>
-                  <label class="float-left">
-                    <input type="text" name="query" id="global-searchbox">
-                  </label>
-                  <input type="submit" name="submit" value="[" class="button icon icon-generic">
-                  <input type="hidden" name="db" value="allebi" checked="checked">
-                  <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
-                </fieldset>
-              </form>
-            </li>
-          </ul>
+          <div class="row">
+            <ul id="global-nav" class="menu">
+              <!-- set active class as appropriate -->
+              <li id="home"><a href="//www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="H"></i> EMBL-EBI</a></li>
+              <li class="active" id="services"><a href="//www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="t"></i> Services</a></li>
+              <li id="research"><a href="//www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon="t"></i> Research</a></li>
+              <li id="training"><a href="//www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>
+              <li id="about" class="last"><a href="//www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="t"></i> About us</a></li>
+              <li>
+                <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">
+                  <fieldset>
+                    <label class="float-left">
+                      <input type="text" name="query" id="global-searchbox">
+                    </label>
+                    <input type="submit" name="submit" value="[" class="button icon icon-generic">
+                    <input type="hidden" name="db" value="allebi" checked="checked">
+                    <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
+                  </fieldset>
+                </form>
+              </li>
+            </ul>
+          </div>
         </nav>
 
       </div>
 
       <div class="masthead row">
-        <nav aria-label="You are here:" role="navigation">
-          <ul class="breadcrumbs">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Parent</a></li>
-            <li class="disabled">Disabled</li>
-            <li>
-              <span class="show-for-sr">Current: </span> This page
-            </li>
-          </ul>
-        </nav>
 
         <!-- local-title -->
         <div class="columns medium-7" id="local-title">
-          <h1><a href="[service-url]" title="Back to [service-name] homepage">Compliance Templates</a></h1>
+          <h1><a href="[service-url]" title="Back to [service-name] homepage"><div class="hexagon"><i class="icon icon-generic" data-icon=":"></i></div> EBI Framework</a></h1>
         </div>
         <!-- /local-title -->
 
@@ -113,14 +106,13 @@
         <!-- local-nav -->
         <nav>
           <ul class="menu float-left" data-description="navigational">
-            <li><a href="#">Home</a></li>
-            <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a></li>
-            <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a></li>
-            <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a></li>
-            <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a></li>
+            <li><a href="#test">About</a></li>
+            <li class="active"><a href="#">Generic</a></li>
+            <li><a href="#">Generic</a></li>
+            <li><a href="#">Generic</a></li>
           </ul>
           <ul class="menu align-right" data-description="functional">
-            <li class="functional"><a href="#">Share this</a></li>
+            <li class="functional"><a href="#"><i class="icon icon-generic" data-icon="d"></i> Share this</a></li>
           </ul>
         </nav>
         <!-- /local-nav -->
@@ -138,7 +130,18 @@
 
        <section>
 
-          <h2>Fluid Width</h2>
+  <!--         <nav aria-label="You are here:" role="navigation">
+            <ul class="breadcrumbs">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Parent</a></li>
+              <li class="disabled">Disabled</li>
+              <li>
+                <span class="show-for-sr">Current: </span> This page
+              </li>
+            </ul>
+          </nav>
+
+ -->          <h2>Sample generic layout</h2>
 
           <div class="row serif">
 

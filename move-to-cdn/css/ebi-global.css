@@ -24,7 +24,6 @@ a:visited {
   border-bottom-color: inherit;
 }
 a:hover,
-a:focus,
 a:active { border-bottom-style: solid; }
 a.special {
   font-style: italic;
@@ -138,7 +137,7 @@ a:active {
   }
 
   /* Local menu styling */
-  #local-masthead nav { font-size: .9rem; }
+  #local-masthead nav { font-size: .9rem; clear: both; }
 
   #local-masthead nav ul.menu li { border-right: 1px solid #f8f8f8; }
 
@@ -155,18 +154,21 @@ a:active {
   #local-masthead ul li a:hover,
   #local-masthead ul li a:focus,
   #local-masthead ul li a:active {
-    background-color: #111;
+    background-color: #FFF;
+    color: #222;
   }
+  #local-masthead ul li a:hover { background-color: rgba(255,255,255,.8);}
+
 
   #local-search { font-size:80%; }
 
   #content {
     padding: 0.5rem 0 1.5rem;
   }
-
+/*
   #local-masthead ul.breadcrumbs li { color: #fff; }
   #local-masthead ul.breadcrumbs li.disabled { opacity: .7; }
-
+*/
   body.section-about #local-masthead {
     background: #60bdc4;
   }
@@ -194,6 +196,23 @@ a:active {
   }
   body.section-home #local-masthead {
     background: #1d8086;
+  }
+  
+  /* ebi icon font in the local title */
+  .hexagon {
+    font-size: 1.5rem; 
+    color: #444;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 288 180 288" xml:space="preserve"><polygon class="st0" fill="#fff" points="147,363.6 203.2,331.1 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
+    display: inline-block;
+    background-size: 80px;
+    background-position: 0 -15px;
+    background-repeat: no-repeat;
+     text-align: center;
+    height: 70px;
+    width: 50px;
+    vertical-align: top;
+    padding: 15px 0 0 0;
+    margin-left: -20px
   }
 
   /* Custom styling for different local masthead */
