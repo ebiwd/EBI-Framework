@@ -293,7 +293,8 @@ a:active {
     position: absolute;
     top: 17px;
     margin-left: 51px;
-}
+  }
+  div#embl-dropdown { left: 0; }
 
   /*
     LOCAL FOOTER
