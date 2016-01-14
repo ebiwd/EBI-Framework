@@ -59,6 +59,7 @@ a:active {
   padding: 0 0.2em;
 }
 
+
   /*
     SITE-WIDE MASTHEAD LAYOUT AND SIZE
     Generic rules for global and local mastheads
@@ -74,12 +75,21 @@ a:active {
   nav a:hover { border-bottom: none; }
 
   /* Global menu styling */
-  #global-masthead ul li a:hover,
-  #global-masthead ul li a:active,
-  #global-masthead ul li a:focus,
-  #global-masthead ul li.active a,
-  #global-masthead ul li.active-trail a {
-    border-top: 3px solid white;
+  #global-masthead ul#global-nav li a:hover,
+  #global-masthead ul#global-nav li a:active,
+  #global-masthead ul#global-nav li a:focus,
+  #global-masthead ul#global-nav li.active a,
+  #global-masthead ul#global-nav li.active-trail a {
+    color: white;
+  }
+
+  /* custom colour for Home */
+  #global-masthead ul li#home a:hover,
+  #global-masthead ul li#home a:active,
+  #global-masthead ul li#home a:focus,
+  #global-masthead ul li.active#home a,
+  #global-masthead ul li.active-trail#home a {
+    background-color: #70BDBD;
   }
 
   /* custom colour for Services */
@@ -88,7 +98,7 @@ a:active {
   #global-masthead ul li#services a:focus,
   #global-masthead ul li.active#services a,
   #global-masthead ul li.active-trail#services a {
-    border-top-color: #207a7a;
+    background-color: #207a7a;
   }
 
   /* custom colour for Research */
@@ -97,7 +107,7 @@ a:active {
   #global-masthead ul li#research a:focus,
   #global-masthead ul li#research.active a,
   #global-masthead ul li#research.active-trail a {
-    border-top-color: #71b360;
+    background-color: #71b360;
   }
 
   /* custom colour for Training */
@@ -106,7 +116,7 @@ a:active {
   #global-masthead ul li#training a:focus,
   #global-masthead ul li#training.active a,
   #global-masthead ul li#training.active-trail a {
-    border-top-color: #fab700;
+    background-color: #fab700;
   }
 
   /* custom colour for About us */
@@ -120,12 +130,27 @@ a:active {
   #global-masthead ul li#about-us a:focus,
   #global-masthead ul li#about-us.active a,
   #global-masthead ul li#about-us.active-trail a {
-    border-top-color: #207a7a;
+    background-color: #207a7a;
   }
 
   header .masthead {
     padding-top: 1rem;
     color: #fff;
+  }
+
+  /* make icon bar smaller for mobile */
+  @media screen and (max-width: 40em) {
+    ul#global-nav.menu > li > a > img, ul#global-nav.menu > li > a > i {
+      display: block;
+      margin: 0 auto 0.25rem;
+      font-size: 16px;
+    }
+
+    ul#global-nav.menu > li > a {
+        text-align: center;
+        font-size: 10px;
+        padding: .6rem .35rem;
+    }
   }
 
   /*
@@ -139,28 +164,41 @@ a:active {
   /* Local menu styling */
   #local-masthead nav { font-size: .9rem; clear: both; }
 
-  #local-masthead nav ul.menu li { border-right: 1px solid #f8f8f8; }
+  #local-masthead .masthead nav i { line-height: .9em; }
+  #local-masthead nav ul.menu li { border-right: 1px solid #f8f8f8; float: left; }
+  #local-masthead nav ul.menu li:last-child,
+  #local-masthead nav ul.menu li.active { border-right: 0; }
+
+  #local-masthead nav ul.menu li.float-right { border-right: none; }
+  #local-masthead nav ul.menu li.float-right button { margin: 0; }
 
   #local-masthead h1,
   #local-masthead p,
   #local-masthead a {
     color: #fff;
   }
-
-  #local-masthead ul li.active a,
+/*      background-color: rgba(255,255,255,.5); color: #444; 
+*/
+  #local-masthead ul li.is-active a,
+  #local-masthead ul li a:hover,
+  #local-masthead nav ul li a.hover,
+  #local-masthead nav ul li a:hover { background-color: rgba(255,255,255,.5); color: #444; }
+  #local-masthead nav ul li.active a,
+  #local-masthead nav ul li a:active,
   #local-masthead ul li.active-trail a,
   #local-masthead ul li.active a:visited,
-  #local-masthead ul li.active-trail a:visited,
-  #local-masthead ul li a:hover,
-  #local-masthead ul li a:focus,
-  #local-masthead ul li a:active {
-    background-color: #FFF;
-    color: #222;
+  #local-masthead ul li.active-trail a:visited { background-color: rgba(255,255,255,1); color: #444; }
+
+  /* tweak sticky behaviour */
+  div#local-masthead { width: 100%; position: static; }
+  div#local-masthead.sticky.is-stuck { margin-top: -8em !important; position: fixed;}
+
+  input#local-searchbox { width: 80%; padding: .5rem 1%;  }
+  input#local-searchbox,
+  #local-search [type="submit"] { 
+    display: inline-block; margin: 0;
+    vertical-align: top; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;
   }
-  #local-masthead ul li a:hover { background-color: rgba(255,255,255,.8);}
-
-
-  #local-search { font-size:80%; }
 
   #content {
     padding: 0.5rem 0 1.5rem;
@@ -197,6 +235,11 @@ a:active {
   body.section-home #local-masthead {
     background: #1d8086;
   }
+
+  /* tweak to foundation menu; hide submenu until rendered by JS */
+  ul.menu.dropdown ul.menu { display: none; }
+  ul.menu.dropdown ul.menu .is-dropdown-submenu { display: auto; }
+
   
   /* ebi icon font in the local title */
   .hexagon {
@@ -226,6 +269,31 @@ a:active {
   #local-title.logo-title-strapline h1 { display: inline; line-height: 100%; }
   #local-title.logo-title-strapline h1 { font-size: 270%; }
   #local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
+
+  /* embl selector */
+  .embl-selector .button,
+  .embl-selector .button.hover,
+  .embl-selector .button:focus,
+  .embl-selector .button:hover { 
+    background: no-repeat 4px 50% url('../../move-to-cdn/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg');
+    padding-left: 97px;
+    background-size: 90px;
+    font-size: 13px;
+    padding-right: 17px;
+  }
+  .embl-selector .button.hover, .embl-selector .button:hover { background-color: #888; }
+  .embl-selector .button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 4px;
+    border-color: #fff transparent transparent;
+    border-top-style: solid;
+    position: absolute;
+    top: 17px;
+    margin-left: 51px;
+}
 
   /*
     LOCAL FOOTER
@@ -270,6 +338,11 @@ a:active {
   #ebi-footer-meta p.address { color: #888; }
 
   .serif { font-family: 'EB Garamond', 'georgia', serif;  font-size: 1.1rem; }
+
+/* buttons */
+.button:focus,
+.button:hover,
+.button.hover { background-color: rgba(255,255,255,.5);}
 
 /* icon to indicate link is a PDF file */
 a span.link-pdf { background: url(http://www.ebi.ac.uk/inc/images/icon_pdf.gif) right center no-repeat; padding: 0 18px 0 0; }
