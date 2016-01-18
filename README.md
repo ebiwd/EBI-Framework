@@ -1,5 +1,4 @@
 # EBI-Framework V1.1
-# EBI-Framework V1.1
 The current idea is to develop a framework drawing heavily off print styles and use the Foundation 6 framework. Basic support will not require jQuery (including basic responsive layouts) but will be enabled by default.
 
 In all, an evolutionary step of the current EMBL-EBI web compliance kit, this project aims to continue the efforts of the existing guidance by providing:
