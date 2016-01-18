@@ -75,12 +75,18 @@ a:active {
   nav a:hover { border-bottom: none; }
 
   /* Global menu styling */
+  ul#global-nav {
+    padding-top: 10px;
+  }
+  #local-masthead nav ul#global-nav.menu li { border-right: none; }
+
   #global-masthead ul#global-nav li a:hover,
   #global-masthead ul#global-nav li a:active,
   #global-masthead ul#global-nav li a:focus,
   #global-masthead ul#global-nav li.active a,
   #global-masthead ul#global-nav li.active-trail a {
     color: white;
+    border-bottom: none;
   }
 
   /* custom colour for Home */
@@ -170,7 +176,7 @@ a:active {
   #local-masthead nav ul.menu li.active { border-right: 0; }
 
   #local-masthead nav ul.menu li.float-right { border-right: none; }
-  #local-masthead nav ul.menu li.float-right button { margin: 0; }
+  #local-masthead nav ul.menu li.float-right button { margin: 0;margin-top: -10px;}
 
   #local-masthead h1,
   #local-masthead p,
@@ -243,19 +249,19 @@ a:active {
   
   /* ebi icon font in the local title */
   .hexagon {
-    font-size: 1.5rem; 
+    font-size: 1.8rem;
     color: #444;
     background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 288 180 288" xml:space="preserve"><polygon class="st0" fill="#fff" points="147,363.6 203.2,331.1 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
     display: inline-block;
     background-size: 80px;
     background-position: 0 -15px;
     background-repeat: no-repeat;
-     text-align: center;
+    text-align: center;
     height: 70px;
-    width: 50px;
+    width: 52px;
     vertical-align: top;
-    padding: 15px 0 0 0;
-    margin-left: -20px
+    padding: 12px 0 0 0;
+    margin-left: -39px;
   }
 
   /* Custom styling for different local masthead */
@@ -274,12 +280,13 @@ a:active {
   .embl-selector .button,
   .embl-selector .button.hover,
   .embl-selector .button:focus,
-  .embl-selector .button:hover { 
-    background: no-repeat 4px 50% url('../../move-to-cdn/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg');
-    padding-left: 97px;
-    background-size: 90px;
-    font-size: 13px;
+  .embl-selector .button:hover {
+    background: no-repeat 4px 50% url('../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg');
+    padding-left: 113px;
+    background-size: 105px;
+    font-size: 15px;
     padding-right: 17px;
+    height: 47px;
   }
   .embl-selector .button.hover, .embl-selector .button:hover { background-color: #888; }
   .embl-selector .button::after {
@@ -291,10 +298,9 @@ a:active {
     border-color: #fff transparent transparent;
     border-top-style: solid;
     position: absolute;
-    top: 17px;
-    margin-left: 51px;
-  }
-  div#embl-dropdown { left: 0; }
+    top: 20px;
+    margin-left: 57px;
+}
 
   /*
     LOCAL FOOTER

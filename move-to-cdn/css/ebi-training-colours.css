@@ -1,9 +1,9 @@
 /*
-	*** TEMPLATE - please apply your custom values ***
+  *** TEMPLATE - please apply your custom values ***
 
-	Colour palette: [project name] [main colour]
-	Details: Accented Analogic from ColourSchemeDesigner
-	         http://colorschemedesigner.com/[custom URL]
+  Colour palette: [project name] [main colour]
+  Details: Accented Analogic from ColourSchemeDesigner
+           http://colorschemedesigner.com/[custom URL]
 
 */
 
@@ -72,9 +72,9 @@ a:active {
 a.special:hover,
 a.special:focus,
 a.special:active {
-	color:#FAB700;
-	border-bottom: 3px double #FAB700;
-	}
+  color:#FAB700;
+  border-bottom: 3px double #FAB700;
+  }
 
 
 a:link { color: #A39100; }
@@ -89,7 +89,7 @@ a.special { background-color: #FDBE72; }
 /* Headings */
 h1, h2, h3, h4, h5, h6 { color: #222222; }
 
-h2 { color: #1823AD; }
+h2 {color: #fab700;}
 
 h3 { color: #2E3482; }
 
@@ -105,7 +105,7 @@ h3 a:visited,
 h4 a:visited,
 h5 a:visited,
 h6 a:visited {
-	border-bottom-color: #FAB700;
+  border-bottom-color: #FAB700;
 }
 
 
@@ -114,25 +114,21 @@ th { background-color: #FA8A00; }
 
 
 /* Form submission button */
-form input.submit {		
-	border-color: #BB962F;
-	
-	background-color: #FAB700;
-	background-image: -moz-linear-gradient(top, #FDCA3F, #FAB700); 
-	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #FDCA3F),color-stop(1, #FAB700)); 
-	background-image: -webkit-linear-gradient(#FDCA3F, #FAB700); 
-	background-image: linear-gradient(top, #FDCA3F, #FAB700);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#FDCA3F', EndColorStr='#FAB700'); 
-	
-	color: #f8f8f8;
-	text-shadow: #145251 0 1px 1px;
-	
-	// OR
-	
-	color: #111111;
-	text-shadow: #f7f7f7 0 1px 1px;
-	
-}	
+form input.submit {   
+  border-color: #BB962F;
+  
+  background-color: #FAB700;
+  background-image: -moz-linear-gradient(top, #FDCA3F, #FAB700); 
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #FDCA3F),color-stop(1, #FAB700)); 
+  background-image: -webkit-linear-gradient(#FDCA3F, #FAB700); 
+  background-image: linear-gradient(top, #FDCA3F, #FAB700);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#FDCA3F', EndColorStr='#FAB700'); 
+  
+  color: #f8f8f8;
+  text-shadow: #145251 0 1px 1px;
+  
+  
+} 
 
 form input.submit:hover,
 form input.submit:focus,
@@ -140,16 +136,7 @@ form input.submit:active { background: #FAB700; }
 
 
 /* Define the basic colour your local masthead */
-div#local-masthead { background-color: #FDD772; }
-
-/* Colour the faux-underline for local menu items */
-div#local-masthead ul li a:hover,
-div#local-masthead ul li a:focus,
-div#local-masthead ul li a:active {
-	border-bottom: 3px solid #FAB700;
-}
-
-
+div#local-masthead { background-color: #fab700; }
 
 
 /* Palette table cell color codes */

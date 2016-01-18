@@ -1,0 +1,31 @@
+/* Drupal specific tweaks */
+
+/* Drupal edit/local tabs */
+.button-group { margin-left: 0; }
+.button-group li { display: inline-block; }
+.button-group li a.button.secondary { background: #fff; color: #333; }
+.button-group li a.button.secondary.active,
+.button-group li a.button.secondary:active,
+.button-group li a.button.secondary:hover { background: #333; color: #fff; }
+
+/* Misc */
+.label { background: none; }
+html.js fieldset.collapsed { height: 2em; }
+.button.primary { background-color: #fab700; }
+
+/* Edit form */
+.node-form input#edit-title { 
+  color: #fab700; 
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; 
+  font-size: 1.8em; 
+  height: 2em;
+}
+
+/* Table ordering */
+.sticky-table { box-sizing: initial; }
+.sticky-table a { border-bottom: none; }
+
+/* Reveal */
+body.is-reveal-open { overflow: auto; } /* Allow scrolling */
+body.is-reveal-open #status-messages { top: 30% !important; position: fixed !important; } /* Scroll the messages with the use */
+.alert-box { margin-right: .5rem; } /* Space for close button */
