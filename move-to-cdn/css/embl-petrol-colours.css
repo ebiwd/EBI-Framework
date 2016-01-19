@@ -1,19 +1,19 @@
 /*
-	Colour palette: EMBL Petrol
-	Details: Accented Analogic from ColourSchemeDesigner
-	         http://colorschemedesigner.com/#3i61TnBpxw0w0
+    Colour palette: EMBL Petrol
+    Details: Accented Analogic from ColourSchemeDesigner
+             http://colorschemedesigner.com/#3i61TnBpxw0w0
 */
 
 /* Color
 ===================================================*/
 a,a:link {
-  color: #0f2559;
+  color: #222;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #0e6a0e;
+  color: #207a7a;
 }
 
 h1 { color: #f7f7f7; }
@@ -22,10 +22,10 @@ h3 { color: #444444; }
 
 a.special { background-color: #7cd17c; }
 
-.button {		
-	background-color: #207a7a;
-	color: #f8f8f8;
-}	
+.button {       
+    background-color: #207a7a;
+    color: #f8f8f8;
+}   
 .button:hover,
 .button:focus,
 .button:active { background: #207a7a; }
