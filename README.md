@@ -3,10 +3,10 @@ The current idea is to develop a framework drawing heavily off print styles and 
 
 In all, an evolutionary step of the current EMBL-EBI web compliance kit, this project aims to continue the efforts of the existing guidance by providing:
 
-- Modularisation of framework components that will:
-  - require fewer roll-your-own solutions
-  - be more robust out of the box
-  - standardise of tooling
+- Modularization of framework components that will:
+  - Require fewer roll-your-own solutions
+  - Be more robust out of the box
+  - Standardization of tooling
 - Update visual assets to make use of contemporary web browser features for:
   - More consistency with print visual language
   - Enhanced mobile support
@@ -15,4 +15,7 @@ In all, an evolutionary step of the current EMBL-EBI web compliance kit, this pr
 - A versioning system for the framework to help track changes, features, and usage
 - A more collaborative code base (such as hosting on GitHub) to offer a better path for code collaboration and integration
 
-View the /html/demo/index.html for more information and living style guide.
+View /html/demo/index.html for more information and living style guide.
+
+## Roadmap
+v1.5: Add animation guidance and tooling
