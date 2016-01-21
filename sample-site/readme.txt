@@ -1,0 +1,1 @@
+Use this content as a template to build your site.
