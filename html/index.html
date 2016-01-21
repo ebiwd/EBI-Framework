@@ -328,45 +328,41 @@
 
                 If you wish to make your own colour paletter, see this set of directions /css/readme-custom-colours.txt
 
-
-
-
               </section>
 
               <section id="typography" data-magellan-target="typography">
-                <h2>typography</h2>
-Body text will be set in Verdana, which provides optimum readability across a wide range of operating systems and devices.
+                
+                <h2>Typography</h2>
+                
+                <p>The default font used throught the page is Helvetica Neue, and is implement through a web font loaded by <code>fonts.css</code>. This is done to reflect EMBL-wide branding.</p>
 
-Headings use Helvetica Neue (defaulting to Helvetica), to reflect the EMBL corporate font.
-
-Base font size for body text is 13px with a line height of 20px. Across the site, text is sized using percentages.
+                <p>For large text areas, such as the core content column on this site, we recommend using the CSS class <code>.serif</code> to use the "EB Garamond" font, which is also loaded by the font stylesheet. You can switch back to sans-serif styling with the class <code>.sans-serif</code>.</p> 
 
               </section>
 
               <section id="icons" data-magellan-target="icons">
-                <h2>Icons</h2>
+                
+                <h2>Icons <span class="label secondary">JS</span></h2>
+                
+                <p>The <code>fonts.css</code> stylesheet automatically loads a range of icon fonts that you can use.</p>
+                
+                <p>Icons are added automatically through CSS using the <code>:before</code> feature in CSS, so they will appear before whatever piece of text you associate them with. To make this association, you need to include particular class and data-icon attributes in the relevant HTML element: e.g. <code>&lt;h4&gt;&lt;span class="icon icon-generic" data-icon="4"&gt;&lt;/span&gt; Travel by plane&lt;/h4&gt;</code>.</p>
 
-<p>Icons can be a useful way to lend emphasis to a piece of text or to represent a particular item or action.</p>
-<p>We have developed a range of icon fonts and all of the icons are also available as PNG files. </p>
-<h3>How to use iconfonts</h3>
-<p>The <code>ebi-visual.css</code> stylesheet automatically loads a range of icon fonts that you can use. </p>
-<p>Icons are added using the <code>:before</code> feature in CSS, so they will appear before whatever piece of text you associate them with. To make this association, you need to include particular class and data-icon attributes in the relevant HTML element: e.g. <code>&lt;h2 class ="icon icon-generic"  data-icon ="A"&gt;Travel&lt;/h2&gt;. </code></p>
-<p>This will simply tell the web browser to use the icon pictogram that corresponds to the letter "A", and place it before the heading "Travel".</p>
-<h4>Which CSS classes you need to use</h4>
-<p>"Generic" icon font: <code>icon-generic<br />
-</code>"Chemistry" icon font: icon-chemistry<br />
-"Functional" icon font: <code>icon-functional<br />
-</code>"Social media" icon font: <code>icon-socialmedia<br />
-</code>"Conceptual" icon font: <code>icon-conceptual<br />
-</code>"Species" icon font: <code>icon-species</code></p>
-<p>To know which keystrokes map to which icons, please refer to the <a href="//www.ebi.ac.uk/web_guidelines/fonts/">approripate folder within the font directory</a>. </p>
-<h3>Icons as images</h3>
-<p>Using iconfonts in web applications might be more difficult and it might not always be appropriate (see below). If this is the case, then you can always use individual PNG images files for each icon.</p>
-<p>You can link to these at <code>http://www.ebi.ac.uk/web_guidelines/images/icons/</code></p>
-<h3>When to use iconfonts and when to use icon images</h3>
-<p>Use icons from an iconfont when you can put the icon next to a piece of descriptive text. </p>
-<p>Use icon images when they are clearly self-explanatory and can stand alone, and when having an image as an inline part of your page content is appropriate.</p>
+                <div clas="row">
+                  <div class="medium-10 medium-centered columns">
+                    <div class="callout sans-serif secondary">
+                      <h4><span class="icon icon-generic" data-icon="4"></span> Travel by plane</h4>
+                    </div>          
+                  </div>          
+                </div>      
 
+                <p>The web browser will read the data-icon parameter and use the icon pictogram corresponding to "4".</p>
+
+                <p>Note this method is now widly supported. We do not recommend using PNG images as they offer inferior peformance and inferior support for high resolution screens.</p>
+
+                <p>This requires Javascript to work as designed. jQuery and the Foundation JS library are not required. Stictly, Javascript is not needed, but this feature will not execture if the user has Javascript disabled.</p>
+                
+                <h3>The gallery</h3>
 
                 <table class="">
                   <thead>

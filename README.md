@@ -18,4 +18,4 @@ In all, an evolutionary step of the current EMBL-EBI web compliance kit, this pr
 View /html/demo/index.html for more information and living style guide.
 
 ## Roadmap
-v1.5: Add animation guidance and tooling
+- v1.5: Add animation guidance and tooling; https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a

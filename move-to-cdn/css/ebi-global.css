@@ -357,6 +357,11 @@ a:active {
   #ebi-footer-meta { font-size: 85%; margin-bottom: 9px;}
   #ebi-footer-meta p.address { color: #888; }
 
+  /*
+    MISC TWEAKS
+  =============================== */
+  ul.menu { font-size: .9rem; }
+
   .serif { font-family: 'EB Garamond', 'georgia', serif;  font-size: 1.1rem; }
   .sans-serif { font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;  font-size: 1.1rem; }
   .serif .sans-serif { font-size: 1rem; }
