@@ -10,10 +10,10 @@ In all, an evolutionary step of the current EMBL-EBI web compliance kit, this pr
 - Update visual assets to make use of contemporary web browser features for:
   - More consistency with print visual language
   - Enhanced mobile support
-- A refined style guide and pattern library to help accelerate development and understanding
-- An improved meta-tag based model for maintaining and tracking content freshness, ownership, and intent
-- A versioning system for the framework to help track changes, features, and usage
-- A more collaborative code base (such as hosting on GitHub) to offer a better path for code collaboration and integration
+- Page lifecycle tracking: An improved meta-tag based model for maintaining and tracking content freshness, ownership, and intent
+- Faster development: style guide and pattern library to help accelerate development and understanding
+- Regular updates: A versioning system for the framework to help track changes, features, and usage
+- Collaboration: A more collaborative code base (such as hosting on GitHub) to offer a better path for code collaboration and integration
 
 View /html/demo/index.html for more information and living style guide.
 
