@@ -361,6 +361,8 @@ a:active {
   .sans-serif { font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;  font-size: 1.1rem; }
   .serif .sans-serif { font-size: 1rem; }
 
+  .block { display: block; }
+
   body .has-tip { font-weight: normal; line-height: 1em; background: rgba(0,0,0,.03); }
 
 /* buttons */
