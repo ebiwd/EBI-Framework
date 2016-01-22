@@ -138,47 +138,47 @@
   // insert markup into global-masthead for global search
   // append body class to identify local-search, inpage-search or global-search
   // intertion can be disabled with body.no-global-search
-  (function insertGlobalSearch() {
-    try {
-      var disabled = document.body.className.indexOf('no-global-search') !== -1;
+  // (function insertGlobalSearch() {
+  //   try {
+  //     var disabled = document.body.className.indexOf('no-global-search') !== -1;
 
-      var hasGlobalMasthead = document.getElementById('global-masthead') !== null;
+  //     var hasGlobalMasthead = document.getElementById('global-masthead') !== null;
 
-      var hasLocalSearch = document.getElementById('local-search') !== null;
-      var hasInPageSearch = (document.getElementById('ebi_search') || document.getElementById('people-groups')) !== null
+  //     var hasLocalSearch = document.getElementById('local-search') !== null;
+  //     var hasInPageSearch = (document.getElementById('ebi_search') || document.getElementById('people-groups')) !== null
 
-      var insertGlobalSearch = hasGlobalMasthead && !hasLocalSearch && !hasInPageSearch && !disabled;
+  //     var insertGlobalSearch = hasGlobalMasthead && !hasLocalSearch && !hasInPageSearch && !disabled;
       
-      document.body.className += hasLocalSearch ? ' local-search' : '';
-      document.body.className += hasInPageSearch ? ' inpage-search' : '';
-      document.body.className += insertGlobalSearch ? ' global-search' : '';
+  //     document.body.className += hasLocalSearch ? ' local-search' : '';
+  //     document.body.className += hasInPageSearch ? ' inpage-search' : '';
+  //     document.body.className += insertGlobalSearch ? ' global-search' : '';
 
-      if (insertGlobalSearch) {
-        // create the form
-        var globalSearchForm = (document.getElementById("global-search") || document.createElement('form'));
-        globalSearchForm.id = "global-search";
-        globalSearchForm.name = "global-search";
-        globalSearchForm.action = "/ebisearch/search.ebi";
-        globalSearchForm.method = "GET";
-        globalSearchForm.innerHTML = "" +
-          "<fieldset>" +
-          "  <label>" +
-          "    <input type='text' name='query' id='global-searchbox'>" +
-          "  </label>" +
-          "  <input type='submit' name='submit' value='' class='submit' />" +
-          "  <input type='hidden' name='db' value='allebi' checked='checked'>" +
-          "  <input type='hidden' name='requestFrom' value='global-masthead' checked='checked'>" +
-          "</fieldset>" +
-          "";
+  //     if (insertGlobalSearch) {
+  //       // create the form
+  //       var globalSearchForm = (document.getElementById("global-search") || document.createElement('form'));
+  //       globalSearchForm.id = "global-search";
+  //       globalSearchForm.name = "global-search";
+  //       globalSearchForm.action = "/ebisearch/search.ebi";
+  //       globalSearchForm.method = "GET";
+  //       globalSearchForm.innerHTML = "" +
+  //         "<fieldset>" +
+  //         "  <label>" +
+  //         "    <input type='text' name='query' id='global-searchbox'>" +
+  //         "  </label>" +
+  //         "  <input type='submit' name='submit' value='' class='submit' />" +
+  //         "  <input type='hidden' name='db' value='allebi' checked='checked'>" +
+  //         "  <input type='hidden' name='requestFrom' value='global-masthead' checked='checked'>" +
+  //         "</fieldset>" +
+  //         "";
 
 
-        // insert into global-masthead
-        var globalMasthead = document.getElementById('global-masthead');
-        globalMasthead.insertBefore(globalSearchForm, globalMasthead.firstChild);
-      }
-    }
-    catch (err) {}
-  })();
+  //       // insert into global-masthead
+  //       var globalMasthead = document.getElementById('global-masthead');
+  //       globalMasthead.insertBefore(globalSearchForm, globalMasthead.firstChild);
+  //     }
+  //   }
+  //   catch (err) {}
+  // })();
 
   // add error alerts for 'no input' on search boxes
   (function searchNullError() {
@@ -267,7 +267,7 @@
   
   // replaces old logo pattern
   // sets first and last classes on global-navigation
-  (function fixGlobalNav() {
+  // (function fixGlobalNav() {
 /*
     try {
       logo = document.getElementById('global-masthead').getElementsByTagName('p')[0]; // old logo pattern 
@@ -282,88 +282,88 @@
     catch(err) {};
 */
 
-    try {
-      var first = document.getElementById('services');
-      var last = (document.getElementById('about') || document.getElementById('about-us'));
+  //   try {
+  //     var first = document.getElementById('services');
+  //     var last = (document.getElementById('about') || document.getElementById('about-us'));
 
-      if (first.className.indexOf('first') === -1) {
-        first.className += ' first';
-      }
-      if (last.className.indexOf('last') === -1) {
-        last.className += ' last';
-      }
-    }
-    catch(err) {}
-  })();
+  //     if (first.className.indexOf('first') === -1) {
+  //       first.className += ' first';
+  //     }
+  //     if (last.className.indexOf('last') === -1) {
+  //       last.className += ' last';
+  //     }
+  //   }
+  //   catch(err) {}
+  // })();
 
-  (function fixLocalNav() {
-    try {
-      var hasLocalNavigation = document.getElementById('local-nav') !== null;
+  // (function fixLocalNav() {
+  //   try {
+  //     var hasLocalNavigation = document.getElementById('local-nav') !== null;
       
-      if (hasLocalNavigation) {
-        var items = document.getElementById('local-nav').getElementsByTagName('li');
-        var firstItem = null, lastItem = null, firstFunctional = null, lastFunctional = null;
+  //     if (hasLocalNavigation) {
+  //       var items = document.getElementById('local-nav').getElementsByTagName('li');
+  //       var firstItem = null, lastItem = null, firstFunctional = null, lastFunctional = null;
 
-        for (var i=0; i<items.length; i++) {
-          if (items[i].className.indexOf('functional') !== -1) {
-            firstFunctional = firstFunctional || items[i];
-            lastFunctional = items[i];
-          }
-          else {
-            firstItem = firstItem || items[i];
-            lastItem = items[i];
-          }
-          if (items[i].className.indexOf('first') !== -1) {
-            items[i].className = items[i].className.replace(' first','');
-          }
-          if (items[i].className.indexOf('last') !== -1) {
-            items[i].className = items[i].className.replace(' last','');
-          }
-        }
+  //       for (var i=0; i<items.length; i++) {
+  //         if (items[i].className.indexOf('functional') !== -1) {
+  //           firstFunctional = firstFunctional || items[i];
+  //           lastFunctional = items[i];
+  //         }
+  //         else {
+  //           firstItem = firstItem || items[i];
+  //           lastItem = items[i];
+  //         }
+  //         if (items[i].className.indexOf('first') !== -1) {
+  //           items[i].className = items[i].className.replace(' first','');
+  //         }
+  //         if (items[i].className.indexOf('last') !== -1) {
+  //           items[i].className = items[i].className.replace(' last','');
+  //         }
+  //       }
         
-        if (firstItem.className.indexOf('first') === -1) {
-          firstItem.className += ' first';
-        }
-        if (lastItem.className.indexOf('last') === -1) {
-          lastItem.className += ' last';
-        }
-        if (firstFunctional.className.indexOf('last') === -1) {
-          firstFunctional.className += ' last';
-        }
-        if (lastFunctional.className.indexOf('first') === -1) {
-          lastFunctional.className += ' first';
-        }
-      }
-    }
-    catch (err) {}
-  })();
+  //       if (firstItem.className.indexOf('first') === -1) {
+  //         firstItem.className += ' first';
+  //       }
+  //       if (lastItem.className.indexOf('last') === -1) {
+  //         lastItem.className += ' last';
+  //       }
+  //       if (firstFunctional.className.indexOf('last') === -1) {
+  //         firstFunctional.className += ' last';
+  //       }
+  //       if (lastFunctional.className.indexOf('first') === -1) {
+  //         lastFunctional.className += ' first';
+  //       }
+  //     }
+  //   }
+  //   catch (err) {}
+  // })();
 
   // watches to see if contentspane is wider than local-masthead, and sets min-width appropriately
   // can be disabled with body.no-content-width-fix
-  (function setMitigationMinWidth() {
-    try {
-      var hasLocalMasthead = document.getElementById('local-masthead') !== null;
-      var hasContentsPane = document.getElementById('contentspane') !== null;
-      var disabled = document.body.className.indexOf('no-content-width-fix') !== -1;
+  // (function setMitigationMinWidth() {
+  //   try {
+  //     var hasLocalMasthead = document.getElementById('local-masthead') !== null;
+  //     var hasContentsPane = document.getElementById('contentspane') !== null;
+  //     var disabled = document.body.className.indexOf('no-content-width-fix') !== -1;
       
-      function checkMitigationMinWidth() {
-        if (document.getElementById('contentspane').clientWidth > document.getElementById('local-masthead').clientWidth) {
-          document.body.style.minWidth = document.getElementById('contentspane').clientWidth + 'px';
-        }
-      }
+  //     function checkMitigationMinWidth() {
+  //       if (document.getElementById('contentspane').clientWidth > document.getElementById('local-masthead').clientWidth) {
+  //         document.body.style.minWidth = document.getElementById('contentspane').clientWidth + 'px';
+  //       }
+  //     }
       
-      if (!disabled && hasLocalMasthead && hasContentsPane) {
-        checkMitigationMinWidth(); // run now
-        if (window.addEventListener) { 
-          window.addEventListener('resize', checkMitigationMinWidth, false);
-        }
-        else {
-          window.attachEvent('onresize', checkMitigationMinWidth); // IE<9 compatiblilty
-        }
-      }
-    }
-    catch(err) {}
-  })();
+  //     if (!disabled && hasLocalMasthead && hasContentsPane) {
+  //       checkMitigationMinWidth(); // run now
+  //       if (window.addEventListener) { 
+  //         window.addEventListener('resize', checkMitigationMinWidth, false);
+  //       }
+  //       else {
+  //         window.attachEvent('onresize', checkMitigationMinWidth); // IE<9 compatiblilty
+  //       }
+  //     }
+  //   }
+  //   catch(err) {}
+  // })();
   
   (function browserIdentify() {
     if (document.all && !document.addEventListener) { // <IE8
