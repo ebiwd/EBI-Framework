@@ -362,13 +362,63 @@ a:active {
   =============================== */
   ul.menu { font-size: .9rem; }
 
+  /* Image tweaks */
+  body .thumbnail { box-shadow: none; }
+  .caption {
+    line-height: 1.3em;
+    font-family: sans-serif;
+    font-size: .85rem;
+    opacity: .8;
+  }  
+  .with-overlay {
+    position: relative;
+  }  
+  .with-overlay .caption {
+    background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.7));
+    background: -o-linear-gradient(transparent, rgba(0,0,0,0.7));
+    background: -moz-linear-gradient(transparent, rgba(0,0,0,0.7));
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    padding: 5% 5%;
+    color: #fff;
+    opacity: 1;
+  }  
+  .with-overlay .caption:hover {
+    background: -webkit-linear-gradient(transparent, rgba(255,255,255,0.7));
+    background: -o-linear-gradient(transparent, rgba(255,255,255,0.7));
+    background: -moz-linear-gradient(transparent, rgba(255,255,255,0.7));
+    background: linear-gradient(transparent, rgba(255,255,255,0.7));
+    color: #000;
+  }
+
+  .with-overlay .caption .inner {
+    position: absolute;
+    bottom: 5%;
+  }
+  .with-overlay .caption a.inner {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: none;
+    font-size: 1.2rem;
+    padding-top: 50%;
+    width: 95%;
+    content: "»";
+  }
+  .with-overlay .caption a.inner:after { content: " »"; }
+  .with-overlay .caption:hover a.inner { color: #000; }
+
   .serif { font-family: 'EB Garamond', 'georgia', serif;  font-size: 1.1rem; }
   .sans-serif { font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;  font-size: 1.1rem; }
   .serif .sans-serif { font-size: 1rem; }
 
   .block { display: block; }
+  .clear { clear: both; }
 
   body .has-tip { font-weight: normal; line-height: 1em; background: rgba(0,0,0,.03); }
+
 
 /* buttons */
 .button:focus,

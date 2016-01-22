@@ -210,7 +210,6 @@
                   <li><a href="#icons">Icons</a></li>
                   <li><a href="#favicons">Favicons</a></li>
                   <li><a href="#images">Images</a></li>
-                  <li><a href="#feedback">Feedback</a></li>
                   <li><a href="#helper-classes">Helper classes</a></li>
                 </ul>
                 <li><a href="#writing">Writing</a></li>
@@ -287,19 +286,19 @@
                 </ul>
                 <h3><a name="global" id="global"></a>Global menu</h3>
                 <p>The global navigation menu sits at the top of every page. It is designed to be easy to find yet unobtrusive, so as not to confuse users who wish to use the navigation menu for your site.</p>
-                <p><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-global.png" alt="EBI global navigation menu example" width="800" height="28" style="border: 0px;" /></p>
+                <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-global.png" alt="EBI global navigation menu example" width="800" height="28" style="border: 0px;" /></p>
                 <h3><a name="local" id="local"></a>Local menu</h3>
                 <p>The local menu is the navigation menu for your website and it sits below the main banner. It is optional, since not all projects require their own menu. Since it is a horizontal menu, you need to think about the text length of labels. We recommend that your first menu link is "Home" and your last one is "About [project-name]".</p>
-                <p><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-local.png" alt="EBI local navigation menu example" width="374" height="47" style="border: 0px;" /></p>
+                <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-local.png" alt="EBI local navigation menu example" width="374" height="47" style="border: 0px;" /></p>
                 <h3><a name="secondary" id="secondary"></a>Secondary menus</h3>
                 <p>Once the user has selected an item from your local menu, you might need to display a secondary navigation menu for that section. So that your content takes the most important position, in the top-right of the content area, we will position these secondary menus in a column on the right in a vertical list. The &lt;h3&gt; heading for this menu should match the label text selected in your local menu.</p>
-                <p><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-secondary.png" alt="EBI secondary navigation menu example" width="304" height="232" style="border: 0px;" /></p>
+                <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-secondary.png" alt="EBI secondary navigation menu example" width="304" height="232" style="border: 0px;" /></p>
                 <h3><a name="breadcrumb" id="breadcrumb"></a>Breadcrumb trail</h3>
                 <p>You can also help your users locate themselves in the site hierarchy but using a breadcrumb trail. This is usually displayed <strong>in combination with</strong> the secondary navigation menu, to emphasise location.</p>
-                <p><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-breadcrumb.png" alt="EBI breadcrumb trail navigation example" width="228" height="149" style="border: 0px;" /></p>
+                <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-breadcrumb.png" alt="EBI breadcrumb trail navigation example" width="228" height="149" style="border: 0px;" /></p>
                 <h3><a name="footer" id="footer"></a>Footer global menu</h3>
                 <p>In the global footer of every page there is an expanded version of the global menu, including all sub-items. This acts as a top-level sitemap, available on any page.</p>
-                <p><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-footer.png" alt="EBI expanded global navigation menu in footer example" width="800" height="213" style="border: 0px;" /></p>
+                <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-footer.png" alt="EBI expanded global navigation menu in footer example" width="800" height="213" style="border: 0px;" /></p>
               </section>
 
               <section id="menus" data-magellan-target="menus">
@@ -796,18 +795,91 @@
 
               <section id="favicons" data-magellan-target="favicons">
                 <h2>Favicons</h2>
+                <p>This template preloades the EMBL-EBI mark, supporting a range of browser tab icons, bookmarks, home screen icons, tab colors, and size/formats, including SVG.</p>
+                <p>If you need to generate a new set of favicons, we've found <a href="https://realfavicongenerator.net">RealFaviconGenerator.net</a> to generate a high quality output, and be easy to use.</p>
               </section>
 
               <section id="images" data-magellan-target="images">
-                <h2>images</h2>
-              </section>
+                <h2>Images</h2>
 
-              <section id="feedback" data-magellan-target="feedback">
-                <h2>feedback</h2>
+                <div class="row collapse">
+                  <div class="thumbnail float-right medium-4 columns">
+                    <img src="http://foundation.zurb.com/sites/docs/assets/img/thumbnail/01.jpg" alt="Photo of Uranus.">
+                    <div class="caption">You can also add a caption with <code>.caption</code>.</div>
+                  </div>
+
+                  <p>For images inserted inside text areas, you can use the CSS class of <code>.thumbnail</code> to add subtle padding and spacing.</p>
+
+                  <p>You can further combine with <code>.float-left</code> or <code>.float-right</code> for a nice treatment, and size with, say, <code>.columns .medium-4</code> for a responsive effect.</p>
+
+                  <p>Images will dynamically scale down to fit the container, but will not scale above their actual size.</p>
+
+                  <p>This is the treatment you see to the right.</p>
+
+                  <h3>Image tiles</h3>
+
+                  <p>Alternativley, you can use a <code>.with-overlay</code> for a darkened effect with a text overlay, like so:</p>
+                </div>
+
+                <div class="row collapse">
+                  <div class="columns medium-4 with-overlay">
+                    <img src="http://foundation.zurb.com/sites/docs/assets/img/thumbnail/01.jpg" alt="Photo of Uranus.">
+                    <div class="caption">
+                      <a href="http://www.embl.de/" class="inner">
+                        Link to EMBL
+                      </a>
+                    </div>
+                  </div>
+                  <div class="columns medium-4 with-overlay end">
+                    <img src="http://www.embl.de/services/pic_library_new.jpg" alt="Photo of Uranus.">
+                    <div class="caption">
+                      <div class="inner">
+                        test
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                  <p>Notice that when linking the text automatically takes on a large font face and arrow. This style is best used as an image button to tease and link further content.</p>
+
               </section>
 
               <section id="helper-classes" data-magellan-target="helper-classes">
-                <h2>helper-classes</h2>
+                <h2>Helper classes</h2>
+
+                This grab bag of odds-and-ends classes will help you create a layout that works for your page's needs.
+
+                <table>
+                  <tr>
+                    <th>CSS Class</th>
+                    <th>Function</th>
+                  </tr>
+                  <tr>
+                    <td>.float-right</td>
+                    <td>right align</td>                    
+                  </tr>
+                  <tr>
+                    <td>.float-left</td>
+                    <td>left align</td>                    
+                  </tr>
+                  <tr>
+                    <td>.block</td>
+                    <td>set display to "block"</td>                    
+                  </tr>
+                  <tr>
+                    <td>.clear</td>
+                    <td>enable "clear" on the element</td>                    
+                  </tr>
+                  <tr>
+                    <td>.hide</td>
+                    <td>set display to "none"</td>                    
+                  </tr>
+                </table>
+
+
+
               </section>
 
               <section id="writing" data-magellan-target="writing">

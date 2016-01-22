@@ -379,7 +379,7 @@
     localMasthead.onclick = function(e){
       if (e.target.nodeName == 'A')
         return;
-      // if juqeyr then do it all pretty like
+      // if jQuery then do it all pretty like
       if (window.jQuery) {  
         $('html,body').animate({
           scrollTop: 0
@@ -390,8 +390,18 @@
     }
   })();
 
-  // Smooth scroll anchor links for jQuery users
   if (window.jQuery) {  
+    // Link overlay images
+    $(function() {
+      $('.with-overlay').click(function(e) {
+        var href = $(this).find('a:first').attr('href') || '';
+        if (href.length > 0) {
+          window.location.href = href;
+        }
+      })
+    });
+
+    // Smooth scroll anchor links for jQuery users
     $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
