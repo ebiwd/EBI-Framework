@@ -419,6 +419,14 @@ a:active {
 
   body .has-tip { font-weight: normal; line-height: 1em; background: rgba(0,0,0,.03); }
 
+  /* Float left for pullquotes */
+  blockquote.float-left {
+    border-left: none;
+    text-align: right;
+    border-right: 1px solid #cacaca;
+    margin-right: 1rem;
+  }
+
 
 /* buttons */
 .button:focus,
