@@ -372,5 +372,42 @@
       }
     }
   })();
+
+  // tap the location bar to scroll to the top
+  (function scrollMeUp() {
+    var localMasthead = document.getElementById('local-masthead');
+    localMasthead.onclick = function(e){
+      if (e.target.nodeName == 'A')
+        return;
+      // if juqeyr then do it all pretty like
+      if (window.jQuery) {  
+        $('html,body').animate({
+          scrollTop: 0
+        }, 700);
+      } else {
+        window.scrollTo(0, 0);
+      }
+    }
+  })();
+
+  // Smooth scroll anchor links for jQuery users
+  if (window.jQuery) {  
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top - 40
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+  }
+
+
   
 })();
