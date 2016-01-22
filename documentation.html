@@ -126,10 +126,9 @@
           <!-- local-nav -->
               <nav >
                 <ul class="dropdown menu float-left" data-description="navigational">
-                  <li><a href="#test">About</a></li>
-                  <li class="active"><a href="#">Generic</a></li>
-                  <li><a href="#">Generic</a></li>
-                  <li><a href="#">Generic</a></li>
+                  <li class="active"><a href="documentation.html">Overview</a></li>
+                  <li><a data-open="modal-download">Download</a></li>
+                  <li><a href="#">Support <i class="icon icon-generic" data-icon="x"></i></a></li>
                 </ul>
                 <ul class="menu dropdown float-right" data-dropdown-menu data-description="functional">
                   <li class="functional"><a href="#"><i class="icon icon-generic" data-icon="d"></i> Share this</a>
@@ -169,6 +168,16 @@
       </div>
   </div>
 
+  <div class="reveal" id="modal-download" data-reveal>
+    <h2>Awesome. I Have It.</h2>
+    <p class="lead">Your couch. It is mine.</p>
+    <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+    <a class="button">Download</a>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
   <div id="content" role="main" class="row">
 
       <!-- Suggested layout containers -->
@@ -188,65 +197,76 @@
         </nav>
         -->
 
-        <h2>EBI Framework documention and style guide</h2>
-
         <div class="row">
 
-          <div class="columns medium-2" data-sticky-container>
-            <div class="sticky" data-sticky data-sticky-on="large" data-margin-top="2.5" data-top-anchor="content:top" data-btm-anchor="content:bottom">
-              <ul class="menu vertical" data-magellan>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#design-patterns">Design patterns</a></li>
-                <ul class="nested vertical menu">
-                  <li><a href="#navigation">Navigation</a></li>
-                  <ul class="nested vertical menu">
-                    <li><a href="#menus">Menus</a></li>
-                    <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-                  </ul>
-                  <li><a href="#content">Content</a></li>
-                  <li><a href="#grid">Grid</a></li>
-                  <li><a href="#colour">Colour</a></li>
-                  <li><a href="#typography">Typography</a></li>
-                  <li><a href="#icons">Icons</a></li>
-                  <li><a href="#favicons">Favicons</a></li>
-                  <li><a href="#images">Images</a></li>
-                  <li><a href="#helper-classes">Helper classes</a></li>
-                </ul>
-                <li><a href="#writing">Writing</a></li>
-                <li><a href="#metacopy">Metacopy</a></li>
-                <li><a href="#browser-compatibility">Browser compatibility</a></li>
-                <li><a href="#sitemap">Sitemap</a></li>
-                <li><a href="#accesibility">Accesibility</a></li>
-                <li><a href="#help">Help</a></li>
-              </ul>
-            </div>
-          </div>
+          <div class="medium-9 columns">
 
-          <div class="medium-7 columns serif sections">
+            <div class="row">
+              <div class="small-12 columns">
 
-              <section id="overview" data-magellan-target="overview">
-                <h2>Overview</h2>
-                <p>This collection of materials offers guidance on building web site, pages, and content that comply with the EMBL-EBI:</p>
+                <h2>EBI Framework overview</h2>
+                <span class="secondary label sans-serif"><i class="icon icon-generic" data-icon="i"></i> Framework version: 1.1</span>
+                <p class="lead">The framework is a collection of JS, CSS, icons, coding conventions, and templated components that will help you build robust web content faster than if you were to make it from scratch.</p>
+                <p>This page offers guidance on building web site, pages, and content that comply with the EMBL-EBI:</p>
                 <ul>
                   <li>visual look;</li>
                   <li>semantic structure; and</li>
                   <li>writing guidelines.</li>
                 </ul>
-                <p>The tooling will help you build robust web content faster than if you were to make it from scratch</p>
 
-                <div class="callout warning">
-                  <span class="float-right secondary label sans-serif"><i class="icon icon-generic" data-icon="i"></i> Framework version: 1.1</span>
-                  <h3>How to use this</h3>
-                  <p>Use this as page and it's associated assets as your boilerplate. Read through the text and draw on the examples. Use your browser's web inspector and view the source.</p>
-                  <blockquote class="float-left">
-                    Do as I do, not as I say.
-                    <cite>This Framewok</cite>
-                  </blockquote>
-                  <p>This guide does not offer prescriptive solutions for every scenario, but integrates a wide range of pullquotes, form boxes, menus, and more to show you how things should be done.</p>
-                  <p>Also <a href="http://foundation.zurb.com/sites/docs/global.html">consult the Foundation 6 docs <i class="icon icon-generic" data-icon="x"></i></a>, as this framework leverages that toolset.</p>
-                  <p>During the initial rollout, we plan to host workshops to educate on the tooling and address issues or concerns, register you interest here [ADD LINK]</p>
-                  <p>If you need technical guidance or have questions, <a href="#help">see the help section</a>.</p>
+                <hr />
+
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="columns medium-2" data-sticky-container>
+                <div class="sticky" data-sticky data-sticky-on="large" data-margin-top="3.5" data-top-anchor="overview:top" data-btm-anchor="overview:bottom">
+                  <ul class="menu vertical" data-magellan>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#design-patterns">Design patterns</a></li>
+                    <ul class="nested vertical menu">
+                      <li><a href="#navigation">Navigation</a></li>
+                      <ul class="nested vertical menu">
+                        <li><a href="#menus">Menus</a></li>
+                        <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+                      </ul>
+                      <li><a href="#content">Content</a></li>
+                      <li><a href="#grid">Grid</a></li>
+                      <li><a href="#colour">Colour</a></li>
+                      <li><a href="#typography">Typography</a></li>
+                      <li><a href="#icons">Icons</a></li>
+                      <li><a href="#favicons">Favicons</a></li>
+                      <li><a href="#images">Images</a></li>
+                      <li><a href="#helper-classes">Helper classes</a></li>
+                    </ul>
+                    <li><a href="#writing">Writing</a></li>
+                    <li><a href="#metacopy">Metacopy</a></li>
+                    <li><a href="#browser-compatibility">Browser compatibility</a></li>
+                    <li><a href="#sitemap">Sitemap</a></li>
+                    <li><a href="#accesibility">Accesibility</a></li>
+                    <li><a href="#help">Help</a></li>
+                  </ul>
                 </div>
+              </div>
+
+
+
+          <div class="medium-9 columns serif sections">
+
+              <section id="overview" data-magellan-target="overview">
+
+                <h3>How to use this</h3>
+                <p>Use this as page and it's associated assets as your boilerplate. Read through the text and draw on the examples. Use your browser's web inspector and view the source.</p>
+                <blockquote class="float-left">
+                  Do as I do, not as I say.
+                  <cite>This Framewok</cite>
+                </blockquote>
+                <p>This guide does not offer prescriptive solutions for every scenario, but integrates a wide range of pullquotes, form boxes, menus, and more to show you how things should be done.</p>
+                <p>Also <a href="http://foundation.zurb.com/sites/docs/global.html">consult the Foundation 6 docs <i class="icon icon-generic" data-icon="x"></i></a>, as this framework leverages that toolset.</p>
+                <p>During the initial rollout, we plan to host workshops to educate on the tooling and address issues or concerns, register you interest here [ADD LINK]</p>
+                <p>If you need technical guidance or have questions, <a href="#help">see the help section</a>.</p>
 
                 <h3>Requirements and what you get</h3>
                 <p>The framework is built with modern best practices and targets browsers shipped within the past three years; though other browsers should still handle the content and appearance well (graceful degredation). The framework is also mobile responsive, so you won't have to spend too much time adapting for mobile.</p>
@@ -255,35 +275,36 @@
                 <p>The easiest way to implement the styleguide is to download the EBI boilerplate (see links below) - this is an HTML file that you can use as a template for your own pages. It contains the HTML for the EBI header and footer and placeholders for your project name / logo and page content. It also links to the core stylesheets you'll need to make your webpages look like part of the EBI website.</p>
                 <p>[download button]</p>
 
-                <h3>FAQs</h3>
-                <ul>
-                  <li>JavaScript: The framework does not require jQuery, but if you do use it you will get more nice to haves and your life may be easier all around. The jQuery functionality is enable by default. For more see the section on disabling JavaScript addons (you'll comment out two lines -- need to write this...)</li>
-                  <li>Bootstrap, or, rather, why we haven't used it: Bootstrap also offers a robust set of tooling and while experience and usage of it is greater than Foundation's, Bootstrap's base styling is more oppinunated (121KB vs 43KB of minified baseline CSS), requiring more custom code to create the EBI styling -- a detriment to performance and maintainibility. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem.</li>
-                  <li>SASS: We have not used Foundation's compilable CSS, nor have we added any other compile required tooling. This was done to keep implementation as simple as possible, and it offered limited benefits. However, we have implement the vanilla release of Foundation, so there's no reason you couldn't swap that out.</li>
-                  <li>Animation: Using CSS3 and Javascript animations there are many opportunities to make our sites look good and function better, but we want to take this one step at a time and get other items in order. Currently on target for v1.5. <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="Foundation does have a complementary animation toolset that we've not bundled, but you could...">Feel free to experiment with subtle animations</span>, let us know if you do.</li>
-                </ul>
+                <div class="callout warning row">
+                  <h3>FAQs</h3>
+                  <ul>
+                    <li>JavaScript: The framework does not require jQuery, but if you do use it you will get more nice to haves and your life may be easier all around. The jQuery functionality is enable by default. For more see the section on disabling JavaScript addons (you'll comment out two lines -- need to write this...)</li>
+                    <li>Bootstrap, or, rather, why we haven't used it: Bootstrap also offers a robust set of tooling and while experience and usage of it is greater than Foundation's, Bootstrap's base styling is more oppinunated (121KB vs 43KB of minified baseline CSS), requiring more custom code to create the EBI styling -- a detriment to performance and maintainibility. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem.</li>
+                    <li>SASS: We have not used Foundation's compilable CSS, nor have we added any other compile required tooling. This was done to keep implementation as simple as possible, and it offered limited benefits. However, we have implement the vanilla release of Foundation, so there's no reason you couldn't swap that out.</li>
+                    <li>Animation: Using CSS3 and Javascript animations there are many opportunities to make our sites look good and function better, but we want to take this one step at a time and get other items in order. Currently on target for v1.5. <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="Foundation does have a complementary animation toolset that we've not bundled, but you could...">Feel free to experiment with subtle animations</span>, let us know if you do.</li>
+                  </ul>
+                </div>
               </section>
 
               <section id="design-patterns" data-magellan-target="design-patterns">
                 <h2>Design patterns</h2>
-                This page intentionally implements a broad range of interface items, use them as a guide for how to make your page elements look and function.
+                <p>This page acts as a "living guide" by implementing a broad range of interface items, use them as a guide for how to make your page elements look and function.</p>
 
                 <p>For edge cases not covered, please [CONTACT THE STYLE TEAM] or open an issue in the tracker. We'll update this living style guide with those answers.</p>
               </section>
 
               <section id="navigation" data-magellan-target="navigation">
                 <h2>Navigation</h2>
-                <h2>Five main navigation types</h2>
-                <div>
+                <p>
                  There are five main navigation types on EBI web pages:
-                </div>
-                <ul>
+                </p>
+                <ol>
                  <li><a href="#global">global menu</a></li>
                  <li><a href="#local">local menu</a></li>
                  <li><a href="#secondary">secondary menus</a></li>
                  <li><a href="#breadcrumb">breadcrumb trails</a></li>
                  <li><a href="#footer">footer global menu</a></li>
-                </ul>
+                </ol>
                 <h3><a name="global" id="global"></a>Global menu</h3>
                 <p>The global navigation menu sits at the top of every page. It is designed to be easy to find yet unobtrusive, so as not to confuse users who wish to use the navigation menu for your site.</p>
                 <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-global.png" alt="EBI global navigation menu example" width="800" height="28" style="border: 0px;" /></p>
@@ -294,7 +315,7 @@
                 <p>Once the user has selected an item from your local menu, you might need to display a secondary navigation menu for that section. So that your content takes the most important position, in the top-right of the content area, we will position these secondary menus in a column on the right in a vertical list. The &lt;h3&gt; heading for this menu should match the label text selected in your local menu.</p>
                 <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-secondary.png" alt="EBI secondary navigation menu example" width="304" height="232" style="border: 0px;" /></p>
                 <h3><a name="breadcrumb" id="breadcrumb"></a>Breadcrumb trail</h3>
-                <p>You can also help your users locate themselves in the site hierarchy but using a breadcrumb trail. This is usually displayed <strong>in combination with</strong> the secondary navigation menu, to emphasise location.</p>
+                <p>A breadcrump can help users understand the structure of sites with a large degree of hierarchy, but you should first rely on the global header, local title, and local menu to indicate structure, using a breadcrump only when that fails. For guidance on your information architecture, contact the web development team.</p>
                 <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-breadcrumb.png" alt="EBI breadcrumb trail navigation example" width="228" height="149" style="border: 0px;" /></p>
                 <h3><a name="footer" id="footer"></a>Footer global menu</h3>
                 <p>In the global footer of every page there is an expanded version of the global menu, including all sub-items. This acts as a top-level sitemap, available on any page.</p>
@@ -314,7 +335,11 @@
               </section>
 
               <section id="grid" data-magellan-target="grid">
-                <h2>grid</h2>
+                <h2>Grid</h2>
+                <p>Start by adding an element with a class of <code>.row</code>. This will create a horizontal block to contain vertical columns. Then add elements with a <code>.column</code> class within that row. You can use <code>.column</code> or <code>.columns</code>&mdash;the only difference is grammar. Specify the widths of each column with the <code>.small-#</code>, <code>.medium-#</code>, and <code>.large-#</code> classes.</p>
+
+                [refernce FM6 docs...]
+
               </section>
 
               <section id="colour" data-magellan-target="colour">
@@ -347,7 +372,7 @@
                 
                 <p>Icons are added automatically through CSS using the <code>:before</code> feature in CSS, so they will appear before whatever piece of text you associate them with. To make this association, you need to include particular class and data-icon attributes in the relevant HTML element: e.g. <code>&lt;h4&gt;&lt;span class="icon icon-generic" data-icon="4"&gt;&lt;/span&gt; Travel by plane&lt;/h4&gt;</code>.</p>
 
-                <div clas="row">
+                <div class="row">
                   <div class="medium-10 medium-centered columns">
                     <div class="callout sans-serif secondary">
                       <h4><span class="icon icon-generic" data-icon="4"></span> Travel by plane</h4>
@@ -884,85 +909,85 @@
 
               <section id="writing" data-magellan-target="writing">
                 <h2>writing</h2>
-<p>Guidance for writing content for web pages, considering tone, audience, message, strucutre. The text we write is called "copy" and comes in three main types:</p>
-<ul>
- <li><a href="#macrocopy">Macro copy</a> - paragraphs of text on pages</li>
- <li><a href="#microcopy">Micro copy</a> - small areas of text that you find on a user interface or in messages</li>
- <li><a href="#metacopy">Meta copy</a> - the content of meta tags in pages: keywords and description</li>
-</ul>
-<h2><a name="macrocopy" id="macrocopy"></a>Macro copy</h2>
-<p>Macro copy, sometimes called body copy, means paragraphs of text on pages, e.g. documentation, descriptions, news articles, etc. We've found that you can get great results by following Caroline Jarretts principles from <a href="http://www.editingthatworks.com/">Editing That Works</a>:</p>
-<ol>
- <li>Understand context of use</li>
- <li>Choose what to say</li>
- <li>Slash everything else</li>
- <li>Edit sentences</li>
- <li>Put into logical order</li>
- <li>Demolish walls of words</li>
- <li>Choose links</li>
- <li>Check consistency</li>
- <li>Rest it then test it</li>
-</ol>
-<p>Caroline recommends <a href="http://www.editingthatworks.com/principles.htm">using the principles as a process</a>, from 1 to 9. If you'd like to learn more about how to write and edit text, we recommend the one-day EMBL course, Writing for the Web, taught by Caroline Jarrett. You can find <a href="https://intranet.embl.de/hr/training_development/index.html">details of the course on the EMBL website</a>.</p>
-<h2><a name="microcopy" id="microcopy"></a>Micro copy</h2>
-<p>Micro copy is small areas of text that you find on a user interface or in messages. For example, the labels for form inputs; explanatory text; progress or error messages. This text is frequently written by you, the developer who creates the interface, and it is important that it successfully communicates to the user.</p>
-<h3>Using a microcopy framework</h3>
-<p>Micro copy small pieces of text in a user interface; help, error or status messages, etc.</p>
-<p>Many pieces of microcopy are generic, in which case, you can follow convention. If you're not sure, however, we recommend that you plan how you write microcopy. Aim to keep in mind the message you want to communicate and who will read it. The following framework should help:</p>
-<table>
- <tbody>
- <tr>
-  <th style="text-align: right;" scope="row">Message for:</th>
-  <td>Who will read this?</td>
- </tr>
- <tr>
-  <th style="text-align: right;" scope="row">To tell them:</th>
-  <td>What do they need to know? What is your message?</td>
- </tr>
- <tr>
-  <th style="text-align: right;" scope="row">So they:</th>
-  <td>What should happen as a result?</td>
- </tr>
- <tr>
-  <th style="text-align: right;" scope="row">Displayed via:</th>
-  <td>Next to a page element? Permanent paragraph of text? Pop-up window? etc.</td>
- </tr>
- <tr>
-  <th style="text-align: right;" scope="row">When:</th>
-  <td>Does something trigger the display of this text?</td>
- </tr>
- <tr>
-  <th style="text-align: right;" scope="row">Tone:</th>
-  <td>Imagine you are addressing a colleague. Be clear but jargon-free.</td>
- </tr>
- </tbody>
-</table>
-<p class="mute"><em>Based on the Intercom microcopy framework, via @destraynor</em></p>
+                <p>Guidance for writing content for web pages, considering tone, audience, message, strucutre. The text we write is called "copy" and comes in three main types:</p>
+                <ul>
+                 <li><a href="#macrocopy">Macro copy</a> - paragraphs of text on pages</li>
+                 <li><a href="#microcopy">Micro copy</a> - small areas of text that you find on a user interface or in messages</li>
+                 <li><a href="#metacopy">Meta copy</a> - the content of meta tags in pages: keywords and description</li>
+                </ul>
+                <h2><a name="macrocopy" id="macrocopy"></a>Macro copy</h2>
+                <p>Macro copy, sometimes called body copy, means paragraphs of text on pages, e.g. documentation, descriptions, news articles, etc. We've found that you can get great results by following Caroline Jarretts principles from <a href="http://www.editingthatworks.com/">Editing That Works</a>:</p>
+                <ol>
+                 <li>Understand context of use</li>
+                 <li>Choose what to say</li>
+                 <li>Slash everything else</li>
+                 <li>Edit sentences</li>
+                 <li>Put into logical order</li>
+                 <li>Demolish walls of words</li>
+                 <li>Choose links</li>
+                 <li>Check consistency</li>
+                 <li>Rest it then test it</li>
+                </ol>
+                <p>Caroline recommends <a href="http://www.editingthatworks.com/principles.htm">using the principles as a process</a>, from 1 to 9. If you'd like to learn more about how to write and edit text, we recommend the one-day EMBL course, Writing for the Web, taught by Caroline Jarrett. You can find <a href="https://intranet.embl.de/hr/training_development/index.html">details of the course on the EMBL website</a>.</p>
+                <h2><a name="microcopy" id="microcopy"></a>Micro copy</h2>
+                <p>Micro copy is small areas of text that you find on a user interface or in messages. For example, the labels for form inputs; explanatory text; progress or error messages. This text is frequently written by you, the developer who creates the interface, and it is important that it successfully communicates to the user.</p>
+                <h3>Using a microcopy framework</h3>
+                <p>Micro copy small pieces of text in a user interface; help, error or status messages, etc.</p>
+                <p>Many pieces of microcopy are generic, in which case, you can follow convention. If you're not sure, however, we recommend that you plan how you write microcopy. Aim to keep in mind the message you want to communicate and who will read it. The following framework should help:</p>
+                <table>
+                 <tbody>
+                 <tr>
+                  <th style="text-align: right;" scope="row">Message for:</th>
+                  <td>Who will read this?</td>
+                 </tr>
+                 <tr>
+                  <th style="text-align: right;" scope="row">To tell them:</th>
+                  <td>What do they need to know? What is your message?</td>
+                 </tr>
+                 <tr>
+                  <th style="text-align: right;" scope="row">So they:</th>
+                  <td>What should happen as a result?</td>
+                 </tr>
+                 <tr>
+                  <th style="text-align: right;" scope="row">Displayed via:</th>
+                  <td>Next to a page element? Permanent paragraph of text? Pop-up window? etc.</td>
+                 </tr>
+                 <tr>
+                  <th style="text-align: right;" scope="row">When:</th>
+                  <td>Does something trigger the display of this text?</td>
+                 </tr>
+                 <tr>
+                  <th style="text-align: right;" scope="row">Tone:</th>
+                  <td>Imagine you are addressing a colleague. Be clear but jargon-free.</td>
+                 </tr>
+                 </tbody>
+                </table>
+                <p class="mute"><em>Based on the Intercom microcopy framework, via @destraynor</em></p>
               </section>
                   
               <section id="browser-compatibility" data-magellan-target="browser-compatibility">
                 <h2>Browser compatibility</h2>
                   
-                  <h2><a name="metacopy" id="metacopy"></a>Meta copy</h2>
-                    <p>Meta copy is the content of meta tags in a page - keywords and description. Ideally, words from your meta copy should be repeated in the macro copy of your page. Apart from being clear, this may help the page ranking in search engines.</p>
-                    <h3>Keywords</h3>
-                    <p>Think of these as tags that help to categorise the content of a page. Ten or 12 is probably a good maximum number to have.</p>
-                    <h3>Description</h3>
-                    <p>Keep it brief - just describe what this page is about.</p>
-                  
-                    <h3>EBI Content review meta tags</h3>
-                    EMBL-EBI uses several special meta tags to help ensure content can owners can be updated, and that content is up to date.
-                  
-                    <code class="block">
-                        &lt;meta name=&quot;ebi-owner&quot; content=&quot;John Doe&quot;&gt; &lt;!-- Who should be contacted about changes --&gt; 
-                        <br/>
-                        &lt;meta name=&quot;ebi-review-cycle&quot; content=&quot;30&quot;&gt; &lt;!-- In days, how often should the content be reviewed --&gt; 
-                        <br/>
-                        &lt;meta name=&quot;ebi-last-review&quot; content=&quot;2015-12-20&quot;&gt; &lt;!-- The last time the content was reviewed --&gt;
-                        <br/>
-                        &lt;meta name=&quot;ebi-expiry&quot; content=&quot;2016-01-20&quot;&gt; &lt;!-- When this conent is no longer relevant --&gt; 
-                  
-                  </code>
+                <h2><a name="metacopy" id="metacopy"></a>Meta copy</h2>
+                  <p>Meta copy is the content of meta tags in a page - keywords and description. Ideally, words from your meta copy should be repeated in the macro copy of your page. Apart from being clear, this may help the page ranking in search engines.</p>
+                  <h3>Keywords</h3>
+                  <p>Think of these as tags that help to categorise the content of a page. Ten or 12 is probably a good maximum number to have.</p>
+                  <h3>Description</h3>
+                  <p>Keep it brief - just describe what this page is about.</p>
+                
+                  <h3>EBI Content review meta tags</h3>
+                  EMBL-EBI uses several special meta tags to help ensure content can owners can be updated, and that content is up to date.
+                
+                  <code class="block">
+                      &lt;meta name=&quot;ebi-owner&quot; content=&quot;John Doe&quot;&gt; &lt;!-- Who should be contacted about changes --&gt; 
+                      <br/>
+                      &lt;meta name=&quot;ebi-review-cycle&quot; content=&quot;30&quot;&gt; &lt;!-- In days, how often should the content be reviewed --&gt; 
+                      <br/>
+                      &lt;meta name=&quot;ebi-last-review&quot; content=&quot;2015-12-20&quot;&gt; &lt;!-- The last time the content was reviewed --&gt;
+                      <br/>
+                      &lt;meta name=&quot;ebi-expiry&quot; content=&quot;2016-01-20&quot;&gt; &lt;!-- When this conent is no longer relevant --&gt; 
+                
+                </code>
 
               </section>
 
@@ -1020,44 +1045,54 @@
 
               </section>
 
-            </div>
+          </div>
 
-            <div class="medium-3 columns sidebar">
 
-              <!-- local-search -->
-              <!-- if you do not have a local-search, delete the following form -->
-              <form id="local-search" name="local-search" action="[search-action]" method="post">
-                <h4>Search this project</h4>
-                <fieldset>
-                  <input type="text" name="first" id="local-searchbox">
-                  <input type="submit" name="submit" value="1" class="button icon icon-functional">
-                  <small class="">
-                    <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search -->
-                    <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>
-                    |
-                    <!-- Include some example searchterms - keep them short and few. -->
-                    <a href="#" data-toggle="search-example-dropdown">See a few examples</a>
-                  </small>
-                  <div class="dropdown-pane" id="search-example-dropdown" data-dropdown data-options="hoverPane:true;" data-hover="true">
-                    <ul>
-                      <li><a href="[search-url-1]">[search-text-1]</a></li>
-                      <li><a href="[search-url-1]">[search-text-2]</a></li>
-                      <li><a href="[search-url-1]">[search-text-3]</a></li>
-                    </ul>
-                  </div>
-                  <!-- if you're not using the JS addons
-                  Examples:
+
+           </div>
+
+
+          </div>
+
+          <div class="medium-3 columns sidebar">
+            <!-- local-search -->
+            <!-- if you do not have a local-search, delete the following form -->
+            <form id="local-search" name="local-search" action="[search-action]" method="post">
+              <h4>Search this project</h4>
+              <fieldset>
+                <input type="text" name="first" id="local-searchbox">
+                <input type="submit" name="submit" value="1" class="button icon icon-functional">
+                <small class="">
+                  <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search -->
+                  <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>
+                  |
+                  <!-- Include some example searchterms - keep them short and few. -->
+                  <a href="#" data-toggle="search-example-dropdown">See a few examples</a>
+                </small>
+                <div class="dropdown-pane" id="search-example-dropdown" data-dropdown data-options="hoverPane:true;" data-hover="true">
                   <ul>
                     <li><a href="[search-url-1]">[search-text-1]</a></li>
                     <li><a href="[search-url-1]">[search-text-2]</a></li>
                     <li><a href="[search-url-1]">[search-text-3]</a></li>
                   </ul>
-                  -->
-                </fieldset>
-              </form>
-              <!-- /local-search -->
+                </div>
+                <!-- if you're not using the JS addons
+                Examples:
+                <ul>
+                  <li><a href="[search-url-1]">[search-text-1]</a></li>
+                  <li><a href="[search-url-1]">[search-text-2]</a></li>
+                  <li><a href="[search-url-1]">[search-text-3]</a></li>
+                </ul>
+                -->
+              </fieldset>
+            </form>
+            <!-- /local-search -->
+          </div>
 
-            </div>
+        </div>
+
+        <div class="row">
+
 
           </div>
 
