@@ -17,15 +17,26 @@ In all, an evolutionary step of the current EMBL-EBI web compliance kit, this pr
 - Update visual assets to make use of contemporary web browser features for:
   - More consistency with print visual language
   - Enhanced mobile support
+- Content first approach: create a content toolkit to help teams understand how to structure content
+  - Templated layouts, such as BBC’s Gel http://www.bbc.co.uk/gel/web/foundations/universal-grid/columns
+  - Customizable widths/fixed/fluid/max
 - Page lifecycle tracking: An improved meta-tag based model for maintaining and tracking content freshness, ownership, and intent
 - Faster development: style guide and pattern library to help accelerate development and understanding
 - Regular updates: A versioning system for the framework to help track changes, features, and usage
 - Collaboration: A more collaborative code base (such as hosting on GitHub) to offer a better path for code collaboration and integration
 
+## Considerations
+A short list of concerns that need to be kept in mind during the dev process.
+
+- Handling non text-centric web applications/services: need to ensure that audience is considered/brought into fold
+  - Design pattern library/kitchen sink is potential mitigation 
+
 View /html/demo/index.html for more information and living style guide.
 
 ## Roadmap
+- v1.2: Guidance and templates for wide-screen content engagements
 - v1.5: Add animation guidance and tooling; https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a
+- v1.9: Possible switch to use SASS for better customisation and performance optimisation
 
 ## Changelog
 2016-01-14
