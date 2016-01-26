@@ -1,242 +1,243 @@
 @font-face {
-	font-family: 'EBI-Generic';
-	src:url('fonts/EBI-Generic.eot');
-	src:url('fonts/EBI-Generic.eot?#iefix') format('embedded-opentype'),
-		url('fonts/EBI-Generic.woff') format('woff'),
-		url('fonts/EBI-Generic.ttf') format('truetype'),
-		url('fonts/EBI-Generic.svg#EBI-Generic') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'EBI-Generic';
+    src:    url('fonts/EBI-Generic.eot?s86cno');
+    src:    url('fonts/EBI-Generic.eot?s86cno#iefix') format('embedded-opentype'),
+        url('fonts/EBI-Generic.ttf?s86cno') format('truetype'),
+        url('fonts/EBI-Generic.woff?s86cno') format('woff'),
+        url('fonts/EBI-Generic.svg?s86cno#EBI-Generic') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-	font-family: 'EBI-Generic';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'EBI-Generic' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    
+    /* Enable Ligatures ================ */
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"]:before {
-*/
-.icon-camera:before, .icon-steps:before, .icon-databaseCROSSLINK:before, .icon-alert:before, .icon-graph:before, .icon-externalsystems:before, .icon-loveDATA:before, .icon-publication:before, .icon-support:before, .icon-TOPLEVEL_Services2:before, .icon-TOPLEVEL_Research2:before, .icon-TOPLEVEL_Openday2:before, .icon-TOPLEVEL_Industry2:before, .icon-TOPLEVEL_Elixir2:before, .icon-TOPLEVEL_Careers2:before, .icon-videos:before, .icon-unreviewedDATA2:before, .icon-tutorial:before, .icon-travel_train2:before, .icon-TRAVEL_by_plane:before, .icon-Travel_by_Foot:before, .icon-Travel_by_car:before, .icon-TRAVEL_by_bus:before, .icon-TRAVEL_by_bike:before, .icon-train_online:before, .icon-toolKIT:before, .icon-text-mining:before, .icon-terms_and_conditions:before, .icon-systems:before, .icon-reviewedDATA2:before, .icon-resource:before, .icon-piechart:before, .icon-OpendayV2:before, .icon-nutraceuticals:before, .icon-news:before, .icon-newcomers:before, .icon-New:before, .icon-mobiledevice:before, .icon-meetus:before, .icon-mailing-list:before, .icon-location:before, .icon-link:before, .icon-info:before, .icon-industry:before, .icon-help:before, .icon-health:before, .icon-GTLs:before, .icon-funding2:before, .icon-findUS:before, .icon-Face_to_Face:before, .icon-external_link:before, .icon-email:before, .icon-Elixir:before, .icon-drug:before, .icon-documentation:before, .icon-discuss:before, .icon-database:before, .icon-contact:before, .icon-calanderEVENT:before, .icon-biotechDRUG:before, .icon-Beta:before, .icon-basket:before, .icon-announcement:before, .icon-alumni:before, .icon-accommodation:before, .icon-EMBL_EBI_hex_black:before, .icon-home:before, .icon-clock:before, .icon-groupTEAM:before {
-	font-family: 'EBI-Generic';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-.icon-camera:before {
-	content: "\21";
-}
-.icon-steps:before {
-	content: "\23";
-}
-.icon-databaseCROSSLINK:before {
-	content: "\64";
+.icon-accommodation:before {
+    content: "\61";
 }
 .icon-alert:before {
-	content: "\6c";
-}
-.icon-graph:before {
-	content: "\67";
-}
-.icon-externalsystems:before {
-	content: "\79";
-}
-.icon-loveDATA:before {
-	content: "\6f";
-}
-.icon-publication:before {
-	content: "\50";
-}
-.icon-support:before {
-	content: "\73";
-}
-.icon-TOPLEVEL_Services2:before {
-	content: "\28";
-}
-.icon-TOPLEVEL_Research2:before {
-	content: "\29";
-}
-.icon-TOPLEVEL_Openday2:before {
-	content: "\2a";
-}
-.icon-TOPLEVEL_Industry2:before {
-	content: "\2d";
-}
-.icon-TOPLEVEL_Elixir2:before {
-	content: "\25";
-}
-.icon-TOPLEVEL_Careers2:before {
-	content: "\63";
-}
-.icon-videos:before {
-	content: "\56";
-}
-.icon-unreviewedDATA2:before {
-	content: "\51";
-}
-.icon-tutorial:before {
-	content: "\74";
-}
-.icon-travel_train2:before {
-	content: "\37";
-}
-.icon-TRAVEL_by_plane:before {
-	content: "\34";
-}
-.icon-Travel_by_Foot:before {
-	content: "\36";
-}
-.icon-Travel_by_car:before {
-	content: "\32";
-}
-.icon-TRAVEL_by_bus:before {
-	content: "\31";
-}
-.icon-TRAVEL_by_bike:before {
-	content: "\33";
-}
-.icon-train_online:before {
-	content: "\54";
-}
-.icon-toolKIT:before {
-	content: "\3a";
-}
-.icon-text-mining:before {
-	content: "\58";
-}
-.icon-terms_and_conditions:before {
-	content: "\27";
-}
-.icon-systems:before {
-	content: "\53";
-}
-.icon-reviewedDATA2:before {
-	content: "\71";
-}
-.icon-resource:before {
-	content: "\52";
-}
-.icon-piechart:before {
-	content: "\70";
-}
-.icon-OpendayV2:before {
-	content: "\4f";
-}
-.icon-nutraceuticals:before {
-	content: "\22";
-}
-.icon-news:before {
-	content: "\4e";
-}
-.icon-newcomers:before {
-	content: "\6e";
-}
-.icon-New:before {
-	content: "\3c";
-}
-.icon-mobiledevice:before {
-	content: "\2f";
-}
-.icon-meetus:before {
-	content: "\4d";
-}
-.icon-mailing-list:before {
-	content: "\6d";
-}
-.icon-location:before {
-	content: "\5b";
-}
-.icon-link:before {
-	content: "\4c";
-}
-.icon-info:before {
-	content: "\69";
-}
-.icon-industry:before {
-	content: "\49";
-}
-.icon-help:before {
-	content: "\3f";
-}
-.icon-health:before {
-	content: "\68";
-}
-.icon-GTLs:before {
-	content: "\47";
-}
-.icon-funding2:before {
-	content: "\46";
-}
-.icon-findUS:before {
-	content: "\5d";
-}
-.icon-Face_to_Face:before {
-	content: "\66";
-}
-.icon-external_link:before {
-	content: "\78";
-}
-.icon-email:before {
-	content: "\45";
-}
-.icon-Elixir:before {
-	content: "\65";
-}
-.icon-drug:before {
-	content: "\75";
-}
-.icon-documentation:before {
-	content: "\3b";
-}
-.icon-discuss:before {
-	content: "\5c";
-}
-.icon-database:before {
-	content: "\44";
-}
-.icon-contact:before {
-	content: "\43";
-}
-.icon-calanderEVENT:before {
-	content: "\72";
-}
-.icon-biotechDRUG:before {
-	content: "\42";
-}
-.icon-Beta:before {
-	content: "\3e";
-}
-.icon-basket:before {
-	content: "\62";
-}
-.icon-announcement:before {
-	content: "\55";
+    content: "\6c";
 }
 .icon-alumni:before {
-	content: "\41";
+    content: "\41";
 }
-.icon-accommodation:before {
-	content: "\61";
+.icon-announcement:before {
+    content: "\55";
 }
-.icon-EMBL_EBI_hex_black:before {
-	content: "\26";
+.icon-basket:before {
+    content: "\62";
 }
-.icon-home:before {
-	content: "\48";
+.icon-beta:before {
+    content: "\3e";
+}
+.icon-bike:before {
+    content: "\33";
+}
+.icon-biotech:before {
+    content: "\42";
+}
+.icon-bus:before {
+    content: "\31";
+}
+.icon-calendar:before {
+    content: "\72";
+}
+.icon-camera:before {
+    content: "\21";
+}
+.icon-car:before {
+    content: "\32";
+}
+.icon-careers:before {
+    content: "\63";
+}
+.icon-classification:before {
+    content: "\65";
 }
 .icon-clock:before {
-	content: "\7b";
+    content: "\7b";
 }
-.icon-groupTEAM:before {
-	content: "\7d";
+.icon-contact:before {
+    content: "\43";
 }
+.icon-crosslink:before {
+    content: "\64";
+}
+.icon-database:before {
+    content: "\44";
+}
+.icon-discuss:before {
+    content: "\5c";
+}
+.icon-documentation:before {
+    content: "\3b";
+}
+.icon-drug:before {
+    content: "\75";
+}
+.icon-elixir:before {
+    content: "\25";
+}
+.icon-email:before {
+    content: "\45";
+}
+.icon-embl:before {
+    content: "\26";
+}
+.icon-external-link:before {
+    content: "\78";
+}
+.icon-external-systems:before {
+    content: "\79";
+}
+.icon-face-to-face:before {
+    content: "\66";
+}
+.icon-find-us:before {
+    content: "\5d";
+}
+.icon-funding:before {
+    content: "\46";
+}
+.icon-graph:before {
+    content: "\67";
+}
+.icon-group:before {
+    content: "\7d";
+}
+.icon-gtls:before {
+    content: "\47";
+}
+.icon-health:before {
+    content: "\68";
+}
+.icon-help:before {
+    content: "\3f";
+}
+.icon-home:before {
+    content: "\48";
+}
+.icon-industry:before {
+    content: "\49";
+}
+.icon-info:before {
+    content: "\69";
+}
+.icon-link:before {
+    content: "\4c";
+}
+.icon-location:before {
+    content: "\5b";
+}
+.icon-lovedata:before {
+    content: "\6f";
+}
+.icon-mailing-list:before {
+    content: "\6d";
+}
+.icon-math:before {
+    content: "\76";
+}
+.icon-meet-us:before {
+    content: "\4d";
+}
+.icon-mobile-device:before {
+    content: "\2f";
+}
+.icon-new:before {
+    content: "\3c";
+}
+.icon-newcomers:before {
+    content: "\6e";
+}
+.icon-news:before {
+    content: "\4e";
+}
+.icon-nutraceuticals:before {
+    content: "\22";
+}
+.icon-open-day:before {
+    content: "\4f";
+}
+.icon-piechart:before {
+    content: "\70";
+}
+.icon-plane:before {
+    content: "\34";
+}
+.icon-publication:before {
+    content: "\50";
+}
+.icon-research:before {
+    content: "\29";
+}
+.icon-resource:before {
+    content: "\52";
+}
+.icon-reviewed-data:before {
+    content: "\71";
+}
+.icon-services:before {
+    content: "\28";
+}
+.icon-steps:before {
+    content: "\23";
+}
+.icon-support:before {
+    content: "\73";
+}
+.icon-systems:before {
+    content: "\53";
+}
+.icon-terms:before {
+    content: "\27";
+}
+.icon-test:before {
+    content: "\30";
+}
+.icon-text-mining:before {
+    content: "\58";
+}
+.icon-toolkit:before {
+    content: "\3a";
+}
+.icon-train:before {
+    content: "\37";
+}
+.icon-training:before {
+    content: "\54";
+}
+.icon-tutorial:before {
+    content: "\74";
+}
+.icon-unreviewed-data:before {
+    content: "\51";
+}
+.icon-video:before {
+    content: "\56";
+}
+.icon-walk:before {
+    content: "\36";
+}
+

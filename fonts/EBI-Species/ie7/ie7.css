@@ -1,141 +1,145 @@
-.icon-barley {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x35;');
-}
-.icon-rice {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x36;');
-}
-.icon-anolis {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x37;');
-}
-.icon-monodelphis {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x39;');
-}
-.icon-papio {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x38;');
+.icon-alpaca {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x61;');
 }
 .icon-amoeba {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x30;');
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x30;');
 }
-.icon-mosquito {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x31;');
-}
-.icon-diatom {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x32;');
-}
-.icon-kangaroorat {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x33;');
-}
-.icon-louse {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x34;');
-}
-.icon-rabbit {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x74;');
-}
-.icon-worm {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x57;');
-}
-.icon-zebrafish {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x5a;');
-}
-.icon-yeast {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x59;');
-}
-.icon-spider {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x53;');
-}
-.icon-scorpion {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x73;');
-}
-.icon-rat {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x52;');
-}
-.icon-plant {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x50;');
-}
-.icon-pig {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x70;');
-}
-.icon-mouse {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4d;');
-}
-.icon-monkey {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x72;');
-}
-.icon-human {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x48;');
-}
-.icon-horse {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x68;');
-}
-.icon-fungus {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x75;');
-}
-.icon-frog {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x66;');
-}
-.icon-fly {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x46;');
-}
-.icon-dog {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x64;');
-}
-.icon-cow {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x43;');
-}
-.icon-corn {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x63;');
-}
-.icon-chicken {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6b;');
-}
-.icon-cat {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x41;');
-}
-.icon-bug {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x62;');
-}
-.icon-virus {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x76;');
-}
-.icon-pufferfish {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x45;');
-}
-.icon-hedgehog {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6f;');
-}
-.icon-guineapig {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x67;');
-}
-.icon-gorilla {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x47;');
-}
-.icon-bird {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6e;');
-}
-.icon-elephant {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x65;');
-}
-.icon-dolphin {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x44;');
+.icon-anolis {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x37;');
 }
 .icon-armadillo {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6c;');
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6c;');
 }
-.icon-alpaca {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x61;');
-}
-.icon-wallaby {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x77;');
-}
-.icon-platypus {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x55;');
-}
-.icon-chimpanzee {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x69;');
+.icon-barley {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x35;');
 }
 .icon-brassica {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x42;');
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x42;');
+}
+.icon-bug {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x62;');
+}
+.icon-cat {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x41;');
+}
+.icon-chicken {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6b;');
+}
+.icon-chimpanzee {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x69;');
+}
+.icon-corn {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x63;');
+}
+.icon-cow {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x43;');
+}
+.icon-diatom {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x32;');
+}
+.icon-dog {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x64;');
+}
+.icon-dolphin {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x44;');
 }
 .icon-ecoli {
-	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4c;');
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4c;');
 }
+.icon-elephant {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x65;');
+}
+.icon-finch {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6e;');
+}
+.icon-fly {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x46;');
+}
+.icon-frog {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x66;');
+}
+.icon-fungus {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x75;');
+}
+.icon-gorilla {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x47;');
+}
+.icon-guinea-pig {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x67;');
+}
+.icon-hedgehog {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6f;');
+}
+.icon-horse {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x68;');
+}
+.icon-human {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x48;');
+}
+.icon-kangaroo-rat {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x33;');
+}
+.icon-louse {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x34;');
+}
+.icon-monkey {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x72;');
+}
+.icon-monodelphis {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x39;');
+}
+.icon-mosquito {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x31;');
+}
+.icon-mouse {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4d;');
+}
+.icon-papio {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x38;');
+}
+.icon-pig {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x70;');
+}
+.icon-plant {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x50;');
+}
+.icon-platypus {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x55;');
+}
+.icon-pufferfish {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x45;');
+}
+.icon-rabbit {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x74;');
+}
+.icon-rat {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x52;');
+}
+.icon-rice {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x36;');
+}
+.icon-scorpion {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x73;');
+}
+.icon-sheep {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x78;');
+}
+.icon-spider {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x53;');
+}
+.icon-virus {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x76;');
+}
+.icon-wallaby {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x77;');
+}
+.icon-worm {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x57;');
+}
+.icon-yeast {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe900;');
+}
+.icon-zebrafish {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x5a;');
+}
+

@@ -1,0 +1,178 @@
+.icon-add {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2b;');
+}
+.icon-add-job {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x29;');
+}
+.icon-add-user {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x37;');
+}
+.icon-align {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x69;');
+}
+.icon-analyse {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x41;');
+}
+.icon-analyse-graph {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x7a;');
+}
+.icon-approve {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2f;');
+}
+.icon-approved-job {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x28;');
+}
+.icon-attach {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x61;');
+}
+.icon-browse {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x62;');
+}
+.icon-close {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x78;');
+}
+.icon-collapse {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x77;');
+}
+.icon-collapse-closed {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x39;');
+}
+.icon-collapse-open {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x38;');
+}
+.icon-compare {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4f;');
+}
+.icon-crop {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x5c;');
+}
+.icon-cut {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x63;');
+}
+.icon-database-submit {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x44;');
+}
+.icon-delete {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x64;');
+}
+.icon-download {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x3d;');
+}
+.icon-edit {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x65;');
+}
+.icon-edit-user {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x35;');
+}
+.icon-expand {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x75;');
+}
+.icon-filter {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x66;');
+}
+.icon-first-page {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x5b;');
+}
+.icon-fullscreen {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x46;');
+}
+.icon-hierarchy {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x68;');
+}
+.icon-last-page {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x5d;');
+}
+.icon-like {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6b;');
+}
+.icon-lock {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4c;');
+}
+.icon-login {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6c;');
+}
+.icon-mapping {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x30;');
+}
+.icon-menu {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4d;');
+}
+.icon-move {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6d;');
+}
+.icon-next-page {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x3e;');
+}
+.icon-play {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x76;');
+}
+.icon-previous-page {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x3c;');
+}
+.icon-print {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x50;');
+}
+.icon-redo {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x7d;');
+}
+.icon-refresh {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x52;');
+}
+.icon-remove {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2d;');
+}
+.icon-remove-user {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x36;');
+}
+.icon-save {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x53;');
+}
+.icon-scaleable {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x59;');
+}
+.icon-search {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x31;');
+}
+.icon-search-document {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6a;');
+}
+.icon-send {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6e;');
+}
+.icon-settings {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x73;');
+}
+.icon-share {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x72;');
+}
+.icon-stop {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6f;');
+}
+.icon-submit {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x5f;');
+}
+.icon-target {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x54;');
+}
+.icon-tool {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x74;');
+}
+.icon-unassigned-job {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x2a;');
+}
+.icon-undo {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x7c;');
+}
+.icon-unlock {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x55;');
+}
+.icon-view {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x34;');
+}
+.icon-zoom-in {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x33;');
+}
+.icon-zoom-out {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x32;');
+}
+

@@ -14,14 +14,14 @@
 	}
 	var icons = {
 		'icon-chemical': '&#x62;',
-		'icon-systems': '&#x79;',
-		'icon-expression': '&#x67;',
-		'icon-proteins': '&#x50;',
-		'icon-crossdomain': '&#x63;',
-		'icon-ontology': '&#x6f;',
-		'icon-literature': '&#x6c;',
+		'icon-cross-domain': '&#x63;',
 		'icon-dna': '&#x64;',
+		'icon-expression': '&#x67;',
+		'icon-literature': '&#x6c;',
+		'icon-ontology': '&#x6f;',
+		'icon-proteins': '&#x50;',
 		'icon-structures': '&#x73;',
+		'icon-systems': '&#x79;',
 		'0': 0
 		},
 		els = document.getElementsByTagName('*'),
