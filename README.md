@@ -35,6 +35,7 @@ View /html/demo/index.html for more information and living style guide.
 
 ## Roadmap
 - v1.2: Guidance and templates for wide-screen content engagements
+- v1.4: Unit testing
 - v1.5: Add animation guidance and tooling; https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a
 - v1.9: Possible switch to use SASS for better customisation and performance optimisation
 
