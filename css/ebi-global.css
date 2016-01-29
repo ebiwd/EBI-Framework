@@ -427,6 +427,8 @@ a:active {
     margin-right: 1rem;
   }
 
+/* mono-space fonts are fat */
+code { font-size: .95rem; }
 
 /* buttons */
 .button:focus,
