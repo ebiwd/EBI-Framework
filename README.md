@@ -1,5 +1,7 @@
 # EBI-Framework
 
+[View the demo] (http://khawkins98.github.io/EBI-Framework/)
+
 ## Version: 1.1-dev
 
 The current idea is to develop a framework drawing heavily off print styles and use the Foundation 6 framework. Basic support will not require jQuery (including basic responsive layouts) but will be enabled by default.
