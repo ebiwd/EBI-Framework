@@ -32,6 +32,11 @@ A short list of concerns that need to be kept in mind during the dev process.
 
 - Handling non text-centric web applications/services: need to ensure that audience is considered/brought into fold
   - Design pattern library/kitchen sink is potential mitigation 
+- There are generally several flavours of any visual tooling, a stronger pattern library would be helpful
+- Table functionality is generally very simple; it seems guidance could help push this forward
+- Mobile and widescreen support is generally weak throughout
+- Layouts are simple/weak/inconsistent; templates and samples would help
+
 
 View /html/demo/index.html for more information and living style guide.
 
