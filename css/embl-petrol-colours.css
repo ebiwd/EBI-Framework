@@ -28,7 +28,7 @@ a.special { background-color: #7cd17c; }
 }   
 .button:hover,
 .button:focus,
-.button:active { background: #207a7a; }
+.button:active { background: #207a7a; opacity: .9; }
 
 div#local-masthead { background-color: #70BDBD; }
 

@@ -33,6 +33,8 @@ a.special {
 }
 a.image,
 a.image:visited { border-bottom: 0 none; }
+a.button, a.button:link { color: #f8f8f8; }
+
 
 /* Colour - defaults to be reset by custom stylesheet
 ===================================================*/
