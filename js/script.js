@@ -401,6 +401,19 @@
       })
     });
 
+    // Responsive support for tables
+    // Clone the class from a parent TH to any child TD
+    jQuery('table.responsive-table').each( function() {
+      var columnsToAppend = jQuery(this).find('th');
+      console.log(columnsToAppend.length);
+      for (var i = 0; i < columnsToAppend.length; i++) {
+        if (jQuery(columnsToAppend[i]).attr('class')) {
+          var position = i + 1;
+          jQuery(this).find('td:nth-child('+position+')').addClass(jQuery(columnsToAppend[i]).attr('class'));
+        }
+      };
+    });
+
     // Smooth scroll anchor links for jQuery users
     $(function() {
       $('a[href*=#]:not([href=#])').click(function() {

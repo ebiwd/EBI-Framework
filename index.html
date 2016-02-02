@@ -222,7 +222,7 @@
             </div>
 
             <div class="row">
-              <div class="columns medium-2" data-sticky-container>
+              <div class="columns medium-3" data-sticky-container>
                 <div class="sticky" data-sticky data-sticky-on="large" data-margin-top="3.5" data-top-anchor="overview:top" data-btm-anchor="overview:bottom">
                   <ul class="menu vertical" data-magellan>
                     <li><a href="#overview">Overview</a></li>
@@ -834,7 +834,109 @@
 
               <section id="tables" data-magellan-target="tables">
                 <h2>Tables</h2>
-                <p>To come.</p>
+                <p>A table is a table, and sometimes, you just need to use a table.</p>
+
+                <p>The table styling is sane out of the biox, and if you add class <code>.hover</code>, your table rows will gently higlight on hover; like so:</p>
+
+                <table class="hover">
+                  <thead>
+                    <tr>
+                      <th width="200">Table Header</th>
+                      <th>Table Header</th>
+                      <th width="150">Table Header</th>
+                      <th width="150">Table Header</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Content Goes Here</td>
+                      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                      <td>Content Goes Here</td>
+                      <td>Content Goes Here</td>
+                    </tr>
+                    <tr>
+                      <td>Content Goes Here</td>
+                      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                      <td>Content Goes Here</td>
+                      <td>Content Goes Here</td>
+                    </tr>
+                    <tr>
+                      <td>Content Goes Here</td>
+                      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                      <td>Content Goes Here</td>
+                      <td>Content Goes Here</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h3>Responsive tables</h3>
+                <p>Tables are tricky to stretch and grow, and we suggest three approaches to tackle most issues. In increasing complexity:</p>
+
+                <ol>
+                  <li>If it's not broke, don't fix it: sometimes defaults do fine.</li>
+                  <li>Stack: If you add <code>.stack</code> the table cells will stack on smaller screens. See the example</li>
+                  <li>Responsive: You can also use the grid classes to specify witdth at corresponding sizes. See the example</li>
+
+                </ol>
+
+                <h4>Stacking table</h4>
+                <p>Squeeze your browser to see the effect of <code>.stack</code>.</p>
+
+                <table class="hover stack">
+                  <thead>
+                    <tr>
+                      <th width="200">Table Header</th>
+                      <th>Table Header</th>
+                      <th width="150">Table Header</th>
+                      <th width="150">Table Header</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Content Goes Here</td>
+                      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                      <td>Content Goes Here</td>
+                      <td>Content Goes Here</td>
+                    </tr>
+                    <tr>
+                      <td>Content Goes Here</td>
+                      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                      <td>Content Goes Here</td>
+                      <td>Content Goes Here</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h4>Responsive table</h4>
+                <p>You can use grid clases as well by giving the table <code>.responsive-table</code>.</p>
+
+                <p>Note that this requires jQuery, as it will propogate the <code>th</code> classes to each <code>td</code>.</p>
+
+                <table class="responsive-table">
+                  <thead>
+                    <tr>
+                      <th class="show-for-small-only">Compact</th>
+                      <th class="show-for-large-only">Shown for large</th>
+                      <th>Table Header</th>
+                      <th>Table Header</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Content Goes Here</td>
+                      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                      <td>Content Goes Here</td>
+                      <td>Content Goes Here</td>
+                    </tr>
+                    <tr>
+                      <td>Content Goes Here</td>
+                      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                      <td>Content Goes Here</td>
+                      <td>Content Goes Here</td>
+                    </tr>
+                  </tbody>
+                </table>
+
               </section>
 
               <section id="images" data-magellan-target="images">
