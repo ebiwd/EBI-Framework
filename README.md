@@ -1,6 +1,6 @@
 # EBI-Framework
 
-[View the demo] (http://khawkins98.github.io/EBI-Framework/)
+[View the demo and documentation] (http://khawkins98.github.io/EBI-Framework/)
 
 ## Version: 1.1-dev
 
@@ -36,6 +36,8 @@ A short list of concerns that need to be kept in mind during the dev process.
 - Table functionality is generally very simple; it seems guidance could help push this forward
 - Mobile and widescreen support is generally weak throughout
 - Layouts are simple/weak/inconsistent; templates and samples would help
+- Must be concious to supply enough vital documentation/patterns, but without recreating the Foundation documentation
+- Do we keep documentation as one long file, or split into multiple...
 
 
 View /html/demo/index.html for more information and living style guide.
