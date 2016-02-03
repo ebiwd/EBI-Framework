@@ -29,3 +29,8 @@ html.js fieldset.collapsed { height: 2em; }
 body.is-reveal-open { overflow: auto; } /* Allow scrolling */
 body.is-reveal-open #status-messages { top: 30% !important; position: fixed !important; } /* Scroll the messages with the use */
 .alert-box { margin-right: .5rem; } /* Space for close button */
+
+/* Sidebar menus aren't horizontal */
+.sidebar ul.menu ul.menu { padding-left: .75em; }
+.sidebar .menu > li { display: list-item; }
+.sidebar .menu > li > a { padding-left: .5em }
