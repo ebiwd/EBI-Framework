@@ -1,5 +1,7 @@
 # EBI-Framework
 
+[View the demo and documentation] (http://khawkins98.github.io/EBI-Framework/)
+
 ## Version: 1.1-dev
 
 The current idea is to develop a framework drawing heavily off print styles and use the Foundation 6 framework. Basic support will not require jQuery (including basic responsive layouts) but will be enabled by default.
@@ -30,8 +32,12 @@ A short list of concerns that need to be kept in mind during the dev process.
 
 - Handling non text-centric web applications/services: need to ensure that audience is considered/brought into fold
   - Design pattern library/kitchen sink is potential mitigation 
-
-View /html/demo/index.html for more information and living style guide.
+- There are generally several flavours of any visual tooling, a stronger pattern library would be helpful
+- Table functionality is generally very simple; it seems guidance could help push this forward
+- Mobile and widescreen support is generally weak throughout
+- Layouts are simple/weak/inconsistent; templates and samples would help
+- Must be concious to supply enough vital documentation/patterns, but without recreating the Foundation documentation
+- Do we keep documentation as one long file, or split into multiple...
 
 ## Roadmap
 - v1.2: Guidance and templates for wide-screen content engagements
