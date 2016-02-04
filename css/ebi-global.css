@@ -261,6 +261,22 @@ a:active {
   body .menu.dropdown.float-right > .has-submenu.is-down-arrow > a::after {
     border-color: #fff transparent transparent;
   }
+
+  /* extend Froundation utility selectors/classes */
+  .small { font-size: 80%; line-height: inherit; }
+  .code {
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    color: #0a0a0a;
+    background-color: #e6e6e6;
+    border: 1px solid #cacaca;
+    padding: 0.125rem 0.3125rem 0.0625rem; 
+  }
+  .kbd {
+    margin: 0;
+    color: #0a0a0a;
+    font-family: Consolas, "Liberation Mono", Courier, monospace; 
+  }
   
   /* ebi icon font in the local title */
   .hexagon {
