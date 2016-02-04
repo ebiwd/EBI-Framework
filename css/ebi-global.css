@@ -261,6 +261,54 @@ a:active {
   body .menu.dropdown.float-right > .has-submenu.is-down-arrow > a::after {
     border-color: #fff transparent transparent;
   }
+
+  /* List ...... leaders */
+  ul.leaders {
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none}
+  ul.leaders li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content:
+       ". . . . . . . . . . . . . . . . . . . . "
+       ". . . . . . . . . . . . . . . . . . . . "
+       ". . . . . . . . . . . . . . . . . . . . "
+       ". . . . . . . . . . . . . . . . . . . . ";
+  }
+  ul.leaders span:first-child {
+    padding-right: 0.33em;
+    background: white;
+  }
+  ul.leaders span + span {
+    float: right;
+    padding-left: 0.33em;
+    background: white;
+  }
+
+  /* List: icon bullets */
+  li.icon-bullet { list-style-type: none; text-indent: -1.3em; }
+
+
+
+
+  /* extend Froundation utility selectors/classes */
+  .small { font-size: 80%; line-height: inherit; }
+  .code {
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    color: #0a0a0a;
+    background-color: #e6e6e6;
+    border: 1px solid #cacaca;
+    padding: 0.125rem 0.3125rem 0.0625rem; 
+  }
+  .kbd {
+    margin: 0;
+    color: #0a0a0a;
+    font-family: Consolas, "Liberation Mono", Courier, monospace; 
+  }
   
   /* ebi icon font in the local title */
   .hexagon {
