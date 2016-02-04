@@ -35,7 +35,7 @@
 
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/css/ebi-global.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/ebi-global.css" type="text/css" media="all">
   <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/fonts/fonts.css" type="text/css" media="all">
   <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/libraries/foundation-6/css/foundation.css" type="text/css" media="all">
 
@@ -219,10 +219,54 @@
 
               </div>
 
+              <!-- If your page has a table of content, you might present it on mobile like so: -->
+              <div class="columns small-10 show-for-small-only small-centered" data-sticky-container>
+
+                <div class="sticky" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="overview:top" data-btm-anchor="content:bottom">
+                  <ul class="dropdown menu callout tiny" data-dropdown-menu>
+                    <li>
+                      <a href="#"><span class="icon icon-functional" data-icon="M"></span> Jump to a section: Framework contents</a>
+                      <ul class="menu">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#design-patterns">Design patterns</a></li>
+                        <ul class="inline">
+                          <li><a href="#navigation">Navigation</a></li>
+                          <li><a href="#menus">Menus</a></li>
+                          <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+                          <li><a href="#content">Content</a></li>
+                          <ul class="inline">
+                            <li><a href="#grid">Grid</a></li>
+                            <li><a href="#colour">Colour</a></li>
+                            <li><a href="#typography">Typography</a></li>
+                            <li><a href="#icons">Icons</a></li>
+                            <li><a href="#lists">Lists</a></li>
+                            <li><a href="#tables">Tables</a></li>
+                            <li><a href="#images">Images</a></li>
+                          </ul>
+                          <li><a href="#favicons">Favicons</a></li>
+                          <li><a href="#helper-classes">Helper classes</a></li>
+                        </ul>
+                        <li><a href="#writing">Writing</a></li>
+                        <li><a href="#metacopy">Metacopy</a></li>
+                        <li><a href="#browser-compatibility">Browser compatibility</a></li>
+                        <li><a href="#sitemap">Sitemap</a></li>
+                        <li><a href="#accesibility">Accesibility</a></li>
+                        <li><a href="#help">Help</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+
+
+
             </div>
 
             <div class="row">
-              <div class="columns medium-3" data-sticky-container>
+
+              <div class="columns medium-3 show-for-medium" data-sticky-container>
+
                 <div class="sticky" data-sticky data-sticky-on="large" data-margin-top="3.5" data-top-anchor="overview:top" data-btm-anchor="overview:bottom">
                   <ul class="menu vertical" data-magellan>
                     <li><a href="#overview">Overview</a></li>
@@ -255,7 +299,6 @@
                   </ul>
                 </div>
               </div>
-
 
 
           <div class="medium-9 columns serif sections">
@@ -641,7 +684,7 @@
                 <h3>Leaders list</h3>
                 Good for a table of statistics, or contents.
                 
-                <div class="callout columns small-11 small-centered">
+                <div class="callout columns">
                   <ul class="leaders serif"> 
                     <li>
                       <span>Sample row</span> 
@@ -701,7 +744,7 @@
                 <h3>No-bullet list</h3>
                 <p>Think bullets are for chumps? Use class <code>.no-bullet</code>.</p>
 
-                <div class="callout columns small-11 small-centered">
+                <div class="callout">
                   <ul class="no-bullet">
                     <li>List item with a much longer description or more content.</li>
                     <li>List item</li>
@@ -713,7 +756,7 @@
                 <h3>Definition list</h2>
                 <p>A definition list (<code>&lt;dl&gt;</code>) is used to display name-value pairs, like metadata or a dictionary definition. Each term (<code>&lt;dt&gt;</code>) is paired with one or more definitions (<code>&lt;dd&gt;</code>).</p>
                 
-                <div class="callout columns small-11 small-centered">
+                <div class="callout">
                   <dl>
                     <dt>Time</dt>
                     <dd>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.</dd>
@@ -727,7 +770,7 @@
                 <h3>Icon list</h2>
                 <p>Want to use the font icons as your "bullet"? Add the class <code>.icon-bullet</code> to your <code>&lt;li&gt;</code> and then insert the icon code at the start of list item.</p>
                 
-                <div class="callout columns small-11 small-centered">
+                <div class="callout">
                   <ul>
                     <li class="icon-bullet"><span class="icon icon-socialmedia" data-icon="X"></span> List item with a much longer description or more content because text is the way to go when doing a really long list item.</li>
                     <li>No icon</li>
@@ -736,6 +779,51 @@
                   </ul>
                 </div>
 
+                <h3>Horizontal list (AKA: pagers)</h2>
+                <p>Have items you want to show horizontall and a using the grid layout is too much, here are a few of techniques:</p>
+
+                <h4>Horizontal items</h4>
+                <p>Combine a <code>ul</code> with class <code>.inline</code>.</p>
+
+                <div class="callout sans-serif">
+                  <ul class="inline">
+                    <li><a href="#">Test item</a></li>
+                    <li><a href="#" class="active">Active item</a></li>
+                    <li><a href="#">Third item</a></li>
+                    <li><a href="#"><span class="icon icon-species" data-icon="D"></span> A dolphin!</a></li>
+                  </ul>
+                </div>
+
+                <h4>Badge</h4>
+                <p>Combine a <code>ul</code> with class <code>.inline</code>, then give your <code>li</code> a <code>.badge</code>.</p>
+
+                <p>We've also used <code>.lead</code> on the <code>ul</code> to bump up the size of the font.</p>
+
+                <div class="callout sans-serif">
+                  <ul class="inline lead">
+                    <li><a href="#" class="secondary badge">2</a></li>
+                    <li><a href="#" class="success badge">3</a></li>
+                    <li><a href="#" class="alert badge">A</a></li>
+                    <li><a href="#" class="warning badge"><span class="icon icon-species" data-icon="D"></span></a></li>
+                  </ul>
+                </div>
+
+                <h4>Pager</h4>
+
+
+                <div class="callout sans-serif">
+                  <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+                    <li class="pagination-previous disabled">Previous</li>
+                    <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+                    <li><a href="#" aria-label="Page 2">2</a></li>
+                    <li><a href="#" aria-label="Page 3">3</a></li>
+                    <li><a href="#" aria-label="Page 4">4</a></li>
+                    <li class="ellipsis"></li>
+                    <li><a href="#" aria-label="Page 12">12</a></li>
+                    <li><a href="#" aria-label="Page 13">13</a></li>
+                    <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+                  </ul>
+                </div>
 
               </section>
 
@@ -743,7 +831,7 @@
                 <h2>Tables</h2>
                 <p>A table is a table, and sometimes, you just need to use a table.</p>
 
-                <p>Base table stylin is simple using default, and if you add class <code>.hover</code>, your table rows will gently higlight on hover; like so:</p>
+                <p>Base table styling is simple using default, and if you add class <code>.hover</code>, your table rows will gently higlight on hover; like so:</p>
 
                 <table class="hover">
                   <thead>

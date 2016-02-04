@@ -23,6 +23,7 @@ a:visited {
   border-bottom-style: dotted;
   border-bottom-color: inherit;
 }
+a.active,
 a:hover,
 a:active { border-bottom-style: solid; }
 a.special {
@@ -31,6 +32,7 @@ a.special {
   border-bottom-width: 3px;
   padding: 0.1em 0.3em;
 }
+a:hover { opacity: .9; }
 a.image,
 a.image:visited { border-bottom: 0 none; }
 a.button, a.button:link { color: #f8f8f8; }
@@ -288,8 +290,18 @@ a:active {
     background: white;
   }
 
+  /* List: inline horizontal */
+  ul.inline li { display: inline-block; }
+
   /* List: icon bullets */
   li.icon-bullet { list-style-type: none; text-indent: -1.3em; }
+
+  /* Badge list */
+  ul li a.badge,
+  ul li.badge { font-size: inherit; }
+
+  /* Callout tiny */
+  .callout.tiny { padding: 0rem; }
 
 
 
