@@ -473,7 +473,6 @@ function hyphenate(str) {
     // var $eleDims = GetDimensions(element),
         $anchorDims = anchor ? GetDimensions(anchor) : null;
         // $anchorDims = anchor ? GetDimensions(anchor) : null;
-        console.log(position);
     switch(position){
       case 'top':
         return {
