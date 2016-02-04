@@ -38,6 +38,7 @@ A short list of concerns that need to be kept in mind during the dev process.
 - Layouts are simple/weak/inconsistent; templates and samples would help
 - Must be concious to supply enough vital documentation/patterns, but without recreating the Foundation documentation
 - Do we keep documentation as one long file, or split into multiple...
+- Presently sample code blocks are kept to a minimum to keep the document shorter and increase our flexibility -- as our audience is devs, we may not need code samples at all, as code source should suffice?
 
 ## Roadmap
 - v1.2: Guidance and templates for wide-screen content engagements
