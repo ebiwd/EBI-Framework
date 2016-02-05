@@ -77,7 +77,7 @@ a.special:active {
   }
 
 
-a:link { color: #A39100; }
+a:link {color: #222;}
 
 a:hover,
 a:focus,
@@ -110,7 +110,7 @@ h6 a:visited {
 
 
 /* Table heading cells */
-th { background-color: #FA8A00; }
+th { background-color: #FAB700; color: #fff; }
 
 
 /* Form submission button */
