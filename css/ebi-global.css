@@ -79,10 +79,24 @@ a:active {
   nav a:hover { border-bottom: none; }
 
   /* Global menu styling */
-  ul#global-nav {
-    padding-top: 10px;
-  }
   #local-masthead nav ul#global-nav.menu li { border-right: none; }
+
+  /* Mobile logo */
+  @media screen and (max-width: 40em) {
+    #local-masthead nav ul#global-nav.menu li#home { display: none; }
+    #local-masthead nav ul#global-nav.menu li#home-mobile a { 
+      display: block;
+      height: 50px;
+      width: 67px;
+      background-image: url("https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
+      background-size: 64px 47px;
+      background-repeat: no-repeat;
+      margin-left: 6px;
+    }
+  }
+  @media screen and (min-width: 40em) {
+    #local-masthead nav ul#global-nav.menu li#home-mobile { display: none; }
+  }
 
   #global-masthead ul#global-nav li a:hover,
   #global-masthead ul#global-nav li a:active,
@@ -148,8 +162,32 @@ a:active {
     color: #fff;
   }
 
-  /* make icon bar smaller for mobile */
+  /* Local masthead secondary links on mobile */
   @media screen and (max-width: 40em) {
+    #local-masthead ul.menu.dropdown.float-right {
+      clear: both;
+      position: relative;
+      height: 0;
+    }
+
+    #local-masthead ul.menu.dropdown.float-right > li {
+     margin-bottom: -50px; 
+    }
+
+    #local-masthead ul.menu.dropdown.float-right a {
+      color: #666;
+    }
+
+    body #local-masthead ul.menu.dropdown.float-right > .has-submenu.is-down-arrow > a::after {
+      border-color: #666 transparent transparent;
+    }
+
+    #local-masthead nav ul#global-nav.menu li { float: none; display: inline-block; }
+    #local-masthead nav ul#global-nav.menu li#home-mobile { float: left; }
+
+    ul#global-nav { text-align: right; }
+  
+    /* make icon bar smaller for mobile */
     ul#global-nav.menu > li > a > img, ul#global-nav.menu > li > a > i {
       display: block;
       margin: 0 auto 0.25rem;
@@ -160,6 +198,11 @@ a:active {
         text-align: center;
         font-size: 10px;
         padding: .6rem .35rem;
+    }
+  }
+  @media screen and (min-width: 40em) {
+    ul#global-nav {
+      padding-top: 10px;
     }
   }
 
