@@ -34,3 +34,9 @@ body.is-reveal-open #status-messages { top: 30% !important; position: fixed !imp
 .sidebar ul.menu ul.menu { padding-left: .75em; }
 .sidebar .menu > li { display: list-item; }
 .sidebar .menu > li > a { padding-left: .5em }
+
+/* Remove background gunk */
+div.warning {
+  background: none;
+  border: 1px solid rgba(10, 10, 10, 0.25);
+}
