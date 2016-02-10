@@ -255,10 +255,6 @@ a:active {
   #content {
     padding: 0.5rem 0 1.5rem;
   }
-/*
-  #local-masthead ul.breadcrumbs li { color: #fff; }
-  #local-masthead ul.breadcrumbs li.disabled { opacity: .7; }
-*/
   body.section-about #local-masthead {
     background: #60bdc4;
   }
@@ -345,8 +341,8 @@ a:active {
   /* Callout tiny */
   .callout.tiny { padding: 0rem; }
 
-
-
+  /* Breadcrumbs */
+  body .breadcrumbs a { color: #888; }
 
   /* extend Froundation utility selectors/classes */
   .small { font-size: 80%; line-height: inherit; }
