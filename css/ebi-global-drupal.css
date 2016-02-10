@@ -40,3 +40,6 @@ div.warning {
   background: none;
   border: 1px solid rgba(10, 10, 10, 0.25);
 }
+
+/* Do not show default page title on panel pages */
+body.page-node h2#page-title { display: none; }
