@@ -85,7 +85,7 @@ a:active { color: #A35900; }
 
 a.special { background-color: #FDBE72; }
 
-button,
+body button,
 .button {
     background-color: #FAB700;
     color: #f8f8f8;
