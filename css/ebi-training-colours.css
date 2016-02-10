@@ -85,6 +85,13 @@ a:active { color: #A35900; }
 
 a.special { background-color: #FDBE72; }
 
+.button {
+    background-color: #FAB700;
+    color: #f8f8f8;
+}
+.button:hover,
+.button:focus,
+.button:active { background: #FDBE72; opacity: .9; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 { color: #222222; }
