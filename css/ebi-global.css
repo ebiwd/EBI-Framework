@@ -539,7 +539,7 @@ code { font-size: .95rem; }
 .button:hover,
 .button.hover { background-color: rgba(255,255,255,.5);}
 
-button {
+body button {
   display: inline-block;
   text-align: center;
   line-height: 1;
