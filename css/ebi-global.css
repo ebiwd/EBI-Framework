@@ -35,7 +35,7 @@ a.special {
 a:hover { opacity: .9; }
 a.image,
 a.image:visited { border-bottom: 0 none; }
-a.button, a.button:link { color: #f8f8f8; }
+a.button, a.button:link, a.button:visited { color: #f8f8f8; }
 
 
 /* Colour - defaults to be reset by custom stylesheet
