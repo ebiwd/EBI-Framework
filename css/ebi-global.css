@@ -239,7 +239,7 @@ a:active {
   #local-masthead nav ul li a:active,
   #local-masthead ul li.active-trail a,
   #local-masthead ul li.active a:visited,
-  #local-masthead ul li.active-trail a:visited { background-color: rgba(255,255,255,1); color: #444; }
+  #local-masthead ul li.active-trail a:visited { background-color: rgba(255,255,255,1); color: #444;border-bottom: 0;}
 
   /* tweak sticky behaviour */
   div#local-masthead { width: 100%; position: static; }
