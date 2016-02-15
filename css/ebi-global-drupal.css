@@ -8,6 +8,22 @@
 .button-group li a.button.secondary:active,
 .button-group li a.button.secondary:hover { background: #333; color: #fff; }
 
+/* Form buttons */ 
+body .form-actions.form-wrapper button {
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 0.85em 1em;
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  }
+
 /* Misc */
 .label { background: none; }
 html.js fieldset.collapsed { height: 2em; }

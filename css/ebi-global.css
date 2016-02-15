@@ -535,22 +535,6 @@ code { font-size: .95rem; }
 .button:hover,
 .button.hover { background-color: rgba(255,255,255,.5);}
 
-body button {
-  display: inline-block;
-  text-align: center;
-  line-height: 1;
-  cursor: pointer;
-  -webkit-appearance: none;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  vertical-align: middle;
-  border: 1px solid transparent;
-  border-radius: 0;
-  padding: 0.85em 1em;
-  margin: 0 0 1rem 0;
-  font-size: 0.9rem;
-  background-color: #2199e8;
-  color: #fff; }
-
 /* icon to indicate link is a PDF file */
 a span.link-pdf { background: url(http://www.ebi.ac.uk/inc/images/icon_pdf.gif) right center no-repeat; padding: 0 18px 0 0; }
 h1 a span.link-pdf,
