@@ -164,19 +164,19 @@ a:active {
   /* Menu triangles */
   #local-masthead nav ul#secondary-menu-links.menu li a:hover:after,
   #local-masthead nav ul#global-nav.menu li a:hover:after, 
-  #local-masthead nav ul.dropdown.menu.float-left li a:hover:after { 
+  #local-masthead nav ul.dropdown.menu.float-left li a:hover:after {
     position: relative;
     content: '';
     width: 0;
     display: block;
     left: 50%;
-    top: 2px;
+    top: 7px;
     height: 0;
     bottom: 0;
-    margin: 0 -18px -9px -9px;
-    border-left: 9px solid transparent;
-    border-right: 9px solid transparent;
-    border-bottom: 9px solid #70BDBD;
+    margin: 0 -36px -4px -18px;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 5px solid #70BDBD;
     -moz-transform: scale(0.999);
     -webkit-backface-visibility: hidden;
   }
