@@ -123,6 +123,8 @@ h6 a:visited {
 /* Table heading cells */
 th { background-color: #FAB700; color: #fff; }
 
+/* Menu triangle indicators */
+#local-masthead nav ul#global-nav.menu li a:hover:after { border-bottom-color: #fab700; }
 
 /* Form submission button */
 form input.submit {   
