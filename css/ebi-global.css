@@ -162,6 +162,7 @@ a:active {
   }
 
   /* Menu triangles */
+  #local-masthead nav ul#secondary-menu-links.menu li a:hover:after,
   #local-masthead nav ul#global-nav.menu li a:hover:after, 
   #local-masthead nav ul.dropdown.menu.float-left li a:hover:after { 
     position: relative;
@@ -180,6 +181,8 @@ a:active {
     -webkit-backface-visibility: hidden;
   }
 
+
+  #local-masthead nav ul#secondary-menu-links.menu li a:hover:after,
   #local-masthead nav ul.dropdown.menu.float-left li a:hover:after { 
     border-bottom-color: #fff;
   }
