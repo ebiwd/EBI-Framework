@@ -16,7 +16,7 @@
 
 *** Primary Color:
 
-   var. 1 = #FAB700 = rgb(250,183,0)
+   var. 1 = rgb(233,180,0) = rgb(250,183,0)
    var. 2 = #BB962F = rgb(187,150,47)
    var. 3 = #A37700 = rgb(163,119,0)
    var. 4 = #FDCA3F = rgb(253,202,63)
@@ -60,20 +60,20 @@
 
 /* Links */
 a:link,
-a:visited { border-bottom-color: #FAB700; }
+a:visited { border-bottom-color: rgb(233,180,0); }
 
 a:hover,
 a:focus,
 a:active {
-  color: #FAB700;
-  border-bottom: 1px solid #FAB700;
+  color: rgb(233,180,0);
+  border-bottom: 1px solid rgb(233,180,0);
 }
 
 a.special:hover,
 a.special:focus,
 a.special:active {
-  color:#FAB700;
-  border-bottom: 3px double #FAB700;
+  color:rgb(233,180,0);
+  border-bottom: 3px double rgb(233,180,0);
   }
 
 
@@ -87,7 +87,7 @@ a.special { background-color: #FDBE72; }
 
 body button,
 .button {
-    background-color: #FAB700;
+    background-color: rgb(233,180,0);
     color: #f8f8f8;
 }
 button:hover,
@@ -100,7 +100,7 @@ button:active,
 /* Headings */
 h1, h2, h3, h4, h5, h6 { color: #222222; }
 
-h2 {color: #fab700;}
+h2 {color: rgb(233,180,0);}
 
 h3 { color: #444; }
 
@@ -116,26 +116,26 @@ h3 a:visited,
 h4 a:visited,
 h5 a:visited,
 h6 a:visited {
-  border-bottom-color: #FAB700;
+  border-bottom-color: rgb(233,180,0);
 }
 
 
 /* Table heading cells */
-th { background-color: #FAB700; color: #fff; }
+th { background-color: rgb(233,180,0); color: #fff; }
 
 /* Menu triangle indicators */
-#local-masthead nav ul#global-nav.menu li a:hover:after { border-bottom-color: #fab700; }
+#local-masthead nav ul#global-nav.menu li a:hover:after { border-bottom-color: rgb(233,180,0); }
 
 /* Form submission button */
 form input.submit {   
   border-color: #BB962F;
   
-  background-color: #FAB700;
-  background-image: -moz-linear-gradient(top, #FDCA3F, #FAB700); 
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #FDCA3F),color-stop(1, #FAB700)); 
-  background-image: -webkit-linear-gradient(#FDCA3F, #FAB700); 
-  background-image: linear-gradient(top, #FDCA3F, #FAB700);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#FDCA3F', EndColorStr='#FAB700'); 
+  background-color: rgb(233,180,0);
+  background-image: -moz-linear-gradient(top, #FDCA3F, rgb(233,180,0)); 
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #FDCA3F),color-stop(1, rgb(233,180,0))); 
+  background-image: -webkit-linear-gradient(#FDCA3F, rgb(233,180,0)); 
+  background-image: linear-gradient(top, #FDCA3F, rgb(233,180,0));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#FDCA3F', EndColorStr='rgb(233,180,0)'); 
   
   color: #f8f8f8;
   text-shadow: #145251 0 1px 1px;
@@ -145,16 +145,16 @@ form input.submit {
 
 form input.submit:hover,
 form input.submit:focus,
-form input.submit:active { background: #FAB700; }
+form input.submit:active { background: rgb(233,180,0); }
 
 
 /* Define the basic colour your local masthead */
-div#local-masthead { background-color: #fab700; }
+div#local-masthead { background-color: rgb(233,180,0); }
 
 
 /* Palette table cell color codes */
 
-.primary-1 { background-color: #FAB700; }
+.primary-1 { background-color: rgb(233,180,0); }
 .primary-2 { background-color: #BB962F; }
 .primary-3 { background-color: #A37700; }
 .primary-4 { background-color: #FDCA3F; }

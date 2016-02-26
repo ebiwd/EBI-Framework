@@ -139,7 +139,7 @@ a:active {
   #global-masthead ul li#training a:focus,
   #global-masthead ul li#training.active a,
   #global-masthead ul li#training.active-trail a {
-    background-color: #fab700;
+    background-color: rgb(233,180,0);
   }
 
   /* custom colour for About us */
