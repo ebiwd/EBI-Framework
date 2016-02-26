@@ -62,6 +62,48 @@ a:active {
   padding: 0 0.2em;
 }
 
+.ebi-background { background: rgb(0,124,130); }
+.services-background { background: rgb(2,100,105); }
+.research-background { background: rgb(168,200,19); }
+.training-background { background: rgb(233,180,0); }
+.industry-background { background: rgb(0,134,180); }
+.elixir-background { background: rgb(251,106,42); }
+
+.ebi-color { color: rgb(0,124,130); }
+.services-color { color: rgb(2,100,105); }
+.research-color { color: rgb(168,200,19); }
+.training-color { color: rgb(233,180,0); }
+.industry-color { color: rgb(0,134,180); }
+.elixir-color { color: rgb(251,106,42); }
+
+/* todo: map misc framework colours to ebi colours...
+
+.badge { background: #2199e8; }
+.badge.secondary { background: #777; }
+.badge.success { background: #3adb76; }
+.badge.alert { background: #ec5840; }
+.badge.warning { background: rgb(217,170,5); }
+.callout.primary { background-color: #def0fc; }
+.callout.secondary { background-color: #ebebeb; }
+.callout.success { background-color: #e1faea; }
+.callout.alert { background-color: #fce6e2; }
+.callout.warning { background-color: #fff3d9; }
+.label.secondary { background: #777; }
+.label.success { background: #3adb76; }
+.label.alert { background: #ec5840; }
+.label.warning { background: #ffae00; }
+.button.primary { background-color: #2199e8; }
+.button.primary:hover, .button.primary:focus { background-color: #147cc0; }
+.button.secondary { background-color: #777; }
+.button.secondary:hover, .button.secondary:focus { background-color: #5f5f5f; }
+.button.success { background-color: #3adb76; }
+.button.success:hover, .button.success:focus { background-color: #22bb5b; }
+.button.alert { background-color: #ec5840; }
+.button.alert:hover, .button.alert:focus { background-color: #da3116; }
+.button.warning { background-color: #ffae00; }
+.button.warning:hover, .button.warning:focus { background-color: #cc8b00; }*/
+
+
 
   /*
     SITE-WIDE MASTHEAD LAYOUT AND SIZE
@@ -112,7 +154,7 @@ a:active {
   #global-masthead ul li#home a:focus,
   #global-masthead ul li.active#home a,
   #global-masthead ul li.active-trail#home a {
-    background-color: #70BDBD;
+    background-color: rgb(0,124,130);
   }
 
   /* custom colour for Services */
@@ -121,7 +163,7 @@ a:active {
   #global-masthead ul li#services a:focus,
   #global-masthead ul li.active#services a,
   #global-masthead ul li.active-trail#services a {
-    background-color: #207a7a;
+    background-color: rgb(2,100,105);
   }
 
   /* custom colour for Research */
@@ -130,7 +172,7 @@ a:active {
   #global-masthead ul li#research a:focus,
   #global-masthead ul li#research.active a,
   #global-masthead ul li#research.active-trail a {
-    background-color: #71b360;
+    background-color: rgb(168,200,19);
   }
 
   /* custom colour for Training */
@@ -153,7 +195,7 @@ a:active {
   #global-masthead ul li#about-us a:focus,
   #global-masthead ul li#about-us.active a,
   #global-masthead ul li#about-us.active-trail a {
-    background-color: #207a7a;
+    background-color: rgb(2,100,105);
   }
 
   header .masthead {
@@ -176,7 +218,7 @@ a:active {
     margin: 0 -36px -4px -18px;
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
-    border-bottom: 5px solid #70BDBD;
+    border-bottom: 5px solid rgb(0,124,130);
     -moz-transform: scale(0.999);
     -webkit-backface-visibility: hidden;
   }
@@ -282,13 +324,13 @@ a:active {
     padding: 0.5rem 0 1.5rem;
   }
   body.section-about #local-masthead {
-    background: #60bdc4;
+    background: rgb(0,124,130);
   }
   body.section-industry #local-masthead {
-    background: #83a3c9;
+    background: rgb(0,134,180);
   }
   body.section-research #local-masthead {
-    background: #a8d793;
+    background: rgb(168,200,19);
   }
   body.section-research #local-title h1,
   body.section-research #local-title p,
@@ -296,10 +338,10 @@ a:active {
     color: #222;
   }
   body.section-services #local-masthead {
-    background: #60bdc4;
+    background: rgb(2,100,105);
   }
   body.section-training #local-masthead {
-    background: #f9e292;
+    background: rgb(233,180,0);
   }
   body.section-training #local-title h1,
   body.section-training #local-title p,
@@ -307,7 +349,7 @@ a:active {
     color: #222;
   }
   body.section-home #local-masthead {
-    background: #1d8086;
+    background: rgb(0,124,130);
   }
 
   /* tweak to foundation menu; hide submenu until rendered by JS */
