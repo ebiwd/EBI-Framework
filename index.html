@@ -397,14 +397,57 @@
 
               <section id="colour" data-magellan-target="colour">
                 <h2>Colour</h2>
-                A consistent approach to using colour way is another way in which we can achieve a consistent EBI "look". You can use a standard reday-made colour palette that we provide or some projects may want to use a custom palette.
+                <p>A consistent approach to using colour way is another way in which we can achieve a consistent EBI "look". You can use a standard reday-made colour palette that we provide or some projects may want to use a custom palette.</p>
 
-                In either case, the way that that palette is constructed and the way in which each colour from that palette is used will be the same for everyone.
+                <p>We provide these basic colour palettes that will be of use for many projects:</p>
 
-                If you are working on a service or a tool that exists in the "Services" area of the EBI website, your project web pages will automatically inherit the relevant colour stylesheet, and this will decide your palette. Similarly, content for the other sections of the website will always inherit colours from the main stylesheet.
+                <p>
+                <div class="row small-up-1 medium-up-2 large-up-3">
+                  <div class="column ebi-background white-color">
+                    <p><h4>EBI Petrol</h4> The default. <br/><small>Found at css/embl-petrol-colours.css</small></p>
+                  </div>
+                  <div class="column services-background white-color">
+                    <p><h4>Services</h4> Close to EBI colours. <br/><small>Found at css/ebi-services-about-colours.css</small></p>
+                  </div>
+                  <div class="column research-background white-color">
+                    <p><h4>Research</h4> Green. <br/><small>Found at css/ebi-research.colour.css</small></p>
+                  </div>
+                  <div class="column training-background white-color">
+                    <p><h4>Training</h4> Golden. <br/><small>Found at css/ebi-training-colours.css</small></p>
+                  </div>
+                  <div class="column industry-background white-color">
+                    <p><h4>Industry</h4> Bright blue ocean. <br/><small>Found at css/ebi-industry-colours.css</small></p>
+                  </div>
+                </div>
+                </p>
 
-                If you wish to make your own colour palatte, see this set of directions /css/readme-custom-colours.txt
+                <p>You can call these colours directly with these colour and background-colour classes:</p>
 
+                <div class="callout"><pre>
+.ebi-background { background: rgb(0,124,130); }
+.services-background { background: rgb(2,100,105); }
+.research-background { background: rgb(168,200,19); }
+.training-background { background: rgb(233,180,0); }
+.industry-background { background: rgb(0,134,180); }
+.elixir-background { background: rgb(251,106,42); }
+.white-background { background: rgb(255,255,255); }
+
+.ebi-color { color: rgb(0,124,130); }
+.services-color { color: rgb(2,100,105); }
+.research-color { color: rgb(168,200,19); }
+.training-color { color: rgb(233,180,0); }
+.industry-color { color: rgb(0,134,180); }
+.elixir-color { color: rgb(251,106,42); }
+.white-color { color: rgb(255,255,255); }</pre></div>
+
+
+                <p>If you wish to make your own colour palatte, see this set of directions /css/readme-custom-colours.txt</p>
+
+<!--                 <div class="callout row">
+                  <div class="columns small-1"><span class="lead icon icon-generic" data-icon="i"></span></div>
+                  <div class="columns small-11">If you wish to make your own colour palatte, see this set of directions /css/readme-custom-colours.txt</div>
+                </div>
+ -->
               </section>
 
               <section id="typography" data-magellan-target="typography">
