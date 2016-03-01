@@ -17,6 +17,7 @@ In all, an evolutionary step of the current EMBL-EBI web compliance kit, this pr
   - Require fewer roll-your-own solutions
   - Be more robust out of the box
   - Standardization of tooling
+- Core colour palette sync with updated EBI colours (largely same as before, but refined)
 - Update visual assets to make use of contemporary web browser features for:
   - More consistency with print visual language
   - Enhanced mobile support
@@ -40,6 +41,7 @@ A short list of concerns that need to be kept in mind during the dev process.
 - Must be concious to supply enough vital documentation/patterns, but without recreating the Foundation documentation
 - Do we keep documentation as one long file, or split into multiple...
 - Presently sample code blocks are kept to a minimum to keep the document shorter and increase our flexibility -- as our audience is devs, we may not need code samples at all, as code source should suffice?
+- Many of the color palette tags ( .primary-*, .secondary-a-*, .secondary-b-*, .complement-* ) appear to have no usage (wget + grep) and could likely be removed from the base style sheets. We should survey, pilot in alpha.
 
 ## Roadmap
 - v1.2: Guidance and templates for wide-screen content engagements

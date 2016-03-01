@@ -209,76 +209,27 @@
                 <h2>EBI Framework overview</h2>
                 <span class="secondary label sans-serif"><i class="icon icon-generic" data-icon="i"></i> Framework version: 1.1</span>
                 <p class="lead">The framework is a collection of JS, CSS, icons, coding conventions, and templated components that will help you build robust web content faster than if you were to make it from scratch.</p>
-                <p>This page offers guidance on building web site, pages, and content that comply with the EMBL-EBI:</p>
-                <ul>
-                  <li>visual look;</li>
-                  <li>semantic structure; and</li>
-                  <li>writing guidelines.</li>
-                </ul>
+                <p>This page offers guidance on building web site, pages, and content that comply with the EMBL-EBI: visual look, semantic structure, and writing guidelines.</p>
 
                 <hr />
 
-              </div>
+                <h3>Guide contents</h3>
 
-              <!-- If your page has a table of content, you might present it on mobile like so: -->
-              <div class="columns small-10 show-for-small-only small-centered" data-sticky-container>
-
-                <div class="sticky" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="overview:top" data-btm-anchor="content:bottom">
-                  <ul class="dropdown menu callout tiny" data-dropdown-menu>
-                    <li>
-                      <a href="#"><span class="icon icon-functional" data-icon="M"></span> Jump to a section: Framework contents</a>
-                      <ul class="menu">
-                        <li><a href="#overview">Overview</a></li>
-                        <li><a href="#design-patterns">Design patterns</a></li>
-                        <ul class="inline">
-                          <li><a href="#navigation">Navigation</a></li>
-                          <li><a href="#menus">Menus</a></li>
-                          <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-                          <li><a href="#content">Content</a></li>
-                          <ul class="inline">
-                            <li><a href="#grid">Grid</a></li>
-                            <li><a href="#colour">Colour</a></li>
-                            <li><a href="#typography">Typography</a></li>
-                            <li><a href="#icons">Icons</a></li>
-                            <li><a href="#lists">Lists</a></li>
-                            <li><a href="#tables">Tables</a></li>
-                            <li><a href="#images">Images</a></li>
-                          </ul>
-                          <li><a href="#favicons">Favicons</a></li>
-                          <li><a href="#helper-classes">Helper classes</a></li>
-                        </ul>
-                        <li><a href="#writing">Writing</a></li>
-                        <li><a href="#metacopy">Metacopy</a></li>
-                        <li><a href="#browser-compatibility">Browser compatibility</a></li>
-                        <li><a href="#sitemap">Sitemap</a></li>
-                        <li><a href="#accesibility">Accesibility</a></li>
-                        <li><a href="#help">Help</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-
-              </div>
-
-
-
-            </div>
-
-            <div class="row">
-
-              <div class="columns medium-3 show-for-medium" data-sticky-container>
-
-                <div class="sticky" data-sticky data-sticky-on="large" data-margin-top="3.5" data-top-anchor="overview:top" data-btm-anchor="overview:bottom">
-                  <ul class="menu vertical" data-magellan>
-                    <li><a href="#overview">Overview</a></li>
-                    <li><a href="#design-patterns">Design patterns</a></li>
-                    <ul class="nested vertical menu">
-                      <li><a href="#navigation">Navigation</a></li>
+                <div class="row">
+                  <div class="column medium-4">
+                    <ul class="menu vertical" >
+                      <li><a href="#overview"><strong>Overview</strong></a></li>
+                      <li><a href="#design-patterns"><strong>Design patterns</strong></a></li>
+                      <li><a href="#navigation"><strong>Navigation</strong></a></li>
                       <ul class="nested vertical menu">
                         <li><a href="#menus">Menus</a></li>
                         <li><a href="#breadcrumbs">Breadcrumbs</a></li>
                       </ul>
-                      <li><a href="#content">Content</a></li>
+                    </ul>
+                  </div>
+                  <div class="column medium-4">
+                    <ul class="menu vertical" >
+                      <li><a href="#content"><strong>Content</strong></a></li>
                       <ul class="nested vertical menu">
                         <li><a href="#grid">Grid</a></li>
                         <li><a href="#colour">Colour</a></li>
@@ -288,21 +239,36 @@
                         <li><a href="#tables">Tables</a></li>
                         <li><a href="#images">Images</a></li>
                       </ul>
-                      <li><a href="#favicons">Favicons</a></li>
-                      <li><a href="#helper-classes">Helper classes</a></li>
                     </ul>
-                    <li><a href="#writing">Writing</a></li>
-                    <li><a href="#metacopy">Metacopy</a></li>
-                    <li><a href="#browser-compatibility">Browser compatibility</a></li>
-                    <li><a href="#sitemap">Sitemap</a></li>
-                    <li><a href="#accesibility">Accesibility</a></li>
-                    <li><a href="#help">Help</a></li>
-                  </ul>
+                  </div>
+                  <div class="column medium-4">
+                    <ul class="menu vertical" >
+                      <li><a href="#favicons"><strong>Favicons</strong></a></li>
+                      <li><a href="#helper-classes"><strong>Helper classes</strong></a></li>
+                      <li><a href="#writing"><strong>Writing</strong></a></li>
+                      <li><a href="#metacopy"><strong>Metacopy</strong></a></li>
+                      <li><a href="#browser-compatibility"><strong>Browser compatibility</strong></a></li>
+                      <li><a href="#sitemap"><strong>Sitemap</strong></a></li>
+                      <li><a href="#accesibility"><strong>Accesibility</strong></a></li>
+                      <li><a href="#help"><strong>Help</strong></a></li>
+                    </ul>
+                  </div>
                 </div>
+                              
+                <hr />
+
               </div>
 
 
-          <div class="medium-9 columns sections">
+
+            </div>
+
+            <div class="row">
+
+
+
+
+          <div class="medium-12 columns sections">
 
               <section id="overview" data-magellan-target="overview">
 
@@ -439,6 +405,8 @@
 .industry-color { color: rgb(0,134,180); }
 .elixir-color { color: rgb(251,106,42); }
 .white-color { color: rgb(255,255,255); }</pre></div>
+
+                <p>Note: we recommend using the RGB values (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Browser_compatibility">support is near-universal</a>. The alpha, RGBA mode, is available from IE 9.)</p>
 
 
                 <p>If you wish to make your own colour palatte, see this set of directions /css/readme-custom-colours.txt</p>
