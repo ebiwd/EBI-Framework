@@ -201,7 +201,7 @@ a:active {
   }
 
   header .masthead {
-    padding-top: 1rem;
+    padding-top: 2rem;
     color: #fff;
   }
 
@@ -284,7 +284,7 @@ a:active {
   }
 
   /* Local menu styling */
-  #local-masthead nav { font-size: .9rem; clear: both; }
+  #local-masthead nav { font-size: .9rem; clear: both;}
 
   #local-masthead .masthead nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
   #local-masthead nav ul.menu li { border-right: 1px solid #f8f8f8; float: left; }
@@ -575,9 +575,9 @@ a:active {
     font-size: 1.2rem;
     padding-top: 50%;
     width: 95%;
-    content: "»";
+    content: "Â»";
   }
-  .with-overlay .caption a.inner:after { content: " »"; }
+  .with-overlay .caption a.inner:after { content: " Â»"; }
   .with-overlay .caption:hover a.inner { color: #000; }
 
   .serif { font-family: 'EB Garamond', 'georgia', serif;  font-size: 1.1rem; }
