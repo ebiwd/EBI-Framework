@@ -42,6 +42,7 @@ A short list of concerns that need to be kept in mind during the dev process.
 - Do we keep documentation as one long file, or split into multiple...
 - Presently sample code blocks are kept to a minimum to keep the document shorter and increase our flexibility -- as our audience is devs, we may not need code samples at all, as code source should suffice?
 - Many of the color palette tags ( .primary-*, .secondary-a-*, .secondary-b-*, .complement-* ) appear to have no usage (wget + grep) and could likely be removed from the base style sheets. We should survey, pilot in alpha.
+- Standardised feeback capturing
 
 ## Roadmap
 - v1.2: Guidance and templates for wide-screen content engagements
@@ -54,3 +55,7 @@ A short list of concerns that need to be kept in mind during the dev process.
 - Version is at "rough draft" stage. Largely implementing a revised style and functionality. 
 2015-11-23
 - Forks EBI Compliance theme into EBI Framework v1.1
+
+## Misc
+
+grep -rI "primary-1" ~/Desktop/www.ebi.ac.uk/ --exclude=*.css *.pdf *.java *.cs

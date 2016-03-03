@@ -435,7 +435,7 @@ a:active {
   /* ebi icon font in the local title */
   .hexagon {
     font-size: 1.8rem;
-    color: #444;
+    color: #E9B400;
     background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 288 180 288" xml:space="preserve"><polygon class="st0" fill="#fff" points="147,363.6 203.2,331.1 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
     display: inline-block;
     background-size: 80px;
@@ -446,9 +446,9 @@ a:active {
     width: 52px;
     vertical-align: top;
     padding: 12px 0 0 0;
-    margin-left: -39px;
+    margin-left: -65px;
   }
-
+  
   /* Custom styling for different local masthead */
   #local-title.logo-only img,
   #local-title.logo-title img,
