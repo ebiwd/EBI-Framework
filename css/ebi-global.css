@@ -201,7 +201,7 @@ a:active {
   }
 
   header .masthead {
-    padding-top: 2rem;
+    padding-top: 2.5rem;
     color: #fff;
   }
 
@@ -295,6 +295,8 @@ a:active {
 
   #local-masthead nav ul.menu li.float-right { border-right: none; }
   #local-masthead nav ul.menu li.float-right button { margin: 0;margin-top: -10px;}
+
+  #local-masthead div#local-title { margin-bottom: 1rem; }
 
   #local-masthead h1,
   #local-masthead p,
