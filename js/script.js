@@ -389,6 +389,17 @@
       }
     }
   })();
+
+  // Let the background images be assigned by meta tags
+  (function assignImageByMetaTags() {
+    var localMasthead = document.getElementById('local-masthead');
+    var localMastheadColor = document.querySelector("meta[name='ebi-localmasthead-color']").getAttribute(content);
+    var localMastheadImage = document.querySelector("meta[name='ebi-localmasthead-image']").getAttribute(content);
+
+    localMasthead.style.backgroundColor = localMastheadColor;
+    localMasthead.style.backgroundImage = 'url(' + localMastheadColor + ')';
+
+  })();
   
 })();
 
