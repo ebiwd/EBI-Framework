@@ -397,7 +397,7 @@
     var localMastheadImage = document.querySelector("meta[name='ebi-localmasthead-image']").getAttribute("content");
 
     if (localMastheadColor != null) localMasthead.style.backgroundColor = localMastheadColor;
-    if (localMastheadImage != null) localMasthead.style.backgroundImage = 'url(' + localMastheadColor + ')';
+    if (localMastheadImage != null) localMasthead.style.backgroundImage = 'url(' + localMastheadImage + ')';
 
   })();
   
