@@ -393,11 +393,11 @@
   // Let the background images be assigned by meta tags
   (function assignImageByMetaTags() {
     var localMasthead = document.getElementById('local-masthead');
-    var localMastheadColor = document.querySelector("meta[name='ebi-localmasthead-color']").getAttribute("content");
-    var localMastheadImage = document.querySelector("meta[name='ebi-localmasthead-image']").getAttribute("content");
+    var localMastheadColor = document.querySelector("meta[name='ebi-localmasthead-color']");
+    var localMastheadImage = document.querySelector("meta[name='ebi-localmasthead-image']");
 
-    if (localMastheadColor != null) localMasthead.style.backgroundColor = localMastheadColor;
-    if (localMastheadImage != null) localMasthead.style.backgroundImage = 'url(' + localMastheadImage + ')';
+    if (localMastheadColor != null) localMasthead.style.backgroundColor = localMastheadColor.getAttribute("content");
+    if (localMastheadImage != null) localMasthead.style.backgroundImage = 'url(' + localMastheadImage.getAttribute("content") + ')';
 
   })();
   
@@ -448,5 +448,11 @@ $.fn.foundationExtendEBI = function() {
   });
 }
 
-
 }(jQuery));
+
+
+
+
+
+
+
