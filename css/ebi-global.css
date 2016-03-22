@@ -566,13 +566,14 @@ a:active {
     padding: 5% 5%;
     color: #fff;
     opacity: 1;
+    text-shadow: 0 2px 0 rgba(0,0,0,.8);
   }  
   .with-overlay .caption:hover {
-    background: -webkit-linear-gradient(transparent, rgba(255,255,255,0.7));
-    background: -o-linear-gradient(transparent, rgba(255,255,255,0.7));
-    background: -moz-linear-gradient(transparent, rgba(255,255,255,0.7));
-    background: linear-gradient(transparent, rgba(255,255,255,0.7));
-    color: #000;
+    background: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+    background: -o-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+    background: -moz-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+    color: #FFF;
   }
 
   .with-overlay .caption .inner {
@@ -583,13 +584,14 @@ a:active {
     color: #fff;
     text-decoration: none;
     border-bottom: none;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 1.4em;
     padding-top: 50%;
     width: 95%;
     content: " »";
   }
   .with-overlay .caption a.inner:after { content: " "; }
-  .with-overlay .caption:hover a.inner { color: #000; }
+  .with-overlay .caption:hover a.inner { color: #fff; }
 
   .serif { font-family: 'EB Garamond', 'georgia', serif;  font-size: 1.1rem; }
   .sans-serif { font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;  font-size: 1.1rem; }
@@ -610,6 +612,9 @@ a:active {
 
 /* mono-space fonts are fat */
 code { font-size: .95rem; }
+
+/* hide */
+.hidden, .hide { display: none; }
 
 /* buttons */
 .button:focus,
