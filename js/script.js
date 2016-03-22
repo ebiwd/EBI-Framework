@@ -81,7 +81,7 @@
     try {
       var d = new Date();
       document.getElementById('ebi-footer-meta').innerHTML = "" +
-        "<p class=\"address\">EMBL-EBI, Wellcome Trust Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp; &nbsp; +44 (0)1223 49 44 44</p>" +
+        "<p class=\"address\">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp; &nbsp; +44 (0)1223 49 44 44</p>" +
         "<p>Copyright &copy; EMBL-EBI " + d.getFullYear() + " | EBI is an outstation of the <a href=\"http://www.embl.org\">European Molecular Biology Laboratory</a> | <a href=\"/about/terms-of-use\">Terms of use</a></p>" +
         "";
     }

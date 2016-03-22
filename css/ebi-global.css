@@ -8,9 +8,6 @@ body h1, body h2, body h3 { font-weight: 200; }
 
 li { word-wrap: break-word; }
 
-/* Logo images */
-.ebi-logo {}
-
 /* pad in page content */
 body.table-layout table {
   padding: 0;
@@ -70,13 +67,13 @@ a:active {
 .elixir-background { background: rgb(251,106,42); }
 .white-background { background: rgb(255,255,255); }
 
-.ebi-color, a.ebi-color { color: rgb(0,124,130); }
-.services-color, a.services-color { color: rgb(2,100,105); }
-.research-color, a.research-color { color: rgb(168,200,19); }
-.training-color, a.training-color { color: rgb(233,180,0); }
-.industry-color, a.industry-color { color: rgb(0,134,180); }
-.elixir-color, a.elixir-color { color: rgb(251,106,42); }
-.white-color, a.white-color { color: rgb(255,255,255); }
+.ebi-color, a.ebi-color, a:hover.ebi-color { color: rgb(0,124,130); }
+.services-color, a.services-color, a:hover.services-color { color: rgb(2,100,105); }
+.research-color, a.research-color, a:hover.research-color { color: rgb(168,200,19); }
+.training-color, a.training-color, a:hover.training-color { color: rgb(233,180,0); }
+.industry-color, a.industry-color, a:hover.industry-color { color: rgb(0,134,180); }
+.elixir-color, a.elixir-color, a:hover.elixir-color { color: rgb(251,106,42); }
+.white-color, a.white-color, a:hover.white-color { color: rgb(255,255,255); }
 
 /* todo: map misc framework colours to ebi colours...
 
@@ -516,7 +513,18 @@ a:active {
   }
 
   #global-footer h5 {
+    margin-top: 1.25rem;
     margin-bottom: 5px;
+  }
+
+  #global-footer .ebi-logo {
+    display: block;
+    height: 53px;
+    width: 89%;
+    background-image: url("https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -.25rem;
   }
 
   #global-footer p {
