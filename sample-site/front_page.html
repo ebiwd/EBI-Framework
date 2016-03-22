@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>[page-title] &lt; [service-name] &lt; EMBL-EBI</title>
+  <title>The European Bioinformatics Institute &lt; EMBL-EBI</title>
   <meta name="description" content="EMBL-EBI"><!-- Describe what this page is about -->
   <meta name="keywords" content="bioinformatics, europe, institute"><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
   <meta name="author" content="EMBL-EBI"><!-- Your [project-name] here -->
@@ -76,7 +76,7 @@
   </div>
 
   <div data-sticky-container>
-    <div id="local-masthead" data-sticky data-sticky-on="large" data-top-anchor="180" data-btm-anchor="300000">
+    <div id="local-masthead" data-sticky data-sticky-on="disabled" data-top-anchor="180" data-btm-anchor="300000">
       <header>
 
         <div id="global-masthead" class="clearfix">
@@ -124,17 +124,54 @@
         <div class="masthead row">
 
           <!-- local-title -->
-          <div class="columns medium-7" id="local-title">
-            <h1><a href="[service-url]" title="Back to [service-name] homepage"><div class="hexagon"><i class="icon icon-generic" data-icon=":"></i></div> EBI Framework</a></h1>
+          <div class="columns medium-12" id="local-title">
+            <h1><a href="[service-url]" title="Back to [service-name] homepage"> The European Bioinformatics Institute</a></h1>
+            <div class="row">
+
+              <div class="column large-5">
+                <h4>The home for big data in biology</h4>
+                <p class="intro">EMBL-EBI provides freely available <a href="/services">data from life science experiments</a>, performs <a href="/research">basic research</a> in computational biology and offers an extensive <a href="/training">user training</a> programme, supporting researchers in academia and <a href="/industry">industry</a>.</p>
+              </div>
+              <div class="column large-7">
+                <form id="ebi_search" action="/ebisearch/search.ebi">
+                  <fieldset>
+                    <legend><h4>Find a gene, protein or chemical</h4></legend>
+                    <div class="input-group">
+                      <input id="query" class="input-group-field" title="EB-eye Search" tabindex="1" type="text" name="query" value="" size="35" maxlength="2048" />
+                      <div class="input-group-button">
+                        <input id="search_submit" class="button icon icon-functional" tabindex="2" type="submit" name="submit1" value="1" />
+                        <input id="allebi" type="hidden" name="db" value="allebi" checked="checked" />
+                        <input type="hidden" name="requestFrom" value="ebi_index" />
+                      </div>
+                    </div>
+                    <p id="example">
+                      Examples: <a class="secondary label" href="/ebisearch/search.ebi?db=allebi&amp;requestFrom=ebi_index&amp;query=blast">blast</a> <a class="secondary label" href="/ebisearch/search.ebi?db=allebi&amp;query=keratin&amp;requestFrom=ebi_index">keratin</a> <a class="secondary label" href="/ebisearch/search.ebi?db=allebi&amp;query=bfl1&amp;requestFrom=ebi_index">bfl1</a>
+                    </p> 
+                  </fieldset>
+                </form>
+
+              </div>
+            </div>
+    
+
           </div>
           <!-- /local-title -->
 
           <!-- local-nav -->
+          <!--
               <nav >
                 <ul class="dropdown menu float-left" data-description="navigational">
-                  <li class="active"><a href="documentation.html">Overview</a></li>
-                  <li><a data-open="modal-download">Download</a></li>
-                  <li><a href="#">Support <i class="icon icon-generic" data-icon="x"></i></a></li>
+                  <li class="first has-children menu-mlid-3055 menu-overview menu-3055"><a href="/about">Overview</a></li>
+                  <li class=" has-children menu-mlid-3057 menu-leadership menu-3057"><a href="/about/leadership" title="Leadership and guidance structure">Leadership</a></li>
+                  <li class=" menu-mlid-3075 menu-funding menu-3075"><a href="/about/funding" title="Funding of EMBL-EBI">Funding</a></li>
+                  <li class=" menu-mlid-3079 menu-background menu-3079"><a href="/about/background" title="History of EMBL-EBI">Background</a></li>
+                  <li class=" menu-mlid-3076 menu-collaborations menu-3076"><a href="/about/partnerships" title="EMBL-EBI partnerships">Collaborations</a></li>
+                  <li class=" has-children menu-mlid-3098 menu-jobs menu-3098"><a href="/about/jobs" title="Opportunities at EMBL-EBI">Jobs</a></li>
+                  <li class=" menu-mlid-3173 menu-people-groups menu-3173"><a href="/about/people" title="Staff directory">People &amp; groups</a></li>
+                  <li class=" has-children menu-mlid-3402 menu-news menu-3402"><a href="/about/news" title="">News</a></li>
+                  <li class=" menu-mlid-7857 menu-events menu-7857"><a href="/about/events">Events</a></li>
+                  <li class=" menu-mlid-3078 menu-visit-us menu-3078"><a href="/about/travel" title="Directions to EMBL-EBI">Visit us</a></li>
+                  <li class="last menu-mlid-3329 menu-contact-us menu-3329"><a href="/about/contact" title="Contact External Relations">Contact us</a></li>
                 </ul>
                 <ul class="menu dropdown float-right" data-dropdown-menu data-description="functional">
                   <li class="functional"><a href="#"><i class="icon icon-generic" data-icon="d"></i> Share this</a>
@@ -165,6 +202,7 @@
 
                 </ul>
               </nav>
+              -->
           <!-- /local-nav -->
 
         </div>
@@ -174,15 +212,6 @@
       </div>
   </div>
 
-  <div class="reveal" id="modal-download" data-reveal>
-    <h2>Awesome. I Have It.</h2>
-    <p class="lead">Your couch. It is mine.</p>
-    <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-    <a class="button">Download</a>
-    <button class="close-button" data-close aria-label="Close modal" type="button">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
 
   <div id="content" role="main" class="row">
 
@@ -205,156 +234,187 @@
 
         <div class="row">
 
+          <div class="small-12 columns">
+
+              <h3>Explore EMBL-EBI</h3>
+
+              <div class="row small-up-1 medium-up-5">
+                <a href="//www.ebi.ac.uk/services" class="white-color column services-background">
+                  <p><h4><span class="icon icon-generic" data-icon="("></span> Services »</h4></p>
+                </a>
+                <a href="//www.ebi.ac.uk/" class="white-color column research-background">
+                  <p><h4><span class="icon icon-generic" data-icon=")"></span> Research »</h4></p>
+                </a>
+                <a href="//www.ebi.ac.uk/" class="white-color column training-background">
+                  <p><h4><span class="icon icon-generic" data-icon="t"></span> Training »</h4></p>
+                </a>
+                <a href="//www.ebi.ac.uk/" class="white-color column industry-background">
+                  <p><h4><span class="icon icon-generic" data-icon="I"></span> Industry »</h4></p>
+                </a>
+                <a href="//www.ebi.ac.uk/" class="white-color column elixir-background">
+                  <p><h4><span class="icon icon-generic" data-icon="%"></span> ELIXIR »</h4></p>
+                </a>
+              </div>
+
+              <hr/>
+
+          </div>
+
           <div class="medium-9 columns">
 
             <div class="row">
               <div class="small-12 columns">
 
-                <h2>EBI Framework overview</h2>
-                <span class="secondary label sans-serif"><i class="icon icon-generic" data-icon="i"></i> Framework version: 1.1</span>
-                <p class="lead">The framework is a collection of JS, CSS, icons, coding conventions, and templated components that will help you build robust web content faster than if you were to make it from scratch.</p>
-                <p>This page offers guidance on building web site, pages, and content that comply with the EMBL-EBI: visual look and semantic structure.</p>
+                <h3>Featured events</h3>
 
-                <hr />
+                <div class="row small-up-1 medium-up-3">
 
-                <h3>Guide contents</h3>
 
-                <div class="row">
-                  <div class="column medium-4">
-                    <ul class="menu vertical" >
-                      <li><a href="#overview"><strong>Overview</strong></a></li>
-                      <li><a href="#design-patterns"><strong>Design patterns</strong></a></li>
-                      <li><a href="#navigation"><strong>Navigation</strong></a></li>
-                      <ul class="nested vertical menu">
-                        <li><a href="#menus">Menus</a></li>
-                        <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-                      </ul>
-                    </ul>
-                  </div>
+        <div class="views-row views-row-1 views-row-odd views-row-first column">
+      
+          <div class="views-field views-field-markup">        <div class="field-content"><p class="date small">
+
+         <span class="dtstart" title="2016-01-14 15:30:00"><span class="day hidden">Thursday 14</span> <span class="month hidden">January</span> <span class="year hidden">2016</span> <span class="time hidden">15:30</span> <span class="timezone hidden">()</span></span> <span class="separator hidden">- </span><span class="dtend" title="2016-01-14 16:30:00"><span class="day">Thursday 14</span> <span class="month">January</span> <span class="year">2016</span> <span class="time hidden">16:30</span> <span class="timezone hidden">()</span></span>
+
+        </p></div>  </div>  
+          <div class="views-field views-field-text">        <h4 class="field-content"><a href="/about/events/seminars/2016/modelling-selective-forces-driving-evolution-phosphotyrosine-sh2-interaction-network">Rewriting the Code of Life: The science and ethics behind genome editing</a></h4>  </div>  
+          <div class="views-field views-field-markup-1">        <div class="field-content">*</div>  </div>  </div>
+  
+  <div class="views-row views-row-2 views-row-even column">
+      
+  <div class="views-field views-field-markup">        <div class="field-content"><p class="date small">
+
+ <span class="dtstart" title="2016-01-15 13:00:00"><span class="day hidden">Friday 15</span> <span class="month hidden">January</span> <span class="year hidden">2016</span> <span class="time hidden">13:00</span> <span class="timezone hidden">()</span></span> <span class="separator hidden">- </span><span class="dtend" title="2016-01-15 13:00:00"><span class="day">Friday 15</span> <span class="month">January</span> <span class="year">2016</span> <span class="time hidden">13:00</span> <span class="timezone hidden">()</span></span>
+
+</p></div>  </div>  
+  <div class="views-field views-field-text">        <h4 class="field-content"><a href="/training/events/2016/ensembl-browser-workshop-i-cambridge-jan-2016">Ensembl Browser Workshop I – Cambridge, Jan 2016</a></h4>  </div>  
+  <div class="views-field views-field-markup-1">        <div class="field-content">Work with the Ensembl Outreach team to get to grips with the Ensembl browser.</div>  </div>  </div>
+  
+
+  <div class="views-row views-row-3 views-row-odd views-row-last column">
+      
+  <div class="views-field views-field-markup">        <div class="field-content"><p class="date small">
+
+ <span class="dtstart" title="2016-01-15 15:00:00"><span class="day hidden">Friday 15</span> <span class="month hidden">January</span> <span class="year hidden">2016</span> <span class="time hidden">15:00</span> <span class="timezone hidden">()</span></span> <span class="separator hidden">- </span><span class="dtend" title="2016-01-15 15:00:00"><span class="day">Friday 15</span> <span class="month">January</span> <span class="year">2016</span> <span class="time hidden">15:00</span> <span class="timezone hidden">()</span></span>
+
+</p></div>  </div>  
+  <div class="views-field views-field-text">        <h4 class="field-content"><a href="/training/events/2016/ensembl-browser-workshop-ii-cambridge-jan-2016">Ensembl Browser Workshop II – Cambridge, Jan 2016</a></h4>  </div>  
+  <div class="views-field views-field-markup-1">        <div class="field-content">Work with the Ensembl Outreach team to get to grips with the Ensembl browser.</div>  </div>  </div>
+  
+
                 </div>
-                              
-                <hr />
+
+                <p>&nbsp;</p> <h6 class="float-right"><a href="#">See all events at EMBL-EBI »</a></h6>
 
               </div>
 
+            </div>
 
+          </div>
+
+            <div class="medium-3 columns sidebar">
+              <h3 class="pane-title">Related pages</h3>
+              <ul>
+                <div class="columns medium-6">
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/services"><span class='icon icon-generic' data-icon='('></span> Services</a></li>
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/research"><span class='icon icon-generic' data-icon=')'></span> Research</a></li>
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/training"><span class='icon icon-generic' data-icon='f'></span> Training</a></li>
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/about/news"><span class='icon icon-generic' data-icon='N'></span> News</a></li>
+                </div>
+                <div class="columns medium-6">
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/about/jobs"><span class='icon icon-generic' data-icon='c'></span> Jobs</a></li>
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/about/travel"><span class='icon icon-generic' data-icon=']'></span> Visit us</a></li>
+                  <li class="icon-bullet"><a href="http://www.embl.de/aboutus/alumni/"><span class='icon icon-generic icon-c8' data-icon='&'></span> Alumni</a></li>
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/about/contact"><span class='icon icon-generic' data-icon='C'></span> Contacts</a></li>
+                </div>
+              </ul>
+
+
+              
+
+                
+            </div>
+
+          </div>
+
+          <hr />
+
+
+
+          <div class="row">
+
+            <div class="medium-12 columns">
+
+              <div class="row">
+                <div class="small-12 columns">
+
+                  <h3>Latest news</h3>
+
+                  <div class="row collapse">
+                    <div class="columns medium-4 with-overlay">
+                      <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/large/public/groups/external_relations/images/News/EMPIAR_news_21_03_2016_EBI.jpg?itok=Y5aDjbJy" alt="Photo of Uranus.">
+                      <div class="caption">
+                        <a href="#" class="inner">
+                          Supporting the bioimaging revolution
+                        </a>
+                        <p>21 May 2016</p>
+                      </div>
+                    </div>
+                    <div class="columns medium-4 with-overlay">
+                      <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/large/public/groups/external_relations/images/News/TCell_news_EBI.jpg?itok=b_KTDxDO" alt="Photo of Uranus.">
+                      <div class="caption">
+                        <a href="#" class="inner">
+                          Immunology meets single-cell sequencing
+                        </a>
+                        <p>21 May 2016</p>
+                      </div>
+                    </div>
+                    <div class="columns medium-4 with-overlay">
+                      <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/large/public/groups/external_relations/images/News/DREAMchallenge_News_24_03_16_EBI.jpg?itok=-33Ign4S" alt="Photo of Uranus.">
+                      <div class="caption">
+                        <a href="#" class="inner">
+                          DREAM shadows: chasing down disease networks
+                        </a>
+                        <p>21 May 2016</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <p>&nbsp;</p> <h6 class="float-right"><a href="#">Read more news from EMBL-EBI »</a></h6>
+
+                </div>
+              </div>
 
             </div>
 
-            <div class="row">
-
-
-
-
-          <div class="medium-12 columns sections">
-
-              <section id="overview" data-magellan-target="overview">
-
-                <h3>How to use this</h3>
-                <p>Use this as page and its associated assets as your boilerplate. Read through the text and draw on the examples. Use your browser's web inspector and view the source.</p>
-                <blockquote class="float-left">
-                  Do as I do, not as I say.
-                  <cite>This Framewok</cite>
-                </blockquote>
-                <p>This guide does not offer prescriptive solutions for every scenario, but integrates a wide range of pull quotes, form boxes, menus, and more to show you how things should be done.</p>
-                <p>Also <a href="http://foundation.zurb.com/sites/docs/global.html">consult the Foundation 6 docs <i class="icon icon-generic" data-icon="x"></i></a>, as this framework leverages that toolset.</p>
-                <p>During the initial rollout, we plan to host workshops to educate on the tooling and address issues or concerns, register you interest here [ADD LINK]</p>
-                <p>If you need technical guidance or have questions, <a href="#help">see the help section</a>.</p>
-
-                <h3>Requirements and what you get</h3>
-                <p>The framework is built with modern best practices and targets browsers shipped within the past three years; though other browsers should still handle the content and appearance well (graceful degradation). The framework is also mobile responsive, so you won't have to spend too much time adapting for mobile.</p>
-                <p>To help us help you, we've used the Foundation Framework (version 6) as a baseline. Using this we get a robust set of web components (tool tips, forms, sliders, and modal boxes) as well as technical guidance and extensive open source community testing -- and, perhaps, you'll be fortunate enough to already have a developer with experience with Foundation.</p>
-                <p>But we've taken care to make the implementation non-intrusive, so if you don't want to use these features, they won't likely get in your way.</p>
-                <p>The easiest way to implement the style guide is to download the EBI boilerplate (see links below) - this is an HTML file that you can use as a template for your own pages. It contains the HTML for the EBI header and footer and place holders for your project name / logo and page content. It also links to the core stylesheets you'll need to make your web pages look like part of the EBI website.</p>
-                <p><a href="https://github.com/khawkins98/EBI-Framework/archive/master.zip" class="button sans-serif">Download the framework</a> or <a href="https://github.com/khawkins98/EBI-Framework/">view on Github</a></p>
-
-                <div class="callout warning row">
-                  <h3>FAQs</h3>
-                  <dl>
-                    <dt>JavaScript:</dt>
-                      <dd>The framework does not require jQuery, but if you do use it you will get more nice to haves and your life may be easier all around. The jQuery functionality is enable by default. For more see the section on disabling JavaScript addons (you'll comment out two lines -- need to write this...)</dd>
-                    <dt>Bootstrap:</dt>
-                      <dd>While the front-end framework provides a robust set of tooling and a broader use base, its base styling is more opinionated (121KB vs 43KB of minified baseline CSS). Foundation allows us to provide a slimmer and faster EBI theme layer. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem. For Bootstrap users unfamiliar with Foundation, you might <a href="https://www.codementor.io/css/tutorial/bootstrap-3-vs-foundation-5-front-end-framework-comparison">read this comparison</a> (note that it references the slightly older version of Foundation 5, but is substantially the same for the article's proposes).</dd>
-                    <dt>SASS:</dt>
-                      <dd>We have not used Foundation's compilable CSS, nor have we added any other compile required tooling. This was done to keep implementation as simple as possible, and it offered limited benefits. However, we have implement the vanilla release of Foundation, so there's no reason you couldn't swap that out. As internal users become more familiar with Foundation and we further optimise, a future release may use SASS.</dd>
-                    <dt>Animation:</dt>
-                      <dd>Using CSS3 and JavaScript animations there are many opportunities to make our sites look good and function better, but we want to take this one step at a time and get other items in order. Currently on target for v1.5. <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="Foundation does have a complementary animation toolset that we've not bundled, but you could...">Feel free to experiment with subtle animations</span>, let us know if you do.</dd>
-                  </dl>
-                </div>
-              </section>
-
-
-
           </div>
 
+          <hr />
+
+          <div class="row">
+
+            <div class="medium-12 columns">
+
+              <h3 class="pane-title">Our mission</h3>
+      
+              <ul>
+               <li>To provide freely available data and bioinformatics services to all facets of the scientific community</li>
+               <li>To contribute to the advancement of biology through basic investigator-driven research</li>
+               <li>To provide advanced bioinformatics training to scientists at all levels</li>
+               <li>To help disseminate cutting-edge technologies  to industry</li>
+               <li>To support, as an ELIXIR node, the coordination of biological data provision throughout Europe.</li>
+              </ul>
+            </div>
 
 
-           </div>
 
 
-          </div>
-
-          <div class="medium-3 columns sidebar">
-            <!-- local-search -->
-            <!-- if you do not have a local-search, delete the following form -->
-            <form id="local-search" name="local-search" action="[search-action]" method="post">
-              <h4>Search this project</h4>
-              <fieldset>
-                <input type="text" name="first" id="local-searchbox">
-                <input type="submit" name="submit" value="1" class="button icon icon-functional">
-                <small class="">
-                  <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search -->
-                  <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>
-                  |
-                  <!-- Include some example searchterms - keep them short and few. -->
-                  <a href="#" data-toggle="search-example-dropdown">See a few examples</a>
-                </small>
-                <div class="dropdown-pane" id="search-example-dropdown" data-dropdown data-options="hoverPane:true;" data-hover="true">
-                  <ul>
-                    <li><a href="[search-url-1]">[search-text-1]</a></li>
-                    <li><a href="[search-url-1]">[search-text-2]</a></li>
-                    <li><a href="[search-url-1]">[search-text-3]</a></li>
-                  </ul>
-                </div>
-                <!-- if you're not using the JS addons
-                Examples:
-                <ul>
-                  <li><a href="[search-url-1]">[search-text-1]</a></li>
-                  <li><a href="[search-url-1]">[search-text-2]</a></li>
-                  <li><a href="[search-url-1]">[search-text-3]</a></li>
-                </ul>
-                -->
-              </fieldset>
-            </form>
-            <!-- /local-search -->
           </div>
 
         </div>
 
-        <div class="row">
 
-
-          </div>
-
-
-          <div class="row serif">
-
-            <div class="large-6 columns">
-              <h3>Examples</h3>
-              <ul>
-                <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a> - big, empty space between header and footer</li>
-                <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a> - for content-driven pages deeper in your site's hierarchy, the sidebar could contain secondary navigation</li>
-                <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a> - an example of dividing the page into four broad content areas</li>
-                <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a> - an example page with filters or facets for your results in a left-hand sidebar, and a right-hand sidebar for global results</li>
-              </ul>
-              <h3>Search Results Examples</h3>
-              <ul>
-                <li><a href="ebi-search-results-complete.html">Search Results Complete</a> - template for a basic search results page </li>
-                <li><a href="ebi-no-search-results.html">No Search Results</a> - template for a page of zero results </li>
-              </ul>
-            </div>
-
-          </div>
 
       </section>
       <!-- End suggested layout containers -->
@@ -364,11 +424,13 @@
 
     <footer>
       <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+<!-- 
       <div id="local-footer">
         <div class="row">
           <span class="reference">How to reference this page: ...</span>
         </div>
       </div>
+ -->     
       <!-- End optional local footer -->
 
       <div id="global-footer">
