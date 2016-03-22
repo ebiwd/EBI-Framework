@@ -60,7 +60,7 @@
     your custom colour palette in a consistent manner */
 
 /* Links */
-a:link,
+a,
 a:visited { border-bottom-color: #207A7A; }
 
 a:hover,
@@ -78,7 +78,7 @@ a.special:active {
 	}
 
 
-a:link { color: #0F2559; }
+a { color: #0F2559; }
 
 a:hover,
 a:focus,
@@ -94,12 +94,12 @@ h2 { color: #CB7935; }
 
 h3 { color: #996A44; }
 
-h1 a:link,
-h2 a:link,
-h3 a:link,
-h4 a:link,
-h5 a:link,
-h6 a:link,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
 h1 a:visited,
 h2 a:visited,
 h3 a:visited,

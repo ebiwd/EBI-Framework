@@ -35,7 +35,7 @@ a.special {
 a:hover { opacity: .9; }
 a.image,
 a.image:visited { border-bottom: 0 none; }
-a.button, a.button:link, a.button:visited { color: #f8f8f8; }
+a.button, a.button:visited { color: #f8f8f8; }
 
 /* Colour - defaults to be reset by custom stylesheet
 ===================================================*/
@@ -70,13 +70,13 @@ a:active {
 .elixir-background { background: rgb(251,106,42); }
 .white-background { background: rgb(255,255,255); }
 
-.ebi-color { color: rgb(0,124,130); }
-.services-color { color: rgb(2,100,105); }
-.research-color { color: rgb(168,200,19); }
-.training-color { color: rgb(233,180,0); }
-.industry-color { color: rgb(0,134,180); }
-.elixir-color { color: rgb(251,106,42); }
-.white-color { color: rgb(255,255,255); }
+.ebi-color, a.ebi-color { color: rgb(0,124,130); }
+.services-color, a.services-color { color: rgb(2,100,105); }
+.research-color, a.research-color { color: rgb(168,200,19); }
+.training-color, a.training-color { color: rgb(233,180,0); }
+.industry-color, a.industry-color { color: rgb(0,134,180); }
+.elixir-color, a.elixir-color { color: rgb(251,106,42); }
+.white-color, a.white-color { color: rgb(255,255,255); }
 
 /* todo: map misc framework colours to ebi colours...
 
