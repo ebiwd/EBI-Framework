@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>[page-title] &lt; [service-name] &lt; EMBL-EBI</title>
+  <meta name="description" content="EMBL-EBI"><!-- Describe what this page is about -->
+  <meta name="keywords" content="bioinformatics, europe, institute"><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
+  <meta name="author" content="EMBL-EBI"><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#70BDBD"> <!-- Android Chrome mobile browser tab color -->
+    
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi-owner" content="John Doe"> <!-- Who should be contacted about changes -->
+  <meta name="ebi-review-cycle" content="30"> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi-last-review" content="2015-12-20"> <!-- The last time the content was reviewed -->
+  <meta name="ebi-expiry" content="2016-01-20"> <!-- When this content is no longer relevant -->
+    
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//embl.de" />
+
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png"> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png"> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png"> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png"> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff"> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797"> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/mstile-144x144.png">
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="../css/ebi-global.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/fonts/fonts.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/libraries/foundation-6/css/foundation.css" type="text/css" media="all">
+
+  <!-- Use this CSS file for any custom styling -->
+  <!--
+    <link rel="stylesheet" href="css/custom.css" type="text/css" media="all">
+  -->
+
+
+    <!-- you can replace this with [projectname]-colours.css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/css/embl-petrol-colours.css" type="text/css" media="all">
+
+  <!-- for production the above can be replaced with -->
+  <!--
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css">
+  -->
+
+  <!-- end CSS-->
+
+
+  <!-- All JavaScript at the bottom, except for Modernizr -->
+  <script src="https://khawkins98.github.io/EBI-Framework/libraries/modernizr/modernizr.custom.49274.js"></script>
+
+</head>
+
+<body class="level2"><!-- add any of your classes or IDs -->
+  <div id="skip-to">
+    <ul>
+      <li><a href="#content">Skip to main content</a></li>
+      <li><a href="#local-nav">Skip to local navigation</a></li>
+      <li><a href="#global-nav">Skip to EBI global navigation menu</a></li>
+      <li><a href="#global-nav-expanded">Skip to expanded EBI global navigation menu (includes all sub-sections)</a></li>
+    </ul>
+  </div>
+
+  <div data-sticky-container>
+    <div id="local-masthead" data-sticky data-sticky-on="large" data-top-anchor="180" data-btm-anchor="300000">
+      <header>
+
+        <div id="global-masthead" class="clearfix">
+          <!--This has to be one line and no newline characters-->
+          <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>
+
+          <nav>
+            <div class="row">
+              <ul id="global-nav" class="menu">
+                <!-- set active class as appropriate -->
+                <li id="home-mobile" class=""><a href="//www.ebi.ac.uk"></a></li>
+                <li id="home" class="active"><a href="//www.ebi.ac.uk"><i class="icon icon-generic" data-icon="H"></i> EMBL-EBI</a></li>
+                <li id="services"><a href="//www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="("></i> Services</a></li>
+                <li id="research"><a href="//www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon=")"></i> Research</a></li>
+                <li id="training"><a href="//www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>
+                <li id="about"><a href="//www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="i"></i> About us</a></li>
+                <li id="search">
+                  <a href="#" data-toggle="search-global-dropdown"><i class="icon icon-functional" data-icon="1"></i> <span class="show-for-small-only">Search</span></a>
+                  <div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
+                    <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">
+                      <fieldset>
+                        <h5>Search all of EMBL-EBI</h5>
+                        <label class="float-left">
+                          <input type="text" name="query" id="global-searchbox">
+                        </label>
+                        <input type="submit" name="submit" value="Search" class="button">
+                        <input type="hidden" name="db" value="allebi" checked="checked">
+                        <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
+                      </fieldset>
+                    </form>
+                  </div>
+                </li>
+                <li class="float-right show-for-medium embl-selector">
+                  <button class="button" type="button" data-toggle="embl-dropdown">Hinxton</button>
+                  <div id="embl-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
+                    to come.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+        </div>
+
+        <div class="masthead row">
+
+          <!-- local-title -->
+          <div class="columns medium-7" id="local-title">
+            <h1><a href="[service-url]" title="Back to [service-name] homepage"><div class="hexagon"><i class="icon icon-generic" data-icon=":"></i></div> EBI Framework</a></h1>
+          </div>
+          <!-- /local-title -->
+
+          <!-- local-nav -->
+              <nav >
+                <ul class="dropdown menu float-left" data-description="navigational">
+                  <li class="active"><a href="documentation.html">Overview</a></li>
+                  <li><a data-open="modal-download">Download</a></li>
+                  <li><a href="#">Support <i class="icon icon-generic" data-icon="x"></i></a></li>
+                </ul>
+                <ul class="menu dropdown float-right" data-dropdown-menu data-description="functional">
+                  <li class="functional"><a href="#"><i class="icon icon-generic" data-icon="d"></i> Share this</a>
+                    <ul class="menu js">
+                      <li><a href="#">Item 1A Loooong</a></li>
+                      <li>
+                        <a href='#'> Item 1 sub</a>
+                        <ul class='menu'>
+                          <li><a href='#'>Item 1 subA</a></li>
+                          <li><a href='#'>Item 1 subB</a></li>
+                          <li>
+                            <a href='#'> Item 1 sub</a>
+                            <ul class='menu'>
+                              <li><a href='#'>Item 1 subA</a></li>
+                              <li><a href='#'>Item 1 subB</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href='#'> Item 1 sub</a>
+                            <ul class='menu'>
+                              <li><a href='#'>Item 1 subA</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Item 1B</a></li>
+                    </ul>
+
+                </ul>
+              </nav>
+          <!-- /local-nav -->
+
+        </div>
+
+      </header>
+
+      </div>
+  </div>
+
+  <div class="reveal" id="modal-download" data-reveal>
+    <h2>Awesome. I Have It.</h2>
+    <p class="lead">Your couch. It is mine.</p>
+    <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+    <a class="button">Download</a>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div id="content" role="main" class="row">
+
+      <!-- Suggested layout containers -->
+      <section>
+
+        <!-- Your menu structure should make a breadcrumb redundant, but if a breadcrump is needed uncomment the below -->
+        <!--
+        <nav aria-label="You are here:" role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Parent</a></li>
+            <li class="disabled">Disabled</li>
+            <li>
+              <span class="show-for-sr">Current: </span> This page
+            </li>
+          </ul>
+        </nav>
+        -->
+
+        <div class="row">
+
+          <div class="medium-9 columns">
+
+            <div class="row">
+              <div class="small-12 columns">
+
+                <h2>EBI Framework overview</h2>
+                <span class="secondary label sans-serif"><i class="icon icon-generic" data-icon="i"></i> Framework version: 1.1</span>
+                <p class="lead">The framework is a collection of JS, CSS, icons, coding conventions, and templated components that will help you build robust web content faster than if you were to make it from scratch.</p>
+                <p>This page offers guidance on building web site, pages, and content that comply with the EMBL-EBI: visual look and semantic structure.</p>
+
+                <hr />
+
+                <h3>Guide contents</h3>
+
+                <div class="row">
+                  <div class="column medium-4">
+                    <ul class="menu vertical" >
+                      <li><a href="#overview"><strong>Overview</strong></a></li>
+                      <li><a href="#design-patterns"><strong>Design patterns</strong></a></li>
+                      <li><a href="#navigation"><strong>Navigation</strong></a></li>
+                      <ul class="nested vertical menu">
+                        <li><a href="#menus">Menus</a></li>
+                        <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+                      </ul>
+                    </ul>
+                  </div>
+                </div>
+                              
+                <hr />
+
+              </div>
+
+
+
+            </div>
+
+            <div class="row">
+
+
+
+
+          <div class="medium-12 columns sections">
+
+              <section id="overview" data-magellan-target="overview">
+
+                <h3>How to use this</h3>
+                <p>Use this as page and its associated assets as your boilerplate. Read through the text and draw on the examples. Use your browser's web inspector and view the source.</p>
+                <blockquote class="float-left">
+                  Do as I do, not as I say.
+                  <cite>This Framewok</cite>
+                </blockquote>
+                <p>This guide does not offer prescriptive solutions for every scenario, but integrates a wide range of pull quotes, form boxes, menus, and more to show you how things should be done.</p>
+                <p>Also <a href="http://foundation.zurb.com/sites/docs/global.html">consult the Foundation 6 docs <i class="icon icon-generic" data-icon="x"></i></a>, as this framework leverages that toolset.</p>
+                <p>During the initial rollout, we plan to host workshops to educate on the tooling and address issues or concerns, register you interest here [ADD LINK]</p>
+                <p>If you need technical guidance or have questions, <a href="#help">see the help section</a>.</p>
+
+                <h3>Requirements and what you get</h3>
+                <p>The framework is built with modern best practices and targets browsers shipped within the past three years; though other browsers should still handle the content and appearance well (graceful degradation). The framework is also mobile responsive, so you won't have to spend too much time adapting for mobile.</p>
+                <p>To help us help you, we've used the Foundation Framework (version 6) as a baseline. Using this we get a robust set of web components (tool tips, forms, sliders, and modal boxes) as well as technical guidance and extensive open source community testing -- and, perhaps, you'll be fortunate enough to already have a developer with experience with Foundation.</p>
+                <p>But we've taken care to make the implementation non-intrusive, so if you don't want to use these features, they won't likely get in your way.</p>
+                <p>The easiest way to implement the style guide is to download the EBI boilerplate (see links below) - this is an HTML file that you can use as a template for your own pages. It contains the HTML for the EBI header and footer and place holders for your project name / logo and page content. It also links to the core stylesheets you'll need to make your web pages look like part of the EBI website.</p>
+                <p><a href="https://github.com/khawkins98/EBI-Framework/archive/master.zip" class="button sans-serif">Download the framework</a> or <a href="https://github.com/khawkins98/EBI-Framework/">view on Github</a></p>
+
+                <div class="callout warning row">
+                  <h3>FAQs</h3>
+                  <dl>
+                    <dt>JavaScript:</dt>
+                      <dd>The framework does not require jQuery, but if you do use it you will get more nice to haves and your life may be easier all around. The jQuery functionality is enable by default. For more see the section on disabling JavaScript addons (you'll comment out two lines -- need to write this...)</dd>
+                    <dt>Bootstrap:</dt>
+                      <dd>While the front-end framework provides a robust set of tooling and a broader use base, its base styling is more opinionated (121KB vs 43KB of minified baseline CSS). Foundation allows us to provide a slimmer and faster EBI theme layer. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem. For Bootstrap users unfamiliar with Foundation, you might <a href="https://www.codementor.io/css/tutorial/bootstrap-3-vs-foundation-5-front-end-framework-comparison">read this comparison</a> (note that it references the slightly older version of Foundation 5, but is substantially the same for the article's proposes).</dd>
+                    <dt>SASS:</dt>
+                      <dd>We have not used Foundation's compilable CSS, nor have we added any other compile required tooling. This was done to keep implementation as simple as possible, and it offered limited benefits. However, we have implement the vanilla release of Foundation, so there's no reason you couldn't swap that out. As internal users become more familiar with Foundation and we further optimise, a future release may use SASS.</dd>
+                    <dt>Animation:</dt>
+                      <dd>Using CSS3 and JavaScript animations there are many opportunities to make our sites look good and function better, but we want to take this one step at a time and get other items in order. Currently on target for v1.5. <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="Foundation does have a complementary animation toolset that we've not bundled, but you could...">Feel free to experiment with subtle animations</span>, let us know if you do.</dd>
+                  </dl>
+                </div>
+              </section>
+
+
+
+          </div>
+
+
+
+           </div>
+
+
+          </div>
+
+          <div class="medium-3 columns sidebar">
+            <!-- local-search -->
+            <!-- if you do not have a local-search, delete the following form -->
+            <form id="local-search" name="local-search" action="[search-action]" method="post">
+              <h4>Search this project</h4>
+              <fieldset>
+                <input type="text" name="first" id="local-searchbox">
+                <input type="submit" name="submit" value="1" class="button icon icon-functional">
+                <small class="">
+                  <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search -->
+                  <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>
+                  |
+                  <!-- Include some example searchterms - keep them short and few. -->
+                  <a href="#" data-toggle="search-example-dropdown">See a few examples</a>
+                </small>
+                <div class="dropdown-pane" id="search-example-dropdown" data-dropdown data-options="hoverPane:true;" data-hover="true">
+                  <ul>
+                    <li><a href="[search-url-1]">[search-text-1]</a></li>
+                    <li><a href="[search-url-1]">[search-text-2]</a></li>
+                    <li><a href="[search-url-1]">[search-text-3]</a></li>
+                  </ul>
+                </div>
+                <!-- if you're not using the JS addons
+                Examples:
+                <ul>
+                  <li><a href="[search-url-1]">[search-text-1]</a></li>
+                  <li><a href="[search-url-1]">[search-text-2]</a></li>
+                  <li><a href="[search-url-1]">[search-text-3]</a></li>
+                </ul>
+                -->
+              </fieldset>
+            </form>
+            <!-- /local-search -->
+          </div>
+
+        </div>
+
+        <div class="row">
+
+
+          </div>
+
+
+          <div class="row serif">
+
+            <div class="large-6 columns">
+              <h3>Examples</h3>
+              <ul>
+                <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a> - big, empty space between header and footer</li>
+                <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a> - for content-driven pages deeper in your site's hierarchy, the sidebar could contain secondary navigation</li>
+                <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a> - an example of dividing the page into four broad content areas</li>
+                <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a> - an example page with filters or facets for your results in a left-hand sidebar, and a right-hand sidebar for global results</li>
+              </ul>
+              <h3>Search Results Examples</h3>
+              <ul>
+                <li><a href="ebi-search-results-complete.html">Search Results Complete</a> - template for a basic search results page </li>
+                <li><a href="ebi-no-search-results.html">No Search Results</a> - template for a page of zero results </li>
+              </ul>
+            </div>
+
+          </div>
+
+      </section>
+      <!-- End suggested layout containers -->
+
+    </div>
+
+
+    <footer>
+      <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+      <div id="local-footer">
+        <div class="row">
+          <span class="reference">How to reference this page: ...</span>
+        </div>
+      </div>
+      <!-- End optional local footer -->
+
+      <div id="global-footer">
+
+        <nav id="global-nav-expanded" class="row">
+          <!-- Footer will be automatically inserted by footer.js -->
+        </nav>
+
+        <section id="ebi-footer-meta" class="row">
+          <!-- Footer meta will be automatically inserted by footer.js -->
+        </section>
+
+      </div>
+
+    </footer>
+  </div> <!--! end of #wrapper -->
+
+
+  <!-- JavaScript -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/cookiebanner.js"></script>
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/foot.js"></script>
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://khawkins98.github.io/EBI-Framework/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://khawkins98.github.io/EBI-Framework/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+<!--
+   -->
+
+  
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <!--
+  <script>
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+  -->
+
+</body>
+</html>
