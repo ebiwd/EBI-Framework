@@ -298,6 +298,13 @@ a:active {
 
   #local-masthead div#local-title { margin-bottom: 1rem; }
 
+  #local-masthead {
+    background-repeat: no-repeat;
+    background-position: right 82%;
+    background-size: cover;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
+  }
+
   #local-masthead h1,
   #local-masthead p,
   #local-masthead a {
@@ -437,7 +444,7 @@ a:active {
   /* ebi icon font in the local title */
   .hexagon {
     font-size: 1.8rem;
-    color: #E9B400;
+    color: #000;
     background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 288 180 288" xml:space="preserve"><polygon class="st0" fill="#fff" points="147,363.6 203.2,331.1 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
     display: inline-block;
     background-size: 80px;
