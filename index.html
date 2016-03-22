@@ -209,7 +209,7 @@
                 <h2>EBI Framework overview</h2>
                 <span class="secondary label sans-serif"><i class="icon icon-generic" data-icon="i"></i> Framework version: 1.1</span>
                 <p class="lead">The framework is a collection of JS, CSS, icons, coding conventions, and templated components that will help you build robust web content faster than if you were to make it from scratch.</p>
-                <p>This page offers guidance on building web site, pages, and content that comply with the EMBL-EBI: visual look, semantic structure, and writing guidelines.</p>
+                <p>This page offers guidance on building web site, pages, and content that comply with the EMBL-EBI: visual look and semantic structure.</p>
 
                 <hr />
 
@@ -245,8 +245,6 @@
                     <ul class="menu vertical" >
                       <li><a href="#favicons"><strong>Favicons</strong></a></li>
                       <li><a href="#helper-classes"><strong>Helper classes</strong></a></li>
-                      <li><a href="#writing"><strong>Writing</strong></a></li>
-                      <li><a href="#metacopy"><strong>Metacopy</strong></a></li>
                       <li><a href="#browser-compatibility"><strong>Browser compatibility</strong></a></li>
                       <li><a href="#sitemap"><strong>Sitemap</strong></a></li>
                       <li><a href="#accesibility"><strong>Accesibility</strong></a></li>
@@ -292,12 +290,16 @@
 
                 <div class="callout warning row">
                   <h3>FAQs</h3>
-                  <ul>
-                    <li>JavaScript: The framework does not require jQuery, but if you do use it you will get more nice to haves and your life may be easier all around. The jQuery functionality is enable by default. For more see the section on disabling JavaScript addons (you'll comment out two lines -- need to write this...)</li>
-                    <li>Bootstrap, or, rather, why we haven't used it: Bootstrap also offers a robust set of tooling and a broader use base, however Bootstrap's base styling is more opinionated (121KB vs 43KB of minified baseline CSS). Foundation allows us to provide a slimmer and faster EBI theme layer. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem. For Bootstrap users unfamiliar with Foundation, you might <a href="https://www.codementor.io/css/tutorial/bootstrap-3-vs-foundation-5-front-end-framework-comparison">read this comparison</a> (note that it references the slightly older version of Foundation 5, but is substantially the same for the article's proposes).</li>
-                    <li>SASS: We have not used Foundation's compilable CSS, nor have we added any other compile required tooling. This was done to keep implementation as simple as possible, and it offered limited benefits. However, we have implement the vanilla release of Foundation, so there's no reason you couldn't swap that out. As internal users become more familiar with Foundation and we further optimise, a future release may use SASS.</li>
-                    <li>Animation: Using CSS3 and JavaScript animations there are many opportunities to make our sites look good and function better, but we want to take this one step at a time and get other items in order. Currently on target for v1.5. <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="Foundation does have a complementary animation toolset that we've not bundled, but you could...">Feel free to experiment with subtle animations</span>, let us know if you do.</li>
-                  </ul>
+                  <dl>
+                    <dt>JavaScript:</dt>
+                      <dd>The framework does not require jQuery, but if you do use it you will get more nice to haves and your life may be easier all around. The jQuery functionality is enable by default. For more see the section on disabling JavaScript addons (you'll comment out two lines -- need to write this...)</dd>
+                    <dt>Bootstrap:</dt>
+                      <dd>While the front-end framework provides a robust set of tooling and a broader use base, its base styling is more opinionated (121KB vs 43KB of minified baseline CSS). Foundation allows us to provide a slimmer and faster EBI theme layer. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem. For Bootstrap users unfamiliar with Foundation, you might <a href="https://www.codementor.io/css/tutorial/bootstrap-3-vs-foundation-5-front-end-framework-comparison">read this comparison</a> (note that it references the slightly older version of Foundation 5, but is substantially the same for the article's proposes).</dd>
+                    <dt>SASS:</dt>
+                      <dd>We have not used Foundation's compilable CSS, nor have we added any other compile required tooling. This was done to keep implementation as simple as possible, and it offered limited benefits. However, we have implement the vanilla release of Foundation, so there's no reason you couldn't swap that out. As internal users become more familiar with Foundation and we further optimise, a future release may use SASS.</dd>
+                    <dt>Animation:</dt>
+                      <dd>Using CSS3 and JavaScript animations there are many opportunities to make our sites look good and function better, but we want to take this one step at a time and get other items in order. Currently on target for v1.5. <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="Foundation does have a complementary animation toolset that we've not bundled, but you could...">Feel free to experiment with subtle animations</span>, let us know if you do.</dd>
+                  </dl>
                 </div>
               </section>
 
@@ -1035,64 +1037,7 @@
 
               </section>
 
-              <section id="writing" data-magellan-target="writing">
-                <h2>writing</h2>
-                <p>Guidance for writing content for web pages, considering tone, audience, message, structure. The text we write is called "copy" and comes in three main types:</p>
-                <ul>
-                 <li><a href="#macrocopy">Macro copy</a> - paragraphs of text on pages</li>
-                 <li><a href="#microcopy">Micro copy</a> - small areas of text that you find on a user interface or in messages</li>
-                 <li><a href="#metacopy">Meta copy</a> - the content of meta tags in pages: keywords and description</li>
-                </ul>
-                <h2><a name="macrocopy" id="macrocopy"></a>Macro copy</h2>
-                <p>Macro copy, sometimes called body copy, means paragraphs of text on pages, e.g. documentation, descriptions, news articles, etc. We've found that you can get great results by following Caroline Jarretts principles from <a href="http://www.editingthatworks.com/">Editing That Works</a>:</p>
-                <ol>
-                 <li>Understand context of use</li>
-                 <li>Choose what to say</li>
-                 <li>Slash everything else</li>
-                 <li>Edit sentences</li>
-                 <li>Put into logical order</li>
-                 <li>Demolish walls of words</li>
-                 <li>Choose links</li>
-                 <li>Check consistency</li>
-                 <li>Rest it then test it</li>
-                </ol>
-                <p>Caroline recommends <a href="http://www.editingthatworks.com/principles.htm">using the principles as a process</a>, from 1 to 9. If you'd like to learn more about how to write and edit text, we recommend the one-day EMBL course, Writing for the Web, taught by Caroline Jarrett. You can find <a href="https://intranet.embl.de/hr/training_development/index.html">details of the course on the EMBL website</a>.</p>
-                <h2><a name="microcopy" id="microcopy"></a>Micro copy</h2>
-                <p>Micro copy is small areas of text that you find on a user interface or in messages. For example, the labels for form inputs; explanatory text; progress or error messages. This text is frequently written by you, the developer who creates the interface, and it is important that it successfully communicates to the user.</p>
-                <h3>Using a microcopy framework</h3>
-                <p>Micro copy small pieces of text in a user interface; help, error or status messages, etc.</p>
-                <p>Many pieces of microcopy are generic, in which case, you can follow convention. If you're not sure, however, we recommend that you plan how you write microcopy. Aim to keep in mind the message you want to communicate and who will read it. The following framework should help:</p>
-                <table>
-                 <tbody>
-                 <tr>
-                  <th style="text-align: right;" scope="row">Message for:</th>
-                  <td>Who will read this?</td>
-                 </tr>
-                 <tr>
-                  <th style="text-align: right;" scope="row">To tell them:</th>
-                  <td>What do they need to know? What is your message?</td>
-                 </tr>
-                 <tr>
-                  <th style="text-align: right;" scope="row">So they:</th>
-                  <td>What should happen as a result?</td>
-                 </tr>
-                 <tr>
-                  <th style="text-align: right;" scope="row">Displayed via:</th>
-                  <td>Next to a page element? Permanent paragraph of text? Pop-up window? etc.</td>
-                 </tr>
-                 <tr>
-                  <th style="text-align: right;" scope="row">When:</th>
-                  <td>Does something trigger the display of this text?</td>
-                 </tr>
-                 <tr>
-                  <th style="text-align: right;" scope="row">Tone:</th>
-                  <td>Imagine you are addressing a colleague. Be clear but jargon-free.</td>
-                 </tr>
-                 </tbody>
-                </table>
-                <p class="mute"><em>Based on the Intercom microcopy framework, via @destraynor</em></p>
-              </section>
-                  
+
               <section id="browser-compatibility" data-magellan-target="browser-compatibility">
                 <h2>Browser compatibility</h2>
                   
