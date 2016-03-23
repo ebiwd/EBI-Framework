@@ -37,9 +37,8 @@ a.button, a.button:visited { color: #f8f8f8; }
 /* Colour - defaults to be reset by custom stylesheet
 ===================================================*/
 div#global-masthead { background-color: #333; }
-h1, h2, h3, h4, h5, h6 {
-    color: #222222;
-}
+h1, h2, h3, h4, h5, h6 { color: #222222; }
+
 h4 { color: #666666; }
 /* --- Links --- */
 a {
@@ -619,11 +618,29 @@ a:active {
     margin-right: 1rem;
   }
 
+  blockquote.lead { margin-left: 1rem; }
+
+  /* bigger first line for some blockquotes */
+  blockquote.drop-quote::first-line {
+    font-size: 1.6rem;
+  }
+
+  /* tweaks to foundation's mobile settings */
+  @media screen and (max-width: 40em) { 
+    body #content { padding-right: .5rem; padding-left: .5rem; }
+    body h1 { font-size: 2.5rem; } 
+    body h2 { font-size: 2rem; } 
+    body h3 { font-size: 1.5rem; } 
+  }
+
 /* mono-space fonts are fat */
 code { font-size: .95rem; }
 
 /* hide */
 .hidden, .hide { display: none; }
+
+/* inline-block */
+.inline-block { display: inline-block; }
 
 /* buttons */
 .button:focus,
