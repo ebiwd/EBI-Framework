@@ -396,8 +396,14 @@
     var localMastheadColor = document.querySelector("meta[name='ebi-localmasthead-color']");
     var localMastheadImage = document.querySelector("meta[name='ebi-localmasthead-image']");
 
-    if (localMastheadColor != null) localMasthead.style.backgroundColor = localMastheadColor.getAttribute("content");
-    if (localMastheadImage != null) localMasthead.style.backgroundImage = 'url(' + localMastheadImage.getAttribute("content") + ')';
+    if (localMastheadColor != null) {
+      localMasthead.style.backgroundColor = localMastheadColor.getAttribute("content");
+      localMasthead.className += ' meta-background-color';
+    }
+    if (localMastheadImage != null) {      
+      localMasthead.style.backgroundImage = 'url(' + localMastheadImage.getAttribute("content") + ')'; 
+      localMasthead.className += ' meta-background-image';
+  }
 
   })();
   
