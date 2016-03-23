@@ -60,7 +60,7 @@ a:active {
 
 .ebi-background { background: rgb(0,124,130); }
 .services-background { background: rgb(2,100,105); }
-.research-background { background: rgb(168,200,19); }
+.research-background { background: rgb(109,171,73); }
 .training-background { background: rgb(233,180,0); }
 .industry-background { background: rgb(0,134,180); }
 .elixir-background { background: rgb(251,106,42); }
@@ -68,7 +68,7 @@ a:active {
 
 .ebi-color, a.ebi-color, a:hover.ebi-color { color: rgb(0,124,130); }
 .services-color, a.services-color, a:hover.services-color { color: rgb(2,100,105); }
-.research-color, a.research-color, a:hover.research-color { color: rgb(168,200,19); }
+.research-color, a.research-color, a:hover.research-color { color: rgb(109,171,73); }
 .training-color, a.training-color, a:hover.training-color { color: rgb(233,180,0); }
 .industry-color, a.industry-color, a:hover.industry-color { color: rgb(0,134,180); }
 .elixir-color, a.elixir-color, a:hover.elixir-color { color: rgb(251,106,42); }
@@ -170,7 +170,7 @@ a:active {
   #global-masthead ul li#research a:focus,
   #global-masthead ul li#research.active a,
   #global-masthead ul li#research.active-trail a {
-    background-color: rgb(168,200,19);
+    background-color: rgb(109,171,73);
   }
 
   /* custom colour for Training */
@@ -344,7 +344,7 @@ a:active {
     background: rgb(0,134,180);
   }
   body.section-research #local-masthead {
-    background: rgb(168,200,19);
+    background: rgb(109,171,73);
   }
   body.section-research #local-title h1,
   body.section-research #local-title p,

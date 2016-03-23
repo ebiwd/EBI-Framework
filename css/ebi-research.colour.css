@@ -9,26 +9,26 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: rgb(168,200,19);
+  color: rgb(109,171,73);
 }
 
 h1 { color: #f7f7f7; }
-h2 { color: rgb(168,200,19); }
+h2 { color: rgb(109,171,73); }
 h3 { color: #444444; }
 
 a.special { background-color: #7cd17c; }
 
 .button {       
-  background-color: rgb(168,200,19);
+  background-color: rgb(109,171,73);
   color: #f8f8f8;
 }   
 .button:hover,
 .button:focus,
-.button:active { background: rgba(168,200,19,.9); }
+.button:active { background: rgba(109,171,73,.9); }
 
-div#local-masthead { background-color: rgb(168,200,19); }
+div#local-masthead { background-color: rgb(109,171,73); }
 
 /* Menu hover triangle colour */
-#local-masthead nav ul#global-nav.menu li a:hover:after { border-bottom-color: rgb(168,200,19); }
+#local-masthead nav ul#global-nav.menu li a:hover:after { border-bottom-color: rgb(109,171,73); }
 
 /* end */
