@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Research &lt; EMBL-EBI</title>
+  <meta name="description" content="EMBL-EBI"><!-- Describe what this page is about -->
+  <meta name="keywords" content="bioinformatics, europe, institute"><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
+  <meta name="author" content="EMBL-EBI"><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#70BDBD"> <!-- Android Chrome mobile browser tab color -->
+    
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi-owner" content="John Doe"> <!-- Who should be contacted about changes -->
+  <meta name="ebi-review-cycle" content="30"> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi-last-review" content="2015-12-20"> <!-- The last time the content was reviewed -->
+  <meta name="ebi-expiry" content="2016-01-20"> <!-- When this content is no longer relevant -->
+    
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//embl.de" />
+
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png"> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png"> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png"> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png"> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff"> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797"> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/mstile-144x144.png">
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="../css/ebi-global.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/fonts/fonts.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/libraries/foundation-6/css/foundation.css" type="text/css" media="all">
+
+  <!-- Use this CSS file for any custom styling -->
+  <!--
+    <link rel="stylesheet" href="css/custom.css" type="text/css" media="all">
+  -->
+
+  <!-- If you have a custom header image or colour -->
+  <meta name="ebi-localmasthead-color" content="#000">
+  <meta name="ebi-localmasthead-image" content="../images/backgrounds/research-green-2.jpg">
+
+    <!-- you can replace this with [projectname]-colours.css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/css/ebi-research.colour.css" type="text/css" media="all">
+
+  <!-- for production the above can be replaced with -->
+  <!--
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css">
+  -->
+
+  <!-- end CSS-->
+
+
+  <!-- All JavaScript at the bottom, except for Modernizr -->
+  <script src="https://khawkins98.github.io/EBI-Framework/libraries/modernizr/modernizr.custom.49274.js"></script>
+
+</head>
+
+<body class="level2"><!-- add any of your classes or IDs -->
+  <div id="skip-to">
+    <ul>
+      <li><a href="#content">Skip to main content</a></li>
+      <li><a href="#local-nav">Skip to local navigation</a></li>
+      <li><a href="#global-nav">Skip to EBI global navigation menu</a></li>
+      <li><a href="#global-nav-expanded">Skip to expanded EBI global navigation menu (includes all sub-sections)</a></li>
+    </ul>
+  </div>
+
+  <div data-sticky-container>
+    <div id="local-masthead" data-sticky data-sticky-on="disabled" data-top-anchor="180" data-btm-anchor="300000">
+      <header>
+
+        <div id="global-masthead" class="clearfix">
+          <!--This has to be one line and no newline characters-->
+          <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>
+
+          <nav>
+            <div class="row">
+              <ul id="global-nav" class="menu">
+                <!-- set active class as appropriate -->
+                <li id="home-mobile" class=""><a href="//www.ebi.ac.uk"></a></li>
+                <li id="home"><a href="//www.ebi.ac.uk"><i class="icon icon-generic" data-icon="H"></i> EMBL-EBI</a></li>
+                <li id="services"><a href="//www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="("></i> Services</a></li>
+                <li id="research" class="active"><a href="//www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon=")"></i> Research</a></li>
+                <li id="training"><a href="//www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>
+                <li id="about"><a href="//www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="i"></i> About us</a></li>
+                <li id="search">
+                  <a href="#" data-toggle="search-global-dropdown"><i class="icon icon-functional" data-icon="1"></i> <span class="show-for-small-only">Search</span></a>
+                  <div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
+                    <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">
+                      <fieldset>
+                        <h5>Search all of EMBL-EBI</h5>
+                        <label class="float-left">
+                          <input type="text" name="query" id="global-searchbox">
+                        </label>
+                        <input type="submit" name="submit" value="Search" class="button">
+                        <input type="hidden" name="db" value="allebi" checked="checked">
+                        <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
+                      </fieldset>
+                    </form>
+                  </div>
+                </li>
+                <li class="float-right show-for-medium embl-selector">
+                  <button class="button" type="button" data-toggle="embl-dropdown">Hinxton</button>
+                  <div id="embl-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
+                    to come.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+        </div>
+
+        <div class="masthead row">
+
+          <!-- local-title -->
+          <div class="columns medium-12" id="local-title">
+            <h1><a href="[service-url]" title="Back to [service-name] homepage"> Research</a></h1>
+            <h4>A unique environment for research</h4>
+    
+
+          </div>
+          <!-- /local-title -->
+
+          <!-- local-nav -->
+              <nav >
+                <ul class="dropdown menu float-left" data-description="navigational">
+                  <li class="first active-trail active menu-mlid-3080 menu-overview active active-trail menu-3080"><a href="/research" class="active-trail active">Overview</a></li>
+                  <li class=" menu-mlid-4816 menu-publications menu-4816"><a href="/research/publications">Publications</a></li>
+                  <li class=" menu-mlid-3422 menu-research-groups menu-3422"><a href="/research/groups">Research groups</a></li>
+                  <li class=" has-children menu-mlid-3407 menu-postdocs menu-3407"><a href="/research/postdocs">Postdocs</a></li>
+                  <li class="last has-children menu-mlid-3125 menu-phd-programme menu-3125"><a href="/research/eipp" title="EMBL International PhD Programme at EMBL-EBI">PhD programme</a></li>
+
+                </ul>
+                <ul class="menu dropdown float-right" data-dropdown-menu data-description="functional">
+                  <li class="functional"><a href="#"><i class="icon icon-generic" data-icon="d"></i> Share this</a>
+                    <ul class="menu js">
+                      <li><a href="#">Item 1A Loooong</a></li>
+                      <li>
+                        <a href='#'> Item 1 sub</a>
+                        <ul class='menu'>
+                          <li><a href='#'>Item 1 subA</a></li>
+                          <li><a href='#'>Item 1 subB</a></li>
+                          <li>
+                            <a href='#'> Item 1 sub</a>
+                            <ul class='menu'>
+                              <li><a href='#'>Item 1 subA</a></li>
+                              <li><a href='#'>Item 1 subB</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href='#'> Item 1 sub</a>
+                            <ul class='menu'>
+                              <li><a href='#'>Item 1 subA</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Item 1B</a></li>
+                    </ul>
+
+                </ul>
+              </nav>
+          <!-- /local-nav -->
+
+        </div>
+
+      </header>
+
+      </div>
+  </div>
+
+
+  <div id="content" role="main" class="row">
+
+      <!-- Suggested layout containers -->
+      <section>
+
+        <!-- Your menu structure should make a breadcrumb redundant, but if a breadcrump is needed uncomment the below -->
+        <!--
+        <nav aria-label="You are here:" role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Parent</a></li>
+            <li class="disabled">Disabled</li>
+            <li>
+              <span class="show-for-sr">Current: </span> This page
+            </li>
+          </ul>
+        </nav>
+        -->
+
+        <div class="row">
+
+          <div class="medium-9 columns">
+
+              <p class="lead">
+              The European Bioinformatics Institute (EMBL-EBI) has been leading computational biology research since its inception in 1994, with work spanning fundamental methods in sequence analysis, multi-dimensional statistical analysis and data-driven biological discovery, from plant biology to mammalian development and disease.
+              </p>
+              <blockquote class="float-right medium-3 lead">Four EMBL papers are among the top 100 most highly cited papers ever.</blockquote>
+              <p>We are highly collaborative and interdisciplinary, regularly publishing high-impact works on sequence and structural alignment, genome analysis, basic biological breakthroughs, algorithms and methods of widespread importance.</p>
+              <p>Located on the Wellcome Genome Campus just south of Cambridge in the UK, EMBL-EBI is at the centre of one of the highest concentrations of technical and scientific expertise in the world. We are part of the <a href="http://www.embl.de/research/faculty/index.php?dtySt=0">European Molecular Biology Laboratory</a>, which has a well-integrated experimental and computational research programme on its five sites.</p><p> EMBL researchers publish regularly in top-tier journals, with 40% of papers in the top 5% of journals in biochemistry, genetics and molecular biology (2012–2014). Four EMBL papers are among the <a href="http://www.nature.com/news/the-top-100-papers-1.16224">top 100 most highly cited papers ever</a> – one in the top 10 and two co-authored by EMBL-EBI researchers. </p>
+
+
+
+              <hr/>
+
+
+            <div class="">
+
+            <h3>Research group information, publications and contact </h3>
+            <p>Research at EMBL-EBI is carried out both in groups devoted solely to research and in some service teams. Most research groups collaborate closely with experimentalists, and some generate experimental data themselves.</p>
+
+
+
+
+
+
+              <div class="row view-content medium-up-6" >
+                <div class="views-row column views-row-1 views-row-odd views-row-first">
+
+                  <div class="image float-left"><a class="" href="/research/bateman"><img class="" src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/bateman_alex_web_2014.jpg" alt="Alex Bateman" /></a></div>    
+                  <div class="name">Alex Bateman</div>    
+                    </div>
+                <div class="views-row column views-row-2 views-row-even">
+
+                  <div class="image float-left"><a href="/research/beltrao"><img class="" src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/BELTRAO_Pedro_72_0.jpg" alt="Pedro Beltrao" /></a></div>    
+                  <div class="name">Pedro Beltrao</div>    
+    </div>
+                <div class="views-row column views-row-3 views-row-odd">
+
+                  <div class="image float-left"><a href="/research/birney"><img class="" src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/birney_ewan_web_2015.jpg" alt="Ewan Birney" /></a></div>    
+                  <div class="name">Ewan Birney</div>    
+    </div>
+                <div class="views-row column views-row-4 views-row-even">
+
+                  <div class="image float-left"><a href="/research/brazma"><img class="" src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/Brazma_Alvis_72.jpg" alt="Alvis Brazma" /></a></div>    
+                  <div class="name">Alvis Brazma</div>    
+    </div>
+                <div class="views-row column views-row-5 views-row-odd">
+
+                  <div class="image float-left"><a href="/research/enright"><img class="" src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/enright_anton.jpg" alt="Anton Enright" /></a></div>    
+                  <div class="name">Anton Enright</div>    
+    </div>
+                <div class="views-row column views-row-6 views-row-even">
+
+                  <div class="image float-left"><a href="/research/flicek"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/Flicek_Paul_72.jpg" alt="Paul Flicek" /></a></div>    
+                  <div class="name">Paul Flicek</div>    
+    </div>
+                <div class="views-row column views-row-7 views-row-odd">
+
+                  <div class="image float-left"><a href="/research/gerstung"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/gerstung_moritz_web.jpg" alt="Moritz Gerstung" /></a></div>    
+                  <div class="name">Moritz Gerstung</div>    
+    </div>
+                <div class="views-row column views-row-8 views-row-even">
+
+                  <div class="image float-left"><a href="/research/goldman"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/goldman_nick_web_2014.jpg" alt="Nick Goldman" /></a></div>    
+                  <div class="name">Nick Goldman</div>    
+    </div>
+                <div class="views-row column views-row-9 views-row-odd">
+
+                  <div class="image float-left"><a href="/research/kleywegt"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/KLEYWEGT_Gerard_220.jpg" alt="Gerard Kleywegt" /></a></div>    
+                  <div class="name">Gerard Kleywegt</div>    
+    </div>
+                <div class="views-row column views-row-10 views-row-even">
+
+                  <div class="image float-left"><a href="/research/marioni"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/MARINONI_John_72.jpg" alt="John Marioni" /></a></div>    
+                  <div class="name">John Marioni</div>    
+    </div>
+                <div class="views-row column views-row-11 views-row-odd">
+
+                  <div class="image float-left"><a href="/research/saez-rodriguez"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/SAEZ-ROD_Julio_72_0.jpg" alt="Julio Saez-Rodriguez" /></a></div>    
+                  <div class="name">Julio Saez-Rodriguez</div>    
+    </div>
+                <div class="views-row column views-row-12 views-row-even">
+
+                  <div class="image float-left"><a href="/research/stegle"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/stegl_oliver_web_2015.jpg" alt="Oliver Stegle" /></a></div>    
+                  <div class="name">Oliver Stegle</div>    
+    </div>
+                <div class="views-row column views-row-13 views-row-odd">
+
+                  <div class="image float-left"><a href="/research/steinbeck"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/STEINBECK_Chris_72_0.jpg" alt="Christoph Steinbeck" /></a></div>    
+                  <div class="name">Christoph Steinbeck</div>    
+    </div>
+                <div class="views-row column views-row-14 views-row-even">
+
+                  <div class="image float-left"><a href="/research/teichmann"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/teichmann_sarah_web-2014.jpg" alt="Sarah Teichmann" /></a></div>    
+                  <div class="name">Sarah Teichmann</div>    
+    </div>
+                <div class="views-row column views-row-15 views-row-odd views-row-last">
+
+                  <div class="image float-left"><a href="/research/thornton"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/THORNTON_Janet_72.jpg" alt="Janet Thornton" /></a></div>    
+                  <div class="name">Janet Thornton</div>    
+    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+          </div>
+
+            <div class="medium-3 columns sidebar">
+              <h3 class="pane-title">Related pages</h3>
+              <ul>
+                <div class="columns medium-6">
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/services"><span class='icon icon-generic' data-icon='('></span> Services</a></li>
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/research"><span class='icon icon-generic' data-icon=')'></span> Research</a></li>
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/training"><span class='icon icon-generic' data-icon='f'></span> Training</a></li>
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/about/news"><span class='icon icon-generic' data-icon='N'></span> News</a></li>
+                </div>
+                <div class="columns medium-6">
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/about/jobs"><span class='icon icon-generic' data-icon='c'></span> Jobs</a></li>
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/about/travel"><span class='icon icon-generic' data-icon=']'></span> Visit us</a></li>
+                  <li class="icon-bullet"><a href="http://www.embl.de/aboutus/alumni/"><span class='icon icon-generic icon-c8' data-icon='&'></span> Alumni</a></li>
+                  <li class="icon-bullet"><a href="//wwwdev.ebi.ac.uk/about/contact"><span class='icon icon-generic' data-icon='C'></span> Contacts</a></li>
+                </div>
+              </ul>
+
+
+              
+
+                
+            </div>
+
+          </div>
+
+          <hr />
+
+
+
+  <!-- 
+          <hr />
+
+        <div class="row">
+
+            <div class="medium-12 columns">
+
+              <h3 class="pane-title">Our mission</h3>
+      
+              <ul>
+               <li>To provide freely available data and bioinformatics services to all facets of the scientific community</li>
+               <li>To contribute to the advancement of biology through basic investigator-driven research</li>
+               <li>To provide advanced bioinformatics training to scientists at all levels</li>
+               <li>To help disseminate cutting-edge technologies  to industry</li>
+               <li>To support, as an ELIXIR node, the coordination of biological data provision throughout Europe.</li>
+              </ul>
+            </div>
+
+          </div>
+ -->
+        </div>
+
+
+
+      </section>
+      <!-- End suggested layout containers -->
+
+    </div>
+
+
+    <footer>
+      <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+<!-- 
+      <div id="local-footer">
+        <div class="row">
+          <span class="reference">How to reference this page: ...</span>
+        </div>
+      </div>
+ -->     
+      <!-- End optional local footer -->
+
+      <div id="global-footer">
+
+        <nav id="global-nav-expanded" class="row">
+          <!-- Footer will be automatically inserted by footer.js -->
+        </nav>
+
+        <section id="ebi-footer-meta" class="row">
+          <!-- Footer meta will be automatically inserted by footer.js -->
+        </section>
+
+      </div>
+
+    </footer>
+  </div> <!--! end of #wrapper -->
+
+
+  <!-- JavaScript -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/cookiebanner.js"></script>
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/foot.js"></script>
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://khawkins98.github.io/EBI-Framework/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://khawkins98.github.io/EBI-Framework/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+<!--
+   -->
+
+  
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <!--
+  <script>
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+  -->
+
+</body>
+</html>
