@@ -52,8 +52,8 @@ A short list of concerns that need to be kept in mind during the dev process.
 ## Roadmap
 - v1.2: Guidance and templates for wide-screen content engagements
 - v1.4: Unit testing
-- v1.5: Add animation guidance and tooling; a la: https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a
-- v1.9: Possible switch to use SASS for better customisation and performance optimisation
+- v1.5: Add animation guidance and tooling ([see this] (https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))
+- v1.9: SASS for better customisation, performance optimisation, maintaibility
 
 ## Changelog
 2016-01-14
