@@ -1,11 +1,7 @@
 /*
-    Colour palette: EMBL Petrol
-    Details: Accented Analogic from ColourSchemeDesigner
-             http://colorschemedesigner.com/#3i61TnBpxw0w0
+  Colour palette: EMBL-EBI Petrol
 */
 
-/* Color
-===================================================*/
 a {
   color: #222;
 }
@@ -23,45 +19,16 @@ h3 { color: #444444; }
 a.special { background-color: #7cd17c; }
 
 .button {       
-    background-color: rgb(0,124,130);
-    color: #f8f8f8;
+  background-color: rgb(0,124,130);
+  color: #f8f8f8;
 }   
 .button:hover,
 .button:focus,
-.button:active { background: rgb(0,124,130); opacity: .9; }
+.button:active { background: rgba(0,124,130,.9); }
 
 div#local-masthead { background-color: rgb(0,124,130); }
 
-/* testing masthead combos */
-div#mastheads div#local h1 { color: #222; }
-
-/* Trying out some things for the expand/collapse global masthead */
-body.expander div#global { border-bottom-color: #111; }
-body.expander div#local { border-top-color: #70D3D3; }
-
-/* Palette color codes */
-.primary-1 { background-color: rgb(0,124,130) }
-.primary-2 { background-color: #295C5C }
-.primary-3 { background-color: #0A4F4F }
-.primary-4 { background-color: #54BDBD }
-.primary-5 { background-color: rgb(0,124,130) }
-
-.secondary-a-1 { background-color: #2E4988 }
-.secondary-a-2 { background-color: #344366 }
-.secondary-a-3 { background-color: #0F2559 }
-.secondary-a-4 { background-color: #6380C4 }
-.secondary-a-5 { background-color: #7D92C4 }
-
-.secondary-b-1 { background-color: #2BA32B }
-.secondary-b-2 { background-color: #377A37 }
-.secondary-b-3 { background-color: #0E6A0E }
-.secondary-b-4 { background-color: #5DD15D }
-.secondary-b-5 { background-color: #7CD17C }
-
-.complement-1 { background-color: #CB7935 }
-.complement-2 { background-color: #996A44 }
-.complement-3 { background-color: #844511 }
-.complement-4 { background-color: #E5A066 }
-.complement-5 { background-color: #E5B288 }
+/* Menu hover triangle colour */
+#local-masthead nav ul#global-nav.menu li a:hover:after { border-bottom-color: rgb(0,124,130); }
 
 /* end */
