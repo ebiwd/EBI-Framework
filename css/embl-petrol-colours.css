@@ -28,7 +28,4 @@ a.special { background-color: #7cd17c; }
 
 div#local-masthead { background-color: rgb(0,124,130); }
 
-/* Menu hover triangle colour */
-#local-masthead nav ul#global-nav.menu li a:hover:after { border-bottom-color: rgb(0,124,130); }
-
 /* end */

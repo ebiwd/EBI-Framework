@@ -216,7 +216,7 @@ a:active {
     margin: 0 -36px -5px -18px;
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
-    border-bottom: 5px solid rgb(0,124,130);
+    border-bottom: 5px solid rgb(0,0,0);
     -moz-transform: scale(0.999);
     -webkit-backface-visibility: hidden;
   }
