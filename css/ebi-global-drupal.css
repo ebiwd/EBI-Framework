@@ -24,6 +24,8 @@ body .form-actions.form-wrapper button {
   font-size: 0.9rem;
   }
 
+input[type="checkbox"], input[type="radio"] { vertical-align: text-top; }  
+
 /* Misc */
 .label { background: none; }
 html.js fieldset.collapsed { height: 2em; }
