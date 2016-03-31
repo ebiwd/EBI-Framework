@@ -98,13 +98,14 @@
                   <div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
                     <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">
                       <fieldset>
-                        <h5>Search all of EMBL-EBI</h5>
-                        <label class="float-left">
-                          <input type="text" name="query" id="global-searchbox">
-                        </label>
-                        <input type="submit" name="submit" value="Search" class="button">
-                        <input type="hidden" name="db" value="allebi" checked="checked">
-                        <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
+                        <div class="input-group">
+                          <input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">
+                          <div class="input-group-button">
+                            <input type="submit" name="submit" value="Search" class="button">
+                            <input type="hidden" name="db" value="allebi" checked="checked">
+                            <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
+                          </div>
+                        </div>
                       </fieldset>
                     </form>
                   </div>
@@ -207,7 +208,7 @@
               <p class="lead">
               The European Bioinformatics Institute (EMBL-EBI) has been leading computational biology research since its inception in 1994, with work spanning fundamental methods in sequence analysis, multi-dimensional statistical analysis and data-driven biological discovery, from plant biology to mammalian development and disease.
               </p>
-              <blockquote class="float-right medium-4 lead drop-quote"><span class='lead icon icon-generic research-color' data-icon='P'></span> Four EMBL papers are among the top 100 most highly cited papers ever.</blockquote>
+              <blockquote class="float-right medium-4 lead drop-quote show-for-medium"><span class='lead icon icon-generic research-color' data-icon='P'></span> Four EMBL papers are among the top 100 most highly cited papers ever.</blockquote>
               <p>We are highly collaborative and interdisciplinary, regularly publishing high-impact works on sequence and structural alignment, genome analysis, basic biological breakthroughs, algorithms and methods of widespread importance.</p>
               <p>Located on the Wellcome Genome Campus just south of Cambridge in the UK, EMBL-EBI is at the centre of one of the highest concentrations of technical and scientific expertise in the world. We are part of the <a href="http://www.embl.de/research/faculty/index.php?dtySt=0">European Molecular Biology Laboratory</a>, which has a well-integrated experimental and computational research programme on its five sites.</p><p> EMBL researchers publish regularly in top-tier journals, with 40% of papers in the top 5% of journals in biochemistry, genetics and molecular biology (2012–2014). Four EMBL papers are among the <a href="http://www.nature.com/news/the-top-100-papers-1.16224">top 100 most highly cited papers ever</a> – one in the top 10 and two co-authored by EMBL-EBI researchers. </p>
 
@@ -224,105 +225,135 @@
                     <div class="views-row column views-row-1 views-row-odd views-row-first">  
                       <a class="" href="/research
                         /bateman"><img class="" src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/bateman_alex_web_2014.jpg" alt="Alex Bateman" /><br/>
-                        <span class="name small">Alex Bateman</span><br/><br/>
+                        <strong class="name small">Alex Bateman</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-2 views-row-even">
                       <a href="/research/beltrao">
                         <img class="" src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/BELTRAO_Pedro_72_0.jpg" alt="Pedro Beltrao" /><br/>
-                        <span class="name small">Pedro Beltrao</span><br/><br/>
+                        <strong class="name small">Pedro Beltrao</strong>
+                        <br/><span class="small">Evolution of Cellular Networks</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-3 views-row-odd">
                       <a href="/research/birney">
                         <img class="" src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/birney_ewan_web_2015.jpg" alt="Ewan Birney" /><br/>
-                        <span class="name small">Ewan Birney</span><br/><br/>
+                        <strong class="name small">Ewan Birney</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-4 views-row-even">
                       <a href="/research/brazma">
                         <img class="" src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/Brazma_Alvis_72.jpg" alt="Alvis Brazma" /><br/>
-                        <span class="name small">Alvis Brazma</span><br/><br/>
+                        <strong class="name small">Alvis Brazma</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-5 views-row-odd">
                       <a href="/research/enright">
                         <img class="" src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/enright_anton.jpg" alt="Anton Enright" /><br/>
-                        <span class="name small">Anton Enright</span><br/><br/>
+                        <strong class="name small">Anton Enright</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-6 views-row-even">
                       <a href="/research/flicek">
                         <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/Flicek_Paul_72.jpg" alt="Paul Flicek" /><br/>
-                        <span class="name small">Paul Flicek</span><br/><br/>
+                        <strong class="name small">Paul Flicek</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-7 views-row-odd">
                       <a href="/research/gerstung">
                         <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/gerstung_moritz_web.jpg" alt="Moritz Gerstung" /><br/>
-                        <span class="name small">Moritz Gerstung</span><br/><br/>
+                        <strong class="name small">Moritz Gerstung</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-8 views-row-even">
                       <a href="/research/goldman">
                         <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/goldman_nick_web_2014.jpg" alt="Nick Goldman" /><br/>
-                        <span class="name small">Nick Goldman</span><br/><br/>
+                        <strong class="name small">Nick Goldman</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-9 views-row-odd">
                       <a href="/research/kleywegt">
                         <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/KLEYWEGT_Gerard_220.jpg" alt="Gerard Kleywegt" /><br/>
-                        <span class="name small">Gerard Kleywegt</span><br/><br/>
+                        <strong class="name small">Gerard Kleywegt</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-10 views-row-even">
                       <a href="/research/marioni">
                         <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/MARINONI_John_72.jpg" alt="John Marioni" /><br/>
-                        <span class="name small">John Marioni</span><br/><br/>
+                        <strong class="name small">John Marioni</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-11 views-row-odd">
                       <a href="/research/saez-rodriguez
                         "><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/SAEZ-ROD_Julio_72_0.jpg" alt="Julio Saez-Rodriguez" /><br/>
-                        <span class="name small">Julio Saez-Rodriguez</span><br/><br/>
+                        <strong class="name small">Julio Saez-Rodriguez</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-12 views-row-even">
                       <a href="/research/stegle">
                         <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/stegl_oliver_web_2015.jpg" alt="Oliver Stegle" /><br/>
-                        <span class="name small">Oliver Stegle</span><br/><br/>
+                        <strong class="name small">Oliver Stegle</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-13 views-row-odd">
                       <a href="/research/steinbeck">
                         <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/STEINBECK_Chris_72_0.jpg" alt="Christoph Steinbeck" /><br/>
-                        <span class="name small">Christoph Steinbeck</span><br/><br/>
+                        <strong class="name small">Christoph Steinbeck</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-14 views-row-even">
                       <a href="/research/teichmann">
                         <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/teichmann_sarah_web-2014.jpg" alt="Sarah Teichmann" /><br/>
-                        <span class="name small">Sarah Teichmann</span><br/><br/>
+                        <strong class="name small">Sarah Teichmann</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 
                     <div class="views-row column views-row-15 views-row-odd views-row-last">
                       <a href="/research/thornton">
                         <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/THORNTON_Janet_72.jpg" alt="Janet Thornton" /><br/>
-                        <span class="name small">Janet Thornton</span><br/><br/>
+                        <strong class="name small">Janet Thornton</strong>
+                        <br/><span class="group small">Description</span>
+                        <br/><br/>
                       </a>
                     </div>
 

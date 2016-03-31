@@ -98,13 +98,14 @@
                   <div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
                     <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">
                       <fieldset>
-                        <h5>Search all of EMBL-EBI</h5>
-                        <label class="float-left">
-                          <input type="text" name="query" id="global-searchbox">
-                        </label>
-                        <input type="submit" name="submit" value="Search" class="button">
-                        <input type="hidden" name="db" value="allebi" checked="checked">
-                        <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
+                        <div class="input-group">
+                          <input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">
+                          <div class="input-group-button">
+                            <input type="submit" name="submit" value="Search" class="button">
+                            <input type="hidden" name="db" value="allebi" checked="checked">
+                            <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
+                          </div>
+                        </div>
                       </fieldset>
                     </form>
                   </div>

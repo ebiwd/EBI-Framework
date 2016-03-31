@@ -201,6 +201,14 @@ a:active {
     color: #fff;
   }
 
+  #search-global-dropdown {
+    width: 100%;
+    background: #222;
+    border: none;
+    margin-top: -1px;
+    color: #fff;
+  }
+
   /* Menu triangles */
   #local-masthead nav ul#secondary-menu-links.menu li a:hover:after,
   #local-masthead nav ul#global-nav.menu li a:hover:after, 
