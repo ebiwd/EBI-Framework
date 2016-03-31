@@ -595,7 +595,9 @@ a:active {
   .with-overlay .caption .inner {
     position: absolute;
     bottom: 5%;
-  }
+    width: 95%;
+    padding-right: 4rem;
+}
   .with-overlay .caption a.inner {
     color: #fff;
     text-decoration: none;
@@ -603,10 +605,8 @@ a:active {
     font-size: 1.4rem;
     line-height: 1.4em;
     padding-top: 50%;
-    width: 83%;
-    content: " »";
   }
-  .with-overlay .caption a:after {content: " »"; display: inline-block; float: right; font-size: 4rem; position: relative; top: -1rem; left: 2rem;}
+  .with-overlay .caption a:after { font-family: "EBI-Functional"; content: " >"; display: inline-block; float: right; font-size: 1.7rem; position: relative; top: -.1rem; left: 2rem;}
   .with-overlay .caption:hover a.inner { color: #fff;  }
 
   .serif { font-family: 'EB Garamond', 'georgia', serif;  font-size: 1.1rem; }
@@ -654,6 +654,15 @@ code { font-size: .95rem; }
 .button:focus,
 .button:hover,
 .button.hover { background-color: rgba(255,255,255,.5);}
+
+/* read more */
+a.read-more:after,
+a.readmore:after,
+a.more:after {
+  content: " >";
+  font-family: "EBI-Functional";
+  font-size: .85em;
+}
 
 /* icon to indicate link is a PDF file */
 a span.link-pdf { background: url(http://www.ebi.ac.uk/inc/images/icon_pdf.gif) right center no-repeat; padding: 0 18px 0 0; }
