@@ -642,10 +642,10 @@ a:active {
   }
 
   /* Orbit thumbnails */
-  nav.orbit-bullets button.thumbnail {
-    width: auto;
-    border-radius: 0;
-  }
+  nav.orbit-bullets button.thumbnail { width: auto; border-radius: 0; }
+  nav.orbit-bullets button.thumbnail.is-active { box-shadow: 0 0 1px  #444; }
+  nav.orbit-bullets button.thumbnail.image {width: 4rem; height: 3rem; overflow: hidden;}
+  nav.orbit-bullets button.thumbnail.image > img { min-width: 6rem; margin-left: -2rem; }
 
 /* mono-space fonts are fat */
 code { font-size: .95rem; }
