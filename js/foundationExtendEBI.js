@@ -6,6 +6,10 @@
 // Foundation specific extensions of functionality
 (function($) {
 
+  // Clone the local menu into a mobile-only menu
+  var localMenuOption = $('ul.dropdown.menu.float-left').html();
+  $('ul.dropdown.menu.float-left').prepend('<li class="show-for-small-only"><a href="#">Menu</a><ul class="menu">' + localMenuOption + '</ul></li>');
+
   $.fn.foundationExtendEBI = function() {
     // Link overlay images
     $(function() {
