@@ -598,7 +598,7 @@ a:active {
     width: 95%;
     padding-right: 4rem;
 }
-  .with-overlay .caption a.inner {
+  .with-overlay .caption > a.inner {
     color: #fff;
     text-decoration: none;
     border-bottom: none;
@@ -606,8 +606,8 @@ a:active {
     line-height: 1.4em;
     padding-top: 50%;
   }
-  .with-overlay .caption a:after { font-family: "EBI-Functional"; content: " >"; display: inline-block; float: right; font-size: 1.7rem; position: relative; top: -.1rem; left: 2rem;}
-  .with-overlay .caption:hover a.inner { color: #fff;  }
+  .with-overlay .caption > a:after { font-family: "EBI-Functional"; content: " >"; display: inline-block; float: right; font-size: 1.7rem; position: relative; top: -.1rem; left: 2rem;}
+  .with-overlay .caption:hover > a.inner { color: #fff;  }
 
   .serif { font-family: 'EB Garamond', 'georgia', serif;  font-size: 1.1rem; }
   .sans-serif { font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;  font-size: 1.1rem; }
@@ -639,6 +639,12 @@ a:active {
     body h1 { font-size: 2.5rem; } 
     body h2 { font-size: 2rem; } 
     body h3 { font-size: 1.5rem; } 
+  }
+
+  /* Orbit thumbnails */
+  nav.orbit-bullets button.thumbnail {
+    width: auto;
+    border-radius: 0;
   }
 
 /* mono-space fonts are fat */
