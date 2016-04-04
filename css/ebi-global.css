@@ -240,9 +240,9 @@ a:active {
   /* Local masthead secondary links on mobile */
   @media screen and (max-width: 40em) {
     #local-masthead ul.menu.dropdown.float-right {
-      clear: both;
+    /*  clear: both;
       position: relative;
-      height: 0;
+      height: 0;*/
     }
 
     #local-masthead ul.menu.dropdown.float-right > li {
@@ -250,17 +250,21 @@ a:active {
     }
 
     #local-masthead ul.menu.dropdown.float-right a {
-      color: #666;
+      /*color: #666;*/
     }
 
     body #local-masthead ul.menu.dropdown.float-right > .has-submenu.is-down-arrow > a::after {
-      border-color: #666 transparent transparent;
+     /* border-color: #666 transparent transparent;*/
     }
 
     #local-masthead nav ul#global-nav.menu li { float: none; display: inline-block; }
     #local-masthead nav ul#global-nav.menu li#home-mobile { float: left; }
 
     ul#global-nav { text-align: right; }
+
+    /* hide secondary links expect the mobile menu */
+    #local-masthead nav ul.dropdown.menu.float-left > li { display: none; }
+    #local-masthead nav ul.dropdown.menu.float-left > li:first-child { display: inline-block; border-right: none; }
   
     /* make icon bar smaller for mobile */
     ul#global-nav.menu > li > a > img, ul#global-nav.menu > li > a > i {
@@ -388,7 +392,7 @@ a:active {
   body .dropdown.menu .has-submenu.is-right-arrow > a::after {
     border-color: transparent transparent transparent rgba(0,0,0,.4);
   }
-  body .menu.dropdown.float-right > .has-submenu.is-down-arrow > a::after {
+  body header nav .menu.dropdown > .has-submenu.is-down-arrow > a::after {
     border-color: #fff transparent transparent;
   }
 
