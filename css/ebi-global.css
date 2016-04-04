@@ -203,6 +203,7 @@ a:active {
 
   #search-global-dropdown {
     width: 100%;
+    left: 0;
     background: #222;
     border: none;
     margin-top: -1px;
