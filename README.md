@@ -50,7 +50,8 @@ A short list of concerns that need to be kept in mind during the dev process.
 - Standardised feeback capturing
 
 ## Roadmap
-- v1.2: Guidance and templates for wide-screen content engagements
+- v1.2: Guidance and templates for wide-screen content engagements;
+        Use the masthead image as a skybox promo/feature
 - v1.4: Unit testing
 - v1.5: Add animation guidance and tooling ([see this] (https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))
 - v1.9: SASS for better customisation, performance optimisation, maintaibility
