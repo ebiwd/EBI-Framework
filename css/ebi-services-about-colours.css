@@ -18,6 +18,8 @@ h3 { color: #444444; }
 
 a.special { background-color: #7cd17c; }
 
+a.label,
+.label,
 .button {       
   background-color: rgb(2,100,105);
   color: #f8f8f8;
