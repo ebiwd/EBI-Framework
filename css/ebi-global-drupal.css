@@ -27,7 +27,7 @@ body .form-actions.form-wrapper button {
 input[type="checkbox"], input[type="radio"] { vertical-align: text-top; }  
 
 /* Misc */
-/*.label { background: none; }*/
+#panels-edit-display-form h2.label { background: none; }
 html.js fieldset.collapsed { height: 2em; }
 .button.primary { background-color: rgb(233,180,0); }
 
