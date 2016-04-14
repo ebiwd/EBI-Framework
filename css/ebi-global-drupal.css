@@ -61,3 +61,19 @@ div.warning {
 
 /* Do not show default page title on panel pages */
 body.page-node h2#page-title { display: none; }
+
+/* Allow showing of drupal status messages statically */
+body.is-reveal-open #status-messages.static {
+  position: static !important;
+  width: auto;
+  margin-top: 1rem;
+}
+body.is-reveal-open #status-messages.static button.close-button {
+  position: static;
+  display: inline-block;
+  float: right;
+}
+body.is-reveal-open #status-messages.static .alert-box {
+  display: inline-block;
+  margin-top: .25rem;
+}
