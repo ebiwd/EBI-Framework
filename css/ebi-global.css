@@ -4,7 +4,7 @@
   These build atop and tweak Foundation's base styles, which we do not directly edit.
 */
 
-body h1, body h2, body h3 { font-weight: 200; }
+body h1, body h2, body h3 { font-weight: 300; }
 
 li { word-wrap: break-word; }
 
