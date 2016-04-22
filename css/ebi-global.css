@@ -459,7 +459,9 @@ a:active {
   .hexagon {
     font-size: 1.8rem;
     color: #000;
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 288 180 288" xml:space="preserve"><polygon class="st0" fill="#fff" points="147,363.6 203.2,331.1 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
+    /*background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 288 180 288" xml:space="preserve"><polygon class="st0" fill="#fff" points="147,363.6 203.2,331.1 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');*/
+    /* Base 64 for IE/FF */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIxNDcgMjg4IDE4MCAyODgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGNsYXNzPSJzdDAiIGZpbGw9IiNmZmYiIHBvaW50cz0iMTQ3LDM2My42IDIwMy4yLDMzMS4xIDI1OS4zLDM2My42IDI1OS4zLDQyOC40IDIwMy4yLDQ2MC45IDE0Nyw0MjguNCAiLz48L3N2Zz4=");
     display: inline-block;
     background-size: 80px;
     background-position: 0 -15px;
