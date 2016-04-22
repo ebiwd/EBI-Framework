@@ -311,7 +311,9 @@ a:active {
     background-repeat: no-repeat;
     background-position: 100% 82%;
     background-size: cover;
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
+    /*background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');*/
+    /* Base64 for IE/FF */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIxNDcgMjQ4IDYwIDI0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gY2xhc3M9InN0MCIgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjA1IiBwb2ludHM9IjE0NywzNjMuNiAyNTkuMywzNjMuNiAyNTkuMyw0MjguNCAyMDMuMiw0NjAuOSAxNDcsNDI4LjQgIi8+PC9zdmc+Jyk7');
   }
 
   #local-masthead.meta-background-image {
