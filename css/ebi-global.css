@@ -646,6 +646,7 @@ a:active {
   @media screen and (max-width: 40em) { 
     body #content { padding-right: .5rem; padding-left: .5rem; }
     body h1 { font-size: 2.5rem; } 
+    body h1 .hexagon { display:none; } 
     body h2 { font-size: 2rem; } 
     body h3 { font-size: 1.5rem; } 
   }
