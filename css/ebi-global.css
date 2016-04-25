@@ -575,6 +575,7 @@ a:active {
     font-family: sans-serif;
     font-size: .85rem;
     opacity: .8;
+    overflow: hidden;
   }  
   .with-overlay {
     position: relative;
