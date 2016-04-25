@@ -37,6 +37,10 @@
     // Smooth scroll anchor links for jQuery users
     $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
+        // Table compatibility
+        if ($(this).parent().parent().hasClass('tabs')) {
+          return true; //exit
+        }
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
