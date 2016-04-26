@@ -322,12 +322,11 @@ a:active {
   }
 
   #local-masthead h1,
+  #local-masthead h4,
   #local-masthead p,
   #local-masthead a {
     color: #fff;
   }
-/*      background-color: rgba(255,255,255,.5); color: #444; 
-*/
   #local-masthead ul li.is-active a,
   #local-masthead ul li a:hover,
   #local-masthead nav ul li a.hover,
