@@ -47,8 +47,8 @@
   <!-- If you have a custom header image or colour -->
   <!-- 
   <meta name="ebi-localmasthead-color" content="#000">
-  <meta name="ebi-localmasthead-image" content="http://wwwdev.ebi.ac.uk/sites/ebi.ac.uk/files/field/image/embl-ebi-background.jpg">
   -->
+  <meta name="ebi-localmasthead-image" content="https://khawkins98.github.io/EBI-Framework/images/backgrounds/embl-ebi-background-4.jpg">
 
     <!-- you can replace this with [projectname]-colours.css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
   <!-- also inform ES so we can host your colour palette file -->
@@ -231,6 +231,7 @@
                       <ul class="nested vertical menu">
                         <li><a href="#menus">Menus</a></li>
                         <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+                        <li><a href="#search-templates">Search</a></li>
                       </ul>
                     </ul>
                   </div>
@@ -358,6 +359,51 @@
                 <h2>Breadcrumbs</h2>
               </section>
 
+              <section id="search-templates" data-magellan-target="search-templates">
+                <h2>Search</h2>
+                  <div class="row">
+                    <div class="columns medium-6">
+                      <p>Use this format to search your project or subsite.</p>
+                    </div>
+
+                    <div class="callout columns medium-6">
+                      <!-- local-search -->
+                      <!-- if you do not have a local-search, delete the following form -->
+                      <form id="local-search" name="local-search" action="[search-action]" method="post">
+                        <h4>Search this project</h4>
+                        <fieldset>
+                          <input type="text" name="first" id="local-searchbox">
+                          <input type="submit" name="submit" value="1" class="button icon icon-functional">
+                          <small class="">
+                            <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search -->
+                            <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>
+                            |
+                            <!-- Include some example searchterms - keep them short and few. -->
+                            <a href="#" data-toggle="search-example-dropdown">See a few examples</a>
+                          </small>
+                          <div class="dropdown-pane" id="search-example-dropdown" data-dropdown data-options="hoverPane:true;" data-hover="true">
+                            <ul>
+                              <li><a href="[search-url-1]">[search-text-1]</a></li>
+                              <li><a href="[search-url-1]">[search-text-2]</a></li>
+                              <li><a href="[search-url-1]">[search-text-3]</a></li>
+                            </ul>
+                          </div>
+                          <!-- if you're not using the JS addons
+                          Examples:
+                          <ul>
+                            <li><a href="[search-url-1]">[search-text-1]</a></li>
+                            <li><a href="[search-url-1]">[search-text-2]</a></li>
+                            <li><a href="[search-url-1]">[search-text-3]</a></li>
+                          </ul>
+                          -->
+                        </fieldset>
+                      </form>
+                      <!-- /local-search -->
+                    </div>
+                  </div>
+
+              </section>
+
               <section id="content" data-magellan-target="content">
                 <h2>Content</h2>
               </section>
@@ -379,19 +425,19 @@
                 <p>
                 <div class="row small-up-1 medium-up-2 large-up-3" data-equalizer>
                   <div class="column ebi-background white-color" data-equalizer-watch>
-                    <p><h4>EBI Petrol</h4> The default. <br/><small>Found at css/embl-petrol-colours.css</small></p>
+                    <p><h4 class="white-color">EBI Petrol</h4> The default. <br/><small>Found at css/embl-petrol-colours.css</small></p>
                   </div>
                   <div class="column services-background white-color" data-equalizer-watch>
-                    <p><h4>Services</h4> Close to EBI Petrol. <br/><small>Found at css/ebi-services-about-colours.css</small></p>
+                    <p><h4 class="white-color">Services</h4> Close to EBI Petrol. <br/><small>Found at css/ebi-services-about-colours.css</small></p>
                   </div>
                   <div class="column research-background white-color" data-equalizer-watch>
-                    <p><h4>Research</h4> Green. <br/><small>Found at css/ebi-research.colour.css</small></p>
+                    <p><h4 class="white-color">Research</h4> Green. <br/><small>Found at css/ebi-research.colour.css</small></p>
                   </div>
                   <div class="column training-background white-color" data-equalizer-watch>
-                    <p><h4>Training</h4> Golden. <br/><small>Found at css/ebi-training-colours.css</small></p>
+                    <p><h4 class="white-color">Training</h4> Golden. <br/><small>Found at css/ebi-training-colours.css</small></p>
                   </div>
                   <div class="column industry-background white-color" data-equalizer-watch>
-                    <p><h4>Industry</h4> Bright blue ocean. <br/><small>Found at css/ebi-industry-colours.css</small></p>
+                    <p><h4 class="white-color">Industry</h4> Bright blue ocean. <br/><small>Found at css/ebi-industry-colours.css</small></p>
                   </div>
                 </div>
                 </p>
@@ -417,8 +463,10 @@
 
                 <p>Note: we recommend using the RGB values (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Browser_compatibility">support is near-universal</a>. The alpha, RGBA mode, is available from IE 9.)</p>
 
+                <h3>Roll your own colors</h3>
 
-                <p>If you wish to make your own colour palatte, see this set of directions /css/readme-custom-colours.txt</p>
+
+                <p>If you wish to make your own colour palatte, see this set of directions <code>/css/readme-custom-colours.txt</code></p>
 
 <!--                 <div class="callout row">
                   <div class="columns small-1"><span class="lead icon icon-generic" data-icon="i"></span></div>
@@ -459,242 +507,11 @@
 
                 <p>This requires JavaScript to work as designed. jQuery and the Foundation JS library are not required. Strictly, JavaScript is not needed, but this feature will not execture if the user has JavaScript disabled.</p>
                 
-                <h3>The gallery</h3>
+                <p>Looking for an icon?</p>
 
-                <table class="responsive-table">
-                  <thead>
-                    <tr>
-                      <th class="small-5"></th>
-                      <th class="small-1"></th>
-                      <th class="small-6 kbd small">HTML</th>
-                      <th class="show-for-large kbd small">Drupal</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  <th>EBI Generic</th>
-                  <tr><td>camera</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="!"></div></td><td>&lt;* class="icon icon-generic" data-icon="!"&gt;</td><td>[icon-generic:!]</td></tr>
-                  <tr><td>steps</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="#"></div></td><td>&lt;* class="icon icon-generic" data-icon="#"&gt;</td><td>[icon-generic:#]</td></tr>
-                  <tr><td>databaseCROSSLINK</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="d"></div></td><td>&lt;* class="icon icon-generic" data-icon="d"&gt;</td><td>[icon-generic:d]</td></tr>
-                  <tr><td>alert</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="l"></div></td><td>&lt;* class="icon icon-generic" data-icon="l"&gt;</td><td>[icon-generic:l]</td></tr>
-                  <tr><td>graph</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="g"></div></td><td>&lt;* class="icon icon-generic" data-icon="g"&gt;</td><td>[icon-generic:g]</td></tr>
-                  <tr><td>externalsystems</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="y"></div></td><td>&lt;* class="icon icon-generic" data-icon="y"&gt;</td><td>[icon-generic:y]</td></tr>
-                  <tr><td>loveDATA</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="o"></div></td><td>&lt;* class="icon icon-generic" data-icon="o"&gt;</td><td>[icon-generic:o]</td></tr>
-                  <tr><td>publication</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="P"></div></td><td>&lt;* class="icon icon-generic" data-icon="P"&gt;</td><td>[icon-generic:P]</td></tr>
-                  <tr><td>support</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="s"></div></td><td>&lt;* class="icon icon-generic" data-icon="s"&gt;</td><td>[icon-generic:s]</td></tr>
-                  <tr><td>TOPLEVEL Services2</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="("></div></td><td>&lt;* class="icon icon-generic" data-icon="("&gt;</td><td>[icon-generic:(]</td></tr>
-                  <tr><td>TOPLEVEL Research4</td><td><div class="icon icon-generic" aria-hidden="true" data-icon=")"></div></td><td>&lt;* class="icon icon-generic" data-icon=")"&gt;</td><td>[icon-generic:)]</td></tr>
-                  <tr><td>TOPLEVEL Openday2</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="*"></div></td><td>&lt;* class="icon icon-generic" data-icon="*"&gt;</td><td>[icon-generic:*]</td></tr>
-                  <tr><td>TOPLEVEL Industry2</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="-"></div></td><td>&lt;* class="icon icon-generic" data-icon="-"&gt;</td><td>[icon-generic:-]</td></tr>
-                  <tr><td>TOPLEVEL Elixir2</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="%"></div></td><td>&lt;* class="icon icon-generic" data-icon="%"&gt;</td><td>[icon-generic:%]</td></tr>
-                  <tr><td>TOPLEVEL Careers2</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="c"></div></td><td>&lt;* class="icon icon-generic" data-icon="c"&gt;</td><td>[icon-generic:c]</td></tr>
-                  <tr><td>videos</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="V"></div></td><td>&lt;* class="icon icon-generic" data-icon="V"&gt;</td><td>[icon-generic:V]</td></tr>
-                  <tr><td>unreviewedDATA2</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="Q"></div></td><td>&lt;* class="icon icon-generic" data-icon="Q"&gt;</td><td>[icon-generic:Q]</td></tr>
-                  <tr><td>tutorial</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="t"></div></td><td>&lt;* class="icon icon-generic" data-icon="t"&gt;</td><td>[icon-generic:t]</td></tr>
-                  <tr><td>travel train2</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="7"></div></td><td>&lt;* class="icon icon-generic" data-icon="7"&gt;</td><td>[icon-generic:7]</td></tr>
-                  <tr><td>TRAVEL by_plane</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="4"></div></td><td>&lt;* class="icon icon-generic" data-icon="4"&gt;</td><td>[icon-generic:4]</td></tr>
-                  <tr><td>Travel by_Foot</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="6"></div></td><td>&lt;* class="icon icon-generic" data-icon="6"&gt;</td><td>[icon-generic:6]</td></tr>
-                  <tr><td>Travel by_car</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="2"></div></td><td>&lt;* class="icon icon-generic" data-icon="2"&gt;</td><td>[icon-generic:2]</td></tr>
-                  <tr><td>TRAVEL by_bus</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="1"></div></td><td>&lt;* class="icon icon-generic" data-icon="1"&gt;</td><td>[icon-generic:1]</td></tr>
-                  <tr><td>TRAVEL by_bike</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="3"></div></td><td>&lt;* class="icon icon-generic" data-icon="3"&gt;</td><td>[icon-generic:3]</td></tr>
-                  <tr><td>train online</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="T"></div></td><td>&lt;* class="icon icon-generic" data-icon="T"&gt;</td><td>[icon-generic:T]</td></tr>
-                  <tr><td>toolKIT</td><td><div class="icon icon-generic" aria-hidden="true" data-icon=":"></div></td><td>&lt;* class="icon icon-generic" data-icon=":"&gt;</td><td>[icon-generic::]</td></tr>
-                  <tr><td>text-mining</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="X"></div></td><td>&lt;* class="icon icon-generic" data-icon="X"&gt;</td><td>[icon-generic:X]</td></tr>
-                  <tr><td>terms and_conditions</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="'"></div></td><td>&lt;* class="icon icon-generic" data-icon="'"&gt;</td><td>[icon-generic:']</td></tr>
-                  <tr><td>systems</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="S"></div></td><td>&lt;* class="icon icon-generic" data-icon="S"&gt;</td><td>[icon-generic:S]</td></tr>
-                  <tr><td>reviewedDATA2</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="q"></div></td><td>&lt;* class="icon icon-generic" data-icon="q"&gt;</td><td>[icon-generic:q]</td></tr>
-                  <tr><td>resource</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="R"></div></td><td>&lt;* class="icon icon-generic" data-icon="R"&gt;</td><td>[icon-generic:R]</td></tr>
-                  <tr><td>piechart</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="p"></div></td><td>&lt;* class="icon icon-generic" data-icon="p"&gt;</td><td>[icon-generic:p]</td></tr>
-                  <tr><td>OpendayV2</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="O"></div></td><td>&lt;* class="icon icon-generic" data-icon="O"&gt;</td><td>[icon-generic:O]</td></tr>
-                  <tr><td>nutraceuticals</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="&quot;"></div></td><td>&lt;* class="icon icon-generic" data-icon="&amp;quot;"&gt;</td><td>[icon-generic:&amp;quot;]</td></tr>
-                  <tr><td>news</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="N"></div></td><td>&lt;* class="icon icon-generic" data-icon="N"&gt;</td><td>[icon-generic:N]</td></tr>
-                  <tr><td>newcomers</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="n"></div></td><td>&lt;* class="icon icon-generic" data-icon="n"&gt;</td><td>[icon-generic:n]</td></tr>
-                  <tr><td>New</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="<"></div></td><td>&lt;* class="icon icon-generic" data-icon="&amp;lt;"&gt;</td><td>[icon-generic:&amp;lt;]</td></tr>
-                  <tr><td>mobiledevice</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="/"></div></td><td>&lt;* class="icon icon-generic" data-icon="/"&gt;</td><td>[icon-generic:/]</td></tr>
-                  <tr><td>meetus</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="M"></div></td><td>&lt;* class="icon icon-generic" data-icon="M"&gt;</td><td>[icon-generic:M]</td></tr>
-                  <tr><td>mailing-list</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="m"></div></td><td>&lt;* class="icon icon-generic" data-icon="m"&gt;</td><td>[icon-generic:m]</td></tr>
-                  <tr><td>location</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="["></div></td><td>&lt;* class="icon icon-generic" data-icon="["&gt;</td><td>[icon-generic:[]</td></tr>
-                  <tr><td>link</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="L"></div></td><td>&lt;* class="icon icon-generic" data-icon="L"&gt;</td><td>[icon-generic:L]</td></tr>
-                  <tr><td>info</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="i"></div></td><td>&lt;* class="icon icon-generic" data-icon="i"&gt;</td><td>[icon-generic:i]</td></tr>
-                  <tr><td>industry</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="I"></div></td><td>&lt;* class="icon icon-generic" data-icon="I"&gt;</td><td>[icon-generic:I]</td></tr>
-                  <tr><td>help</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="?"></div></td><td>&lt;* class="icon icon-generic" data-icon="?"&gt;</td><td>[icon-generic:?]</td></tr>
-                  <tr><td>health</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="h"></div></td><td>&lt;* class="icon icon-generic" data-icon="h"&gt;</td><td>[icon-generic:h]</td></tr>
-                  <tr><td>GTLs</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="G"></div></td><td>&lt;* class="icon icon-generic" data-icon="G"&gt;</td><td>[icon-generic:G]</td></tr>
-                  <tr><td>funding2</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="F"></div></td><td>&lt;* class="icon icon-generic" data-icon="F"&gt;</td><td>[icon-generic:F]</td></tr>
-                  <tr><td>findUS</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="]"></div></td><td>&lt;* class="icon icon-generic" data-icon="]"&gt;</td><td>[icon-generic:]]</td></tr>
-                  <tr><td>Face to_Face</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="f"></div></td><td>&lt;* class="icon icon-generic" data-icon="f"&gt;</td><td>[icon-generic:f]</td></tr>
-                  <tr><td>external link</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="x"></div></td><td>&lt;* class="icon icon-generic" data-icon="x"&gt;</td><td>[icon-generic:x]</td></tr>
-                  <tr><td>email</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="E"></div></td><td>&lt;* class="icon icon-generic" data-icon="E"&gt;</td><td>[icon-generic:E]</td></tr>
-                  <tr><td>Elixir</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="e"></div></td><td>&lt;* class="icon icon-generic" data-icon="e"&gt;</td><td>[icon-generic:e]</td></tr>
-                  <tr><td>drug</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="u"></div></td><td>&lt;* class="icon icon-generic" data-icon="u"&gt;</td><td>[icon-generic:u]</td></tr>
-                  <tr><td>documentation</td><td><div class="icon icon-generic" aria-hidden="true" data-icon=";"></div></td><td>&lt;* class="icon icon-generic" data-icon=";"&gt;</td><td>[icon-generic:;]</td></tr>
-                  <tr><td>discuss</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="\"></div></td><td>&lt;* class="icon icon-generic" data-icon="\"&gt;</td><td>[icon-generic:\]</td></tr>
-                  <tr><td>database</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="D"></div></td><td>&lt;* class="icon icon-generic" data-icon="D"&gt;</td><td>[icon-generic:D]</td></tr>
-                  <tr><td>contact</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="C"></div></td><td>&lt;* class="icon icon-generic" data-icon="C"&gt;</td><td>[icon-generic:C]</td></tr>
-                  <tr><td>calanderEVENT</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="r"></div></td><td>&lt;* class="icon icon-generic" data-icon="r"&gt;</td><td>[icon-generic:r]</td></tr>
-                  <tr><td>biotechDRUG</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="B"></div></td><td>&lt;* class="icon icon-generic" data-icon="B"&gt;</td><td>[icon-generic:B]</td></tr>
-                  <tr><td>Beta</td><td><div class="icon icon-generic" aria-hidden="true" data-icon=">"></div></td><td>&lt;* class="icon icon-generic" data-icon="&amp;gt;"&gt;</td><td>[icon-generic:&amp;gt;]</td></tr>
-                  <tr><td>basket</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="b"></div></td><td>&lt;* class="icon icon-generic" data-icon="b"&gt;</td><td>[icon-generic:b]</td></tr>
-                  <tr><td>announcement</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="U"></div></td><td>&lt;* class="icon icon-generic" data-icon="U"&gt;</td><td>[icon-generic:U]</td></tr>
-                  <tr><td>alumni</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="A"></div></td><td>&lt;* class="icon icon-generic" data-icon="A"&gt;</td><td>[icon-generic:A]</td></tr>
-                  <tr><td>accommodation</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="a"></div></td><td>&lt;* class="icon icon-generic" data-icon="a"&gt;</td><td>[icon-generic:a]</td></tr>
-                  <tr><td>EMBL EBI_hex_black</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="&amp;"></div></td><td>&lt;* class="icon icon-generic" data-icon="&amp;amp;"&gt;</td><td>[icon-generic:&amp;amp;]</td></tr>
-                  <tr><td>home</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="H"></div></td><td>&lt;* class="icon icon-generic" data-icon="H"&gt;</td><td>[icon-generic:H]</td></tr>
-                  <tr><td>clock</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="{"></div></td><td>&lt;* class="icon icon-generic" data-icon="{"&gt;</td><td>[icon-generic:{]</td></tr>
-                  <tr><td>groupTEAM</td><td><div class="icon icon-generic" aria-hidden="true" data-icon="}"></div></td><td>&lt;* class="icon icon-generic" data-icon="}"&gt;</td><td>[icon-generic:}]</td></tr>
-
-                  <th>The EBI Chemistry font contains the following glyphs  </th>
-                  <tr><td>direction unknown</td><td><div class="icon icon-chemistry" aria-hidden="true" data-icon="U"></div></td><td>&lt;* class="icon icon-chemistry" data-icon="U"&gt;</td><td>[icon-chemistry:U]</td></tr>
-                  <tr><td>direction right</td><td><div class="icon icon-chemistry" aria-hidden="true" data-icon="r"></div></td><td>&lt;* class="icon icon-chemistry" data-icon="r"&gt;</td><td>[icon-chemistry:r]</td></tr>
-                  <tr><td>direction left</td><td><div class="icon icon-chemistry" aria-hidden="true" data-icon="l"></div></td><td>&lt;* class="icon icon-chemistry" data-icon="l"&gt;</td><td>[icon-chemistry:l]</td></tr>
-                  <tr><td>direction reversible</td><td><div class="icon icon-chemistry" aria-hidden="true" data-icon="R"></div></td><td>&lt;* class="icon icon-chemistry" data-icon="R"&gt;</td><td>[icon-chemistry:R]</td></tr>
-
-                  <th>The EBI-FileFormats font contains the following glyphs  </th>
-                  <tr><td>ZIP</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="Z"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="Z"&gt;</td><td>[icon-fileformats:Z]</td></tr>
-                  <tr><td>Postscript</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="3"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="3"&gt;</td><td>[icon-fileformats:3]</td></tr>
-                  <tr><td>XML</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="x"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="x"&gt;</td><td>[icon-fileformats:x]</td></tr>
-                  <tr><td>DOC</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="d"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="d"&gt;</td><td>[icon-fileformats:d]</td></tr>
-                  <tr><td>TXT</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="t"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="t"&gt;</td><td>[icon-fileformats:t]</td></tr>
-                  <tr><td>TSV</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="v"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="v"&gt;</td><td>[icon-fileformats:v]</td></tr>
-                  <tr><td>SDF</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="s"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="s"&gt;</td><td>[icon-fileformats:s]</td></tr>
-                  <tr><td>RXN</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="X"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="X"&gt;</td><td>[icon-fileformats:X]</td></tr>
-                  <tr><td>RDF/XML</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="D"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="D"&gt;</td><td>[icon-fileformats:D]</td></tr>
-                  <tr><td>RD</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="r"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="r"&gt;</td><td>[icon-fileformats:r]</td></tr>
-                  <tr><td>PSI-MI XML</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="1"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="1"&gt;</td><td>[icon-fileformats:1]</td></tr>
-                  <tr><td>PSI-MI TAB</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="2"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="2"&gt;</td><td>[icon-fileformats:2]</td></tr>
-                  <tr><td>PDF</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="p"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="p"&gt;</td><td>[icon-fileformats:p]</td></tr>
-                  <tr><td>OWL</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="o"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="o"&gt;</td><td>[icon-fileformats:o]</td></tr>
-                  <tr><td>OBO</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="O"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="O"&gt;</td><td>[icon-fileformats:O]</td></tr>
-                  <tr><td>MDL</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="M"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="M"&gt;</td><td>[icon-fileformats:M]</td></tr>
-                  <tr><td>JSON</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="J"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="J"&gt;</td><td>[icon-fileformats:J]</td></tr>
-                  <tr><td>IMG</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="I"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="I"&gt;</td><td>[icon-fileformats:I]</td></tr>
-                  <tr><td>GFF</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="G"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="G"&gt;</td><td>[icon-fileformats:G]</td></tr>
-                  <tr><td>FLAT</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="F"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="F"&gt;</td><td>[icon-fileformats:F]</td></tr>
-                  <tr><td>FASTQ</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="f"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="f"&gt;</td><td>[icon-fileformats:f]</td></tr>
-                  <tr><td>FASTA</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="a"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="a"&gt;</td><td>[icon-fileformats:a]</td></tr>
-                  <tr><td>CSV</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="c"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="c"&gt;</td><td>[icon-fileformats:c]</td></tr>
-                  <tr><td>CRAM</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="R"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="R"&gt;</td><td>[icon-fileformats:R]</td></tr>
-                  <tr><td>CML</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="C"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="C"&gt;</td><td>[icon-fileformats:C]</td></tr>
-                  <tr><td>BAM</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="B"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="B"&gt;</td><td>[icon-fileformats:B]</td></tr>
-                  <tr><td>AGP</td><td><div class="icon icon-fileformats" aria-hidden="true" data-icon="A"></div></td><td>&lt;* class="icon icon-fileformats" data-icon="A"&gt;</td><td>[icon-fileformats:A]</td></tr>
-
-                  <th>The EBI-Functional font contains the following glyths </th>
-                  <tr><td>menu</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="M"></div></td><td>&lt;* class="icon icon-functional" data-icon="M"&gt;</td><td>[icon-functional:M]</td></tr>
-                  <tr><td>compare</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="O"></div></td><td>&lt;* class="icon icon-functional" data-icon="O"&gt;</td><td>[icon-functional:O]</td></tr>
-                  <tr><td>approve</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="/"></div></td><td>&lt;* class="icon icon-functional" data-icon="/"&gt;</td><td>[icon-functional:/]</td></tr>
-                  <tr><td>add</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="+"></div></td><td>&lt;* class="icon icon-functional" data-icon="+"&gt;</td><td>[icon-functional:+]</td></tr>
-                  <tr><td>add-job</td><td><div class="icon icon-functional" aria-hidden="true" data-icon=")"></div></td><td>&lt;* class="icon icon-functional" data-icon=")"&gt;</td><td>[icon-functional:)]</td></tr>
-                  <tr><td>align</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="i"></div></td><td>&lt;* class="icon icon-functional" data-icon="i"&gt;</td><td>[icon-functional:i]</td></tr>
-                  <tr><td>analyse</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="A"></div></td><td>&lt;* class="icon icon-functional" data-icon="A"&gt;</td><td>[icon-functional:A]</td></tr>
-                  <tr><td>analyse graph</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="z"></div></td><td>&lt;* class="icon icon-functional" data-icon="z"&gt;</td><td>[icon-functional:z]</td></tr>
-                  <tr><td>approved-job</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="("></div></td><td>&lt;* class="icon icon-functional" data-icon="("&gt;</td><td>[icon-functional:(]</td></tr>
-                  <tr><td>attach</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="a"></div></td><td>&lt;* class="icon icon-functional" data-icon="a"&gt;</td><td>[icon-functional:a]</td></tr>
-                  <tr><td>browse</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="b"></div></td><td>&lt;* class="icon icon-functional" data-icon="b"&gt;</td><td>[icon-functional:b]</td></tr>
-                  <tr><td>close</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="x"></div></td><td>&lt;* class="icon icon-functional" data-icon="x"&gt;</td><td>[icon-functional:x]</td></tr>
-                  <tr><td>crop</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="\"></div></td><td>&lt;* class="icon icon-functional" data-icon="\"&gt;</td><td>[icon-functional:\]</td></tr>
-                  <tr><td>cut</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="c"></div></td><td>&lt;* class="icon icon-functional" data-icon="c"&gt;</td><td>[icon-functional:c]</td></tr>
-                  <tr><td>submit-to-database</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="D"></div></td><td>&lt;* class="icon icon-functional" data-icon="D"&gt;</td><td>[icon-functional:D]</td></tr>
-                  <tr><td>delete</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="d"></div></td><td>&lt;* class="icon icon-functional" data-icon="d"&gt;</td><td>[icon-functional:d]</td></tr>
-                  <tr><td>download</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="="></div></td><td>&lt;* class="icon icon-functional" data-icon="="&gt;</td><td>[icon-functional:=]</td></tr>
-                  <tr><td>edit</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="e"></div></td><td>&lt;* class="icon icon-functional" data-icon="e"&gt;</td><td>[icon-functional:e]</td></tr>
-                  <tr><td>filter</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="f"></div></td><td>&lt;* class="icon icon-functional" data-icon="f"&gt;</td><td>[icon-functional:f]</td></tr>
-                  <tr><td>first-page</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="["></div></td><td>&lt;* class="icon icon-functional" data-icon="["&gt;</td><td>[icon-functional:[]</td></tr>
-                  <tr><td>full-screen</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="F"></div></td><td>&lt;* class="icon icon-functional" data-icon="F"&gt;</td><td>[icon-functional:F]</td></tr>
-                  <tr><td>untitled</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="0"></div></td><td>&lt;* class="icon icon-functional" data-icon="0"&gt;</td><td>[icon-functional:0]</td></tr>
-                  <tr><td>last-page</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="]"></div></td><td>&lt;* class="icon icon-functional" data-icon="]"&gt;</td><td>[icon-functional:]]</td></tr>
-                  <tr><td>like</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="k"></div></td><td>&lt;* class="icon icon-functional" data-icon="k"&gt;</td><td>[icon-functional:k]</td></tr>
-                  <tr><td>lock</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="L"></div></td><td>&lt;* class="icon icon-functional" data-icon="L"&gt;</td><td>[icon-functional:L]</td></tr>
-                  <tr><td>login</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="l"></div></td><td>&lt;* class="icon icon-functional" data-icon="l"&gt;</td><td>[icon-functional:l]</td></tr>
-                  <tr><td>move</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="m"></div></td><td>&lt;* class="icon icon-functional" data-icon="m"&gt;</td><td>[icon-functional:m]</td></tr>
-                  <tr><td>next-page</td><td><div class="icon icon-functional" aria-hidden="true" data-icon=">"></div></td><td>&lt;* class="icon icon-functional" data-icon="&amp;gt;"&gt;</td><td>[icon-functional:&amp;gt;]</td></tr>
-                  <tr><td>play</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="v"></div></td><td>&lt;* class="icon icon-functional" data-icon="v"&gt;</td><td>[icon-functional:v]</td></tr>
-                  <tr><td>previous-page</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="<"></div></td><td>&lt;* class="icon icon-functional" data-icon="&amp;lt;"&gt;</td><td>[icon-functional:&amp;lt;]</td></tr>
-                  <tr><td>print- fax</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="P"></div></td><td>&lt;* class="icon icon-functional" data-icon="P"&gt;</td><td>[icon-functional:P]</td></tr>
-                  <tr><td>redo</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="}"></div></td><td>&lt;* class="icon icon-functional" data-icon="}"&gt;</td><td>[icon-functional:}]</td></tr>
-                  <tr><td>refresh</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="R"></div></td><td>&lt;* class="icon icon-functional" data-icon="R"&gt;</td><td>[icon-functional:R]</td></tr>
-                  <tr><td>remove</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="-"></div></td><td>&lt;* class="icon icon-functional" data-icon="-"&gt;</td><td>[icon-functional:-]</td></tr>
-                  <tr><td>save</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="S"></div></td><td>&lt;* class="icon icon-functional" data-icon="S"&gt;</td><td>[icon-functional:S]</td></tr>
-                  <tr><td>search</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="1"></div></td><td>&lt;* class="icon icon-functional" data-icon="1"&gt;</td><td>[icon-functional:1]</td></tr>
-                  <tr><td>send</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="n"></div></td><td>&lt;* class="icon icon-functional" data-icon="n"&gt;</td><td>[icon-functional:n]</td></tr>
-                  <tr><td>settings</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="s"></div></td><td>&lt;* class="icon icon-functional" data-icon="s"&gt;</td><td>[icon-functional:s]</td></tr>
-                  <tr><td>stop</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="o"></div></td><td>&lt;* class="icon icon-functional" data-icon="o"&gt;</td><td>[icon-functional:o]</td></tr>
-                  <tr><td>target</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="T"></div></td><td>&lt;* class="icon icon-functional" data-icon="T"&gt;</td><td>[icon-functional:T]</td></tr>
-                  <tr><td>tools</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="t"></div></td><td>&lt;* class="icon icon-functional" data-icon="t"&gt;</td><td>[icon-functional:t]</td></tr>
-                  <tr><td>tree-heirachy</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="h"></div></td><td>&lt;* class="icon icon-functional" data-icon="h"&gt;</td><td>[icon-functional:h]</td></tr>
-                  <tr><td>undo</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="{"></div></td><td>&lt;* class="icon icon-functional" data-icon="{"&gt;</td><td>[icon-functional:{]</td></tr>
-                  <tr><td>unlock</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="U"></div></td><td>&lt;* class="icon icon-functional" data-icon="U"&gt;</td><td>[icon-functional:U]</td></tr>
-                  <tr><td>unreviewed-job</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="*"></div></td><td>&lt;* class="icon icon-functional" data-icon="*"&gt;</td><td>[icon-functional:*]</td></tr>
-                  <tr><td>upload</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="_"></div></td><td>&lt;* class="icon icon-functional" data-icon="_"&gt;</td><td>[icon-functional:_]</td></tr>
-                  <tr><td>create-user</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="7"></div></td><td>&lt;* class="icon icon-functional" data-icon="7"&gt;</td><td>[icon-functional:7]</td></tr>
-                  <tr><td>delete-user</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="6"></div></td><td>&lt;* class="icon icon-functional" data-icon="6"&gt;</td><td>[icon-functional:6]</td></tr>
-                  <tr><td>edit-user</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="5"></div></td><td>&lt;* class="icon icon-functional" data-icon="5"&gt;</td><td>[icon-functional:5]</td></tr>
-                  <tr><td>view</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="4"></div></td><td>&lt;* class="icon icon-functional" data-icon="4"&gt;</td><td>[icon-functional:4]</td></tr>
-                  <tr><td>zoom</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="3"></div></td><td>&lt;* class="icon icon-functional" data-icon="3"&gt;</td><td>[icon-functional:3]</td></tr>
-                  <tr><td>minimise</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="2"></div></td><td>&lt;* class="icon icon-functional" data-icon="2"&gt;</td><td>[icon-functional:2]</td></tr>
-                  <tr><td>share</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="r"></div></td><td>&lt;* class="icon icon-functional" data-icon="r"&gt;</td><td>[icon-functional:r]</td></tr>
-                  <tr><td>expand</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="u"></div></td><td>&lt;* class="icon icon-functional" data-icon="u"&gt;</td><td>[icon-functional:u]</td></tr>
-                  <tr><td>collapse</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="w"></div></td><td>&lt;* class="icon icon-functional" data-icon="w"&gt;</td><td>[icon-functional:w]</td></tr>
-                  <tr><td>expand-alt</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="9"></div></td><td>&lt;* class="icon icon-functional" data-icon="9"&gt;</td><td>[icon-functional:9]</td></tr>
-                  <tr><td>collapse-alt</td><td><div class="icon icon-functional" aria-hidden="true" data-icon="8"></div></td><td>&lt;* class="icon icon-functional" data-icon="8"&gt;</td><td>[icon-functional:8]</td></tr>
-
-                  <th>The EBI-Species font contains the following glyths  </th>
-                  <tr><td>zebrafish</td><td><div class="icon icon-species" aria-hidden="true" data-icon="Z"></div></td><td>&lt;* class="icon icon-species" data-icon="Z"&gt;</td><td>[icon-species:Z]</td></tr>
-                  <tr><td>yeast</td><td><div class="icon icon-species" aria-hidden="true" data-icon="Y"></div></td><td>&lt;* class="icon icon-species" data-icon="Y"&gt;</td><td>[icon-species:Y]</td></tr>
-                  <tr><td>spider</td><td><div class="icon icon-species" aria-hidden="true" data-icon="S"></div></td><td>&lt;* class="icon icon-species" data-icon="S"&gt;</td><td>[icon-species:S]</td></tr>
-                  <tr><td>scorpion</td><td><div class="icon icon-species" aria-hidden="true" data-icon="s"></div></td><td>&lt;* class="icon icon-species" data-icon="s"&gt;</td><td>[icon-species:s]</td></tr>
-                  <tr><td>rat</td><td><div class="icon icon-species" aria-hidden="true" data-icon="R"></div></td><td>&lt;* class="icon icon-species" data-icon="R"&gt;</td><td>[icon-species:R]</td></tr>
-                  <tr><td>plant</td><td><div class="icon icon-species" aria-hidden="true" data-icon="P"></div></td><td>&lt;* class="icon icon-species" data-icon="P"&gt;</td><td>[icon-species:P]</td></tr>
-                  <tr><td>pig</td><td><div class="icon icon-species" aria-hidden="true" data-icon="p"></div></td><td>&lt;* class="icon icon-species" data-icon="p"&gt;</td><td>[icon-species:p]</td></tr>
-                  <tr><td>mouse</td><td><div class="icon icon-species" aria-hidden="true" data-icon="M"></div></td><td>&lt;* class="icon icon-species" data-icon="M"&gt;</td><td>[icon-species:M]</td></tr>
-                  <tr><td>monkey</td><td><div class="icon icon-species" aria-hidden="true" data-icon="r"></div></td><td>&lt;* class="icon icon-species" data-icon="r"&gt;</td><td>[icon-species:r]</td></tr>
-                  <tr><td>man</td><td><div class="icon icon-species" aria-hidden="true" data-icon="H"></div></td><td>&lt;* class="icon icon-species" data-icon="H"&gt;</td><td>[icon-species:H]</td></tr>
-                  <tr><td>horse</td><td><div class="icon icon-species" aria-hidden="true" data-icon="h"></div></td><td>&lt;* class="icon icon-species" data-icon="h"&gt;</td><td>[icon-species:h]</td></tr>
-                  <tr><td>fungus</td><td><div class="icon icon-species" aria-hidden="true" data-icon="u"></div></td><td>&lt;* class="icon icon-species" data-icon="u"&gt;</td><td>[icon-species:u]</td></tr>
-                  <tr><td>frog</td><td><div class="icon icon-species" aria-hidden="true" data-icon="f"></div></td><td>&lt;* class="icon icon-species" data-icon="f"&gt;</td><td>[icon-species:f]</td></tr>
-                  <tr><td>fly</td><td><div class="icon icon-species" aria-hidden="true" data-icon="F"></div></td><td>&lt;* class="icon icon-species" data-icon="F"&gt;</td><td>[icon-species:F]</td></tr>
-                  <tr><td>dog</td><td><div class="icon icon-species" aria-hidden="true" data-icon="d"></div></td><td>&lt;* class="icon icon-species" data-icon="d"&gt;</td><td>[icon-species:d]</td></tr>
-                  <tr><td>cow</td><td><div class="icon icon-species" aria-hidden="true" data-icon="C"></div></td><td>&lt;* class="icon icon-species" data-icon="C"&gt;</td><td>[icon-species:C]</td></tr>
-                  <tr><td>corn</td><td><div class="icon icon-species" aria-hidden="true" data-icon="c"></div></td><td>&lt;* class="icon icon-species" data-icon="c"&gt;</td><td>[icon-species:c]</td></tr>
-                  <tr><td>chicken</td><td><div class="icon icon-species" aria-hidden="true" data-icon="k"></div></td><td>&lt;* class="icon icon-species" data-icon="k"&gt;</td><td>[icon-species:k]</td></tr>
-                  <tr><td>cat</td><td><div class="icon icon-species" aria-hidden="true" data-icon="A"></div></td><td>&lt;* class="icon icon-species" data-icon="A"&gt;</td><td>[icon-species:A]</td></tr>
-                  <tr><td>bug</td><td><div class="icon icon-species" aria-hidden="true" data-icon="b"></div></td><td>&lt;* class="icon icon-species" data-icon="b"&gt;</td><td>[icon-species:b]</td></tr>
-                  <tr><td>worm</td><td><div class="icon icon-species" aria-hidden="true" data-icon="W"></div></td><td>&lt;* class="icon icon-species" data-icon="W"&gt;</td><td>[icon-species:W]</td></tr>
-                  <tr><td>virus</td><td><div class="icon icon-species" aria-hidden="true" data-icon="v"></div></td><td>&lt;* class="icon icon-species" data-icon="v"&gt;</td><td>[icon-species:v]</td></tr>
-                  <tr><td>pufferfish</td><td><div class="icon icon-species" aria-hidden="true" data-icon="E"></div></td><td>&lt;* class="icon icon-species" data-icon="E"&gt;</td><td>[icon-species:E]</td></tr>
-                  <tr><td>hedgehog</td><td><div class="icon icon-species" aria-hidden="true" data-icon="o"></div></td><td>&lt;* class="icon icon-species" data-icon="o"&gt;</td><td>[icon-species:o]</td></tr>
-                  <tr><td>guineapig</td><td><div class="icon icon-species" aria-hidden="true" data-icon="g"></div></td><td>&lt;* class="icon icon-species" data-icon="g"&gt;</td><td>[icon-species:g]</td></tr>
-                  <tr><td>gorilla</td><td><div class="icon icon-species" aria-hidden="true" data-icon="G"></div></td><td>&lt;* class="icon icon-species" data-icon="G"&gt;</td><td>[icon-species:G]</td></tr>
-                  <tr><td>finch</td><td><div class="icon icon-species" aria-hidden="true" data-icon="n"></div></td><td>&lt;* class="icon icon-species" data-icon="n"&gt;</td><td>[icon-species:n]</td></tr>
-                  <tr><td>elephant</td><td><div class="icon icon-species" aria-hidden="true" data-icon="e"></div></td><td>&lt;* class="icon icon-species" data-icon="e"&gt;</td><td>[icon-species:e]</td></tr>
-                  <tr><td>dolphin</td><td><div class="icon icon-species" aria-hidden="true" data-icon="D"></div></td><td>&lt;* class="icon icon-species" data-icon="D"&gt;</td><td>[icon-species:D]</td></tr>
-                  <tr><td>armadillo</td><td><div class="icon icon-species" aria-hidden="true" data-icon="l"></div></td><td>&lt;* class="icon icon-species" data-icon="l"&gt;</td><td>[icon-species:l]</td></tr>
-                  <tr><td>alpaca</td><td><div class="icon icon-species" aria-hidden="true" data-icon="a"></div></td><td>&lt;* class="icon icon-species" data-icon="a"&gt;</td><td>[icon-species:a]</td></tr>
-                  <tr><td>wallaby</td><td><div class="icon icon-species" aria-hidden="true" data-icon="w"></div></td><td>&lt;* class="icon icon-species" data-icon="w"&gt;</td><td>[icon-species:w]</td></tr>
-                  <tr><td>platypus</td><td><div class="icon icon-species" aria-hidden="true" data-icon="U"></div></td><td>&lt;* class="icon icon-species" data-icon="U"&gt;</td><td>[icon-species:U]</td></tr>
-                  <tr><td>chimpanzee</td><td><div class="icon icon-species" aria-hidden="true" data-icon="i"></div></td><td>&lt;* class="icon icon-species" data-icon="i"&gt;</td><td>[icon-species:i]</td></tr>
-                  <tr><td>arabidopsis</td><td><div class="icon icon-species" aria-hidden="true" data-icon="B"></div></td><td>&lt;* class="icon icon-species" data-icon="B"&gt;</td><td>[icon-species:B]</td></tr>
-                  <tr><td>ecoli</td><td><div class="icon icon-species" aria-hidden="true" data-icon="L"></div></td><td>&lt;* class="icon icon-species" data-icon="L"&gt;</td><td>[icon-species:L]</td></tr>
+                <a href="fonts/index.html" class="button readmore">View the gallery</a>
 
 
-                  <th>EBI-Socialmedia</th>
-                  <tr><td>icon-windows</td><td><span class="icon-windows icon icon-socialmedia" data-icon="w"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s10&quot; data-icon=&quot;w&quot;> </td><td>[icon-socialmedia:w:s10] </td></tr>
-                  <tr><td>icon-orcid</td><td><span class="icon-orcid icon icon-socialmedia" data-icon="O"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s5&quot; data-icon=&quot;O&quot;> </td><td>[icon-socialmedia:O:s5] </td></tr>
-                  <tr><td>icon-apple</td><td><span class="icon-apple icon icon-socialmedia" data-icon="A"></span></td><td>&lt;* class=&quot;icon icon-socialmedia&quot; data-icon=&quot;A&quot;> </td><td>[icon-socialmedia:A] </td></tr>
-                  <tr><td>icon-linux</td><td><span class="icon-linux icon icon-socialmedia" data-icon="X"></span></td><td>&lt;* class=&quot;icon icon-socialmedia&quot; data-icon=&quot;X&quot;> </td><td>[icon-socialmedia:X] </td></tr>
-                  <tr><td>icon-flickr</td><td><span class="icon-flickr icon icon-socialmedia" data-icon="f"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s8&quot; data-icon=&quot;f&quot;> </td><td>[icon-socialmedia:f:s8] </td></tr>
-                  <tr><td>icon-slideshare</td><td><span class="icon-slideshare icon icon-socialmedia" data-icon="S"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s11&quot; data-icon=&quot;S&quot;> </td><td>[icon-socialmedia:S:s11] </td></tr>
-                  <tr><td>icon-wordpress</td><td><span class="icon-wordpress icon icon-socialmedia" data-icon="P"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s12&quot; data-icon=&quot;P&quot;> </td><td>[icon-socialmedia:P:s12] </td></tr>
-                  <tr><td>icon-blogger</td><td><span class="icon-blogger icon icon-socialmedia" data-icon="B"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s4&quot; data-icon=&quot;B&quot;> </td><td>[icon-socialmedia:B:s4] </td></tr>
-                  <tr><td>icon-facebook</td><td><span class="icon-facebook icon icon-socialmedia" data-icon="F"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s1&quot; data-icon=&quot;F&quot;> </td><td>[icon-socialmedia:F:s1] </td></tr>
-                  <tr><td>icon-googleplus</td><td><span class="icon-googleplus icon icon-socialmedia" data-icon="G"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s6&quot; data-icon=&quot;G&quot;> </td><td>[icon-socialmedia:G:s6] </td></tr>
-                  <tr><td>icon-linkedin</td><td><span class="icon-linkedin icon icon-socialmedia" data-icon="L"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s3&quot; data-icon=&quot;L&quot;> </td><td>[icon-socialmedia:L:s3] </td></tr>
-                  <tr><td>icon-rss</td><td><span class="icon-rss icon icon-socialmedia" data-icon="R"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s13&quot; data-icon=&quot;R&quot;> </td><td>[icon-socialmedia:R:s13] </td></tr>
-                  <tr><td>icon-twitter</td><td><span class="icon-twitter icon icon-socialmedia" data-icon="T"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s2&quot; data-icon=&quot;T&quot;> </td><td>[icon-socialmedia:T:s2] </td></tr>
-                  <tr><td>icon-vimeo</td><td><span class="icon-vimeo icon icon-socialmedia" data-icon="V"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s9&quot; data-icon=&quot;V&quot;> </td><td>[icon-socialmedia:V:s9] </td></tr>
-                  <tr><td>icon-weibo</td><td><span class="icon-weibo icon icon-socialmedia" data-icon="W"></span></td><td>&lt;* class=&quot;icon icon-socialmedia&quot; data-icon=&quot;W&quot;> </td><td>[icon-socialmedia:W] </td></tr>
-                  <tr><td>icon-youtube</td><td><span class="icon-youtube icon icon-socialmedia" data-icon="Y"></span></td><td>&lt;* class=&quot;icon icon-socialmedia icon-s7&quot; data-icon=&quot;Y&quot;> </td><td>[icon-socialmedia:Y:s7] </td></tr>
-                  </tbody>
-
-                </table>
               </section>
 
               <section id="lists" data-magellan-target="lists">
@@ -816,23 +633,28 @@
                 </div>
 
                 <h4>Badge</h4>
-                <p>Combine a <code>ul</code> with class <code>.inline</code>, then give your <code>li</code> a <code>.badge</code>.</p>
 
-                <p>We've also used <code>.lead</code> on the <code>ul</code> to bump up the size of the font.</p>
+                <div class="row">
+                  <div class="columns medium-7">
+                    <p>Combine a <code>ul</code> with class <code>.inline</code>, then give your <code>li</code> a <code>.badge</code>.</p>
 
-                <div class="callout sans-serif">
-                  <ul class="inline lead">
-                    <li><a href="#" class="secondary badge">2</a></li>
-                    <li><a href="#" class="success badge">3</a></li>
-                    <li><a href="#" class="alert badge">A</a></li>
-                    <li><a href="#" class="warning badge"><span class="icon icon-species" data-icon="D"></span></a></li>
-                  </ul>
+                    <p>The <code>.lead</code> class on the <code>ul</code> bumps up the size of the font.</p>
+                  </div>
+
+                  <div class="columns medium-5 callout">
+                    <ul class="inline lead">
+                      <li><a href="#" class="secondary badge">2</a></li>
+                      <li><a href="#" class="success badge">3</a></li>
+                      <li><a href="#" class="alert badge">A</a></li>
+                      <li><a href="#" class="warning badge"><span class="icon icon-species" data-icon="D"></span></a></li>
+                    </ul>
+                  </div>
                 </div>
 
                 <h4>Pager</h4>
 
 
-                <div class="callout sans-serif">
+                <div class="">
                   <ul class="pagination text-center" role="navigation" aria-label="Pagination">
                     <li class="pagination-previous disabled">Previous</li>
                     <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
@@ -978,7 +800,7 @@
 
                 <div class="row collapse">
                   <div class="thumbnail float-right medium-4 columns">
-                    <img src="http://foundation.zurb.com/sites/docs/assets/img/thumbnail/01.jpg" alt="Photo of Uranus.">
+                    <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/large/public/groups/external_relations/images/News/TCell_news_EBI.jpg?itok=b_KTDxDO" alt="Photo of Uranus.">
                     <div class="caption">You can also add a caption with <code>.caption</code>.</div>
                   </div>
 
@@ -992,31 +814,38 @@
 
                   <h3>Image tiles</h3>
 
-                  <p>Alternatively, you can use a <code>.with-overlay</code> for a darkened effect with a text overlay, like so:</p>
+                  <p>Alternatively, you can use a <code>.with-overlay</code> for a darkened effect with a text overlay.</p>
+
+
+                  <p>Notes:</p>
+                  <ul>
+                    <li>Links: when the caption is a link the text automatically takes on a large font face and arrow. This style is best used as an image button to tease and link further content.</li>
+                    <li>Image height: this method expects your images with have shared aspect ratios or the same width and height. If you are unable to predict or control the sizes, you can use <a href="http://foundation.zurb.com/sites/docs/equalizer.html">the equilization technique</a>.</li>
+                  </ul>
+
                 </div>
 
                 <div class="row collapse">
-                  <div class="columns medium-4 with-overlay">
-                    <img src="http://foundation.zurb.com/sites/docs/assets/img/thumbnail/01.jpg" alt="Photo of Uranus.">
+                  <div class="columns medium-4 with-overlay ">
+                    <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/large/public/groups/external_relations/images/News/DREAMchallenge_News_24_03_16_EBI.jpg?itok=-33Ign4S" alt="Photo of Uranus.">
                     <div class="caption">
-                      <a href="http://www.embl.de/" class="inner">
-                        Link to EMBL
-                      </a>
+                      <div class="inner">
+                        Standard caption without a link.
+                      </div>
                     </div>
                   </div>
                   <div class="columns medium-4 with-overlay end">
-                    <img src="http://www.embl.de/services/pic_library_new.jpg" alt="Photo of Uranus.">
+                    <img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/large/public/groups/external_relations/images/News/TCell_news_EBI.jpg?itok=b_KTDxDO" alt="Photo of Uranus.">
                     <div class="caption">
-                      <div class="inner">
-                        test
-                      </div>
+                      <a href="http://www.embl.de/" class="inner">
+                        As a linked button
+                      </a>
                     </div>
                   </div>
                 </div>
 
 
-
-                  <p>Notice that when linking the text automatically takes on a large font face and arrow. This style is best used as an image button to tease and link further content.</p>
+                <p>
 
               </section>
 
