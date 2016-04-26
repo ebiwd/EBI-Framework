@@ -208,13 +208,13 @@
 
         <div class="row">
 
-          <div class="medium-9 columns">
+          <div id="main-content-area" class="medium-9 columns">
 
             <div class="row">
               <div class="small-12 columns">
 
                 <h2>EBI Framework overview</h2>
-                <span class="secondary label sans-serif"><i class="icon icon-generic" data-icon="i"></i> Framework version: 1.1</span>
+                <span class="secondary label sans-serif"><i class="icon icon-generic" data-icon="i"></i> Framework version: 1.1 Alpha</span>
                 <p class="lead">The framework is a collection of JS, CSS, icons, coding conventions, and templated components that will help you build robust web content faster than if you were to make it from scratch.</p>
                 <p>This page offers guidance on building web site, pages, and content that comply with the EMBL-EBI: visual look and semantic structure.</p>
 
@@ -286,8 +286,23 @@
                 </blockquote>
                 <p>This guide does not offer prescriptive solutions for every scenario, but integrates a wide range of pull quotes, form boxes, menus, and more to show you how things should be done.</p>
                 <p>Also <a href="http://foundation.zurb.com/sites/docs/global.html">consult the Foundation 6 docs <i class="icon icon-generic" data-icon="x"></i></a>, as this framework leverages that toolset.</p>
-                <p>During the initial rollout, we plan to host workshops to educate on the tooling and address issues or concerns, register you interest here [ADD LINK]</p>
+                <p>We plan to host workshops to educate on the tooling and address issues or concerns, <a href="https://github.com/khawkins98/EBI-Framework/issues/1">register you interest here</a> or if you don't have a GitHub account e-mail khawkins@ebi.ac.uk</p>
                 <p>If you need technical guidance or have questions, <a href="#help">see the help section</a>.</p>
+
+
+                <div class="callout warning">
+
+                  <h1 class="training-color"><span class="icon icon-generic " data-icon="U"></span> Heads up!</h1>
+                  <p>This framework is in a very early stage of testing and is still being actively planned.</p>
+                  <p>The takeaway is that there are two goals here:</p>
+                  <ol>
+                    <li>Refresh the EBI Compliance theme to be more visually compliant with EMBL-EBI standards.</li>
+                    <li>Offer optional reusable tooling to make the lives of developers easier and to make EMBL-EBI sites look more consistent with less effort.</li>
+                  </ol>
+                  <p>The documentation below is a work in progress, but have a look. We are looking for input and concerns about the scope, direction and technical solutions. Please pot to <a href="https://github.com/khawkins98/EBI-Framework/issues/1">the GitHub issue queue</a> or if you don't have a GitHub account e-mail khawkins@ebi.ac.uk</p>
+                  <p>Also see the <a href="sample-site/">sample pages</a> to get an idea of how real content would look and work using the framework.</p>
+
+                </div>
 
                 <h3>Requirements and what you get</h3>
                 <p>The framework is built with modern best practices and targets browsers shipped within the past three years; though other browsers should still handle the content and appearance well (graceful degradation). The framework is also mobile responsive, so you won't have to spend too much time adapting for mobile.</p>
@@ -295,6 +310,13 @@
                 <p>But we've taken care to make the implementation non-intrusive, so if you don't want to use these features, they won't likely get in your way.</p>
                 <p>The easiest way to implement the style guide is to download the EBI boilerplate (see links below) - this is an HTML file that you can use as a template for your own pages. It contains the HTML for the EBI header and footer and place holders for your project name / logo and page content. It also links to the core stylesheets you'll need to make your web pages look like part of the EBI website.</p>
                 <p><a href="https://github.com/khawkins98/EBI-Framework/archive/master.zip" class="button sans-serif">Download the framework</a> or <a href="https://github.com/khawkins98/EBI-Framework/">view on Github</a></p>
+
+                <h3>How to implement</h3>
+                <p>THIS SECTION IS IN PROGREASS.</p>
+
+                <p>In short: add header markup, footer markup, CSS and JS. Then add content.</p>
+
+                <p>See a sample boiler plate here LINK TO COME.</p>
 
                 <div class="callout warning row">
                   <h3>FAQs</h3>
@@ -332,23 +354,26 @@
                 </ol>
                 <h3><a name="global" id="global"></a>Global menu</h3>
                 <p>The global navigation menu sits at the top of every page. It is designed to be easy to find yet unobtrusive, so as not to confuse users who wish to use the navigation menu for your site.</p>
-                [UPDATE THIS IMAGE]
-                <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-global.png" alt="EBI global navigation menu example" width="800" height="28" style="border: 0px;" /></p>
+                <p><img src="images/documentation/header-bar.png" alt="EBI global navigation menu example"/></p>
                 <h3><a name="local" id="local"></a>Local menu</h3>
-                [THIS TEXT IS FROM THE CURRENT GUIDELINES, NEEDS REVIEW]
                 <p>The local menu is the navigation menu for your website and it sits below the main banner. It is optional, since not all projects require their own menu. Since it is a horizontal menu, you need to think about the text length of labels. We recommend that your first menu link is "Home" and your last one is "About [project-name]".</p>
-                <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-local.png" alt="EBI local navigation menu example" width="374" height="47" style="border: 0px;" /></p>
+                <p><img src="images/documentation/local-nav-bar.png" alt="EBI local navigation menu example" /></p>
                 <h3><a name="secondary" id="secondary"></a>Secondary menus</h3>
-                [UPDATE AS WELL]
-                <p>Once the user has selected an item from your local menu, you might need to display a secondary navigation menu for that section. So that your content takes the most important position, in the top-right of the content area, we will position these secondary menus in a column on the right in a vertical list. The &lt;h3&gt; heading for this menu should match the label text selected in your local menu.</p>
-                <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-secondary.png" alt="EBI secondary navigation menu example" width="304" height="232" style="border: 0px;" /></p>
+                  <div class="row">
+                    <div class="columns medium-6">
+                      <p>Once the user has selected an item from your local menu, you might need to display a secondary navigation menu for that section. So that your content takes the most important position, in the top-right of the content area, we will position these secondary menus in a column on the right in a vertical list.</p>
+                      <p>If you're using the optional JavaScript resources it may be helpful to <a href="http://foundation.zurb.com/sites/docs/sticky.html">make this menu sticky</a>.</p>
+                      <p>See the demo at the top right of this page.</p>
+                    </div>
+                    <div class="callout columns medium-6"><img src="images/documentation/secondary-menu.png" alt="EBI secondary navigation menu example" /></div>
+                  </div>
                 <h3><a name="breadcrumb" id="breadcrumb"></a>Breadcrumb trail</h3>
                 <p>A breadcrumb can help users understand the structure of sites with a large degree of hierarchy, but you should first rely on the global header, local title, and local menu to indicate structure, using a breadcrumb only when that fails. For guidance on your information architecture, contact the web development team.</p>
                 <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-breadcrumb.png" alt="EBI breadcrumb trail navigation example" width="228" height="149" style="border: 0px;" /></p>
                 [UPDATE IMAGE...]
                 <h3><a name="footer" id="footer"></a>Footer global menu</h3>
                 <p>In the global footer of every page there is an expanded version of the global menu, including all sub-items. This acts as a top-level sitemap, available on any page. This will be automatically populated with Javascript into your <code>#global-footer</code>.</p>
-                <p><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/images/EBI-nav-footer.png" alt="EBI expanded global navigation menu in footer example" width="800" height="213" style="border: 0px;" /></p>
+                <p><img src="images/documentation/footer.png" alt="EBI expanded global navigation menu in footer example" /></p>
               </section>
 
               <section id="menus" data-magellan-target="menus">
@@ -981,39 +1006,20 @@
 
           </div>
 
-          <div class="medium-3 columns sidebar">
-            <!-- local-search -->
-            <!-- if you do not have a local-search, delete the following form -->
-            <form id="local-search" name="local-search" action="[search-action]" method="post">
-              <h4>Search this project</h4>
-              <fieldset>
-                <input type="text" name="first" id="local-searchbox">
-                <input type="submit" name="submit" value="1" class="button icon icon-functional">
-                <small class="">
-                  <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search -->
-                  <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>
-                  |
-                  <!-- Include some example searchterms - keep them short and few. -->
-                  <a href="#" data-toggle="search-example-dropdown">See a few examples</a>
-                </small>
-                <div class="dropdown-pane" id="search-example-dropdown" data-dropdown data-options="hoverPane:true;" data-hover="true">
-                  <ul>
-                    <li><a href="[search-url-1]">[search-text-1]</a></li>
-                    <li><a href="[search-url-1]">[search-text-2]</a></li>
-                    <li><a href="[search-url-1]">[search-text-3]</a></li>
-                  </ul>
-                </div>
-                <!-- if you're not using the JS addons
-                Examples:
+          <div class="medium-3 columns sidebar" data-sticky-container>
+            <div class="sticky" data-sticky data-anchor="main-content-area"  data-options="marginTop:4;">
+              <h4>See also</h4>
+              <p>These resources will help you engage and understand the EBI Framework.</p>
+              <div class="">
                 <ul>
-                  <li><a href="[search-url-1]">[search-text-1]</a></li>
-                  <li><a href="[search-url-1]">[search-text-2]</a></li>
-                  <li><a href="[search-url-1]">[search-text-3]</a></li>
+                  <li class=""><a href="https://github.com/khawkins98/EBI-Framework">GitHub repository</a></li>
+                  <li class=""><a href="https://github.com/khawkins98/EBI-Framework/issues">Issue queue</a></li>
+                  <li class=""><a href="https://khawkins98.github.io/EBI-Framework/sample-site/">Sample pages</a></li>
+                  <li class=""><a href="https://khawkins98.github.io/EBI-Framework/fonts/index.html">Icon gallery</a></li>
                 </ul>
-                -->
-              </fieldset>
-            </form>
-            <!-- /local-search -->
+              </div>
+            </div>
+
           </div>
 
         </div>
