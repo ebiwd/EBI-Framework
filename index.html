@@ -305,7 +305,7 @@
                 </div>
 
                 <h3>Requirements and what you get</h3>
-                <p>The framework is built with modern best practices and targets browsers shipped within the past three years; though other browsers should still handle the content and appearance well (graceful degradation). The framework is also mobile responsive, so you won't have to spend too much time adapting for mobile.</p>
+                <p>The framework is built with modern best practices and targets browsers shipped within the past three years; though other browsers should still handle the content and appearance well (graceful degradation). The framework is also mobile responsive (Responsive Web Design), so you won't have to spend too much time adapting for mobile.</p>
                 <p>To help us help you, we've used the Foundation Framework (version 6) as a baseline. Using this we get a robust set of web components (tool tips, forms, sliders, and modal boxes) as well as technical guidance and extensive open source community testing -- and, perhaps, you'll be fortunate enough to already have a developer with experience with Foundation.</p>
                 <p>But we've taken care to make the implementation non-intrusive, so if you don't want to use these features, they won't likely get in your way.</p>
                 <p>The easiest way to implement the style guide is to download the EBI boilerplate (see links below) - this is an HTML file that you can use as a template for your own pages. It contains the HTML for the EBI header and footer and place holders for your project name / logo and page content. It also links to the core stylesheets you'll need to make your web pages look like part of the EBI website.</p>
@@ -322,13 +322,19 @@
                   <h3>FAQs</h3>
                   <dl>
                     <dt>JavaScript:</dt>
-                      <dd>The framework does not require jQuery, but if you do use it you will get more nice to haves and your life may be easier all around. The jQuery functionality is enable by default. For more see the section on disabling JavaScript addons (you'll comment out two lines -- need to write this...)</dd>
+                      <dd><p>The framework does not require jQuery, but if you do use it you will get more nice to haves and your life may be easier all around. The jQuery functionality is enable by default. For more see the section on disabling JavaScript addons (you'll comment out two lines -- need to write this...)</p></dd>
+                    <dt>Foundation:</dt>
+                      <dd><p>If you aren't able to use the included Foundation base CSS, we do provide some support for other frameworks (such as Bootstrap), but we've picked Foundation as the "recommended implementation" as it offers a path for more graceful integration of EBI styles and requirements.</p>
+                      <p>If you're unable to make use of the Frameworks JS or CSS tooling, use this page as a guide for how your site should look, feel, function. There's no reason that can't be done with any framework be it Angular, Material Design, or vanilla CSS3.</p>
+                      <p>For new websites or major reworks, we recommend you consider using the included Foundation CSS and JS, as you'll get more benefit from the work done in this framework, encounter fewer bugs, and help EBI web services have a more consistent function and feel.</p>
+                      </dd>
+
                     <dt>Bootstrap:</dt>
-                      <dd>While the front-end framework provides a robust set of tooling and a broader use base, its base styling is more opinionated (121KB vs 43KB of minified baseline CSS). Foundation allows us to provide a slimmer and faster EBI theme layer. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem. For Bootstrap users unfamiliar with Foundation, you might <a href="https://www.codementor.io/css/tutorial/bootstrap-3-vs-foundation-5-front-end-framework-comparison">read this comparison</a> (note that it references the slightly older version of Foundation 5, but is substantially the same for the article's proposes).</dd>
+                      <dd><p>While the front-end framework provides a robust set of tooling and a broader use base, its base styling is more opinionated (121KB vs 43KB of minified baseline CSS). Foundation allows us to provide a slimmer and faster EBI theme layer. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem. For Bootstrap users unfamiliar with Foundation, you might <a href="https://www.codementor.io/css/tutorial/bootstrap-3-vs-foundation-5-front-end-framework-comparison">read this comparison</a> (note that it references the slightly older version of Foundation 5, but is substantially the same for the article's proposes).</p></dd>
                     <dt>SASS:</dt>
-                      <dd>We have not used Foundation's compilable CSS, nor have we added any other compile required tooling. This was done to keep implementation as simple as possible, and it offered limited benefits. However, we have implement the vanilla release of Foundation, so there's no reason you couldn't swap that out. As internal users become more familiar with Foundation and we further optimise, a future release may use SASS.</dd>
+                      <dd><p>We have not used Foundation's compilable CSS, nor have we added any other compile required tooling. This was done to keep implementation as simple as possible, and it offered limited benefits. However, we have implement the vanilla release of Foundation, so there's no reason you couldn't swap that out. As internal users become more familiar with Foundation and we further optimise, a future release may use SASS.</p></dd>
                     <dt>Animation:</dt>
-                      <dd>Using CSS3 and JavaScript animations there are many opportunities to make our sites look good and function better, but we want to take this one step at a time and get other items in order. Currently on target for v1.5. <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="Foundation does have a complementary animation toolset that we've not bundled, but you could...">Feel free to experiment with subtle animations</span>, let us know if you do.</dd>
+                      <dd><p>Using CSS3 and JavaScript animations there are many opportunities to make our sites look good and function better, but we want to take this one step at a time and get other items in order. Currently on target for v1.5. <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="Foundation does have a complementary animation toolset that we've not bundled, but you could...">Feel free to experiment with subtle animations</span>, let us know if you do.</p></dd>
                   </dl>
                 </div>
               </section>
@@ -437,7 +443,17 @@
                 <h2>Grid</h2>
                 <p>Start by adding an element with a class of <code>.row</code>. This will create a horizontal block to contain vertical columns. Then add elements with a <code>.column</code> class within that row. You can use <code>.column</code> or <code>.columns</code>&mdash;the only difference is grammar. Specify the widths of each column with the <code>.small-#</code>, <code>.medium-#</code>, and <code>.large-#</code> classes.</p>
 
-                [reference F6 docs...]
+                <p>For example: The EBI Framework uses a 12 column grid. This page has a 9/12 left column, and 3/12 right column; the structure:</p>
+
+                <pre class="callout">
+&lt;div class=&quot;row&quot;&gt; 
+  &lt;div class=&quot;columns medium-9&quot;&gt; Main left column &lt;/div&gt; 
+  &lt;div class=&quot;columns medium-3&quot;&gt; Right sidebar &lt;/div&gt; 
+&lt;/div&gt;</pre>
+
+                <p>Note that by using <code>.medium-</code> the two columns automatically expand to full width on small screens (mobile devices).</p>
+
+                <p>For further background and demonstration, <a href="http://foundation.zurb.com/sites/docs/grid.html">view the Foundation documentation on grids</a>.</p>
 
               </section>
 
@@ -982,15 +998,16 @@
 
                   <div class="columns medium-6">
 
-                    <p>This style guide is supported by the "Style Council", to whom you can go for help, advice and guidance. [link to council members]</p>
+                    <p>If you a question about the background of this guide or have philisophical suggestion <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WGC/Web+Guidelines+committee">contact the EBI Web Guidelines Committee</a>, whom is responsibile for the governance and direction.</p>
 
-                    <p>Also check out the issue queue [LINK].</p>
+                    <p>For technical matters of "how do I do?", <a href="https://github.com/khawkins98/EBI-Framework/issues">visit the issue queue on GitHub</a>.</p>
 
                   </div>
 
-                  <div class="columns callout success sans-serif medium-6">
-                    <h5>Want to offer help?</h5>
-                    Get in touch, or subscribe to the issue queue, collaboration and pull requests welcome!
+                  <div class="columns callout secondary medium-6">
+                    <h3>Want to offer help?</h3>
+                    <p>Get in touch, or subscribe to the issue queue, collaboration and pull requests welcome!</p>
+                    <a href="https://github.com/khawkins98/EBI-Framework/" class="button readmore">To the GitHub repo!</a>
                   </div>
 
                 </div>
@@ -1012,8 +1029,8 @@
               <p>These resources will help you engage and understand the EBI Framework.</p>
               <div class="">
                 <ul class="menu vertical">
-                  <li class=""><a href="https://github.com/khawkins98/EBI-Framework">GitHub repository</a></li>
-                  <li class=""><a href="https://github.com/khawkins98/EBI-Framework/issues">Issue queue</a></li>
+                  <li class=""><a href="https://github.com/khawkins98/EBI-Framework">GitHub repository <i class="icon icon-generic" data-icon="x"></i></a></li>
+                  <li class=""><a href="https://github.com/khawkins98/EBI-Framework/issues">Issue queue <i class="icon icon-generic" data-icon="x"></i></a></li>
                   <li class=""><a href="https://khawkins98.github.io/EBI-Framework/sample-site/">Sample pages</a></li>
                   <li class=""><a href="https://khawkins98.github.io/EBI-Framework/fonts/index.html">Icon gallery</a></li>
                 </ul>
@@ -1024,30 +1041,9 @@
 
         </div>
 
-        <div class="row">
 
 
-          </div>
 
-
-          <div class="row serif">
-
-            <div class="large-6 columns">
-              <h3>Examples</h3>
-              <ul>
-                <li><a href="ebi-level2-boilerplate-blank-fluid.html">Blank</a> - big, empty space between header and footer</li>
-                <li><a href="ebi-level2-boilerplate-right-sidebar-fluid.html">Right sidebar</a> - for content-driven pages deeper in your site's hierarchy, the sidebar could contain secondary navigation</li>
-                <li><a href="ebi-level2-boilerplate-4cols-fluid.html">Four columns</a> - an example of dividing the page into four broad content areas</li>
-                <li><a href="ebi-level2-boilerplate-search-results-fluid.html">Search results</a> - an example page with filters or facets for your results in a left-hand sidebar, and a right-hand sidebar for global results</li>
-              </ul>
-              <h3>Search Results Examples</h3>
-              <ul>
-                <li><a href="ebi-search-results-complete.html">Search Results Complete</a> - template for a basic search results page </li>
-                <li><a href="ebi-no-search-results.html">No Search Results</a> - template for a page of zero results </li>
-              </ul>
-            </div>
-
-          </div>
 
       </section>
       <!-- End suggested layout containers -->
