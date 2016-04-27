@@ -265,16 +265,11 @@
 
               </div>
 
-
-
             </div>
 
             <div class="row">
 
-
-
-
-          <div class="medium-12 columns sections">
+            <div class="medium-12 columns sections">
 
               <section id="overview" data-magellan-target="overview">
 
@@ -289,9 +284,7 @@
                 <p>We plan to host workshops to educate on the tooling and address issues or concerns, <a href="https://github.com/khawkins98/EBI-Framework/issues/1">register you interest here</a> or if you don't have a GitHub account e-mail khawkins@ebi.ac.uk</p>
                 <p>If you need technical guidance or have questions, <a href="#help">see the help section</a>.</p>
 
-
                 <div class="callout warning">
-
                   <h1 class="training-color"><span class="icon icon-generic " data-icon="U"></span> Heads up!</h1>
                   <p>This framework is in a very early stage of testing and is still being actively planned.</p>
                   <p>The takeaway is that there are two goals here:</p>
@@ -299,9 +292,8 @@
                     <li>Refresh the EBI Compliance theme to be more visually compliant with EMBL-EBI standards.</li>
                     <li>Offer optional reusable tooling to make the lives of developers easier and to make EMBL-EBI sites look more consistent with less effort.</li>
                   </ol>
-                  <p>The documentation below is a work in progress, but have a look. We are looking for input and concerns about the scope, direction and technical solutions. Please pot to <a href="https://github.com/khawkins98/EBI-Framework/issues/1">the GitHub issue queue</a> or if you don't have a GitHub account e-mail khawkins@ebi.ac.uk</p>
+                  <p>The documentation below is a work in progress. We are looking for input and concerns about the scope, direction and technical solutions. Post to <a href="https://github.com/khawkins98/EBI-Framework/issues/1">the GitHub issue queue</a>, if you don't have a GitHub account: e-mail khawkins@ebi.ac.uk</p>
                   <p>Also see the <a href="sample-site/">sample pages</a> to get an idea of how real content would look and work using the framework.</p>
-
                 </div>
 
                 <h3>Requirements and what you get</h3>
@@ -312,11 +304,32 @@
                 <p><a href="https://github.com/khawkins98/EBI-Framework/archive/master.zip" class="button sans-serif">Download the framework</a> or <a href="https://github.com/khawkins98/EBI-Framework/">view on Github</a></p>
 
                 <h3>How to implement</h3>
-                <p>THIS SECTION IS IN PROGRESS.</p>
+                <blockquote class="float-right columns medium-5"><h5>Using Drupal?</h5> Contact Web Development. There is a Drupal 7 theme you can use, and a Drupal 8 version is coming soon(ish).</blockquote>
+                <p>This framework functions many front-end solutions.</p>
+                <p>There are several files and structures that we use, generally these can be implemented seperately so you can use what you can or your own solution if required. Outright dependencies are nested.</p>
+
+                <div class="callout">
+                  <ol>
+                    <li>Core HTML structure: The basic HTML markkup structure for the page: global-nav black bar, local-nav area, main content div, footer, etc.</li>
+                    <li><a href="css/ebi-global.css">EBI base CSS styles</a>: Our basic look/colours.</li>
+                    <li><a href="https://khawkins98.github.io/EBI-Framework/libraries/foundation-6/css/foundation.css">Foundation base CSS styles</a>: this provides the base grid structure, style resets, and core structure of the page.</li>
+                    <li><a href="css/embl-petrol-colours.css">Your site's CSS colours</a>: Colours specific to your service/site.</li>
+                    <li>Fonts.css</li>
+                    <li>jQuery 1.10.2: Slightly older versions may be compatible.</li>
+                      <ul>
+                        <li>Foundation JS</li>
+                        <ul>
+                          <li><a href="https://khawkins98.github.io/EBI-Framework/js/foundationExtendEBI.js">EBI JS tweaks to Foundation</a>: A series of value adds that build atop Foundation.</li>
+                        </ul>
+                      </ul>
+                    <li>EBI JS</li>
+                    <li>Cookie JS</li>
+                    <li>Footer JS</li>
+                  </ol>
+                </div>
 
                 <p>In short: add header markup, footer markup, CSS and JS. Then add content.</p>
-
-                <p>See a sample boiler plate here LINK TO COME.</p>
+                <p>To get started check out the structure of the <a href="sample-site">sample boiler plate page</a>.</p>
 
                 <div class="callout warning row">
                   <h3>FAQs</h3>
@@ -328,7 +341,6 @@
                       <p>If you're unable to make use of the Frameworks JS or CSS tooling, use this page as a guide for how your site should look, feel, function. There's no reason that can't be done with any framework be it Angular, Material Design, or vanilla CSS3.</p>
                       <p>For new websites or major reworks, we recommend you consider using the included Foundation CSS and JS, as you'll get more benefit from the work done in this framework, encounter fewer bugs, and help EBI web services have a more consistent function and feel.</p>
                       </dd>
-
                     <dt>Bootstrap:</dt>
                       <dd><p>While the front-end framework provides a robust set of tooling and a broader use base, its base styling is more opinionated (121KB vs 43KB of minified baseline CSS). Foundation allows us to provide a slimmer and faster EBI theme layer. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem. For Bootstrap users unfamiliar with Foundation, you might <a href="https://www.codementor.io/css/tutorial/bootstrap-3-vs-foundation-5-front-end-framework-comparison">read this comparison</a> (note that it references the slightly older version of Foundation 5, but is substantially the same for the article's proposes).</p></dd>
                     <dt>SASS:</dt>
@@ -343,7 +355,7 @@
                 <h2>Design patterns</h2>
                 <p>This page acts as a "living guide" by implementing a broad range of interface items, use them as a guide for how to make your page elements look and function.</p>
 
-                <p>For edge cases not covered, please [CONTACT THE STYLE TEAM] or open an issue in the tracker. We'll update this living style guide with those answers.</p>
+                <p>For edge cases not covered, please <a href="https://github.com/khawkins98/EBI-Framework/issues">open an issue in the tracker</a>. We'll update this living style guide with feedback that grows from there.</p>
               </section>
 
               <section id="navigation" data-magellan-target="navigation">
@@ -582,20 +594,19 @@
                     <h3>Unordered lists</h3>
                     <p>Use an unordered list to... list things, if the order of the items doesn't matter.</p>
 
-                      <ul>
-                        <li>List item with a much longer description or more content.</li>
-                        <li>List item</li>
-                        <li>List item
-                          <ul>
-                            <li>Nested list item</li>
-                            <li>Nested list item</li>
-                            <li>Nested list item</li>
-                          </ul>
-                        </li>
-                        <li>List item</li>
-                        <li>List item</li>
-                      </ul>
-
+                    <ul>
+                      <li>List item with a much longer description or more content.</li>
+                      <li>List item</li>
+                      <li>List item
+                        <ul>
+                          <li>Nested list item</li>
+                          <li>Nested list item</li>
+                          <li>Nested list item</li>
+                        </ul>
+                      </li>
+                      <li>List item</li>
+                      <li>List item</li>
+                    </ul>
                   </div>
                   
                   <div class="columns medium-6">
@@ -645,7 +656,6 @@
                   </dl>
                 </div>
 
-
                 <h3>Icon list</h2>
                 <p>Want to use the font icons as your "bullet"? Add the class <code>.icon-bullet</code> to your <code>&lt;li&gt;</code> and then insert the icon code at the start of list item.</p>
                 
@@ -674,7 +684,6 @@
                 </div>
 
                 <h4>Badge</h4>
-
                 <div class="row">
                   <div class="columns medium-7">
                     <p>Combine a <code>ul</code> with class <code>.inline</code>, then give your <code>li</code> a <code>.badge</code>.</p>
@@ -693,8 +702,6 @@
                 </div>
 
                 <h4>Pager</h4>
-
-
                 <div class="">
                   <ul class="pagination text-center" role="navigation" aria-label="Pagination">
                     <li class="pagination-previous disabled">Previous</li>
@@ -712,7 +719,7 @@
                 <h4>Read more lins</h4>
                 <p>You can read more as a button, if it's a primary call to action, or a link, if it's not as important.</p>
 
-                <div class="" data-equalizer>
+                <div data-equalizer>
 
                   <div class="columns small-6 callout" data-equalizer-watch>
                     <h6>High priority read more links</h6>
@@ -725,8 +732,6 @@
                   </div>
 
                 </div>
-
-
               </section>
 
               <section id="tables" data-magellan-target="tables">
@@ -806,7 +811,6 @@
 
                 <h4>Responsive table</h4>
                 <p>Add the class <code>.responsive-table</code> to the <code>table</code> tag, and you'll be able to make use of <a href="#grid">the grid system of clases</a>, such as <code>.show-for-large</code>.</p>
-
                 <p>Note that this requires jQuery, as it will propogate the <code>th</code> classes to each <code>td</code>.</p>
 
                 <table class="responsive-table">
@@ -846,18 +850,12 @@
                   </div>
 
                   <p>For images inserted inside text areas, you can use the CSS class of <code>.thumbnail</code> to add subtle padding and spacing.</p>
-
                   <p>You can further combine with <code>.float-left</code> or <code>.float-right</code> for a nice treatment, and size with, say, <code>.columns .medium-4</code> for a responsive effect.</p>
-
                   <p>Images will dynamically scale down to fit the container, but will not scale above their actual size.</p>
-
                   <p>This is the treatment you see to the right.</p>
 
                   <h3>Image tiles</h3>
-
                   <p>Alternatively, you can use a <code>.with-overlay</code> for a darkened effect with a text overlay.</p>
-
-
                   <p>Notes:</p>
                   <ul>
                     <li>Links: when the caption is a link the text automatically takes on a large font face and arrow. This style is best used as an image button to tease and link further content.</li>
@@ -885,9 +883,6 @@
                   </div>
                 </div>
 
-
-                <p>
-
               </section>
 
               <section id="favicons" data-magellan-target="favicons">
@@ -898,8 +893,7 @@
 
               <section id="helper-classes" data-magellan-target="helper-classes">
                 <h2>Helper classes</h2>
-
-                This grab bag of odds-and-ends classes will help you create a layout that works for your page's needs.
+                <p>This grab bag of odds-and-ends classes will help you create a layout that works for your page's needs.</p>
 
                 <table>
                   <tr>
@@ -927,11 +921,7 @@
                     <td>set display to "none"</td>                    
                   </tr>
                 </table>
-
-
-
               </section>
-
 
               <section id="browser-compatibility" data-magellan-target="browser-compatibility">
                 <h2>Browser compatibility</h2>
@@ -962,8 +952,6 @@
               <section id="browser-compatibility" data-magellan-target="browser-compatibility">
                 <h2>Browser compatibility</h2>
                 [add link to confluence info/or place that info here as truth]
-
-
               </section>
 
               <section id="sitemap" data-magellan-target="sitemap">
@@ -999,7 +987,6 @@
                   <div class="columns medium-6">
 
                     <p>If you a question about the background of this guide or have philisophical suggestion <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WGC/Web+Guidelines+committee">contact the EBI Web Guidelines Committee</a>, whom is responsibile for the governance and direction.</p>
-
                     <p>For technical matters of "how do I do?", <a href="https://github.com/khawkins98/EBI-Framework/issues">visit the issue queue on GitHub</a>.</p>
 
                   </div>
@@ -1014,12 +1001,9 @@
 
               </section>
 
+            </div>
+
           </div>
-
-
-
-           </div>
-
 
           </div>
 
@@ -1040,10 +1024,6 @@
           </div>
 
         </div>
-
-
-
-
 
       </section>
       <!-- End suggested layout containers -->
