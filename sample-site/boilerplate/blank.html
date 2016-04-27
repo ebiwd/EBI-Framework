@@ -36,7 +36,7 @@
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
   <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/libraries/foundation-6/css/foundation.css" type="text/css" media="all">
-  <link rel="stylesheet" href="../css/ebi-global.css" type="text/css" media="all">
+  <link rel="stylesheet" href="../../css/ebi-global.css" type="text/css" media="all">
   <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/fonts/fonts.css" type="text/css" media="all">
 
   <!-- Use this CSS file for any custom styling -->
@@ -128,7 +128,7 @@
 
           <!-- local-title -->
           <div class="columns medium-12" id="local-title">
-            <h1><a href="../" title="Back to [service-name] homepage"><div class="hexagon"><i class="icon icon-generic" data-icon=":"></i></div> EBI Framework</a></h1>    
+            <h1><a href="../../" title="Back to [service-name] homepage"><div class="hexagon"><i class="icon icon-generic" data-icon=":"></i></div> EBI Framework</a></h1>    
 
           </div>
           <!-- /local-title -->
@@ -136,7 +136,7 @@
           <!-- local-nav -->
               <nav >
                 <ul class="dropdown menu float-left" data-description="navigational">
-                  <li class=""><a href="../">Overview</a></li>
+                  <li class=""><a href="../../">Overview</a></li>
                   <li><a data-open="modal-download">Download</a></li>
                   <li><a href="#">Support <i class="icon icon-generic" data-icon="x"></i></a></li>
                 </ul>
@@ -157,82 +157,31 @@
       <section>
 
         <!-- Your menu structure should make a breadcrumb redundant, but if a breadcrump is needed uncomment the below -->
-        <!-- <nav aria-label="You are here:" role="navigation">
+        <nav aria-label="You are here:" role="navigation">
           <ul class="breadcrumbs">
-            <li><a href="../">EBI Framework</a></li>
+            <li><a href="../../">EBI Framework</a></li>
+            <li><a href="../">Sample pages</a></li>
             <li>
-              <span class="show-for-sr">Current: </span> Framework sample pages
+              <span class="show-for-sr">Current: </span> Blank boilerplate
             </li>
           </ul>
-        </nav> -->
+        </nav>
 
         <div id="main-content-area" class="row">
-          <div class="small-12 medium-9 columns">
-
-            <h3>Framework sample pages</h3>
-            <p class="lead">These demonstrate a range of ways you can make use of the EBI styles and framework.</p>
-
-            <hr/>
-
-            <h4 id="boilerplate">Boilerplate</h4>
-            <p>You can use these as templates for your code.</p>
-            <ol>
-              <li><a href="boilerplate/blank.html">Blank</a><br/>
-                big, empty space between header and footer</li>
-              <li><a href="boilerplate/ebi-level2-boilerplate-right-sidebar-fluid.html">TO COME - Right sidebar</a><br/>
-                for content-driven pages deeper in your site's hierarchy, the sidebar could contain secondary navigation</li>
-              <li><a href="boilerplate/ebi-level2-boilerplate-4cols-fluid.html">TO COME - Four columns</a><br/>
-                an example of dividing the page into four broad content areas</li>
-              <li><a href="boilerplate/ebi-level2-boilerplate-search-results-fluid.html">TO COME - Search results</a><br/>
-                an example page with filters or facets for your results in a left-hand sidebar, and a right-hand sidebar for global results</li>
-              <li><a href="boilerplate/ebi-search-results-complete.html">TO COME - Search Results Complete</a><br/>
-                template for a basic search results page </li>
-              <li><a href="boilerplate/ebi-no-search-results.html">TO COME - No Search Results</a><br/>
-                template for a page of zero results </li>
-            </ol>
-
-            <h4>Level 1 implementations</h4>
-            <p>Examples of services aiming for full compliance.</p>
-            <ol>
-              <li><a href="front_page.html">EBI Homepage</a> <br/>
-                test</li>
-              <li><a href="research.html">Research page</a> <br/>
-                test</li>
-              <li><a href="brochure.html">Brochure page</a> <br/>
-               Technical recruitment</li>
-            </ol>
-
-            <h4>Partial and Level 3 implementations</h4>
-            <p>These examples show implementations of sites making use of only part of the EBI visual guidelines or technical framework  .</p>
-            <ol>
-              <li><a href="">TO COME - Bootstrap</a><br/>
-                For services aiming for full visual compliance but not using the Foundation Framework base.</li>
-              <li><a href="">TO COME - No JS</a><br/>
-                Using the Foundation base framework with JavaScript or jQuery.</li>
-              <li><a href="">TO COME - No JS or Foundation</a><br/>
-                You won't benefit from any of the reusable components, but here's a bare bones visual implentation.</li>
-            </ol>
-
-          </div> <!-- /medium-9 -->
-
-
-          <div class="small-12 medium-3 columns sidebar" data-sticky-container>
+          <div class="columns">
+            <section>
+              <h2>[page-title]</h2>
+              <p>Your content</p>                    
+            </section> 
             
-            <div class="sticky" data-sticky data-anchor="main-content-area"  data-options="marginTop:4;">
-              <h4>See also</h4>
-              <p>These resources will help you engage and understand the EBI Framework.</p>
-              <div class="">
-                <ul class="menu vertical">
-                  <li class=""><a href="https://github.com/khawkins98/EBI-Framework">GitHub repository</a></li>
-                  <li class=""><a href="https://github.com/khawkins98/EBI-Framework/issues">Issue queue</a></li>
-                  <li class=""><a class="active" href="https://khawkins98.github.io/EBI-Framework/sample-site/">Sample pages</a></li>
-                  <li class=""><a href="https://khawkins98.github.io/EBI-Framework/fonts/index.html">Icon gallery</a></li>
-                </ul>
-              </div>
-            </div>
-
-          </div> <!-- /medium-3 -->
-
+            <section>
+              <h3>Level 3 heading</h3>
+              <p>More content in a full-width container.</p>
+            
+              <h4>Level 4 heading</h4>
+              <p>More content in a full-width container.</p>
+            </section>
+          </div>
         </div>
 
       </section>
