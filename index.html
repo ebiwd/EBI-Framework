@@ -838,6 +838,67 @@
                   </tbody>
                 </table>
 
+                <h4>Sorting table</h4>
+                <p>For user-interactive and programatic table sorting, we integrate <a href="https://github.com/christianbach/tablesorter">Tablesorter</a>.</p>
+                <p>To use the plugin you will need to:</p>
+                <ol>
+                  <li>You will need to include the <code>/libraries/tablesorter/jquery.tablesorter.min.js</code> file. This is not part of the default EBI Framework JS config.</li>
+                  <li>Add the <code>.tablesorter</code> class to your table.</li>
+                  <li>Ensure your table has a <code>thead</code> and <code>tbody</code>.</li>
+                  <li>Give your table a CSS ID.</li>
+                  <li>Invoke the plugin with JS, ala: <code>$(&#x22;#table-sort-demo&#x22;).tablesorter(); </code>
+
+                </ol>
+                <p>Here's a quick demo. Note that is supports the responsive table techniques.</p>
+
+                <table id="table-sort-demo" class="responsive-table tablesorter">
+                  <thead>
+                    <tr>
+                      <th class="show-for-small-only">Compact</th>
+                      <th class="show-for-large">Shown for large</th>
+                      <th>Counting</th>
+                      <th>Sandwich</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Alpha</td>
+                      <td>Alpha long description.</td>
+                      <td>30,000,000</td>
+                      <td>Cheese</td>
+                    </tr>
+                    <tr>
+                      <td>Beta</td>
+                      <td>Beta long description.</td>
+                      <td>20,000,000</td>
+                      <td>Good quality mustard</td>
+                    </tr>
+                    <tr>
+                      <td>Gamma</td>
+                      <td>Gamma long description.</td>
+                      <td>10,000,000</td>
+                      <td>Bread</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>Tip: if the plugin isn't detecting your data type correctly, try telling the plugin of your data type and include the <code>jquery.metadata.js</code> file.</p>
+
+
+                <!-- Include for table sorting -->
+                <!-- Note that we've loaded this with "defer", this technique may not be appropriate for your uses.
+                     If not, load this JS after jQuery. -->
+                <script src="libraries/tablesorter/jquery.tablesorter.min.js" defer></script>
+                <script type="text/javascript">
+                  window.onload = function() {
+                    $(document).ready(function() { 
+                        $("#table-sort-demo").tablesorter(); 
+                      } 
+                    ); 
+                  }
+                </script>
+
+
               </section>
 
               <section id="images" data-magellan-target="images">
@@ -1079,8 +1140,6 @@
   <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
 <!--
    -->
-
-
   
   <!-- Google Analytics details... -->
   <!-- Change UA-XXXXX-X to be your site's ID -->

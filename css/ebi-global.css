@@ -701,3 +701,13 @@ h6 a span.link-pdf { display:none; }
   #shortcuts,
   #ebi_search_results { display: none; }
 }
+
+/* Tablesorter styling */
+table.tablesorter thead tr .header {
+  background-image: url(../libraries/tablesorter/themes/blue/bg.gif);
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+}
+table.tablesorter thead tr .headerSortUp { background-image: url(../libraries/tablesorter/themes/blue/asc.gif); }
+table.tablesorter thead tr .headerSortDown { background-image: url(../libraries/tablesorter/themes/blue/desc.gif); }
