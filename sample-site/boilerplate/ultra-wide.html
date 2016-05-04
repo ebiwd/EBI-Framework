@@ -1,0 +1,1428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The European Bioinformatics Institute &lt; EMBL-EBI</title>
+  <meta name="description" content="EMBL-EBI"><!-- Describe what this page is about -->
+  <meta name="keywords" content="bioinformatics, europe, institute"><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
+  <meta name="author" content="EMBL-EBI"><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#70BDBD"> <!-- Android Chrome mobile browser tab color -->
+    
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi-owner" content="John Doe"> <!-- Who should be contacted about changes -->
+  <meta name="ebi-review-cycle" content="30"> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi-last-review" content="2015-12-20"> <!-- The last time the content was reviewed -->
+  <meta name="ebi-expiry" content="2016-01-20"> <!-- When this content is no longer relevant -->
+    
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//embl.de" />
+
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png"> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png"> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png"> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png"> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff"> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797"> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/mstile-144x144.png">
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/libraries/foundation-6/css/foundation.css" type="text/css" media="all">
+  <link rel="stylesheet" href="../../css/ebi-global.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/fonts/fonts.css" type="text/css" media="all">
+
+  <!-- Use this CSS file for any custom styling -->
+  <!--
+    <link rel="stylesheet" href="css/custom.css" type="text/css" media="all">
+  -->
+
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi-localmasthead-color" content="#000">
+  <meta name="ebi-localmasthead-image" content="https://khawkins98.github.io/EBI-Framework/images/backgrounds/embl-ebi-background.jpg">
+  -->
+
+    <!-- you can replace this with [projectname]-colours.css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/css/embl-petrol-colours.css" type="text/css" media="all">
+
+  <!-- for production the above can be replaced with -->
+  <!--
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css">
+  -->
+
+  <!-- end CSS-->
+
+
+  <!-- All JavaScript at the bottom, except for Modernizr -->
+  <script src="https://khawkins98.github.io/EBI-Framework/libraries/modernizr/modernizr.custom.49274.js"></script>
+
+</head>
+
+<body class="level2 wide-screen"><!-- add any of your classes or IDs -->
+  <div id="skip-to">
+    <ul>
+      <li><a href="#content">Skip to main content</a></li>
+      <li><a href="#local-nav">Skip to local navigation</a></li>
+      <li><a href="#global-nav">Skip to EBI global navigation menu</a></li>
+      <li><a href="#global-nav-expanded">Skip to expanded EBI global navigation menu (includes all sub-sections)</a></li>
+    </ul>
+  </div>
+
+  <div data-sticky-container>
+    <div id="local-masthead" data-sticky data-sticky-on="large" data-top-anchor="180" data-btm-anchor="300000">
+      <header>
+
+        <div id="global-masthead" class="clearfix">
+          <!--This has to be one line and no newline characters-->
+          <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>
+
+          <nav>
+            <div class="row">
+              <ul id="global-nav" class="menu">
+                <!-- set active class as appropriate -->
+                <li id="home-mobile" class=""><a href="//www.ebi.ac.uk"></a></li>
+                <li id="home" class="active"><a href="//www.ebi.ac.uk"><i class="icon icon-generic" data-icon="H"></i> EMBL-EBI</a></li>
+                <li id="services"><a href="//www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="("></i> Services</a></li>
+                <li id="research"><a href="//www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon=")"></i> Research</a></li>
+                <li id="training"><a href="//www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>
+                <li id="about"><a href="//www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="i"></i> About us</a></li>
+                <li id="search">
+                  <a href="#" data-toggle="search-global-dropdown"><i class="icon icon-functional" data-icon="1"></i> <span class="show-for-small-only">Search</span></a>
+                  <div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
+                    <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">
+                      <fieldset>
+                        <div class="input-group">
+                          <input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">
+                          <div class="input-group-button">
+                            <input type="submit" name="submit" value="Search" class="button">
+                            <input type="hidden" name="db" value="allebi" checked="checked">
+                            <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
+                          </div>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </li>
+                <li class="float-right show-for-medium embl-selector">
+                  <button class="button" type="button" data-toggle="embl-dropdown">Hinxton</button>
+                  <div id="embl-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
+                    to come.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+        </div>
+
+        <div class="masthead row">
+
+          <!-- local-title -->
+          <div class="columns medium-12" id="local-title">
+            <h1><a href="../../" title="Back to [service-name] homepage"><div class="hexagon"><i class="icon icon-generic" data-icon=":"></i></div> EBI Framework</a></h1>    
+
+          </div>
+          <!-- /local-title -->
+
+          <!-- local-nav -->
+              <nav >
+                <ul class="dropdown menu float-left" data-description="navigational">
+                  <li class=""><a href="../../">Overview</a></li>
+                  <li><a data-open="modal-download">Download</a></li>
+                  <li><a href="#">Support <i class="icon icon-generic" data-icon="x"></i></a></li>
+                </ul>
+              </nav>
+          <!-- /local-nav -->
+
+        </div>
+
+      </header>
+
+      </div>
+  </div>
+
+
+  <div id="content" role="main" class="row">
+
+      <!-- Suggested layout containers -->
+      <section>
+
+        <!-- Your menu structure should make a breadcrumb redundant, but if a breadcrump is needed uncomment the below -->
+        <!-- <nav aria-label="You are here:" role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="../">EBI Framework</a></li>
+            <li>
+              <span class="show-for-sr">Current: </span> Framework sample pages
+            </li>
+          </ul>
+        </nav> -->
+
+        <div id="main-content-area" class="row">
+          <div class="small-12 medium-9 columns">
+
+            <h3>Wide screen layouts</h3>
+            <p class="lead">Here we've used a very wide table to demonstarte how you might accomodate larger content.</p>
+            <p>To activate the flexible layout, add <code>.wide-screen</code> to your <code>body</code> tag.</p>
+            <p>If your content is a table, be sure to also <a href="../../index.html">have a look at the table guidance</a>.</p>
+
+            <div class="callout warning">
+
+              <p>Note: Wider screen layout offers a lot of poteintal and we hope to add many more features as we better understand the problem space. Ideas welcome!</p>
+
+            </div>
+
+            <hr/>
+
+          </div> <!-- /medium-9 -->
+
+
+          <div class="small-12 medium-3 columns sidebar">
+            
+            <div class="">
+              <h4>See also</h4>
+              <p>These resources will help you engage and understand the EBI Framework.</p>
+              <div class="">
+                <ul class="menu vertical">
+                  <li class=""><a href="https://github.com/khawkins98/EBI-Framework">GitHub repository</a></li>
+                  <li class=""><a href="https://github.com/khawkins98/EBI-Framework/issues">Issue queue</a></li>
+                  <li class=""><a class="active" href="https://khawkins98.github.io/EBI-Framework/sample-site/">Sample pages</a></li>
+                  <li class=""><a href="https://khawkins98.github.io/EBI-Framework/fonts/index.html">Icon gallery</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div> <!-- /medium-3 -->
+        
+        </div> <!-- /row -->
+        
+        <div class="row">
+          <div class="columns medium-12">
+            <table class="scroll">
+             <col span=58 >
+             <tr>
+              <td></td>
+              <td>cabinet</td>
+              <td>cable</td>
+              <td>cake</td>
+              <td>calculate</td>
+              <td>calculation</td>
+              <td>call</td>
+              <td>call back</td>
+              <td>called</td>
+              <td>call for</td>
+              <td>call off</td>
+              <td>call up</td>
+              <td>calm</td>
+              <td>calm down</td>
+              <td>calmly</td>
+              <td>camera</td>
+              <td>camp</td>
+              <td>campaign</td>
+              <td>camping</td>
+              <td>can 1</td>
+              <td>can 2</td>
+              <td>cancel</td>
+              <td>cancer</td>
+              <td>candidate</td>
+              <td>candy</td>
+              <td>cannot</td>
+              <td>cap</td>
+              <td>capable</td>
+              <td>capacity</td>
+              <td>capital</td>
+              <td>captain</td>
+              <td>capture</td>
+              <td>car</td>
+              <td>card</td>
+              <td>cardboard</td>
+              <td>care</td>
+              <td>career</td>
+              <td>care for</td>
+              <td>careful</td>
+              <td>carefully</td>
+              <td>careless</td>
+              <td>carelessly</td>
+              <td>carpet</td>
+              <td>carrot</td>
+              <td>carry</td>
+              <td>carry on</td>
+              <td>carry out</td>
+              <td>case</td>
+              <td>cash</td>
+              <td>cast</td>
+              <td>castle</td>
+              <td>cat</td>
+              <td>catch</td>
+              <td>catch up</td>
+              <td>category</td>
+              <td>cause</td>
+              <td>CD</td>
+              <td>cease</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>a</td>
+              <td>77,892,299</td>
+              <td>11,180,329</td>
+              <td>76,063,181</td>
+              <td>2,749,376</td>
+              <td>99,750,954</td>
+              <td>25,646,010</td>
+              <td>88,002,745</td>
+              <td>48,624,917</td>
+              <td>49,309,528</td>
+              <td>42,563,069</td>
+              <td>12,977,499</td>
+              <td>51,603,474</td>
+              <td>81,991,596</td>
+              <td>45,197,219</td>
+              <td>88,393,533</td>
+              <td>9,020,324</td>
+              <td>82,225,460</td>
+              <td>4,843,814</td>
+              <td>10,186,176</td>
+              <td>98,220,813</td>
+              <td>27,016,773</td>
+              <td>49,040,019</td>
+              <td>9,824,577</td>
+              <td>48,446,171</td>
+              <td>84,536,840</td>
+              <td>55,258,879</td>
+              <td>50,228,020</td>
+              <td>58,115,254</td>
+              <td>198,911</td>
+              <td>66,397,779</td>
+              <td>87,348,638</td>
+              <td>3,054,302</td>
+              <td>60,834,189</td>
+              <td>40,875,600</td>
+              <td>6,548,620</td>
+              <td>21,236,588</td>
+              <td>53,487,308</td>
+              <td>64,405,543</td>
+              <td>23,402,993</td>
+              <td>72,253,661</td>
+              <td>32,219,934</td>
+              <td>48,515,142</td>
+              <td>40,760,044</td>
+              <td>97,281,042</td>
+              <td>93,639,548</td>
+              <td>55,595,407</td>
+              <td>97,988,271</td>
+              <td>34,003,890</td>
+              <td>45,380,880</td>
+              <td>44,551,410</td>
+              <td>7,722,260</td>
+              <td>11,841,129</td>
+              <td>41,055,710</td>
+              <td>96,796,496</td>
+              <td>52,403,558</td>
+              <td>51,394,863</td>
+              <td>93,050,948</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>abandon</td>
+              <td>31,732,760</td>
+              <td>21,874,179</td>
+              <td>36,282,338</td>
+              <td>38,874,347</td>
+              <td>6,302,449</td>
+              <td>51,370,052</td>
+              <td>22,540,959</td>
+              <td>61,264,484</td>
+              <td>99,106,966</td>
+              <td>46,157,690</td>
+              <td>51,681,457</td>
+              <td>65,965,998</td>
+              <td>51,568,240</td>
+              <td>13,529,959</td>
+              <td>12,195,181</td>
+              <td>34,252,169</td>
+              <td>41,690,085</td>
+              <td>25,550,745</td>
+              <td>68,653,204</td>
+              <td>42,722,075</td>
+              <td>44,116,292</td>
+              <td>49,894,348</td>
+              <td>92,127,962</td>
+              <td>70,589,433</td>
+              <td>6,974,345</td>
+              <td>65,935,505</td>
+              <td>75,775,619</td>
+              <td>79,495,464</td>
+              <td>4,851,929</td>
+              <td>67,162,568</td>
+              <td>96,917,392</td>
+              <td>63,805,779</td>
+              <td>91,559,450</td>
+              <td>75,504,665</td>
+              <td>8,497,110</td>
+              <td>39,530,945</td>
+              <td>4,379,545</td>
+              <td>60,966,983</td>
+              <td>41,711,399</td>
+              <td>34,817,759</td>
+              <td>26,853,615</td>
+              <td>98,115,594</td>
+              <td>74,438,281</td>
+              <td>23,383,799</td>
+              <td>16,764,318</td>
+              <td>96,210,659</td>
+              <td>49,768,909</td>
+              <td>58,779,930</td>
+              <td>78,992,004</td>
+              <td>19,777,533</td>
+              <td>98,629,327</td>
+              <td>55,314,910</td>
+              <td>61,798,079</td>
+              <td>33,885,555</td>
+              <td>82,066,770</td>
+              <td>40,545,320</td>
+              <td>81,495,384</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>abandoned</td>
+              <td>22,886,627</td>
+              <td>35,345,401</td>
+              <td>90,715,664</td>
+              <td>83,999,330</td>
+              <td>95,009,944</td>
+              <td>52,964,917</td>
+              <td>46,734,009</td>
+              <td>62,223,087</td>
+              <td>33,552,022</td>
+              <td>13,637,355</td>
+              <td>86,925,134</td>
+              <td>96,237,497</td>
+              <td>58,290,708</td>
+              <td>8,661,494</td>
+              <td>52,967,587</td>
+              <td>77,180,536</td>
+              <td>29,157,034</td>
+              <td>79,896,284</td>
+              <td>45,519,755</td>
+              <td>77,231,427</td>
+              <td>36,971,054</td>
+              <td>32,121,756</td>
+              <td>11,977,667</td>
+              <td>74,162,957</td>
+              <td>5,525,376</td>
+              <td>36,449,789</td>
+              <td>81,091,417</td>
+              <td>31,499,068</td>
+              <td>63,240,994</td>
+              <td>4,393,647</td>
+              <td>91,103,392</td>
+              <td>67,217,417</td>
+              <td>5,209,402</td>
+              <td>79,364,782</td>
+              <td>76,499,238</td>
+              <td>30,895,949</td>
+              <td>57,142,367</td>
+              <td>26,289,734</td>
+              <td>6,664,595</td>
+              <td>43,177,790</td>
+              <td>63,923,350</td>
+              <td>25,800,508</td>
+              <td>63,315,524</td>
+              <td>94,325,188</td>
+              <td>42,068,902</td>
+              <td>49,874,669</td>
+              <td>52,267,145</td>
+              <td>54,479,339</td>
+              <td>91,190,472</td>
+              <td>32,661,160</td>
+              <td>6,308,750</td>
+              <td>984,564</td>
+              <td>7,582,371</td>
+              <td>42,105,105</td>
+              <td>23,117,202</td>
+              <td>45,182,170</td>
+              <td>9,789,064</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>ability</td>
+              <td>58,583,240</td>
+              <td>50,909,900</td>
+              <td>23,807,845</td>
+              <td>99,782,226</td>
+              <td>1,362,986</td>
+              <td>17,591,090</td>
+              <td>16,961,213</td>
+              <td>26,090,065</td>
+              <td>89,373,911</td>
+              <td>7,051,979</td>
+              <td>4,921,758</td>
+              <td>58,496,848</td>
+              <td>421,425</td>
+              <td>81,932,161</td>
+              <td>49,296,326</td>
+              <td>48,859,204</td>
+              <td>36,160,805</td>
+              <td>87,309,432</td>
+              <td>6,736,921</td>
+              <td>48,774,946</td>
+              <td>64,566,781</td>
+              <td>97,153,347</td>
+              <td>95,805,991</td>
+              <td>49,658,418</td>
+              <td>80,760,476</td>
+              <td>45,137,471</td>
+              <td>31,808,952</td>
+              <td>37,049,409</td>
+              <td>35,261,861</td>
+              <td>84,487,888</td>
+              <td>25,415,002</td>
+              <td>37,721,491</td>
+              <td>34,662,532</td>
+              <td>70,557,391</td>
+              <td>63,039,063</td>
+              <td>53,445,754</td>
+              <td>27,815,029</td>
+              <td>16,191,677</td>
+              <td>2,680,406</td>
+              <td>27,671,356</td>
+              <td>82,992,487</td>
+              <td>59,692,696</td>
+              <td>31,455,363</td>
+              <td>81,563,717</td>
+              <td>87,356,195</td>
+              <td>29,724,554</td>
+              <td>57,890,593</td>
+              <td>17,414,786</td>
+              <td>9,152,842</td>
+              <td>76,117,081</td>
+              <td>82,298,683</td>
+              <td>14,214,915</td>
+              <td>92,956,527</td>
+              <td>72,353,904</td>
+              <td>58,913,789</td>
+              <td>69,746,814</td>
+              <td>48,102,609</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>able</td>
+              <td>14,105,176</td>
+              <td>39,533,080</td>
+              <td>87,688,709</td>
+              <td>19,343,146</td>
+              <td>37,340,261</td>
+              <td>98,917,885</td>
+              <td>41,766,028</td>
+              <td>4,811,881</td>
+              <td>5,379,590</td>
+              <td>98,266,100</td>
+              <td>30,125,784</td>
+              <td>8,283,799</td>
+              <td>43,769,882</td>
+              <td>1,779,084</td>
+              <td>92,126,087</td>
+              <td>31,190,851</td>
+              <td>99,142,671</td>
+              <td>48,517,652</td>
+              <td>14,385,758</td>
+              <td>3,534,693</td>
+              <td>24,513,121</td>
+              <td>42,791,888</td>
+              <td>80,192,482</td>
+              <td>98,237,456</td>
+              <td>69,180,630</td>
+              <td>49,835,918</td>
+              <td>70,067,929</td>
+              <td>68,373,707</td>
+              <td>38,915,857</td>
+              <td>59,765,330</td>
+              <td>95,698,555</td>
+              <td>21,519,949</td>
+              <td>52,722,961</td>
+              <td>82,963,472</td>
+              <td>15,914,928</td>
+              <td>77,759,061</td>
+              <td>72,989,861</td>
+              <td>73,852,535</td>
+              <td>46,047,318</td>
+              <td>3,741,640</td>
+              <td>77,873,187</td>
+              <td>45,149,790</td>
+              <td>8,561,822</td>
+              <td>81,688,040</td>
+              <td>88,932,658</td>
+              <td>60,121,025</td>
+              <td>40,300,293</td>
+              <td>41,383,046</td>
+              <td>78,706,656</td>
+              <td>48,696,689</td>
+              <td>42,315,688</td>
+              <td>46,509,078</td>
+              <td>96,121,865</td>
+              <td>34,512,205</td>
+              <td>83,265,494</td>
+              <td>85,082,644</td>
+              <td>82,407,314</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>about</td>
+              <td>10,534,596</td>
+              <td>23,060,212</td>
+              <td>98,905,257</td>
+              <td>82,252,563</td>
+              <td>11,911,782</td>
+              <td>99,953,858</td>
+              <td>55,162,774</td>
+              <td>23,899,966</td>
+              <td>73,263,711</td>
+              <td>17,728,208</td>
+              <td>96,460,448</td>
+              <td>55,983,852</td>
+              <td>87,019,406</td>
+              <td>17,812,170</td>
+              <td>39,695,872</td>
+              <td>55,703,738</td>
+              <td>31,054,042</td>
+              <td>85,452,386</td>
+              <td>43,056,931</td>
+              <td>58,774,206</td>
+              <td>36,791,080</td>
+              <td>10,986,475</td>
+              <td>14,579,505</td>
+              <td>95,333,403</td>
+              <td>95,396,798</td>
+              <td>65,667,427</td>
+              <td>74,548,028</td>
+              <td>3,379,648</td>
+              <td>42,889,704</td>
+              <td>30,166,769</td>
+              <td>14,563,889</td>
+              <td>79,915,335</td>
+              <td>58,443,321</td>
+              <td>41,588,843</td>
+              <td>5,853,951</td>
+              <td>99,473,592</td>
+              <td>52,822,410</td>
+              <td>39,437,862</td>
+              <td>2,735,038</td>
+              <td>90,151,891</td>
+              <td>80,079,787</td>
+              <td>49,240,656</td>
+              <td>41,509,656</td>
+              <td>69,233,720</td>
+              <td>6,820,410</td>
+              <td>19,369,100</td>
+              <td>5,175,485</td>
+              <td>40,112,783</td>
+              <td>30,515,710</td>
+              <td>94,782,221</td>
+              <td>4,786,864</td>
+              <td>93,417,578</td>
+              <td>58,304,188</td>
+              <td>50,982,199</td>
+              <td>21,834,173</td>
+              <td>30,145,414</td>
+              <td>85,335,991</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>above</td>
+              <td>59,357,565</td>
+              <td>23,590,630</td>
+              <td>88,157,064</td>
+              <td>97,223,414</td>
+              <td>84,307,260</td>
+              <td>85,947,174</td>
+              <td>69,752,296</td>
+              <td>31,958,590</td>
+              <td>25,476,029</td>
+              <td>19,390,749</td>
+              <td>67,266,715</td>
+              <td>18,648,708</td>
+              <td>90,353,215</td>
+              <td>54,650,150</td>
+              <td>68,553,370</td>
+              <td>73,478,719</td>
+              <td>52,979,890</td>
+              <td>5,655,890</td>
+              <td>85,365,851</td>
+              <td>26,891,188</td>
+              <td>92,079,272</td>
+              <td>96,543,256</td>
+              <td>18,693,539</td>
+              <td>17,842,099</td>
+              <td>28,339,138</td>
+              <td>47,807,768</td>
+              <td>77,484,398</td>
+              <td>12,404,843</td>
+              <td>10,674,379</td>
+              <td>18,617,586</td>
+              <td>14,474,967</td>
+              <td>96,292,611</td>
+              <td>16,127,380</td>
+              <td>41,420,596</td>
+              <td>92,637,349</td>
+              <td>33,535,919</td>
+              <td>34,004,824</td>
+              <td>72,976,867</td>
+              <td>92,947,165</td>
+              <td>6,770,181</td>
+              <td>60,867,374</td>
+              <td>55,520,201</td>
+              <td>49,418,798</td>
+              <td>60,626,100</td>
+              <td>42,597,287</td>
+              <td>32,535,215</td>
+              <td>3,253,959</td>
+              <td>16,060,373</td>
+              <td>66,872,633</td>
+              <td>85,201,577</td>
+              <td>81,198,020</td>
+              <td>10,720,212</td>
+              <td>11,476,613</td>
+              <td>81,808,955</td>
+              <td>23,130,914</td>
+              <td>18,091,909</td>
+              <td>81,159,988</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>abroad</td>
+              <td>93,282,042</td>
+              <td>55,190,529</td>
+              <td>2,472,111</td>
+              <td>96,722,322</td>
+              <td>82,395,672</td>
+              <td>51,561,400</td>
+              <td>38,702,752</td>
+              <td>76,763,614</td>
+              <td>79,824,965</td>
+              <td>79,581,884</td>
+              <td>62,052,715</td>
+              <td>58,228,585</td>
+              <td>95,859,040</td>
+              <td>49,779,122</td>
+              <td>41,332,076</td>
+              <td>96,822,920</td>
+              <td>66,353,425</td>
+              <td>21,490,836</td>
+              <td>37,913,854</td>
+              <td>69,805,144</td>
+              <td>85,088,068</td>
+              <td>19,731,183</td>
+              <td>74,907,687</td>
+              <td>95,159,414</td>
+              <td>86,727,667</td>
+              <td>48,096,002</td>
+              <td>64,260,965</td>
+              <td>40,387,242</td>
+              <td>92,010,257</td>
+              <td>60,218,891</td>
+              <td>41,067,842</td>
+              <td>97,842,316</td>
+              <td>53,687,959</td>
+              <td>61,360,041</td>
+              <td>29,553,182</td>
+              <td>89,160,191</td>
+              <td>2,731,660</td>
+              <td>81,242,778</td>
+              <td>92,516,006</td>
+              <td>45,164,734</td>
+              <td>29,059,356</td>
+              <td>84,750,569</td>
+              <td>2,605,191</td>
+              <td>96,346,376</td>
+              <td>12,484,789</td>
+              <td>89,594,536</td>
+              <td>88,628,359</td>
+              <td>2,277,929</td>
+              <td>40,295,730</td>
+              <td>73,887,029</td>
+              <td>53,092,153</td>
+              <td>47,495,908</td>
+              <td>14,185,633</td>
+              <td>54,030,990</td>
+              <td>22,645,094</td>
+              <td>26,586,033</td>
+              <td>80,113,528</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>absence</td>
+              <td>10,644,592</td>
+              <td>36,915,032</td>
+              <td>18,042,869</td>
+              <td>34,898,797</td>
+              <td>4,600,833</td>
+              <td>91,410,882</td>
+              <td>14,324,107</td>
+              <td>61,401,380</td>
+              <td>15,772,292</td>
+              <td>14,067,720</td>
+              <td>7,474,762</td>
+              <td>71,427,719</td>
+              <td>71,487,907</td>
+              <td>14,638,379</td>
+              <td>24,561,221</td>
+              <td>76,917,041</td>
+              <td>47,119,942</td>
+              <td>87,264,304</td>
+              <td>69,830,307</td>
+              <td>41,592,516</td>
+              <td>15,123,241</td>
+              <td>63,903,521</td>
+              <td>15,562,202</td>
+              <td>23,883,427</td>
+              <td>90,053,958</td>
+              <td>43,916,711</td>
+              <td>22,701,683</td>
+              <td>26,531,754</td>
+              <td>2,290,886</td>
+              <td>74,765,834</td>
+              <td>19,108,590</td>
+              <td>38,475,763</td>
+              <td>86,571,982</td>
+              <td>61,366,997</td>
+              <td>92,590,568</td>
+              <td>41,600,201</td>
+              <td>95,330,452</td>
+              <td>61,272,181</td>
+              <td>65,983,289</td>
+              <td>72,391,225</td>
+              <td>27,096,775</td>
+              <td>27,047,523</td>
+              <td>69,395,508</td>
+              <td>80,799,514</td>
+              <td>68,227,137</td>
+              <td>60,323,413</td>
+              <td>39,163,997</td>
+              <td>42,747,057</td>
+              <td>15,603,920</td>
+              <td>11,806,445</td>
+              <td>97,778,297</td>
+              <td>67,663,988</td>
+              <td>45,811,991</td>
+              <td>28,235,672</td>
+              <td>64,963,897</td>
+              <td>50,062,114</td>
+              <td>93,602,865</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>absent</td>
+              <td>52,172,048</td>
+              <td>74,559,163</td>
+              <td>93,866,858</td>
+              <td>75,321,546</td>
+              <td>19,880,554</td>
+              <td>99,131,791</td>
+              <td>26,074,242</td>
+              <td>62,317,713</td>
+              <td>88,298,287</td>
+              <td>18,139,973</td>
+              <td>95,796,265</td>
+              <td>57,561,091</td>
+              <td>35,547,123</td>
+              <td>59,086,691</td>
+              <td>97,363,859</td>
+              <td>22,785,936</td>
+              <td>24,697,632</td>
+              <td>56,661,939</td>
+              <td>14,656,670</td>
+              <td>91,749,034</td>
+              <td>5,619,626</td>
+              <td>39,256,278</td>
+              <td>33,645,269</td>
+              <td>94,877,710</td>
+              <td>9,433,295</td>
+              <td>77,340,214</td>
+              <td>85,697,592</td>
+              <td>84,687,216</td>
+              <td>18,200,137</td>
+              <td>38,698,799</td>
+              <td>21,393,536</td>
+              <td>74,165,152</td>
+              <td>60,277,671</td>
+              <td>8,496,027</td>
+              <td>50,167,705</td>
+              <td>91,220,240</td>
+              <td>75,041,774</td>
+              <td>15,581,241</td>
+              <td>79,605,868</td>
+              <td>2,664,164</td>
+              <td>52,197,544</td>
+              <td>82,102,759</td>
+              <td>59,912,631</td>
+              <td>75,405,819</td>
+              <td>51,136,569</td>
+              <td>29,730,060</td>
+              <td>13,997,829</td>
+              <td>64,558,867</td>
+              <td>93,685,952</td>
+              <td>74,477,999</td>
+              <td>78,574,629</td>
+              <td>35,534,278</td>
+              <td>26,831,877</td>
+              <td>31,924,507</td>
+              <td>13,578,870</td>
+              <td>1,194,624</td>
+              <td>26,770,676</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>absolute</td>
+              <td>90,861,515</td>
+              <td>6,547,275</td>
+              <td>16,870,978</td>
+              <td>95,360,990</td>
+              <td>7,978,333</td>
+              <td>30,747,855</td>
+              <td>29,205,586</td>
+              <td>81,402,101</td>
+              <td>36,895,139</td>
+              <td>93,733,082</td>
+              <td>2,877,133</td>
+              <td>92,696,194</td>
+              <td>51,042,230</td>
+              <td>16,087,290</td>
+              <td>96,361,130</td>
+              <td>12,538,875</td>
+              <td>22,123,341</td>
+              <td>40,224,371</td>
+              <td>1,774,777</td>
+              <td>44,380,470</td>
+              <td>61,577,835</td>
+              <td>76,619,587</td>
+              <td>10,692,556</td>
+              <td>14,154,816</td>
+              <td>62,824,998</td>
+              <td>7,334,692</td>
+              <td>64,768,530</td>
+              <td>40,940,227</td>
+              <td>52,381,308</td>
+              <td>99,925,910</td>
+              <td>12,254,124</td>
+              <td>20,172,589</td>
+              <td>10,560,500</td>
+              <td>94,460,286</td>
+              <td>90,840,084</td>
+              <td>36,760,849</td>
+              <td>93,956,640</td>
+              <td>49,565,529</td>
+              <td>39,536,955</td>
+              <td>88,456,320</td>
+              <td>65,163,504</td>
+              <td>64,180,858</td>
+              <td>35,647,192</td>
+              <td>71,582,934</td>
+              <td>28,648,156</td>
+              <td>79,086,827</td>
+              <td>53,975,724</td>
+              <td>94,494,995</td>
+              <td>65,559,361</td>
+              <td>11,478,390</td>
+              <td>6,095,378</td>
+              <td>71,381,627</td>
+              <td>33,379,545</td>
+              <td>48,717,275</td>
+              <td>48,418,679</td>
+              <td>93,242,923</td>
+              <td>56,555,857</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>absolutely</td>
+              <td>92,289,547</td>
+              <td>47,977,043</td>
+              <td>12,420,406</td>
+              <td>57,699,548</td>
+              <td>55,977,513</td>
+              <td>16,844,668</td>
+              <td>11,686,341</td>
+              <td>98,500,862</td>
+              <td>41,907,513</td>
+              <td>38,152,473</td>
+              <td>61,500,042</td>
+              <td>13,206,486</td>
+              <td>96,926,136</td>
+              <td>45,421,777</td>
+              <td>62,738,501</td>
+              <td>3,872,816</td>
+              <td>12,440,885</td>
+              <td>23,665,737</td>
+              <td>55,405,687</td>
+              <td>56,907,698</td>
+              <td>57,014,894</td>
+              <td>8,856,774</td>
+              <td>89,245,489</td>
+              <td>57,233,787</td>
+              <td>86,149,827</td>
+              <td>1,498,664</td>
+              <td>20,039,164</td>
+              <td>68,347,926</td>
+              <td>59,548,502</td>
+              <td>36,401,878</td>
+              <td>26,416,746</td>
+              <td>26,264,936</td>
+              <td>53,423,666</td>
+              <td>46,629,089</td>
+              <td>14,900,538</td>
+              <td>39,572,030</td>
+              <td>86,822,242</td>
+              <td>9,740,303</td>
+              <td>71,555,309</td>
+              <td>48,212,186</td>
+              <td>20,405,852</td>
+              <td>21,071,367</td>
+              <td>4,856,015</td>
+              <td>52,754,776</td>
+              <td>7,363,549</td>
+              <td>29,014,663</td>
+              <td>16,952,972</td>
+              <td>27,087,080</td>
+              <td>80,761,471</td>
+              <td>53,398,810</td>
+              <td>71,390,396</td>
+              <td>47,201,042</td>
+              <td>14,923,792</td>
+              <td>67,149,394</td>
+              <td>14,685,749</td>
+              <td>77,960,379</td>
+              <td>64,527,386</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>absorb</td>
+              <td>41,114,779</td>
+              <td>14,779,307</td>
+              <td>90,073,093</td>
+              <td>14,638,075</td>
+              <td>53,485,544</td>
+              <td>23,536,116</td>
+              <td>20,132,860</td>
+              <td>3,223,026</td>
+              <td>15,988,450</td>
+              <td>52,308,511</td>
+              <td>10,025,269</td>
+              <td>50,111,135</td>
+              <td>58,700,722</td>
+              <td>85,222,651</td>
+              <td>28,795,732</td>
+              <td>24,049,101</td>
+              <td>78,024,713</td>
+              <td>31,278,784</td>
+              <td>3,691,014</td>
+              <td>69,026,391</td>
+              <td>59,320,651</td>
+              <td>72,946,750</td>
+              <td>11,588,302</td>
+              <td>96,531,195</td>
+              <td>57,627,772</td>
+              <td>76,430,220</td>
+              <td>95,085,684</td>
+              <td>88,390,856</td>
+              <td>75,812,605</td>
+              <td>75,165,938</td>
+              <td>75,961,489</td>
+              <td>28,143,575</td>
+              <td>95,557,045</td>
+              <td>39,686,292</td>
+              <td>71,406,337</td>
+              <td>43,842,555</td>
+              <td>32,474,468</td>
+              <td>49,561,498</td>
+              <td>70,487,310</td>
+              <td>50,916,064</td>
+              <td>53,697,552</td>
+              <td>99,558,385</td>
+              <td>52,086,249</td>
+              <td>13,838,540</td>
+              <td>52,102,027</td>
+              <td>88,144,492</td>
+              <td>56,307,237</td>
+              <td>6,091,951</td>
+              <td>83,480,824</td>
+              <td>57,463,152</td>
+              <td>29,330,139</td>
+              <td>30,855,604</td>
+              <td>62,922,578</td>
+              <td>41,966,594</td>
+              <td>14,690,593</td>
+              <td>68,453,362</td>
+              <td>58,741,243</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>abuse</td>
+              <td>72,471,564</td>
+              <td>20,762,737</td>
+              <td>93,205,619</td>
+              <td>30,087,695</td>
+              <td>66,130,389</td>
+              <td>28,363,191</td>
+              <td>41,712,996</td>
+              <td>57,372,609</td>
+              <td>21,701,895</td>
+              <td>54,853,656</td>
+              <td>81,383,329</td>
+              <td>37,188,084</td>
+              <td>87,947,172</td>
+              <td>56,752,591</td>
+              <td>50,088,457</td>
+              <td>21,509,620</td>
+              <td>39,888,054</td>
+              <td>14,996,982</td>
+              <td>87,325,621</td>
+              <td>47,390,633</td>
+              <td>19,081,027</td>
+              <td>7,453,618</td>
+              <td>57,161,293</td>
+              <td>42,983,606</td>
+              <td>23,912,864</td>
+              <td>35,366,480</td>
+              <td>46,189,823</td>
+              <td>39,750,841</td>
+              <td>62,738,981</td>
+              <td>23,073,198</td>
+              <td>22,959,623</td>
+              <td>25,156,106</td>
+              <td>98,130,830</td>
+              <td>90,387,037</td>
+              <td>84,701,857</td>
+              <td>46,918,012</td>
+              <td>85,741,755</td>
+              <td>57,366,161</td>
+              <td>4,839,723</td>
+              <td>39,376,498</td>
+              <td>33,528,337</td>
+              <td>19,623,056</td>
+              <td>3,251,616</td>
+              <td>90,417,868</td>
+              <td>16,802,211</td>
+              <td>26,399,307</td>
+              <td>93,691,884</td>
+              <td>53,500,435</td>
+              <td>33,679,477</td>
+              <td>54,417,146</td>
+              <td>60,427,419</td>
+              <td>44,073,150</td>
+              <td>19,782,149</td>
+              <td>42,598,340</td>
+              <td>65,084,297</td>
+              <td>97,645,043</td>
+              <td>63,932,849</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>abuse</td>
+              <td>98,701,777</td>
+              <td>47,394,307</td>
+              <td>58,926,381</td>
+              <td>6,968,137</td>
+              <td>5,296,690</td>
+              <td>8,088,390</td>
+              <td>85,448,187</td>
+              <td>45,014,134</td>
+              <td>34,212,875</td>
+              <td>8,444,328</td>
+              <td>55,550,139</td>
+              <td>56,780,196</td>
+              <td>3,842,616</td>
+              <td>4,846,867</td>
+              <td>21,667,307</td>
+              <td>22,639,153</td>
+              <td>90,268,099</td>
+              <td>59,940,560</td>
+              <td>63,446,724</td>
+              <td>47,667,130</td>
+              <td>50,334,979</td>
+              <td>33,772,160</td>
+              <td>63,497,760</td>
+              <td>52,816,950</td>
+              <td>80,384,328</td>
+              <td>20,920,339</td>
+              <td>15,268,977</td>
+              <td>56,587,730</td>
+              <td>87,677,492</td>
+              <td>59,439,425</td>
+              <td>33,221,031</td>
+              <td>2,935,891</td>
+              <td>7,099,220</td>
+              <td>70,299,851</td>
+              <td>64,319,643</td>
+              <td>66,632,744</td>
+              <td>80,113,756</td>
+              <td>58,416,707</td>
+              <td>37,380,918</td>
+              <td>4,755,580</td>
+              <td>86,503,940</td>
+              <td>12,608,153</td>
+              <td>62,413,211</td>
+              <td>2,393,692</td>
+              <td>81,355,772</td>
+              <td>12,513,579</td>
+              <td>91,965,688</td>
+              <td>94,628,565</td>
+              <td>59,736,798</td>
+              <td>44,405,842</td>
+              <td>55,032,632</td>
+              <td>62,411,342</td>
+              <td>43,845,445</td>
+              <td>36,643,655</td>
+              <td>3,900,797</td>
+              <td>34,966,405</td>
+              <td>28,168,958</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>academic</td>
+              <td>22,171,426</td>
+              <td>99,332,963</td>
+              <td>29,108,401</td>
+              <td>79,608,272</td>
+              <td>99,368,832</td>
+              <td>52,532,949</td>
+              <td>87,237,141</td>
+              <td>85,548,420</td>
+              <td>90,175,832</td>
+              <td>85,088,261</td>
+              <td>93,732,977</td>
+              <td>64,052,319</td>
+              <td>19,311,556</td>
+              <td>12,804,406</td>
+              <td>67,346,557</td>
+              <td>18,127,048</td>
+              <td>98,580,811</td>
+              <td>46,520,226</td>
+              <td>27,792,935</td>
+              <td>40,935,307</td>
+              <td>69,128,313</td>
+              <td>33,973,992</td>
+              <td>54,322,669</td>
+              <td>187,028</td>
+              <td>75,167,918</td>
+              <td>19,663</td>
+              <td>94,100,864</td>
+              <td>75,649,421</td>
+              <td>13,775,375</td>
+              <td>63,123,318</td>
+              <td>73,799,577</td>
+              <td>21,027,824</td>
+              <td>88,206,574</td>
+              <td>27,038,000</td>
+              <td>59,458,074</td>
+              <td>6,121,875</td>
+              <td>22,778,125</td>
+              <td>39,925,066</td>
+              <td>55,771,966</td>
+              <td>62,745,470</td>
+              <td>25,381,210</td>
+              <td>62,758,264</td>
+              <td>56,684,030</td>
+              <td>11,805,959</td>
+              <td>59,383,280</td>
+              <td>49,678,896</td>
+              <td>86,014,372</td>
+              <td>25,048,584</td>
+              <td>31,647,600</td>
+              <td>36,346,511</td>
+              <td>33,212,331</td>
+              <td>27,102,919</td>
+              <td>76,211,224</td>
+              <td>17,354,046</td>
+              <td>37,989,806</td>
+              <td>69,430,918</td>
+              <td>85,390,657</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>accent</td>
+              <td>49,216,720</td>
+              <td>77,689,409</td>
+              <td>78,490,554</td>
+              <td>26,384,456</td>
+              <td>65,351,091</td>
+              <td>1,123,750</td>
+              <td>27,021,530</td>
+              <td>77,925,396</td>
+              <td>61,790,142</td>
+              <td>38,580,166</td>
+              <td>76,117,137</td>
+              <td>82,687,073</td>
+              <td>2,028,052</td>
+              <td>3,324,534</td>
+              <td>8,531,705</td>
+              <td>43,768,103</td>
+              <td>55,834,403</td>
+              <td>90,447,748</td>
+              <td>98,047,497</td>
+              <td>43,899,546</td>
+              <td>40,960,250</td>
+              <td>20,276,686</td>
+              <td>67,854,112</td>
+              <td>98,272,333</td>
+              <td>68,068,549</td>
+              <td>20,352,554</td>
+              <td>99,112,778</td>
+              <td>43,540,199</td>
+              <td>26,678,837</td>
+              <td>86,002,915</td>
+              <td>12,753,756</td>
+              <td>5,296,870</td>
+              <td>72,921,663</td>
+              <td>80,575,050</td>
+              <td>10,575,043</td>
+              <td>48,253,660</td>
+              <td>85,850,596</td>
+              <td>22,844,400</td>
+              <td>83,957,679</td>
+              <td>46,695,340</td>
+              <td>12,541,437</td>
+              <td>82,528,840</td>
+              <td>54,325,512</td>
+              <td>59,977,742</td>
+              <td>368,495</td>
+              <td>40,286,442</td>
+              <td>25,158,660</td>
+              <td>43,956,425</td>
+              <td>69,998,526</td>
+              <td>65,307,155</td>
+              <td>46,149,484</td>
+              <td>40,490,770</td>
+              <td>97,324,517</td>
+              <td>85,412,567</td>
+              <td>44,248,689</td>
+              <td>18,035,423</td>
+              <td>40,610,384</td>
+             </tr>
+             <tr height=15 style='height:15.0pt'>
+              <td height=15 style='height:15.0pt'>accept</td>
+              <td>16,396,446</td>
+              <td>19,815,279</td>
+              <td>23,074,620</td>
+              <td>24,699,637</td>
+              <td>38,572,828</td>
+              <td>90,221,702</td>
+              <td>81,177,412</td>
+              <td>90,484,399</td>
+              <td>31,481,551</td>
+              <td>70,611,165</td>
+              <td>49,561,794</td>
+              <td>961,540</td>
+              <td>89,048,505</td>
+              <td>35,145,256</td>
+              <td>67,394,246</td>
+              <td>13,430,099</td>
+              <td>36,377,221</td>
+              <td>48,338,000</td>
+              <td>32,228,340</td>
+              <td>86,306,348</td>
+              <td>67,872,815</td>
+              <td>26,621,448</td>
+              <td>26,134,220</td>
+              <td>63,872,166</td>
+              <td>19,289,723</td>
+              <td>70,545,849</td>
+              <td>63,083,227</td>
+              <td>2,354,319</td>
+              <td>19,089,732</td>
+              <td>38,014,532</td>
+              <td>54,280,819</td>
+              <td>69,953,838</td>
+              <td>51,541,838</td>
+              <td>76,252,850</td>
+              <td>61,665,403</td>
+              <td>4,678,869</td>
+              <td>74,008,350</td>
+              <td>81,254,700</td>
+              <td>35,495,240</td>
+              <td>7,091,178</td>
+              <td>91,988,988</td>
+              <td>99,576,157</td>
+              <td>73,931,904</td>
+              <td>21,669,407</td>
+              <td>15,080,806</td>
+              <td>55,207,395</td>
+              <td>73,538,759</td>
+              <td>24,879,219</td>
+              <td>22,131,565</td>
+              <td>82,560</td>
+              <td>71,870,506</td>
+              <td>11,452,394</td>
+              <td>56,495,364</td>
+              <td>24,340,714</td>
+              <td>87,872,372</td>
+              <td>91,783,297</td>
+              <td>83,049,829</td>
+             </tr>
+            </table>  <!-- /scroll -->
+
+
+          </div> <!-- /medium-12 -->
+
+        </div>
+
+      </section>
+      <!-- End suggested layout containers -->
+
+    </div>
+
+
+    <footer>
+      <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+<!-- 
+      <div id="local-footer">
+        <div class="row">
+          <span class="reference">How to reference this page: ...</span>
+        </div>
+      </div>
+ -->     
+      <!-- End optional local footer -->
+
+      <div id="global-footer">
+
+        <nav id="global-nav-expanded" class="row">
+          <!-- Footer will be automatically inserted by footer.js -->
+        </nav>
+
+        <section id="ebi-footer-meta" class="row">
+          <!-- Footer meta will be automatically inserted by footer.js -->
+        </section>
+
+      </div>
+
+    </footer>
+  </div> <!--! end of #wrapper -->
+
+
+  <!-- JavaScript -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/cookiebanner.js"></script>
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/foot.js"></script>
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://khawkins98.github.io/EBI-Framework/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://khawkins98.github.io/EBI-Framework/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+<!--
+   -->
+
+  
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <!--
+  <script>
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+  -->
+
+</body>
+</html>

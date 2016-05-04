@@ -711,3 +711,12 @@ table.tablesorter thead tr .header {
 }
 table.tablesorter thead tr .headerSortUp { background-image: url(../libraries/tablesorter/themes/blue/asc.gif); }
 table.tablesorter thead tr .headerSortDown { background-image: url(../libraries/tablesorter/themes/blue/desc.gif); }
+
+/* wide screen support */
+
+@media screen and (min-width: 40em) {
+  body.wide-screen .row {
+      max-width: 96%;
+      min-width: 1000px;
+  }
+}
