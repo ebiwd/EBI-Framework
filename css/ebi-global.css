@@ -715,7 +715,7 @@ table.tablesorter thead tr .headerSortDown { background-image: url(../libraries/
 /* wide screen support */
 
 @media screen and (min-width: 40em) {
-  body.wide-screen .row {
+  body.full-width .row {
       max-width: 96%;
       min-width: 1000px;
   }
