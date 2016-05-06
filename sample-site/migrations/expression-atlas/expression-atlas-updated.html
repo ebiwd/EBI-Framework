@@ -41,40 +41,81 @@ NOTE: This web page:
 
     <!-- compliance style start -->
 
-    <meta name="description" content="EMBL-EBI">
-    <!-- Describe what this page is about -->
-    <meta name="keywords" content="bioinformatics, atlas, gxa, ebi, functional, genomics">
-    <!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
-    <meta name="author" content="EMBL-EBI">
-    <!-- Your [project-name] here -->
-
-    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="description" content="EMBL-EBI"><!-- Describe what this page is about -->
+    <meta name="keywords" content="bioinformatics, europe, institute"><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
+    <meta name="author" content="EMBL-EBI"><!-- Your [project-name] here -->
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#70BDBD"> <!-- Android Chrome mobile browser tab color -->
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+    <!-- Add information on the life cycle of this page -->
+    <meta name="ebi-owner" content="John Doe"> <!-- Who should be contacted about changes -->
+    <meta name="ebi-review-cycle" content="30"> <!-- In days, how often should the content be reviewed -->
+    <meta name="ebi-last-review" content="2015-12-20"> <!-- The last time the content was reviewed -->
+    <meta name="ebi-expiry" content="2016-01-20"> <!-- When this content is no longer relevant -->
+
+    <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+    <link rel="dns-prefetch" href="//embl.de" />
+
+    <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+    <link rel="icon" type="image/x-icon" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/favicon.ico" />
+    <link rel="icon" type="image/png" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192×192" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png"> <!-- For iPhone 4 Retina display (114px) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png"> <!-- For iPad (72px) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png"> <!-- For iPad retinat (144px) -->
+    <link rel="apple-touch-icon-precomposed" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png"> <!-- For iPhone (57px) -->
+    <link rel="mask-icon" href="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff"> <!-- Safari icon for pinned tab -->
+    <meta name="msapplication-TileColor" content="#2b5797"> <!-- MS Icons -->
+    <meta name="msapplication-TileImage" content="https://khawkins98.github.io/EBI-Framework/images/logos/EMBL-EBI/favicons/mstile-144x144.png">
 
     <!-- CSS: implied media=all -->
     <!-- CSS concatenated and minified via ant build script-->
+    <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/libraries/foundation-6/css/foundation.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/css/ebi-global.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://khawkins98.github.io/EBI-Framework/fonts/fonts.css" type="text/css" media="all">
 
-    <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/boilerplate-style.css">
-    <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-global.css">
-    <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-visual.css">
-    <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/984-24-col-fluid.css">
-    <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/embl-petrol-colours.css">
+    <!-- Use this CSS file for any custom styling -->
+    <!--
+    <link rel="stylesheet" href="css/custom.css" type="text/css" media="all">
+    -->
 
-    <style type="text/css">
-        /* You have the option of setting a maximum width for your page, and making sure everything is centered */
-        /* body { max-width: 1600px; margin: 0 auto; } */
-    </style>
+    <!-- If you have a custom header image or colour -->
+    <!--
+    <meta name="ebi-localmasthead-color" content="#000">
+    <meta name="ebi-localmasthead-image" content="https://khawkins98.github.io/EBI-Framework/images/backgrounds/embl-ebi-background.jpg">
+    -->
+
+    <!-- you can replace this with [projectname]-colours.css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+    <!-- also inform ES so we can host your colour palette file -->
+    <link rel="stylesheet" href="http://10.211.55.4/sample-site/migrations/expression-atlas/expression-atlas-colours.css" type="text/css" media="all">
+
+    <!-- for production the above can be replaced with -->
+    <!--
+    <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css">
+    -->
 
     <!-- end CSS-->
 
-    <!-- All JavaScript at the bottom, except for Modernizr / Respond.
-         Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-         For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
 
-    <!-- Full build -->
-    <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.minified.2.1.6.js"></script>
+    <!-- All JavaScript at the bottom, except for Modernizr -->
+    <script src="https://khawkins98.github.io/EBI-Framework/libraries/modernizr/modernizr.custom.49274.js"></script>
+
+    <style type="text/css">
+    /* Compatibility between unique aspects of this service and the EBI theme */
+    /* This should be baked into the service theme */
+    body .tag-editor {
+        border: none;
+        width: 80%;
+        padding: .42rem 1%;
+        display: inline-block;
+        margin: 0;
+    }
+    .gxaBody form label { margin-right: 0; display: inline-block; }
+    </style>
+
 
     <!-- compliance style end -->
     
@@ -118,7 +159,7 @@ NOTE: This web page:
 
 </head>
 
-<body class="gxaBody">
+<body class="gxaBody full-width">
 
 <div id="skip-to">
     <ul>
@@ -134,37 +175,58 @@ NOTE: This web page:
 
     
 
+  <div data-sticky-container>
+    <div id="local-masthead" data-sticky data-sticky-on="large" data-top-anchor="180" data-btm-anchor="300000">
+      <header>
 
-<header>
+        <div id="global-masthead" class="clearfix">
+          <!--This has to be one line and no newline characters-->
+          <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>
 
-    <div id="global-masthead" class="masthead grid_24">
-        <!--This has to be one line and no newline characters-->
-        <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img
-                src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png"
-                alt="EMBL European Bioinformatics Institute"></a>
-
-        <nav>
-            <ul id="global-nav">
+          <nav>
+            <div class="row">
+              <ul id="global-nav" class="menu">
                 <!-- set active class as appropriate -->
-                <li class="first active" id="services"><a href="//www.ebi.ac.uk/services">Services</a></li>
-                <li id="research"><a href="//www.ebi.ac.uk/research">Research</a></li>
-                <li id="training"><a href="//www.ebi.ac.uk/training">Training</a></li>
-                <li id="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></li>
-                <li id="about" class="last"><a href="//www.ebi.ac.uk/about">About us</a></li>
-            </ul>
-        </nav>
+                <li id="home-mobile" class=""><a href="//www.ebi.ac.uk"></a></li>
+                <li id="home"><a href="//www.ebi.ac.uk"><i class="icon icon-generic" data-icon="H"></i> EMBL-EBI</a></li>
+                <li id="services" class="active"><a href="//www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="("></i> Services</a></li>
+                <li id="research"><a href="//www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon=")"></i> Research</a></li>
+                <li id="training"><a href="//www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>
+                <li id="about"><a href="//www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="i"></i> About us</a></li>
+                <li id="search">
+                  <a href="#" data-toggle="search-global-dropdown"><i class="icon icon-functional" data-icon="1"></i> <span class="show-for-small-only">Search</span></a>
+                  <div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
+                    <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">
+                      <fieldset>
+                        <div class="input-group">
+                          <input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">
+                          <div class="input-group-button">
+                            <input type="submit" name="submit" value="Search" class="button">
+                            <input type="hidden" name="db" value="allebi" checked="checked">
+                            <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
+                          </div>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </li>
+                <li class="float-right show-for-medium embl-selector">
+                  <button class="button" type="button" data-toggle="embl-dropdown">Hinxton</button>
+                  <div id="embl-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
+                    to come.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
 
-    </div>
+        </div>
 
-    <div id="local-masthead" class="masthead grid_24 nomenu" style="background-color: #E1EEE9">
+        <div class="masthead row">
 
-        <!-- local-title -->
-        <!-- NB: for additional title style patterns, see http://frontier.ebi.ac.uk/web/style/patterns -->
+          <!-- local-title -->
+          <div class="columns medium-8" id="local-title">
 
-        <!-- apply grid_12 alpha class if you have a local search box in the header...
-        <div class="grid_12 alpha" id="local-title">
-        -->
-        <div class="grid_12 alpha" id="local-title">
             <h1 style="color: #000000; text-shadow: 0px 0px #E1EEE9">
                 <a href="/gxa" title="Back to Expression Atlas homepage">
                     <img src="/gxa/resources/images/ExpressionAtlas_logo_web.png"
@@ -173,88 +235,91 @@ NOTE: This web page:
                 </a>
             </h1>
 
-        </div>
+            <!-- <h1><a href="../../" title="Back to [service-name] homepage"><div class="hexagon"><i class="icon icon-generic" data-icon=":"></i></div> EBI Framework</a></h1>     -->
 
-        <!-- /local-title -->
+          </div>
+          <!-- /local-title -->
 
-        <!-- local-search -->
-        <!-- NB: if you do not have a local-search, delete the following div, and drop the class="grid_12 alpha" class from local-title above -->
+          <!-- local-search -->
+          <div class="columns medium-4" id="">
 
-        <div class="grid_12 omega">
+                <fieldset>
+                </fieldset>
+
             <form method="get" action="query" name="local-search" id="local-search">
 
                 <fieldset>
 
-                    <div class="left">
-                        <label>
-                            <input id="local-searchbox" name="geneQuery" value="" maxlength="900" placeholder="(enter gene query)"/>
-                        </label>
-                    </div>
-                    <div class="left">
-                        <!-- Include some example searchterms - keep them short and few! -->
-                        <span class="examples">Examples:
-                                        <a href="/gxa/query?geneQuery=ASPM">ASPM</a>,
-                                        <a href="/gxa/query?geneQuery=apoptosis">Apoptosis</a>,
-                                        <a href="/gxa/query?geneQuery=ENSMUSG00000021789">ENSMUSG00000021789</a>,
-                                        <a href="/gxa/query?geneQuery=%22zinc+finger%22">"zinc finger"</a></span>
-                    </div>
-
-                    <div class="right" style="position: relative; top: -30px;">
-                        <input id="submit-searchbox" class="submit" type="submit" value="Search"/>
-                        <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search,
-                             with whatever features you want available -->
-                        <!--
-                        <span class="adv"><a title="Advanced" id="adv-search" href="../search">Advanced</a></span>
-                        -->
-                    </div>
-
+                  <input id="local-searchbox" name="geneQuery" value="" maxlength="900" placeholder="(enter gene query)"/>
+                  <input id="submit-searchbox" type="submit" name="submit" value="1" class="button icon icon-functional">
+                  <small class="examples">
+                    <!-- Include some example searchterms - keep them short and few. -->
+                    Examples:
+                        <a href="/gxa/query?geneQuery=ASPM">ASPM</a>,
+                        <a href="/gxa/query?geneQuery=apoptosis">Apoptosis</a>,
+                        <a href="/gxa/query?geneQuery=ENSMUSG00000021789">ENSMUSG00000021789</a>,
+                        <a href="/gxa/query?geneQuery=%22zinc+finger%22">"zinc finger"</a>
+                  </small>
+                  <!-- if you're not using the JS addons
+                  Examples:
+                  <ul>
+                    <li><a href="[search-url-1]">[search-text-1]</a></li>
+                    <li><a href="[search-url-1]">[search-text-2]</a></li>
+                    <li><a href="[search-url-1]">[search-text-3]</a></li>
+                  </ul>
+                  -->
                 </fieldset>
 
             </form>
+          </div>
+          <!-- /local-search -->
+
+          <!-- local-nav -->
+              <nav >
+                <ul class="dropdown menu float-left" data-description="navigational">
+                    <li id="gxaLocalNavHome" class="first active">
+                        <a href="/gxa" title="Expression Atlas homepage">Home</a>
+                    </li>
+                    <li id="gxaLocalNavRelease-notes">
+                        <a href="/gxa/release-notes.html" title="Release notes">Release notes</a>
+                    </li>
+                    <li id="gxaLocalNavFAQ">
+                        <a href="/gxa/FAQ.html" title="FAQs">FAQs</a>
+                    </li>
+                    <li id="gxaLocalNavDownload">
+                        <a href="/gxa/download.html" title="Download">Download</a>
+                    </li>
+                    <li id="gxaLocalNavHelp">
+                        <a href="/gxa/help/index.html"
+                           title="Help pages">Help</a>
+                    </li>
+                    <li id="gxaLocalNavAbout" class="last">
+                        <a href="/gxa/about.html"
+                           title="About Expression Atlas">About</a>
+                    </li>
+                    <!--
+                    <li class="last"><a href="#">About [service-name]</a></li>
+                    -->
+                    <!-- If you need to include functional (as opposed to purely navigational) links in your local menu,
+                         add them here, and give them a class of "functional". Remember: you'll need a class of "last" for
+                         whichever one will show up last...
+                         For example: -->
+                </ul>
+                <ul class="menu float-right">
+                    <li class="" style=""><a id="feedback-link" href="feedback-form" class=""
+                                                   data-icon=""><i class="icon icon-generic" data-icon="\"></i> Feedback</a></li>
+                </ul>
+              </nav>
+          <!-- /local-nav -->
+
         </div>
 
-        <!-- /local-search -->
+      </header>
 
-        <!-- gxaLocalNav -->
+      </div>
+  </div>
 
-        <nav>
-            <ul class="grid_24" id="gxaLocalNav">
-                <li id="gxaLocalNavHome" class="first active">
-                    <a href="/gxa" title="Expression Atlas homepage">Home</a>
-                </li>
-                <li id="gxaLocalNavRelease-notes">
-                    <a href="/gxa/release-notes.html" title="Release notes">Release notes</a>
-                </li>
-                <li id="gxaLocalNavFAQ">
-                    <a href="/gxa/FAQ.html" title="FAQs">FAQs</a>
-                </li>
-                <li id="gxaLocalNavDownload">
-                    <a href="/gxa/download.html" title="Download">Download</a>
-                </li>
-                <li id="gxaLocalNavHelp">
-                    <a href="/gxa/help/index.html"
-                       title="Help pages">Help</a>
-                </li>
-                <li id="gxaLocalNavAbout" class="last">
-                    <a href="/gxa/about.html"
-                       title="About Expression Atlas">About</a>
-                </li>
-                <!--
-                <li class="last"><a href="#">About [service-name]</a></li>
-                -->
-                <!-- If you need to include functional (as opposed to purely navigational) links in your local menu,
-                     add them here, and give them a class of "functional". Remember: you'll need a class of "last" for
-                     whichever one will show up last...
-                     For example: -->
-                <li class="functional last" style="float: right"><a id="feedback-link" href="feedback-form" class="icon icon-generic"
-                                               data-icon="\">Feedback</a></li>
-            </ul>
-        </nav>
 
-        <!-- /gxaLocalNav -->
-
-    </div>
-</header>
 
 <style>
     fieldset {
@@ -421,7 +486,7 @@ NOTE: This web page:
 
 
 
-    <div id="content" class="grid_24 clearfix" role="main">
+    <div id="content" class="row" role="main">
         
 
 
@@ -460,7 +525,8 @@ NOTE: This web page:
 
     <div id="helpContentTooltip" style="display: none;"></div>
 
-    <div class="grid_18">
+    <div calss="row">
+    <div class="columns medium-9">
         
 
 
@@ -561,7 +627,7 @@ NOTE: This web page:
 
     </div>
 
-    <div class="grid_6">
+    <div class="columns medium-3">
         <table style="width: auto; float: right;">
             <tbody>
                 <tr>
@@ -652,6 +718,8 @@ NOTE: This web page:
                 </tr>
             </tbody>
         </table>
+    </div>
+
     </div>
 
     <!-- Modal -->
@@ -788,7 +856,7 @@ NOTE: This web page:
 <script language="JavaScript" type="text/javascript" src="/gxa/resources/js/geneDistribution.js"></script>
 
 <section>
-    <div class="grid_20">
+    <div class="columns medium-10">
         
 
 
@@ -915,8 +983,10 @@ NOTE: This web page:
 </section>
 
 <section class="gxaSection">
-    <div class="grid_24" id="gxaExperimentPageHeatmapAnatomogram">
-        
+    <div class="row">
+        <div class="columns medium-12" id="gxaExperimentPageHeatmapAnatomogram">
+            
+        </div>
     </div>
 </section>
 
@@ -1160,8 +1230,25 @@ NOTE: This web page:
 
 </footer>
 
-<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/cookiebanner.js"></script>
-<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/foot.js"></script>
+  <!-- JavaScript -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/cookiebanner.js"></script>
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/foot.js"></script>
+  <script defer="defer" src="https://khawkins98.github.io/EBI-Framework/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://khawkins98.github.io/EBI-Framework/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://khawkins98.github.io/EBI-Framework/js/foundationExtendEBI.js"></script>
   <script type="text/JavaScript">$(document).foundation();</script>
   <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
 <!--
