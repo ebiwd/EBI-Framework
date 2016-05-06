@@ -1,0 +1,1197 @@
+<!-- 
+
+NOTE: This code is a copy and past of the source from http://www.ebi.ac.uk/gxa/experiments/E-MTAB-4401?_specific=on&queryFactorType=ORGANISM_PART&queryFactorValues=leaf&geneQuery=&exactMatch=true
+
+Code copied on 2016-05-06.
+
+ -->
+
+<!DOCTYPE html>
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="eng" class="no-js">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="en-GB" http-equiv="Content-Language">
+    <meta content="_top" http-equiv="Window-target">
+    <meta content="http://www.unspam.com/noemailcollection/" name="no-email-collection">
+    <meta name="google-site-verification" content="4xV6HGqtqbEXtsFgcZGrPUSwcHb03eNNu7B_fFuwdUU" />
+
+    
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+
+    
+        <base href="//www.ebi.ac.uk/gxa/"/>
+    
+
+    <!-- compliance style start -->
+
+    <meta name="description" content="EMBL-EBI">
+    <!-- Describe what this page is about -->
+    <meta name="keywords" content="bioinformatics, atlas, gxa, ebi, functional, genomics">
+    <!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
+    <meta name="author" content="EMBL-EBI">
+    <!-- Your [project-name] here -->
+
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+    <!-- CSS: implied media=all -->
+    <!-- CSS concatenated and minified via ant build script-->
+
+    <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/boilerplate-style.css">
+    <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-global.css">
+    <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-visual.css">
+    <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/984-24-col-fluid.css">
+    <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/embl-petrol-colours.css">
+
+    <style type="text/css">
+        /* You have the option of setting a maximum width for your page, and making sure everything is centered */
+        /* body { max-width: 1600px; margin: 0 auto; } */
+    </style>
+
+    <!-- end CSS-->
+
+    <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+         Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+         For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+
+    <!-- Full build -->
+    <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.minified.2.1.6.js"></script>
+
+    <!-- compliance style end -->
+    
+    
+    
+        <title>Experiment &lt; EMBL-EBI</title>
+    
+
+    <link rel="stylesheet" type="text/css" href="/gxa/resources/css/jquery-ui-1.11.4.custom/css/jquery-ui.min.css" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="/gxa/resources/css/atlas.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/gxa/resources/js/lib/jquery-tageditor-1.0.20/jquery.tag-editor.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/gxa/resources/css/ae-autocomplete.css" media="screen">
+
+    <script language="JavaScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/json2/20150503/json2.min.js"></script>
+
+    <script language="javascript" type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.4.0.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="/gxa/resources/js/lib/jquery-caret/jquery.caret.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/gxa/resources/js/lib/jquery-tageditor-1.0.20/jquery.tag-editor.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="/gxa/resources/js/helpTooltipsModule.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/gxa/resources/js/geneQueryTagEditorModule.js"></script>
+
+    <script>
+        (function ($) { //self invoking wrapper function that prevents $ namespace conflicts
+            $(document).ready(function () {
+                geneQueryTagEditorModule.init("#local-searchbox");
+
+                searchBoxEnterEventHandler("#submit-searchbox");
+                function searchBoxEnterEventHandler(element) {
+                    $('#local-search .tag-editor').on('submit', function (e) {
+                        $(element).click();
+                    });
+                }
+            });
+        })(jQuery);
+    </script>
+
+</head>
+
+<body class="gxaBody">
+
+<div id="skip-to">
+    <ul>
+        <li><a href="#content">Skip to main content</a></li>
+        <li><a href="#gxaLocalNav">Skip to local navigation</a></li>
+        <li><a href="#global-nav">Skip to EBI global navigation menu</a></li>
+        <li><a href="#global-nav-expanded">Skip to expanded EBI global navigation menu (includes all sub-sections)</a>
+        </li>
+    </ul>
+</div>
+
+<div id="wrapper" class="container_24">
+
+    
+
+
+<header>
+
+    <div id="global-masthead" class="masthead grid_24">
+        <!--This has to be one line and no newline characters-->
+        <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img
+                src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png"
+                alt="EMBL European Bioinformatics Institute"></a>
+
+        <nav>
+            <ul id="global-nav">
+                <!-- set active class as appropriate -->
+                <li class="first active" id="services"><a href="//www.ebi.ac.uk/services">Services</a></li>
+                <li id="research"><a href="//www.ebi.ac.uk/research">Research</a></li>
+                <li id="training"><a href="//www.ebi.ac.uk/training">Training</a></li>
+                <li id="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></li>
+                <li id="about" class="last"><a href="//www.ebi.ac.uk/about">About us</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div id="local-masthead" class="masthead grid_24 nomenu" style="background-color: #E1EEE9">
+
+        <!-- local-title -->
+        <!-- NB: for additional title style patterns, see http://frontier.ebi.ac.uk/web/style/patterns -->
+
+        <!-- apply grid_12 alpha class if you have a local search box in the header...
+        <div class="grid_12 alpha" id="local-title">
+        -->
+        <div class="grid_12 alpha" id="local-title">
+            <h1 style="color: #000000; text-shadow: 0px 0px #E1EEE9">
+                <a href="/gxa" title="Back to Expression Atlas homepage">
+                    <img src="/gxa/resources/images/ExpressionAtlas_logo_web.png"
+                         alt="Expression Atlas logo" width="64" height="64" style="vertical-align: bottom">Expression
+                    Atlas
+                </a>
+            </h1>
+
+        </div>
+
+        <!-- /local-title -->
+
+        <!-- local-search -->
+        <!-- NB: if you do not have a local-search, delete the following div, and drop the class="grid_12 alpha" class from local-title above -->
+
+        <div class="grid_12 omega">
+            <form method="get" action="query" name="local-search" id="local-search">
+
+                <fieldset>
+
+                    <div class="left">
+                        <label>
+                            <input id="local-searchbox" name="geneQuery" value="" maxlength="900" placeholder="(enter gene query)"/>
+                        </label>
+                    </div>
+                    <div class="left">
+                        <!-- Include some example searchterms - keep them short and few! -->
+                        <span class="examples">Examples:
+                                        <a href="/gxa/query?geneQuery=ASPM">ASPM</a>,
+                                        <a href="/gxa/query?geneQuery=apoptosis">Apoptosis</a>,
+                                        <a href="/gxa/query?geneQuery=ENSMUSG00000021789">ENSMUSG00000021789</a>,
+                                        <a href="/gxa/query?geneQuery=%22zinc+finger%22">"zinc finger"</a></span>
+                    </div>
+
+                    <div class="right" style="position: relative; top: -30px;">
+                        <input id="submit-searchbox" class="submit" type="submit" value="Search"/>
+                        <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search,
+                             with whatever features you want available -->
+                        <!--
+                        <span class="adv"><a title="Advanced" id="adv-search" href="../search">Advanced</a></span>
+                        -->
+                    </div>
+
+                </fieldset>
+
+            </form>
+        </div>
+
+        <!-- /local-search -->
+
+        <!-- gxaLocalNav -->
+
+        <nav>
+            <ul class="grid_24" id="gxaLocalNav">
+                <li id="gxaLocalNavHome" class="first active">
+                    <a href="/gxa" title="Expression Atlas homepage">Home</a>
+                </li>
+                <li id="gxaLocalNavRelease-notes">
+                    <a href="/gxa/release-notes.html" title="Release notes">Release notes</a>
+                </li>
+                <li id="gxaLocalNavFAQ">
+                    <a href="/gxa/FAQ.html" title="FAQs">FAQs</a>
+                </li>
+                <li id="gxaLocalNavDownload">
+                    <a href="/gxa/download.html" title="Download">Download</a>
+                </li>
+                <li id="gxaLocalNavHelp">
+                    <a href="/gxa/help/index.html"
+                       title="Help pages">Help</a>
+                </li>
+                <li id="gxaLocalNavAbout" class="last">
+                    <a href="/gxa/about.html"
+                       title="About Expression Atlas">About</a>
+                </li>
+                <!--
+                <li class="last"><a href="#">About [service-name]</a></li>
+                -->
+                <!-- If you need to include functional (as opposed to purely navigational) links in your local menu,
+                     add them here, and give them a class of "functional". Remember: you'll need a class of "last" for
+                     whichever one will show up last...
+                     For example: -->
+                <li class="functional last" style="float: right"><a id="feedback-link" href="feedback-form" class="icon icon-generic"
+                                               data-icon="\">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <!-- /gxaLocalNav -->
+
+    </div>
+</header>
+
+<style>
+    fieldset {
+        padding: 0;
+        border: 0;
+        margin-top: 0px;
+    }
+
+    .ui-dialog .ui-state-error {
+        padding: 0px;
+    }
+
+    .validateTips {
+        border: 1px solid transparent;
+        padding: 0em;
+    }
+</style>
+
+<div style="display: none;" id="dialog-form" title="Send us feedback - we really appreciate it !">
+
+    <div id="feedback-tips" class="validateTips">Please fill this form and click the Send button.</div>
+
+    <form id="form">
+        <fieldset id="form-fields">
+            <ul>
+                <li>
+                    <div>
+                        <label for="feedback">Your feedback:</label>
+                    </div>
+                    <div>
+                        <textarea rows="4" cols="45" name="feedback" id="feedback"
+                                  class="text ui-widget-content ui-corner-all"></textarea>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="email">Your email address (optional)</label>
+                    </div>
+                    <div>
+                        <input type="text" size="50" maxlength="80" name="email" id="email" value=""
+                               class="text ui-widget-content ui-corner-all"/>
+                        <input type="hidden" name="sendemail" id="sendemail" value="true"/>
+                    </div>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</div>
+
+<script>
+    function clearLocalNav() {
+        var listItems = $("#gxaLocalNav li");
+        listItems.each(function (idx, li) {
+            var item = $(li);
+            item.removeClass("active");
+        });
+    }
+
+    $(function () {
+
+        $('#submit-searchbox').click(function(e) {
+            if (searchBoxIsEmpty()) {
+                e.preventDefault();
+            }
+        });
+
+        function searchBoxIsEmpty() {
+            return !$('#local-searchbox').val().trim();
+        }
+    });
+
+    $(function () {
+        var feedback = $("#feedback"),
+                email = $("#email"),
+                allFields = $([]).add(feedback).add(email),
+                tips = $(".validateTips");
+
+        function updateTips(text) {
+            tips.text(text).addClass("ui-state-highlight");
+            setTimeout(function () {
+                tips.removeClass("ui-state-highlight", 1500);
+            }, 500);
+        }
+
+        function checkLength(field, fieldName, min, max) {
+            var emailAddress = $.trim(field.val());
+            if (emailAddress.length > max || emailAddress.length < min) {
+                field.addClass("ui-state-error");
+                updateTips("Length of the " + fieldName + " field must be between " +
+                        min + " and " + max + " characters.");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function checkRegexp(field, regexp, example) {
+            var emailAddress = $.trim(field.val());
+            if (!( regexp.test(emailAddress) )) {
+                field.addClass("ui-state-error");
+                updateTips(example);
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        $("#dialog-form").dialog({
+            autoOpen:false,
+            show:"blind",
+            hide:"explode",
+            height:"320",
+            width:"440px",
+            modal:true,
+            buttons:[
+                {width:"60px", text:"Send", id:"send-button", click:function () {
+                    var bValid = true;
+                    allFields.removeClass("ui-state-error");
+                    bValid = bValid && ($.trim(email.val()).length == 0
+                            || (checkRegexp(email, /^((([a-z]|\d|[!#$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i, "Email format non valid")
+                            && checkLength(email, "email", 6, 80)));
+                    bValid = bValid && checkLength(feedback, "feedback", 3, 10000);
+
+                    if (bValid) {
+                        $.ajax({
+                            type:"POST",
+                            url:"email",
+                            dataType:"json",
+                            data:{
+                                feedback: feedback.val(),
+                                email: email.val()
+                            },
+                            success:function (data) {
+                                updateTips(data);
+                            },
+                            error:function (jqXHR, statusCode) {
+                                document.location = "error-page";
+                            }
+                        });
+
+                        $("#send-button").hide();
+                        $("#form-fields").hide();
+                        $("#cancel-button").button('option', 'label', 'Close');
+
+                    }
+                }
+                },
+                {text:"Cancel", id:"cancel-button", click:function () {
+                    $(this).dialog("close");
+                }
+                }
+            ],
+            close:function () {
+                allFields.val("").removeClass("ui-state-error");
+            }
+        });
+
+        $("#feedback-link").click(function () {
+            $("#dialog-form").dialog("open");
+            return false;
+        });
+    });
+</script>
+
+
+
+    <div id="content" class="grid_24 clearfix" role="main">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/gxa/resources/css/experiment-header.css">
+
+<script language="JavaScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+<link rel="stylesheet" href="/gxa/resources/css/customized-bootstrap-3.3.5.css">
+<script src="/gxa/resources/js/lib/bootstrap-3.3.5.min.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="/gxa/resources/js/experiment-page-buttons-and-tooltips.js"></script>
+
+<script>
+    var bootstrapButton = $.fn.button.noConflict(); // return $.fn.button to previously assigned value
+    $.fn.bootstrapBtn = bootstrapButton;            // give $().bootstrapBtn the Bootstrap functionality
+
+    var bootstrapTooltip = $.fn.tooltip.noConflict();
+    $.fn.bootstrapTt = bootstrapTooltip;
+</script>
+
+<section id="gxaExperimentHeader" style="text-align: justify;">
+
+    <div id="helpContentTooltip" style="display: none;"></div>
+
+    <div class="grid_18">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="experimentDescription">
+    <a id="goto-experiment" class="thick-link" href="http://www.ebi.ac.uk:80/gxa/experiments/E-MTAB-4401">Transcription profiling by high throughput sequencing of different tissues from Brachypodium distachyon (Bd21 inbred line)</a>
+    
+</div>
+<div id="experimentOrganisms">Organism(s):
+    <span style="font-style:italic">
+        Brachypodium distachyon
+    </span>
+</div>
+
+
+    <div id="experimentReferences">Reference(s):
+        
+                    <span><a class="pubmed-id" href="http://europepmc.org/abstract/MED/22443345"
+                             title="View publication in PubMed" target='_blank'>22443345</a>
+                        <a class="pubmed-genequery" style="cursor: pointer" data-pubmed-id="22443345" title="Filter by text-mined genes/proteins in reference publication">(Filter by genes in paper)</a>
+                        &nbsp;&nbsp;&nbsp;
+                    </span>
+        
+    </div>
+
+
+
+
+<script>
+    var europepmcUrl = "/europepmc/" + "webservices/rest/MED/%pubmedId%/textMinedTerms/GENE_PROTEIN/1/json";
+</script>
+
+<script src="/gxa/resources/js/pubmedMinedBioentitiesModule.js"></script>
+<script>
+    (function ($, pubmedMinedBioentitiesModule) {
+        $(document).ready(function () {
+
+            var $pubmedGeneQueries = $('.pubmed-genequery');
+
+            $pubmedGeneQueries.tooltip({
+                tooltipClass: "gxaHelpTooltip"
+            });
+
+            $pubmedGeneQueries.click(function (event) {
+                var pubmedId = $(event.target).attr("data-pubmed-id");
+
+                pubmedMinedBioentitiesModule.fetchPubmedMinedBioentities(pubmedId, function (err, bioentities) {
+
+                    if (err) {
+                        throw new Error("Error fetching pubmed mined bioentities for id " + pubmedId + ": " + err.message);
+                    }
+
+                    if (!bioentities || bioentities.length == 0) {
+                        alert("No text-mined genes/proteins available in Europe PubMed Central for PMID " + pubmedId);
+                        console.warn("No pubmed mined bioentities for id " + pubmedId);
+                        return;
+                    }
+
+                    function replaceGeneQueryWithBioentities(url, bioentities) {
+                        var newGeneQuery = bioentities.join("%09");
+
+                        if (url.indexOf("geneQuery") > -1) {
+                            return url.replace(/geneQuery=[^&]*/, "geneQuery="+newGeneQuery);
+                        }
+
+                        return url + (url.indexOf("?") > -1 ? "&" : "?") + "geneQuery="+newGeneQuery;
+                    }
+
+                    var experimentUrlForPubMedBioentities = replaceGeneQueryWithBioentities(document.URL, bioentities);
+                    window.open(experimentUrlForPubMedBioentities, '_blank');
+                });
+
+            });
+
+        });
+    })(jQuery, pubmedMinedBioentitiesModule);
+</script>
+
+
+    </div>
+
+    <div class="grid_6">
+        <table style="width: auto; float: right;">
+            <tbody>
+                <tr>
+                    <td>
+                        <a id="display-ae" title="View experiment in ArrayExpress"
+                           
+                           href="http://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-4401">
+                            <img src="/gxa/resources/images/ae-logo-64.png"/></a>
+                    </td>
+
+                    <td>
+                        <a id="display-experiment" title="Experiment Page"
+                           href="/gxa/experiments/E-MTAB-4401">
+                            <img src="/gxa/resources/images/experiment_page_small.png"/></a>
+                    </td>
+
+                    <td>
+                        <a id="display-analysis-methods" title="Analysis Methods"
+                           href="/gxa/experiments/E-MTAB-4401/analysis-methods">
+                            <img style="width:23px;height:23px"
+                                 src="/gxa/resources/images/analysis_icon.png"/></a>
+                    </td>
+
+                    <td>
+                        <a id="display-experiment-design" title="Experiment Design"
+                           href="/gxa/experiments/E-MTAB-4401/experiment-design">
+                            <img src="/gxa/resources/images/experiment_design_icon.png"/></a>
+                    </td>
+
+
+                    
+
+
+                    
+                    
+                    
+
+
+                    
+                    
+                        <td>
+                            <a id="clustering-pdf" title="Explore hierarchical clustering between experimental conditions and the top 100 most variable genes in the experiment"
+                               href="/gxa/experiments/E-MTAB-4401/E-MTAB-4401-heatmap.pdf">
+                                <img src="/gxa/resources/images/cluster_button.png"/>
+                            </a>
+                        </td>
+                    
+
+
+                    
+                    
+                    
+                        <td>
+                            
+                                
+                                
+                                    <a id="download-r" title="Download experiment data ready to load into R"
+                                       href="/gxa/experiments/E-MTAB-4401/E-MTAB-4401-atlasExperimentSummary.Rdata">
+                                        <img src="/gxa/resources/images/r-button.png"/>
+                                    </a>
+                                
+                            
+                        </td>
+                    
+
+
+                    
+
+                    
+
+
+                    
+                        
+                            <td>
+                                
+                                    
+                                    
+                                        <a id="download-expressions" title="Download all expressions for the experiment"
+                                           href="http://www.ebi.ac.uk:80/gxa/experiments/E-MTAB-4401.tsv?accessKey=&geneQuery=&cutoff=-0.1">
+                                            <img src="/gxa/resources/images/download_blue_small_normalized.png"/>
+                                        </a>
+                                    
+                                
+                            </td>
+                        
+                        
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div id="download-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class = "modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4></h4>
+                </div>
+
+                <div class="modal-body" style="max-height: 360px">
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Blueprint project Data Reuse statement</title>
+</head>
+<body>
+
+<h3>The Blueprint project Data Reuse statement</h3>
+<br />
+
+<p>This document refers to the reuse of data generated by the EC funded FP7 High Impact Project, Blueprint.</p>
+<p>Blueprint regularly released analysis results via its ftp site and makes the raw sequence data available through the sequence archives at the EMBL-EBI. Much Blueprint data is generated from samples whose data must be released through a managed access process. For these data sets external users must apply for permission to access the data from the European Genome-phenome Archive (EGA) through the Blueprint Data Access Committee.
+    <br />
+  The Blueprint consortium expects this data to be valuable to other researchers and in keeping with Fort Lauderdale principles data users may use the data for many studies, but are expected to allow the data producers to make the first presentations and to publish the first paper with global analyses of the data.
+</p>
+
+<h5>Global analyses of Project data</h5>
+<p>
+    Blueprint plans to publish global analyses of the sequencing data, epigenetic marks, expression levels and variation both in the context of normal hematopoietic cells and of those neoplastic and non-neoplastic diseases studied within th econsortium. Talks, posters, and papers on all such analyses are to be published first by the Blueprint project, by approved presenters on behalf of the Project, with the Project as author. When the first major Project paper on these analyses is published, then researchers inside and outside the Project are free to present and publish using the Project data for these and other analyses.
+</p>
+
+<h5>Large-scale analyses of Project data</h5>
+<p>
+    Groups within the Project may make presentations and publish papers on more extensive analyses of topics to be included in the main analysis presentations and papers, coincident with the main project analysis presentations and papers. The major points would be included in the main Project presentations and papers, but these additional presentations and papers allow more focused discussion of methods and results. The author list would include the Consortium.
+</p>
+
+<h5>Methods development using Project data</h5>
+<p>
+    Researchers who have used small amounts of Project data (<= one chromosome) may present methods development posters, talks, and papers that include these data prior to the first major Project paper, without needing Project approval or authorship, although the Project should be acknowledged. Methods presentations or papers on global analyses or analyses using large amounts of Project data, on topics that the Consortium plans to examine, would be similar to large-scale analyses of Project data: researchers within the Project may make presentations or submit papers at the same time as the main Project presentations and papers, and others could do so after the Project publishes the first major analysis paper.
+</p>
+
+<h5>Disease studies using Project data</h5>
+<p>
+    Researchers may present and publish on use of Project data in specific chromosome regions (that are not of general interest) or as summaries (such as number of differentially expressed genes in cell types assayed by Blueprint) for studies on diseases not studied by BLUEPRINT without Project approval, prior to the first major Project paper being published. The Project should not be listed as an author.
+</p>
+
+<h5>Authors who use data from the project must acknowledge Blueprint using the following wording</h5>
+<p>
+    This study makes use of data generated by the Blueprint Consortium. A full list of the investigators who contributed to the generation of the data is available from www.blueprint-epigenome.eu. Funding for the project was provided by the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no 282510 BLUEPRINT.
+</p>
+
+
+</body>
+</html>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+                        
+                        
+                             <button class="btn btn-primary" id="continue-download-R"
+                                     onclick="location.href='/gxa/experiments/E-MTAB-4401/E-MTAB-4401-atlasExperimentSummary.Rdata'">Continue downloading</button>
+                        
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</section>
+
+<script>
+    (function ($) { //self invoking wrapper function that prevents $ namespace conflicts
+        $(document).ready(function () {
+
+            initExperimentPageButtonsAndTooltips();
+
+            $("#extra-info").fancybox({
+                padding:0,
+                openEffect:'elastic',
+                closeEffect:'elastic'
+            });
+
+            $("#download-expressions-modal").click(function(event) {
+                event.preventDefault();
+                $("#continue-download-R").hide();
+                $("#continue-download-expressions").show();
+
+            });
+            $("#download-r-modal").click(function(event) {
+                event.preventDefault();
+                $("#continue-download-expressions").hide();
+                $("#continue-download-R").show();
+
+            });
+
+            $("#continue-download-expressions").click(function(event) {
+                $('#download-modal').modal('hide');
+            });
+
+            $("#continue-download-R").click(function(event) {
+                $('#download-modal').modal('hide');
+            });
+
+        });
+    })(jQuery);
+</script>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.17.0/URI.min.js"></script>
+
+<link rel="stylesheet" href="/gxa/resources/css/experiment.css">
+
+<script language="JavaScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css">
+
+<script language="JavaScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/gxa/resources/js/geneDistribution.js"></script>
+
+<section>
+    <div class="grid_20">
+        
+
+
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript" src="/gxa/resources/js/searchFormModule.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/gxa/resources/css/home_request-preferences.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/gxa/resources/css/request-preferences.css" media="screen">
+
+<div>
+    <form id="prefForm" action="/gxa/experiments/E-MTAB-4401?_specific=on&amp;queryFactorType=ORGANISM_PART&amp;queryFactorValues=leaf&amp;geneQuery=&amp;exactMatch=true" method="get">
+        <input type="hidden" name="accessKey" value=""/>
+        <input id="serializedFilterFactors" name="serializedFilterFactors" type="hidden" value=""/>
+        <input id="queryFactorType" name="queryFactorType" type="hidden" value="ORGANISM_PART"/>
+        <input id="rootContext" name="rootContext" type="hidden" value=""/>
+        <input id="heatmapMatrixSize" name="heatmapMatrixSize" type="hidden" value="50"/>
+        <input id="displayLevels" name="displayLevels" type="hidden" value="false"/>
+        <input id="displayGeneDistribution" name="displayGeneDistribution" type="hidden" value="false"/>
+        
+
+        
+        <table class="gxaFormGrid">
+            <tr>
+                <td class="gxaTableColumn35">
+                    <label for="geneQuery">Gene query</label>
+                    <span data-help-loc="#geneSearch"></span>
+                </td>
+
+                
+
+                
+
+                <td class="gxaTableColumn17">
+                    <label for="queryFactorValues">Organism part</label>
+                    <span data-help-loc="#factorSearch"></span>
+                </td>
+                
+                    
+                        <td class="gxaTableColumn17">
+                            <label for="cutoff">Expression level cutoff</label>
+                            <span data-help-loc="#cutoff"></span>
+                        </td>
+                    
+                    
+                
+                <td rowspan="2" class="gxaTableColumn10" style="vertical-align: middle;">
+                    <div class="gxaExperimentRequestPreferencesActionButtons">
+                        <div style="text-align: right;">
+                            <input id="submit-button" type="submit" value="Apply"/>
+                        </div>
+                        <div style="text-align: right;">
+                            <input id="reset-button" type="button" value="Reset"/>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <textarea id="geneQuery" name="geneQuery" rows="2" cols="36" ></textarea>
+                    <input id="exactMatch" name="exactMatch" style="vertical-align: middle" type="checkbox" value="true" checked="checked"/><label for="exactMatch">Exact match</label><input type="hidden" name="_exactMatch" value="on"/>
+                </td>
+
+                
+                
+
+                <td>
+                    <div>
+                        
+                        
+                        
+                        
+                        <select id="queryFactorValues" name="queryFactorValues" style="width:100%;" tabindex="-1" data-placeholder="(any organism parts)" multiple="multiple"><option value="anther">anther</option><option value="carpel">carpel</option><option value="embryo">embryo</option><option value="endosperm">endosperm</option><option value="inflorescence">inflorescence</option><option value="leaf" selected="selected">leaf</option><option value="seed">seed</option></select><input type="hidden" name="_queryFactorValues" value="1"/>
+                    </div>
+                    <input id="specific" name="specific" style="vertical-align: middle" type="checkbox" value="true"/><label for="specific">Specific</label><input type="hidden" name="_specific" value="on"/>
+                    <span data-help-loc="#specific"
+                          style="display:inline-block"></span>
+                </td>
+
+                <td>
+                    
+                        
+                        
+                            <input id="cutoff" name="cutoff" style="height:27px; border: 1px solid #AAA; padding: 0px 5px;" type="text" value="0.5" size="10"/>
+                        
+                    
+                </td>
+
+                
+            </tr>
+        </table>
+    </form>
+
+
+    <div class="grid_24" style="padding-top: 15px; padding-bottom: 30px">
+        <div id="gxaGeneDistributionPanel">
+            <div id="gene-distribution" style="height: 100px;">
+            </div>
+            <span data-help-loc="#gene-distribution" style="vertical-align: top"></span>
+        </div>
+
+        <div id="gxaSliderAndChart">
+            <div>
+                <div id="gxaGeneDistributionButton" style="float: left;">
+                    <a id="gxaDisplayChart" title="Display gene distribution" href="#">
+                        <img alt="Display gene distribution" src="resources/images/yellow-chart-icon-16.png"/>
+                    </a>
+                </div>
+                <div id="slider-range-max" style="float: left; font-size: 65%; width: 94%; margin: 8px 12px"></div>
+            </div>
+            <span id="slider-help" data-help-loc="#slider"></span>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</section>
+
+<section class="gxaSection">
+    <div class="grid_24" id="gxaExperimentPageHeatmapAnatomogram">
+        
+    </div>
+</section>
+
+
+
+
+
+
+    
+    
+
+    <script src="/gxa/resources/js-bundles/vendorCommons.bundle.js"></script>
+    <script src="/gxa/resources/js-bundles/experimentPageHeatmap.bundle.js"></script>
+
+    <div id="genenametooltip-content" style="display: none"></div>
+
+    <script type="text/javascript">
+        var heatmapData = 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        {
+            
+            "config": {
+                "atlasHost": "http://www.ebi.ac.uk",
+                "contextRoot": "/gxa",
+                "experimentAccession": "E-MTAB-4401",
+                "geneQuery": "",
+                "accessKey": "",
+                "species": "brachypodium distachyon",
+                "ensemblDB": "plants",
+                "columnType": "organism part",
+                "isExactMatch": true,
+                "enableGeneLinks": true,
+                "enableEnsemblLauncher": true,
+                "showMaPlotButton": true,
+                "gseaPlots": null,
+                "downloadProfilesURL": "/experiments/E-MTAB-4401.tsv?_specific=on&queryFactorType=ORGANISM_PART&queryFactorValues=leaf&geneQuery=&exactMatch=true",
+                "isFortLauderdale": false
+            },
+            "columnHeaders": [{"assayGroupId":"g4","factorValue":"anther","factorValueOntologyTermId":"EFO_0005101"},{"assayGroupId":"g5","factorValue":"carpel","factorValueOntologyTermId":"EFO_0001051"},{"assayGroupId":"g8","factorValue":"embryo"},{"assayGroupId":"g9","factorValue":"endosperm","factorValueOntologyTermId":"EFO_0001020"},{"assayGroupId":"g1","factorValue":"inflorescence","factorValueOntologyTermId":"EFO_0001029"},{"assayGroupId":"g2","factorValue":"leaf","factorValueOntologyTermId":"EFO_0000993"},{"assayGroupId":"g6","factorValue":"seed","factorValueOntologyTermId":"EFO_0000991"}],
+            "nonExpressedColumnHeaders": [],
+            "multipleColumnHeaders": null,
+            "profiles": {"minExpressionLevel":0.6,"maxExpressionLevel":24249.0,"searchResultTotal":17343,"rows":[{"id":"BRADI2G44856","name":"BRADI2G44856","expressions":[{"factorName":"anther","color":"#B7B7C0","value":"989","svgPathId":"EFO_0005101","quartiles":{"min":989.0,"lower":989.0,"median":989.0,"upper":989.0,"max":989.0}},{"factorName":"carpel","color":"#C0C0C0","value":"24","svgPathId":"EFO_0001051","quartiles":{"min":24.0,"lower":24.0,"median":24.0,"upper":24.0,"max":24.0}},{"factorName":"embryo","color":"#C0C0C0","value":"12","quartiles":{"min":12.0,"lower":12.0,"median":12.0,"upper":12.0,"max":12.0}},{"factorName":"endosperm","color":"#BFBFC0","value":"102","svgPathId":"EFO_0001020","quartiles":{"min":102.0,"lower":102.0,"median":102.0,"upper":102.0,"max":102.0}},{"factorName":"inflorescence","color":"#BCBCC0","value":"455","svgPathId":"EFO_0001029","quartiles":{"min":455.0,"lower":455.0,"median":455.0,"upper":455.0,"max":455.0}},{"factorName":"leaf","color":"#0000FF","value":"24249","svgPathId":"EFO_0000993","quartiles":{"min":17787.0,"lower":21018.0,"median":24249.0,"upper":27480.0,"max":30711.0}},{"factorName":"seed","color":"#BFC0C0","value":"37","svgPathId":"EFO_0000991","quartiles":{"min":37.0,"lower":37.0,"median":37.0,"upper":37.0,"max":37.0}}]},{"id":"BRADI4G08500","name":"BRADI4G08500","expressions":[{"factorName":"anther","color":"#BFC0C0","value":"36","svgPathId":"EFO_0005101","quartiles":{"min":36.0,"lower":36.0,"median":36.0,"upper":36.0,"max":36.0}},{"factorName":"carpel","color":"#BFBFC0","value":"95","svgPathId":"EFO_0001051","quartiles":{"min":95.0,"lower":95.0,"median":95.0,"upper":95.0,"max":95.0}},{"factorName":"embryo","color":"#C0C0C0","value":"9","quartiles":{"min":5.0,"lower":7.0,"median":9.0,"upper":11.0,"max":14.0}},{"factorName":"endosperm","color":"#B7B8C0","value":"922","svgPathId":"EFO_0001020","quartiles":{"min":922.0,"lower":922.0,"median":922.0,"upper":922.0,"max":922.0}},{"factorName":"inflorescence","color":"#A7A8C0","value":"2681","svgPathId":"EFO_0001029","quartiles":{"min":2681.0,"lower":2681.0,"median":2681.0,"upper":2681.0,"max":2681.0}},{"factorName":"leaf","color":"#1515E9","value":"20800","svgPathId":"EFO_0000993","quartiles":{"min":17787.0,"lower":19294.0,"median":20800.0,"upper":22306.0,"max":23813.0}},{"factorName":"seed","color":"#B9BAC0","value":"699","svgPathId":"EFO_0000991","quartiles":{"min":699.0,"lower":699.0,"median":699.0,"upper":699.0,"max":699.0}}]},{"id":"BRADI3G26391","name":"BRADI3G26391","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"27","svgPathId":"EFO_0005101","quartiles":{"min":27.0,"lower":27.0,"median":27.0,"upper":27.0,"max":27.0}},{"factorName":"carpel","color":"#BDBEC0","value":"247","svgPathId":"EFO_0001051","quartiles":{"min":247.0,"lower":247.0,"median":247.0,"upper":247.0,"max":247.0}},{"factorName":"embryo","color":"#C0C0C0","value":"13","quartiles":{"min":6.0,"lower":9.0,"median":13.0,"upper":16.0,"max":20.0}},{"factorName":"endosperm","color":"#ABABC0","value":"2263","svgPathId":"EFO_0001020","quartiles":{"min":2263.0,"lower":2263.0,"median":2263.0,"upper":2263.0,"max":2263.0}},{"factorName":"inflorescence","color":"#9495C0","value":"4694","svgPathId":"EFO_0001029","quartiles":{"min":4694.0,"lower":4694.0,"median":4694.0,"upper":4694.0,"max":4694.0}},{"factorName":"leaf","color":"#1F20DF","value":"19122","svgPathId":"EFO_0000993","quartiles":{"min":7533.0,"lower":13328.0,"median":19122.0,"upper":24916.0,"max":30711.0}},{"factorName":"seed","color":"#9D9EC0","value":"3733","svgPathId":"EFO_0000991","quartiles":{"min":3733.0,"lower":3733.0,"median":3733.0,"upper":3733.0,"max":3733.0}}]},{"id":"BRADI3G17640","name":"BRADI3G17640","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"23","svgPathId":"EFO_0005101","quartiles":{"min":23.0,"lower":23.0,"median":23.0,"upper":23.0,"max":23.0}},{"factorName":"carpel","color":"#BEBFC0","value":"168","svgPathId":"EFO_0001051","quartiles":{"min":168.0,"lower":168.0,"median":168.0,"upper":168.0,"max":168.0}},{"factorName":"embryo","color":"#C0C0C0","value":"10","quartiles":{"min":6.0,"lower":8.0,"median":10.0,"upper":12.0,"max":13.0}},{"factorName":"endosperm","color":"#B2B3C0","value":"1486","svgPathId":"EFO_0001020","quartiles":{"min":1486.0,"lower":1486.0,"median":1486.0,"upper":1486.0,"max":1486.0}},{"factorName":"inflorescence","color":"#B4B5C0","value":"1258","svgPathId":"EFO_0001029","quartiles":{"min":1258.0,"lower":1258.0,"median":1258.0,"upper":1258.0,"max":1258.0}},{"factorName":"leaf","color":"#2626D8","value":"18022","svgPathId":"EFO_0000993","quartiles":{"min":12231.0,"lower":15127.0,"median":18022.0,"upper":20917.0,"max":23813.0}},{"factorName":"seed","color":"#B8B9C0","value":"835","svgPathId":"EFO_0000991","quartiles":{"min":835.0,"lower":835.0,"median":835.0,"upper":835.0,"max":835.0}}]},{"id":"BRADI4G09125","name":"BRADI4G09125","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"13","svgPathId":"EFO_0005101","quartiles":{"min":13.0,"lower":13.0,"median":13.0,"upper":13.0,"max":13.0}},{"factorName":"carpel","color":"#BFC0C0","value":"61","svgPathId":"EFO_0001051","quartiles":{"min":61.0,"lower":61.0,"median":61.0,"upper":61.0,"max":61.0}},{"factorName":"embryo","color":"#C0C0C0","value":"7","quartiles":{"min":5.0,"lower":6.0,"median":7.0,"upper":8.0,"max":9.0}},{"factorName":"endosperm","color":"#BDBDC0","value":"309","svgPathId":"EFO_0001020","quartiles":{"min":309.0,"lower":309.0,"median":309.0,"upper":309.0,"max":309.0}},{"factorName":"inflorescence","color":"#B3B4C0","value":"1339","svgPathId":"EFO_0001029","quartiles":{"min":1339.0,"lower":1339.0,"median":1339.0,"upper":1339.0,"max":1339.0}},{"factorName":"leaf","color":"#3E3EC0","value":"14097","svgPathId":"EFO_0000993","quartiles":{"min":13303.0,"lower":13700.0,"median":14097.0,"upper":14493.0,"max":14890.0}},{"factorName":"seed","color":"#BFBFC0","value":"92","svgPathId":"EFO_0000991","quartiles":{"min":92.0,"lower":92.0,"median":92.0,"upper":92.0,"max":92.0}}]},{"id":"BRADI1G52460","name":"BRADI1G52460","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"20","svgPathId":"EFO_0005101","quartiles":{"min":20.0,"lower":20.0,"median":20.0,"upper":20.0,"max":20.0}},{"factorName":"carpel","color":"#BEBEC0","value":"221","svgPathId":"EFO_0001051","quartiles":{"min":221.0,"lower":221.0,"median":221.0,"upper":221.0,"max":221.0}},{"factorName":"embryo","color":"#C0C0C0","value":"9","quartiles":{"min":3.0,"lower":6.0,"median":9.0,"upper":12.0,"max":15.0}},{"factorName":"endosperm","color":"#B4B5C0","value":"1246","svgPathId":"EFO_0001020","quartiles":{"min":1246.0,"lower":1246.0,"median":1246.0,"upper":1246.0,"max":1246.0}},{"factorName":"inflorescence","color":"#ACADC0","value":"2126","svgPathId":"EFO_0001029","quartiles":{"min":2126.0,"lower":2126.0,"median":2126.0,"upper":2126.0,"max":2126.0}},{"factorName":"leaf","color":"#4E4FC0","value":"12297","svgPathId":"EFO_0000993","quartiles":{"min":11291.0,"lower":11794.0,"median":12297.0,"upper":12800.0,"max":13303.0}},{"factorName":"seed","color":"#B1B1C0","value":"1619","svgPathId":"EFO_0000991","quartiles":{"min":1619.0,"lower":1619.0,"median":1619.0,"upper":1619.0,"max":1619.0}}]},{"id":"BRADI4G24367","name":"BRADI4G24367","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"16","svgPathId":"EFO_0005101","quartiles":{"min":16.0,"lower":16.0,"median":16.0,"upper":16.0,"max":16.0}},{"factorName":"carpel","color":"#BEBFC0","value":"157","svgPathId":"EFO_0001051","quartiles":{"min":157.0,"lower":157.0,"median":157.0,"upper":157.0,"max":157.0}},{"factorName":"embryo","color":"#C0C0C0","value":"21","quartiles":{"min":19.0,"lower":20.0,"median":21.0,"upper":21.0,"max":22.0}},{"factorName":"endosperm","color":"#B4B4C0","value":"1316","svgPathId":"EFO_0001020","quartiles":{"min":1316.0,"lower":1316.0,"median":1316.0,"upper":1316.0,"max":1316.0}},{"factorName":"inflorescence","color":"#B2B3C0","value":"1442","svgPathId":"EFO_0001029","quartiles":{"min":1442.0,"lower":1442.0,"median":1442.0,"upper":1442.0,"max":1442.0}},{"factorName":"leaf","color":"#5151C0","value":"12032","svgPathId":"EFO_0000993","quartiles":{"min":9174.0,"lower":10603.0,"median":12032.0,"upper":13461.0,"max":14890.0}},{"factorName":"seed","color":"#B9BAC0","value":"690","svgPathId":"EFO_0000991","quartiles":{"min":690.0,"lower":690.0,"median":690.0,"upper":690.0,"max":690.0}}]},{"id":"BRADI1G15290","name":"BRADI1G15290","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"17","svgPathId":"EFO_0005101","quartiles":{"min":17.0,"lower":17.0,"median":17.0,"upper":17.0,"max":17.0}},{"factorName":"carpel","color":"#BEBEC0","value":"204","svgPathId":"EFO_0001051","quartiles":{"min":204.0,"lower":204.0,"median":204.0,"upper":204.0,"max":204.0}},{"factorName":"embryo","color":"#C0C0C0","value":"6","quartiles":{"min":3.0,"lower":5.0,"median":6.0,"upper":8.0,"max":10.0}},{"factorName":"endosperm","color":"#B4B5C0","value":"1263","svgPathId":"EFO_0001020","quartiles":{"min":1263.0,"lower":1263.0,"median":1263.0,"upper":1263.0,"max":1263.0}},{"factorName":"inflorescence","color":"#AFB0C0","value":"1791","svgPathId":"EFO_0001029","quartiles":{"min":1791.0,"lower":1791.0,"median":1791.0,"upper":1791.0,"max":1791.0}},{"factorName":"leaf","color":"#5555C0","value":"11635","svgPathId":"EFO_0000993","quartiles":{"min":10103.0,"lower":10869.0,"median":11635.0,"upper":12401.0,"max":13167.0}},{"factorName":"seed","color":"#B5B6C0","value":"1124","svgPathId":"EFO_0000991","quartiles":{"min":1124.0,"lower":1124.0,"median":1124.0,"upper":1124.0,"max":1124.0}}]},{"id":"BRADI4G37210","name":"BRADI4G37210","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"12","svgPathId":"EFO_0005101","quartiles":{"min":12.0,"lower":12.0,"median":12.0,"upper":12.0,"max":12.0}},{"factorName":"carpel","color":"#BBBCC0","value":"469","svgPathId":"EFO_0001051","quartiles":{"min":469.0,"lower":469.0,"median":469.0,"upper":469.0,"max":469.0}},{"factorName":"embryo","color":"#C0C0C0","value":"14","quartiles":{"min":5.0,"lower":10.0,"median":14.0,"upper":18.0,"max":23.0}},{"factorName":"endosperm","color":"#B2B2C0","value":"1514","svgPathId":"EFO_0001020","quartiles":{"min":1514.0,"lower":1514.0,"median":1514.0,"upper":1514.0,"max":1514.0}},{"factorName":"inflorescence","color":"#A4A5C0","value":"2959","svgPathId":"EFO_0001029","quartiles":{"min":2959.0,"lower":2959.0,"median":2959.0,"upper":2959.0,"max":2959.0}},{"factorName":"leaf","color":"#595AC0","value":"11114","svgPathId":"EFO_0000993","quartiles":{"min":10937.0,"lower":11026.0,"median":11114.0,"upper":11203.0,"max":11291.0}},{"factorName":"seed","color":"#A1A2C0","value":"3328","svgPathId":"EFO_0000991","quartiles":{"min":3328.0,"lower":3328.0,"median":3328.0,"upper":3328.0,"max":3328.0}}]},{"id":"BRADI2G16290","name":"BRADI2G16290","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"13","svgPathId":"EFO_0005101","quartiles":{"min":13.0,"lower":13.0,"median":13.0,"upper":13.0,"max":13.0}},{"factorName":"carpel","color":"#BEBEC0","value":"240","svgPathId":"EFO_0001051","quartiles":{"min":240.0,"lower":240.0,"median":240.0,"upper":240.0,"max":240.0}},{"factorName":"embryo","color":"#C0C0C0","value":"9","quartiles":{"min":4.0,"lower":7.0,"median":9.0,"upper":11.0,"max":13.0}},{"factorName":"endosperm","color":"#B6B7C0","value":"1007","svgPathId":"EFO_0001020","quartiles":{"min":1007.0,"lower":1007.0,"median":1007.0,"upper":1007.0,"max":1007.0}},{"factorName":"inflorescence","color":"#ADAEC0","value":"1997","svgPathId":"EFO_0001029","quartiles":{"min":1997.0,"lower":1997.0,"median":1997.0,"upper":1997.0,"max":1997.0}},{"factorName":"leaf","color":"#5F5FC0","value":"10547","svgPathId":"EFO_0000993","quartiles":{"min":7927.0,"lower":9237.0,"median":10547.0,"upper":11857.0,"max":13167.0}},{"factorName":"seed","color":"#B1B1C0","value":"1652","svgPathId":"EFO_0000991","quartiles":{"min":1652.0,"lower":1652.0,"median":1652.0,"upper":1652.0,"max":1652.0}}]},{"id":"BRADI2G44862","name":"BRADI2G44862","expressions":[{"factorName":"anther","color":"#B9BAC0","value":"706","svgPathId":"EFO_0005101","quartiles":{"min":706.0,"lower":706.0,"median":706.0,"upper":706.0,"max":706.0}},{"factorName":"carpel","color":"","value":"","svgPathId":"EFO_0001051"},{"factorName":"embryo","color":"#C0C0C0","value":"17","quartiles":{"min":8.0,"lower":13.0,"median":17.0,"upper":21.0,"max":25.0}},{"factorName":"endosperm","color":"#BFC0C0","value":"68","svgPathId":"EFO_0001020","quartiles":{"min":68.0,"lower":68.0,"median":68.0,"upper":68.0,"max":68.0}},{"factorName":"inflorescence","color":"#BDBDC0","value":"332","svgPathId":"EFO_0001029","quartiles":{"min":332.0,"lower":332.0,"median":332.0,"upper":332.0,"max":332.0}},{"factorName":"leaf","color":"#6162C0","value":"10278","svgPathId":"EFO_0000993","quartiles":{"min":8325.0,"lower":9302.0,"median":10278.0,"upper":11255.0,"max":12231.0}},{"factorName":"seed","color":"#BFC0C0","value":"42","svgPathId":"EFO_0000991","quartiles":{"min":42.0,"lower":42.0,"median":42.0,"upper":42.0,"max":42.0}}]},{"id":"BRADI4G08800","name":"BRADI4G08800","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"11","svgPathId":"EFO_0005101","quartiles":{"min":11.0,"lower":11.0,"median":11.0,"upper":11.0,"max":11.0}},{"factorName":"carpel","color":"#BFBFC0","value":"127","svgPathId":"EFO_0001051","quartiles":{"min":127.0,"lower":127.0,"median":127.0,"upper":127.0,"max":127.0}},{"factorName":"embryo","color":"#C0C0C0","value":"8","quartiles":{"min":3.0,"lower":5.0,"median":8.0,"upper":10.0,"max":13.0}},{"factorName":"endosperm","color":"#BCBDC0","value":"401","svgPathId":"EFO_0001020","quartiles":{"min":401.0,"lower":401.0,"median":401.0,"upper":401.0,"max":401.0}},{"factorName":"inflorescence","color":"#ADADC0","value":"2073","svgPathId":"EFO_0001029","quartiles":{"min":2073.0,"lower":2073.0,"median":2073.0,"upper":2073.0,"max":2073.0}},{"factorName":"leaf","color":"#7373C0","value":"8371","svgPathId":"EFO_0000993","quartiles":{"min":5805.0,"lower":7088.0,"median":8371.0,"upper":9654.0,"max":10937.0}},{"factorName":"seed","color":"#BCBDC0","value":"403","svgPathId":"EFO_0000991","quartiles":{"min":403.0,"lower":403.0,"median":403.0,"upper":403.0,"max":403.0}}]},{"id":"BRADI1G56580","name":"BRADI1G56580","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"18","svgPathId":"EFO_0005101","quartiles":{"min":18.0,"lower":18.0,"median":18.0,"upper":18.0,"max":18.0}},{"factorName":"carpel","color":"#BEBEC0","value":"235","svgPathId":"EFO_0001051","quartiles":{"min":235.0,"lower":235.0,"median":235.0,"upper":235.0,"max":235.0}},{"factorName":"embryo","color":"#C0C0C0","value":"9","quartiles":{"min":6.0,"lower":8.0,"median":9.0,"upper":10.0,"max":12.0}},{"factorName":"endosperm","color":"#B8B9C0","value":"800","svgPathId":"EFO_0001020","quartiles":{"min":800.0,"lower":800.0,"median":800.0,"upper":800.0,"max":800.0}},{"factorName":"inflorescence","color":"#B4B4C0","value":"1284","svgPathId":"EFO_0001029","quartiles":{"min":1284.0,"lower":1284.0,"median":1284.0,"upper":1284.0,"max":1284.0}},{"factorName":"leaf","color":"#7E7FC0","value":"7107","svgPathId":"EFO_0000993","quartiles":{"min":6681.0,"lower":6894.0,"median":7107.0,"upper":7320.0,"max":7533.0}},{"factorName":"seed","color":"#B9B9C0","value":"746","svgPathId":"EFO_0000991","quartiles":{"min":746.0,"lower":746.0,"median":746.0,"upper":746.0,"max":746.0}}]},{"id":"BRADI3G36760","name":"BRADI3G36760","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"13","svgPathId":"EFO_0005101","quartiles":{"min":13.0,"lower":13.0,"median":13.0,"upper":13.0,"max":13.0}},{"factorName":"carpel","color":"#BFBFC0","value":"98","svgPathId":"EFO_0001051","quartiles":{"min":98.0,"lower":98.0,"median":98.0,"upper":98.0,"max":98.0}},{"factorName":"embryo","color":"#C0C0C0","value":"3","quartiles":{"min":2.0,"lower":2.0,"median":3.0,"upper":3.0,"max":4.0}},{"factorName":"endosperm","color":"#BBBBC0","value":"544","svgPathId":"EFO_0001020","quartiles":{"min":544.0,"lower":544.0,"median":544.0,"upper":544.0,"max":544.0}},{"factorName":"inflorescence","color":"#BBBCC0","value":"465","svgPathId":"EFO_0001029","quartiles":{"min":465.0,"lower":465.0,"median":465.0,"upper":465.0,"max":465.0}},{"factorName":"leaf","color":"#7F7FC0","value":"7069","svgPathId":"EFO_0000993","quartiles":{"min":4963.0,"lower":6016.0,"median":7069.0,"upper":8121.0,"max":9174.0}},{"factorName":"seed","color":"#BBBBC0","value":"518","svgPathId":"EFO_0000991","quartiles":{"min":518.0,"lower":518.0,"median":518.0,"upper":518.0,"max":518.0}}]},{"id":"BRADI4G21170","name":"BRADI4G21170","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"11","svgPathId":"EFO_0005101","quartiles":{"min":11.0,"lower":11.0,"median":11.0,"upper":11.0,"max":11.0}},{"factorName":"carpel","color":"#BFBFC0","value":"110","svgPathId":"EFO_0001051","quartiles":{"min":110.0,"lower":110.0,"median":110.0,"upper":110.0,"max":110.0}},{"factorName":"embryo","color":"#C0C0C0","value":"4","quartiles":{"min":2.0,"lower":3.0,"median":4.0,"upper":5.0,"max":5.0}},{"factorName":"endosperm","color":"#BABBC0","value":"577","svgPathId":"EFO_0001020","quartiles":{"min":577.0,"lower":577.0,"median":577.0,"upper":577.0,"max":577.0}},{"factorName":"inflorescence","color":"#B6B7C0","value":"1007","svgPathId":"EFO_0001029","quartiles":{"min":1007.0,"lower":1007.0,"median":1007.0,"upper":1007.0,"max":1007.0}},{"factorName":"leaf","color":"#7F7FC0","value":"7030","svgPathId":"EFO_0000993","quartiles":{"min":6133.0,"lower":6581.0,"median":7030.0,"upper":7478.0,"max":7927.0}},{"factorName":"seed","color":"#BBBBC0","value":"569","svgPathId":"EFO_0000991","quartiles":{"min":569.0,"lower":569.0,"median":569.0,"upper":569.0,"max":569.0}}]},{"id":"BRADI3G07190","name":"BRADI3G07190","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"15","svgPathId":"EFO_0005101","quartiles":{"min":15.0,"lower":15.0,"median":15.0,"upper":15.0,"max":15.0}},{"factorName":"carpel","color":"#BFBFC0","value":"129","svgPathId":"EFO_0001051","quartiles":{"min":129.0,"lower":129.0,"median":129.0,"upper":129.0,"max":129.0}},{"factorName":"embryo","color":"#C0C0C0","value":"5","quartiles":{"min":3.0,"lower":4.0,"median":5.0,"upper":6.0,"max":7.0}},{"factorName":"endosperm","color":"#BBBBC0","value":"541","svgPathId":"EFO_0001020","quartiles":{"min":541.0,"lower":541.0,"median":541.0,"upper":541.0,"max":541.0}},{"factorName":"inflorescence","color":"#B8B8C0","value":"853","svgPathId":"EFO_0001029","quartiles":{"min":853.0,"lower":853.0,"median":853.0,"upper":853.0,"max":853.0}},{"factorName":"leaf","color":"#7F80C0","value":"6988","svgPathId":"EFO_0000993","quartiles":{"min":5651.0,"lower":6320.0,"median":6988.0,"upper":7656.0,"max":8325.0}},{"factorName":"seed","color":"#BBBBC0","value":"549","svgPathId":"EFO_0000991","quartiles":{"min":549.0,"lower":549.0,"median":549.0,"upper":549.0,"max":549.0}}]},{"id":"BRADI3G42620","name":"BRADI3G42620","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"0.7","svgPathId":"EFO_0005101","quartiles":{"min":0.7,"lower":0.7,"median":0.7,"upper":0.7,"max":0.7}},{"factorName":"carpel","color":"#C0C0C0","value":"20","svgPathId":"EFO_0001051","quartiles":{"min":20.0,"lower":20.0,"median":20.0,"upper":20.0,"max":20.0}},{"factorName":"embryo","color":"#C0C0C0","value":"1","quartiles":{"min":0.3,"lower":0.9,"median":1.0,"upper":2.0,"max":2.0}},{"factorName":"endosperm","color":"#BDBEC0","value":"264","svgPathId":"EFO_0001020","quartiles":{"min":264.0,"lower":264.0,"median":264.0,"upper":264.0,"max":264.0}},{"factorName":"inflorescence","color":"#BDBDC0","value":"301","svgPathId":"EFO_0001029","quartiles":{"min":301.0,"lower":301.0,"median":301.0,"upper":301.0,"max":301.0}},{"factorName":"leaf","color":"#8383C0","value":"6606","svgPathId":"EFO_0000993","quartiles":{"min":3109.0,"lower":4857.0,"median":6606.0,"upper":8354.0,"max":10103.0}},{"factorName":"seed","color":"#B6B7C0","value":"1056","svgPathId":"EFO_0000991","quartiles":{"min":1056.0,"lower":1056.0,"median":1056.0,"upper":1056.0,"max":1056.0}}]},{"id":"BRADI1G24760","name":"BRADI1G24760","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"5","svgPathId":"EFO_0005101","quartiles":{"min":5.0,"lower":5.0,"median":5.0,"upper":5.0,"max":5.0}},{"factorName":"carpel","color":"#BFBFC0","value":"114","svgPathId":"EFO_0001051","quartiles":{"min":114.0,"lower":114.0,"median":114.0,"upper":114.0,"max":114.0}},{"factorName":"embryo","color":"#C0C0C0","value":"3","quartiles":{"min":1.0,"lower":2.0,"median":3.0,"upper":4.0,"max":5.0}},{"factorName":"endosperm","color":"#BCBCC0","value":"428","svgPathId":"EFO_0001020","quartiles":{"min":428.0,"lower":428.0,"median":428.0,"upper":428.0,"max":428.0}},{"factorName":"inflorescence","color":"#B8B8C0","value":"842","svgPathId":"EFO_0001029","quartiles":{"min":842.0,"lower":842.0,"median":842.0,"upper":842.0,"max":842.0}},{"factorName":"leaf","color":"#8D8EC0","value":"5496","svgPathId":"EFO_0000993","quartiles":{"min":4963.0,"lower":5230.0,"median":5496.0,"upper":5762.0,"max":6028.0}},{"factorName":"seed","color":"#BCBCC0","value":"457","svgPathId":"EFO_0000991","quartiles":{"min":457.0,"lower":457.0,"median":457.0,"upper":457.0,"max":457.0}}]},{"id":"BRADI1G58350","name":"BRADI1G58350","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"8","svgPathId":"EFO_0005101","quartiles":{"min":8.0,"lower":8.0,"median":8.0,"upper":8.0,"max":8.0}},{"factorName":"carpel","color":"#BEBFC0","value":"147","svgPathId":"EFO_0001051","quartiles":{"min":147.0,"lower":147.0,"median":147.0,"upper":147.0,"max":147.0}},{"factorName":"embryo","color":"#C0C0C0","value":"5","quartiles":{"min":3.0,"lower":4.0,"median":5.0,"upper":6.0,"max":7.0}},{"factorName":"endosperm","color":"#B8B9C0","value":"825","svgPathId":"EFO_0001020","quartiles":{"min":825.0,"lower":825.0,"median":825.0,"upper":825.0,"max":825.0}},{"factorName":"inflorescence","color":"#B8B8C0","value":"868","svgPathId":"EFO_0001029","quartiles":{"min":868.0,"lower":868.0,"median":868.0,"upper":868.0,"max":868.0}},{"factorName":"leaf","color":"#8E8FC0","value":"5346","svgPathId":"EFO_0000993","quartiles":{"min":5041.0,"lower":5194.0,"median":5346.0,"upper":5499.0,"max":5651.0}},{"factorName":"seed","color":"#B8B9C0","value":"830","svgPathId":"EFO_0000991","quartiles":{"min":830.0,"lower":830.0,"median":830.0,"upper":830.0,"max":830.0}}]},{"id":"BRADI3G13170","name":"BRADI3G13170","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"8","svgPathId":"EFO_0005101","quartiles":{"min":8.0,"lower":8.0,"median":8.0,"upper":8.0,"max":8.0}},{"factorName":"carpel","color":"#BEBEC0","value":"194","svgPathId":"EFO_0001051","quartiles":{"min":194.0,"lower":194.0,"median":194.0,"upper":194.0,"max":194.0}},{"factorName":"embryo","color":"#C0C0C0","value":"20","quartiles":{"min":19.0,"lower":20.0,"median":20.0,"upper":21.0,"max":21.0}},{"factorName":"endosperm","color":"#B8B8C0","value":"855","svgPathId":"EFO_0001020","quartiles":{"min":855.0,"lower":855.0,"median":855.0,"upper":855.0,"max":855.0}},{"factorName":"inflorescence","color":"#B1B1C0","value":"1630","svgPathId":"EFO_0001029","quartiles":{"min":1630.0,"lower":1630.0,"median":1630.0,"upper":1630.0,"max":1630.0}},{"factorName":"leaf","color":"#9191C0","value":"5098","svgPathId":"EFO_0000993","quartiles":{"min":4172.0,"lower":4635.0,"median":5098.0,"upper":5562.0,"max":6025.0}},{"factorName":"seed","color":"#BABAC0","value":"666","svgPathId":"EFO_0000991","quartiles":{"min":666.0,"lower":666.0,"median":666.0,"upper":666.0,"max":666.0}}]},{"id":"BRADI1G42670","name":"BRADI1G42670","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"5","svgPathId":"EFO_0005101","quartiles":{"min":5.0,"lower":5.0,"median":5.0,"upper":5.0,"max":5.0}},{"factorName":"carpel","color":"#BFBFC0","value":"102","svgPathId":"EFO_0001051","quartiles":{"min":102.0,"lower":102.0,"median":102.0,"upper":102.0,"max":102.0}},{"factorName":"embryo","color":"#C0C0C0","value":"4","quartiles":{"min":2.0,"lower":3.0,"median":4.0,"upper":4.0,"max":5.0}},{"factorName":"endosperm","color":"#BCBCC0","value":"409","svgPathId":"EFO_0001020","quartiles":{"min":409.0,"lower":409.0,"median":409.0,"upper":409.0,"max":409.0}},{"factorName":"inflorescence","color":"#B9BAC0","value":"688","svgPathId":"EFO_0001029","quartiles":{"min":688.0,"lower":688.0,"median":688.0,"upper":688.0,"max":688.0}},{"factorName":"leaf","color":"#9293C0","value":"4932","svgPathId":"EFO_0000993","quartiles":{"min":4350.0,"lower":4641.0,"median":4932.0,"upper":5223.0,"max":5514.0}},{"factorName":"seed","color":"#BBBCC0","value":"480","svgPathId":"EFO_0000991","quartiles":{"min":480.0,"lower":480.0,"median":480.0,"upper":480.0,"max":480.0}}]},{"id":"BRADI1G24870","name":"BRADI1G24870","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"12","svgPathId":"EFO_0005101","quartiles":{"min":12.0,"lower":12.0,"median":12.0,"upper":12.0,"max":12.0}},{"factorName":"carpel","color":"#BEBFC0","value":"171","svgPathId":"EFO_0001051","quartiles":{"min":171.0,"lower":171.0,"median":171.0,"upper":171.0,"max":171.0}},{"factorName":"embryo","color":"#C0C0C0","value":"3","quartiles":{"min":2.0,"lower":3.0,"median":3.0,"upper":4.0,"max":5.0}},{"factorName":"endosperm","color":"#BCBCC0","value":"434","svgPathId":"EFO_0001020","quartiles":{"min":434.0,"lower":434.0,"median":434.0,"upper":434.0,"max":434.0}},{"factorName":"inflorescence","color":"#B6B7C0","value":"1018","svgPathId":"EFO_0001029","quartiles":{"min":1018.0,"lower":1018.0,"median":1018.0,"upper":1018.0,"max":1018.0}},{"factorName":"leaf","color":"#9293C0","value":"4912","svgPathId":"EFO_0000993","quartiles":{"min":4310.0,"lower":4611.0,"median":4912.0,"upper":5213.0,"max":5514.0}},{"factorName":"seed","color":"#BABBC0","value":"594","svgPathId":"EFO_0000991","quartiles":{"min":594.0,"lower":594.0,"median":594.0,"upper":594.0,"max":594.0}}]},{"id":"BRADI4G08020","name":"BRADI4G08020","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"13","svgPathId":"EFO_0005101","quartiles":{"min":13.0,"lower":13.0,"median":13.0,"upper":13.0,"max":13.0}},{"factorName":"carpel","color":"#BEBFC0","value":"139","svgPathId":"EFO_0001051","quartiles":{"min":139.0,"lower":139.0,"median":139.0,"upper":139.0,"max":139.0}},{"factorName":"embryo","color":"#C0C0C0","value":"5","quartiles":{"min":2.0,"lower":3.0,"median":5.0,"upper":6.0,"max":8.0}},{"factorName":"endosperm","color":"#BCBCC0","value":"424","svgPathId":"EFO_0001020","quartiles":{"min":424.0,"lower":424.0,"median":424.0,"upper":424.0,"max":424.0}},{"factorName":"inflorescence","color":"#B8B8C0","value":"869","svgPathId":"EFO_0001029","quartiles":{"min":869.0,"lower":869.0,"median":869.0,"upper":869.0,"max":869.0}},{"factorName":"leaf","color":"#9494C0","value":"4772","svgPathId":"EFO_0000993","quartiles":{"min":3411.0,"lower":4091.0,"median":4772.0,"upper":5452.0,"max":6133.0}},{"factorName":"seed","color":"#BBBBC0","value":"543","svgPathId":"EFO_0000991","quartiles":{"min":543.0,"lower":543.0,"median":543.0,"upper":543.0,"max":543.0}}]},{"id":"BRADI5G12330","name":"BRADI5G12330","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"13","svgPathId":"EFO_0005101","quartiles":{"min":13.0,"lower":13.0,"median":13.0,"upper":13.0,"max":13.0}},{"factorName":"carpel","color":"#BFC0C0","value":"81","svgPathId":"EFO_0001051","quartiles":{"min":81.0,"lower":81.0,"median":81.0,"upper":81.0,"max":81.0}},{"factorName":"embryo","color":"#C0C0C0","value":"3","quartiles":{"min":1.0,"lower":2.0,"median":3.0,"upper":4.0,"max":6.0}},{"factorName":"endosperm","color":"#BFBFC0","value":"129","svgPathId":"EFO_0001020","quartiles":{"min":129.0,"lower":129.0,"median":129.0,"upper":129.0,"max":129.0}},{"factorName":"inflorescence","color":"#B5B5C0","value":"1193","svgPathId":"EFO_0001029","quartiles":{"min":1193.0,"lower":1193.0,"median":1193.0,"upper":1193.0,"max":1193.0}},{"factorName":"leaf","color":"#9495C0","value":"4701","svgPathId":"EFO_0000993","quartiles":{"min":2721.0,"lower":3711.0,"median":4701.0,"upper":5691.0,"max":6681.0}},{"factorName":"seed","color":"#BEBEC0","value":"224","svgPathId":"EFO_0000991","quartiles":{"min":224.0,"lower":224.0,"median":224.0,"upper":224.0,"max":224.0}}]},{"id":"BRADI1G24980","name":"BRADI1G24980","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"5","svgPathId":"EFO_0005101","quartiles":{"min":5.0,"lower":5.0,"median":5.0,"upper":5.0,"max":5.0}},{"factorName":"carpel","color":"#BFC0C0","value":"64","svgPathId":"EFO_0001051","quartiles":{"min":64.0,"lower":64.0,"median":64.0,"upper":64.0,"max":64.0}},{"factorName":"embryo","color":"#C0C0C0","value":"7","quartiles":{"min":6.0,"lower":7.0,"median":7.0,"upper":7.0,"max":7.0}},{"factorName":"endosperm","color":"#BDBEC0","value":"276","svgPathId":"EFO_0001020","quartiles":{"min":276.0,"lower":276.0,"median":276.0,"upper":276.0,"max":276.0}},{"factorName":"inflorescence","color":"#BBBCC0","value":"486","svgPathId":"EFO_0001029","quartiles":{"min":486.0,"lower":486.0,"median":486.0,"upper":486.0,"max":486.0}},{"factorName":"leaf","color":"#9595C0","value":"4668","svgPathId":"EFO_0000993","quartiles":{"min":3311.0,"lower":3990.0,"median":4668.0,"upper":5347.0,"max":6025.0}},{"factorName":"seed","color":"#BEBEC0","value":"226","svgPathId":"EFO_0000991","quartiles":{"min":226.0,"lower":226.0,"median":226.0,"upper":226.0,"max":226.0}}]},{"id":"BRADI1G23610","name":"BRADI1G23610","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"3","svgPathId":"EFO_0005101","quartiles":{"min":3.0,"lower":3.0,"median":3.0,"upper":3.0,"max":3.0}},{"factorName":"carpel","color":"#BFC0C0","value":"54","svgPathId":"EFO_0001051","quartiles":{"min":54.0,"lower":54.0,"median":54.0,"upper":54.0,"max":54.0}},{"factorName":"embryo","color":"#C0C0C0","value":"2","quartiles":{"min":0.9,"lower":1.0,"median":2.0,"upper":2.0,"max":3.0}},{"factorName":"endosperm","color":"#BEBFC0","value":"155","svgPathId":"EFO_0001020","quartiles":{"min":155.0,"lower":155.0,"median":155.0,"upper":155.0,"max":155.0}},{"factorName":"inflorescence","color":"#BDBDC0","value":"326","svgPathId":"EFO_0001029","quartiles":{"min":326.0,"lower":326.0,"median":326.0,"upper":326.0,"max":326.0}},{"factorName":"leaf","color":"#9A9AC0","value":"4146","svgPathId":"EFO_0000993","quartiles":{"min":3250.0,"lower":3698.0,"median":4146.0,"upper":4593.0,"max":5041.0}},{"factorName":"seed","color":"#BEBFC0","value":"159","svgPathId":"EFO_0000991","quartiles":{"min":159.0,"lower":159.0,"median":159.0,"upper":159.0,"max":159.0}}]},{"id":"BRADI1G04700","name":"BRADI1G04700","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"11","svgPathId":"EFO_0005101","quartiles":{"min":11.0,"lower":11.0,"median":11.0,"upper":11.0,"max":11.0}},{"factorName":"carpel","color":"#BFC0C0","value":"76","svgPathId":"EFO_0001051","quartiles":{"min":76.0,"lower":76.0,"median":76.0,"upper":76.0,"max":76.0}},{"factorName":"embryo","color":"#C0C0C0","value":"8","quartiles":{"min":8.0,"lower":8.0,"median":8.0,"upper":8.0,"max":8.0}},{"factorName":"endosperm","color":"#BCBDC0","value":"401","svgPathId":"EFO_0001020","quartiles":{"min":401.0,"lower":401.0,"median":401.0,"upper":401.0,"max":401.0}},{"factorName":"inflorescence","color":"#BABBC0","value":"575","svgPathId":"EFO_0001029","quartiles":{"min":575.0,"lower":575.0,"median":575.0,"upper":575.0,"max":575.0}},{"factorName":"leaf","color":"#9A9BC0","value":"4091","svgPathId":"EFO_0000993","quartiles":{"min":4010.0,"lower":4051.0,"median":4091.0,"upper":4131.0,"max":4172.0}},{"factorName":"seed","color":"#BDBDC0","value":"324","svgPathId":"EFO_0000991","quartiles":{"min":324.0,"lower":324.0,"median":324.0,"upper":324.0,"max":324.0}}]},{"id":"BRADI2G06220","name":"BRADI2G06220","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"1","svgPathId":"EFO_0005101","quartiles":{"min":1.0,"lower":1.0,"median":1.0,"upper":1.0,"max":1.0}},{"factorName":"carpel","color":"#C0C0C0","value":"13","svgPathId":"EFO_0001051","quartiles":{"min":13.0,"lower":13.0,"median":13.0,"upper":13.0,"max":13.0}},{"factorName":"embryo","color":"#BBBCC0","value":"514","quartiles":{"min":407.0,"lower":460.0,"median":514.0,"upper":567.0,"max":620.0}},{"factorName":"endosperm","color":"#BFC0C0","value":"67","svgPathId":"EFO_0001020","quartiles":{"min":67.0,"lower":67.0,"median":67.0,"upper":67.0,"max":67.0}},{"factorName":"inflorescence","color":"#BFC0C0","value":"35","svgPathId":"EFO_0001029","quartiles":{"min":35.0,"lower":35.0,"median":35.0,"upper":35.0,"max":35.0}},{"factorName":"leaf","color":"#9B9BC0","value":"4016","svgPathId":"EFO_0000993","quartiles":{"min":2004.0,"lower":3010.0,"median":4016.0,"upper":5022.0,"max":6028.0}},{"factorName":"seed","color":"#C0C0C0","value":"12","svgPathId":"EFO_0000991","quartiles":{"min":12.0,"lower":12.0,"median":12.0,"upper":12.0,"max":12.0}}]},{"id":"BRADI5G12150","name":"BRADI5G12150","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"5","svgPathId":"EFO_0005101","quartiles":{"min":5.0,"lower":5.0,"median":5.0,"upper":5.0,"max":5.0}},{"factorName":"carpel","color":"#BFBFC0","value":"124","svgPathId":"EFO_0001051","quartiles":{"min":124.0,"lower":124.0,"median":124.0,"upper":124.0,"max":124.0}},{"factorName":"embryo","color":"#C0C0C0","value":"2","quartiles":{"min":1.0,"lower":2.0,"median":2.0,"upper":3.0,"max":4.0}},{"factorName":"endosperm","color":"#BDBDC0","value":"317","svgPathId":"EFO_0001020","quartiles":{"min":317.0,"lower":317.0,"median":317.0,"upper":317.0,"max":317.0}},{"factorName":"inflorescence","color":"#B9BAC0","value":"705","svgPathId":"EFO_0001029","quartiles":{"min":705.0,"lower":705.0,"median":705.0,"upper":705.0,"max":705.0}},{"factorName":"leaf","color":"#9D9DC0","value":"3814","svgPathId":"EFO_0000993","quartiles":{"min":3509.0,"lower":3661.0,"median":3814.0,"upper":3966.0,"max":4118.0}},{"factorName":"seed","color":"#BDBDC0","value":"309","svgPathId":"EFO_0000991","quartiles":{"min":309.0,"lower":309.0,"median":309.0,"upper":309.0,"max":309.0}}]},{"id":"BRADI2G16810","name":"BRADI2G16810","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"8","svgPathId":"EFO_0005101","quartiles":{"min":8.0,"lower":8.0,"median":8.0,"upper":8.0,"max":8.0}},{"factorName":"carpel","color":"#BFBFC0","value":"116","svgPathId":"EFO_0001051","quartiles":{"min":116.0,"lower":116.0,"median":116.0,"upper":116.0,"max":116.0}},{"factorName":"embryo","color":"#C0C0C0","value":"3","quartiles":{"min":2.0,"lower":2.0,"median":3.0,"upper":4.0,"max":4.0}},{"factorName":"endosperm","color":"#BEBEC0","value":"207","svgPathId":"EFO_0001020","quartiles":{"min":207.0,"lower":207.0,"median":207.0,"upper":207.0,"max":207.0}},{"factorName":"inflorescence","color":"#BBBBC0","value":"544","svgPathId":"EFO_0001029","quartiles":{"min":544.0,"lower":544.0,"median":544.0,"upper":544.0,"max":544.0}},{"factorName":"leaf","color":"#9E9EC0","value":"3699","svgPathId":"EFO_0000993","quartiles":{"min":3389.0,"lower":3544.0,"median":3699.0,"upper":3855.0,"max":4010.0}},{"factorName":"seed","color":"#BCBCC0","value":"412","svgPathId":"EFO_0000991","quartiles":{"min":412.0,"lower":412.0,"median":412.0,"upper":412.0,"max":412.0}}]},{"id":"BRADI4G40780","name":"BRADI4G40780","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"8","svgPathId":"EFO_0005101","quartiles":{"min":8.0,"lower":8.0,"median":8.0,"upper":8.0,"max":8.0}},{"factorName":"carpel","color":"#BFBFC0","value":"90","svgPathId":"EFO_0001051","quartiles":{"min":90.0,"lower":90.0,"median":90.0,"upper":90.0,"max":90.0}},{"factorName":"embryo","color":"#C0C0C0","value":"3","quartiles":{"min":1.0,"lower":2.0,"median":3.0,"upper":3.0,"max":4.0}},{"factorName":"endosperm","color":"#BBBCC0","value":"480","svgPathId":"EFO_0001020","quartiles":{"min":480.0,"lower":480.0,"median":480.0,"upper":480.0,"max":480.0}},{"factorName":"inflorescence","color":"#BBBCC0","value":"481","svgPathId":"EFO_0001029","quartiles":{"min":481.0,"lower":481.0,"median":481.0,"upper":481.0,"max":481.0}},{"factorName":"leaf","color":"#9E9EC0","value":"3663","svgPathId":"EFO_0000993","quartiles":{"min":2977.0,"lower":3320.0,"median":3663.0,"upper":4007.0,"max":4350.0}},{"factorName":"seed","color":"#BCBDC0","value":"387","svgPathId":"EFO_0000991","quartiles":{"min":387.0,"lower":387.0,"median":387.0,"upper":387.0,"max":387.0}}]},{"id":"BRADI5G09530","name":"BRADI5G09530","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"10","svgPathId":"EFO_0005101","quartiles":{"min":10.0,"lower":10.0,"median":10.0,"upper":10.0,"max":10.0}},{"factorName":"carpel","color":"#BFBFC0","value":"94","svgPathId":"EFO_0001051","quartiles":{"min":94.0,"lower":94.0,"median":94.0,"upper":94.0,"max":94.0}},{"factorName":"embryo","color":"#C0C0C0","value":"2","quartiles":{"min":1.0,"lower":2.0,"median":2.0,"upper":2.0,"max":3.0}},{"factorName":"endosperm","color":"#BBBCC0","value":"485","svgPathId":"EFO_0001020","quartiles":{"min":485.0,"lower":485.0,"median":485.0,"upper":485.0,"max":485.0}},{"factorName":"inflorescence","color":"#BBBBC0","value":"544","svgPathId":"EFO_0001029","quartiles":{"min":544.0,"lower":544.0,"median":544.0,"upper":544.0,"max":544.0}},{"factorName":"leaf","color":"#A1A1C0","value":"3391","svgPathId":"EFO_0000993","quartiles":{"min":3250.0,"lower":3321.0,"median":3391.0,"upper":3462.0,"max":3533.0}},{"factorName":"seed","color":"#BDBDC0","value":"320","svgPathId":"EFO_0000991","quartiles":{"min":320.0,"lower":320.0,"median":320.0,"upper":320.0,"max":320.0}}]},{"id":"BRADI1G29000","name":"BRADI1G29000","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"6","svgPathId":"EFO_0005101","quartiles":{"min":6.0,"lower":6.0,"median":6.0,"upper":6.0,"max":6.0}},{"factorName":"carpel","color":"#BEBFC0","value":"169","svgPathId":"EFO_0001051","quartiles":{"min":169.0,"lower":169.0,"median":169.0,"upper":169.0,"max":169.0}},{"factorName":"embryo","color":"#C0C0C0","value":"4","quartiles":{"min":2.0,"lower":3.0,"median":4.0,"upper":5.0,"max":6.0}},{"factorName":"endosperm","color":"#BBBBC0","value":"516","svgPathId":"EFO_0001020","quartiles":{"min":516.0,"lower":516.0,"median":516.0,"upper":516.0,"max":516.0}},{"factorName":"inflorescence","color":"#B8B8C0","value":"852","svgPathId":"EFO_0001029","quartiles":{"min":852.0,"lower":852.0,"median":852.0,"upper":852.0,"max":852.0}},{"factorName":"leaf","color":"#A1A1C0","value":"3360","svgPathId":"EFO_0000993","quartiles":{"min":2603.0,"lower":2982.0,"median":3360.0,"upper":3739.0,"max":4118.0}},{"factorName":"seed","color":"#BDBDC0","value":"310","svgPathId":"EFO_0000991","quartiles":{"min":310.0,"lower":310.0,"median":310.0,"upper":310.0,"max":310.0}}]},{"id":"BRADI4G07380","name":"BRADI4G07380","expressions":[{"factorName":"anther","color":"","value":"","svgPathId":"EFO_0005101"},{"factorName":"carpel","color":"#BFC0C0","value":"30","svgPathId":"EFO_0001051","quartiles":{"min":30.0,"lower":30.0,"median":30.0,"upper":30.0,"max":30.0}},{"factorName":"embryo","color":"#C0C0C0","value":"2","quartiles":{"min":0.2,"lower":1.0,"median":2.0,"upper":3.0,"max":4.0}},{"factorName":"endosperm","color":"#BFC0C0","value":"30","svgPathId":"EFO_0001020","quartiles":{"min":30.0,"lower":30.0,"median":30.0,"upper":30.0,"max":30.0}},{"factorName":"inflorescence","color":"#B7B7C0","value":"973","svgPathId":"EFO_0001029","quartiles":{"min":973.0,"lower":973.0,"median":973.0,"upper":973.0,"max":973.0}},{"factorName":"leaf","color":"#A3A4C0","value":"3083","svgPathId":"EFO_0000993","quartiles":{"min":361.0,"lower":1722.0,"median":3083.0,"upper":4444.0,"max":5805.0}},{"factorName":"seed","color":"#BDBEC0","value":"266","svgPathId":"EFO_0000991","quartiles":{"min":266.0,"lower":266.0,"median":266.0,"upper":266.0,"max":266.0}}]},{"id":"BRADI1G25430","name":"BRADI1G25430","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"8","svgPathId":"EFO_0005101","quartiles":{"min":8.0,"lower":8.0,"median":8.0,"upper":8.0,"max":8.0}},{"factorName":"carpel","color":"#BEBFC0","value":"137","svgPathId":"EFO_0001051","quartiles":{"min":137.0,"lower":137.0,"median":137.0,"upper":137.0,"max":137.0}},{"factorName":"embryo","color":"#C0C0C0","value":"3","quartiles":{"min":2.0,"lower":3.0,"median":3.0,"upper":4.0,"max":5.0}},{"factorName":"endosperm","color":"#BDBEC0","value":"252","svgPathId":"EFO_0001020","quartiles":{"min":252.0,"lower":252.0,"median":252.0,"upper":252.0,"max":252.0}},{"factorName":"inflorescence","color":"#BCBCC0","value":"461","svgPathId":"EFO_0001029","quartiles":{"min":461.0,"lower":461.0,"median":461.0,"upper":461.0,"max":461.0}},{"factorName":"leaf","color":"#A6A6C0","value":"2839","svgPathId":"EFO_0000993","quartiles":{"min":2268.0,"lower":2553.0,"median":2839.0,"upper":3125.0,"max":3411.0}},{"factorName":"seed","color":"#BEBEC0","value":"195","svgPathId":"EFO_0000991","quartiles":{"min":195.0,"lower":195.0,"median":195.0,"upper":195.0,"max":195.0}}]},{"id":"BRADI1G76470","name":"BRADI1G76470","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"4","svgPathId":"EFO_0005101","quartiles":{"min":4.0,"lower":4.0,"median":4.0,"upper":4.0,"max":4.0}},{"factorName":"carpel","color":"#BFC0C0","value":"34","svgPathId":"EFO_0001051","quartiles":{"min":34.0,"lower":34.0,"median":34.0,"upper":34.0,"max":34.0}},{"factorName":"embryo","color":"#C0C0C0","value":"5","quartiles":{"min":5.0,"lower":5.0,"median":5.0,"upper":6.0,"max":6.0}},{"factorName":"endosperm","color":"#BEBFC0","value":"153","svgPathId":"EFO_0001020","quartiles":{"min":153.0,"lower":153.0,"median":153.0,"upper":153.0,"max":153.0}},{"factorName":"inflorescence","color":"#BCBCC0","value":"425","svgPathId":"EFO_0001029","quartiles":{"min":425.0,"lower":425.0,"median":425.0,"upper":425.0,"max":425.0}},{"factorName":"leaf","color":"#A7A7C0","value":"2730","svgPathId":"EFO_0000993","quartiles":{"min":2351.0,"lower":2541.0,"median":2730.0,"upper":2920.0,"max":3109.0}},{"factorName":"seed","color":"#BFBFC0","value":"103","svgPathId":"EFO_0000991","quartiles":{"min":103.0,"lower":103.0,"median":103.0,"upper":103.0,"max":103.0}}]},{"id":"BRADI3G56270","name":"BRADI3G56270","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"8","svgPathId":"EFO_0005101","quartiles":{"min":8.0,"lower":8.0,"median":8.0,"upper":8.0,"max":8.0}},{"factorName":"carpel","color":"#BFC0C0","value":"39","svgPathId":"EFO_0001051","quartiles":{"min":39.0,"lower":39.0,"median":39.0,"upper":39.0,"max":39.0}},{"factorName":"embryo","color":"#C0C0C0","value":"7","quartiles":{"min":6.0,"lower":7.0,"median":7.0,"upper":7.0,"max":8.0}},{"factorName":"endosperm","color":"#BEBEC0","value":"192","svgPathId":"EFO_0001020","quartiles":{"min":192.0,"lower":192.0,"median":192.0,"upper":192.0,"max":192.0}},{"factorName":"inflorescence","color":"#BDBEC0","value":"286","svgPathId":"EFO_0001029","quartiles":{"min":286.0,"lower":286.0,"median":286.0,"upper":286.0,"max":286.0}},{"factorName":"leaf","color":"#A7A7C0","value":"2692","svgPathId":"EFO_0000993","quartiles":{"min":1874.0,"lower":2283.0,"median":2692.0,"upper":3100.0,"max":3509.0}},{"factorName":"seed","color":"#BEBEC0","value":"195","svgPathId":"EFO_0000991","quartiles":{"min":195.0,"lower":195.0,"median":195.0,"upper":195.0,"max":195.0}}]},{"id":"BRADI3G52400","name":"BRADI3G52400","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"3","svgPathId":"EFO_0005101","quartiles":{"min":3.0,"lower":3.0,"median":3.0,"upper":3.0,"max":3.0}},{"factorName":"carpel","color":"#C0C0C0","value":"18","svgPathId":"EFO_0001051","quartiles":{"min":18.0,"lower":18.0,"median":18.0,"upper":18.0,"max":18.0}},{"factorName":"embryo","color":"#C0C0C0","value":"2","quartiles":{"min":1.0,"lower":1.0,"median":2.0,"upper":2.0,"max":2.0}},{"factorName":"endosperm","color":"#BFBFC0","value":"130","svgPathId":"EFO_0001020","quartiles":{"min":130.0,"lower":130.0,"median":130.0,"upper":130.0,"max":130.0}},{"factorName":"inflorescence","color":"#BDBEC0","value":"256","svgPathId":"EFO_0001029","quartiles":{"min":256.0,"lower":256.0,"median":256.0,"upper":256.0,"max":256.0}},{"factorName":"leaf","color":"#A8A8C0","value":"2631","svgPathId":"EFO_0000993","quartiles":{"min":1874.0,"lower":2253.0,"median":2631.0,"upper":3010.0,"max":3389.0}},{"factorName":"seed","color":"#BFC0C0","value":"77","svgPathId":"EFO_0000991","quartiles":{"min":77.0,"lower":77.0,"median":77.0,"upper":77.0,"max":77.0}}]},{"id":"BRADI1G58160","name":"BRADI1G58160","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"4","svgPathId":"EFO_0005101","quartiles":{"min":4.0,"lower":4.0,"median":4.0,"upper":4.0,"max":4.0}},{"factorName":"carpel","color":"#BFBFC0","value":"120","svgPathId":"EFO_0001051","quartiles":{"min":120.0,"lower":120.0,"median":120.0,"upper":120.0,"max":120.0}},{"factorName":"embryo","color":"#C0C0C0","value":"8","quartiles":{"min":5.0,"lower":7.0,"median":8.0,"upper":9.0,"max":10.0}},{"factorName":"endosperm","color":"#BEBEC0","value":"214","svgPathId":"EFO_0001020","quartiles":{"min":214.0,"lower":214.0,"median":214.0,"upper":214.0,"max":214.0}},{"factorName":"inflorescence","color":"#BBBBC0","value":"554","svgPathId":"EFO_0001029","quartiles":{"min":554.0,"lower":554.0,"median":554.0,"upper":554.0,"max":554.0}},{"factorName":"leaf","color":"#AAAAC0","value":"2375","svgPathId":"EFO_0000993","quartiles":{"min":1773.0,"lower":2074.0,"median":2375.0,"upper":2676.0,"max":2977.0}},{"factorName":"seed","color":"#BEBEC0","value":"222","svgPathId":"EFO_0000991","quartiles":{"min":222.0,"lower":222.0,"median":222.0,"upper":222.0,"max":222.0}}]},{"id":"BRADI1G18050","name":"BRADI1G18050","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"2","svgPathId":"EFO_0005101","quartiles":{"min":2.0,"lower":2.0,"median":2.0,"upper":2.0,"max":2.0}},{"factorName":"carpel","color":"#BEBEC0","value":"193","svgPathId":"EFO_0001051","quartiles":{"min":193.0,"lower":193.0,"median":193.0,"upper":193.0,"max":193.0}},{"factorName":"embryo","color":"#C0C0C0","value":"6","quartiles":{"min":2.0,"lower":4.0,"median":6.0,"upper":9.0,"max":11.0}},{"factorName":"endosperm","color":"#BDBEC0","value":"279","svgPathId":"EFO_0001020","quartiles":{"min":279.0,"lower":279.0,"median":279.0,"upper":279.0,"max":279.0}},{"factorName":"inflorescence","color":"#B7B8C0","value":"933","svgPathId":"EFO_0001029","quartiles":{"min":933.0,"lower":933.0,"median":933.0,"upper":933.0,"max":933.0}},{"factorName":"leaf","color":"#ABABC0","value":"2295","svgPathId":"EFO_0000993","quartiles":{"min":2238.0,"lower":2266.0,"median":2295.0,"upper":2323.0,"max":2351.0}},{"factorName":"seed","color":"#BCBDC0","value":"390","svgPathId":"EFO_0000991","quartiles":{"min":390.0,"lower":390.0,"median":390.0,"upper":390.0,"max":390.0}}]},{"id":"BRADI2G48010","name":"BRADI2G48010","expressions":[{"factorName":"anther","color":"#BFC0C0","value":"29","svgPathId":"EFO_0005101","quartiles":{"min":29.0,"lower":29.0,"median":29.0,"upper":29.0,"max":29.0}},{"factorName":"carpel","color":"#BFC0C0","value":"33","svgPathId":"EFO_0001051","quartiles":{"min":33.0,"lower":33.0,"median":33.0,"upper":33.0,"max":33.0}},{"factorName":"embryo","color":"#C0C0C0","value":"14","quartiles":{"min":13.0,"lower":14.0,"median":14.0,"upper":15.0,"max":15.0}},{"factorName":"endosperm","color":"#BFBFC0","value":"117","svgPathId":"EFO_0001020","quartiles":{"min":117.0,"lower":117.0,"median":117.0,"upper":117.0,"max":117.0}},{"factorName":"inflorescence","color":"#BEBFC0","value":"161","svgPathId":"EFO_0001029","quartiles":{"min":161.0,"lower":161.0,"median":161.0,"upper":161.0,"max":161.0}},{"factorName":"leaf","color":"#ABABC0","value":"2293","svgPathId":"EFO_0000993","quartiles":{"min":1275.0,"lower":1784.0,"median":2293.0,"upper":2802.0,"max":3311.0}},{"factorName":"seed","color":"#BFC0C0","value":"63","svgPathId":"EFO_0000991","quartiles":{"min":63.0,"lower":63.0,"median":63.0,"upper":63.0,"max":63.0}}]},{"id":"BRADI1G09300","name":"BRADI1G09300","expressions":[{"factorName":"anther","color":"#BFC0C0","value":"28","svgPathId":"EFO_0005101","quartiles":{"min":28.0,"lower":28.0,"median":28.0,"upper":28.0,"max":28.0}},{"factorName":"carpel","color":"#BFC0C0","value":"68","svgPathId":"EFO_0001051","quartiles":{"min":68.0,"lower":68.0,"median":68.0,"upper":68.0,"max":68.0}},{"factorName":"embryo","color":"#BFBFC0","value":"83","quartiles":{"min":73.0,"lower":78.0,"median":83.0,"upper":89.0,"max":94.0}},{"factorName":"endosperm","color":"#BEBEC0","value":"213","svgPathId":"EFO_0001020","quartiles":{"min":213.0,"lower":213.0,"median":213.0,"upper":213.0,"max":213.0}},{"factorName":"inflorescence","color":"#BDBEC0","value":"285","svgPathId":"EFO_0001029","quartiles":{"min":285.0,"lower":285.0,"median":285.0,"upper":285.0,"max":285.0}},{"factorName":"leaf","color":"#ABABC0","value":"2289","svgPathId":"EFO_0000993","quartiles":{"min":1856.0,"lower":2072.0,"median":2289.0,"upper":2505.0,"max":2721.0}},{"factorName":"seed","color":"#BFBFC0","value":"103","svgPathId":"EFO_0000991","quartiles":{"min":103.0,"lower":103.0,"median":103.0,"upper":103.0,"max":103.0}}]},{"id":"BRADI1G25860","name":"BRADI1G25860","expressions":[{"factorName":"anther","color":"#BDBEC0","value":"255","svgPathId":"EFO_0005101","quartiles":{"min":255.0,"lower":255.0,"median":255.0,"upper":255.0,"max":255.0}},{"factorName":"carpel","color":"#BABAC0","value":"629","svgPathId":"EFO_0001051","quartiles":{"min":629.0,"lower":629.0,"median":629.0,"upper":629.0,"max":629.0}},{"factorName":"embryo","color":"#B0B1C0","value":"1666","quartiles":{"min":1267.0,"lower":1467.0,"median":1666.0,"upper":1865.0,"max":2065.0}},{"factorName":"endosperm","color":"#BDBDC0","value":"303","svgPathId":"EFO_0001020","quartiles":{"min":303.0,"lower":303.0,"median":303.0,"upper":303.0,"max":303.0}},{"factorName":"inflorescence","color":"#BBBBC0","value":"516","svgPathId":"EFO_0001029","quartiles":{"min":516.0,"lower":516.0,"median":516.0,"upper":516.0,"max":516.0}},{"factorName":"leaf","color":"#ABABC0","value":"2268","svgPathId":"EFO_0000993","quartiles":{"min":1934.0,"lower":2101.0,"median":2268.0,"upper":2436.0,"max":2603.0}},{"factorName":"seed","color":"#B5B5C0","value":"1205","svgPathId":"EFO_0000991","quartiles":{"min":1205.0,"lower":1205.0,"median":1205.0,"upper":1205.0,"max":1205.0}}]},{"id":"BRADI5G04080","name":"BRADI5G04080","expressions":[{"factorName":"anther","color":"","value":"","svgPathId":"EFO_0005101"},{"factorName":"carpel","color":"#C0C0C0","value":"0.6","svgPathId":"EFO_0001051","quartiles":{"min":0.6,"lower":0.6,"median":0.6,"upper":0.6,"max":0.6}},{"factorName":"embryo","color":"","value":""},{"factorName":"endosperm","color":"#C0C0C0","value":"0.6","svgPathId":"EFO_0001020","quartiles":{"min":0.6,"lower":0.6,"median":0.6,"upper":0.6,"max":0.6}},{"factorName":"inflorescence","color":"#C0C0C0","value":"3","svgPathId":"EFO_0001029","quartiles":{"min":3.0,"lower":3.0,"median":3.0,"upper":3.0,"max":3.0}},{"factorName":"leaf","color":"#ACACC0","value":"2167","svgPathId":"EFO_0000993","quartiles":{"min":23.0,"lower":1095.0,"median":2167.0,"upper":3238.0,"max":4310.0}},{"factorName":"seed","color":"#C0C0C0","value":"0.9","svgPathId":"EFO_0000991","quartiles":{"min":0.9,"lower":0.9,"median":0.9,"upper":0.9,"max":0.9}}]},{"id":"BRADI1G06430","name":"BRADI1G06430","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"3","svgPathId":"EFO_0005101","quartiles":{"min":3.0,"lower":3.0,"median":3.0,"upper":3.0,"max":3.0}},{"factorName":"carpel","color":"#C0C0C0","value":"12","svgPathId":"EFO_0001051","quartiles":{"min":12.0,"lower":12.0,"median":12.0,"upper":12.0,"max":12.0}},{"factorName":"embryo","color":"#C0C0C0","value":"2","quartiles":{"min":1.0,"lower":1.0,"median":2.0,"upper":2.0,"max":2.0}},{"factorName":"endosperm","color":"#BEBEC0","value":"211","svgPathId":"EFO_0001020","quartiles":{"min":211.0,"lower":211.0,"median":211.0,"upper":211.0,"max":211.0}},{"factorName":"inflorescence","color":"#BEBEC0","value":"225","svgPathId":"EFO_0001029","quartiles":{"min":225.0,"lower":225.0,"median":225.0,"upper":225.0,"max":225.0}},{"factorName":"leaf","color":"#ACACC0","value":"2161","svgPathId":"EFO_0000993","quartiles":{"min":2085.0,"lower":2123.0,"median":2161.0,"upper":2200.0,"max":2238.0}},{"factorName":"seed","color":"#BFC0C0","value":"66","svgPathId":"EFO_0000991","quartiles":{"min":66.0,"lower":66.0,"median":66.0,"upper":66.0,"max":66.0}}]},{"id":"BRADI2G56260","name":"BRADI2G56260","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"5","svgPathId":"EFO_0005101","quartiles":{"min":5.0,"lower":5.0,"median":5.0,"upper":5.0,"max":5.0}},{"factorName":"carpel","color":"#BFBFC0","value":"127","svgPathId":"EFO_0001051","quartiles":{"min":127.0,"lower":127.0,"median":127.0,"upper":127.0,"max":127.0}},{"factorName":"embryo","color":"#C0C0C0","value":"7","quartiles":{"min":6.0,"lower":7.0,"median":7.0,"upper":8.0,"max":9.0}},{"factorName":"endosperm","color":"#BEBFC0","value":"149","svgPathId":"EFO_0001020","quartiles":{"min":149.0,"lower":149.0,"median":149.0,"upper":149.0,"max":149.0}},{"factorName":"inflorescence","color":"#B0B0C0","value":"1737","svgPathId":"EFO_0001029","quartiles":{"min":1737.0,"lower":1737.0,"median":1737.0,"upper":1737.0,"max":1737.0}},{"factorName":"leaf","color":"#ACACC0","value":"2149","svgPathId":"EFO_0000993","quartiles":{"min":1856.0,"lower":2003.0,"median":2149.0,"upper":2296.0,"max":2442.0}},{"factorName":"seed","color":"#BDBDC0","value":"344","svgPathId":"EFO_0000991","quartiles":{"min":344.0,"lower":344.0,"median":344.0,"upper":344.0,"max":344.0}}]},{"id":"BRADI3G47041","name":"BRADI3G47041","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"1","svgPathId":"EFO_0005101","quartiles":{"min":1.0,"lower":1.0,"median":1.0,"upper":1.0,"max":1.0}},{"factorName":"carpel","color":"#BFBFC0","value":"104","svgPathId":"EFO_0001051","quartiles":{"min":104.0,"lower":104.0,"median":104.0,"upper":104.0,"max":104.0}},{"factorName":"embryo","color":"#C0C0C0","value":"5","quartiles":{"min":3.0,"lower":4.0,"median":5.0,"upper":6.0,"max":6.0}},{"factorName":"endosperm","color":"#BDBDC0","value":"337","svgPathId":"EFO_0001020","quartiles":{"min":337.0,"lower":337.0,"median":337.0,"upper":337.0,"max":337.0}},{"factorName":"inflorescence","color":"#BCBCC0","value":"443","svgPathId":"EFO_0001029","quartiles":{"min":443.0,"lower":443.0,"median":443.0,"upper":443.0,"max":443.0}},{"factorName":"leaf","color":"#ADADC0","value":"2062","svgPathId":"EFO_0000993","quartiles":{"min":1305.0,"lower":1684.0,"median":2062.0,"upper":2441.0,"max":2820.0}},{"factorName":"seed","color":"#BEBFC0","value":"153","svgPathId":"EFO_0000991","quartiles":{"min":153.0,"lower":153.0,"median":153.0,"upper":153.0,"max":153.0}}]},{"id":"BRADI2G10770","name":"BRADI2G10770","expressions":[{"factorName":"anther","color":"#C0C0C0","value":"6","svgPathId":"EFO_0005101","quartiles":{"min":6.0,"lower":6.0,"median":6.0,"upper":6.0,"max":6.0}},{"factorName":"carpel","color":"#BFC0C0","value":"58","svgPathId":"EFO_0001051","quartiles":{"min":58.0,"lower":58.0,"median":58.0,"upper":58.0,"max":58.0}},{"factorName":"embryo","color":"#C0C0C0","value":"10","quartiles":{"min":10.0,"lower":10.0,"median":10.0,"upper":10.0,"max":10.0}},{"factorName":"endosperm","color":"#BEBFC0","value":"153","svgPathId":"EFO_0001020","quartiles":{"min":153.0,"lower":153.0,"median":153.0,"upper":153.0,"max":153.0}},{"factorName":"inflorescence","color":"#BCBCC0","value":"415","svgPathId":"EFO_0001029","quartiles":{"min":415.0,"lower":415.0,"median":415.0,"upper":415.0,"max":415.0}},{"factorName":"leaf","color":"#AEAEC0","value":"1929","svgPathId":"EFO_0000993","quartiles":{"min":1275.0,"lower":1602.0,"median":1929.0,"upper":2257.0,"max":2584.0}},{"factorName":"seed","color":"#BFBFC0","value":"130","svgPathId":"EFO_0000991","quartiles":{"min":130.0,"lower":130.0,"median":130.0,"upper":130.0,"max":130.0}}]},{"id":"BRADI4G36601","name":"BRADI4G36601","expressions":[{"factorName":"anther","color":"","value":"","svgPathId":"EFO_0005101"},{"factorName":"carpel","color":"#C0C0C0","value":"0.7","svgPathId":"EFO_0001051","quartiles":{"min":0.7,"lower":0.7,"median":0.7,"upper":0.7,"max":0.7}},{"factorName":"embryo","color":"","value":""},{"factorName":"endosperm","color":"#C0C0C0","value":"21","svgPathId":"EFO_0001020","quartiles":{"min":21.0,"lower":21.0,"median":21.0,"upper":21.0,"max":21.0}},{"factorName":"inflorescence","color":"#C0C0C0","value":"9","svgPathId":"EFO_0001029","quartiles":{"min":9.0,"lower":9.0,"median":9.0,"upper":9.0,"max":9.0}},{"factorName":"leaf","color":"#AEAFC0","value":"1924","svgPathId":"EFO_0000993","quartiles":{"min":316.0,"lower":1120.0,"median":1924.0,"upper":2728.0,"max":3533.0}},{"factorName":"seed","color":"#C0C0C0","value":"5","svgPathId":"EFO_0000991","quartiles":{"min":5.0,"lower":5.0,"median":5.0,"upper":5.0,"max":5.0}}]},{"id":"BRADI2G21120","name":"BRADI2G21120","expressions":[{"factorName":"anther","color":"#BFC0C0","value":"48","svgPathId":"EFO_0005101","quartiles":{"min":48.0,"lower":48.0,"median":48.0,"upper":48.0,"max":48.0}},{"factorName":"carpel","color":"#BFBFC0","value":"85","svgPathId":"EFO_0001051","quartiles":{"min":85.0,"lower":85.0,"median":85.0,"upper":85.0,"max":85.0}},{"factorName":"embryo","color":"#BFC0C0","value":"30","quartiles":{"min":28.0,"lower":29.0,"median":30.0,"upper":32.0,"max":33.0}},{"factorName":"endosperm","color":"#BFBFC0","value":"127","svgPathId":"EFO_0001020","quartiles":{"min":127.0,"lower":127.0,"median":127.0,"upper":127.0,"max":127.0}},{"factorName":"inflorescence","color":"#BCBDC0","value":"355","svgPathId":"EFO_0001029","quartiles":{"min":355.0,"lower":355.0,"median":355.0,"upper":355.0,"max":355.0}},{"factorName":"leaf","color":"#AEAFC0","value":"1922","svgPathId":"EFO_0000993","quartiles":{"min":1025.0,"lower":1473.0,"median":1922.0,"upper":2371.0,"max":2820.0}},{"factorName":"seed","color":"#BEBFC0","value":"170","svgPathId":"EFO_0000991","quartiles":{"min":170.0,"lower":170.0,"median":170.0,"upper":170.0,"max":170.0}}]}]},
+            "geneSetProfiles": null,
+            "jsonCoexpressions" :[],
+            "anatomogram" :
+            
+                
+                
+                    null
+                
+            ,
+            "experiment" :
+            
+                
+                
+                    null
+                
+            
+        }
+    
+
+
+;
+        var isMultiExperiment = false;
+
+        experimentPageHeatmap.render({
+            heatmapData: heatmapData,
+            isMultiExperiment: isMultiExperiment,
+            isDifferential: false,
+            isProteomicsBaseline: false
+        });
+    </script>
+    
+
+
+
+
+<div id="help-placeholder" style="display: none"></div>
+
+<script type="text/javascript">
+
+    (function ($, URI) { //self invoking wrapper function that prevents $ namespace conflicts
+
+        $(document).ready(function () {
+
+            clearLocalNav();
+            $('#gxaLocalNavHome').addClass("active");
+
+            if ($.browser.msie && $.browser.version <= 8) {
+                $("#anatomogram").remove();
+                $("#heatmap-div").removeClass();
+                $("#heatmap-profilesAsGeneSets").removeClass();
+                $("#gxaGeneDistributionButton").hide();//hide the bar chart button
+                $("#gxaGeneDistributionPanel").hide();//hide the bar chart
+                $("#slider-range-max").hide();//hide the cutoff slider
+                $("#slider-help").hide();//hide the slider help
+            }
+
+
+            if (false) {
+                $("#gxaGeneDistributionButton").hide();//hide the bar chart button
+                $("#gxaGeneDistributionPanel").hide();//hide the bar chart
+                $("#slider-range-max").hide();//hide the cutoff slider
+                $("#slider-help").hide();//hide the slider help
+            } else {
+
+                
+                
+                
+                    var loadSliderAndPlot = geneDistribution.loadSliderAndPlot;
+                
+                
+
+                var $queryFactorValues = $("#queryFactorValues");
+
+                loadSliderAndPlot(
+                    0.5,
+                    'E-MTAB-4401',
+                    $queryFactorValues.val(),
+                    'ORGANISM_PART',
+                    '',
+                    ''
+                );
+
+                $queryFactorValues.change(function () {
+                    loadSliderAndPlot(
+                        0.5,
+                        'E-MTAB-4401',
+                        $queryFactorValues.val(),
+                        'ORGANISM_PART',
+                        '',
+                        ''
+                    );
+                });
+
+                //configurations required for any browser excepted IE version 8 or lower
+                geneDistribution.initBarChartButton();
+
+            }
+
+            //configurations required for any browser...
+            searchFormModule.init();
+            geneQueryTagEditorModule.init('#geneQuery', 'brachypodium distachyon');
+            helpTooltipsModule.init('experiment', '/gxa', $('[data-help-loc]').not('#heatmap-react [data-help-loc]'));
+
+            // Populate gene query tag-editor
+            var geneQueryStr = new URI(window.location).search(true)["geneQuery"];
+            if(geneQueryStr) {
+                var geneTerms = geneQueryStr.split("\t");
+                geneTerms.forEach(function(geneTerm) {
+                    $('#geneQuery').tagEditor('addTag', geneTerm);
+                });
+            }
+        });
+    })(jQuery, URI);
+
+</script>
+    </div>
+
+    
+
+
+<footer>
+    
+    <div id="global-footer" class="grid_24">
+        <nav id="global-nav-expanded">
+            <div class="grid_4 alpha">
+                <h3 class="embl-ebi"><a href="//www.ebi.ac.uk/" title="EMBL-EBI">EMBL-EBI</a></h3>
+            </div>
+
+            <div class="grid_4">
+                <h3 class="services"><a href="//www.ebi.ac.uk/services">Services</a></h3>
+            </div>
+
+            <div class="grid_4">
+                <h3 class="research"><a href="//www.ebi.ac.uk/research">Research</a></h3>
+            </div>
+
+            <div class="grid_4">
+                <h3 class="training"><a href="//www.ebi.ac.uk/training">Training</a></h3>
+            </div>
+
+            <div class="grid_4">
+                <h3 class="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></h3>
+            </div>
+
+            <div class="grid_4 omega">
+                <h3 class="about"><a href="//www.ebi.ac.uk/about">About us</a></h3>
+            </div>
+
+        </nav>
+
+        <section id="ebi-footer-meta">
+            <p class="address">EMBL-EBI, Wellcome Trust Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp;
+                &nbsp; +44 (0)1223 49 44 44</p>
+
+            <p class="legal">Copyright &copy; EMBL-EBI 2013 | EBI is an outstation of the <a href="http://www.embl.org">European
+                Molecular Biology Laboratory</a> | <a href="/about/privacy">Privacy</a> | <a href="/about/cookies">Cookies</a>
+                | <a href="/about/terms-of-use">Terms of use</a></p>
+        </section>
+
+    </div>
+
+</footer>
+
+<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/cookiebanner.js"></script>
+<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/foot.js"></script>
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37676851-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<script>
+    var $buoop = {c:2};
+    function $buo_f(){
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.js";
+        document.body.appendChild(e);
+    };
+    try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+    catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+
+</div>
+
+</body>
+
+</html>
