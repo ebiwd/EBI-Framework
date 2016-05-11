@@ -1,7 +1,7 @@
 # EBI-Framework
 
-- [View the demo and documentation] (http://khawkins98.github.io/EBI-Framework/)
-- [Get the latest release] (https://github.com/khawkins98/EBI-Framework/releases/latest)
+- [View the demo and documentation] (http://ebiwd.github.io/EBI-Framework/)
+- [Get the latest release] (https://github.com/ebiwd/EBI-Framework/releases/latest)
 
 ## Version: 1.1-dev
 
