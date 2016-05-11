@@ -25,7 +25,6 @@
     // Clone the class from a parent TH to any child TD
     jQuery('table.responsive-table').each( function() {
       var columnsToAppend = jQuery(this).find('th');
-      console.log(columnsToAppend.length);
       for (var i = 0; i < columnsToAppend.length; i++) {
         if (jQuery(columnsToAppend[i]).attr('class')) {
           var position = i + 1;
