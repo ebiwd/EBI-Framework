@@ -244,6 +244,7 @@
                         <li><a href="#typography">Typography</a></li>
                         <li><a href="#icons">Icons</a></li>
                         <li><a href="#lists">Lists</a></li>
+                        <li><a href="#lists-pulse">Pulse lists</a></li>
                         <li><a href="#tables">Tables</a></li>
                         <li><a href="#live-filtering">Live filter</a></li>
                         <li><a href="#images">Images</a></li>
@@ -479,6 +480,13 @@
                 <p>Note that by using <code>.medium-</code> the two columns automatically expand to full width on small screens (mobile devices).</p>
 
                 <p>For further background and demonstration, <a href="http://foundation.zurb.com/sites/docs/grid.html">view the Foundation documentation on grids</a>.</p>
+
+                <h3>EBI Customisations</h3>
+
+                <h4>Collapse column padding</h4>
+                <p>In addtion to using the Foundation <code>.no-collapse</code> option on grid rows, we've found that our layouts benefit from collapsing column padding in some locations.</p>
+
+                <p>You can remove right or left padding by giving the <code>div.column</code> a <code>.no-pad-right</code> or <code>.no-pad-left</code></p>
 
               </section>
 
@@ -747,6 +755,116 @@
                 </div>
               </section>
 
+              <section id="lists-pulse" data-magellan-target="lists-pulse">
+                <h2>Pulse lists</h2>
+                <p>Building atop list styling you can fashion "Pulse lists" to feature a series of items or updates. Although these may not appear to be lists at first glance, a list structure provides the basic scaffolding.</p>
+
+                <h3>Basic heartbeat list</h3>
+                <div class="callout">
+
+                  <dl>
+                    <h4>Latest ENA news</h4>
+                    <dt>06 Apr 2016: <a href="#">ENA Release 127</a></dt>
+                    <dd><p>Release 127 of ENA's assembled/annotated sequences now available <a href="#" class="readmore">Read more</a></p></dd>
+
+                    <dt>15 Feb 2016: <a href="#">Environmental data curation: new publication</a></dt>
+                    <dd><p>In our new publication, "Value, but high costs in post-deposition data curation”, we explore the curation of environmental sample information in the European Nucleotide Archive. <a href="#" class="readmore">Read more</a></p></dd>
+                  </dl>
+
+                </div> <!-- /callout -->
+
+                <h3>Icon heartbeat list</h3>
+                <div class="callout">
+
+                  <ul>
+                    <h4>Publications</h4>
+                    <li class="icon-bullet"><p><span class="icon icon-generic" data-icon=";"></span> <a href="http://nar.oxfordjournals.org/content/43/D1/D213" target="_blank">The InterPro protein families database: the classification resource after 15 years</a><br />Our latest paper describing new developments on the InterPro website
+                        (<i>Nucleic Acids Research</i>, Jan 2015).<br />
+                        <a class="ext" href="http://nar.oxfordjournals.org/content/43/D1/D213" target="_blank">HTML</a> | <a class="ext" href="http://nar.oxfordjournals.org/content/43/D1/D213.full.pdf+html" target="_blank">PDF (3,4Mb) </a> | <a href="/interpro/publications.html" target="_blank">All publications</a></p></li>
+                    <li class="icon-bullet"><p><span class="icon icon-generic" data-icon=";"></span> <a href="http://nar.oxfordjournals.org/content/43/D1/D213" target="_blank">The InterPro protein families database: the classification resource after 15 years</a><br />Our latest paper describing new developments on the InterPro website
+                        (<i>Nucleic Acids Research</i>, Jan 2015).<br />
+                        <a class="ext" href="http://nar.oxfordjournals.org/content/43/D1/D213" target="_blank">HTML</a> | <a class="ext" href="http://nar.oxfordjournals.org/content/43/D1/D213.full.pdf+html" target="_blank">PDF (3,4Mb) </a> | <a href="/interpro/publications.html" target="_blank">All publications</a></p></li>
+                    <li class="icon-bullet"><p><span class="icon icon-generic" data-icon=";"></span> <a href="http://nar.oxfordjournals.org/content/43/D1/D213" target="_blank">The InterPro protein families database: the classification resource after 15 years</a><br />Our latest paper describing new developments on the InterPro website
+                        (<i>Nucleic Acids Research</i>, Jan 2015).<br />
+                        <a class="ext" href="http://nar.oxfordjournals.org/content/43/D1/D213" target="_blank">HTML</a> | <a class="ext" href="http://nar.oxfordjournals.org/content/43/D1/D213.full.pdf+html" target="_blank">PDF (3,4Mb) </a> | <a href="/interpro/publications.html" target="_blank">All publications</a></p></li>
+                    <li class="icon-bullet"><p><span class="icon icon-generic" data-icon=";"></span> <a href="http://nar.oxfordjournals.org/content/43/D1/D213" target="_blank">The InterPro protein families database: the classification resource after 15 years</a><br />Our latest paper describing new developments on the InterPro website
+                        (<i>Nucleic Acids Research</i>, Jan 2015).<br />
+                        <a class="ext" href="http://nar.oxfordjournals.org/content/43/D1/D213" target="_blank">HTML</a> | <a class="ext" href="http://nar.oxfordjournals.org/content/43/D1/D213.full.pdf+html" target="_blank">PDF (3,4Mb) </a> | <a href="/interpro/publications.html" target="_blank">All publications</a></p></li>
+                  </ul>
+
+                </div> <!-- /callout -->
+
+
+                <h3>Image heartbeat list</h3>
+                <p>If you have thumbnail images to feature and/or more robust content per item, use this pattern.</p>
+                <div class="row ">
+
+                  <div class="columns medium-6 medium-push-3">
+                    <ul class="no-bullet">
+                      <h4>Service updates</h4>
+                      <li>
+                        <img src="https://www.ebi.ac.uk/interpro/resources/images/logo_ida_100.png" class="float-right"/> 
+                        <h5>IDA Tool</h5>
+                        <p>
+                          <span class="secondary-color">February 2016</span> - The InterPro Domain Architecture (IDA) tool allows you to search the InterPro database with a particular set of domains, and returns all of the domain architectures and associated proteins that match the query. <a href="http://nar.oxfordjournals.org/content/43/D1/D213" class="readmore" target="_blank">Read more</a>
+                        </p>
+                        <hr />
+                      </li>
+                      <li>
+                        <img src="https://2.bp.blogspot.com/-xyAlqosOxLs/Vsb149z7i3I/AAAAAAAAA_c/bMa84ppiIHo/s72-c/Final_Microcephaly2.jpg" class="float-right"/> 
+                        <h5>Zika Virus and Microcephaly</h5>
+                        <p>
+                          <span class="secondary-color">February 2016</span> - You have probably been as horrified and saddened as me to see the shocking abnormality that affects newborn babies. 
+                        </p>
+                        <ul>
+                          <li>An update to Pfam (29.0) and SMART (7.1).</li>
+                          <li>Integration of 639 new methods from the Pfam (80), SUPERFAMILY (11), ProDom (6), SMART (279) and PANTHER (263) databases.</li>
+                        </ul>
+                        <a href="http://nar.oxfordjournals.org/content/43/D1/D213" class="readmore" target="_blank">Read more</a>
+                      </li>
+
+                    </ul>
+
+                  </div> <!-- /columns medium-6 -->
+                </div>
+
+
+                <h3>Social heartbeat list</h3>
+                <div class="row ">
+
+                  <div class="columns medium-4 medium-push-3">
+                    <ul class="no-bullet">
+                      <h4>Service updates</h4>
+                      <li>
+                        <div class=" row">
+                            <img src="https://pbs.twimg.com/profile_images/524513796568535040/o3GZOvX-_normal.jpeg" class="small-3 columns no-pad-right"/> 
+                            <div class="small-9 columns"><strong>EMBL-EBI Training</strong><br/><em>‎@EBItraining</em></div>
+                        </div>
+                        <p class="">
+                          <a href="http://nar.oxfordjournals.org/content/43/D1/D213" target="_blank">Making our first protein interaction networks with Pablo @intact_project using Cytoscape #datavisualisation </a>
+                        </p>
+                      </li>
+                      <li>
+                        <div class=" row">
+                            <img src="https://pbs.twimg.com/profile_images/524513796568535040/o3GZOvX-_normal.jpeg" class="small-3 columns no-pad-right"/> 
+                            <div class="small-9 columns"><strong>EMBL-EBI Training</strong><br/><em>‎@EBItraining</em></div>
+                        </div>
+                        <p class="">
+                          <a href="http://nar.oxfordjournals.org/content/43/D1/D213" target="_blank">Making our first protein interaction networks with Pablo @intact_project using Cytoscape #datavisualisation </a>
+                          <img src="https://pbs.twimg.com/media/CiGZPgLWsAA03Dn.jpg:small" />
+                        </p>
+                      </li>
+
+                    </ul>
+
+                  </div> <!-- /columns medium-4 -->
+                </div>
+
+
+
+
+              </section>
+
               <section id="tables" data-magellan-target="tables">
                 <h2>Tables</h2>
                 <p>A table is a table, and sometimes, you just need to use a table.</p>
@@ -984,7 +1102,7 @@
                   </div> <!-- /row -->
 
 
-                  <h3>Image tiles</h3>
+                  <h3>Image overlays</h3>
                   <p>Alternatively, you can use a <code>.with-overlay</code> for a darkened effect with a text overlay.</p>
                   <p>Notes:</p>
                   <ul>
