@@ -1,10 +1,9 @@
 /*
- To run, copy-paste the below line into your browser's console:
+  To run, copy-paste the below line into your browser's console:
 
- jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/testMigration.js"></script>');
+  jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/testMigration.js"></script>');
 
  */
-
 
 console.log('%c Hi. I\'ll autopilot a transition of this page to the new EMBL-EBI visual framework.', 'background: rgb(0,124,130); color: #FFF; font-size: 20px;');
 console.log('%c This is meanth to be a rough guide and I\'ll talk throug the basics of what I\'m doing. Use it as tool, but read the documentation too! ', 'background: #FFF; color: #999; font-style: italic;');
@@ -14,7 +13,7 @@ console.log('%c When you\'re ready, type testMigration()', 'background: rgb(0,12
 function testMigration(steppingTimeSpeed) {
 
   // A stepping tool to pace out the execution
-  steppingTimeSpeed = steppingTimeSpeed || 1000; //ms between each step
+  steppingTimeSpeed = steppingTimeSpeed || 3000; //ms between each step
   steppingTimeInvoked = 0; // increments number of times invoked
   console.log('There will be '+steppingTimeSpeed+'ms between each step. If you\'d like to run faster or slower, pass a speed to this script a la: testMigration(5000)');
   function steppingTime() {
