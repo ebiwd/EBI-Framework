@@ -104,6 +104,9 @@ html.fontface .icon {
   font-style: normal;
   text-rendering: optimizeLegibility !important;
 }
+html.fontface  .icon:before {
+  padding-right: .25rem;
+}
 html.fontface  .icon-conceptual,
 html.fontface  .icon-conceptual:before {
   font-family: 'EBI-Conceptual';
@@ -166,5 +169,24 @@ html.fontface .icon-s10:before { color: #00bcf2; }  /* Windows */
 html.fontface .icon-s11:before { color: #f7941e; }  /* SlideShare */
 html.fontface .icon-s12:before { color: #21759b; }  /* Wordpress */
 html.fontface .icon-s13:before { color: #fa9b39; }  /* RSS */
+
+
+/* Compatibility with legacy compliance theme.
+   RWD framework now uses i.icon-functionality spec. */
+html.fontface  a.icon-conceptual,
+html.fontface  a.icon-functional,
+html.fontface  a.icon-species,
+html.fontface  a.socialmedia,
+html.fontface  a.icon-chemistry,
+html.fontface  a.icon-fileformats,
+html.fontface  a.icon-generic,
+html.fontface  h3.icon-conceptual,
+html.fontface  h3.icon-functional,
+html.fontface  h3.icon-species,
+html.fontface  h3.socialmedia,
+html.fontface  h3.icon-chemistry,
+html.fontface  h3.icon-fileformats,
+html.fontface  h3.icon-generic { font-family: 'helvetica', sans-serif; }
+
 
 
