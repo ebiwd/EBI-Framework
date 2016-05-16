@@ -65,6 +65,7 @@ a:active {
 .industry-background { background: rgb(0,134,180); }
 .elixir-background { background: rgb(251,106,42); }
 .white-background { background: rgb(255,255,255); }
+.secondary-background { background: #666; }
 
 .ebi-color, a.ebi-color, a:hover.ebi-color { color: rgb(0,124,130); }
 .services-color, a.services-color, a:hover.services-color { color: rgb(2,100,105); }
@@ -73,6 +74,7 @@ a:active {
 .industry-color, a.industry-color, a:hover.industry-color { color: rgb(0,134,180); }
 .elixir-color, a.elixir-color, a:hover.elixir-color { color: rgb(251,106,42); }
 .white-color, a.white-color, a:hover.white-color { color: rgb(255,255,255); }
+.secondary-color, a.secondary-color, a:hover.secondary-color {color: #666;}
 
 /* todo: map misc framework colours to ebi colours...
 
@@ -656,6 +658,10 @@ a:active {
   nav.orbit-bullets button.thumbnail.is-active { box-shadow: 0 0 1px  #444; }
   nav.orbit-bullets button.thumbnail.image {width: 4rem; height: 3rem; overflow: hidden;}
   nav.orbit-bullets button.thumbnail.image > img { min-width: 6rem; margin-left: -2rem; }
+
+  /* Disable padding on left or right of foundation columns */
+  .columns.no-pad-right { padding-right: 0; }
+  .columns.no-pad-left { padding-left: 0; }
 
 /* mono-space fonts are fat */
 code { font-size: .95rem; }
