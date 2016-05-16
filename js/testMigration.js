@@ -5,7 +5,7 @@
 
  */
 
-console.log('%c Hi. 👋 \n I\'ll autopilot a transition of this page to the new EMBL-EBI visual framework.', 'background: rgb(0,124,130); color: #FFF; font-size: 20px;');
+console.log('%c ' + String.fromCharCode(0xD83D,0xDC4B) + ' \n Hi. \n I\'ll autopilot a transition of this page to the new EMBL-EBI visual framework.', 'background: rgb(0,124,130); color: #FFF; font-size: 20px;');
 console.log('%c This is meant as a rough guide and I\'ll talk through what I\'m doing. Use it as tool, but read the documentation too! ', 'background: #FFF; color: #999; font-style: italic;');
 console.log('%c It\'s pretty straightforward, I don\'t think it will have many problems. I hope! ', 'background: #FFF; color: #999; font-style: italic;');
 console.log('%c When you\'re ready, type: testMigration()', 'background: rgb(0,124,130); color: #FFF; font-size: 20px;');
