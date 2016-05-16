@@ -1,14 +1,14 @@
 /*
   To run, copy-paste the below line into your browser's console:
 
-  jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/testMigration.js"></script>');
+  jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/testMigration.js"></script>\n');
 
  */
 
-console.log('%c Hi. I\'ll autopilot a transition of this page to the new EMBL-EBI visual framework.', 'background: rgb(0,124,130); color: #FFF; font-size: 20px;');
-console.log('%c This is meanth to be a rough guide and I\'ll talk throug the basics of what I\'m doing. Use it as tool, but read the documentation too! ', 'background: #FFF; color: #999; font-style: italic;');
+console.log('%c Hi. 👋 \n I\'ll autopilot a transition of this page to the new EMBL-EBI visual framework.', 'background: rgb(0,124,130); color: #FFF; font-size: 20px;');
+console.log('%c This is meant as a rough guide and I\'ll talk through what I\'m doing. Use it as tool, but read the documentation too! ', 'background: #FFF; color: #999; font-style: italic;');
 console.log('%c It\'s pretty straightforward, I don\'t think it will have many problems. I hope! ', 'background: #FFF; color: #999; font-style: italic;');
-console.log('%c When you\'re ready, type testMigration()', 'background: rgb(0,124,130); color: #FFF; font-size: 20px;');
+console.log('%c When you\'re ready, type: testMigration()', 'background: rgb(0,124,130); color: #FFF; font-size: 20px;');
 
 function testMigration(steppingTimeSpeed) {
 
@@ -21,13 +21,19 @@ function testMigration(steppingTimeSpeed) {
     return steppingTimeSpeed * steppingTimeInvoked;
   }
 
-  setTimeout(function(){
-    console.log('Firstoff I\'m going to zoom out a bit so we can see more of the changes.');
-    document.body.style.zoom = "30%" 
-  }, steppingTime()); 
+  // setTimeout(function(){
+  //   console.log('Firstoff I\'m going to zoom out a bit so we can see more of the changes.');
+  //   document.body.style.zoom = "30%" 
+  // }, steppingTime()); 
 
   setTimeout(function(){
     console.log('%c We\'re off!', 'background: green; color: #FFF; font-style: italic;');
+  }, steppingTime()); 
+
+  setTimeout(function(){
+    jQuery('head').append('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>\n');
+    console.log('jQuery: Updating to jQuery 1.10. This is version (or newer) is only necessary if you plan to use Foundation\'s JS components.');
+    console.log('------------------\n');
   }, steppingTime()); 
 
   setTimeout(function(){
@@ -52,9 +58,9 @@ function testMigration(steppingTimeSpeed) {
   }, steppingTime()); 
 
   setTimeout(function(){
-    jQuery('head').append('<link rel="stylesheet" href="//ebiwd.github.io/EBI-Framework/libraries/foundation-6/css/foundation.css" type="text/css" />');
-    jQuery('head').append('<link rel="stylesheet" href="//ebiwd.github.io/EBI-Framework/css/ebi-global.css" type="text/css" />');
-    jQuery('head').append('<link rel="stylesheet" href="//ebiwd.github.io/EBI-Framework/fonts/fonts.css" type="text/css" />');
+    jQuery('head').append('<link rel="stylesheet" href="//ebiwd.github.io/EBI-Framework/libraries/foundation-6/css/foundation.css" type="text/css" />\n');
+    jQuery('head').append('<link rel="stylesheet" href="//ebiwd.github.io/EBI-Framework/css/ebi-global.css" type="text/css" />\n');
+    jQuery('head').append('<link rel="stylesheet" href="//ebiwd.github.io/EBI-Framework/fonts/fonts.css" type="text/css" />\n');
     console.log('CSS: Injected new ebi-global.css fonts.css and foundation.css');
     console.log('------------------\n');
   }, steppingTime()); 
@@ -76,11 +82,11 @@ function testMigration(steppingTimeSpeed) {
     // did we find a palette?
     if (i < colourPalettes.length) {
       jQuery(colourPalettes[i].original).remove();
-      jQuery('head').append('<link rel="stylesheet" href="' + colourPalettes[i].new + '" type="text/css" />');
+      jQuery('head').append('<link rel="stylesheet" href="' + colourPalettes[i].new + '" type="text/css" />\n');
       console.log('Service colours: Found ' + colourPalettes[i].original + ', and replaced with ' + colourPalettes[i].new);
     } else {
       // if no match, we use default EBI
-      jQuery('head').append('<link rel="stylesheet" href="' + colourPalettes[colourPalettes.length-1].new + '" type="text/css" />');
+      jQuery('head').append('<link rel="stylesheet" href="' + colourPalettes[colourPalettes.length-1].new + '" type="text/css" />\n');
       console.log('Service colours: Not sure what service colours are meant to be used, adding default EBI Petrol palette: ' + colourPalettes[colourPalettes.length-1].new);
     }
     console.log('------------------\n');
@@ -94,11 +100,11 @@ function testMigration(steppingTimeSpeed) {
 
   setTimeout(function(){
     // Add new JS
-    jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/cookiebanner.js"></script>');
-    jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/foot.js"></script>');
-    jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/fontpresentation.js"></script>');
+    jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/cookiebanner.js"></script>\n');
+    jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/foot.js"></script>\n');
+    jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/fontpresentation.js"></script>\n');
+    jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/script.js"></script>\n');
 
-    jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/script.js"></script>');
     console.log('Javascript: I\'ve added three scripts:\n' +
                 '            //ebiwd.github.io/EBI-Framework/js/cookiebanner.js\n' +
                 '            //ebiwd.github.io/EBI-Framework/js/foot.js\n' +
@@ -231,8 +237,10 @@ function testMigration(steppingTimeSpeed) {
   }, steppingTime()); 
 
   setTimeout(function(){
-    jQuery('#local-masthead').removeClass().addClass('sticky meta-background-image');
-    console.log('Updating local-masthead classes: .sticky.meta-background-image');
+    jQuery('#local-masthead').removeClass().addClass('meta-background-image');
+    jQuery('#local-masthead').attr({'data-sticky': true, 'data-sticky-on': 'large', 'data-top-anchor': 180, 'data-btm-anchor': 300000});
+    jQuery('#local-masthead').wrap('<div data-sticky-container />');
+    console.log('Updating local-navigation to be sticky (Foundation JS needed for this)');
     console.log('------------------\n');
   }, steppingTime()); 
 
@@ -255,7 +263,8 @@ function testMigration(steppingTimeSpeed) {
 
   setTimeout(function(){
     jQuery('ul#local-nav').addClass('dropdown menu float-left');
-    console.log('Local-nav: adding classes dropdown menu float-left');
+    jQuery('ul#local-nav').attr({'data-dropdown-menu':true});
+    console.log('Local-nav: adding classes .dropdown.menu.float-left have also added attribute data-dropdown-menu for mobile');
     console.log('------------------\n');
   }, steppingTime()); 
 
@@ -267,9 +276,81 @@ function testMigration(steppingTimeSpeed) {
   }, steppingTime()); 
 
   setTimeout(function(){
-    console.log('%c All done!', 'background: green; color: #FFF; font-style: italic;');
-    console.log('Zooming back to 100%.');
-    document.body.style.zoom = "100%" 
+    // The Foundation theme JavaScript
+    jQuery('head').append('<script src="https://ebiwd.github.io/EBI-Framework/libraries/foundation-6/js/foundation.js"></script>\n');
+    jQuery('head').append('<script src="https://ebiwd.github.io/EBI-Framework/js/foundationExtendEBI.js"></script>\n');
+
+    console.log('Javascript: I\'ve add the Foundation JS');
+    console.log('------------------\n');
   }, steppingTime()); 
 
+  setTimeout(function(){
+    console.log('%c All done!', 'background: green; color: #FFF; font-style: italic;');
+    // console.log('Zooming back to 100%.');
+    // document.body.style.zoom = "100%" 
+    console.log('%c Want JS features? By default we\'ve not invoked the JS features, if you\'d like to do so type runJS() ', 'background: #FFF; color: #999; font-style: italic;');
+    console.log('%c Want a diff? Type diffUsingJS() ', 'background: #FFF; color: #999; font-style: italic;');
+  }, steppingTime()); 
+
+  // setTimeout(function(){
+  // }, steppingTime()); 
+
 } // END testMigration
+
+function runJS() {
+  $(document).foundation();
+  $(document).foundationExtendEBI();
+  console.log('Javascript: Foundation JS invoked');
+}
+
+
+// Option to add a diff
+var pageOriginalHTML = jQuery('html').html();
+jQuery('head').append('<script data-note="just-for-the-diff" src="//cemerick.github.io/jsdifflib/diffview.js"></script>\n');
+jQuery('head').append('<script data-note="just-for-the-diff" src="//cemerick.github.io/jsdifflib/difflib.js"></script>\n');
+
+function diffUsingJS() {
+  jQuery('head').append('<link rel="stylesheet" href="//cemerick.github.io/jsdifflib/diffview.css" type="text/css" />\n');
+  jQuery('head').append('<style type="text/css" data-note="just-for-the-diff">tbody td {padding: 0 !important;word-wrap: break-word;font-size: .8rem;}</style>\n');
+  // max-width: 35rem;
+
+  // get the baseText and newText values from the two textboxes, and split them into lines
+  var base = difflib.stringAsLines(pageOriginalHTML);
+  var newtxt = difflib.stringAsLines($('html').html());
+
+  // create a SequenceMatcher instance that diffs the two sets of lines
+  var sm = new difflib.SequenceMatcher(base, newtxt);
+
+  // get the opcodes from the SequenceMatcher instance
+  // opcodes is a list of 3-tuples describing what changes should be made to the base text
+  // in order to yield the new text
+  var opcodes = sm.get_opcodes();
+  // $('body').prepend('<div id="diffoutput">Diff</div>');
+  //       var element = document.createElement("Input");
+
+  var diffoutputdiv = document.createElement("diffoutput");
+  while (diffoutputdiv.firstChild) diffoutputdiv.removeChild(diffoutputdiv.firstChild);
+  var contextSize = null;
+  contextSize = contextSize ? contextSize : null;
+
+  // build the diff view and add it to the current DOM
+  diffoutputdiv.appendChild(diffview.buildView({
+      baseTextLines: base,
+      newTextLines: newtxt,
+      opcodes: opcodes,
+      // set the display titles for each resource
+      baseTextName: "Original",
+      newTextName: "Modified",
+      contextSize: contextSize,
+      viewType: 1 // 1 for inline, 0 for side-by-side
+  }));
+
+  $('div#content').prepend(diffoutputdiv);
+
+  // scroll down to the diff view window.
+  // location = url + "#diff";
+}
+
+
+// testMigration(100);
+
