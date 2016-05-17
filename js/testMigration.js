@@ -3,6 +3,12 @@
 
   jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/testMigration.js"></script>\n');
 
+  If your page does not have jQuery, you can load with four lines of vaniala JS:
+    var fileref=document.createElement('script')
+    fileref.setAttribute("type","text/javascript")
+    fileref.setAttribute("src", "//ebiwd.github.io/EBI-Framework/js/testMigration.js")
+    document.getElementsByTagName("head")[0].appendChild(fileref)
+
  */
 
 console.log('%c ' + String.fromCharCode(0xD83D,0xDC4B) + ' \n Hi. \n I\'ll autopilot a transition of this page to the new EMBL-EBI visual framework.', 'background: rgb(0,124,130); color: #FFF; font-size: 20px;');
@@ -240,7 +246,7 @@ function testMigration(steppingTimeSpeed) {
     jQuery('#local-masthead').removeClass().addClass('meta-background-image');
     jQuery('#local-masthead').attr({'data-sticky': true, 'data-sticky-on': 'large', 'data-top-anchor': 180, 'data-btm-anchor': 300000});
     jQuery('#local-masthead').wrap('<div data-sticky-container />');
-    console.log('Updating local-navigation to be sticky (Foundation JS needed for this)');
+    console.log('Updating local-navigation to be sticky (You\'ll need to invoke Foundation JS later)');
     console.log('------------------\n');
   }, steppingTime()); 
 
@@ -280,7 +286,7 @@ function testMigration(steppingTimeSpeed) {
     jQuery('head').append('<script src="https://ebiwd.github.io/EBI-Framework/libraries/foundation-6/js/foundation.js"></script>\n');
     jQuery('head').append('<script src="https://ebiwd.github.io/EBI-Framework/js/foundationExtendEBI.js"></script>\n');
 
-    console.log('Javascript: I\'ve add the Foundation JS');
+    console.log('Javascript: I\'ve added (but not executed) the Foundation JS.');
     console.log('------------------\n');
   }, steppingTime()); 
 
@@ -303,13 +309,13 @@ function runJS() {
   console.log('Javascript: Foundation JS invoked');
 }
 
-
 // Option to add a diff
 var pageOriginalHTML = jQuery('html').html();
 jQuery('head').append('<script data-note="just-for-the-diff" src="//cemerick.github.io/jsdifflib/diffview.js"></script>\n');
 jQuery('head').append('<script data-note="just-for-the-diff" src="//cemerick.github.io/jsdifflib/difflib.js"></script>\n');
 
 function diffUsingJS() {
+  console.log('Bam! Diffed.');
   jQuery('head').append('<link rel="stylesheet" href="//cemerick.github.io/jsdifflib/diffview.css" type="text/css" />\n');
   jQuery('head').append('<style type="text/css" data-note="just-for-the-diff">tbody td {padding: 0 !important;word-wrap: break-word;font-size: .8rem;}</style>\n');
   // max-width: 35rem;
