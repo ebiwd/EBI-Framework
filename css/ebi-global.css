@@ -300,7 +300,9 @@ a:active {
   #local-masthead nav { font-size: .9rem; clear: both;}
 
   #local-masthead .masthead nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
-  #local-masthead nav ul.menu li { border-right: 1px solid #f8f8f8; float: left; }
+  #local-masthead nav ul.menu li { border-right: 1px solid #f8f8f8; float: left; 
+                                   margin-left: 0; /* compliance compatibility */
+                                   }
   #local-masthead nav ul.menu li:last-child,
   #local-masthead nav ul.menu li.active { border-right: 0; }
 
