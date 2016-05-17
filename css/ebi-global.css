@@ -405,6 +405,9 @@ a:active {
     border-color: #fff transparent transparent;
   }
 
+  /* accomodate legend.label */
+  legend.label { display: block; }
+
   /* List ...... leaders */
   ul.leaders {
     max-width: 40em;
