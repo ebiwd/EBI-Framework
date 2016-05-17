@@ -343,12 +343,14 @@ a:active {
   div#local-masthead { width: 100%; position: static; }
   div#local-masthead.sticky.is-stuck { margin-top: -10.5em !important; position: fixed;}
 
+  /*
   input#local-searchbox { width: 80%; padding: .5rem 1%;  }
   input#local-searchbox,
   #local-search [type="submit"] { 
     display: inline-block; margin: 0;
     vertical-align: top; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;
   }
+  */
 
   #content {
     padding: 0.5rem 0 1.5rem;
