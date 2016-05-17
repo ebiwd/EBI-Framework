@@ -351,6 +351,7 @@ a:active {
     display: inline-block; margin: 0;
     vertical-align: top; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;
   }
+  #local-search .input-group-button { vertical-align: top; }
 
   #content {
     padding: 0.5rem 0 1.5rem;
