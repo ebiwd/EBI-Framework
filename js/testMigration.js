@@ -282,6 +282,53 @@ function testMigration(steppingTimeSpeed) {
   }, steppingTime()); 
 
   setTimeout(function(){
+    $.fn.changeElementType = function(newType) {
+      var attrs = {};
+
+      $.each(this[0].attributes, function(idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+      });
+
+      var newelement = $("<" + newType + "/>", attrs).append($(this).contents());
+      this.replaceWith(newelement);
+      return newelement;
+    };
+
+    console.log('Local-search: The local-search in the local-masthead has an updated structure. I\'ve rearanged as follows:');
+
+    $('#local-search div.left').removeClass().addClass('input-group');
+    console.log(' - div.left is now div.input-group');
+
+    $('#local-search div.input-group').append('<div class="input-group-button" />');
+    console.log(' - div.input-group now contains a div.input-group-button');
+
+    $('#local-search input.submit.button').detach().appendTo('#local-search div.input-group-button');
+    console.log(' - input.submit.button is now inside div.input-group-button');
+
+    $('#local-search input.submit.button').addClass('secondary');
+    console.log(' - input.submit.button colouring updated with .secondary. This is fully optional depending on your themeing.');
+
+    if ($('#local-search span.examples').length > 0) {
+      $('#local-search span.examples').changeElementType('p');
+      console.log(' - The span.examples is now a p element');
+    }
+
+    $('#local-search p.examples').detach().insertAfter('#local-search input#local-searchbox');
+    console.log(' - p.examples is now grouped with the searchbox');
+    
+    // $('#local-search p.examples').addClass('small');
+    // console.log(' - added .small to p.examples ');
+
+    $('#local-search div.right').detach().appendTo('#local-search div.input-group-button');
+    console.log(' - div.right is now inside div.input-group-button');
+
+    $('#local-search div.right').removeClass().addClass('small');
+    console.log(' - div.right is now div.small');
+
+    console.log('------------------\n');
+  }, steppingTime()); 
+
+  setTimeout(function(){
     // The Foundation theme JavaScript
     jQuery('head').append('<script src="https://ebiwd.github.io/EBI-Framework/libraries/foundation-6/js/foundation.js"></script>\n');
     jQuery('head').append('<script src="https://ebiwd.github.io/EBI-Framework/js/foundationExtendEBI.js"></script>\n');
