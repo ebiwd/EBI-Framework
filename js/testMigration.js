@@ -9,6 +9,9 @@
     fileref.setAttribute("src", "//ebiwd.github.io/EBI-Framework/js/testMigration.js")
     document.getElementsByTagName("head")[0].appendChild(fileref)
 
+  Originall authored on 2016-05-16
+  For assistance contact Ken Hawkins in Webdev 
+      or post to Github https://github.com/ebiwd/EBI-Framework/issues
  */
 
 console.log('%c ' + String.fromCharCode(0xD83D,0xDC4B) + ' \n Hi. \n I\'ll autopilot a transition of this page to the new EMBL-EBI visual framework.', 'background: rgb(0,124,130); color: #FFF; font-size: 20px;');
@@ -131,10 +134,37 @@ function testMigration(steppingTimeSpeed) {
   setTimeout(function(){
     // CSS translations
     // grid-XX to medium-XX
-    jQuery('div,section').attr('class', function(i, str) { 
+    jQuery('div,section,aside').attr('class', function(i, str) { 
+
+      function whatColumnSize(toParse) {
+        // deal with Qs like: 5 omgea cols to 2.5 foundation cols :(
+        // this won't deal with all variations of this, such as 4 columns at 3.5, but should work for most scenarios
+        switch (toParse) {
+          case 0.5:
+          case 1.5:
+          case 2.5:
+          case 3.5:
+          case 4.5:
+          case 5.5:
+            toParse = Math.ceil(toParse);
+            break;
+          case 6.5:
+          case 7.5:
+          case 8.5:
+          case 9.5:
+          case 10.5:
+          case 11.5:
+          case 12.5:
+            toParse = Math.floor(toParse);
+            break;
+          default:
+            break;
+        }
+        return toParse;
+      }
       // omega is 24 columns, foundation is 12 columns
       if (typeof str != 'undefined') { 
-        function convert(str, p1, p2, offset, s) { return 'columns medium-' + p2/2 + ' temporary-maker-that-this-is-a-column'; }
+        function convert(str, p1, p2, offset, s) { return 'columns medium-' + whatColumnSize(p2/2) + ' temporary-maker-that-this-is-a-column'; }
         var re = /(grid_)([0-9]+)/;
         return str.replace(re, convert);
       }
@@ -149,24 +179,12 @@ function testMigration(steppingTimeSpeed) {
     // Wrap groups of columns with div.row 
     jQuery('div#content .temporary-maker-that-this-is-a-column').has('.temporary-maker-that-this-is-a-column').wrapInner('<div class="row"/>');
     // jQuery('div#content .medium-12').wrap('<div class="row"/>');
-    jQuery('div.temporary-maker-that-this-is-a-column').removeClass('temporary-maker-that-this-is-a-column');
+    jQuery('.temporary-maker-that-this-is-a-column').removeClass('temporary-maker-that-this-is-a-column');
     console.log('CSS: Groups of .columns should be wrapped in div.row s.\n');
     console.log('------------------\n');
   }, steppingTime()); 
 
   setTimeout(function(){
-    jQuery('div,input').attr('class',
-      function(i, c) { 
-        if (jQuery(this).hasClass('medium-24') === true) { 
-           // return c.replace(/(^|\s)medium-24/g, ' medium-12');
-        }
-        if (jQuery(this).hasClass('submit') === true) { 
-           jQuery(this).addClass('button');
-        }
-      });
-
-
-
     jQuery('div').attr('class',
       function(i, c) { 
         if (typeof c != 'undefined') { 
@@ -175,11 +193,48 @@ function testMigration(steppingTimeSpeed) {
       });
 
     jQuery('div').removeClass('alpha');
+    console.log('CSS: .alpha is no longer needed.');
+    console.log('     .omega is now .last and is only neeeded when you have not specified 12 columns of width.');
+    console.log('------------------\n');
+  }, steppingTime()); 
 
-    jQuery('.visuallyhidden').addClass('hide').removeClass('visuallyhidden');
-    jQuery('.hidden').addClass('hide').removeClass('hidden');
+  setTimeout(function(){
+    console.log('CSS: Assorted cleanup');
+    jQuery('div,input').attr('class',
+      function(i, c) { 
+        if (jQuery(this).hasClass('medium-24') === true) { 
+          // return c.replace(/(^|\s)medium-24/g, ' medium-12');
+        }
+        if (jQuery(this).hasClass('submit') === true) { 
+          jQuery(this).addClass('button');
+          console.log(' - submit elements we want to look like buttons need the .button class');
+        }
+      });
 
-    jQuery('.submenu ul.menu').addClass('vertical');
+    if (jQuery('.hidden, .visuallyhidden').length > 0) {
+      jQuery('.hidden').addClass('hide').removeClass('hidden');
+      jQuery('.visuallyhidden').addClass('hide').removeClass('visuallyhidden');
+      console.log(' - .visuallyhidden and .hidden are now .hide');
+    }
+
+    if (jQuery('.submenu ul').length > 0) {
+      jQuery('.submenu ul.menu').addClass('vertical');
+      console.log(' - .submenu ul.menu should use .vertical');
+    }
+
+    if (jQuery('#intro').length > 0) {
+      jQuery('#intro').addClass('callout');
+      console.log(' - #intro should use the new .callout');
+    }
+
+    if (jQuery('.shortcuts.transparent ul.split').length > 0) {
+      jQuery('.shortcuts.transparent ul.split').removeClass().addClass('columns small-6 no-bullet');
+      console.log(' - the popular list should drop .split in favour of .columns.small-6.no-bullet /n' +
+                  '   alternativley: .columns.small-6.menu.vertical.no-pad-left and add .icon-bullet to each li');
+    }
+
+    console.log('------------------\n');
+
   }, steppingTime()); 
 
 
@@ -190,50 +245,55 @@ function testMigration(steppingTimeSpeed) {
       console.log('Fieldsets: It looks like you have some fieldsets in div#content, I\'m assuming you want these highlighted and have added .callout classes.');
       console.log('------------------\n');
     }
+    if (jQuery('div#content fieldset legend').length > 0) {
+      jQuery('div#content fieldset legend').addClass('label');
+      console.log('Fieldsets legends: Also assume you want these to be .label s.');
+      console.log('------------------\n');
+    }
   }, steppingTime()); 
 
   setTimeout(function(){
     // Update global-mastehad
-    var newGloablMasthead = '<div id="global-masthead" class="clearfix">\
-      <!--This has to be one line and no newline characters-->\
-      <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>\
-      <nav>\
-        <div class="row">\
-          <ul id="global-nav" class="menu">\
-            <!-- set active class as appropriate -->\
-            <li id="home-mobile" class=""><a href="//www.ebi.ac.uk"></a></li>\
-            <li id="home" class="active"><a href="//www.ebi.ac.uk"><i class="icon icon-generic" data-icon="H"></i> EMBL-EBI</a></li>\
-            <li id="services"><a href="//www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="("></i> Services</a></li>\
-            <li id="research"><a href="//www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon=")"></i> Research</a></li>\
-            <li id="training"><a href="//www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>\
-            <li id="about"><a href="//www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="i"></i> About us</a></li>\
-            <li id="search">\
-              <a href="#" data-toggle="search-global-dropdown"><i class="icon icon-functional" data-icon="1"></i> <span class="show-for-small-only">Search</span></a>\
-              <div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">\
-                <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">\
-                  <fieldset>\
-                    <div class="input-group">\
-                      <input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">\
-                      <div class="input-group-button">\
-                        <input type="submit" name="submit" value="Search" class="button">\
-                        <input type="hidden" name="db" value="allebi" checked="checked">\
-                        <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">\
-                      </div>\
-                    </div>\
-                  </fieldset>\
-                </form>\
-              </div>\
-            </li>\
-            <li class="float-right show-for-medium embl-selector">\
-              <button class="button" type="button" data-toggle="embl-dropdown">Hinxton</button>\
-              <div id="embl-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">\
-                to come.\
-              </div>\
-            </li>\
-          </ul>\
-        </div>\
-      </nav>\
-    </div>';
+    var newGloablMasthead = '<div id="global-masthead" class="clearfix">\n\
+      <!--This has to be one line and no newline characters-->\n\
+      <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>\n\
+      <nav>\n\
+        <div class="row">\n\
+          <ul id="global-nav" class="menu">\n\
+            <!-- set active class as appropriate -->\n\
+            <li id="home-mobile" class=""><a href="//www.ebi.ac.uk"></a></li>\n\
+            <li id="home" class="active"><a href="//www.ebi.ac.uk"><i class="icon icon-generic" data-icon="H"></i> EMBL-EBI</a></li>\n\
+            <li id="services"><a href="//www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="("></i> Services</a></li>\n\
+            <li id="research"><a href="//www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon=")"></i> Research</a></li>\n\
+            <li id="training"><a href="//www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>\n\
+            <li id="about"><a href="//www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="i"></i> About us</a></li>\n\
+            <li id="search">\n\
+              <a href="#" data-toggle="search-global-dropdown"><i class="icon icon-functional" data-icon="1"></i> <span class="show-for-small-only">Search</span></a>\n\
+              <div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">\n\
+                <form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET">\n\
+                  <fieldset>\n\
+                    <div class="input-group">\n\
+                      <input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">\n\
+                      <div class="input-group-button">\n\
+                        <input type="submit" name="submit" value="Search" class="button">\n\
+                        <input type="hidden" name="db" value="allebi" checked="checked">\n\
+                        <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">\n\
+                      </div>\n\
+                    </div>\n\
+                  </fieldset>\n\
+                </form>\n\
+              </div>\n\
+            </li>\n\
+            <li class="float-right show-for-medium embl-selector">\n\
+              <button class="button" type="button" data-toggle="embl-dropdown">Hinxton</button>\n\
+              <div id="embl-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">\n\
+                to come.\n\
+              </div>\n\
+            </li>\n\
+          </ul>\n\
+        </div>\n\
+      </nav>\n\
+    </div>\n';
 
     jQuery('#global-masthead').remove();
     jQuery('#local-masthead').prepend(newGloablMasthead);
@@ -268,20 +328,35 @@ function testMigration(steppingTimeSpeed) {
   }, steppingTime()); 
 
   setTimeout(function(){
-    jQuery('ul#local-nav').addClass('dropdown menu float-left');
+    jQuery('ul#local-nav').addClass('dropdown menu float-left columns medium-12');
     jQuery('ul#local-nav').attr({'data-dropdown-menu':true});
-    console.log('Local-nav: adding classes .dropdown.menu.float-left have also added attribute data-dropdown-menu for mobile');
-    console.log('------------------\n');
+    console.log('Local-nav: ');
+    console.log(' - adding classes .dropdown.menu.float-left.columns.medium-12 ');
+    console.log(' - adding attribute data-dropdown-menu for mobile');
   }, steppingTime()); 
 
   setTimeout(function(){
     var localNavTabs = jQuery('#local-masthead > nav').detach();
     jQuery('div.masthead.row').append(localNavTabs);
-    console.log('Local-nav: I\'ve moved the local nav tabs inside the new .masthead.row div');
+    console.log(' - moved the local nav tabs inside the new .masthead.row div');
+  }, steppingTime()); 
+
+  setTimeout(function(){
+    if (jQuery('ul#local-nav li.functional').length > 0) {
+      jQuery('ul#local-nav li.functional').addClass('float-right');
+      console.log(' - add class .float-right to .functional tabs');
+    }
     console.log('------------------\n');
   }, steppingTime()); 
 
   setTimeout(function(){
+
+    if (jQuery('#local-search').length == 0) {
+      console.log('Local-search: it looks like this page doesn\'t have a local search box. Skipping...');
+      console.log('------------------\n');
+      return;
+    }
+
     $.fn.changeElementType = function(newType) {
       var attrs = {};
 
@@ -333,7 +408,7 @@ function testMigration(steppingTimeSpeed) {
     jQuery('head').append('<script src="https://ebiwd.github.io/EBI-Framework/libraries/foundation-6/js/foundation.js"></script>\n');
     jQuery('head').append('<script src="https://ebiwd.github.io/EBI-Framework/js/foundationExtendEBI.js"></script>\n');
 
-    console.log('Javascript: I\'ve added (but not executed) the Foundation JS.');
+    console.log('Javascript: I\'ve added (but not executed) the Foundation JS. Invoke with runJS()');
     console.log('------------------\n');
   }, steppingTime()); 
 
