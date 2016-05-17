@@ -9,7 +9,13 @@
     fileref.setAttribute("src", "//ebiwd.github.io/EBI-Framework/js/testMigration.js")
     document.getElementsByTagName("head")[0].appendChild(fileref)
 
-  Originall authored on 2016-05-16
+
+1) Swap out the old compliance CSS/JS
+2) Swap out the omega grid for the Foundation grid
+3) Some nesting changes for the global/local header
+4) A handful of minor CSS edits may be needed for any Service-specific oddities
+
+  Originally authored on 2016-05-16
   For assistance contact Ken Hawkins in Webdev 
       or post to Github https://github.com/ebiwd/EBI-Framework/issues
  */
@@ -50,7 +56,6 @@ function testMigration(steppingTimeSpeed) {
     jQuery('link[href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-global.css"]').remove();
     jQuery('link[href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-visual.css"]').remove();
     jQuery('link[href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/984-24-col-fluid.css"]').remove();
-
 
     jQuery('link[href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css"]').remove();
     jQuery('link[href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/boilerplate-style.css"]').remove();
@@ -227,14 +232,17 @@ function testMigration(steppingTimeSpeed) {
       console.log(' - #intro should use the new .callout');
     }
 
+    if (jQuery('div.rounded-corner').length > 0) {
+      jQuery('div.rounded-corner').removeClass('rounded-corner').addClass('callout');
+      console.log(' - div.rounded-corner should use the new .callout');
+    }
+
     if (jQuery('.shortcuts.transparent ul.split').length > 0) {
       jQuery('.shortcuts.transparent ul.split').removeClass().addClass('columns small-6 no-bullet');
       console.log(' - the popular list should drop .split in favour of .columns.small-6.no-bullet /n' +
                   '   alternativley: .columns.small-6.menu.vertical.no-pad-left and add .icon-bullet to each li');
     }
-
     console.log('------------------\n');
-
   }, steppingTime()); 
 
 
