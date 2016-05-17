@@ -484,6 +484,8 @@ a:active {
   #local-title.logo-only img,
   #local-title.logo-title img,
   #local-title.logo-title-strapline img { float: left; margin: 1em 0.69em 0.69em; }
+  #local-title.logo-title img,
+  #local-title.logo-title-strapline img  { position: relative; left: -5.5rem; margin-right: -5rem; }
   #local-title.logo-title span,
   #local-title.logo-title-strapline span { display:block; margin: 1em 0 0.69em 0; float:left; }
   #local-title.logo-title span { margin-top: 2.3em; }
