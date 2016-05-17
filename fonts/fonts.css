@@ -107,40 +107,40 @@ html.fontface .icon {
 html.fontface  .icon:before {
   padding-right: .25rem;
 }
-html.fontface  .icon-conceptual,
+html.fontface  i.icon-conceptual,
 html.fontface  .icon-conceptual:before {
   font-family: 'EBI-Conceptual';
   font-size: 138.5%;
   content: attr(data-icon);
 }
-html.fontface  .icon-functional,
+html.fontface  i.icon-functional,
 html.fontface  .icon-functional:before {
   font-family: 'EBI-Functional';
   content: attr(data-icon);
 }
 /*html.fontface  .icon-static:before,*/ /* deprecated, included for back-compatibility */
-html.fontface  .icon-generic,
+html.fontface  i.icon-generic,
 html.fontface  .icon-generic:before {
   font-family: 'EBI-Generic';
   content: attr(data-icon);
 }
-html.fontface  .icon-species,
+html.fontface  i.icon-species,
 html.fontface  .icon-species:before {
   font-family: 'EBI-Species';
   content: attr(data-icon);
 }
-html.fontface  .icon-socialmedia,
+html.fontface  i.icon-socialmedia,
 html.fontface  .icon-socialmedia:before {
   font-family: 'EBI-SocialMedia';
   content: attr(data-icon);
 }
-html.fontface  .icon-fileformats,
+html.fontface  i.icon-fileformats,
 html.fontface  .icon-fileformats:before {
   font-family: 'EBI-FileFormats';
   font-size: 123.1%;
   content: attr(data-icon);
 }
-html.fontface  .icon-chemistry,
+html.fontface  i.icon-chemistry,
 html.fontface  .icon-chemistry:before {
   font-family: 'EBI-Chemistry';
   content: attr(data-icon);
@@ -173,7 +173,7 @@ html.fontface .icon-s13:before { color: #fa9b39; }  /* RSS */
 
 /* Compatibility with legacy compliance theme.
    RWD framework now uses i.icon-functionality spec. */
-html.fontface  a.icon-conceptual,
+/* html.fontface  a.icon-conceptual,
 html.fontface  a.icon-functional,
 html.fontface  a.icon-species,
 html.fontface  a.socialmedia,
@@ -187,6 +187,6 @@ html.fontface  h3.socialmedia,
 html.fontface  h3.icon-chemistry,
 html.fontface  h3.icon-fileformats,
 html.fontface  h3.icon-generic { font-family: 'helvetica', sans-serif; }
-
+ */
 
 
