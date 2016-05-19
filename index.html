@@ -429,6 +429,12 @@
                       <form id="local-search" name="local-search" action="[search-action]" method="post">
                         <h4>Search this project</h4>
                         <fieldset>
+                          <div class="input-group">
+                            <input type="text" name="first" id="local-searchbox">
+                            <div class="input-group-button">
+                              <input type="submit" name="submit" value="1" class="button icon icon-functional">
+                            </div>
+                          </div>
                           <input type="text" name="first" id="local-searchbox">
                           <input type="submit" name="submit" value="1" class="button icon icon-functional">
                           <small class="">
@@ -436,7 +442,7 @@
                             <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>
                             |
                             <!-- Include some example searchterms - keep them short and few. -->
-                            <a href="#" data-toggle="search-example-dropdown">See a few examples</a>
+                            <a href="#" data-toggle="search-example-dropdown">Examples</a>
                           </small>
                           <div class="dropdown-pane" id="search-example-dropdown" data-dropdown data-options="hoverPane:true;" data-hover="true">
                             <ul>
