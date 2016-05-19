@@ -108,39 +108,46 @@ html.fontface  .icon:before {
   padding-right: .25rem;
 }
 html.fontface  i.icon-conceptual,
+html.fontface  input.icon-conceptual,
 html.fontface  .icon-conceptual:before {
   font-family: 'EBI-Conceptual';
   font-size: 138.5%;
   content: attr(data-icon);
 }
 html.fontface  i.icon-functional,
+html.fontface  input.icon-functional,
 html.fontface  .icon-functional:before {
   font-family: 'EBI-Functional';
   content: attr(data-icon);
 }
 /*html.fontface  .icon-static:before,*/ /* deprecated, included for back-compatibility */
 html.fontface  i.icon-generic,
+html.fontface  input.icon-generic,
 html.fontface  .icon-generic:before {
   font-family: 'EBI-Generic';
   content: attr(data-icon);
 }
 html.fontface  i.icon-species,
+html.fontface  input.icon-species,
 html.fontface  .icon-species:before {
   font-family: 'EBI-Species';
   content: attr(data-icon);
 }
 html.fontface  i.icon-socialmedia,
+html.fontface  input.icon-socialmedia,
 html.fontface  .icon-socialmedia:before {
   font-family: 'EBI-SocialMedia';
   content: attr(data-icon);
 }
 html.fontface  i.icon-fileformats,
+html.fontface  input.icon-fileformats,
 html.fontface  .icon-fileformats:before {
   font-family: 'EBI-FileFormats';
   font-size: 123.1%;
   content: attr(data-icon);
 }
 html.fontface  i.icon-chemistry,
+html.fontface  input.icon-chemistry,
 html.fontface  .icon-chemistry:before {
   font-family: 'EBI-Chemistry';
   content: attr(data-icon);
