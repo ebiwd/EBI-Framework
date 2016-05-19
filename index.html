@@ -1027,13 +1027,12 @@
                 <!-- Include for table sorting -->
                 <!-- Note that we've loaded this with "defer", this technique may not be appropriate for your uses.
                      If not, load this JS after jQuery. -->
-                <script src="libraries/tablesorter/jquery.tablesorter.min.js" defer></script>
+                <script defer src="libraries/tablesorter/jquery.tablesorter.min.js"></script>
                 <script type="text/javascript">
                   window.onload = function() {
                     $(document).ready(function() { 
                         $("#table-sort-demo").tablesorter(); 
-                      } 
-                    ); 
+                    }); 
                   }
                 </script>
 
@@ -1042,7 +1041,178 @@
               <section id="live-filtering" data-magellan-target="live-filtering">
                 <h2>Live filtering</h2>
 
-                <p>SEARCH IT NOW!</p>
+                <p>If you have mutliple rows of data you'd like the use to be able to quickly sift through (perhaps combining with table sorting) we bundle the aptly named <a href="https://github.com/mikemerritt/LiveFilter">LiveFilter plugin</a>. It is not loaded by default and you'll need to load <code>LiveFilter/js/jquery.liveFilter.js</code>.</p>
+
+                <p>There are many such JS plugins available, but we found this one to work well and do just enough and <a href="https://github.com/mikemerritt/LiveFilter/pull/14/commits/6f6023d108d4b3a70157392f3231e245610dcc72">easily modldable to our needs</a>.</p>
+
+                <div class="row">
+
+                  <div id="livefilterdemo" class="callout columns medium-10 medium-push-1">
+                    <input class="filter" type="text" value="" />
+                    <!-- <input class="reset" type="reset" value="ddd" /> -->
+
+                    <div class="row small-up-1 medium-up-2 large-up-3" data-equalizer>
+
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                          <span class="label label-success ng-binding">0 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
+                          <h5 class="epmc_citation_title">
+                            <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/24455489">Evidence That GRIN2A Mutations in Melanoma Correlate with Decreased Survival.</a>
+                          </h5>
+                          <div class="epmc_citation_subdata small">
+                            <div class="epmc_citation_authors">
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;D'mello SA">
+                                D'mello SA</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Flanagan JU">Flanagan JU</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Green TN">Green TN</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Leung EY">Leung EY</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Furneaux CE">Furneaux CE</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;During MJ">During MJ</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Finlay GJ">Finlay GJ</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Baguley BC">Baguley BC</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Kalev-Zylinska ML">Kalev-Zylinska ML</a>
+                            </div>
+                            <div class="epmc_citation_journal">
+                              <a href="//europepmc.org/search?query=JOURNAL:&quot;Front Oncol&quot;" class="epmc_citation_link ng-binding">Front Oncol</a> <span class="ng-binding">2014 3<!-- ngIf: citation.issue -->:333</span>
+                            </div>
+                            <div class="epmc_citation_source ng-binding">PMID:24455489 <!-- ngIf: citation.pmcid --><span ng-if="citation.pmcid" class="ng-binding ng-scope">PMCID:PMC3888952</span><!-- end ngIf: citation.pmcid --></div>
+                          </div>
+                        </div><!-- end ngRepeat: citation in citations.all track by $index -->
+
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                          <span class="label label-success ng-binding">10 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
+                          <h5 class="epmc_citation_title">
+                            <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/24275569">An enzyme assisted RP-RPLC approach for in-depth analysis of human liver phosphoproteome.</a>
+                          </h5>
+                          <div class="epmc_citation_subdata small">
+                            <div class="epmc_citation_authors">
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Bian Y">
+                                Bian Y</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Song C">Song C</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Cheng K">Cheng K</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Dong M">Dong M</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Wang F">Wang F</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Huang J">Huang J</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Sun D">Sun D</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Wang L">Wang L</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Ye M">Ye M</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Zou H">Zou H</a>
+                            </div>
+                            <div class="epmc_citation_journal">
+                              <a href="//europepmc.org/search?query=JOURNAL:&quot;J Proteomics&quot;" class="epmc_citation_link ng-binding">J Proteomics</a> <span class="ng-binding">2014 96<!-- ngIf: citation.issue -->:253-262</span>
+                            </div>
+                            <div class="epmc_citation_source ng-binding">PMID:24275569 <!-- ngIf: citation.pmcid --></div>
+                          </div>
+                        </div><!-- end ngRepeat: citation in citations.all track by $index -->
+
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                          <span class="label label-success ng-binding">2 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
+                          <h5 class="epmc_citation_title">
+                            <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/23907581">Lys63-linked polyubiquitination of BRAF at lysine 578 is required for BRAF-mediated signaling.</a>
+                          </h5>
+                          <div class="epmc_citation_subdata small">
+                            <div class="epmc_citation_authors">
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;An L">
+                                An L</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Jia W">Jia W</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Yu Y">Yu Y</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Zou N">Zou N</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Liang L">Liang L</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Li G">Li G</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Yang J">Yang J</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Zhang H">Zhang H</a>
+                            </div>
+                            <div class="epmc_citation_journal">
+                              <a href="//europepmc.org/search?query=JOURNAL:&quot;Sci Rep&quot;" class="epmc_citation_link ng-binding">Sci Rep</a> <span class="ng-binding">2013 3<!-- ngIf: citation.issue -->:2344</span>
+                            </div>
+                            <div class="epmc_citation_source ng-binding">PMID:23907581 <!-- ngIf: citation.pmcid --><span ng-if="citation.pmcid" class="ng-binding ng-scope">PMCID:PMC3731650</span><!-- end ngIf: citation.pmcid --></div>
+                          </div>
+                        </div><!-- end ngRepeat: citation in citations.all track by $index -->
+
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                          <span class="label label-success ng-binding">14 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
+                          <h5 class="epmc_citation_title">
+                            <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/1630826">Chromosomal assignment of two human B-raf(Rmil) proto-oncogene loci: B-raf-1 encoding the p94Braf/Rmil and B-raf-2, a processed pseudogene.</a>
+                          </h5>
+                          <div class="epmc_citation_subdata small">
+                            <div class="epmc_citation_authors">
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Eychène A">
+                                Eychène A</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Barnier JV">Barnier JV</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Apiou F">Apiou F</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Dutrillaux B">Dutrillaux B</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Calothy G">Calothy G</a>
+                            </div>
+                            <div class="epmc_citation_journal">
+                              <a href="//europepmc.org/search?query=JOURNAL:&quot;Oncogene&quot;" class="epmc_citation_link ng-binding">Oncogene</a> <span class="ng-binding">1992 7<!-- ngIf: citation.issue --><span ng-if="citation.issue" class="ng-binding ng-scope">(8)</span><!-- end ngIf: citation.issue -->:1657-1660</span>
+                            </div>
+                            <div class="epmc_citation_source ng-binding">PMID:1630826 <!-- ngIf: citation.pmcid --></div>
+                          </div>
+                        </div><!-- end ngRepeat: citation in citations.all track by $index -->
+
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                          <span class="label label-success ng-binding">54 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
+                          <h5 class="epmc_citation_title">
+                            <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/3043188">B-raf, a new member of the raf family, is activated by DNA rearrangement.</a>
+                          </h5>
+                          <div class="epmc_citation_subdata small">
+                            <div class="epmc_citation_authors">
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Ikawa S">
+                                Ikawa S</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Fukui M">Fukui M</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Ueyama Y">Ueyama Y</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Tamaoki N">Tamaoki N</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Yamamoto T">Yamamoto T</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Toyoshima K">Toyoshima K</a>
+                            </div>
+                            <div class="epmc_citation_journal">
+                              <a href="//europepmc.org/search?query=JOURNAL:&quot;Mol Cell Biol&quot;" class="epmc_citation_link ng-binding">Mol Cell Biol</a> <span class="ng-binding">1988 8<!-- ngIf: citation.issue --><span ng-if="citation.issue" class="ng-binding ng-scope">(6)</span><!-- end ngIf: citation.issue -->:2651-2654</span>
+                            </div>
+                            <div class="epmc_citation_source ng-binding">PMID:3043188 <!-- ngIf: citation.pmcid --><span ng-if="citation.pmcid" class="ng-binding ng-scope">PMCID:PMC363468</span><!-- end ngIf: citation.pmcid --></div>
+                          </div>
+                        </div><!-- end ngRepeat: citation in citations.all track by $index -->
+
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                          <span class="label label-success ng-binding">39 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
+                          <h5 class="epmc_citation_title">
+                            <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/11410590">Serum- and glucocorticoid-inducible kinase SGK phosphorylates and negatively regulates B-Raf.</a>
+                          </h5>
+                          <div class="epmc_citation_subdata small">
+                            <div class="epmc_citation_authors">
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Zhang BH">
+                                Zhang BH</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Tang ED">Tang ED</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Zhu T">Zhu T</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Greenberg ME">Greenberg ME</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Vojtek AB">Vojtek AB</a>
+                              <a class="epmc_citation_link" target="_blank" href="//europepmc.org/search?query=AUTH:&quot;Guan KL">Guan KL</a>
+                            </div>
+                            <div class="epmc_citation_journal">
+                              <a href="//europepmc.org/search?query=JOURNAL:&quot;J Biol Chem&quot;" class="epmc_citation_link ng-binding">J Biol Chem</a> <span class="ng-binding">2001 276<!-- ngIf: citation.issue --><span ng-if="citation.issue" class="ng-binding ng-scope">(34)</span><!-- end ngIf: citation.issue -->:31620-31626</span>
+                            </div>
+                            <div class="epmc_citation_source ng-binding">PMID:11410590 <!-- ngIf: citation.pmcid --></div>
+                          </div>
+                        </div><!-- end ngRepeat: citation in citations.all track by $index -->
+
+                    </div>
+
+                    <!-- Include live filtering -->
+                    <!-- Note that we've loaded this with "defer", this technique may not be appropriate for your uses.
+                         If not, load this JS after jQuery. -->
+                    <script defer src="libraries/LiveFilter/js/jquery.liveFilter.js"></script>
+                    <script type="text/javascript">
+                      window.onload = function() {
+                        $(document).ready(function() { 
+                          $('#livefilterdemo').liveFilter({
+                            fitlerTargetCustomDiv: 'div.live-filter-target-granularity'
+                          });
+                        }); 
+                      }
+                    </script>
+
+                  </div> <!-- /livefilter -->
+
+                </div> <!-- /row -->
+
 
 
               </section>
