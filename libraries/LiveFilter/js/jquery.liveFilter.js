@@ -5,6 +5,11 @@
 /*        https://github.com/mikemerritt/LiveFilter        */
 /***********************************************************/
 
+/*
+  NOTE: this has been forked from master for EBI needs:
+  https://github.com/mikemerritt/LiveFilter/pull/14/commits/6f6023d108d4b3a70157392f3231e245610dcc72
+*/
+
 (function($){
   $.fn.liveFilter = function (settings) {
 
@@ -12,7 +17,9 @@
     var defaults = {
       delay: 0,
       defaultText: 'Type to Filter:',
+      resetText: 'Reset',
       noMatches: 'No Matches',
+      fitlerTargetCustomDiv: 'div',
       hideDefault: false,
       addInputs: false,
       ignore: false,
@@ -29,7 +36,7 @@
 
     // Cache our wrapper element and find our target list.
     var wrap = $(this);
-    var filterTarget = wrap.find('ul, ol, table');
+    var filterTarget = wrap.find('ul, ol, table, div');
 
     // Add no matches text.
     wrap.append('<div class="nomatches">'+options.noMatches+'</div>');
@@ -41,6 +48,8 @@
       child = 'li';
     } else if (filterTarget.is('table')) {
       child = 'tbody tr';
+    } else {
+      child = options.fitlerTargetCustomDiv;
     }
 
     // Hide the list/table by default. If not being hidden apply zebra striping if needed.
@@ -52,7 +61,7 @@
 
     // Add inputs if required
     if (options.addInputs === true) {
-      var markup = '<input class="filter" type="text" value="" /><input class="reset" type="reset" value="Reset!" />';
+      var markup = '<input class="filter" type="text" value="" /><input class="reset" type="reset" value="' + options.resetText + '" />';
       wrap.prepend(markup);
     }
 
@@ -70,7 +79,7 @@
           });
         } else if (options.hideDefault === true) {
           list.each(function(i) {
-            $(this).hide();
+            $(this).hide(1000);
           });
         }
 
@@ -138,7 +147,6 @@
           // Iterate through list and show/hide the proper elements.
           list.each(function(i) {
             text = $(this).text().toLowerCase();
-
               // Non consecutive filtering
               for (var t = 0; t < words.length; t++) {
                 if (text.indexOf(words[t]) < 0) {
@@ -153,9 +161,8 @@
                 visible ++;
                 $(this).show();
               } else if (match === false) {
-                $(this).hide();
+                $(this).fadeOut(100);
               }
-
           });
 
           if (visible === 0) {
