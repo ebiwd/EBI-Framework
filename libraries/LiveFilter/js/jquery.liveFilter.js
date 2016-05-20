@@ -36,7 +36,7 @@
 
     // Cache our wrapper element and find our target list.
     var wrap = $(this);
-    var filterTarget = wrap.find('ul, ol, table, div');
+    var filterTarget = wrap.find('ul, ol, table,' + options.fitlerTargetCustomDiv);
 
     // Add no matches text.
     wrap.append('<div class="nomatches">'+options.noMatches+'</div>');
@@ -44,12 +44,12 @@
     nomatches.hide();
 
     // Determine our child element type.
-    if (filterTarget.is('ul') || filterTarget.is('ol')) {
+    if (filterTarget.is(options.fitlerTargetCustomDiv)) {
+      child = options.fitlerTargetCustomDiv;
+    } else if (filterTarget.is('ul') || filterTarget.is('ol')) {
       child = 'li';
     } else if (filterTarget.is('table')) {
       child = 'tbody tr';
-    } else {
-      child = options.fitlerTargetCustomDiv;
     }
 
     // Hide the list/table by default. If not being hidden apply zebra striping if needed.
