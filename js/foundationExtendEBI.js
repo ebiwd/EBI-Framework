@@ -19,7 +19,7 @@
     $(this)[tog(this.offsetWidth-18 < e.clientX-this.getBoundingClientRect().left)]('onX');
   }).on('touchstart click', '.onX', function( ev ){
     ev.preventDefault();
-    $(this).removeClass('x onX').val('').change();
+    $(this).removeClass('x onX').val('').change().keyup();
   });
 
   $.fn.foundationExtendEBI = function() {
