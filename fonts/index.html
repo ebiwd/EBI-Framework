@@ -236,11 +236,32 @@
                 <p>jQuery and the Foundation JS library are not required. Strictly, JavaScript is not needed to use the icon fonts, but icon shortcode features will not execture if the user has JavaScript disabled.</p>
                 
 
+                <!-- Include live filtering -->
+                <script defer src="../libraries/LiveFilter/js/jquery.liveFilter.js"></script>
+                <script type="text/javascript">
+                  window.onload = function() {
+                    $(document).ready(function() { 
+                      $('#thegallery').liveFilter({
+                        fitlerTargetCustomDiv: 'tbody tr',
+                        defaultText: 'Search for an icon',
+                        noMatches: ''
+                      });
+                    }); 
+                  }
+                </script>
+
                 <div class="row" id="thegallery">
                   <div class="columns medium-3" data-sticky-container>
                     <div class="sticky" data-sticky data-sticky-on="medium" data-top-anchor="thegallery" data-btm-anchor="thegallery:bottom" data-margin-top="3">
                       <ul class="menu vertical" data-magellan>
                         <h3>The gallery</h3>
+                        <!-- <label class="">Type to filter these paper references</label> -->
+                        <div class="input-group">
+                          <span class="input-group-label"><i data-icon="1" class="icon icon-functional"></i></span>
+                          <input class="filter clearable input-group-field" type="text" value="" />
+                        </div>
+                        <!-- <input class="reset" type="reset" value="ddd" /> -->
+
                         <li><a href="#EBI-Generic">EBI-Generic</a></li>
                         <li><a href="#EBI-Chemistry">EBI-Chemistry</a></li>
                         <li><a href="#EBI-FileFormats">EBI-FileFormats</a></li>
@@ -251,7 +272,8 @@
                     </div>
                   </div>
 
-                  <div class="columns medium-9">
+                  <div id="icon-font-rows" class="columns medium-9">
+
                     <table class="responsive-table">
                       <thead>
                         <tr>
