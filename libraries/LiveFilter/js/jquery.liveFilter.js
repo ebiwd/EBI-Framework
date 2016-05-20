@@ -79,7 +79,7 @@
           });
         } else if (options.hideDefault === true) {
           list.each(function(i) {
-            $(this).hide(1000);
+            $(this).hide();
           });
         }
 
@@ -108,16 +108,20 @@
       input.attr('value', options.defaultText);
 
       input.focus(function() {
-        var curVal = $(this).attr('value');
-        if (curVal === options.defaultText) {
-          $(this).attr('value', '');
+        var currentVal = $(this).val();
+        if (currentVal === options.defaultText) {
+          $(this).val('');
         }
       });
 
       input.blur(function() {
-        var curVal = $(this).attr('value');
-        if (curVal === '') {
-          $(this).attr('value', options.defaultText);
+        // var defaultVal = $(this).attr('value'); // sets the programatic value
+        // if (defaultVal === '') {
+        //   $(this).attr('value', options.defaultText);
+        // }
+        var currentVal = $(this).val(); 
+        if (currentVal === '') {
+          $(this).val(options.defaultText);
         }
       });
 

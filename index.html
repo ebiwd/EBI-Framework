@@ -1045,10 +1045,12 @@
 
                 <p>There are many such JS plugins available, but we found this one to work well and do just enough and <a href="https://github.com/mikemerritt/LiveFilter/pull/14/commits/6f6023d108d4b3a70157392f3231e245610dcc72">easily modldable to our needs</a>.</p>
 
+                <p>Note: The sample <code>input</code> has had <code>.clearable</code> added so clear button shows after text has been added.</p>
+
                 <div class="row">
 
                   <div id="livefilterdemo" class="callout columns medium-10 medium-push-1">
-                    <input class="filter" type="text" value="" />
+                    <input class="filter clearable" type="text" value="" />
                     <!-- <input class="reset" type="reset" value="ddd" /> -->
 
                     <div class="row small-up-1 medium-up-2 large-up-3" data-equalizer>
@@ -1203,7 +1205,9 @@
                       window.onload = function() {
                         $(document).ready(function() { 
                           $('#livefilterdemo').liveFilter({
-                            fitlerTargetCustomDiv: 'div.live-filter-target-granularity'
+                            fitlerTargetCustomDiv: 'div.live-filter-target-granularity',
+                            defaultText: 'Type to filter these paper references',
+                            noMatches: '<p>No matching papers found.</p><a class="button" href="#">You could add a link to advanced search</a> '
                           });
                         }); 
                       }
