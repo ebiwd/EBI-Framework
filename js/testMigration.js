@@ -336,9 +336,13 @@ function testMigration(steppingTimeSpeed) {
   }, steppingTime()); 
 
   setTimeout(function(){
+    console.log('Local-nav: ');
+    if (jQuery('nav ul#gxaLocalNav').length > 0) {
+      jQuery('nav ul#gxaLocalNav').attr('id','local-nav');
+      console.log(' - the nav ul doesn\'t have the spec local-nav id, changing this ...');
+    }
     jQuery('ul#local-nav').addClass('dropdown menu float-left columns medium-12');
     jQuery('ul#local-nav').attr({'data-dropdown-menu':true});
-    console.log('Local-nav: ');
     console.log(' - adding classes .dropdown.menu.float-left.columns.medium-12 ');
     console.log(' - adding attribute data-dropdown-menu for mobile');
   }, steppingTime()); 
@@ -488,5 +492,6 @@ function diffUsingJS() {
 }
 
 
+// Auto run
 // testMigration(100);
 
