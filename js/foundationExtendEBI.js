@@ -10,6 +10,18 @@
   var localMenuOption = $('ul.dropdown.menu.float-left').html();
   $('ul.dropdown.menu.float-left').prepend('<li class="show-for-small-only"><a href="#">Also in this section</a><ul class="menu">' + localMenuOption + '</ul></li>');
 
+  // Clearable text inputs
+  // Also need JS, via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text 
+  function tog(v){return v?'addClass':'removeClass';} 
+  $(document).on('input', '.clearable', function(){
+    $(this)[tog(this.value)]('x');
+  }).on('mousemove', '.x', function( e ){
+    $(this)[tog(this.offsetWidth-18 < e.clientX-this.getBoundingClientRect().left)]('onX');
+  }).on('touchstart click', '.onX', function( ev ){
+    ev.preventDefault();
+    $(this).removeClass('x onX').val('').change();
+  });
+
   $.fn.foundationExtendEBI = function() {
     // Link overlay images
     $(function() {
