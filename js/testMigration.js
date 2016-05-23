@@ -53,13 +53,13 @@ function testMigration(steppingTimeSpeed) {
 
   setTimeout(function(){
     // Reset and remove old EBI compliance
-    jQuery('link[href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-global.css"]').remove();
-    jQuery('link[href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-visual.css"]').remove();
-    jQuery('link[href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/984-24-col-fluid.css"]').remove();
+    jQuery('link[href$="/ebi-global.css"]').remove();
+    jQuery('link[href$="/ebi-visual.css"]').remove();
+    jQuery('link[href$="/984-24-col-fluid.css"]').remove();
 
-    jQuery('link[href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css"]').remove();
-    jQuery('link[href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/boilerplate-style.css"]').remove();
-    jQuery('link[href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl-noboilerplate.css"]').remove();
+    jQuery('link[href$="/ebi-fluid-embl.css"]').remove();
+    jQuery('link[href$="/boilerplate-style.css"]').remove();
+    jQuery('link[href$="/ebi-fluid-embl-noboilerplate.css"]').remove();
     console.log('CSS: Removed old EBI boilerplate-style sheets.');
     console.log('------------------\n');
   }, steppingTime()); 
