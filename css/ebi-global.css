@@ -148,39 +148,36 @@ a:active {
     border-bottom: none;
   }
 
+  #global-masthead ul#global-nav li.active a,
+  #global-masthead ul#global-nav li.active-trail a {
+    background: rgb(0,0,0);
+  }
+
   /* custom colour for Home */
   #global-masthead ul li#home a:hover,
   #global-masthead ul li#home a:active,
-  #global-masthead ul li#home a:focus,
-  #global-masthead ul li.active#home a,
-  #global-masthead ul li.active-trail#home a {
+  #global-masthead ul li#home a:focus {
     background-color: rgb(0,124,130);
   }
 
   /* custom colour for Services */
   #global-masthead ul li#services a:hover,
   #global-masthead ul li#services a:active,
-  #global-masthead ul li#services a:focus,
-  #global-masthead ul li.active#services a,
-  #global-masthead ul li.active-trail#services a {
+  #global-masthead ul li#services a:focus {
     background-color: rgb(2,100,105);
   }
 
   /* custom colour for Research */
   #global-masthead ul li#research a:hover,
   #global-masthead ul li#research a:active,
-  #global-masthead ul li#research a:focus,
-  #global-masthead ul li#research.active a,
-  #global-masthead ul li#research.active-trail a {
+  #global-masthead ul li#research a:focus {
     background-color: rgb(109,171,73);
   }
 
   /* custom colour for Training */
   #global-masthead ul li#training a:hover,
   #global-masthead ul li#training a:active,
-  #global-masthead ul li#training a:focus,
-  #global-masthead ul li#training.active a,
-  #global-masthead ul li#training.active-trail a {
+  #global-masthead ul li#training a:focus {
     background-color: rgb(233,180,0);
   }
 
@@ -188,13 +185,9 @@ a:active {
   #global-masthead ul li#about a:hover,
   #global-masthead ul li#about a:active,
   #global-masthead ul li#about a:focus,
-  #global-masthead ul li#about.active a,
-  #global-masthead ul li#about.active-trail a,
   #global-masthead ul li#about-us a:hover,
   #global-masthead ul li#about-us a:active,
-  #global-masthead ul li#about-us a:focus,
-  #global-masthead ul li#about-us.active a,
-  #global-masthead ul li#about-us.active-trail a {
+  #global-masthead ul li#about-us a:focus {
     background-color: rgb(2,100,105);
   }
 
