@@ -546,6 +546,8 @@ a:active {
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: -.25rem;
+    position: relative;
+    top: 8px;
   }
 
   #global-footer p {
