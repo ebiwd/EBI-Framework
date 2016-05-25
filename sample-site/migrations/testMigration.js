@@ -85,11 +85,11 @@ function testMigration(steppingTimeSpeed) {
     // Define array of object pairs
     // [what we check for] [what we replace with]
     var colourPalettes = [
-                          { "original" : "link[href$=\"/embl-petrol-colours.css\"]", "new" : "//ebiwd.github.io/EBI-Framework/css/embl-petrol-colours.css" },
-                          { "original" : "link[href$=\"/ebi-industry-colours.css\"]", "new" : "//ebiwd.github.io/EBI-Framework/css/ebi-industry-colours.css" },
-                          { "original" : "link[href$=\"/ebi-research.colour.css\"]", "new" : "//ebiwd.github.io/EBI-Framework/css/ebi-research.colour.css" },
+                          { "original" : "link[href$=\"/embl-petrol-colours.css\"]",        "new" : "//ebiwd.github.io/EBI-Framework/css/embl-petrol-colours.css" },
+                          { "original" : "link[href$=\"/ebi-industry-colours.css\"]",       "new" : "//ebiwd.github.io/EBI-Framework/css/ebi-industry-colours.css" },
+                          { "original" : "link[href$=\"/ebi-research.colour.css\"]",        "new" : "//ebiwd.github.io/EBI-Framework/css/ebi-research.colour.css" },
                           { "original" : "link[href$=\"/ebi-services-about-colours.css\"]", "new" : "//ebiwd.github.io/EBI-Framework/css/ebi-services-about-colours.css" },
-                          { "original" : "link[href$=\"/ebi-training-colours.css\"]", "new" : "//ebiwd.github.io/EBI-Framework/css/ebi-training-colours.css" },
+                          { "original" : "link[href$=\"/ebi-training-colours.css\"]",       "new" : "//ebiwd.github.io/EBI-Framework/css/ebi-training-colours.css" },
                           { "original" : ".no-match", "new" : "//ebiwd.github.io/EBI-Framework/css/embl-petrol-colours.css" }
                         ];
     var i = 0;
