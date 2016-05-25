@@ -1,12 +1,12 @@
 /*
   To run, copy-paste the below line into your browser's console:
 
-  jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/js/testMigration.js"></script>\n');
+  jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/sample-site/migrations/testMigration.js"></script>\n');
 
   If your page does not have jQuery, you can load with four lines of vaniala JS:
     var fileref=document.createElement('script')
     fileref.setAttribute("type","text/javascript")
-    fileref.setAttribute("src", "//ebiwd.github.io/EBI-Framework/js/testMigration.js")
+    fileref.setAttribute("src", "//ebiwd.github.io/EBI-Framework/sample-site/migrations/testMigration.js")
     document.getElementsByTagName("head")[0].appendChild(fileref)
 
 
