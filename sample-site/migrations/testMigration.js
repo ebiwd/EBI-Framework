@@ -84,7 +84,7 @@ function testMigration(steppingTimeSpeed) {
 
     // do not use a colour palette on certain services 
     if (window.location.pathname.split('/')[1] === 'arrayexpress') {
-      break;
+      return;
     }
 
     // Define array of object pairs
