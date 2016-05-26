@@ -12,7 +12,6 @@
 
 (function($){
   $.fn.liveFilter = function (settings) {
-
     // Default settings
     var defaults = {
       delay: 0,
@@ -36,7 +35,7 @@
 
     // Cache our wrapper element and find our target list.
     var wrap = $(this);
-    var filterTarget = wrap.find('ul, ol, table,' + options.fitlerTargetCustomDiv);
+    var filterTarget = wrap.find('ul, ol, table,div');
 
     // Add no matches text.
     wrap.append('<div class="nomatches">'+options.noMatches+'</div>');
@@ -44,7 +43,7 @@
     nomatches.hide();
 
     // Determine our child element type.
-    if (filterTarget.is(options.fitlerTargetCustomDiv)) {
+    if (options.fitlerTargetCustomDiv) {
       child = options.fitlerTargetCustomDiv;
     } else if (filterTarget.is('ul') || filterTarget.is('ol')) {
       child = 'li';

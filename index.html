@@ -1027,11 +1027,11 @@
                      If not, load this JS after jQuery. -->
                 <script defer src="libraries/tablesorter/jquery.tablesorter.min.js"></script>
                 <script type="text/javascript">
-                  window.onload = function() {
+                  window.addEventListener('load',function() {
                     $(document).ready(function() { 
                         $("#table-sort-demo").tablesorter(); 
                     }); 
-                  }
+                  });
                 </script>
 
               </section>
@@ -1209,7 +1209,7 @@
                          If not, load this JS after jQuery. -->
                     <script defer src="libraries/LiveFilter/js/jquery.liveFilter.js"></script>
                     <script type="text/javascript">
-                      window.onload = function() {
+                      window.addEventListener('load',function() {
                         $(document).ready(function() { 
                           $('#livefilterdemo').liveFilter({
                             fitlerTargetCustomDiv: 'div.live-filter-target-granularity',
@@ -1217,7 +1217,7 @@
                             noMatches: '<p>No matching papers found.</p><a class="button" href="#">You could add a link to advanced search</a> '
                           });
                         }); 
-                      }
+                      });
                     </script>
 
                   </div> <!-- /livefilter -->
