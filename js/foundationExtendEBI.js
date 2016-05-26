@@ -53,12 +53,16 @@
           return true; //exit
         }
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
+          var target = $(this.hash),
+              targetName = this.hash;
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
             $('html,body').animate({
               scrollTop: target.offset().top - 40
-            }, 1000);
+            }, {
+              duration: 1000,
+              complete: function(){ window.location.hash = targetName; }
+            });
             return false;
           }
         }
