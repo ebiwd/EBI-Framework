@@ -81,10 +81,11 @@ function testMigration(steppingTimeSpeed) {
 
   setTimeout(function(){
     // Service colour updating
+    console.log('Service colours:');
 
     // do not use a colour palette on certain services 
     if (window.location.pathname.split('/')[1] === 'arrayexpress') {
-      console.log('Service colours: I have your site as one that has it\'s own special colours, I won\'t do anything.');
+      console.log(' - I have your site as one that has it\'s own special colours, I won\'t do anything.');
       console.log(' - Consider using the standard colour implementation format: https://github.com/ebiwd/EBI-Framework/blob/gh-pages/css/colour-template.css');
       console.log('------------------\n');
       return;
@@ -109,11 +110,11 @@ function testMigration(steppingTimeSpeed) {
     if (i < colourPalettes.length) {
       jQuery(colourPalettes[i].original).remove();
       jQuery('head').append('<link rel="stylesheet" href="' + colourPalettes[i].new + '" type="text/css" />\n');
-      console.log('Service colours: Found ' + colourPalettes[i].original + ', and replaced with ' + colourPalettes[i].new);
+      console.log(' - Found ' + colourPalettes[i].original + ', and replaced with ' + colourPalettes[i].new);
     } else {
       // if no match, we use default EBI
       jQuery('head').append('<link rel="stylesheet" href="' + colourPalettes[colourPalettes.length-1].new + '" type="text/css" />\n');
-      console.log('Service colours: Not sure what service colours are meant to be used, adding default EBI Petrol palette: ' + colourPalettes[colourPalettes.length-1].new);
+      console.log(' - Not sure what service colours are meant to be used, adding default EBI Petrol palette: ' + colourPalettes[colourPalettes.length-1].new);
     }
     console.log('------------------\n');
   }, steppingTime()); 
