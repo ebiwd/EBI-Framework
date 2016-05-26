@@ -82,6 +82,11 @@ function testMigration(steppingTimeSpeed) {
   setTimeout(function(){
     // Service colour updating
 
+    // do not use a colour palette on certain services 
+    if (window.location.pathname.split('/')[1] === 'arrayexpress') {
+      break;
+    }
+
     // Define array of object pairs
     // [what we check for] [what we replace with]
     var colourPalettes = [
