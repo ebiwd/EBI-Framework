@@ -84,6 +84,9 @@ function testMigration(steppingTimeSpeed) {
 
     // do not use a colour palette on certain services 
     if (window.location.pathname.split('/')[1] === 'arrayexpress') {
+      console.log('Service colours: I have your site as one that has it\'s own special colours, I won\'t do anything.');
+      console.log(' - Consider using the standard colour implementation format: https://github.com/ebiwd/EBI-Framework/blob/gh-pages/css/colour-template.css');
+      console.log('------------------\n');
       return;
     }
 
