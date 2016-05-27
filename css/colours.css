@@ -1,0 +1,22 @@
+/*
+  Colour palette using standard CSS custom properties
+ */
+:root {
+  --ebi-colour-dark: #222;
+  --ebi-colour-light: #f8f8f8;
+  --ebi-colour-dark-grey: #444;
+  --ebi-colour-light-grey: #f7f7f7;
+  --ebi-colour-light-green: #6dab49;
+  --ebi-colour-dark-green: #026469;
+  --ebi-colour-turquoise: #007c82;
+  --ebi-colour-yellow: #e9b400;
+  --ebi-colour-orange: #fb6a2a;
+  --ebi-colour-blue: #0086b4;
+
+  --ebi-colour-main: var(--ebi-colour-turquoise);
+  --ebi-colour-services: var(--ebi-colour-dark-green);
+  --ebi-colour-research: var(--ebi-colour-light-green);
+  --ebi-colour-training: var(--ebi-colour-yellow);
+  --ebi-colour-industry: var(--ebi-colour-blue);
+  --ebi-colour-elixir: var(--ebi-colour-orange);
+}
