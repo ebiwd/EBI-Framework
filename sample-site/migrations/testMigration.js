@@ -94,12 +94,12 @@ function testMigration(steppingTimeSpeed) {
     // Define array of object pairs
     // [what we check for] [what we replace with]
     var colourPalettes = [
-                          { "original" : "link[href$=\"/embl-petrol-colours.css\"]",        "new" : "//ebiwd.github.io/EBI-Framework/css/embl-petrol-colours.css" },
-                          { "original" : "link[href$=\"/ebi-industry-colours.css\"]",       "new" : "//ebiwd.github.io/EBI-Framework/css/ebi-industry-colours.css" },
-                          { "original" : "link[href$=\"/ebi-research.colour.css\"]",        "new" : "//ebiwd.github.io/EBI-Framework/css/ebi-research-colours.css" },
-                          { "original" : "link[href$=\"/ebi-services-about-colours.css\"]", "new" : "//ebiwd.github.io/EBI-Framework/css/ebi-services-about-colours.css" },
-                          { "original" : "link[href$=\"/ebi-training-colours.css\"]",       "new" : "//ebiwd.github.io/EBI-Framework/css/ebi-training-colours.css" },
-                          { "original" : ".no-match", "new" : "//ebiwd.github.io/EBI-Framework/css/embl-petrol-colours.css" }
+                          { "original" : "link[href$=\"/embl-petrol-colours.css\"]",        "new" : "//ebiwd.github.io/EBI-Framework/css/theme-embl-petrol.css" },
+                          { "original" : "link[href$=\"/ebi-industry-colours.css\"]",       "new" : "//ebiwd.github.io/EBI-Framework/css/theme-ebi-industry.css" },
+                          { "original" : "link[href$=\"/ebi-research.colour.css\"]",        "new" : "//ebiwd.github.io/EBI-Framework/css/theme-ebi-research.css" },
+                          { "original" : "link[href$=\"/ebi-services-about-colours.css\"]", "new" : "//ebiwd.github.io/EBI-Framework/css/theme-ebi-services-about.css" },
+                          { "original" : "link[href$=\"/ebi-training-colours.css\"]",       "new" : "//ebiwd.github.io/EBI-Framework/css/theme-ebi-training.css" },
+                          { "original" : ".no-match", "new" : "//ebiwd.github.io/EBI-Framework/css/theme-embl-petrol.css" }
                         ];
     var i = 0;
     // which colour palette is used?
