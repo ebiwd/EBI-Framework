@@ -1,4 +1,4 @@
 How to create and use a custom colour palette for your project
 -------------
 
-See file: colour-template.css and save as [your-project-name]-colours.css
+See file: _template-theme.css and save as [your-project-name]-theme.css
