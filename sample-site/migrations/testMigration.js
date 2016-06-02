@@ -82,6 +82,7 @@ function testMigration(steppingTimeSpeed) {
   setTimeout(function(){
     // Service colour updating
     console.log('Service colours:');
+    console.log(' - We now have much more customisable section and service specific "themes", instead of the previous colour palettes.');
 
     // do not use a colour palette on certain services 
     if (window.location.pathname.split('/')[1] === 'arrayexpress') {

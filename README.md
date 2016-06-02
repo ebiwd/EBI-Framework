@@ -18,6 +18,7 @@ In all, an evolutionary step of the current EMBL-EBI web compliance kit, this pr
   - Be more robust out of the box
   - Standardization of tooling
 - Core colour palette sync with updated EBI colours (largely same as before, but refined)
+- Project themes: colour palettes are now themes with flexible spacing, layout options
 - Update visual assets to make use of contemporary web browser features for:
   - More consistency with print visual language
   - Enhanced mobile support
