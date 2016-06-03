@@ -56,6 +56,7 @@ function testMigration(steppingTimeSpeed) {
     jQuery('link[href$="/ebi-global.css"]').remove();
     jQuery('link[href$="/ebi-visual.css"]').remove();
     jQuery('link[href$="/984-24-col-fluid.css"]').remove();
+    jQuery('link[href$="/ebicompliance/css/style.css"]').remove();
 
     jQuery('link[href$="/ebi-fluid-embl.css"]').remove();
     jQuery('link[href$="/boilerplate-style.css"]').remove();
