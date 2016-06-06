@@ -1,0 +1,34 @@
+{
+  "//@2": [
+    "NOTE: This file is to be used with npm to build out your libraries and SCSS",
+    "If you do not intend to use npm, you can ignore this file",
+    "Run by: npm run <script_name>",
+    " -- Most likely you want: npm run scss",
+    "END NOTE"
+  ],
+  "name": "ebi_framework",
+  "version": "1.1.0",
+  "scripts": {
+    "test": "echo \"To do: no test specified\" && exit 1",
+    "scss": "node-sass -o css css && csso ./css/ebi-global.css --output ./css/ebi-global.min.css",
+    "//@14": [
+      "-- Our buildscript: With this line we concat all libraries to be installed at once --"
+    ],
+    "libraries": "npm run tablesorter && npm run message_finished",
+    "//@18": [
+      "-- All our libraries, not intended to be run indiviudually --"
+    ],
+    "tablesorter": "wget https://github.com/Mottie/tablesorter/archive/master.zip -d ./libraries/tablesorter.zip && extract-zip ./libraries/tablesorter.zip ./libraries/ && del ./libraries/tablesorter.zip && del ./libraries/tablesorter && mve ./libraries/tablesorter-master ./libraries/tablesorter",
+    "message_finished": "echo \"All done\""
+  },
+  "private": true,
+  "devDependencies": {
+    "csso": "^2.1.1",
+    "del-cli": "^0.2.0",
+    "extract-zip": "^1.5.0",
+    "mve": "^0.1.2",
+    "node-sass": "^3.7.0",
+    "node-wget": "^0.4.2"
+  },
+  "dependencies": {}
+}
