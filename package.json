@@ -14,11 +14,12 @@
     "//@14": [
       "-- Our buildscript: With this line we concat all libraries to be installed at once --"
     ],
-    "libraries": "npm run tablesorter && npm run message_finished",
+    "libraries": "npm run tablesorter && npm run foundation && npm run message_finished",
     "//@18": [
       "-- All our libraries, not intended to be run indiviudually --"
     ],
-    "tablesorter": "wget https://github.com/Mottie/tablesorter/archive/master.zip -d ./libraries/tablesorter.zip && extract-zip ./libraries/tablesorter.zip ./libraries/ && del ./libraries/tablesorter.zip && del ./libraries/tablesorter && mve ./libraries/tablesorter-master ./libraries/tablesorter",
+    "tablesorter": "wget https://github.com/Mottie/tablesorter/archive/master.zip -d ./libraries/tablesorter.zip && extract-zip ./libraries/tablesorter.zip ./libraries/ && del ./libraries/tablesorter && mve ./libraries/tablesorter-master ./libraries/tablesorter && del ./libraries/tablesorter.zip",
+    "foundation": "wget http://foundation.zurb.com/sites/download/complete -d ./libraries/foundation-6.zip && del ./libraries/foundation-6 && extract-zip ./libraries/foundation-6.zip ./libraries/foundation-6/ && del ./libraries/foundation-6.zip && echo \"Copying foundation JS files one level up as they've moved...\" && ncp ./libraries/foundation-6/js/vendor/ ./libraries/foundation-6/js/ ",
     "message_finished": "echo \"All done\""
   },
   "private": true,
@@ -27,6 +28,7 @@
     "del-cli": "^0.2.0",
     "extract-zip": "^1.5.0",
     "mve": "^0.1.2",
+    "ncp": "^2.0.0",
     "node-sass": "^3.7.0",
     "node-wget": "^0.4.2"
   },
