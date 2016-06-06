@@ -106,7 +106,7 @@ a.special {
 a:hover { opacity: .9; }
 a.image,
 a.image:visited { border-bottom: 0 none; }
-a.button, a.button:visited { color: #f8f8f8; }
+a.button, a.button:visited { color: $ebi-colour-light; }
 
 /* Colour - defaults to be reset by custom stylesheet
 ===================================================*/
@@ -126,7 +126,6 @@ a:active {
   background-color: $ebi-colour-dark-grey;
   padding: 0 0.2em;
 }
-
 
 .ebi-background       { background: $ebi-colour-main; }
 .services-background  { background: $ebi-colour-services; }
@@ -241,7 +240,7 @@ a:active {
   #search-global-dropdown {
     width: 100%;
     left: 0;
-    background: #222;
+    background: $ebi-colour-dark;
     border: none;
     margin-top: -1px;
     color: #fff;
@@ -334,20 +333,6 @@ a:active {
   }
 
   /* Local menu styling */
-  #local-masthead nav { font-size: .9rem; clear: both;}
-
-  #local-masthead .masthead nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
-  #local-masthead nav ul.menu li { border-right: 1px solid #f8f8f8; float: left; 
-                                   margin-left: 0; /* compliance compatibility */
-                                   }
-  #local-masthead nav ul.menu li:last-child,
-  #local-masthead nav ul.menu li.active { border-right: 0; }
-
-  #local-masthead nav ul.menu li.float-right { border-right: none; }
-  #local-masthead nav ul.menu li.float-right button { margin: 0;margin-top: -10px;}
-
-  #local-masthead div#local-title { margin-bottom: 1rem; }
-
   #local-masthead {
     background-repeat: no-repeat;
     background-position: 100% 82%;
@@ -355,28 +340,44 @@ a:active {
     /*background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');*/
     /* Base64 for IE/FF */
     background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIxNDcgMjQ4IDYwIDI0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gY2xhc3M9InN0MCIgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjA1IiBwb2ludHM9IjE0NywzNjMuNiAyNTkuMywzNjMuNiAyNTkuMyw0MjguNCAyMDMuMiw0NjAuOSAxNDcsNDI4LjQgIi8+PC9zdmc+Jyk7');
+
+    h1,
+    h4,
+    p,
+    a {
+      color: #fff;
+    }
+    ul li.is-active a,
+    ul li a:hover,
+    nav ul li a.hover,
+    nav ul li a:hover { background-color: rgba(255,255,255,.5); color: #444; }
+    nav ul li.active a,
+    nav ul li a:active,
+    ul li.active-trail a,
+    ul li.active a:visited,
+    ul li.active-trail a:visited { background-color: rgba(255,255,255,1); color: #444;border-bottom: 0;}
+
+    nav { font-size: .9rem; clear: both; }
+
+    .masthead nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
+    nav ul.menu li { border-right: 1px solid $ebi-colour-light; float: left; 
+                                     margin-left: 0; /* compliance compatibility */
+                                     }
+    nav ul.menu li:last-child,
+    nav ul.menu li.active { border-right: 0; }
+
+    nav ul.menu li.float-right { border-right: none; }
+    nav ul.menu li.float-right button { margin: 0;margin-top: -10px;}
+
   }
+
+
+  div#local-title { margin-bottom: 1rem; }
 
   #local-masthead.meta-background-image {
     background-position: 100% 100%;
     background-size: initial;    
   }
-
-  #local-masthead h1,
-  #local-masthead h4,
-  #local-masthead p,
-  #local-masthead a {
-    color: #fff;
-  }
-  #local-masthead ul li.is-active a,
-  #local-masthead ul li a:hover,
-  #local-masthead nav ul li a.hover,
-  #local-masthead nav ul li a:hover { background-color: rgba(255,255,255,.5); color: #444; }
-  #local-masthead nav ul li.active a,
-  #local-masthead nav ul li a:active,
-  #local-masthead ul li.active-trail a,
-  #local-masthead ul li.active a:visited,
-  #local-masthead ul li.active-trail a:visited { background-color: rgba(255,255,255,1); color: #444;border-bottom: 0;}
 
   /* tweak sticky behaviour */
   div#local-masthead { width: 100%; position: static; }
@@ -412,18 +413,22 @@ a:active {
   body.section-training #local-masthead {
     background: $ebi-colour-training;
   }
-  body.section-training #local-title h1,
-  body.section-training #local-title p,
-  body.section-training #local-title a {
-    color: #222;
+  body.section-training #local-title  {
+    h1,
+    #local-title p,
+    #local-title a {
+      color: #222;
+    }
   }
   body.section-home #local-masthead {
     background: $ebi-colour-petrol;
   }
 
   /* tweak to foundation menu; hide submenu until rendered by JS */
-  ul.menu.dropdown ul.menu { display: none; }
-  ul.menu.dropdown ul.menu .is-dropdown-submenu { display: auto; }
+  ul.menu.dropdown ul.menu { 
+    display: none; 
+    .is-dropdown-submenu { display: auto; }
+  }
 
   /* active sidebar items */
   .menu > li > a.active { font-weight: bold; }
@@ -447,25 +452,28 @@ a:active {
     max-width: 40em;
     padding: 0;
     overflow-x: hidden;
-    list-style: none}
-  ul.leaders li:before {
-    float: left;
-    width: 0;
-    white-space: nowrap;
-    content:
-       ". . . . . . . . . . . . . . . . . . . . "
-       ". . . . . . . . . . . . . . . . . . . . "
-       ". . . . . . . . . . . . . . . . . . . . "
-       ". . . . . . . . . . . . . . . . . . . . ";
-  }
-  ul.leaders span:first-child {
-    padding-right: 0.33em;
-    background: white;
-  }
-  ul.leaders span + span {
-    float: right;
-    padding-left: 0.33em;
-    background: white;
+    list-style: none;
+
+    li:before {
+      float: left;
+      width: 0;
+      white-space: nowrap;
+      content:
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . ";
+    }
+
+    span:first-child {
+      padding-right: 0.33em;
+      background: white;
+    }
+    span + span {
+      float: right;
+      padding-left: 0.33em;
+      background: white;
+    }
   }
 
   /* List: inline horizontal */
@@ -534,30 +542,33 @@ a:active {
   #local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
 
   /* embl selector */
-  .embl-selector .button,
-  .embl-selector .button.hover,
-  .embl-selector .button:focus,
-  .embl-selector .button:hover {
-    background: no-repeat 4px 50% url('../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg');
-    padding-left: 113px;
-    background-size: 105px;
-    font-size: 15px;
-    padding-right: 17px;
-    height: 47px;
+  .embl-selector {
+    .button,
+    .button.hover,
+    .button:focus,
+    .button:hover {
+      background: no-repeat 4px 50% url('../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg');
+      padding-left: 113px;
+      background-size: 105px;
+      font-size: 15px;
+      padding-right: 17px;
+      height: 47px;
+    }
+    .button.hover, 
+    .button:hover { background-color: #888; }
+    .button::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border: inset 4px;
+      border-color: #fff transparent transparent;
+      border-top-style: solid;
+      position: absolute;
+      top: 22px;
+      margin-left: 57px;
+    }
   }
-  .embl-selector .button.hover, .embl-selector .button:hover { background-color: #888; }
-  .embl-selector .button::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border: inset 4px;
-    border-color: #fff transparent transparent;
-    border-top-style: solid;
-    position: absolute;
-    top: 22px;
-    margin-left: 57px;
-}
 
   /*
     LOCAL FOOTER

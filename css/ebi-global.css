@@ -299,35 +299,6 @@ header .masthead {
   position: absolute; }
 
 /* Local menu styling */
-#local-masthead nav {
-  font-size: .9rem;
-  clear: both; }
-
-#local-masthead .masthead nav i {
-  line-height: .9em;
-  font-size: .8em;
-  margin-top: -3px; }
-
-#local-masthead nav ul.menu li {
-  border-right: 1px solid #f8f8f8;
-  float: left;
-  margin-left: 0;
-  /* compliance compatibility */ }
-
-#local-masthead nav ul.menu li:last-child,
-#local-masthead nav ul.menu li.active {
-  border-right: 0; }
-
-#local-masthead nav ul.menu li.float-right {
-  border-right: none; }
-
-#local-masthead nav ul.menu li.float-right button {
-  margin: 0;
-  margin-top: -10px; }
-
-#local-masthead div#local-title {
-  margin-bottom: 1rem; }
-
 #local-masthead {
   background-repeat: no-repeat;
   background-position: 100% 82%;
@@ -335,32 +306,52 @@ header .masthead {
   /*background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');*/
   /* Base64 for IE/FF */
   background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIxNDcgMjQ4IDYwIDI0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gY2xhc3M9InN0MCIgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjA1IiBwb2ludHM9IjE0NywzNjMuNiAyNTkuMywzNjMuNiAyNTkuMyw0MjguNCAyMDMuMiw0NjAuOSAxNDcsNDI4LjQgIi8+PC9zdmc+Jyk7"); }
+  #local-masthead h1,
+  #local-masthead h4,
+  #local-masthead p,
+  #local-masthead a {
+    color: #fff; }
+  #local-masthead ul li.is-active a,
+  #local-masthead ul li a:hover,
+  #local-masthead nav ul li a.hover,
+  #local-masthead nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #444; }
+  #local-masthead nav ul li.active a,
+  #local-masthead nav ul li a:active,
+  #local-masthead ul li.active-trail a,
+  #local-masthead ul li.active a:visited,
+  #local-masthead ul li.active-trail a:visited {
+    background-color: white;
+    color: #444;
+    border-bottom: 0; }
+  #local-masthead nav {
+    font-size: .9rem;
+    clear: both; }
+  #local-masthead .masthead nav i {
+    line-height: .9em;
+    font-size: .8em;
+    margin-top: -3px; }
+  #local-masthead nav ul.menu li {
+    border-right: 1px solid #f8f8f8;
+    float: left;
+    margin-left: 0;
+    /* compliance compatibility */ }
+  #local-masthead nav ul.menu li:last-child,
+  #local-masthead nav ul.menu li.active {
+    border-right: 0; }
+  #local-masthead nav ul.menu li.float-right {
+    border-right: none; }
+  #local-masthead nav ul.menu li.float-right button {
+    margin: 0;
+    margin-top: -10px; }
+
+div#local-title {
+  margin-bottom: 1rem; }
 
 #local-masthead.meta-background-image {
   background-position: 100% 100%;
   background-size: initial; }
-
-#local-masthead h1,
-#local-masthead h4,
-#local-masthead p,
-#local-masthead a {
-  color: #fff; }
-
-#local-masthead ul li.is-active a,
-#local-masthead ul li a:hover,
-#local-masthead nav ul li a.hover,
-#local-masthead nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #444; }
-
-#local-masthead nav ul li.active a,
-#local-masthead nav ul li a:active,
-#local-masthead ul li.active-trail a,
-#local-masthead ul li.active a:visited,
-#local-masthead ul li.active-trail a:visited {
-  background-color: white;
-  color: #444;
-  border-bottom: 0; }
 
 /* tweak sticky behaviour */
 div#local-masthead {
@@ -408,8 +399,8 @@ body.section-training #local-masthead {
   background: #e9b400; }
 
 body.section-training #local-title h1,
-body.section-training #local-title p,
-body.section-training #local-title a {
+body.section-training #local-title #local-title p,
+body.section-training #local-title #local-title a {
   color: #222; }
 
 body.section-home #local-masthead {
@@ -418,9 +409,8 @@ body.section-home #local-masthead {
 /* tweak to foundation menu; hide submenu until rendered by JS */
 ul.menu.dropdown ul.menu {
   display: none; }
-
-ul.menu.dropdown ul.menu .is-dropdown-submenu {
-  display: auto; }
+  ul.menu.dropdown ul.menu .is-dropdown-submenu {
+    display: auto; }
 
 /* active sidebar items */
 .menu > li > a.active {
@@ -446,21 +436,18 @@ ul.leaders {
   padding: 0;
   overflow-x: hidden;
   list-style: none; }
-
-ul.leaders li:before {
-  float: left;
-  width: 0;
-  white-space: nowrap;
-  content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . "; }
-
-ul.leaders span:first-child {
-  padding-right: 0.33em;
-  background: white; }
-
-ul.leaders span + span {
-  float: right;
-  padding-left: 0.33em;
-  background: white; }
+  ul.leaders li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . "; }
+  ul.leaders span:first-child {
+    padding-right: 0.33em;
+    background: white; }
+  ul.leaders span + span {
+    float: right;
+    padding-left: 0.33em;
+    background: white; }
 
 /* List: inline horizontal */
 ul.inline li {
@@ -566,7 +553,8 @@ body .breadcrumbs a {
   padding-right: 17px;
   height: 47px; }
 
-.embl-selector .button.hover, .embl-selector .button:hover {
+.embl-selector .button.hover,
+.embl-selector .button:hover {
   background-color: #888; }
 
 .embl-selector .button::after {
