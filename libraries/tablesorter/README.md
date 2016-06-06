@@ -1,90 +1,136 @@
-tablesorter
-===========
+tablesorter (FORK) is a jQuery plugin for turning a standard HTML table with THEAD and TBODY tags into a sortable table without page refreshes. tablesorter can successfully parse and sort many types of data including linked data in a cell. This forked version adds lots of new enhancements including: alphanumeric sorting, pager callback functons, multiple widgets providing column styling, ui theme application, sticky headers, column filters and resizer, as well as extended documentation with a lot more demos.
 
-###Flexible client-side table sorting
-####Getting started
+[![Bower Version][bower-image]][bower-url] [![NPM Version][npm-image]][npm-url] [![devDependency Status][david-dev-image]][david-dev-url] [![zenhub-image]][zenhub-url]
 
-To use the tablesorter plugin, include the jQuery library and the tablesorter plugin inside the head-tag of your HTML document:
+### Notice!
 
-```html
-<script type="text/javascript" src="/path/to/jquery-latest.js"></script> 
-<script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script> 
-```
+* Because of the change to the internal cache, the tablesorter v2.16+ core, filter widget and pager (both plugin &amp; widget) will only work with the same version or newer files.
 
-Tablesorter works on all standard HTML tables. You must include THEAD and TBODY tags:
+### [Documentation](//mottie.github.io/tablesorter/docs/)
 
-```html
-<table id="myTable" class="tablesorter"> 
-<thead> 
-<tr> 
-    <th>Last Name</th> 
-    <th>First Name</th> 
-    <th>Email</th> 
-    <th>Due</th> 
-    <th>Web Site</th> 
-</tr> 
-</thead> 
-<tbody> 
-<tr> 
-    <td>Smith</td> 
-    <td>John</td> 
-    <td>jsmith@gmail.com</td> 
-    <td>$50.00</td> 
-    <td>http://www.jsmith.com</td> 
-</tr> 
-<tr> 
-    <td>Bach</td> 
-    <td>Frank</td> 
-    <td>fbach@yahoo.com</td> 
-    <td>$50.00</td> 
-    <td>http://www.frank.com</td> 
-</tr> 
-<tr> 
-    <td>Doe</td> 
-    <td>Jason</td> 
-    <td>jdoe@hotmail.com</td> 
-    <td>$100.00</td> 
-    <td>http://www.jdoe.com</td> 
-</tr> 
-<tr> 
-    <td>Conway</td> 
-    <td>Tim</td> 
-    <td>tconway@earthlink.net</td> 
-    <td>$50.00</td> 
-    <td>http://www.timconway.com</td> 
-</tr> 
-</tbody> 
-</table> 
-```
+* See the [full documentation](//mottie.github.io/tablesorter/docs/).
+* All of the [original document pages](//tablesorter.com/docs/) have been included.
+* Information from my blog post on [undocumented options](//wowmotty.blogspot.com/2011/06/jquery-tablesorter-missing-docs.html) and lots of new demos have also been included.
+* Change log moved from included text file into the [wiki documentation](//github.com/Mottie/tablesorter/wiki/Changes).
 
-Start by telling tablesorter to sort your table when the document is loaded:
+### Demos
 
-```javascript
-$(document).ready(function() 
-    { 
-        $("#myTable").tablesorter(); 
-    } 
-); 
-```
+* [Basic alpha-numeric sort Demo](//mottie.github.com/tablesorter/).
+* Links to demo pages can be found within the main [documentation](//mottie.github.io/tablesorter/docs/).
+* More demos & playgrounds - updated in the [wiki pages](//github.com/Mottie/tablesorter/wiki).
 
-Click on the headers and you'll see that your table is now sortable! You can also pass in configuration options when you initialize the table. This tells tablesorter to sort on the first and second column in ascending order.
+### Features
 
-```javascript
-$(document).ready(function() 
-    { 
-        $("#myTable").tablesorter( {sortList: [[0,0], [1,0]]} ); 
-    } 
-); 
-```
+* Multi-column alphanumeric sorting and filtering.
+* Multi-tbody sorting - see the [options](//mottie.github.io/tablesorter/docs/index.html#options) table on the main document page.
+* Supports [Bootstrap v2 and 3](//mottie.github.io/tablesorter/docs/example-widget-bootstrap-theme.html).
+* Parsers for sorting text, alphanumeric text, URIs, integers, currency, floats, IP addresses, dates (ISO, long and short formats) &amp; time. [Add your own easily](//mottie.github.io/tablesorter/docs/example-parsers.html).
+* Inline editing - see [demo](//mottie.github.io/tablesorter/docs/example-widget-editable.html).
+* Support for ROWSPAN and COLSPAN on TH elements.
+* Support secondary "hidden" sorting (e.g., maintain alphabetical sort when sorting on other criteria).
+* Extensibility via [widget system](//mottie.github.io/tablesorter/docs/example-widgets.html).
+* Cross-browser: IE 6.0+, FF 2+, Safari 2.0+, Opera 9.0+, Chrome 5.0+.
+* Small code size, starting at 25K minified.
+* Works with jQuery 1.2.6+ (jQuery 1.4.1+ needed with some widgets).
+* Works with jQuery 1.9+ (`$.browser.msie` was removed; needed in the original version).
 
-For DateTime columns you can specify your format, like this:
+### Licensing
 
-```javascript
-$(document).ready(function() 
-    { 
-        $("#myTable").tablesorter( {dateFormat: 'pt'} ); 
-    } 
-); 
-```
+* Copyright (c) 2007 Christian Bach.
+* Original examples and docs at: [http://tablesorter.com](//tablesorter.com).
+* Dual licensed under the [MIT](//www.opensource.org/licenses/mit-license.php) and [GPL](//www.gnu.org/licenses/gpl.html) licenses.
 
-The available ones (currently) are: us, pt and uk. (for pt you can use 'dd/MM/yyyy hh:mm:ss')
+### Download
+
+* Get all files: [zip](//github.com/Mottie/tablesorter/archive/master.zip) or [tar.gz](//github.com/Mottie/tablesorter/archive/master.tar.gz).
+* Use [bower](http://bower.io/): `bower install jquery.tablesorter`.
+* Use [node.js](http://nodejs.org/): `npm install tablesorter`.
+* CDNJS: [https://cdnjs.com/libraries/jquery.tablesorter](https://cdnjs.com/libraries/jquery.tablesorter).
+
+### Related Projects
+
+* [Plugin for Rails](//github.com/themilkman/jquery-tablesorter-rails). Maintained by [themilkman](//github.com/themilkman).
+* [UserFrosting](//github.com/alexweissman/UserFrosting) (A secure, modern user management system for PHP that uses tablesorter) by [alexweissman](//github.com/alexweissman).
+
+### Contributing
+
+If you would like to contribute, please...
+
+1. Fork.
+2. Make changes in a branch & add unit tests.
+3. Run `grunt test` (if qunit fails, run it again - it's fickle).
+4. Create a pull request.
+
+### Special Thanks
+
+* Big shout-out to [Nick Craver](//github.com/NickCraver) for getting rid of the `eval()` function that was previously needed for multi-column sorting.
+* Big thanks to [thezoggy](//github.com/thezoggy) for helping with code, themes and providing valuable feedback.
+* Big thanks to [ThsSin-](//github.com/TheSin-) for taking over for a while and also providing valuable feedback.
+* Thanks to [prijutme4ty](https://github.com/prijutme4ty) for numerous contributions!
+* Also extra thanks to [christhomas](//github.com/christhomas) and [Lynesth](//github.com/Lynesth) for help with code.
+* And, of course thanks to everyone else that has contributed, and continues to contribute to this forked project!
+
+### Questions?
+
+[![irc-image]][irc-url] [![gitter-image]][gitter-url] [![stackoverflow-image]][stackoverflow-url]
+
+* Check the [FAQ](//github.com/Mottie/tablesorter/wiki/FAQ) page.
+* Search the [main documentation](//mottie.github.io/tablesorter/docs/) (click the menu button in the upper left corner).
+* Search the [issues](//github.com/Mottie/tablesorter/issues) to see if the question or problem has been brought up before, and hopefully resolved.
+* If someone is available, ask your question in the `#tablesorter` IRC channel at freenode.net.
+* Ask your question at [Stackoverflow](//stackoverflow.com/questions/tagged/tablesorter) using a tablesorter tag.
+* Please don't open a [new issue](//github.com/Mottie/tablesorter/issues) unless it really is an issue with the plugin, or a feature request. Thanks!
+
+[npm-url]: https://npmjs.org/package/tablesorter
+[npm-image]: https://img.shields.io/npm/v/tablesorter.svg
+[david-dev-url]: https://david-dm.org/Mottie/tablesorter#info=devDependencies
+[david-dev-image]: https://img.shields.io/david/dev/Mottie/tablesorter.svg
+[bower-url]: http://bower.io/search/?q=jquery.tablesorter
+[bower-image]: https://img.shields.io/bower/v/jquery.tablesorter.svg
+[zenhub-url]: https://zenhub.io
+[zenhub-image]: https://cdn.rawgit.com/Mottie/tablesorter/master/docs/img/zenhub-badge.svg
+
+[irc-url]: https://www.irccloud.com/#!/ircs://irc.freenode.net:6697/%23tablesorter
+[irc-image]: https://img.shields.io/badge/irc-%23tablesorter-yellowgreen.svg
+[gitter-url]: https://gitter.im/Mottie/tablesorter
+[gitter-image]: https://img.shields.io/badge/GITTER-join%20chat-yellowgreen.svg
+[stackoverflow-url]: http://stackoverflow.com/questions/tagged/tablesorter
+[stackoverflow-image]: https://img.shields.io/badge/stackoverflow-tablesorter-blue.svg
+
+### Recent Changes
+
+View the [complete change log here](//github.com/Mottie/tablesorter/wiki/Changes).
+
+#### <a name="v2.26.2">Version 2.26.2</a> (5/28/2016)
+
+* Docs:
+  * Add missing "tablesorter-ignoreRow" class. See [issue #1218](https://github.com/Mottie/tablesorter/issues/1218).
+  * Update jQuery to 1.12.3 & add migrate for v3.0.
+  * Correct grouping & resizable last update.
+* Filter:
+  * Remove not any match limitation. See [updated demo](https://mottie.github.io/tablesorter/docs/example-widget-filter-any-match.html).
+  * Fix select2 v3 filter extension. See [issue #1216](https://github.com/Mottie/tablesorter/issues/1216); this code does not work with select2 v4.
+* Testing: `setFilters` last parameter now `true` by default.
+
+#### <a name="v2.26.1">Version 2.26.1</a> (5/16/2016)
+
+* Docs:
+  * Update setFilters method.
+  * Update playground links & cleanup.
+* Core: Minor organization of options.
+* Filter:
+  * Minor organization of options.
+  * Allow any match searches with no input.
+* Group:
+  * Escape angled brackets in group names. Fixes [issue #1206](https://github.com/Mottie/tablesorter/issues/1206).
+  * Fix HTML escape string & prevent undefined error. See [issue #1206](https://github.com/Mottie/tablesorter/issues/1206).
+  * Ensure empty cells get a header. Fixes [issue #1209](https://github.com/Mottie/tablesorter/issues/1209).
+* Math: Add `math_completed` callback.
+* Resizable: update resizable handle position after init. Fixes [issue #1207](https://github.com/Mottie/tablesorter/issues/1207).
+
+#### <a name="v2.26.0">Version 2.26.0</a> (5/1/2016)
+
+* Pager:
+  * Save pager size as "all" vs number. Fixes [issue #1196](https://github.com/Mottie/tablesorter/issues/1196).
+  * CAUTION: This change will pass "all", if set, as a page size to the server for ajax requests. So, this may break current server methods on the number of pages to return.
+* StickyHeaders: Include caption height in calculations. Fixes [issue #1205](https://github.com/Mottie/tablesorter/issues/1205).

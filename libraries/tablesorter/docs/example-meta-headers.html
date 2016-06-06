@@ -1,47 +1,58 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<!DOCTYPE html>
+<html>
 <head>
-	<title>jQuery plugin: Tablesorter 2.0 - Disable headers using metadata</title>
-	<link rel="stylesheet" href="css/jq.css" type="text/css" media="print, projection, screen" />
-	<link rel="stylesheet" href="../themes/blue/style.css" type="text/css" id="" media="print, projection, screen" />
-	<script type="text/javascript" src="../jquery-latest.js"></script>
-	
-	<script type="text/javascript" src="../jquery.metadata.js"></script>
-	<script type="text/javascript" src="../jquery.tablesorter.js"></script>
-	<script type="text/javascript" src="../addons/pager/jquery.tablesorter.pager.js"></script>
-	<script type="text/javascript" src="js/chili/chili-1.8b.js"></script>
-	<script type="text/javascript" src="js/docs.js"></script>
-	<script type="text/javascript">
+	<meta charset="utf-8">
+	<title>jQuery tablesorter 2.0 - Disable headers using metadata</title>
+
+	<!-- jQuery -->
+	<script src="js/jquery-latest.min.js"></script>
+
+	<!-- Demo stuff -->
+	<link rel="stylesheet" href="css/jq.css">
+	<link href="css/prettify.css" rel="stylesheet">
+	<script src="js/prettify.js"></script>
+	<script src="js/docs.js"></script>
+
+	<!-- Tablesorter: required -->
+	<link rel="stylesheet" href="../css/theme.blue.css">
+	<script src="../js/jquery.tablesorter.js"></script>
+
+	<!-- Tablesorter: optional -->
+	<script src="../addons/pager/jquery.tablesorter.pager.js"></script>
+	<script src="../js/extras/jquery.metadata.js"></script>
+
+	<script>
+		// not sure why this is here...
 		window.tableFile="table-metadata-disable.html";
 	</script>
-	<script type="text/javascript" src="js/examples.js"></script>
-<script type="text/javascript" id="js">$(document).ready(function() {
+
+	<script id="js">$(function() {
 	// call the tablesorter plugin, the magic happens in the markup
-	$("table").tablesorter();
-}); </script>
+	$("table").tablesorter({ theme : 'blue' });
+});</script>
 </head>
 <body>
-<div id="banner">	
+
+<div id="banner">
 	<h1>table<em>sorter</em></h1>
 	<h2>Disable headers using metadata</h2>
 	<h3>Flexible client-side table sorting</h3>
 	<a href="index.html">Back to documentation</a>
 </div>
+
 <div id="main">
 	<h1>Demo</h1>
-	<div id="demo">
-		<table cellspacing="1" class="tablesorter">
-				<thead>
-			<tr>
-				<th class="{sorter: false}">First Name</th>
-				<th>Last Name</th>
-				<th>Age</th>
-				<th>Total</th>
-				<th class="{sorter: false}">Discount</th>
-				<th>Date</th>
-			</tr>
-		</thead>
+	<div id="demo"><table class="tablesorter">
+	<thead>
+		<tr>
+			<th class="{sorter: false}">First Name</th>
+			<th>Last Name</th>
+			<th>Age</th>
+			<th>Total</th>
+			<th class="{sorter: false}">Discount</th>
+			<th>Date</th>
+		</tr>
+	</thead>
 	<tbody>
 		<tr>
 			<td>Peter</td>
@@ -49,7 +60,6 @@
 			<td>28</td>
 			<td>$9.99</td>
 			<td>20%</td>
-			
 			<td>Jul 6, 2006 8:14 AM</td>
 		</tr>
 		<tr>
@@ -58,7 +68,6 @@
 			<td>33</td>
 			<td>$19.99</td>
 			<td>25%</td>
-			
 			<td>Dec 10, 2002 5:14 AM</td>
 		</tr>
 		<tr>
@@ -75,7 +84,6 @@
 			<td>45</td>
 			<td>$153.19</td>
 			<td>44%</td>
-			
 			<td>Jan 18, 2001 9:12 AM</td>
 		</tr>
 		<tr>
@@ -87,22 +95,34 @@
 			<td>Jan 18, 2007 9:12 AM</td>
 		</tr>
 	</tbody>
-		</table>
+</table></div>
+
+	<h1>Page Header</h1>
+	<div>
+		<pre class="prettyprint lang-html">&lt;script src=&quot;js/jquery-latest.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Tablesorter: required --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/theme.blue.css&quot;&gt;
+&lt;script src=&quot;../js/jquery.tablesorter.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Tablesorter: optional (but required for this demo) --&gt;
+&lt;script src=&quot;../js/extras/jquery.metadata.js&quot;&gt;&lt;/script&gt;</pre>
 	</div>
 	<h1>Javascript</h1>
 	<div id="javascript">
-		<pre class="javascript"></pre>
+		<pre class="prettyprint lang-javascript"></pre>
 	</div>
 	<h1>HTML</h1>
 	<div id="html">
-		<pre class="html"></pre>
+		<pre class="prettyprint lang-html"></pre>
 	</div>
+
+<div class="next-up">
+	<hr />
+	Next up: <a href="example-meta-parsers.html">Setting column parser using metadata &rsaquo;&rsaquo;</a>
 </div>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-<script type="text/javascript">
-_uacct = "UA-2189649-2";
-urchinTracker();
-</script>
+
+</div>
+
 </body>
 </html>
-

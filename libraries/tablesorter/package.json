@@ -1,27 +1,77 @@
 {
   "name": "tablesorter",
-  "version": "2.0.5",
-  "description": "Flexible client-side table sorting",
-  "main": "jquery.tablesorter.min.js",
-  "directories": {
-    "doc": "docs"
+  "title": "tablesorter",
+  "version": "2.26.2",
+  "description": "tablesorter (FORK) is a jQuery plugin for turning a standard HTML table with THEAD and TBODY tags into a sortable table without page refreshes. tablesorter can successfully parse and sort many types of data including linked data in a cell.",
+  "author": {
+    "name": "Christian Bach",
+    "url": "http://tablesorter.com/"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/christianbach/tablesorter.git"
+  "maintainers": [
+    {
+      "name": "Rob Garrison",
+      "url": "https://github.com/Mottie",
+      "email": "wowmotty@gmail.com"
+    }
+  ],
+  "license": "(MIT OR GPL-2.0+)",
+  "homepage": "http://mottie.github.com/tablesorter/",
+  "bugs": "https://github.com/Mottie/tablesorter/issues",
+  "docs": "http://mottie.github.com/tablesorter/docs/index.html",
+  "demo": "https://github.com/Mottie/tablesorter/wiki",
+  "dependencies": {
+    "jquery": ">=1.2.6"
   },
   "keywords": [
-    "client-side",
+    "table",
     "sort",
-    "table"
+    "sorting",
+    "alphanumeric",
+    "natural",
+    "jquery-plugin"
   ],
-  "author": "Christian Bach",
-  "license": "MIT, GPL",
-  "bugs": {
-    "url": "https://github.com/christianbach/tablesorter/issues"
+  "main": "dist/js/jquery.tablesorter.combined.js",
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Mottie/tablesorter.git"
   },
-  "homepage": "https://github.com/christianbach/tablesorter"
+  "npmName": "tablesorter",
+  "npmFileMap": [
+    {
+      "basePath": "",
+      "files": [
+        "dist/**/*",
+        "css/*",
+        "js/**/*"
+      ]
+    }
+  ],
+  "autoupdate": {
+    "source": "git",
+    "target": "git://github.com/Mottie/tablesorter.git",
+    "basePath": "",
+    "files": [
+      "dist/**/*",
+      "css/*",
+      "js/**/*"
+    ]
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-qunit": "^1.2.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-jscs": "^2.8.0",
+    "grunt-string-replace": "^1.2.1"
+  }
 }

@@ -1,85 +1,141 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<!DOCTYPE html>
+<html>
 <head>
-	<title>jQuery plugin: Tablesorter 2.0 - Dealing with markup inside cells</title>
-	<link rel="stylesheet" href="css/jq.css" type="text/css" media="print, projection, screen" />
-	<link rel="stylesheet" href="../themes/blue/style.css" type="text/css" id="" media="print, projection, screen" />
-	<script type="text/javascript" src="../jquery-latest.js"></script>
-	
-	<script type="text/javascript" src="../jquery.tablesorter.js"></script>
-	<script type="text/javascript" src="../addons/pager/jquery.tablesorter.pager.js"></script>
-	<script type="text/javascript" src="js/chili/chili-1.8b.js"></script>
-	<script type="text/javascript" src="js/docs.js"></script>
-	<script type="text/javascript" src="js/examples.js"></script>
-<script type="text/javascript" id="js">$(document).ready(function() {
-	
+	<meta charset="utf-8">
+	<title>jQuery tablesorter 2.0 - Dealing with markup inside cells</title>
+
+	<!-- jQuery -->
+	<script src="js/jquery-latest.min.js"></script>
+
+	<!-- Demo stuff -->
+	<link rel="stylesheet" href="css/jq.css">
+	<link href="css/prettify.css" rel="stylesheet">
+	<script src="js/prettify.js"></script>
+	<script src="js/docs.js"></script>
+
+	<!-- Tablesorter: required -->
+	<link rel="stylesheet" href="../css/theme.blue.css">
+	<script src="../js/jquery.tablesorter.js"></script>
+
+	<script id="js">$(function() {
+
 	// call the tablesorter plugin
 	$("table").tablesorter({
-		// define a custom text extraction function
-		textExtraction: function(node) {
-			// extract data from markup and return it 
-			return node.childNodes[0].childNodes[0].innerHTML;
+		theme : 'blue',
+		/*
+		// define an overall custom text extraction function
+		textExtraction: function(node, table, cellIndex) {
+			return $(node).text();
 		}
+		*/
+
+		// Define a custom text extraction function for each column
+		// In this example, textExtraction 1-5 functions don't really need to
+		// be defined, since they can also be obtained using `$(node).text()`
+		textExtraction: {
+			0: function(node, table, cellIndex){ return $(node).find("strong").text(); },
+			1: function(node, table, cellIndex){ return $(node).find("div").text(); },
+			2: function(node, table, cellIndex){ return $(node).find("span").text(); },
+			3: function(node, table, cellIndex){ return $(node).find("em").text(); },
+			4: function(node, table, cellIndex){ return $(node).find("a").text(); },
+			'.date' : function(node, table, cellIndex){ return $(node).find("u").text(); }
+		}
+
 	});
-}); </script>
+
+});</script>
 </head>
 <body>
-<div id="banner">	
-	<h1>table<em>sorter</em></h1>
+
+<div id="banner">
+	<h1>table<strong>sorter</strong></h1>
 	<h2>Dealing with markup inside cells</h2>
 	<h3>Flexible client-side table sorting</h3>
 	<a href="index.html">Back to documentation</a>
 </div>
-<div id="main">
-	<h1>Demo</h1>
-	<div id="demo">
-		<table cellspacing="1" class="tablesorter">
-				<thead>
-			<tr>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Age</th>
-				<th>Total</th>
-				<th>Discount</th>
-				<th>Date</th>
 
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><strong><em>Peter</em></strong></td>
-				<td><strong><em>Parker</em></strong></td>
-				<td><strong><em>28</em></strong></td>
-				<td><strong><em>$9.99</em></strong></td>
-				<td><strong><em>20%</em></strong></td>	
-				<td><strong><em>Jul 6, 2006 8:14 AM</em></strong></td>
-			</tr>
-			<tr>
-				<td><strong><em>John</em></strong></td>
-				<td><strong><em>Hood</em></strong></td>
-				<td><strong><em>33</em></strong></td>
-				<td><strong><em>$19.99</em></strong></td>
-				<td><strong><em>25%</em></strong></td>
-				<td><strong><em>Dec 10, 2002 5:14 AM</em></strong></td>
-			</tr>
-		</tbody>
-		</table>
-	</div>
+<div id="main">
+	<p class="tip">
+		<em>NOTE!</em>
+	</p>
+	<ul>
+		<li>In <span class="version updated">v2.17.0</span>, the <code>textExtraction</code> column can also be referenced by using a jQuery selector (e.g. class name or ID).</li>
+		<li>The textExtraction function setting for each column was added in version 2.0.12 (not part of the original plugin).</li>
+		<li>The "First Name" column is sorting by the contents of the &lt;strong&gt; tag (in red).</li>
+		<li>Added "table" and "cellIndex" variables to the textExtraction function (v2.1.2).</li>
+	</ul>
+
+	<h1>Demo</h1>
+	<div id="demo"><table class="tablesorter">
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Age</th>
+			<th>Total</th>
+			<th>Discount</th>
+			<th class="date">Date</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Mr. <strong>Peter</strong></td>
+			<td><div>Parker</div></td>
+			<td><span>28</span></td>
+			<td><em>$9.99</em></td>
+			<td><a href="#">20%</a></td>
+			<td><u>Jul 6, 2006 8:14 AM</u></td>
+		</tr>
+		<tr>
+			<td>Dr. <strong>John</strong></td>
+			<td><div>Hood</div></td>
+			<td><span>33</span></td>
+			<td><em>$19.99</em></td>
+			<td><a href="#">25%</a></td>
+			<td><u>Dec 10, 2002 5:14 AM</u></td>
+		</tr>
+		<tr>
+			<td>Rep <strong>Clark</strong></td>
+			<td><div>Kent</div></td>
+			<td><span>18</span></td>
+			<td><em>$15.89</em></td>
+			<td><a href="#">44%</a></td>
+			<td><u>Jan 12, 2003 11:14 AM</u></td>
+		</tr>
+		<tr>
+			<td>Rev <strong>Bruce</strong></td>
+			<td><div>Almighty</div></td>
+			<td><span>45</span></td>
+			<td><em>$153.19</em></td>
+			<td><a href="#">44%</a></td>
+			<td><u>Jan 18, 2001 9:12 AM</u></td>
+		</tr>
+		<tr>
+			<td>Capt <strong>Bruce</strong></td>
+			<td><div>Evans</div></td>
+			<td><span>22</span></td>
+			<td><em>$13.19</em></td>
+			<td><a href="#">11%</a></td>
+			<td><u>Jan 18, 2007 9:12 AM</u></td>
+		</tr>
+	</tbody>
+</table></div>
+
 	<h1>Javascript</h1>
 	<div id="javascript">
-		<pre class="javascript"></pre>
+		<pre class="prettyprint lang-javascript"></pre>
 	</div>
 	<h1>HTML</h1>
 	<div id="html">
-		<pre class="html"></pre>
+		<pre class="prettyprint lang-html"></pre>
 	</div>
+
+<div class="next-up">
+	<hr />
+	Next up: <a href="example-apply-widget.html">Applying widgets &rsaquo;&rsaquo;</a>
 </div>
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-<script type="text/javascript">
-_uacct = "UA-2189649-2";
-urchinTracker();
-</script>
+
+</div>
+
 </body>
 </html>
-
