@@ -775,14 +775,15 @@ input.clearable::-ms-clear {display: none; width:0; height:0;} /* Remove IE defa
 
 
 /* Tablesorter styling */
-table.tablesorter thead tr .header {
-  background-image: url(../libraries/tablesorter/themes/blue/bg.gif);
+table.tablesorter thead tr th,
+table.tablesorter thead tr th.tablesorter-headerUnSorted {
+  background-image: url(../libraries/tablesorter/css/images/black-unsorted.gif);
   background-repeat: no-repeat;
   background-position: center right;
   cursor: pointer;
 }
-table.tablesorter thead tr .headerSortUp { background-image: url(../libraries/tablesorter/themes/blue/asc.gif); }
-table.tablesorter thead tr .headerSortDown { background-image: url(../libraries/tablesorter/themes/blue/desc.gif); }
+table.tablesorter thead tr th.tablesorter-headerAsc { background-image: url(../libraries/tablesorter/css/images/black-asc.gif); }
+table.tablesorter thead tr th.tablesorter-headerDesc { background-image: url(../libraries/tablesorter/css/images/black-desc.gif); }
 
 /* No colour striping tables */
 table.no-stripe tbody tr:nth-child(even) { background-color: #fff; } 
