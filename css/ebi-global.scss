@@ -425,11 +425,10 @@ a:active {
   }
 
   /* tweak to foundation menu; hide submenu until rendered by JS */
-  ul.menu.dropdown ul.menu { 
-    display: none; 
-    .is-dropdown-submenu { display: auto; }
-  }
-
+  ul.menu.dropdown ul.menu { display: none; }
+  ul.menu.dropdown ul.menu.is-dropdown-submenu { display:block; }
+  .dropdown.menu > li.is-dropdown-submenu-parent > a::after { border-color: #FFF transparent transparent; }
+  
   /* active sidebar items */
   .menu > li > a.active { font-weight: bold; }
 
