@@ -426,7 +426,7 @@ a:active {
 
   /* tweak to foundation menu; hide submenu until rendered by JS */
   ul.menu.dropdown ul.menu { display: none; }
-  ul.menu.dropdown ul.menu.is-dropdown-submenu { display:block; }
+  ul.menu.dropdown ul.menu.is-dropdown-submenu.js-dropdown-active { display:block; }
   .dropdown.menu > li.is-dropdown-submenu-parent > a::after { border-color: #FFF transparent transparent; }
   
   /* active sidebar items */

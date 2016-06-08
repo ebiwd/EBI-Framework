@@ -410,7 +410,7 @@ body.section-home #local-masthead {
 ul.menu.dropdown ul.menu {
   display: none; }
 
-ul.menu.dropdown ul.menu.is-dropdown-submenu {
+ul.menu.dropdown ul.menu.is-dropdown-submenu.js-dropdown-active {
   display: block; }
 
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
