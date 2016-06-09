@@ -18,6 +18,7 @@ h3 { color: #444444; }
 
 a.special { background-color: #7cd17c; }
 
+.menu .active > a,
 a.label,
 .label,
 .button,
