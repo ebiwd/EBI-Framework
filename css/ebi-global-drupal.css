@@ -29,7 +29,6 @@ input[type="checkbox"], input[type="radio"] { vertical-align: text-top; }
 /* Misc */
 #panels-edit-display-form h2.label { background: none; }
 html.js fieldset.collapsed { height: 2em; }
-.button.primary { background-color: rgb(233,180,0); }
 
 /* Edit form */
 .node-form input#edit-title { 

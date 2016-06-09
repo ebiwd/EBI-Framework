@@ -25,6 +25,8 @@ a.label,
   background-color: rgb(116,179,96);
   color: #f8f8f8;
 }   
+.button.primary:hover,
+.button.primary:focus,
 .button:hover,
 .button:focus,
 .button:active { background: rgba(116,179,96,.9); }
