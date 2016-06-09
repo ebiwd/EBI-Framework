@@ -75,3 +75,6 @@ body.is-reveal-open #status-messages.static .alert-box {
   display: inline-block;
   margin-top: .25rem;
 }
+
+/* Tinymce reset */
+body#tinymce { font-size: 100%; margin: 0 1em; }
