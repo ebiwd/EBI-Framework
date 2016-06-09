@@ -47,8 +47,11 @@ body.is-reveal-open #status-messages { top: 30% !important; position: fixed !imp
 .alert-box { margin-right: .5rem; } /* Space for close button */
 
 /* Sidebar menus aren't horizontal */
+.shortcuts ul.menu ul.menu,
 .sidebar ul.menu ul.menu { padding-left: .75em; }
+.shortcuts .menu > li,
 .sidebar .menu > li { display: list-item; }
+.shortcuts .menu > li > a,
 .sidebar .menu > li > a { padding-left: .5em }
 
 /* Remove background gunk */
