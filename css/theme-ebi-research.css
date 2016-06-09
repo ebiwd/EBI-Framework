@@ -20,7 +20,8 @@ a.special { background-color: #7cd17c; }
 
 a.label,
 .label,
-.button {       
+.button,
+.button.primary {       
   background-color: rgb(109,171,73);
   color: #f8f8f8;
 }   
