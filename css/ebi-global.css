@@ -473,6 +473,9 @@ body .breadcrumbs a {
   font-size: 80%;
   line-height: inherit; }
 
+.nowrap {
+  white-space: nowrap; }
+
 .code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;

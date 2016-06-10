@@ -493,6 +493,7 @@ a:active {
 
   /* extend Froundation utility selectors/classes */
   .small { font-size: 80%; line-height: inherit; }
+  .nowrap { white-space: nowrap; }
   .code {
     font-family: Consolas, "Liberation Mono", Courier, monospace;
     font-weight: normal;
