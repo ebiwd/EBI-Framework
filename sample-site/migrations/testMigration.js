@@ -16,7 +16,7 @@
 4) A handful of minor CSS edits may be needed for any Service-specific oddities
 
   Originally authored on 2016-05-16
-  For assistance contact Ken Hawkins in Webdev 
+  For assistance contact Ken Hawkins in Webdev
       or post to Github https://github.com/ebiwd/EBI-Framework/issues
  */
 
@@ -38,18 +38,18 @@ function testMigration(steppingTimeSpeed) {
 
   // setTimeout(function(){
   //   console.log('Firstoff I\'m going to zoom out a bit so we can see more of the changes.');
-  //   document.body.style.zoom = "30%" 
-  // }, steppingTime()); 
+  //   document.body.style.zoom = "30%"
+  // }, steppingTime());
 
   setTimeout(function(){
     console.log('%c We\'re off!', 'background: green; color: #FFF; font-style: italic;');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     jQuery('head').append('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>\n');
     console.log('jQuery: Updating to jQuery 1.10. This is version (or newer) is only necessary if you plan to use Foundation\'s JS components.');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     // Reset and remove old EBI compliance
@@ -63,14 +63,14 @@ function testMigration(steppingTimeSpeed) {
     jQuery('link[href$="/ebi-fluid-embl-noboilerplate.css"]').remove();
     console.log('CSS: Removed old EBI boilerplate-style sheets.');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     jQuery('#ebi-footer-meta').html('');
     jQuery('#global-nav-expanded').html('');
     console.log('Footer: Removed old injected footer.');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     jQuery('head').append('<link rel="stylesheet" href="//ebiwd.github.io/EBI-Framework/libraries/foundation-6/css/foundation.css" type="text/css" />\n');
@@ -78,14 +78,14 @@ function testMigration(steppingTimeSpeed) {
     jQuery('head').append('<link rel="stylesheet" href="//ebiwd.github.io/EBI-Framework/fonts/fonts.css" type="text/css" />\n');
     console.log('CSS: Injected new ebi-global.css fonts.css and foundation.css');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     // Service colour updating
     console.log('Service colours:');
     console.log(' - We now have much more customisable section and service specific "themes", instead of the previous colour palettes.');
 
-    // do not use a colour palette on certain services 
+    // do not use a colour palette on certain services
     if (window.location.pathname.split('/')[1] === 'arrayexpress') {
       console.log(' - I have your site as one that has it\'s own special colours, I won\'t do anything.');
       console.log(' - Consider using the standard colour implementation format: https://github.com/ebiwd/EBI-Framework/blob/gh-pages/css/colour-template.css');
@@ -119,13 +119,13 @@ function testMigration(steppingTimeSpeed) {
       console.log(' - Not sure what service colours are meant to be used, adding default EBI Petrol palette: ' + colourPalettes[colourPalettes.length-1].new);
     }
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     jQuery('div#content').addClass('row');
     console.log('Added .row to div#content');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     // Add new JS
@@ -140,7 +140,7 @@ function testMigration(steppingTimeSpeed) {
                 '            //ebiwd.github.io/EBI-Framework/js/script.js\n'
     );
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     jQuery('#ebi-footer-meta').addClass('row');
@@ -148,13 +148,13 @@ function testMigration(steppingTimeSpeed) {
     jQuery('#local-footer').wrapInner('<div class="row"></div>');
     console.log('Footer: Adding .row class to footer, #ebi-footer-meta and #global-nav-expanded');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
 
   setTimeout(function(){
     // CSS translations
     // grid-XX to medium-XX
-    jQuery('div,section,aside').attr('class', function(i, str) { 
+    jQuery('div,section,aside').attr('class', function(i, str) {
 
       function whatColumnSize(toParse) {
         // deal with Qs like: 5 omgea cols to 2.5 foundation cols :(
@@ -183,31 +183,44 @@ function testMigration(steppingTimeSpeed) {
         return toParse;
       }
       // omega is 24 columns, foundation is 12 columns
-      if (typeof str != 'undefined') { 
-        function convert(str, p1, p2, offset, s) { return 'columns medium-' + whatColumnSize(p2/2) + ' temporary-maker-that-this-is-a-column'; }
-        var re = /(grid_)([0-9]+)/;
-        return str.replace(re, convert);
+      if (typeof str != 'undefined') {
+        // swap grid_XX for medium-X
+        function convert_columns(str, p1, p2, offset, s) { return ' columns medium-' + whatColumnSize(p2/2) + ' temporary-maker-that-this-is-a-column '; }
+        var re_columns = /(grid_)([0-9]+)/;
+        str = str.replace(re_columns, convert_columns);
+
+        // swap pull_xx for medium-pull-X
+        function convert_pull(str, p1, p2, offset, s) { return ' medium-pull-' + whatColumnSize(p2/2) + ' '; }
+        var re_pull = /(pull_)([0-9]+)/;
+        str = str.replace(re_pull, convert_pull);
+
+        // swap push_xx for medium-push-X
+        function convert_push(str, p1, p2, offset, s) { return ' medium-push-' + whatColumnSize(p2/2) + ' '; }
+        var re_push = /(push_)([0-9]+)/;
+        str = str.replace(re_push, convert_push);
+
+        return str;
       }
     });
     console.log('CSS: I\'ve substitued the Omeaga grid_XX classes for Foundation\'s "column medium-XX" classes.\n' +
                 '     Note that I\'ve also stepped the 24 column grid to 12 column grid.'
     );
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
-    // Wrap groups of columns with div.row 
+    // Wrap groups of columns with div.row
     jQuery('div#content .temporary-maker-that-this-is-a-column').has('.temporary-maker-that-this-is-a-column').wrapInner('<div class="row"/>');
     // jQuery('div#content .medium-12').wrap('<div class="row"/>');
     jQuery('.temporary-maker-that-this-is-a-column').removeClass('temporary-maker-that-this-is-a-column');
     console.log('CSS: Groups of .columns should be wrapped in div.row s.\n');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     jQuery('div').attr('class',
-      function(i, c) { 
-        if (typeof c != 'undefined') { 
+      function(i, c) {
+        if (typeof c != 'undefined') {
           return c.replace(/(^|\s)omega/g, ' last');
         }
       });
@@ -216,16 +229,16 @@ function testMigration(steppingTimeSpeed) {
     console.log('CSS: .alpha is no longer needed.');
     console.log('     .omega is now .last and is only neeeded when you have not specified 12 columns of width.');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     console.log('CSS: Assorted cleanup');
     jQuery('div,input').attr('class',
-      function(i, c) { 
-        if (jQuery(this).hasClass('medium-24') === true) { 
+      function(i, c) {
+        if (jQuery(this).hasClass('medium-24') === true) {
           // return c.replace(/(^|\s)medium-24/g, ' medium-12');
         }
-        if (jQuery(this).hasClass('submit') === true) { 
+        if (jQuery(this).hasClass('submit') === true) {
           jQuery(this).addClass('button');
           console.log(' - submit elements we want to look like buttons need the .button class');
         }
@@ -258,7 +271,7 @@ function testMigration(steppingTimeSpeed) {
                   '   alternativley: .columns.small-6.menu.vertical.no-pad-left and add .icon-bullet to each li');
     }
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
 
   setTimeout(function(){
@@ -273,7 +286,7 @@ function testMigration(steppingTimeSpeed) {
       console.log('Fieldsets legends: Also assume you want these to be .label s.');
       console.log('------------------\n');
     }
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     // Update global-mastehad
@@ -323,7 +336,7 @@ function testMigration(steppingTimeSpeed) {
     console.log('Removing old global nav and inserting new. It now goes inside the #local-masthead wrapper.');
     console.log('Note: I\'ve made the EMBL-EBI tab .active, you can set whichever you\'d like to be active.');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     jQuery('#local-masthead').removeClass().addClass('meta-background-image');
@@ -331,7 +344,7 @@ function testMigration(steppingTimeSpeed) {
     jQuery('#local-masthead').wrap('<div data-sticky-container />');
     console.log('Updating local-navigation to be sticky (You\'ll need to invoke Foundation JS later)');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   // setTimeout(function(){
   //   // if the search box is missing #local-search
@@ -342,13 +355,13 @@ function testMigration(steppingTimeSpeed) {
   //       console.log('------------------\n');
   //     }
   //   }
-  // }, steppingTime()); 
-     
+  // }, steppingTime());
+
   setTimeout(function(){
     jQuery('#local-masthead #local-title.columns, #local-masthead #local-search.medium-6, #local-masthead .medium-6.last').wrapAll('<div class="masthead row"/>');
     console.log('Local title and search: wrapping in a new div with classes .masthead.row');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     console.log('Local-nav: ');
@@ -360,13 +373,13 @@ function testMigration(steppingTimeSpeed) {
     jQuery('ul#local-nav').attr({'data-dropdown-menu':true});
     console.log(' - adding classes .dropdown.menu.float-left.columns.medium-12 ');
     console.log(' - adding attribute data-dropdown-menu for mobile');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     var localNavTabs = jQuery('#local-masthead > nav').detach();
     jQuery('div.masthead.row').append(localNavTabs);
     console.log(' - moved the local nav tabs inside the new .masthead.row div');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     if (jQuery('ul#local-nav li.functional').length > 0) {
@@ -374,7 +387,7 @@ function testMigration(steppingTimeSpeed) {
       console.log(' - add class .float-right to .functional tabs');
     }
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
 
@@ -417,7 +430,7 @@ function testMigration(steppingTimeSpeed) {
 
     $('#local-search p.examples').detach().insertAfter('#local-search input#local-searchbox');
     console.log(' - p.examples is now grouped with the searchbox');
-    
+
     // $('#local-search p.examples').addClass('small');
     // console.log(' - added .small to p.examples ');
 
@@ -428,7 +441,7 @@ function testMigration(steppingTimeSpeed) {
     console.log(' - div.right is now div.small');
 
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     // The Foundation theme JavaScript
@@ -437,18 +450,18 @@ function testMigration(steppingTimeSpeed) {
 
     console.log('Javascript: I\'ve added (but not executed) the Foundation JS. Invoke with runJS()');
     console.log('------------------\n');
-  }, steppingTime()); 
+  }, steppingTime());
 
   setTimeout(function(){
     console.log('%c All done!', 'background: green; color: #FFF; font-style: italic;');
     // console.log('Zooming back to 100%.');
-    // document.body.style.zoom = "100%" 
+    // document.body.style.zoom = "100%"
     console.log('%c Want JS features? By default we\'ve not invoked the JS features, if you\'d like to do so type runJS() ', 'background: #FFF; color: #999; font-style: italic;');
     console.log('%c Want a diff? Type diffUsingJS() ', 'background: #FFF; color: #999; font-style: italic;');
-  }, steppingTime()); 
+  }, steppingTime());
 
   // setTimeout(function(){
-  // }, steppingTime()); 
+  // }, steppingTime());
 
 } // END testMigration
 
@@ -509,4 +522,3 @@ function diffUsingJS() {
 
 // Auto run
 // testMigration(100);
-
