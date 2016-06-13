@@ -81,7 +81,7 @@ img.float-l {
    }
    .course-teaser-details, .event-teaser-details {
      top: 0.1em;
-     width: 88%;
+     width: 87%;
    }
    @media (max-width:1075px) {
      .event-teaser-details {
@@ -100,7 +100,7 @@ img.float-l {
    }
    @media (max-width:795px) {
      .event-teaser-details {
-       width: 88%;
+       width: 87%;
      }
    }
    @media (max-width:725px) {
