@@ -7,6 +7,66 @@
 
 */
 
+/* COMPLIANCE
+   ********** */
+#intro h2, .shortcuts h3, #outro h3, div.highlight h3 {
+    color: #333;
+}
+
+#intro h2 {
+    margin: 0;
+    margin-bottom: 5px;
+    padding-top: 13px;
+    border-bottom: 1px solid #ccc;
+}
+
+#intro { background-color: rgb(237, 237, 237);
+  border-radius: 5px;
+  margin-left: 9px;
+  margin-right: 0px;
+  padding-bottom: 9px;
+  padding-left: .5rem;
+  margin-top: .5rem; }
+
+img.float-l {
+    float: left;
+    margin: 0 9px 20px 0;
+}
+
+.shortcuts h2,
+.shortcuts h3 {
+    border-bottom: 0 none;
+    font-size: 18px;
+    color: #333;
+    line-height: inherit;
+    background-color: #DDD;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 3px 0 1px 12px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -khtml-border-radius-topleft: 5px;
+    -khtml-border-radius-topright: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.shortcuts>div { clear: both; margin-top: .5rem;}
+.shortcuts>div ul.split {
+    float: left;
+    width: 47%;
+    margin: 0 1%;
+    list-style: none;
+    padding: 9px 0 9px 9px;
+    font-size: 13px;
+}
+.shortcuts>div ul.split a { display: inline-block; width: 100%; }
+
+/* OMEGA GRID
+   ********** */
+
 /* Containers
 ----------------------------------------------------------------------------------------------------*/
 .container_24 { width: 100%;
@@ -41,8 +101,10 @@
 .grid_24 { display:inline;
   float: left;
   position: relative;
-  margin-left: 1%;
-  margin-right: 1%; }
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1%;
+  padding-right: 1%; }
 .oldie .grid_1,
 .oldie .grid_2,
 .oldie .grid_3,
@@ -267,5 +329,3 @@
 .container_24 .pull_21 { left:-87.5%; }
 .container_24 .pull_22 { left:-91.667%; }
 .container_24 .pull_23 { left:-95.833%; }
-
-
