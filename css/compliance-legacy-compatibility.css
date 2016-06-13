@@ -64,6 +64,1145 @@ img.float-l {
 }
 .shortcuts>div ul.split a { display: inline-block; width: 100%; }
 
+/* TRAINING
+   ******** */
+   .event-teaser {
+     margin-bottom: 1.3em;
+   }
+   .event-teaser span {
+     display: inline-block;
+   }
+   .event-teaser div.date {
+     display: block;
+   }
+   .event-teaser .event-field {
+     margin: 0 9px;
+     display: block;
+   }
+   .course-teaser-details, .event-teaser-details {
+     top: 0.1em;
+     width: 88%;
+   }
+   @media (max-width:1075px) {
+     .event-teaser-details {
+       width: 91%;
+     }
+   }
+   @media (max-width:960px) {
+     .event-teaser-details {
+       width: 90%;
+     }
+   }
+   @media (max-width:865px) {
+     .event-teaser-details {
+       width: 89%;
+     }
+   }
+   @media (max-width:795px) {
+     .event-teaser-details {
+       width: 88%;
+     }
+   }
+   @media (max-width:725px) {
+     .event-teaser-details {
+       width: 87%;
+     }
+   }
+   .event-teaser .event-date {
+     position: relative;
+     top: 0.1em;
+     border: 1px solid #afafaf;
+     display: block;
+     float: left;
+     width: 1.8em;
+     padding: 2px;
+     text-align: center;
+     font-weight: bold;
+     color: #444;
+     font-size: 123%;
+     margin: 0 9px;
+   }
+   .course-teaser p {
+     margin: 0 0 5px 0;
+   }
+   .course-teaser {
+     margin-bottom: 1.3em;
+   }
+   .course-teaser span {
+     display: inline-block;
+   }
+   .course-teaser div.date {
+     display: block;
+   }
+   .course-teaser .event-field {
+     margin: 0 9px;
+     display: block;
+   }
+   .course-teaser .start-now {
+     position: relative;
+     top: 0.1em;
+     border: 1px solid #afafaf;
+     display: block;
+     float: left;
+     padding: 2px;
+     text-align: center;
+     font-weight: bold;
+     color: #444;
+     font-size: 85%;
+     margin: 0 9px;
+     -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+     border-radius: 2px;
+     background: #eeeeee;
+     background: -moz-linear-gradient(top, #fefefe 0%, #efefef 100%);
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #efefef));
+     background: -webkit-linear-gradient(top, #fefefe 0%, #efefef 100%);
+     background: -o-linear-gradient(top, #fefefe 0%, #efefef 100%);
+     background: -ms-linear-gradient(top, #fefefe 0%, #efefef 100%);
+     background: linear-gradient(to bottom, #fefefe 0%, #efefef 100%);
+     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#efefef', GradientType=0);
+   }
+   .course-teaser .start-now a:link {
+     border-bottom: none;
+     text-shadow: 1px 1px 1px rgba(180, 180, 180, 1);
+   }
+   .section-about .event-participation {
+     display: none;
+   }
+   .ebi-tags * {
+     display: inline-block;
+   }
+   .ebi-tag {
+     display: inline-block;
+     float: none;
+     margin-top: 0.1em;
+     margin-right: 0.3em;
+     background-color: #ddd;
+     padding: 1px 4px 1px 4px;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     border-radius: 4px;
+   }
+   .ebi-tags {
+     float: right;
+   }
+   .ebi-tag a:link, .ebi-tag a:visited {
+     border: none;
+   }
+   .ebi-tag-event-type {
+     background-color: #3f7578;
+     margin-left: 0.3em;
+   }
+   .ebi-tag-topic {
+     background-color: #fab700;
+     color: #fff;
+   }
+   .ebi-tag-event-type a:link, .ebi-tag-event-type a:visited {
+     color: #fff;
+   }
+   .ebi-tag-topic a:link, .ebi-tag-topic a:visited {
+     color: #fff;
+   }
+   .event-title {
+     margin-top: 0;
+     display: block;
+     clear: left;
+   }
+   .event-title a, .event-title a:link {
+     border-bottom-width: 1px;
+     border-bottom-style: dotted;
+     border-bottom-color: inherit;
+     color: #3e3e3e;
+   }
+   .event-title a:visited {
+     color: #666;
+   }
+   .event-title a:hover {
+     color: #0e6a0e;
+     border-bottom-style: solid;
+     border-bottom-color: inherit;
+   }
+   .event-date {
+     position: relative;
+     top: 0.1em;
+     display: block;
+     float: left;
+     padding: 2px;
+     text-align: center;
+     font-weight: bold;
+     color: #444;
+     font-size: 123%;
+   }
+   .event-date .startday {
+     position: relative;
+     top: 0.1em;
+     border: 1px solid #8CB4E0;
+     display: block;
+     float: left;
+     width: 1.8em;
+     margin-left: -3em;
+     padding: 2px;
+     text-align: center;
+     font-weight: bold;
+     color: #3C80CA;
+     background-color: white;
+   }
+   .event-date .calendarpage {
+     display: block;
+     width: 100%;
+     height: 4px;
+     background-color: #cecece;
+   }
+   .event-date .calendarpage .ick {
+     background-color: #afafaf;
+     width: 0.25em;
+     height: 0.35em;
+     position: absolute;
+     left: 0.3em;
+     top: -0.3em;
+   }
+   .event-date .calendarpage .uck {
+     left: 1.5em;
+   }
+   .events table {
+     border-spacing: 0 10px;
+   }
+   .events table tr {
+     background-color: #fff;
+     border: 5px solid #fff;
+     margin: 1em;
+   }
+   .events table tr {
+     border-bottom: 10px solid #fff;
+   }
+   .events th, .events body.table-layout table.data th, .events td, .events body.table-layout table.data td {
+     border: none;
+   }
+   .subsection-events .event-registration-status a:link, .subsection-events .event-registration-status a:visited {
+     text-decoration: none;
+     color: #FFF;
+     border: none;
+     padding: 6px 8px;
+     background: #0b7b7d;
+   }
+   .subsection-events .event-registration-status a:hover {
+     background: #0b7b7d;
+   }
+   body.page-about-events-seminars- .panel-pane.seminar-speaker-name {
+     width: 57%;
+   }
+   body.subsite-rdf table td a {
+     -ms-word-break: break-all;
+     word-break: break-all;
+     word-break: break-word;
+     -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+     hyphens: auto;
+   }
+   body.subsite-rdf #intro {
+     margin-left: 9px;
+     padding-top: 10px;
+   }
+   body.subsite-pdbe .view-news-summary p.date {
+     font-weight: bold;
+     margin-bottom: 0.43em;
+   }
+   body.subsite-pdbe .pdbe-news-date {
+     font-weight: bold;
+     margin: 0 9px 9px;
+   }
+   body.subsite-pdbe .view-event-details {
+     margin: 0 9px 9px;
+   }
+   body.subsite-pdbe .view-pdbe-publications .description {
+     margin-left: 9px;
+     margin-right: 9px;
+   }
+   body.subsite-pdbe div#local-masthead {
+     background: #d8e5d8 url(/sites/ebi.ac.uk/themes/custom/ebicompliance/images/PDBe-banner_mono.png) top right no-repeat !important;
+   }
+   body.subsite-pdbe div#local-title h1, body.subsite-pdbe div#local-title p, body.subsite-pdbe div#local-title a {
+     color: #666666 !important;
+     text-shadow: 1px 1px white !important;
+   }
+   .panel-flexible .views-row-last a, table.views-table th.views-field-description, table.views-table td.views-field-description {
+     -ms-word-break: break-all;
+     word-break: break-all;
+     word-break: break-word;
+     -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+     hyphens: auto;
+   }
+   body.subsite-ega #local-masthead, body.subsite-ega.section-about #local-masthead, body.subsite-ega.front #local-masthead {
+     background: #156765 url(/sites/ebi.ac.uk/themes/custom/ebicompliance/images/EBI_banner_Homepage.jpg) top right no-repeat;
+   }
+   body.subsite-eva #local-masthead, body.subsite-eva.section-about #local-masthead, body.subsite-eva.front #local-masthead {
+     background: #156765 url(/sites/ebi.ac.uk/themes/custom/ebicompliance/images/EBI_banner_Homepage.jpg) top right no-repeat;
+   }
+   .page-industry-private-projects div.caption p {
+     display: none;
+     height: 0px;
+   }
+   .node-type-industry-project #intro p, .node-type-industry-project #intro img {
+     padding-top: 10px;
+   }
+   .node-type-industry-project #intro div.caption p {
+     width: 220px;
+   }
+   .section-industry div.caption p {
+     padding-left: 0px;
+   }
+   #projectgallery {
+     padding-left: 9px;
+   }
+   #projectgallery .caption {
+     margin-bottom: 0px;
+   }
+   #projectgallery .caption-inner {
+     width: 100px;
+   }
+   #projectgallery .caption.left {
+     width: 100px;
+     float: left;
+   }
+   #projectgallery p {
+     font-size: 85%;
+     font-family: Verdana, sans-serif;
+     color: #777;
+     text-align: left;
+   }
+   #projectgallery img {
+     margin-right: 10px;
+     float: left;
+   }
+   .section-industry .views-label {
+     font-weight: bold;
+   }
+   .section-industry #intro {
+     padding: 9px;
+   }
+   .section-industry .views-field-field-ind-event-image {
+     float: right;
+   }
+   .section-industry .view-industry-event-details {
+     margin-left: 9px;
+   }
+   .section-industry a.registration-link {
+     display: block;
+     float: right;
+     background: #83a3c9;
+     padding: 6px 8px;
+     border: none;
+     color: white;
+     text-decoration: none;
+   }
+   .section-industry a.registration-link:hover {
+     background: #55697e;
+   }
+   body.subdomain-intranet .section-intranet-homepage table {
+     table-layout: fixed;
+   }
+   body.subdomain-intranet #intro {
+     padding-top: 9px;
+   }
+   body.front .view-intranet-homepage tr td {
+     width: 25%;
+   }
+   @media (max-width:800px) {
+     body.front .view-intranet-homepage tr td {
+       width: 48%;
+       display: inline-block;
+       border: none;
+       padding: 0 1% 1em;
+     }
+   }
+   .section-training #page .calendar-calendar td a:hover {
+     color: #222;
+   }
+   .section-training #page #intro h3 {
+     font-size: 277%;
+     margin: 0px 0px 10px 0px;
+     background-color: transparent;
+     border-bottom: 1px solid #cccccc;
+     color: #777;
+   }
+   .section-training #page .views-row {
+     padding: 10px 30px 20px 30px;
+     margin-bottom: 0.3em;
+     background: url(/sites/ebi.ac.uk/themes/custom/ebicompliance/images/dot.png) repeat-x center bottom;
+   }
+   .section-training #page .views-field p {
+     padding: 0px;
+     margin: 0px;
+   }
+   .section-training #page .views-field-title h5 {
+     margin-bottom: 0px;
+     margin-left: -30px;
+   }
+   .section-training #page .views-field-title h5 a {
+     color: #1f7878;
+     padding-left: 0px;
+   }
+   .section-training #page .field-name-field-seminar-abstract, .section-training #page .field-name-field-tr-event-overview span, .section-training #page .views-field-field-seminar-abstract .field-content, .section-training #page .views-field-field-tr-event-overview {
+     color: #996A44;
+   }
+   .section-training #page .field-type-location, .section-training #page .field-type-datetime, .section-training #page .form-item-field-location-type-tid, .section-training #page .views-field-field-seminar-date, .section-training #page .views-field-field-tr-event-date, .section-training #page .views-field-field-tr-event-level, .section-training #page .date-display-single, .section-training #page .location {
+     color: #777;
+   }
+   .section-training #page .views-field-field-tr-event-level, .section-training #page .views-field-field-tr-event-location .location {
+     font-size: 85%;
+   }
+   .section-training #page form, .section-training #page .view-filters, .section-training #page .views-exposed-form .views-exposed-widget {
+     float: none;
+     padding: 0px;
+     margin: 0px;
+   }
+   .section-training #page .views-exposed-form {
+     margin-top: 1em;
+     background-color: #dedede;
+     padding-top: 0.2em;
+     -moz-border-radius-topleft: 5px;
+     -webkit-border-top-left-radius: 5px;
+     border-top-left-radius: 5px;
+     -moz-border-radius-topright: 5px;
+     -webkit-border-top-right-radius: 5px;
+     border-top-right-radius: 5px;
+   }
+   .section-training #page #edit-field-tr-event-location-type-tid-wrapper, .section-training #page .views-exposed-form label[for=edit-field-tr-event-location-type-tid] {
+     display: block;
+     width: 100%;
+     float: left;
+     padding: 0;
+     margin: 0;
+   }
+   .section-training #page div.views-widget {
+     float: right;
+   }
+   .section-training #page .view-filters label.option {
+     font-weight: normal;
+     font-size: 85%;
+   }
+   .section-training #page label[for=edit-field-tr-event-location-type-value] {
+     font-weight: normal;
+     padding: 0px 9px;
+     color: #898989;
+     font-size: 182%;
+   }
+   .section-training #page .bef-select-as-radios div {
+     float: left;
+     padding-top: 0.8em;
+   }
+   .section-training span.search-filter {
+     -moz-border-radius: 5px;
+     -khtml-border-radius: 5px;
+     -webkit-border-radius: 5px;
+     border-radius: 5px;
+     background-color: #ddd;
+     color: 333;
+     padding: 0.2em 0.5em;
+   }
+   .section-training span.result-number, .section-training span.result-total {
+     font-weight: bold;
+   }
+   .section-training #page .Invite-only, .section-training #page .Apply a:link {
+     text-decoration: none;
+     color: #686868;
+     text-shadow: 1px 1px 1px #ffffff;
+     filter: dropshadow(color=#ffffff, offx=1, offy=1);
+   }
+   .section-training #page .Apply {
+     background: rgb(252, 220, 133);
+     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZGM4NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZGNjMmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+     background: -moz-linear-gradient(top, rgba(252, 220, 133, 1) 0%, rgba(253, 204, 42, 1) 100%);
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(252, 220, 133, 1)), color-stop(100%, rgba(253, 204, 42, 1)));
+     background: -webkit-linear-gradient(top, rgba(252, 220, 133, 1) 0%, rgba(253, 204, 42, 1) 100%);
+     background: -o-linear-gradient(top, rgba(252, 220, 133, 1) 0%, rgba(253, 204, 42, 1) 100%);
+     background: -ms-linear-gradient(top, rgba(252, 220, 133, 1) 0%, rgba(253, 204, 42, 1) 100%);
+     background: linear-gradient(to bottom, rgba(252, 220, 133, 1) 0%, rgba(253, 204, 42, 1) 100%);
+     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fcdc85', endColorstr='#fdcc2a', GradientType=0);
+   }
+   .section-training #page .Invite-only {
+     background: rgb(223, 223, 223);
+     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RmZGZkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjYmNiY2IiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+     background: -moz-linear-gradient(top, rgba(223, 223, 223, 1) 0%, rgba(203, 203, 203, 1) 100%);
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(223, 223, 223, 1)), color-stop(100%, rgba(203, 203, 203, 1)));
+     background: -webkit-linear-gradient(top, rgba(223, 223, 223, 1) 0%, rgba(203, 203, 203, 1) 100%);
+     background: -o-linear-gradient(top, rgba(223, 223, 223, 1) 0%, rgba(203, 203, 203, 1) 100%);
+     background: -ms-linear-gradient(top, rgba(223, 223, 223, 1) 0%, rgba(203, 203, 203, 1) 100%);
+     background: linear-gradient(to bottom, rgba(223, 223, 223, 1) 0%, rgba(203, 203, 203, 1) 100%);
+     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#cbcbcb', GradientType=0);
+   }
+   .section-training #page .Invite-only a:link, .section-training #page .Apply a:link {
+     text-decoration: none;
+     border: none;
+     display: block;
+     text-align: center;
+     background-image: none;
+   }
+   .section-training #page .Apply a:hover {
+     border-bottom: none;
+     background: rgb(253, 204, 44);
+     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkY2MyYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlOGJlMzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+     background: -moz-linear-gradient(top, rgba(253, 204, 44, 1) 0%, rgba(232, 190, 54, 1) 100%);
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(253, 204, 44, 1)), color-stop(100%, rgba(232, 190, 54, 1)));
+     background: -webkit-linear-gradient(top, rgba(253, 204, 44, 1) 0%, rgba(232, 190, 54, 1) 100%);
+     background: -o-linear-gradient(top, rgba(253, 204, 44, 1) 0%, rgba(232, 190, 54, 1) 100%);
+     background: -ms-linear-gradient(top, rgba(253, 204, 44, 1) 0%, rgba(232, 190, 54, 1) 100%);
+     background: linear-gradient(to bottom, rgba(253, 204, 44, 1) 0%, rgba(232, 190, 54, 1) 100%);
+     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fdcc2c', endColorstr='#e8be36', GradientType=0);
+     -webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+     -moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+     box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+     -moz-border-radius: 12px;
+     -webkit-border-radius: 12px;
+     border-radius: 12px;
+   }
+   .section-training #page .views-field-field-tr-event-reg-type p {
+     display: block;
+     margin-top: 10px;
+     width: 100px;
+     padding: 2px 0px;
+     text-align: center;
+     -webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+     -moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+     box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+     -moz-border-radius: 12px;
+     -webkit-border-radius: 12px;
+     border-radius: 12px;
+   }
+   .section-training #page .panel-2col {}
+   .section-training #page .panel-2col .panel-col-first {
+     float: left;
+     width: 80%;
+   }
+   * html .panel-2col .panel-col-first {
+     width: 79.9%;
+   }
+   .section-training #page .panel-2col .panel-col-first .inside {
+     margin: 0 .5em 1em 0;
+   }
+   .section-training #page .panel-2col .panel-col-last {
+     float: left;
+     width: 20%;
+   }
+   * html .panel-2col .panel-col-last {
+     width: 19.9%;
+   }
+   .section-training #page .panel-2col .panel-col-last .inside {
+     margin: 50% 0 1em 25%;
+   }
+   .section-training #page #panels-edit-display .panel-pane, .section-training #page #panels-edit-display .helperclass {
+     margin: .5em;
+   }
+   .section-training #page .panel-2col .panel-separator {
+     margin: 0 0 1em 0;
+   }
+   .section-training #page .ds-2col-stacked {
+     margin-left: 1%;
+   }
+   .section-training #page .ds-2col-stacked> .group-header {}
+   .section-training #page .ds-2col-stacked> .group-left {
+     float: left;
+     width: 80%;
+   }
+   .section-training #page .ds-2col-stacked> .group-right {
+     float: right;
+     width: 20%;
+   }
+   .section-training #page .ds-2col-stacked> .group-footer {
+     clear: both;
+   }
+   .section-training .ebi-tags {
+     float: left;
+   }
+   .section-training .ebi-tag-event-type {
+     display: none;
+   }
+   .section-training th, .section-training thead th, .section-training tbody th {
+     text-align: left;
+     padding-right: 0;
+     border-bottom: none;
+     background-color: #998d5d;
+     color: #ffffff;
+   }
+   .section-training #content table.contenttable_lmenu th {
+     border: 1px solid #ADADAF;
+     color: #ffffff;
+     padding: 3px;
+     vertical-align: top;
+     border-collapse: collapse;
+   }
+   .section-training #content table td.subheading, .section-training #content table.contenttable_lmenu td.subheadingleft {
+     background-color: #c3ad5a;
+     border: 1px solid #ADADAF;
+     color: #404040;
+     font-weight: bold;
+     padding: 3px;
+     text-align: left;
+     vertical-align: top;
+   }
+   .section-training #intro {
+     margin-left: 9px !important;
+     padding: 9px;
+   }
+   .section-training .vevent p, .section-training .vevent div {
+     margin: 0 0 5px 0;
+   }
+   .page-training-events .vevent p {
+     padding: 0;
+   }
+   .section-training img.sponsor {
+     width: 100px;
+     margin-left: 0.5em;
+   }
+   .section-training .event-sponsors {
+     float: right;
+     text-align: center;
+   }
+   .section-training .vevent .field-label-inline-first {
+     font-weight: bold;
+     display: inline;
+   }
+   .section-training .vevent .event-sponsors .field-label-inline-first {
+     display: block;
+   }
+   .section-training .tags-field, .section-training .vevent .tags-field {
+     display: block;
+     margin: 0 9px;
+   }
+   .page-training-events .event-registration {
+     position: relative;
+     margin: 0 auto;
+     text-align: right;
+     float: right;
+   }
+   .page-training-events .event-registration * {
+     text-align: center;
+   }
+   .section-training .event-registration-status a:link, .section-training .event-registration-status a:visited {
+     text-decoration: none;
+     color: #FFF;
+     border: none;
+     padding: 6px 8px;
+     background: rgb(218, 181, 74);
+   }
+   .section-training .event-registration-status a:hover {
+     background: rgb(144, 116, 35);
+   }
+   .section-training .field-name-body li {
+     list-style-position: outside;
+   }
+   .page-training-events .event-type-webinar .time .day, .page-training-events .event-type-webinar .time .month, .page-training-events .event-type-webinar .time .year {
+     display: none;
+   }
+   div#wrapper div.contextual-links-wrapper {
+     font-size: 9px;
+   }
+   div#wrapper div.contextual-links-wrapper ul.contextual-links {
+     background-color: #fff;
+     border: 1px solid #ccc;
+     width: auto;
+     height: auto;
+     margin-top: 0;
+   }
+   div#wrapper div.contextual-links-wrapper a {
+     border-bottom: 0 none;
+   }
+   div#wrapper ul.contextual-links li a {
+     color: #333 !important;
+     border-bottom: 0px none;
+   }
+   div#wrapper ul.contextual-links li a:hover {
+     background-color: #bfdcee;
+     border-bottom: 0px none;
+   }
+   body.subdomain-intranet.front #local-masthead, body.subdomain-intranet #local-masthead {
+     background: #156765 url(/sites/ebi.ac.uk/themes/custom/ebicompliance/images/EBI_banner_Intranet.jpg) top right no-repeat;
+   }
+   body.subdomain-rdf #local-masthead, body.subsite-rdf #local-masthead {
+     background: #60bdc4 url(/sites/ebi.ac.uk/themes/custom/ebicompliance/images/EBI_SERVICES_Banner.jpg) top right no-repeat;
+   }
+   div.caption-inner {
+     text-align: left;
+   }
+   body.front form#ebi_search {
+     margin: 0 0 0 0.69em;
+     padding: 0;
+     border: 2px solid #207a7a;
+     background-color: #70bdbd;
+     -moz-border-radius: 5px;
+     -khtml-border-radius: 5px;
+     -webkit-border-radius: 5px;
+     border-radius: 5px;
+   }
+   body.front form#ebi_search fieldset {
+     background: transparent;
+     border: 0 none;
+     padding: 0;
+     margin: 0;
+   }
+   body.front form#ebi_search legend {
+     font-size: 136%;
+     background-color: #1d8086;
+     color: #f8f8f8;
+     width: 100%;
+     font-family: 'HelveticaNeueLT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     border: 0 none;
+     padding: 0;
+   }
+   body.front form#ebi_search legend span {
+     color: inherit;
+     font-weight: normal;
+     padding: 0.1em 0 0 0.2em;
+     display: block;
+   }
+   body.front form#ebi_search input#query {
+     margin: 0.69em 0.3em;
+     font-size: 123.1%;
+   }
+   body.front form#ebi_search input#search_submit {
+     display: inline;
+     margin: 0 0.69em;
+   }
+   body.front form#ebi_search p#example {
+     margin-bottom: 0.69em;
+   }
+   div.view-id-press_releases div.views-row {
+     width: 32%;
+     float: left
+   }
+   div.view-id-press_releases div.views-row-1, div.view-id-press_releases div.views-row-2 {
+     margin-right: 1%;
+   }
+   body.front h1 {
+     margin-bottom: 0;
+   }
+   body.front h2 {
+     color: #bfd9d8;
+     margin-bottom: 1em;
+   }
+   body.front p.intro {
+     font-size: 123.1%;
+   }
+   body.front form#ebi_search {
+     margin-top: 0.5em;
+     margin-bottom: 1em
+   }
+   body.page-about-events .title {
+     background-color: #f4f4f4;
+     padding: 0.1em 0.2em;
+     border-radius: 3px;
+   }
+   .view-all-events .views-row, .view-industry-events .views-row, .view-training-eve .views-row {
+     margin: 9px;
+   }
+   html.fontface .view-all-events .title:before, html.fontface .view-industry-events .title:before, html.fontface .view-training-eve .title:before {
+     font-family: 'EBI-Generic';
+     font-size: 100%;
+     color: #207a7a;
+     content: 'r';
+     margin: 0 0.3em 0 0;
+   }
+   .view-all-events .date, .view-industry-events .date, .view-training-eve .date {
+     font-weight: normal;
+   }
+   .view-all-events .date span, .view-industry-events .date span, .view-training-eve .date span {
+     font-weight: inherit;
+   }
+   .view-research-leaders .views-row {
+     width: 50%;
+     float: left;
+   }
+   .view-research-leaders .views-field-field-person-photo {
+     float: left;
+   }
+   .view-research-leaders p {
+     margin: 0;
+   }
+   .view-services .views-summary li {
+     display: inline;
+     width
+   }
+   #views-exposed-form-resources-page .views-exposed-widget, #views-exposed-form-group-members-page .views-exposed-widget {
+     width: 100%;
+   }
+   .subdomain-staff .views-exposed-widgets, .section-list-staff .views-exposed-widgets, .subdomain-staff aside .view-group-members .view-content, .subdomain-staff aside .view-list-staff .view-content, .section-list-staff aside .view-list-staff .view-content, .subdomain-staff aside .view-search-staff .view-content {
+     margin-bottom: 1.5em !important;
+     background-color: #eee !important;
+     padding: 10px;
+   }
+   .subdomain-staff .view-group-members, .subdomain-staff .view-list-staff, .section-list-staff .view-list-staff, .subdomain-staff .view-search-staff {
+     margin-left: 0px !important;
+     padding: 0 9px;
+   }
+   .views-exposed-widget {
+     margin-bottom: 1em !important;
+   }
+   .page-list-staff input[type="text"] {
+     font-size: 123% !important;
+   }
+   div#panels-ipe-control-container {
+     left: 0;
+     display: none !important;
+   }
+   table.views-table td.views-field img {
+     float: left;
+     margin-right: 0.69em;
+     max-width: none;
+     padding: 0 9px;
+   }
+   table.views-table h2 {
+     font-size: 161.6%;
+     color: #000;
+     display: inline;
+   }
+   td h2, td h3, td h4, td h5, td h6, td p {
+     padding-left: 0;
+   }
+   div.photo img {
+     margin: 0.69em;
+     border: 0.3em solid #ccc;
+     float: left;
+     max-width: 25%
+   }
+   p.role {
+     font-size: 123.1%;
+     font-weight: bold;
+     margin-top: 0.69em;
+   }
+   html.fontface p span.email:before, html.fontface p.email:before {
+     font-family: 'EBI-Generic';
+     font-size: 138.5%;
+     color: #bbb;
+     content: 'E';
+     margin: 0 0.3em 0 0;
+   }
+   html.fontface p span.tel:before, html.fontface p.tel:before {
+     font-family: 'EBI-Generic';
+     font-size: 138.5%;
+     color: #bbb;
+     content: 'C';
+     margin: 0 0.3em 0 0;
+   }
+   html.fontface p span.homepage:before, html.fontface p.homepage:before {
+     font-family: 'EBI-Generic';
+     font-size: 138.5%;
+     color: #bbb;
+     content: 'H';
+     margin: 0 0.3em 0 0;
+   }
+   .view-research-leader-overview .views-row {
+     width: 50%;
+     float: left;
+   }
+   .view-research-leader-overview .views-row-odd {
+     clear: left;
+   }
+   .view-research-leader-overview p {
+     margin: 0;
+   }
+   .view-research-leader-overview .image {
+     float: left;
+     margin-left: 9px;
+     width: 33%;
+   }
+   .view-research-leader-overview .name {
+     font-weight: bold;
+   }
+   html.fontface .view-research-leader-overview .group-link:before {
+     font-family: 'EBI-Generic';
+     font-size: 100%;
+     margin: 0 0.3em 0 0;
+     color: #bbb;
+     content: 'f';
+   }
+   html.fontface .view-research-leader-overview .publication-link:before {
+     font-family: 'EBI-Generic';
+     font-size: 100%;
+     margin: 0 0.3em 0 0;
+     color: #bbb;
+     content: 'P';
+   }
+   html.fontface .view-research-leader-overview .contact-link:before {
+     font-family: 'EBI-Generic';
+     font-size: 100%;
+     margin: 0 0.3em 0 0;
+     color: #bbb;
+     content: 'C';
+   }
+   .view-research-team-members .views-row {
+     width: 25%;
+     float: left;
+   }
+   .view-research-team-members .views-row:nth-child(4n+1) {
+     clear: left;
+   }
+   .view-research-team-members .name, .view-research-team-members p {
+     margin: 0;
+   }
+   .view-research-team-members .image {
+     float: left;
+     margin-left: 9px;
+   }
+   .view-resource-positions .views-row, .view-people-positions .views-row {
+     width: 75px;
+     float: left;
+     margin-left: 9px;
+   }
+   .view-resource-positions .views-row:nth-child(4n+1), .view-people-positions .views-row:nth-child(4n+1) {
+     clear: left;
+   }
+   .view-resource-team-info .url {
+     float: right;
+     display: inline;
+     margin: 0.5em 9px;
+     padding: 3px 9px;
+     -moz-border-radius: 5px;
+     -khtml-border-radius: 5px;
+     -webkit-border-radius: 5px;
+     border-radius: 5px;
+     font-size: 108%;
+     border-width: 1px;
+     border-color: #618658;
+     background-color: #207a7a;
+     background-image: -moz-linear-gradient(top, #54bdbd, #207a7a);
+     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #54bdbd), color-stop(1, #207a7a));
+     background-image: -webkit-linear-gradient(#54bdbd, #207a7a);
+     background-image: linear-gradient(top, #54bdbd, #207a7a);
+     filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#54bdbd', EndColorStr='#207a7a');
+     box-shadow: 0px 2px 2px #adadad;
+     -moz-box-shadow: 0px 2px 2px #adadad;
+     -khtml-box-shadow: 0px 2px 2px #adadad;
+     -webkit-box-shadow: 0px 2px 2px #adadad;
+     color: #f8f8f8;
+     text-shadow: #145251 0 1px 1px;
+     width: auto;
+     *padding-top: 0px;
+     *padding-bottom: 0px;
+     border-color: #295c5c;
+   }
+   .view-resource-team-info .url:hover {
+     background: #207a7a;
+   }
+   .view-resource-team-info .url a {
+     color: inherit;
+     border-bottom: none;
+   }
+   @media screen and (min-width:1201px) {
+     .view-service-categories .views-row {
+       width: 31% !important;
+       float: left;
+     }
+     .view-service-categories .views-row:nth-child(3n+1) {
+       clear: both;
+       !important
+     }
+   }
+   @media screen and (max-width:1200px) {
+     .view-service-categories .views-row {
+       width: 47% !important;
+       float: left;
+     }
+     .view-service-categories .views-row:nth-child(2n+1) {
+       clear: both;
+       !important
+     }
+   }
+   @media screen and (max-width:950px) {
+     .view-service-categories .views-row {
+       width: 97% !important;
+       clear: both !important;
+     }
+   }
+   html.fontface .view-service-categories .name:before {
+     font-family: 'EBI-Conceptual';
+     font-size: 138.5%;
+     margin: 0 0.3em 0 0;
+   }
+   html.fontface .view-service-categories .dna-rna:before {
+     color: #dac79d;
+     content: 'd';
+   }
+   html.fontface .view-service-categories .gene-expression:before {
+     color: #dab7e2;
+     content: 'g';
+   }
+   html.fontface .view-service-categories .proteins:before {
+     color: #62d0df;
+     content: 'P';
+   }
+   html.fontface .view-service-categories .structures:before {
+     color: #afc9b8;
+     content: 's';
+   }
+   html.fontface .view-service-categories .systems:before {
+     color: #ffb4aa;
+     content: 'y';
+   }
+   html.fontface .view-service-categories .chemical-biology:before {
+     color: #ffc999;
+     content: 'b';
+   }
+   html.fontface .view-service-categories .ontologies:before {
+     color: #bec3d9;
+     content: 'o';
+   }
+   html.fontface .view-service-categories .literature:before {
+     color: #c5d4a3;
+     content: 'l';
+   }
+   html.fontface .view-service-categories .other-software:before {
+     color: #a4c7e2;
+     content: 'c';
+   }
+   html.fontface .view-service-categories .cross-domain:before {
+     color: #a4c7e2;
+     content: 'c';
+   }
+   .view-service-group-members .views-row, .view-service-group-alumni .views-row {
+     width: 25%;
+     float: left;
+   }
+   .view-service-group-members .views-row:nth-child(4n+1), .view-service-group-alumni .views-row:nth-child(4n+1) {
+     clear: left;
+   }
+   .view-service-group-members .name, .view-service-group-alumni .name, .view-service-group-members p, .view-service-group-alumni p {
+     margin: 0;
+   }
+   .view-service-group-members .image, .view-service-group-alumni .image {
+     float: left;
+     margin-left: 9px;
+   }
+   .view-people-and-groups dd {
+     margin: 0 0 1.5em 0.69em;
+   }
+   html.fontface .pane-people-and-groups h3:before {
+     font-family: 'EBI-Generic';
+     font-size: 100%;
+     color: #333;
+     margin: 0 0.3em 0 0;
+   }
+   .pane-people-and-groups.services h3 {
+     border-bottom: 3px solid #207a7a;
+   }
+   .pane-people-and-groups.research h3 {
+     border-bottom: 3px solid #71b360;
+   }
+   .pane-people-and-groups.other h3 {
+     border-bottom: 3px solid #60bdc4;
+   }
+   html.fontface .pane-people-and-groups.research h3:before {
+     content: ')';
+   }
+   html.fontface .pane-people-and-groups.services h3:before {
+     content: '(';
+   }
+   html.fontface .pane-people-and-groups.other h3:before {
+     font-family: 'EBI-Conceptual';
+     content: 'c';
+   }
+   form#people-groups input {
+     font-size: 123.1%;
+     display: inline;
+   }
+   form#people-groups input[type="text"] {
+     width: 50%;
+   }
+   body.node-type-press-release .pane-node-field-image, body.node-type-news .field-name-field-image {
+     float: left;
+   }
+   body.node-type-press-release .pane-node-field-image, body.node-type-news .field-name-field-image, body.node-type-news .field-name-field.url {
+     padding: 0 9px;
+   }
+   .view-press-releases td.image {
+     width: 150px;
+   }
+   .view-press-releases .views-row-first {
+     margin-left: 0;
+   }
+   .view-press-releases .views-row-last {
+     margin-right: 0;
+   }
+   .view-press-releases h3.title, .view-news h3.title {
+     margin-top: 0;
+     margin-bottom: 0;
+   }
+   .view-press-releases p.date, .view-news p.date {
+     font-weight: bold;
+     margin-bottom: 0.43em;
+   }
+   body.page-about-news-service-news a.feed-icon, body.page-about-news-press-releases a.feed-icon, body.page-about-events a.feed-icon {
+     position: absolute;
+     top: 19px;
+     right: 9px;
+     border-bottom: none;
+   }
+   body.page-about-news-blogs tr td:first-child {
+     width: 150px;
+   }
+   body.page-brochures-about-embl-ebi tr td:first-child {
+     width: 150px;
+   }
+   .view-resources-info td {
+     vertical-align: middle;
+   }
+   .view-resources-info td.image {
+     width: 60px;
+   }
+   .field-name-body li {
+     list-style-position: inside;
+   }
+   .field-name-field-relatied-stories, .field-name-field-url {
+     padding: 0 9px;
+   }
+   #local-masthead nav div+div {
+     display: none;
+   }
+   a.no-underline {
+     border-bottom: none;
+   }
+   .grid_8.alpha .pane-fieldable-panels-pane {
+     padding-left: 9px;
+   }
+   .grid_8.omega .pane-fieldable-panels-pane {
+     padding-right: 9px;
+   }
+   #shib_login_url {
+     display: inline;
+     margin: 0.5em 9px;
+     padding: 3px 9px;
+     -moz-border-radius: 5px;
+     -khtml-border-radius: 5px;
+     -webkit-border-radius: 5px;
+     border-radius: 5px;
+     font-size: 108%;
+     border-width: 1px;
+     border-color: #618658;
+     background-color: #207a7a;
+     background-image: -moz-linear-gradient(top, #54bdbd, #207a7a);
+     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #54bdbd), color-stop(1, #207a7a));
+     background-image: -webkit-linear-gradient(#54bdbd, #207a7a);
+     background-image: linear-gradient(top, #54bdbd, #207a7a);
+     filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='#54bdbd', EndColorStr='#207a7a');
+     box-shadow: 0px 2px 2px #adadad;
+     -moz-box-shadow: 0px 2px 2px #adadad;
+     -khtml-box-shadow: 0px 2px 2px #adadad;
+     -webkit-box-shadow: 0px 2px 2px #adadad;
+     color: #f8f8f8;
+     text-shadow: #145251 0 1px 1px;
+     width: auto;
+     *padding-top: 0px;
+     *padding-bottom: 0px;
+     border-color: #295c5c;
+   }
+   #shib_login_url a {
+     color: inherit;
+     border-bottom: none;
+     font-weight: normal;
+   }
+
+
+
 /* OMEGA GRID
    ********** */
 
