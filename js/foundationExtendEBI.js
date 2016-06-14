@@ -23,22 +23,21 @@
 
   // do we need to make space?
   if (localMenuWidthUsed > localMenuWidthTotal) {
-    // loop through each item in reverse
+
+    // create dropdown if needed
+    if ($(localMenuClass + 'li.extra-items-menu').length == 0) { 
+      $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
+      localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + 'li.extra-items-menu').width();
+    }
+
+    // loop through each menu item in reverse
     $($(localMenuClass+' > li').get().reverse()).each( function() {
-
-      if ($(this).hasClass('extra-items-menu') == false) { // dont try to hide the dropdown menu item
-
-        if ($('li.extra-items-menu').length == 0) { // create dropdown if needed
-          $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
-          localMenuWidthUsed = localMenuWidthUsed + $('li.extra-items-menu').width();
-        }
-
-        if (localMenuWidthUsed > localMenuWidthTotal) { // do we need to hide more items?
-          localMenuWidthUsed = localMenuWidthUsed - $(this).width();
-          $(this).detach().prependTo('li.extra-items-menu ul.menu');
-        }
+      if (localMenuWidthUsed > localMenuWidthTotal) { // do we need to hide more items?
+        localMenuWidthUsed = localMenuWidthUsed - $(this).width();
+        $(this).detach().prependTo(localMenuClass + 'li.extra-items-menu ul.menu');
       }
     });
+
   } else {
     // to do: restore menu items with any free space 
 
