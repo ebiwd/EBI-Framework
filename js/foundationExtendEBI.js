@@ -30,8 +30,8 @@
       localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').width();
     }
 
-    // loop through each menu item in reverse
-    $($(localMenuClass+' > li').get().reverse()).each( function() {
+    // loop through each menu item in reverse, and slice off the first as it's the dropdown
+    $($(localMenuClass+' > li').get().reverse().slice(1)).each( function() {
       if (localMenuWidthUsed > localMenuWidthTotal) { // do we need to hide more items?
         localMenuWidthUsed = localMenuWidthUsed - $(this).width();
         $(this).detach().prependTo(localMenuClass + ' li.extra-items-menu ul.menu');
@@ -39,8 +39,8 @@
     });
 
   } else {
-    // if the menu is shorter than full widht, we can perhaps restore some menu items from the dropdown
-    if ($(localMenuClass + 'l i.extra-items-menu').length > 0) { // does the dropdown exist?
+    // if the menu is shorter than full width, we can perhaps restore some menu items from the dropdown
+    if ($(localMenuClass + ' li.extra-items-menu').length > 0) { // does the dropdown exist?
       // to do: restore menu items with any free space 
 
       if ($(localMenuClass + ' li.extra-items-menu li').length == 0) { 
@@ -50,7 +50,7 @@
 
 
     }
-  }
+  }  
 
   // Clearable text inputs
   // via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text 
