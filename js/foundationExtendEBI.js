@@ -45,7 +45,7 @@
 
       if ($(localMenuClass + ' li.extra-items-menu li').length == 0) { 
         // if the dropdown is empty, delte it
-        $(localMenuClass + ' li.extra-items-menu li').delete();
+        $(localMenuClass + ' li.extra-items-menu').remove();
       }
 
 
