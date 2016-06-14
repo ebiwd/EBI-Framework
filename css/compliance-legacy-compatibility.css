@@ -692,6 +692,9 @@ img.float-l {
    .section-training .field-name-body li {
      list-style-position: outside;
    }
+   .section-training  [type='checkbox'] + label, .section-training  [type='radio'] + label {
+     margin: 0 .15rem;
+   }
    .page-training-events .event-type-webinar .time .day, .page-training-events .event-type-webinar .time .month, .page-training-events .event-type-webinar .time .year {
      display: none;
    }
