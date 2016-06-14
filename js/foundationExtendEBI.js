@@ -25,23 +25,31 @@
   if (localMenuWidthUsed > localMenuWidthTotal) {
 
     // create dropdown if needed
-    if ($(localMenuClass + 'li.extra-items-menu').length == 0) { 
+    if ($(localMenuClass + ' li.extra-items-menu').length == 0) { 
       $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
-      localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + 'li.extra-items-menu').width();
+      localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').width();
     }
 
     // loop through each menu item in reverse
     $($(localMenuClass+' > li').get().reverse()).each( function() {
       if (localMenuWidthUsed > localMenuWidthTotal) { // do we need to hide more items?
         localMenuWidthUsed = localMenuWidthUsed - $(this).width();
-        $(this).detach().prependTo(localMenuClass + 'li.extra-items-menu ul.menu');
-      }
+        $(this).detach().prependTo(localMenuClass + ' li.extra-items-menu ul.menu');
+      } // we could break when <= but this should be pretty fast
     });
 
   } else {
-    // to do: restore menu items with any free space 
+    // if the menu is shorter than full widht, we can perhaps restore some menu items from the dropdown
+    if ($(localMenuClass + 'l i.extra-items-menu').length > 0) { // does the dropdown exist?
+      // to do: restore menu items with any free space 
 
-    // to do: if there is only one drop down item, perhaps we can delete the dropdown and restore the item...
+      if ($(localMenuClass + ' li.extra-items-menu li').length == 0) { 
+        // if the dropdown is empty, delte it
+        $(localMenuClass + ' li.extra-items-menu li').delete();
+      }
+
+
+    }
   }
 
   // Clearable text inputs
