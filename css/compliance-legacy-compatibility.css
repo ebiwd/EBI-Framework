@@ -76,7 +76,7 @@ img.float-l {
      display: block;
    }
    .event-teaser .event-field {
-     margin: 0 9px;
+     /* margin: 0 9px; */
      display: block;
    }
    .course-teaser-details, .event-teaser-details {
