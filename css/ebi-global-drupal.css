@@ -3,12 +3,12 @@
 /* Drupal edit/local tabs */
 .button-group { margin-left: 0; margin-top: 2rem;}
 .button-group li { display: inline-block; }
-.button-group li a.button.secondary { background: #fff; color: #333; }
+.button-group li a.button.secondary {background: #f1f1f1;color: #333;border:0;border-right: 1px solid #fff;}
 .button-group li a.button.secondary.active,
 .button-group li a.button.secondary:active,
 .button-group li a.button.secondary:hover { background: #333; color: #fff; }
 
-/* Form buttons */ 
+/* Form buttons */
 body .form-actions.form-wrapper button {
   display: inline-block;
   text-align: center;
@@ -24,16 +24,16 @@ body .form-actions.form-wrapper button {
   font-size: 0.9rem;
   }
 
-input[type="checkbox"], input[type="radio"] { vertical-align: text-top; }  
+input[type="checkbox"], input[type="radio"] { vertical-align: text-top; }
 
 /* Misc */
 #panels-edit-display-form h2.label { background: none; }
 html.js fieldset.collapsed { height: 2em; }
 
 /* Edit form */
-.node-form input#edit-title { 
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; 
-  font-size: 1.8em; 
+.node-form input#edit-title {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.8em;
   height: 2em;
 }
 
