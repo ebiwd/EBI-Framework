@@ -11,42 +11,38 @@
   var localMenuClass = 'ul.dropdown.menu.float-left';
   // var localMenuClass = '#secondary-menu-links'; // temp for testing
   // $(localMenuClass).addClass('dropdown'); // temp for testing
-  // var localMenuOption = $(localMenuClass).html();
-  var howManyMenuItems = $(localMenuClass+' > li').length;
-  var localMenuTop = $(localMenuClass+' > li').first().offset().top;  
-  var localMenuHiddenItems = 0;
+  var localMenuWidthTotal = $(localMenuClass).width();
+  var localMenuWidthUsed = 0;
 
   // todo: run this on browser resize events
 
-  // Hide any menu items on a second line
-  // loop through each item in reverse
-  $($(localMenuClass+' > li').get().reverse()).each( function() {
-
-    if ($(this).hasClass('extra-items-menu') == false) { // dont try to hide the dropdown menu item
-
-      if (($(this).offset().top - localMenuTop) == 0) { // is it on the same line as the first item?
-        if (localMenuHiddenItems > 0) {
-          // if we've had to hide items, hide on more to make space for dropdown
-          $(this).detach().prependTo('li.extra-items-menu ul.menu');
-        }
-        // once we've found a menu item on the top line, no need to do anything more
-        return false;
-      } else {
-        localMenuHiddenItems ++;
-        // Create the dropdown after the first item is hidden
-        if ((localMenuHiddenItems == 1) && ($('li.extra-items-menu').length == 0)) {
-          $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
-        }
-        $(this).detach().prependTo('li.extra-items-menu ul.menu');
-      }
-    }
+  // Calculate how much space we need, if any
+  $(localMenuClass+' > li').each( function() {
+    localMenuWidthUsed = localMenuWidthUsed + $(this).width();
   });
 
-  if (localMenuHiddenItems == 0) {
-    // console.log('no need to hide any further items.')
-    // to do: we should move items back if we can... but would like to do so 'smartly'
-    // need to know how wide the next item is, and how much space we have...
-    // we could append one item and rerun the hide function ...
+  // do we need to make space?
+  if (localMenuWidthUsed > localMenuWidthTotal) {
+    // loop through each item in reverse
+    $($(localMenuClass+' > li').get().reverse()).each( function() {
+
+      if ($(this).hasClass('extra-items-menu') == false) { // dont try to hide the dropdown menu item
+
+        if ($('li.extra-items-menu').length == 0) { // create dropdown if needed
+          $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
+          localMenuWidthUsed = localMenuWidthUsed + $('li.extra-items-menu').width();
+        }
+
+        if (localMenuWidthUsed > localMenuWidthTotal) { // do we need to hide more items?
+          localMenuWidthUsed = localMenuWidthUsed - $(this).width();
+          $(this).detach().prependTo('li.extra-items-menu ul.menu');
+        }
+      }
+    });
+  } else {
+    // to do: restore menu items with any free space 
+
+    // to do: if there is only one drop down item, perhaps we can delete the dropdown and restore the item...
   }
 
   // Clearable text inputs
