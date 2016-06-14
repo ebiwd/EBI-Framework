@@ -7,11 +7,51 @@
 (function($) {
 
   // Clone the local menu into a mobile-only menu
-  var localMenuOption = $('ul.dropdown.menu.float-left').html();
-  $('ul.dropdown.menu.float-left').prepend('<li class="show-for-small-only"><a href="#">Also in this section</a><ul class="menu">' + localMenuOption + '</ul></li>');
+  // -----------
+  var localMenuClass = 'ul.dropdown.menu.float-left';
+  // var localMenuClass = '#secondary-menu-links'; // temp for testing
+  // $(localMenuClass).addClass('dropdown'); // temp for testing
+  // var localMenuOption = $(localMenuClass).html();
+  var howManyMenuItems = $(localMenuClass+' > li').length;
+  var localMenuTop = $(localMenuClass+' > li').first().offset().top;  
+  var localMenuHiddenItems = 0;
+
+  // todo: run this on browser resize events
+
+  // Hide any menu items on a second line
+  // loop through each item in reverse
+  $($(localMenuClass+' > li').get().reverse()).each( function() {
+
+    if ($(this).hasClass('extra-items-menu') == false) { // dont try to hide the dropdown menu item
+
+      if (($(this).offset().top - localMenuTop) == 0) { // is it on the same line as the first item?
+        if (localMenuHiddenItems > 0) {
+          // if we've had to hide items, hide on more to make space for dropdown
+          $(this).detach().prependTo('li.extra-items-menu ul.menu');
+        }
+        // once we've found a menu item on the top line, no need to do anything more
+        return false;
+      } else {
+        localMenuHiddenItems ++;
+        // Create the dropdown after the first item is hidden
+        if ((localMenuHiddenItems == 1) && ($('li.extra-items-menu').length == 0)) {
+          $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
+        }
+        $(this).detach().prependTo('li.extra-items-menu ul.menu');
+      }
+    }
+  });
+
+  if (localMenuHiddenItems == 0) {
+    // console.log('no need to hide any further items.')
+    // to do: we should move items back if we can... but would like to do so 'smartly'
+    // need to know how wide the next item is, and how much space we have...
+    // we could append one item and rerun the hide function ...
+  }
 
   // Clearable text inputs
-  // Also need JS, via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text 
+  // via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text 
+  // -------------
   function tog(v){return v?'addClass':'removeClass';} 
   $(document).on('input', '.clearable', function(){
     $(this)[tog(this.value)]('x');
