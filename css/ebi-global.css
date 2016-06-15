@@ -263,12 +263,6 @@ header .masthead {
     float: left; }
   ul#global-nav {
     text-align: right; }
-  /* hide secondary links expect the mobile menu */
-  #local-masthead nav ul.dropdown.menu.float-left > li {
-    display: none; }
-  #local-masthead nav ul.dropdown.menu.float-left > li:first-child {
-    display: inline-block;
-    border-right: none; }
   /* make icon bar smaller for mobile */
   ul#global-nav.menu > li > a > img, ul#global-nav.menu > li > a > i {
     display: block;
