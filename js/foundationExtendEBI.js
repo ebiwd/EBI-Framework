@@ -8,49 +8,62 @@
 
   // Clone the local menu into a mobile-only menu
   // -----------
-  var localMenuClass = 'ul.dropdown.menu.float-left';
+  var localMenuClass = '#local-masthead .masthead > nav ul.dropdown.menu.float-left';
   // var localMenuClass = '#secondary-menu-links'; // temp for testing
   // $(localMenuClass).addClass('dropdown'); // temp for testing
-  var localMenuWidthTotal = $(localMenuClass).width();
-  var localMenuWidthUsed = 0;
+  var localMenuWidthAvail = $('#local-masthead .masthead > nav').width();
+  // var localMenuWidthTotal = $(localMenuClass).width();
 
-  // todo: run this on browser resize events
+  function localNavSpilloverMenu() {
+    var localMenuWidthUsed = 0;
 
-  // Calculate how much space we need, if any
-  $(localMenuClass+' > li').each( function() {
-    localMenuWidthUsed = localMenuWidthUsed + $(this).width();
-  });
-
-  // do we need to make space?
-  if (localMenuWidthUsed > localMenuWidthTotal) {
-
-    // create dropdown if needed
-    if ($(localMenuClass + ' li.extra-items-menu').length == 0) { 
-      $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
-      localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').width();
-    }
-
-    // loop through each menu item in reverse, and slice off the first as it's the dropdown
-    $($(localMenuClass+' > li').get().reverse().slice(1)).each( function() {
-      if (localMenuWidthUsed > localMenuWidthTotal) { // do we need to hide more items?
-        localMenuWidthUsed = localMenuWidthUsed - $(this).width();
-        $(this).detach().prependTo(localMenuClass + ' li.extra-items-menu ul.menu');
-      } // we could break when <= but this should be pretty fast
+    // Calculate how much space we need, if any
+    $(localMenuClass+' > li').each( function() {
+      localMenuWidthUsed = localMenuWidthUsed + $(this).width();
     });
 
-  } else {
-    // if the menu is shorter than full width, we can perhaps restore some menu items from the dropdown
-    if ($(localMenuClass + ' li.extra-items-menu').length > 0) { // does the dropdown exist?
-      // to do: restore menu items with any free space 
+    // account for any float-right menu
+    // to do: account for any float-right menu
+    localMenuWidthAvail = localMenuWidthAvail - 0;
 
-      if ($(localMenuClass + ' li.extra-items-menu li').length == 0) { 
-        // if the dropdown is empty, delte it
-        $(localMenuClass + ' li.extra-items-menu').remove();
+    // do we need to make space?
+    if (localMenuWidthUsed > localMenuWidthAvail) {
+
+      // create dropdown if needed
+      if ($(localMenuClass + ' li.extra-items-menu').length == 0) { 
+        $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
+        // to do: should we be invoking foundation to create/destroy the dropdown functionality when we add/remove the menu?
+        localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').width();
       }
 
+      // loop through each menu item in reverse, and slice off the first as it's the dropdown
+      $($(localMenuClass+' > li').get().reverse().slice(1)).each( function() {
+        if (localMenuWidthUsed > localMenuWidthAvail) { // do we need to hide more items?
+          localMenuWidthUsed = localMenuWidthUsed - $(this).width();
+          $(this).detach().prependTo(localMenuClass + ' li.extra-items-menu ul.menu');
+        } // we could break when <= but this should be pretty fast
+      });
+    } else {
+      // if the menu is shorter than full width, we can perhaps restore some menu items from the dropdown
+      if ($(localMenuClass + ' li.extra-items-menu').length > 0) { // does the dropdown exist?
+        // to do: restore menu items with any free space 
 
+        if ($(localMenuClass + ' li.extra-items-menu li').length == 0) { 
+          // if the dropdown is empty, remove it
+          $(localMenuClass + ' li.extra-items-menu').remove();
+        }
+      }
+    }  
+  }
+
+  localNavSpilloverMenu();
+  // re-calc menus on browser change, if it affect width of localMenuWidthAvail
+  $(window).resize( function() {
+    if ($('#local-masthead .masthead > nav').width() != localMenuWidthAvail) {
+      localMenuWidthAvail = $('#local-masthead .masthead > nav').width();
+      localNavSpilloverMenu();
     }
-  }  
+  });
 
   // Clearable text inputs
   // via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text 
