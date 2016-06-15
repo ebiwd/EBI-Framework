@@ -16,32 +16,30 @@
 
   function localNavSpilloverMenu(changeDirection) {
     var localMenuWidthUsed = 0;
-    var localMenuWidthNotUsed = localMenuWidthAvail;
     var localMenuRightSideWidth = $('#local-masthead .masthead > nav ul.float-right.menu').width(); // width of any right-side nav, this could change on browser resize
-    localMenuRightSideWidth = localMenuRightSideWidth + 5; // padding
+    localMenuRightSideWidth = localMenuRightSideWidth + 5; // padding, eleminate NaN
 
-    // Calculate how much space we need, if any
+    // Calculate how much space we've used
     $(localMenuClass+' > li').each( function() {
       localMenuWidthUsed = localMenuWidthUsed + $(this).width();
     });
 
     // account for any float-right menu
-    // to do: account for any float-right menu
-    localMenuWidthNotUsed = localMenuWidthNotUsed - localMenuRightSideWidth;
+    localMenuWidthUsed = localMenuWidthUsed + localMenuRightSideWidth;
 
     // do we need to make space?
-    if (changeDirection != 'increase') {
-      if (localMenuWidthUsed > localMenuWidthNotUsed) {
+    if ( (changeDirection == 'init') || (changeDirection == 'decrease') ) {
+      if (localMenuWidthUsed > localMenuWidthAvail) {
         // create dropdown if needed
         if ($(localMenuClass + ' li.extra-items-menu').length == 0) { 
           $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
-          // to do: should we be invoking foundation to create/destroy the dropdown functionality when we add/remove the menu?
+          // to do: invok foundation to create/destroy the dropdown functionality when we add/remove the menu
           localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').width();
         }
 
         // loop through each menu item in reverse, and slice off the first as it's the dropdown
         $($(localMenuClass+' > li').get().reverse().slice(1)).each( function() {
-          if (localMenuWidthUsed > localMenuWidthNotUsed) { // do we need to hide more items?
+          if (localMenuWidthUsed > localMenuWidthAvail) { // do we need to hide more items?
             localMenuWidthUsed = localMenuWidthUsed - $(this).width();
             $(this).detach().prependTo(localMenuClass + ' li.extra-items-menu ul.menu');
           } // we could break when <= but this should be pretty fast
@@ -55,14 +53,31 @@
       if ($(localMenuClass + ' li.extra-items-menu').length > 0) { 
 
         // if the menu is shorter than full width, we can perhaps restore some menu items from the dropdown
+        var spaceToWorkWith = localMenuWidthAvail - localMenuWidthUsed;
 
-        // if we delete the menu
-        localMenuWidthNotUsed = localMenuWidthNotUsed + $(localMenuClass + ' li.extra-items-menu').width();
+        // as the dropdown menu is the width of longest menu item, it's not practical to get the length of each,
+        //   so if the longest item could fit, we'll restore an item
+        while (spaceToWorkWith > $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').width()) {
+          spaceToWorkWith = spaceToWorkWith - $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').width();
+          $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
+          if ($(localMenuClass + ' li.extra-items-menu li').length == 1)  {
+            // exit if just 1 item left in menu
+            break;
+          }
+        }
 
-        // console.log('if delete drop down, we have free space of',localMenuWidthNotUsed);
+        // if there's just one item left, perhaps we should delete the dropdown menu
+        if ($(localMenuClass + ' li.extra-items-menu li').length == 1) { 
+          spaceToWorkWith = spaceToWorkWith + $(localMenuClass + ' li.extra-items-menu').width();
+          if (spaceToWorkWith > $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').width()) {
+            // ok, we should move item up from dropdwon, this will leave us with 0 items and we'll delete in next if
+            $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
+          }
+        }
 
         if ($(localMenuClass + ' li.extra-items-menu li').length == 0) { 
           // if the dropdown is empty, remove it
+          // to do: invok foundation to create/destroy the dropdown functionality when we add/remove the menu
           $(localMenuClass + ' li.extra-items-menu').remove();
         }
       }
@@ -77,7 +92,7 @@
     if (widthChangeAmount != 0) localMenuWidthAvail = $('#local-masthead .masthead > nav').width();
     // we look for changes of more than 1 to reduce jitter
     if (widthChangeAmount > 1)  localNavSpilloverMenu('increase');
-    if (widthChangeAmount < 1)  localNavSpilloverMenu('decrease');
+    if (widthChangeAmount < -1) localNavSpilloverMenu('decrease');
   });
 
   // Clearable text inputs
