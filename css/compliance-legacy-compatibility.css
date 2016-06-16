@@ -1077,7 +1077,7 @@ img.float-l {
      margin-left: 9px;
    }
    .view-people-and-groups dd {
-     margin: 0 0 1.5em 0.69em;
+     margin: 0 0 1.5em 0;
    }
    html.fontface .pane-people-and-groups h3:before {
      font-family: 'EBI-Generic';
@@ -1205,6 +1205,12 @@ img.float-l {
    }
 
 
+form fieldset {background-color:#f7f7f7;border:2px solid #eee;padding:0.5em 0.5em 0.5em 1em;margin-top:1em;margin-bottom:1em;color:inherit}
+form legend {font-size:100%;background-color:#e5e5e5;color:#222;padding:0.1em 0.5em;border:2px solid #d8d8d8}
+form legend span {color:#000;font-size:138.5%;font-weight:bold;margin:0 4px}
+form legend.hide {visibility:hidden}
+form label {display:inline;margin-right:0.3em}
+form input {margin:0.2em 0.1em 0.2em 0.2em;font-family:'Helvetica Neue',Helvetica,sans-serif;vertical-align:middle}
 
 /* OMEGA GRID
    ********** */
