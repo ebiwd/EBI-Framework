@@ -390,14 +390,14 @@ a:active {
     padding: 0.5rem 0 1.5rem;
   }
   body.section-about #local-masthead {
-    background: $ebi-colour-petrol;
+    background-color: $ebi-colour-petrol;
   }
   body.section-industry #local-masthead {
-    background: $ebi-colour-industry;
+    background-color: $ebi-colour-industry;
   }
   body.section-research {
     #local-masthead {
-      background: $ebi-colour-light-green;
+      background-color: $ebi-colour-light-green;
     }
     #local-title h1,
     #local-title p,
@@ -406,10 +406,10 @@ a:active {
     }
   }
   body.section-services #local-masthead {
-    background: $ebi-colour-services;
+    background-color: $ebi-colour-services;
   }
   body.section-training #local-masthead {
-    background: $ebi-colour-training;
+    background-color: $ebi-colour-training;
   }
   body.section-training #local-title  {
     h1,
@@ -419,7 +419,7 @@ a:active {
     }
   }
   body.section-home #local-masthead {
-    background: $ebi-colour-petrol;
+    background-color: $ebi-colour-petrol;
   }
 
   /* tweak to foundation menu; hide submenu until rendered by JS */

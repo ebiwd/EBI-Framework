@@ -371,13 +371,13 @@ input#local-searchbox,
   padding: 0.5rem 0 1.5rem; }
 
 body.section-about #local-masthead {
-  background: #007c82; }
+  background-color: #007c82; }
 
 body.section-industry #local-masthead {
-  background: #0086b4; }
+  background-color: #0086b4; }
 
 body.section-research #local-masthead {
-  background: #6dab49; }
+  background-color: #6dab49; }
 
 body.section-research #local-title h1,
 body.section-research #local-title p,
@@ -385,10 +385,10 @@ body.section-research #local-title a {
   color: #FFF; }
 
 body.section-services #local-masthead {
-  background: #026469; }
+  background-color: #026469; }
 
 body.section-training #local-masthead {
-  background: #e9b400; }
+  background-color: #e9b400; }
 
 body.section-training #local-title h1,
 body.section-training #local-title #local-title p,
@@ -396,7 +396,7 @@ body.section-training #local-title #local-title a {
   color: #222; }
 
 body.section-home #local-masthead {
-  background: #007c82; }
+  background-color: #007c82; }
 
 /* tweak to foundation menu; hide submenu until rendered by JS */
 ul.menu.dropdown ul.menu {
