@@ -393,8 +393,9 @@
   // Let the background images be assigned by meta tags
   (function assignImageByMetaTags() {
     var localMasthead = document.getElementById('local-masthead');
-    var localMastheadColor = document.querySelector("meta[name='ebi-localmasthead-color']");
-    var localMastheadImage = document.querySelector("meta[name='ebi-localmasthead-image']");
+    // check for both ebi: and ebi- formatted meta tags
+    var localMastheadColor = document.querySelector("meta[name='ebi:localmasthead-color']") || document.querySelector("meta[name='ebi-localmasthead-color']");
+    var localMastheadImage = document.querySelector("meta[name='ebi:localmasthead-image']") || document.querySelector("meta[name='ebi-localmasthead-image']");
 
     if (localMastheadColor != null) {
       localMasthead.style.backgroundColor = localMastheadColor.getAttribute("content");
