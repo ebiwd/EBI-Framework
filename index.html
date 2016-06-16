@@ -10,13 +10,13 @@
   <meta name="MobileOptimized" content="width" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#70BDBD"> <!-- Android Chrome mobile browser tab color -->
-    
+
   <!-- Add information on the life cycle of this page -->
   <meta name="ebi:owner" content="John Doe"> <!-- Who should be contacted about changes -->
   <meta name="ebi:review-cycle" content="30"> <!-- In days, how often should the content be reviewed -->
   <meta name="ebi:last-review" content="2015-12-20"> <!-- The last time the content was reviewed -->
   <meta name="ebi:expiry" content="2016-01-20"> <!-- When this content is no longer relevant -->
-    
+
   <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
   <link rel="dns-prefetch" href="//embl.de" />
 
@@ -45,7 +45,7 @@
   -->
 
   <!-- If you have a custom header image or colour -->
-  <!-- 
+  <!--
   -->
   <meta name="ebi:localmasthead-color" content="#091314">
   <meta name="ebi:localmasthead-image" content="https://ebiwd.github.io/EBI-Framework/images/backgrounds/embl-ebi-background-4.jpg">
@@ -263,7 +263,7 @@
                     </ul>
                   </div>
                 </div>
-                              
+
                 <hr />
 
               </div>
@@ -301,7 +301,7 @@
 
                 <h3>Implementing the framework</h3>
                 <p>There are two likely scenarios:</p>
-                
+
                 <blockquote class="float-right columns medium-5"><h5>Using Drupal?</h5> Contact Web Development. There is a Drupal 7 theme you can use, and a Drupal 8 version is coming soon(ish).</blockquote>
 
                 <dl>
@@ -476,9 +476,9 @@
                 <p>For example: The EBI Framework uses a 12 column grid. This page has a 9/12 left column, and 3/12 right column; the structure:</p>
 
                 <pre class="callout">
-&lt;div class=&quot;row&quot;&gt; 
-  &lt;div class=&quot;columns medium-9&quot;&gt; Main left column &lt;/div&gt; 
-  &lt;div class=&quot;columns medium-3&quot;&gt; Right sidebar &lt;/div&gt; 
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;columns medium-9&quot;&gt; Main left column &lt;/div&gt;
+  &lt;div class=&quot;columns medium-3&quot;&gt; Right sidebar &lt;/div&gt;
 &lt;/div&gt;</pre>
 
                 <p>Note that by using <code>.medium-</code> the two columns automatically expand to full width on small screens (mobile devices).</p>
@@ -549,37 +549,37 @@
               </section>
 
               <section id="typography" data-magellan-target="typography">
-                
+
                 <h2>Typography</h2>
-                
+
                 <p>The default font used throughout the page is Helvetica Neue, and is implement through a web font loaded by <code>fonts.css</code>. This is done to reflect EMBL-wide branding.</p>
 
-                <p>For large text areas, such as the core content column on this site, we recommend using the CSS class <code>.serif</code> to use the "EB Garamond" font, which is also loaded by the font stylesheet. You can switch back to sans-serif styling with the class <code>.sans-serif</code>.</p> 
+                <p>For large text areas, such as the core content column on this site, we recommend using the CSS class <code>.serif</code> to use the "EB Garamond" font, which is also loaded by the font stylesheet. You can switch back to sans-serif styling with the class <code>.sans-serif</code>.</p>
 
               </section>
 
               <section id="icons" data-magellan-target="icons">
-                
+
                 <h2>Icons <span class="label secondary">JS</span></h2>
-                
+
                 <p>The <code>fonts.css</code> stylesheet automatically loads a range of icon fonts that you can use.</p>
-                
+
                 <p>Icons are added automatically through CSS using the <code>:before</code> feature in CSS, so they will appear before whatever piece of text you associate them with. To make this association, you need to include particular class and data-icon attributes in the relevant HTML element: e.g. <code>&lt;h4&gt;&lt;span class="icon icon-generic" data-icon="4"&gt;&lt;/span&gt; Travel by plane&lt;/h4&gt;</code>.</p>
 
                 <div class="row">
                   <div class="medium-10 medium-centered columns">
                     <div class="callout sans-serif secondary">
                       <h4><span class="icon icon-generic" data-icon="4"></span> Travel by plane</h4>
-                    </div>          
-                  </div>          
-                </div>      
+                    </div>
+                  </div>
+                </div>
 
                 <p>The web browser will read the data-icon parameter and use the icon pictogram corresponding to "4".</p>
 
                 <p>Note this method is now widely supported. We do not recommend using PNG images as they offer inferior performance and inferior support for high resolution screens.</p>
 
                 <p>This requires JavaScript to work as designed. jQuery and the Foundation JS library are not required. Strictly, JavaScript is not needed, but this feature will not execture if the user has JavaScript disabled.</p>
-                
+
                 <p>Looking for an icon?</p>
 
                 <a href="fonts/index.html" class="button readmore">View the gallery</a>
@@ -594,17 +594,17 @@
 
                 <h3>Leaders list</h3>
                 Good for a table of statistics, or contents.
-                
+
                 <div class="callout columns">
-                  <ul class="leaders serif"> 
+                  <ul class="leaders serif">
                     <li>
-                      <span>Sample row</span> 
+                      <span>Sample row</span>
                       <span>61.7%</span>
-                    </li> 
+                    </li>
                     <li>
-                      <span>Sample row</span> 
+                      <span>Sample row</span>
                       <span>61.7%</span>
-                    </li> 
+                    </li>
                   </ul>
                 </div>
 
@@ -628,9 +628,9 @@
                       <li>List item</li>
                     </ul>
                   </div>
-                  
+
                   <div class="columns medium-6">
-        
+
                     <h3>Ordered lists</h3>
                     <p>Use an ol when creating a list where the order of the items is important, like ranking pizza toppings from best to worst.</p>
 
@@ -665,7 +665,7 @@
 
                 <h3>Definition list</h2>
                 <p>A definition list (<code>&lt;dl&gt;</code>) is used to display name-value pairs, like metadata or a dictionary definition. Each term (<code>&lt;dt&gt;</code>) is paired with one or more definitions (<code>&lt;dd&gt;</code>).</p>
-                
+
                 <div class="callout">
                   <dl>
                     <dt>Time</dt>
@@ -678,7 +678,7 @@
 
                 <h3>Icon list</h2>
                 <p>Want to use the font icons as your "bullet"? Add the class <code>.icon-bullet</code> to your <code>&lt;li&gt;</code> and then insert the icon code at the start of list item.</p>
-                
+
                 <div class="callout">
                   <ul>
                     <li class="icon-bullet"><span class="icon icon-socialmedia" data-icon="X"></span> List item with a much longer description or more content because text is the way to go when doing a really long list item.</li>
@@ -743,7 +743,7 @@
 
                   <div class="columns small-6 callout" data-equalizer-watch>
                     <h6>High priority read more links</h6>
-                    <a href="#" class="readmore button">Read more</a> 
+                    <a href="#" class="readmore button">Read more</a>
                   </div>
 
                   <div class="columns small-6 callout" data-equalizer-watch>
@@ -802,7 +802,7 @@
                     <ul class="no-bullet">
                       <h4>Service updates</h4>
                       <li>
-                        <img src="https://www.ebi.ac.uk/interpro/resources/images/logo_ida_100.png" class="float-right"/> 
+                        <img src="https://www.ebi.ac.uk/interpro/resources/images/logo_ida_100.png" class="float-right"/>
                         <h5>IDA Tool</h5>
                         <p>
                           <span class="secondary-color">February 2016</span> - The InterPro Domain Architecture (IDA) tool allows you to search the InterPro database with a particular set of domains, and returns all of the domain architectures and associated proteins that match the query. <a href="http://nar.oxfordjournals.org/content/43/D1/D213" class="readmore" target="_blank">Read more</a>
@@ -810,10 +810,10 @@
                         <hr />
                       </li>
                       <li>
-                        <img src="https://2.bp.blogspot.com/-xyAlqosOxLs/Vsb149z7i3I/AAAAAAAAA_c/bMa84ppiIHo/s72-c/Final_Microcephaly2.jpg" class="float-right"/> 
+                        <img src="https://2.bp.blogspot.com/-xyAlqosOxLs/Vsb149z7i3I/AAAAAAAAA_c/bMa84ppiIHo/s72-c/Final_Microcephaly2.jpg" class="float-right"/>
                         <h5>Zika Virus and Microcephaly</h5>
                         <p>
-                          <span class="secondary-color">February 2016</span> - You have probably been as horrified and saddened as me to see the shocking abnormality that affects newborn babies. 
+                          <span class="secondary-color">February 2016</span> - You have probably been as horrified and saddened as me to see the shocking abnormality that affects newborn babies.
                         </p>
                         <ul>
                           <li>An update to Pfam (29.0) and SMART (7.1).</li>
@@ -836,7 +836,7 @@
                       <h4>Service updates</h4>
                       <li>
                         <div class=" row">
-                            <img src="https://pbs.twimg.com/profile_images/524513796568535040/o3GZOvX-_normal.jpeg" class="small-3 columns no-pad-right"/> 
+                            <img src="https://pbs.twimg.com/profile_images/524513796568535040/o3GZOvX-_normal.jpeg" class="small-3 columns no-pad-right"/>
                             <div class="small-9 columns"><strong>EMBL-EBI Training</strong><br/><em>‎@EBItraining</em></div>
                         </div>
                         <p class="">
@@ -845,7 +845,7 @@
                       </li>
                       <li>
                         <div class=" row">
-                            <img src="https://pbs.twimg.com/profile_images/524513796568535040/o3GZOvX-_normal.jpeg" class="small-3 columns no-pad-right"/> 
+                            <img src="https://pbs.twimg.com/profile_images/524513796568535040/o3GZOvX-_normal.jpeg" class="small-3 columns no-pad-right"/>
                             <div class="small-9 columns"><strong>EMBL-EBI Training</strong><br/><em>‎@EBItraining</em></div>
                         </div>
                         <p class="">
@@ -1023,9 +1023,9 @@
                 <script defer src="libraries/tablesorter/js/jquery.tablesorter.js"></script>
                 <script type="text/javascript">
                   window.addEventListener('load',function() {
-                    $(document).ready(function() { 
-                        $("#table-sort-demo").tablesorter(); 
-                    }); 
+                    $(document).ready(function() {
+                        $("#table-sort-demo").tablesorter();
+                    });
                   });
                 </script>
 
@@ -1057,7 +1057,7 @@
 
                     <div class="row small-up-1 medium-up-2 large-up-3" data-equalizer>
 
-                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch>
                           <span class="label label-success ng-binding">0 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
                           <h5 class="epmc_citation_title">
                             <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/24455489">Evidence That GRIN2A Mutations in Melanoma Correlate with Decreased Survival.</a>
@@ -1082,7 +1082,7 @@
                           </div>
                         </div><!-- end ngRepeat: citation in citations.all track by $index -->
 
-                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch>
                           <span class="label label-success ng-binding">10 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
                           <h5 class="epmc_citation_title">
                             <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/24275569">An enzyme assisted RP-RPLC approach for in-depth analysis of human liver phosphoproteome.</a>
@@ -1108,7 +1108,7 @@
                           </div>
                         </div><!-- end ngRepeat: citation in citations.all track by $index -->
 
-                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch>
                           <span class="label label-success ng-binding">2 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
                           <h5 class="epmc_citation_title">
                             <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/23907581">Lys63-linked polyubiquitination of BRAF at lysine 578 is required for BRAF-mediated signaling.</a>
@@ -1132,7 +1132,7 @@
                           </div>
                         </div><!-- end ngRepeat: citation in citations.all track by $index -->
 
-                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch>
                           <span class="label label-success ng-binding">14 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
                           <h5 class="epmc_citation_title">
                             <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/1630826">Chromosomal assignment of two human B-raf(Rmil) proto-oncogene loci: B-raf-1 encoding the p94Braf/Rmil and B-raf-2, a processed pseudogene.</a>
@@ -1153,7 +1153,7 @@
                           </div>
                         </div><!-- end ngRepeat: citation in citations.all track by $index -->
 
-                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch>
                           <span class="label label-success ng-binding">54 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
                           <h5 class="epmc_citation_title">
                             <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/3043188">B-raf, a new member of the raf family, is activated by DNA rearrangement.</a>
@@ -1175,7 +1175,7 @@
                           </div>
                         </div><!-- end ngRepeat: citation in citations.all track by $index -->
 
-                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch> 
+                        <div class="epmc_citation_container ng-scope live-filter-target-granularity column" data-equalizer-watch>
                           <span class="label label-success ng-binding">39 citation<!-- ngIf: citation.citedByCount != 1 --><span ng-if="citation.citedByCount != 1" class="ng-scope">s</span><!-- end ngIf: citation.citedByCount != 1 --></span>
                           <h5 class="epmc_citation_title">
                             <a class="epmc_citation_link ng-binding" target="_blank" href="//europepmc.org/abstract/med/11410590">Serum- and glucocorticoid-inducible kinase SGK phosphorylates and negatively regulates B-Raf.</a>
@@ -1205,13 +1205,13 @@
                     <script defer src="libraries/LiveFilter/js/jquery.liveFilter.js"></script>
                     <script type="text/javascript">
                       window.addEventListener('load',function() {
-                        $(document).ready(function() { 
+                        $(document).ready(function() {
                           $('#livefilterdemo').liveFilter({
                             fitlerTargetCustomDiv: 'div.live-filter-target-granularity',
                             defaultText: 'Type to filter these paper references',
                             noMatches: '<p>No matching papers found.</p><a class="button" href="#">You could add a link to advanced search</a> '
                           });
-                        }); 
+                        });
                       });
                     </script>
 
@@ -1240,7 +1240,7 @@
                   <h3>Image shortcuts</h3>
                   <p>If you have a series of images you'd like to use to promot various areas, you can use <code>.shortcuts</code></p>
 
-                  
+
                   <div class="row">
                     <div class="medium-up-3 columns medium-12 callout">
 
@@ -1263,7 +1263,7 @@
                       </div>
 
                       <div class="column shortcuts transparent">
-                        <a href="http://targetvalidation.org"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/external_relations/images/highlights/CTTV_highlight.jpg" alt="Open Targets" title="Open Targets" /> 
+                        <a href="http://targetvalidation.org"><img src="http://www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/external_relations/images/highlights/CTTV_highlight.jpg" alt="Open Targets" title="Open Targets" />
                           <p class="pane-title">Centre for Therapeutic Target Validation</p>
                         </a>
                       </div>
@@ -1332,23 +1332,23 @@
                   </tr>
                   <tr>
                     <td>.float-right</td>
-                    <td>right align element</td>                    
+                    <td>right align element</td>
                   </tr>
                   <tr>
                     <td>.float-left</td>
-                    <td>left align element</td>                    
+                    <td>left align element</td>
                   </tr>
                   <tr>
                     <td>.block</td>
-                    <td>set display to "block"</td>                    
+                    <td>set display to "block"</td>
                   </tr>
                   <tr>
                     <td>.clear</td>
-                    <td>enable "clear" on the element</td>                    
+                    <td>enable "clear" on the element</td>
                   </tr>
                   <tr>
                     <td>.hide, .hidden</td>
-                    <td>set display to "none"</td>                    
+                    <td>set display to "none"</td>
                   </tr>
                 </table>
               </section>
@@ -1405,7 +1405,7 @@
 
                 <div class="row">
                   <div class="medium-7 columns">
-                    
+
                     <p>The mobile and tablet space is highly fragmented with reliable guarantees of support often hard to offer as device maker, browser, and OS version are each a variable in HTML/CSS rendering. </p>
                     <p>With this in mind, there are three classes of mobile and tablet support:</p>
 
@@ -1430,7 +1430,7 @@
                     </dl>
 
                   </div>
-                  
+
                   <div class="medium-5 columns callout secondary">
 
                     <h4>Current classifications</h4>
@@ -1529,30 +1529,58 @@
                 <p>None currently known.</p>
 
               </section>
-              
+
               <section id="metacopy" data-magellan-target="metacopy">
 
-                  
+
                 <h2>Meta copy</h2>
                   <p>Meta copy is the content of meta tags in a page - keywords and description. Ideally, words from your meta copy should be repeated in the macro copy of your page. Apart from being clear, this may help the page ranking in search engines.</p>
                   <h3>Keywords</h3>
                   <p>Think of these as tags that help to categorise the content of a page. Ten or 12 is probably a good maximum number to have.</p>
                   <h3>Description</h3>
                   <p>Keep it brief - just describe what this page is about.</p>
-                
-                  <h3>EBI Content review meta tags</h3>
+
+                  <h3>Meta tags</h3>
+
+                  <h4>EBI Content review</h4>
                   EMBL-EBI uses several special meta tags to help ensure content can owners can be updated, and that content is up to date.
-                
-                  <code class="block">
-                      &lt;meta name=&quot;ebi:owner&quot; content=&quot;John Doe&quot;&gt; &lt;!-- Who should be contacted about changes --&gt; 
+
+                  <p><code class="block">
+                      &lt;meta name=&quot;ebi:owner&quot; content=&quot;John Doe&quot;&gt; &lt;!-- Who should be contacted about changes --&gt;
                       <br/>
-                      &lt;meta name=&quot;ebi:review-cycle&quot; content=&quot;30&quot;&gt; &lt;!-- In days, how often should the content be reviewed --&gt; 
+                      &lt;meta name=&quot;ebi:review-cycle&quot; content=&quot;30&quot;&gt; &lt;!-- In days, how often should the content be reviewed --&gt;
                       <br/>
                       &lt;meta name=&quot;ebi:last-review&quot; content=&quot;2015-12-20&quot;&gt; &lt;!-- The last time the content was reviewed --&gt;
                       <br/>
-                      &lt;meta name=&quot;ebi:expiry&quot; content=&quot;2016-01-20&quot;&gt; &lt;!-- When this content is no longer relevant --&gt; 
-                
-                </code>
+                      &lt;meta name=&quot;ebi:expiry&quot; content=&quot;2016-01-20&quot;&gt; &lt;!-- When this content is no longer relevant --&gt;
+                  </code></p>
+
+                  <h4>Local masthead image and colour</h4>
+                  <div class="row">
+                    <div class="columns medium-8">
+                      <p>You can use thesse to specify colours or imagery you'd like for the local masthead. You could achieve a similar look through CSS, but this method offers more reusability and allows for planned future expansion, such as dynamic selection.</p>
+
+                      <code class="block">
+                          &lt;meta name=&quot;ebi:localmasthead-color&quot; content=&quot;#091314&quot;&gt;
+                          <br/>
+                          &lt;meta name=&quot;ebi:localmasthead-image&quot; content=&quot;//ebiwd.github.io/EBI-Framework/images/backgrounds/embl-ebi-background-4.jpg&quot;&gt;
+                      </code>
+                    </div>
+
+                    <div class="small callout columns medium-4">
+                      <p><img src="https://ebiwd.github.io/EBI-Framework/images/backgrounds/training-yellow-4.jpg"></p>
+                      <p>To format your image, note the it will be alligned to the top-right of the local masthead, and you should account for wide screen displays.</p>
+                      Here are some recommended specs:
+                      <ul>
+                        <li>width: 2462px</li>
+                        <li>height: 322px</li>
+                      </ul>
+                    </div>
+
+                  </div>
+
+
+
 
               </section>
 
@@ -1681,7 +1709,7 @@
   <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
 <!--
    -->
-  
+
   <!-- Google Analytics details... -->
   <!-- Change UA-XXXXX-X to be your site's ID -->
   <!--
