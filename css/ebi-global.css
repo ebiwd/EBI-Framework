@@ -145,6 +145,12 @@ nav a,
 nav a:hover {
   border-bottom: none; }
 
+#local-masthead #local-title .columns a {
+  border-bottom: 1px dotted white; }
+
+#local-masthead #local-masthead #local-title .columns a:hover {
+  border-bottom: none; }
+
 /* Global menu styling */
 #local-masthead nav ul#global-nav.menu li {
   border-right: none; }
