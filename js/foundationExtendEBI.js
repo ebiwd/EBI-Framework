@@ -32,17 +32,18 @@
 
     // Responsive support for tables
     // Clone the class from a parent TH to any child TD
-    jQuery('table.responsive-table').each( function() {
-      var columnsToAppend = jQuery(this).find('th');
+    $('table.responsive-table').each( function() {
+      var columnsToAppend = $(this).find('th');
       for (var i = 0; i < columnsToAppend.length; i++) {
-        if (jQuery(columnsToAppend[i]).attr('class')) {
+        if ($(columnsToAppend[i]).attr('class')) {
           var position = i + 1;
-          jQuery(this).find('td:nth-child('+position+')').addClass(jQuery(columnsToAppend[i]).attr('class'));
+          $(this).find('td:nth-child('+position+')').addClass($(columnsToAppend[i]).attr('class'));
         }
       };
     });
 
     // Smooth scroll anchor links for jQuery users
+    // -----------
     $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
         // Table compatibility
@@ -65,6 +66,11 @@
         }
       });
     });
+
+    // Create a dynamic height for the menu bar when stuck
+    // -----------
+    var desiredStuckMenuHeight = $('#local-masthead .masthead').outerHeight();
+    $("<style id='dynamic-stuck-height' type='text/css'> div#local-masthead.sticky.is-stuck{ margin-top: -" + desiredStuckMenuHeight + "px !important;} </style>").appendTo("body");
 
     // Clone the local menu into a mobile-only menu
     // -----------
@@ -95,7 +101,7 @@
             $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');            
             localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').width();
             // invoke foundation to create dropdown functionality when we add the menu
-            var responsiveMenu = new Foundation.DropdownMenu(jQuery(localMenuClass));
+            var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass));
           }
 
           // loop through each menu item in reverse, and slice off the first as it's the dropdown
