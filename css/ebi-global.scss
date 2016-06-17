@@ -382,7 +382,7 @@ a:active {
 
   /* tweak sticky behaviour */
   div#local-masthead { width: 100%; position: static; -webkit-transform: none; transform: none; }
-  div#local-masthead.sticky.is-stuck { margin-top: -10.5em !important; position: fixed; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+  div#local-masthead.sticky.is-stuck { position: fixed; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
 
   input#local-searchbox,

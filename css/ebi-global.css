@@ -355,7 +355,6 @@ div#local-masthead {
   transform: none; }
 
 div#local-masthead.sticky.is-stuck {
-  margin-top: -10.5em !important;
   position: fixed;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
