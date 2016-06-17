@@ -756,13 +756,13 @@ a.more:after {
 }
 
 /* icon to indicate link is a PDF file */
-a span.link-pdf { background: url(http://www.ebi.ac.uk/inc/images/icon_pdf.gif) right center no-repeat; padding: 0 18px 0 0; }
-h1 a span.link-pdf,
-h2 a span.link-pdf,
-h3 a span.link-pdf,
-h4 a span.link-pdf,
-h5 a span.link-pdf,
-h6 a span.link-pdf { display:none; }
+// a span.link-pdf { background: url(http://www.ebi.ac.uk/inc/images/icon_pdf.gif) right center no-repeat; padding: 0 18px 0 0; }
+// h1 a span.link-pdf,
+// h2 a span.link-pdf,
+// h3 a span.link-pdf,
+// h4 a span.link-pdf,
+// h5 a span.link-pdf,
+// h6 a span.link-pdf { display:none; }
 
 /* print styles */
 @media print {
