@@ -8,6 +8,9 @@
 .button-group li a.button.secondary:active,
 .button-group li a.button.secondary:hover { background: #333; color: #fff; }
 
+/* Pad top of content */
+main.row { margin-top: .5rem; }
+
 /* Form buttons */
 body .form-actions.form-wrapper button {
   display: inline-block;
