@@ -8,7 +8,7 @@ This, the EBI Visual Framework, is the successor to the current EBI Compliance T
 
 The project is an enhancement atop the Compliance Theme, updating the visual styles to EBI print colours and text, modern web design best practices -- such as responsive design, and to move to a versioned framework for improved maintenance cycles.
 
-As of 7 June the project is in beta and we are focussing on outreach to minimize any unknown use cases before we begin focussing on bugs and optimisation.
+As of 7 June the project is in beta and we are focussing on outreach to minimise any unknown use cases before we begin focussing on bugs and optimisation.
 
 The first release will be v1.1 -- the current EBI Compliance Theme is the v1.0.
 
@@ -18,10 +18,10 @@ For a quick start, run with the HTML templates in the /sample-site directory (th
 ## About the framework
 In all, an evolutionary step of the current EMBL-EBI web compliance kit, this project aims to continue the efforts of the existing guidance by providing:
 
-- Modularization of framework components that will:
+- Modularisation of framework components that will:
   - Require fewer roll-your-own solutions
   - Be more robust out of the box
-  - Standardization of tooling
+  - Standardisation of tooling
 - Project themes: colour palettes are now themes with flexible spacing, layout options
   - Sync styles and colour palette with corporate EMBL-EBI styles
 - Update visual assets to make use of contemporary web browser features for:
@@ -49,8 +49,27 @@ A short list of concerns that need to be kept in mind during the dev process.
 - Must be conscious to supply enough vital documentation/patterns, but without recreating the Foundation documentation
 - Do we keep documentation as one long file, or split into multiple...
 - Presently sample code blocks are kept to a minimum to keep the document shorter and increase our flexibility -- as our audience is devs, we may not need code samples at all, as code source should suffice?
-- Many of the color palette tags ( .primary-*, .secondary-a-*, .secondary-b-*, .complement-* ) appear to have no usage (wget + grep) and could likely be removed from the base style sheets. We should survey, pilot in alpha.
+- Many of the colour palette tags ( .primary-*, .secondary-a-*, .secondary-b-*, .complement-* ) appear to have no usage (wget + grep) and could likely be removed from the base style sheets. We should survey, pilot in alpha.
 - Standardised feedback capturing
+
+## Outreach
+It is key that we reach out to the current EBI Compliance user base so we:
+
+1. Can fully accommodate the needs of content and data
+2. Ensure that users understand why these changes are being done, how it will benefit development, and how to make use of the changes
+
+### Methods of outreach
+Not all developers are in the same place, so we plan to make use of multiple channels:
+
+- Github: Many developers already live in the Github ecosystem, engaging them here will also fit well into the pull request/issue queue ecosystem.
+- Web Guidelines Committee: Not only does this facilitate exposure, but is an active forum for peer review.
+- Slack: A strong space for communication that can happen even in distributed teams.
+- Clinics: An offline space for developers to chat in depth, current thinking is to run in parallel with External Relations' monthly content clinics.
+   - Pattern library workshops: While separate from the core framework, it is interdependent
+- Showing: Launching the corporate site in the new framework will not only increase awareness but also lead by example.
+
+With the exception of clinics, all of these can be ongoing support/outreach efforts. Recommend the clinics continue as long as there is interest.
+
 
 ## Roadmap
 - v1.2: Guidance and templates for wide-screen content engagements;
