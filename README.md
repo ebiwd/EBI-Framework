@@ -84,12 +84,12 @@ As not all users of the framework will be able to update to the very latest and 
 | 1.3           | .0            | Documented, breaking release |
 
 Difference between major, minor releases:
-- Major releases (1.1, 1.2, 1.3...) can have breaking changes and change will be detailed.
+- Major releases (1.1, 1.2, 1.3...) can have breaking changes and any such changes will be detailed and tested.
 - Minor releases (0.0.X) will not have changes to code structure or parts and will mainly add features or update visual assets (such as logos or icon fonts).
 
-The support for previous major versions (branches) is still being considered, but the current suggest is that the last three major version will be supported with updates to assets, fonts, and critical EMBl and EBI branding.
+The support for previous major versions (branches) is still being considered, but the current suggestion is that the last three major version will be supported with updates to assets, fonts, and critical EMBl and EBI branding.
 
-Where's version 1.0, you ask? Version 1.0 is the current EBI Compliance theme.
+Where's version 1.0, you ask? Version 1.0 is the [current EBI Compliance theme] (https://www.ebi.ac.uk/web_guidelines/html/compliance/).
 
 ### Deployment
 Files are hosted in this pattern:
