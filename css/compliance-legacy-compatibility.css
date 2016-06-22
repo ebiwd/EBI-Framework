@@ -64,6 +64,12 @@ img.float-l {
 }
 .shortcuts>div ul.split a { display: inline-block; width: 100%; }
 
+div.highlight {
+  border: 1px solid #ddd;
+  margin: 0 3px 9px;
+  padding: 5px 10px;
+}
+
 /* TRAINING
    ******** */
    .event-teaser {
