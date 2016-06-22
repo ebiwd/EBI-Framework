@@ -36,7 +36,6 @@ In all, an evolutionary step of the current EMBL-EBI web compliance kit, this pr
   - NPM updating (optional)
 - Collaboration: A more collaborative code base (note this is on GitHub) to offer a better path for code collaboration and integration
 
-
 ## Considerations
 A short list of concerns that need to be kept in mind during the dev process.
 
@@ -70,7 +69,37 @@ Not all developers are in the same place, so we plan to make use of multiple cha
 
 With the exception of clinics, all of these can be ongoing support/outreach efforts. Recommend the clinics continue as long as there is interest.
 
+## Versioning
+As not all users of the framework will be able to update to the very latest and we do not wish to hold others back, we are using a semantic versioning style of releases.
 
+| Major release | Minor release | Note |
+| ------------- | ------------- | ---- |
+| (Branch)      | (Tag)         | |
+| 1.1           | .0            | Initial release evolving from Compliance theme |
+| "             | .1            | Tagged minor release |
+| "             | .2            | Tagged minor release |
+| "             | .3            | Tagged minor release |
+| 1.2           | .0            | Documented, breaking release |
+| "             | .1            | Tagged minor release |
+| 1.3           | .0            | Documented, breaking release |
+
+Difference between major, minor releases:
+- Major releases (1.1, 1.2, 1.3...) can have breaking changes and change will be detailed.
+- Minor releases (0.0.X) will not have changes to code structure or parts and will mainly add features or update visual assets (such as logos or icon fonts).
+
+The support for previous major versions (branches) is still being considered, but the current suggest is that the last three major version will be supported with updates to assets, fonts, and critical EMBl and EBI branding.
+
+Where's version 1.0, you ask? Version 1.0 is the current EBI Compliance theme.
+
+### Deployment
+Files are hosted in this pattern:
+```
+//www.ebi.ac.uk/web_guidelines/[repo-name]/[latest-tag-in-branch]/[repo-files]
+```
+That is:
+```
+//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1.0/js/script.js
+```
 ## Roadmap
 - v1.2: Guidance and templates for wide-screen content engagements;
         Use the masthead image as a skybox promo/feature
