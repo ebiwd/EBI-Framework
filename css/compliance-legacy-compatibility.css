@@ -9,6 +9,8 @@
 
 /* COMPLIANCE
    ********** */
+h4 { font-size: 1.3rem; }
+
 #intro h2, .shortcuts h3, #outro h3, div.highlight h3 {
     color: #333;
 }
