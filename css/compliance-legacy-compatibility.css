@@ -840,10 +840,6 @@ div.highlight {
    .page-list-staff input[type="text"] {
      font-size: 123% !important;
    }
-   div#panels-ipe-control-container {
-     left: 0;
-     display: none !important;
-   }
    table.views-table td.views-field img {
      float: left;
      margin-right: 0.69em;
