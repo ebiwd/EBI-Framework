@@ -769,6 +769,38 @@ code {
 .button.hover {
   background-color: rgba(255, 255, 255, 0.5); }
 
+/* related / popular */
+.related {
+  background: #333;
+  margin-top: 4.25rem; }
+
+.related h3 {
+  color: #fff;
+  background: none;
+  padding: .5rem 0 0 1.1rem; }
+
+.related ul li {
+  display: inline-block;
+  width: 31%;
+  margin-right: 1%;
+  font-size: .9rem; }
+
+.related ul:after {
+  content: " ";
+  display: block;
+  height: 10px;
+  width: 100%; }
+
+.related ul li a {
+  color: #fff;
+  border-bottom: none; }
+
+.related ul li a:hover {
+  border-bottom: 1px dotted #fff; }
+
+.related ul li a:after {
+  content: " >"; }
+
 /* read more */
 a.read-more:after,
 a.readmore:after,
