@@ -103,5 +103,7 @@ That is:
 ## Roadmap
 - v1.2: Guidance and templates for wide-screen content engagements;
         Use the masthead image as a skybox promo/feature
+        Flexbox implementation
+        More aggressive removal of redundant Compliance CSS
 - v1.4: Unit testing
 - v1.5: Add animation guidance and tooling ([see this] (https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))
