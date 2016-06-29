@@ -94,11 +94,11 @@ Where's version 1.0, you ask? Version 1.0 is the [current EBI Compliance theme] 
 ### Deployment
 Files are hosted in this pattern:
 ```
-//www.ebi.ac.uk/web_guidelines/[repo-name]/[latest-tag-in-branch]/[repo-files]
+//www.ebi.ac.uk/web_guidelines/[repo-name]/[branch]/[repo-files]
 ```
 That is:
 ```
-//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1.0/js/script.js
+//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/js/script.js
 ```
 ## Roadmap
 - v1.2: Guidance and templates for wide-screen content engagements;
