@@ -51,6 +51,11 @@
  * Licensed under MIT Open Source
  */
 
+// Imports
+// ------
+// You could override any of these by cloning the file to the local directory
+//  and update the @import.
+
 // Sass utilities
 @import 'libraries/foundation-6/scss/util/util';
 
@@ -673,4 +678,5 @@ $topbar-unstack-breakpoint: medium;
   }
 }
 
+// invoke Foundation
 @include foundation-everything;
