@@ -763,6 +763,15 @@ code {
 .inline-block {
   display: inline-block; }
 
+/* no margins */
+.no-margin {
+  margin: 0; }
+
+/* no underline for links */
+a.no-underline {
+  border-bottom: none;
+  text-decoration: none; }
+
 /* buttons */
 .button:focus,
 .button:hover,
