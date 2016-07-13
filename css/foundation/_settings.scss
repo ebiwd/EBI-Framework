@@ -61,6 +61,9 @@
 
 // Global variables and styles
 @import 'libraries/foundation-6/scss/global';
+@import 'css/ebi-global-includes/ebi_theme_settings'; // override foundation with EBI styling
+// if you wish to specify your own service defaults...
+// @import 'css/ebi-gloabl-includes/ebi_foundation_overides';
 
 // Components
 @import 'libraries/foundation-6/scss/grid/grid';
@@ -103,32 +106,32 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
-$global-width: rem-calc(1200);
-$global-lineheight: 1.5;
+// $global-font-size: 100%;
+// $global-width: rem-calc(1200);
+// $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #777,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840,
+  primary: $primary-color,
+  secondary: $ebi-colour-dark-grey,
+  success: $success-color,
+  warning: $warning-color,
+  alert: $alert-color,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+// $light-gray: #e6e6e6;
+// $medium-gray: #cacaca;
+// $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
-$body-background: $white;
-$body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+// $body-background: $white;
+// $body-font-color: $black;
+// $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
-$global-margin: 1rem;
-$global-padding: 1rem;
-$global-weight-normal: normal;
-$global-weight-bold: bold;
-$global-radius: 0;
+// $global-margin: 1rem;
+// $global-padding: 1rem;
+// $global-weight-normal: normal;
+// $global-weight-bold: bold;
+// $global-radius: 0;
 $global-text-direction: ltr;
-$global-flexbox: false;
+// $global-flexbox: false;
 $print-transparent-backgrounds: true;
 
 @include add-foundation-colors;

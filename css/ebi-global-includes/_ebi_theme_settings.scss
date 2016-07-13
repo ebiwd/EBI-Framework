@@ -21,7 +21,6 @@ $ebi-colour-training: $ebi-colour-gold;
 $ebi-colour-industry: $ebi-colour-blue;
 $ebi-colour-elixir: $ebi-colour-orange;
 
-
 // Generic colours not attached to the EBI brand
 $success-color: #3adb76;
 $warning-color: #ffae00;
@@ -44,3 +43,4 @@ $global-radius: 0;
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
+$global-flexbox: false;
