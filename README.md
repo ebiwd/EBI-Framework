@@ -1,19 +1,22 @@
 # EBI-Framework
 
-- [View the demo and documentation] (http://ebiwd.github.io/EBI-Framework/)
-- [Get the latest release] (https://github.com/ebiwd/EBI-Framework/releases/latest)
+[Guidance on using the framework] (https://ebiwd.github.io/EBI-Pattern-library/)
 
 ## About
+The framework is currently in late Beta testing (as of 20 July 2016).
+
 This, the EBI Visual Framework, is the successor to the current EBI Compliance Theme and is targeted for an autumn 2016 release.
 
 The project is an enhancement atop the Compliance Theme, updating the visual styles to EBI print colours and text, modern web design best practices -- such as responsive design, and to move to a versioned framework for improved maintenance cycles.
 
-As of 7 June the project is in beta and we are focussing on outreach to minimise any unknown use cases before we begin focussing on bugs and optimisation.
+The first release is v1.1 -- the current EBI Compliance Theme is the v1.0.
 
-The first release will be v1.1 -- the current EBI Compliance Theme is the v1.0.
+## Using this framework
+You'll want to link to CSS and JS assets at http://www.ebi.ac.uk/web_guidelines/EBI-Framework/
 
-## Quick start
-For a quick start, run with the HTML templates in the /sample-site directory (these are a work in progress), and [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Framework/blob/gh-pages/sample-site/migrations/testMigration.js)
+For a quick start,see the HTML demos in the [EBI Pattern Library /sample-site directory](https://github.com/ebiwd/EBI-Pattern-library/tree/gh-pages/sample-site)
+
+If you're migrating an exsisting site and want to test for compatibility, [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Framework/blob/gh-pages/sample-site/migrations/testMigration.js)
 
 ## About the framework
 In all, an evolutionary step of the current EMBL-EBI web compliance kit, this project aims to continue the efforts of the existing guidance by providing:
