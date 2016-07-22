@@ -89,7 +89,7 @@ a:active {
   background: #007c82; }
 
 .services-background {
-  background: #026469; }
+  background: #389198; }
 
 .research-background {
   background: #6dab49; }
@@ -113,7 +113,7 @@ a:active {
   color: #007c82; }
 
 .services-color, a.services-color, a:hover.services-color {
-  color: #026469; }
+  color: #389198; }
 
 .research-color, a.research-color, a:hover.research-color {
   color: #6dab49; }
@@ -195,7 +195,7 @@ nav a:hover {
   #global-masthead ul li#services a:hover,
   #global-masthead ul li#services a:active,
   #global-masthead ul li#services a:focus {
-    background-color: #026469; }
+    background-color: #389198; }
   #global-masthead ul li#research a:hover,
   #global-masthead ul li#research a:active,
   #global-masthead ul li#research a:focus {
@@ -210,7 +210,7 @@ nav a:hover {
   #global-masthead ul li#about-us a:hover,
   #global-masthead ul li#about-us a:active,
   #global-masthead ul li#about-us a:focus {
-    background-color: #026469; }
+    background-color: #389198; }
 
 header .masthead {
   padding-top: 2.5rem;
@@ -390,7 +390,7 @@ body.section-research #local-title a {
   color: #FFF; }
 
 body.section-services #local-masthead {
-  background-color: #026469; }
+  background-color: #389198; }
 
 body.section-training #local-masthead {
   background-color: #e9b400; }
