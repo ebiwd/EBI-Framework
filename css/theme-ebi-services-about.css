@@ -9,11 +9,11 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: rgb(2,100,105);
+  color: rgb(56,145,152);
 }
 
 h1 { color: #f7f7f7; }
-h2 { color: rgb(2,100,105); }
+h2 { color: rgb(56,145,152); }
 h3 { color: #444444; }
 
 a.special { background-color: #7cd17c; }
@@ -22,16 +22,16 @@ a.special { background-color: #7cd17c; }
 a.label,
 .label,
 .button,
-.button.primary {       
-  background-color: rgb(2,100,105);
+.button.primary {
+  background-color: rgb(56,145,152);
   color: #f8f8f8;
-}   
+}
 .button.primary:hover,
 .button.primary:focus,
 .button:hover,
 .button:focus,
-.button:active { background: rgba(2,100,105,.9); }
+.button:active { background: rgba(56,145,152,.9); }
 
-div#local-masthead { background-color: rgb(2,100,105); }
+div#local-masthead { background-color: rgb(56,145,152); }
 
 /* end */
