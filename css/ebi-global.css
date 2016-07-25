@@ -791,7 +791,7 @@ a.no-underline {
 .related ul li {
   display: inline-block;
   width: 31%;
-  margin-right: 1%;
+  padding-right: 0;
   font-size: .9rem; }
 
 .related ul:after {
@@ -825,7 +825,7 @@ a.more:after {
 
 /* custom spacing */
 .margin-top-none {
-  margin-top: none; }
+  margin-top: 0; }
 
 .margin-top-xsmall {
   margin-top: .1rem; }
@@ -843,7 +843,7 @@ a.more:after {
   margin-top: 1.5rem; }
 
 .margin-left-none {
-  margin-left: none; }
+  margin-left: 0; }
 
 .margin-left-xsmall {
   margin-left: .1rem; }
@@ -861,7 +861,7 @@ a.more:after {
   margin-left: 1.5rem; }
 
 .margin-right-none {
-  margin-right: none; }
+  margin-right: 0; }
 
 .margin-right-xsmall {
   margin-right: .1rem; }
@@ -879,7 +879,7 @@ a.more:after {
   margin-right: 1.5rem; }
 
 .margin-bottom-none {
-  margin-bottom: none; }
+  margin-bottom: 0; }
 
 .margin-bottom-xsmall {
   margin-bottom: .1rem; }
@@ -897,7 +897,7 @@ a.more:after {
   margin-bottom: 1.5rem; }
 
 .padding-top-none {
-  padding-top: none; }
+  padding-top: 0; }
 
 .padding-top-xsmall {
   padding-top: .1rem; }
@@ -915,7 +915,7 @@ a.more:after {
   padding-top: 1.5rem; }
 
 .padding-left-none {
-  padding-left: none; }
+  padding-left: 0; }
 
 .padding-left-xsmall {
   padding-left: .1rem; }
@@ -933,7 +933,7 @@ a.more:after {
   padding-left: 1.5rem; }
 
 .padding-right-none {
-  padding-right: none; }
+  padding-right: 0; }
 
 .padding-right-xsmall {
   padding-right: .1rem; }
@@ -951,7 +951,7 @@ a.more:after {
   padding-right: 1.5rem; }
 
 .padding-bottom-none {
-  padding-bottom: none; }
+  padding-bottom: 0; }
 
 .padding-bottom-xsmall {
   padding-bottom: .1rem; }
