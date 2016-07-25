@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   ================
   READ BEFORE EDITING!
@@ -707,7 +708,18 @@ blockquote.float-left {
   margin-right: 1rem; }
 
 blockquote.lead {
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+blockquote.lead.quote:before {
+  content: "“";
+  position: relative;
+  top: -1.5rem;
+  left: -1.5rem;
+  font-size: 3rem;
+  display: block;
+  height: 0px; }
 
 /* bigger first line for some blockquotes */
 blockquote.drop-quote::first-line {
