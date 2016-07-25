@@ -796,9 +796,9 @@ a.no-underline {
 
 .related ul:after {
   content: " ";
+  height: .5rem;
   display: block;
-  height: 10px;
-  width: 100%; }
+  clear: both; }
 
 .related ul li a {
   color: #fff;
