@@ -20,6 +20,51 @@
   });
 
   $.fn.foundationExtendEBI = function() {
+
+    // Insert EMBL dropdown menu
+    (function insertEMBLdropdown() {
+
+      try {
+        // remove any current dropdown
+        if ((elem=document.getElementById('embl-dropdown')) !== null) {
+          document.getElementById('embl-dropdown').remove();
+        }
+        // document.getElementById('embl-dropdown').innerHTML = '';
+
+        var dropdownDiv = document.createElement("div");              
+        dropdownDiv.innerHTML = '<div id="embl-dropdown" class="dropdown-pane bottom" data-dropdown>' +
+                  '<p>EMBL-EBI in Hinxton is one of five EMBL locations across europe.<br/> <a href="#" class="small readmore">More about EMBL-EBI</a></p>' +
+                  '<h6>Connect to another EMBL location</h6>' +
+                  '<div class="small-collapse small-up-2 padding-bottom-large clearfix">' +
+                    '<div class="column padding-bottom-medium">' +
+                      '<a href="#" class="">Grenoble</a>' +
+                      '<div class="small">Structural Biology</div>' +
+                    '</div>' +
+                    '<div class="column padding-bottom-medium">' +
+                      '<a href="#" class="">Hamburg</a>' +
+                      '<div class="small">Structural Biology</div>' +
+                    '</div>' +
+                    '<div class="column padding-bottom-medium">' +
+                      '<a href="#" class="">Heidelberg</a>' +
+                      '<div class="small">Main Laboratory</div>' +
+                    '</div>' +
+                    '<div class="column padding-bottom-medium">' +
+                      '<a href="#" class="">Monterotondo</a>' +
+                      '<div class="small">Mouse Biology</div>' +
+                    '</div>' +
+                  '</div>' +
+                  '<p><a href="#" class="button readmore">Or learn more about EMBL</a></p>' +
+                '</div>';
+        document.getElementById("global-masthead").appendChild(dropdownDiv);  
+        
+        // invoke the the foundation dropdown
+        var options = {closeOnClick: true},
+            dropdownEbiMenu = new Foundation.Dropdown($('#embl-dropdown'), options);
+      }
+      catch(err) {};
+
+    })();
+
     // Link overlay images
     $(function() {
       $('.with-overlay').click(function(e) {
