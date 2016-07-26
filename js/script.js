@@ -265,105 +265,48 @@
     catch (err) {}
   })();
   
-  // replaces old logo pattern
-  // sets first and last classes on global-navigation
-  // (function fixGlobalNav() {
-/*
+  // Insert EMBL dropdown menu
+  (function insertEMBLdropdown() {
+
     try {
-      logo = document.getElementById('global-masthead').getElementsByTagName('p')[0]; // old logo pattern 
-      if (typeof logo !== 'undefined') {
-        newlogo = document.createElement('a');
-        newlogo.href="/";
-        newlogo.title="Go to the EMBL-EBI homepage";
-        newlogo.innerHTML = '<img src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png" alt="EMBL European Bioinformatics Institute">';
-        logo.parentNode.replaceChild(newlogo,logo);
+      // remove any current dropdown
+      if ((elem=document.getElementById('embl-dropdown')) !== null) {
+        document.getElementById('embl-dropdown').remove();
       }
+      // document.getElementById('embl-dropdown').innerHTML = '';
+
+      var dropdownDiv = document.createElement("div");              
+      dropdownDiv.innerHTML = '<div id="embl-dropdown" class="dropdown-pane bottom" data-dropdown data-options="closeOnClick:true;">' +
+                '<p>EMBL-EBI in Hinxton is one of five EMBL locations across europe.<br/> <a href="#" class="small readmore">More about EMBL-EBI</a></p>' +
+                '<h6>Connect to another EMBL location</h6>' +
+                '<div class="small-collapse small-up-2 padding-bottom-large clearfix">' +
+                  '<div class="column padding-bottom-medium">' +
+                    '<a href="#" class="">Grenoble</a>' +
+                    '<div class="small">Structural Biology</div>' +
+                  '</div>' +
+                  '<div class="column padding-bottom-medium">' +
+                    '<a href="#" class="">Hamburg</a>' +
+                    '<div class="small">Structural Biology</div>' +
+                  '</div>' +
+                  '<div class="column padding-bottom-medium">' +
+                    '<a href="#" class="">Heidelberg</a>' +
+                    '<div class="small">Main Laboratory</div>' +
+                  '</div>' +
+                  '<div class="column padding-bottom-medium">' +
+                    '<a href="#" class="">Monterotondo</a>' +
+                    '<div class="small">Mouse Biology</div>' +
+                  '</div>' +
+                '</div>' +
+                '<p><a href="#" class="button readmore">Or learn more about EMBL</a></p>' +
+              '</div>';
+      document.getElementById("global-masthead").appendChild(dropdownDiv);  
+      
+      // invoke the the foundation dropdown
+      var dropdownEbiMenu = new Foundation.Dropdown($('#embl-dropdown'));
     }
     catch(err) {};
-*/
 
-  //   try {
-  //     var first = document.getElementById('services');
-  //     var last = (document.getElementById('about') || document.getElementById('about-us'));
-
-  //     if (first.className.indexOf('first') === -1) {
-  //       first.className += ' first';
-  //     }
-  //     if (last.className.indexOf('last') === -1) {
-  //       last.className += ' last';
-  //     }
-  //   }
-  //   catch(err) {}
-  // })();
-
-  // (function fixLocalNav() {
-  //   try {
-  //     var hasLocalNavigation = document.getElementById('local-nav') !== null;
-      
-  //     if (hasLocalNavigation) {
-  //       var items = document.getElementById('local-nav').getElementsByTagName('li');
-  //       var firstItem = null, lastItem = null, firstFunctional = null, lastFunctional = null;
-
-  //       for (var i=0; i<items.length; i++) {
-  //         if (items[i].className.indexOf('functional') !== -1) {
-  //           firstFunctional = firstFunctional || items[i];
-  //           lastFunctional = items[i];
-  //         }
-  //         else {
-  //           firstItem = firstItem || items[i];
-  //           lastItem = items[i];
-  //         }
-  //         if (items[i].className.indexOf('first') !== -1) {
-  //           items[i].className = items[i].className.replace(' first','');
-  //         }
-  //         if (items[i].className.indexOf('last') !== -1) {
-  //           items[i].className = items[i].className.replace(' last','');
-  //         }
-  //       }
-        
-  //       if (firstItem.className.indexOf('first') === -1) {
-  //         firstItem.className += ' first';
-  //       }
-  //       if (lastItem.className.indexOf('last') === -1) {
-  //         lastItem.className += ' last';
-  //       }
-  //       if (firstFunctional.className.indexOf('last') === -1) {
-  //         firstFunctional.className += ' last';
-  //       }
-  //       if (lastFunctional.className.indexOf('first') === -1) {
-  //         lastFunctional.className += ' first';
-  //       }
-  //     }
-  //   }
-  //   catch (err) {}
-  // })();
-
-  // watches to see if contentspane is wider than local-masthead, and sets min-width appropriately
-  // can be disabled with body.no-content-width-fix
-  // (function setMitigationMinWidth() {
-  //   try {
-  //     var hasLocalMasthead = document.getElementById('local-masthead') !== null;
-  //     var hasContentsPane = document.getElementById('contentspane') !== null;
-  //     var disabled = document.body.className.indexOf('no-content-width-fix') !== -1;
-      
-  //     function checkMitigationMinWidth() {
-  //       if (document.getElementById('contentspane').clientWidth > document.getElementById('local-masthead').clientWidth) {
-  //         document.body.style.minWidth = document.getElementById('contentspane').clientWidth + 'px';
-  //       }
-  //     }
-      
-  //     if (!disabled && hasLocalMasthead && hasContentsPane) {
-  //       checkMitigationMinWidth(); // run now
-  //       if (window.addEventListener) { 
-  //         window.addEventListener('resize', checkMitigationMinWidth, false);
-  //       }
-  //       else {
-  //         window.attachEvent('onresize', checkMitigationMinWidth); // IE<9 compatiblilty
-  //       }
-  //     }
-  //   }
-  //   catch(err) {}
-  // })();
+  })();
   
   (function browserIdentify() {
     if (document.all && !document.addEventListener) { // <IE8

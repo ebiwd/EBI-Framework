@@ -235,6 +235,21 @@ a:active {
     }
   } // END #local-masthead
 
+  /* EMBL Dropdwon styles */
+  #embl-dropdown {
+    background-color: #007c82;
+    background-image: url(images/map.png);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    width: 40rem;
+    height: 20rem;
+    padding-right: 17rem;
+  }
+  #embl-dropdown h6 { color: white; font-weight: 700; }
+  #embl-dropdown .button { color: #007c82; background: #fff; }
+  #embl-dropdown.dropdown-pane { left: 0; } //fix position of menu, to prevent horizontal scrolling of page
+
   /* Local masthead secondary links on mobile */
   @media screen and (max-width: 40em) {
     #local-masthead ul.menu.dropdown.float-right {
