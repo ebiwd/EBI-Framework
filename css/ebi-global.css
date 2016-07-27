@@ -86,28 +86,28 @@ a:active {
   background-color: #666;
   padding: 0 0.2em; }
 
-.ebi-background {
+.ebi-background, a.ebi-background, .button.ebi-background {
   background: #007c82; }
 
-.services-background {
+.services-background, a.services-background, .button.services-background {
   background: #389198; }
 
-.research-background {
+.research-background, a.research-background, .button.research-background {
   background: #6dab49; }
 
-.training-background {
+.training-background, a.training-background, .button.training-background {
   background: #e9b400; }
 
-.industry-background {
+.industry-background, a.industry-background, .button.industry-background {
   background: #0086b4; }
 
-.elixir-background {
+.elixir-background, a.elixir-background, .button.elixir-background {
   background: #fb6a2a; }
 
-.white-background {
+.white-background, a.white-background, .button.white-background {
   background: white; }
 
-.secondary-background {
+.secondary-background, a.secondary-background, .button.secondary-background {
   background: #666; }
 
 .ebi-color, a.ebi-color, a:hover.ebi-color {

@@ -79,14 +79,14 @@ a:active {
   padding: 0 0.2em;
 }
 
-.ebi-background       { background: $ebi-colour-main; }
-.services-background  { background: $ebi-colour-services; }
-.research-background  { background: $ebi-colour-research; }
-.training-background  { background: $ebi-colour-training; }
-.industry-background  { background: $ebi-colour-industry; }
-.elixir-background    { background: $ebi-colour-elixir; }
-.white-background     { background: $ebi-colour-white; }
-.secondary-background { background: $ebi-colour-dark-grey; }
+.ebi-background, a.ebi-background, .button.ebi-background       { background: $ebi-colour-main; }
+.services-background, a.services-background, .button.services-background  { background: $ebi-colour-services; }
+.research-background, a.research-background, .button.research-background  { background: $ebi-colour-research; }
+.training-background, a.training-background, .button.training-background  { background: $ebi-colour-training; }
+.industry-background, a.industry-background, .button.industry-background  { background: $ebi-colour-industry; }
+.elixir-background, a.elixir-background, .button.elixir-background    { background: $ebi-colour-elixir; }
+.white-background, a.white-background, .button.white-background     { background: $ebi-colour-white; }
+.secondary-background, a.secondary-background, .button.secondary-background { background: $ebi-colour-dark-grey; }
 
 .ebi-color, a.ebi-color, a:hover.ebi-color { color: $ebi-colour-petrol; }
 .services-color, a.services-color, a:hover.services-color { color: $ebi-colour-services; }
