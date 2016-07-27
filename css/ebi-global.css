@@ -1061,3 +1061,7 @@ table.no-stripe tbody tr:nth-child(even) {
   body.full-width .row {
     max-width: 96%;
     min-width: 1000px; } }
+
+/* tinyMce WYSIWYG fixes */
+body.mceContentBody {
+  font-size: 1rem; }
