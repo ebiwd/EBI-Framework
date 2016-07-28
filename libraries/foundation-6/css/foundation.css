@@ -2513,14 +2513,14 @@ select {
 
 .label {
   display: inline-block;
-  padding: 0.33333rem 0.5rem;
+  padding: 0.33333rem 0;
   font-size: 0.8rem;
   line-height: 1;
   white-space: nowrap;
   cursor: default;
   border-radius: 0;
-  background: #007c82;
-  color: #fefefe; }
+  background: white;
+  color: #007c82; }
   .label.secondary {
     background: #666;
     color: #fefefe; }

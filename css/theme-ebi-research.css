@@ -22,9 +22,8 @@ a.special { background-color: #7cd17c; }
 a.label,
 .label,
 .button,
-.button.primary {       
-  background-color: rgb(109,171,73);
-  color: #f8f8f8;
+.button.primary {
+  color: rgb(109,171,73);
 }   
 .button.primary:hover,
 .button.primary:focus,
