@@ -1,6 +1,7 @@
 // Various includes
 @import 'ebi-global-includes/ebi_theme_settings'; // default EBI styling
 // @import 'ebi-gloabl-includes/ebi_foundation_overides';
+@import 'ebi-global-includes/tag'; // custom tag class
 
 // This code is the EBI layer atop the Foundation base styling
 
@@ -79,14 +80,14 @@ a:active {
   padding: 0 0.2em;
 }
 
-.ebi-background, a.ebi-background, .button.ebi-background       { background: $ebi-colour-main; }
-.services-background, a.services-background, .button.services-background  { background: $ebi-colour-services; }
-.research-background, a.research-background, .button.research-background  { background: $ebi-colour-research; }
-.training-background, a.training-background, .button.training-background  { background: $ebi-colour-training; }
-.industry-background, a.industry-background, .button.industry-background  { background: $ebi-colour-industry; }
-.elixir-background, a.elixir-background, .button.elixir-background    { background: $ebi-colour-elixir; }
-.white-background, a.white-background, .button.white-background     { background: $ebi-colour-white; }
-.secondary-background, a.secondary-background, .button.secondary-background { background: $ebi-colour-dark-grey; }
+.ebi-background, a.ebi-background, .tag.ebi-background, .button.ebi-background       { background: $ebi-colour-main; }
+.services-background, a.services-background, .tag.services-background, .button.services-background  { background: $ebi-colour-services; }
+.research-background, a.research-background, .tag.research-background, .button.research-background  { background: $ebi-colour-research; }
+.training-background, a.training-background, .tag.training-background, .button.training-background  { background: $ebi-colour-training; }
+.industry-background, a.industry-background, .tag.industry-background, .button.industry-background  { background: $ebi-colour-industry; }
+.elixir-background, a.elixir-background, .tag.elixir-background, .button.elixir-background    { background: $ebi-colour-elixir; }
+.white-background, a.white-background, .tag.white-background, .button.white-background     { background: $ebi-colour-white; }
+.secondary-background, a.secondary-background, .tag.secondary-background, .button.secondary-background { background: $ebi-colour-dark-grey; }
 
 .ebi-color, .label.ebi-color, a.ebi-color, a:hover.ebi-color { color: $ebi-colour-petrol; }
 .services-color, .label.services-color, a.services-color, a:hover.services-color { color: $ebi-colour-services; }
@@ -871,3 +872,6 @@ table.no-stripe tbody tr:nth-child(even) { background-color: #fff; }
       min-width: 1000px;
   }
 }
+
+/* tag */
+@include ebi-tag;

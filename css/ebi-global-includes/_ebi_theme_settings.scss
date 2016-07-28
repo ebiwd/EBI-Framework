@@ -37,8 +37,13 @@ $body-font-family-serif: 'EB Garamond', 'georgia', serif;
 // Label tweaks
 $label-background: $ebi-colour-white;
 $label-color: $primary-color;
-$label-font-size: 0.8rem;
 $label-padding: 0.33333rem 0;
+
+// Tags
+$tag-background: $primary-color;
+$tag-color: $label-background;
+$tag-font-size: 0.8rem;
+$tag-padding: 0.33333rem 0.5rem;
 
 // These don't do anything yet...
 $global-margin: 1rem;

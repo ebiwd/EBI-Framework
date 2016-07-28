@@ -86,28 +86,28 @@ a:active {
   background-color: #666;
   padding: 0 0.2em; }
 
-.ebi-background, a.ebi-background, .button.ebi-background {
+.ebi-background, a.ebi-background, .tag.ebi-background, .button.ebi-background {
   background: #007c82; }
 
-.services-background, a.services-background, .button.services-background {
+.services-background, a.services-background, .tag.services-background, .button.services-background {
   background: #389198; }
 
-.research-background, a.research-background, .button.research-background {
+.research-background, a.research-background, .tag.research-background, .button.research-background {
   background: #6dab49; }
 
-.training-background, a.training-background, .button.training-background {
+.training-background, a.training-background, .tag.training-background, .button.training-background {
   background: #e9b400; }
 
-.industry-background, a.industry-background, .button.industry-background {
+.industry-background, a.industry-background, .tag.industry-background, .button.industry-background {
   background: #0086b4; }
 
-.elixir-background, a.elixir-background, .button.elixir-background {
+.elixir-background, a.elixir-background, .tag.elixir-background, .button.elixir-background {
   background: #fb6a2a; }
 
-.white-background, a.white-background, .button.white-background {
+.white-background, a.white-background, .tag.white-background, .button.white-background {
   background: white; }
 
-.secondary-background, a.secondary-background, .button.secondary-background {
+.secondary-background, a.secondary-background, .tag.secondary-background, .button.secondary-background {
   background: #666; }
 
 .ebi-color, .label.ebi-color, a.ebi-color, a:hover.ebi-color {
@@ -1061,3 +1061,13 @@ table.no-stripe tbody tr:nth-child(even) {
   body.full-width .row {
     max-width: 96%;
     min-width: 1000px; } }
+
+/* tag */
+.tag {
+  display: inline-block;
+  padding: 0.33333rem 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+  background: #007c82;
+  color: white; }
