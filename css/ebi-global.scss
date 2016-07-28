@@ -88,14 +88,14 @@ a:active {
 .white-background, a.white-background, .button.white-background     { background: $ebi-colour-white; }
 .secondary-background, a.secondary-background, .button.secondary-background { background: $ebi-colour-dark-grey; }
 
-.ebi-color, a.ebi-color, a:hover.ebi-color { color: $ebi-colour-petrol; }
-.services-color, a.services-color, a:hover.services-color { color: $ebi-colour-services; }
-.research-color, a.research-color, a:hover.research-color { color: $ebi-colour-light-green; }
-.training-color, a.training-color, a:hover.training-color { color: $ebi-colour-training; }
-.industry-color, a.industry-color, a:hover.industry-color { color: $ebi-colour-industry; }
-.elixir-color, a.elixir-color, a:hover.elixir-color { color: $ebi-colour-elixir; }
-.white-color, a.white-color, a:hover.white-color { color: $ebi-colour-white; }
-.secondary-color, a.secondary-color, a:hover.secondary-color {color: $ebi-colour-dark-grey;}
+.ebi-color, .label.ebi-color, a.ebi-color, a:hover.ebi-color { color: $ebi-colour-petrol; }
+.services-color, .label.services-color, a.services-color, a:hover.services-color { color: $ebi-colour-services; }
+.research-color, .label.research-color, a.research-color, a:hover.research-color { color: $ebi-colour-light-green; }
+.training-color, .label.training-color, a.training-color, a:hover.training-color { color: $ebi-colour-training; }
+.industry-color, .label.industry-color, a.industry-color, a:hover.industry-color { color: $ebi-colour-industry; }
+.elixir-color, .label.elixir-color, a.elixir-color, a:hover.elixir-color { color: $ebi-colour-elixir; }
+.white-color, .label.white-color, a.white-color, a:hover.white-color { color: $ebi-colour-white; }
+.secondary-color, .label.secondary-color, a.secondary-color, a:hover.secondary-color {color: $ebi-colour-dark-grey;}
 
 
   /*
