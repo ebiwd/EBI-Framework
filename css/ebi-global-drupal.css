@@ -40,6 +40,17 @@ html.js fieldset.collapsed { height: 2em; }
   height: 2em;
 }
 
+/* Fieldset */
+fieldset.form-wrapper {
+  border: 1px solid #ccc;
+  padding: 0 1rem;
+}
+
+fieldset.form-wrapper .fieldset-legend {
+  padding: 0 .5rem;
+  font-weight: bold;
+}
+
 /* Table ordering */
 .sticky-table { box-sizing: initial; }
 .sticky-table a { border-bottom: none; }
