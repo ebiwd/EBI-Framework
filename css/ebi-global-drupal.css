@@ -97,4 +97,4 @@ body.is-reveal-open #status-messages.static .alert-box {
 
 /* tinyMce WYSIWYG fixes */
 body.mceContentBody,
-body#tinymce { font-size: 1rem; margin: 0 1em; }
+body#tinymce { font-size: 1rem; margin: 0 1em; overflow-y: scroll !important; }
