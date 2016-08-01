@@ -722,7 +722,7 @@ code { font-size: .95rem; }
 .no-margin { margin: 0; }
 
 /* no underline for links */
-a.no-underline { border-bottom: none; text-decoration: none; }
+.no-underline a, a.no-underline { border-bottom: none; text-decoration: none; }
 
 /* buttons */
 .button:focus,

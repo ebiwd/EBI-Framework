@@ -802,7 +802,7 @@ code {
   margin: 0; }
 
 /* no underline for links */
-a.no-underline {
+.no-underline a, a.no-underline {
   border-bottom: none;
   text-decoration: none; }
 
