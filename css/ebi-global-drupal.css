@@ -93,8 +93,17 @@ body.is-reveal-open #status-messages.static .alert-box {
   margin-top: .25rem;
 }
 
-/* Tinymce reset */
+/* Caption filter unset */
+body div.caption-right { margin: 0 0 0 .5rem; }
+body div.caption-left { margin: 0 .5rem 0 0; }
+body div.caption-inner {
+  border: none;
+  background: none;
+  text-align: left;
+  padding: 0;
+}
 
+/* Tinymce reset */
 /* tinyMce WYSIWYG fixes */
 body.mceContentBody,
 body#tinymce { font-size: 1rem; margin: 0 1em; overflow-y: scroll !important; }
