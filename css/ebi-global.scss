@@ -689,8 +689,9 @@ a:active {
   }
 
   /* tweaks to foundation's mobile settings */
-  @media screen and (max-width: 40em) {
+  @media screen and (max-width: 75rem) {
     body {
+      ul.dropdown.menu.float-left { padding-left: .5rem; }
       #content { padding-right: .5rem; padding-left: .5rem; }
       h1 { font-size: 2.5rem; }
       h1 .hexagon { display:none; }
