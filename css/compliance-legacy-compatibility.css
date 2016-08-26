@@ -792,8 +792,11 @@ div.highlight {
      padding: 0.1em 0.2em;
      border-radius: 3px;
    }
-   .view-all-events .views-row, .view-industry-events .views-row, .view-training-eve .views-row {
+   .view-all-events .views-row, .view-training-eve .views-row {
      margin: 9px;
+   }
+   .view-industry-events .views-row {
+     margin: 0 0 1rem;
    }
    html.fontface .view-all-events .title:before, html.fontface .view-industry-events .title:before, html.fontface .view-training-eve .title:before {
      font-family: 'EBI-Generic';
