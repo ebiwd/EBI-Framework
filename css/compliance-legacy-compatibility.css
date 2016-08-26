@@ -11,24 +11,19 @@
    ********** */
 h4 { font-size: 1.3rem; }
 
-#intro h2, .shortcuts h3, #outro h3, div.highlight h3 {
+.shortcuts h3, #outro h3, div.highlight h3 {
     color: #333;
 }
 
 #intro h2 {
     margin: 0;
     margin-bottom: 5px;
-    padding-top: 13px;
     border-bottom: 1px solid #ccc;
 }
 
-#intro { background-color: rgb(237, 237, 237);
-  border-radius: 5px;
-  margin-left: 9px;
-  margin-right: 0px;
-  padding-bottom: 9px;
-  padding-left: .5rem;
-  margin-top: .5rem; }
+#intro {
+  padding-bottom: 1rem;
+  }
 
 img.float-l {
     float: left;
@@ -375,7 +370,6 @@ div.highlight {
      font-weight: bold;
    }
    .section-industry #intro {
-     padding: 9px;
    }
    .section-industry .views-field-field-ind-event-image {
      float: right;
