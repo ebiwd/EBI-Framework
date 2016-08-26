@@ -25,9 +25,14 @@ h4 { font-size: 1.3rem; }
   padding-bottom: 1rem;
   }
 
+#outro {
+  background-color: #ededed;
+  padding: 9px;
+}
+
 img.float-l {
-    float: left;
-    margin: 0 9px 20px 0;
+  float: left;
+  margin: 0 9px 20px 0;
 }
 
 .shortcuts h2,
@@ -1272,9 +1277,9 @@ form input {margin:0.2em 0.1em 0.2em 0.2em;font-family:'Helvetica Neue',Helvetic
 ----------------------------------------------------------------------------------------------------*/
 
 .alpha,
-.oldie .alpha { margin-left: 0; }
+.oldie .alpha { margin-left: 0; padding-left: 0; }
 .omega,
-.oldie .omega { margin-right: 0; }
+.oldie .omega { margin-right: 0; padding-right: 0; }
 
 /* Grid >> 24 Columns
 ----------------------------------------------------------------------------------------------------*/
