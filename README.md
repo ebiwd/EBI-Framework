@@ -4,7 +4,7 @@ This repo contains the various assets that make the EBI Visual Framewok (CSS, JS
 
 ## Do I need to download this?
 
-No. Most users won't need these files. 
+No. The vast majority of users should link to the EBI hosted files.
 
 To use the framework you'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/blank.html).
 
