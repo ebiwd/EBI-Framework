@@ -1,6 +1,6 @@
 # EBI-Framework
 
-[Guidance on using the framework] (https://ebiwd.github.io/EBI-Pattern-library/)
+[Guidance on using the framework] (http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/)
 
 ## About
 The framework is currently in late Beta testing (as of 20 July 2016).
