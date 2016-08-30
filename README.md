@@ -12,6 +12,9 @@ No. The vast majority of users should link to the EBI hosted files. To use thos 
 
 For a quick start, see the HTML demos in the [EBI Pattern Library /sample-site directory] (https://github.com/ebiwd/EBI-Pattern-library/tree/gh-pages/sample-site/boilerplate). 
 
+### Bonus
+Once you've implemented the technical tooling, [check out the pattern library for guidance on making your site look proper and good] (https://ebiwd.github.io/EBI-Pattern-library/).
+
 For guidance or help, check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins on the Web Development team] (https://www.ebi.ac.uk/about/people/ken-hawkins).
 
 ## About the framework
