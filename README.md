@@ -1,23 +1,24 @@
 # EBI-Framework
 
-This repo contains the various assets that make the EBI Visual Framewok (CSS, JS, and a few images and build scripts). 
+This, the EBI Visual Framework, is the successor to the current EBI Compliance Theme and is targeted for an autumn 2016 release.
+
+Homed here are the various assets that make the EBI Visual Framewok (CSS, JS, and a few images and build scripts). 
 
 ## Do I need to download this?
 
-No. The vast majority of users should link to the EBI hosted files.
-
-To use the framework you'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/blank.html).
+No. The vast majority of users should link to the EBI hosted files. To use thos file, you'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/blank.html).
 
 ### Tell me more on using this...
-For a quick start, see the HTML demos in the [EBI Pattern Library /sample-site directory] (https://github.com/ebiwd/EBI-Pattern-library/tree/gh-pages/sample-site)
+
+For a quick start, see the HTML demos in the [EBI Pattern Library /sample-site directory] (https://github.com/ebiwd/EBI-Pattern-library/tree/gh-pages/sample-site/boilerplate). 
+
+For guidance or help, check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins on the Web Development team] (https://www.ebi.ac.uk/about/people/ken-hawkins).
 
 ## About the framework
 
-This, the EBI Visual Framework, is the successor to the current EBI Compliance Theme and is targeted for an autumn 2016 release.
+The project is an evolution of the 2013 EBI Compliance Theme, updatingvisual styles to better match EMBL-EBI print colours and text, modern web design best practices -- such as responsive design, and to move to a versioned framework for improved maintenance cycles.
 
-The project is an enhancement atop the Compliance Theme, updating the visual styles to EBI print colours and text, modern web design best practices -- such as responsive design, and to move to a versioned framework for improved maintenance cycles.
-
-The first release is v1.1 -- the current EBI Compliance Theme is the v1.0.
+The first release is v1.1 -- the current EBI Compliance Theme is the v1.0. Version 1.2 will follow six months after this is released.
 
 If you're migrating an exsisting site and want to test for compatibility, [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Framework/blob/gh-pages/sample-site/migrations/testMigration.js)
 
@@ -57,10 +58,7 @@ A short list of concerns that need to be kept in mind during the dev process.
 - Standardised feedback capturing
 
 ## Outreach
-It is key that we reach out to the current EBI Compliance user base so we:
-
-1. Can fully accommodate the needs of content and data
-2. Ensure that users understand why these changes are being done, how it will benefit development, and how to make use of the changes
+As users of this tooling are spread across the institute, ongoing out reach is vital.
 
 ### Methods of outreach
 Not all developers are in the same place, so we plan to make use of multiple channels:
