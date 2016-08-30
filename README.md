@@ -1,9 +1,17 @@
 # EBI-Framework
 
-[Guidance on using the framework] (http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/)
+This repo contains the various assets that make the EBI Visual Framewok (CSS, JS, and a few images and build scripts). 
 
-## About
-The framework is currently in late Beta testing (as of 20 July 2016).
+## Do I need to download this?
+
+No. Most users won't need these files. 
+
+To use the framework you'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/blank.html).
+
+### Tell me more on using this...
+For a quick start, see the HTML demos in the [EBI Pattern Library /sample-site directory] (https://github.com/ebiwd/EBI-Pattern-library/tree/gh-pages/sample-site)
+
+## About the framework
 
 This, the EBI Visual Framework, is the successor to the current EBI Compliance Theme and is targeted for an autumn 2016 release.
 
@@ -11,15 +19,9 @@ The project is an enhancement atop the Compliance Theme, updating the visual sty
 
 The first release is v1.1 -- the current EBI Compliance Theme is the v1.0.
 
-## Using this framework
-You'll want to link to CSS and JS assets at http://www.ebi.ac.uk/web_guidelines/EBI-Framework/
-
-For a quick start,see the HTML demos in the [EBI Pattern Library /sample-site directory](https://github.com/ebiwd/EBI-Pattern-library/tree/gh-pages/sample-site)
-
 If you're migrating an exsisting site and want to test for compatibility, [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Framework/blob/gh-pages/sample-site/migrations/testMigration.js)
 
-## About the framework
-In all, an evolutionary step of the current EMBL-EBI web compliance kit, this project aims to continue the efforts of the existing guidance by providing:
+This project continues efforts of the existing guidance by providing:
 
 - Modularisation of framework components that will:
   - Require fewer roll-your-own solutions
