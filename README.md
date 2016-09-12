@@ -2,28 +2,25 @@
 
 This, the EBI Visual Framework, is the successor to the current EBI Compliance Theme and is targeted for an autumn 2016 release.
 
-Homed here are the various assets that make the EBI Visual Framewok (CSS, JS, and a few images and build scripts). 
+Homed here are the various assets that make the EBI Visual Framewok (CSS, JS, and a few images and build scripts).
 
 ## Do I need to download this?
 
-No. The vast majority of users should link to the EBI hosted files. To use thos file, you'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/blank.html).
+No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/blank.html).
 
 ### Tell me more on using this...
 
-For a quick start, see the HTML demos in the [EBI Pattern Library /sample-site directory] (https://github.com/ebiwd/EBI-Pattern-library/tree/gh-pages/sample-site/boilerplate). 
-
-For guidance or help, check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins on the Web Development team] (https://www.ebi.ac.uk/about/people/ken-hawkins).
-
-### Bonus
-Once you've implemented the technical tooling, [check out the pattern library for guidance on making your site look proper and good] (https://ebiwd.github.io/EBI-Pattern-library/).
+- Quick start: see the [HTML demos in the EBI Pattern Library /sample-site directory] (https://github.com/ebiwd/EBI-Pattern-library/tree/gh-pages/sample-site/boilerplate).
+- Guidance and help: check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins] (https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
+- Test for compatibility: if you're migrating an exsisting site [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Framework/blob/gh-pages/sample-site/migrations/testMigration.js)
+- Import legacy style and grids: if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS] (https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css)
+- Bonus: once you're up and running, [check out the pattern library] (https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and good.
 
 ## About the framework
 
-The project is an evolution of the 2013 EBI Compliance Theme, updatingvisual styles to better match EMBL-EBI print colours and text, modern web design best practices -- such as responsive design, and to move to a versioned framework for improved maintenance cycles.
+The project is an evolution of the 2013 EBI Compliance Theme, updating visual styles to better match EMBL-EBI print colours and text, modern web design best practices -- such as responsive design, and to move to a versioned framework for improved maintenance cycles.
 
 The first release is v1.1 -- the current EBI Compliance Theme is the v1.0. Version 1.2 will follow six months after this is released.
-
-If you're migrating an exsisting site and want to test for compatibility, [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Framework/blob/gh-pages/sample-site/migrations/testMigration.js)
 
 This project continues efforts of the existing guidance by providing:
 
