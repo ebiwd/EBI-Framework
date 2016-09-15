@@ -1,8 +1,9 @@
 {
   "//@2": [
-    "NOTE: This file is to be used with npm to build out your libraries and SCSS",
-    "If you do not intend to use npm, you can ignore this file",
+    "NOTE: This file is to be used with npm to build out your libraries and SCSS.",
+    "If you do not intend to use npm, you can ignore this file.",
     "Run by: npm run <script_name>",
+    " -- Don't forget that you will need to run 'npm install' the first time",
     " -- Most likely you want: 'npm run scss' which will build the foundation _settings.scss and ebi.global.scss",
     " -- If you want to build foundation from source you'll need to run 'foundation-update' and then the scripts 'scss' and 'js'.",
     "END NOTE"
