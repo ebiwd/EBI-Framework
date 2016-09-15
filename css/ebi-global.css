@@ -761,7 +761,9 @@ blockquote.drop-quote::first-line {
   body h2 {
     font-size: 2rem; }
   body h3 {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  body h4 {
+    font-size: 1.25rem; } }
 
 /* Orbit thumbnails */
 nav.orbit-bullets button.thumbnail {
