@@ -700,6 +700,9 @@ body .thumbnail {
   .with-overlay .caption:hover > a.inner {
     color: #fff; }
 
+dd {
+  padding-bottom: 1rem; }
+
 .serif {
   font-family: "EB Garamond", "georgia", serif;
   font-size: 1.1rem; }

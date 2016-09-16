@@ -655,6 +655,9 @@ a:active {
     .caption:hover > a.inner { color: #fff;  }
   } // END .with-overlay
 
+  // dl
+  dd { padding-bottom: 1rem; }
+  
   .serif { font-family: $body-font-family-serif;  font-size: 1.1rem; }
   .sans-serif { font-family: $body-font-family;  font-size: 1.1rem; }
   .serif .sans-serif { font-size: 1rem; } // reset font size when nesting
