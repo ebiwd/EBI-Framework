@@ -20,8 +20,10 @@
     }
     init();
 })();
+
 (function updateFooterMeta() {
-    var html = '<div class="columns">' + '<p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK. +44 (0)1223 49 44 44</p> <p class="legal">Copyright &copy; EMBL-EBI <span class="year">2016</span> | EBI is an outstation of the <a href="http://www.embl.org">European Molecular Biology Laboratory</a> | <a href="//www.ebi.ac.uk/about/privacy">Privacy</a> | <a href="//www.ebi.ac.uk/about/cookies">Cookies</a> | <a href="//www.ebi.ac.uk/about/terms-of-use">Terms of use</a>' + 
+    var d = new Date();
+    var html = '<div class="columns">' + '<p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK. +44 (0)1223 49 44 44</p> <p class="legal">Copyright &copy; EMBL-EBI ' + d.getFullYear() + ' | EBI is an outstation of the <a href="http://www.embl.org">European Molecular Biology Laboratory</a> | <a href="//www.ebi.ac.uk/about/privacy">Privacy</a> | <a href="//www.ebi.ac.uk/about/cookies">Cookies</a> | <a href="//www.ebi.ac.uk/about/terms-of-use">Terms of use</a>' + 
     '<a class="readmore float-right" href="http://intranet.ebi.ac.uk">Intranet</a>' + 
     '</p>' + '</div>';
 
