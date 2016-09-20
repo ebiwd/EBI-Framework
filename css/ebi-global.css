@@ -276,7 +276,7 @@ header .masthead {
   left: 0; }
 
 /* Local masthead secondary links on mobile */
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 39.9375em) {
   #local-masthead ul.menu.dropdown.float-right {
     /*  clear: both;
       position: relative;

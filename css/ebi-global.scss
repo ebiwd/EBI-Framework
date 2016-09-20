@@ -252,7 +252,7 @@ a:active {
   #embl-dropdown.dropdown-pane { left: 0; } //fix position of menu, to prevent horizontal scrolling of page
 
   /* Local masthead secondary links on mobile */
-  @media screen and (max-width: 40em) {
+  @media screen and (max-width: 39.9375em) {
     #local-masthead ul.menu.dropdown.float-right {
     /*  clear: both;
       position: relative;
@@ -657,7 +657,7 @@ a:active {
 
   // dl
   dd { padding-bottom: 1rem; }
-  
+
   .serif { font-family: $body-font-family-serif;  font-size: 1.1rem; }
   .sans-serif { font-family: $body-font-family;  font-size: 1.1rem; }
   .serif .sans-serif { font-size: 1rem; } // reset font size when nesting
