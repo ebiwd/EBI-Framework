@@ -69,13 +69,7 @@
 })();
 
 (function fixes() {
-  // extend string prototype
-  if (!String.prototype.trim) {
-    String.prototype.trim = function() {
-      return this.replace(/^\s+|\s+$/g, '');
-    };
-  }
-  
+
   // set text in copyright notice, adjust to current year
   (function copyrightFix() {
     try {
@@ -222,22 +216,6 @@
               }
             };
 
-/*
-            // add hint
-            searchInput.onfocus = function() {
-              if (this.value === searchInputDefault) {
-                this.value = '';
-              }
-              this.style.color = '#000';
-            }
-            searchInput.onblur = function() {
-              if (this.value === '') {
-                this.value = searchInputDefault;
-              }
-              this.style.color = '#ccc';
-            }
-            searchInput['onblur'].call(searchInput);
-*/
           }
         }
       }
@@ -265,14 +243,6 @@
     catch (err) {}
   })();
    
-  (function browserIdentify() {
-    if (document.all && !document.addEventListener) { // <IE8
-      if (document.body.parentNode.className.indexOf('oldie') === -1) {
-        document.body.parentNode.className += ' oldie';
-      }
-    }
-  })();
-
   // tap the location bar to scroll to the top
   (function scrollMeUp() {
     var localMasthead = document.getElementById('local-masthead');
@@ -341,10 +311,3 @@ $.fn.foundationExtendEBI = function() {
 }
 
 }(jQuery));
-
-
-
-
-
-
-
