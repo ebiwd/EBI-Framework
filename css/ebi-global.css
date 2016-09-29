@@ -516,36 +516,12 @@ body .breadcrumbs a {
   color: #0a0a0a;
   font-family: Consolas, "Liberation Mono", Courier, monospace; }
 
-/* ebi icon font in the local title */
-.hexagon {
-  font-size: 1.8rem;
-  color: #000;
-  /*background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 288 180 288" xml:space="preserve"><polygon class="st0" fill="#fff" width="180" height="288" points="147,363.6 203.2,331.1 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');*/
-  /* Base 64 for IE/FF */
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMjg4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmlld0JveD0iMTQ3IDI4OCAxODAgMjg4IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBjbGFzcz0ic3QwIiBmaWxsPSIjZmZmIiBwb2ludHM9IjE0NywzNjMuNiAyMDMuMiwzMzEuMSAyNTkuMywzNjMuNiAyNTkuMyw0MjguNCAyMDMuMiw0NjAuOSAxNDcsNDI4LjQgIi8+PC9zdmc+");
-  display: inline-block;
-  background-size: 80px;
-  background-position: 0 -15px;
-  background-repeat: no-repeat;
-  text-align: center;
-  height: 70px;
-  width: 52px;
-  vertical-align: top;
-  padding: 12px 0 0 0;
-  margin-left: -65px; }
-
 /* Custom styling for different local masthead */
 #local-title.logo-only img,
 #local-title.logo-title img,
 #local-title.logo-title-strapline img {
   float: left;
   margin: 1em 0.69em 0.69em; }
-
-#local-title.logo-title img,
-#local-title.logo-title-strapline img {
-  position: relative;
-  left: -5.5rem;
-  margin-right: -5rem; }
 
 #local-title.logo-title span,
 #local-title.logo-title-strapline span {
@@ -759,8 +735,6 @@ blockquote.drop-quote::first-line {
     padding-left: .5rem; }
   body h1 {
     font-size: 2.5rem; }
-  body h1 .hexagon {
-    display: none; }
   body h2 {
     font-size: 2rem; }
   body h3 {
