@@ -42,6 +42,7 @@
 //  34. Title Bar
 //  35. Tooltip
 //  36. Top Bar
+//  37. Animations
 //  38. Invoke build process
 
 /**
@@ -102,6 +103,7 @@
 @import 'libraries/foundation-6/scss/components/top-bar';
 @import 'libraries/foundation-6/scss/components/thumbnail';
 @import 'libraries/foundation-6/scss/components/tooltip';
+@import 'libraries/motion-ui/motion-ui';
 
 // 1. Global
 // ---------
@@ -626,7 +628,11 @@ $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
 
-// 37. Invoke build process
+// 37. Animations
+// -----------
+$use-animations: false;
+
+// 38. Invoke build process
 // ------------------------
 
 @mixin foundation-everything($flex: false) {
@@ -675,6 +681,11 @@ $topbar-unstack-breakpoint: medium;
   @include foundation-top-bar;
   @include foundation-visibility-classes;
   @include foundation-float-classes;
+
+  @if $use-animations {
+    @include motion-ui-transitions;
+    @include motion-ui-animations;
+  }
 
   @if $flex {
     @include foundation-flex-classes;

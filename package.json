@@ -19,12 +19,13 @@
     "//@18": [
       "-- Our buildscript: With this line we concat all libraries to be installed at once --"
     ],
-    "libraries": "npm run tablesorter && npm run foundation-update && npm run message_finished",
+    "libraries": "npm run tablesorter && npm run foundation-update && npm run motion-ui-update && npm run message_finished",
     "//@22": [
       "-- All our libraries, not intended to be run indiviudually --"
     ],
     "tablesorter": "wget https://github.com/Mottie/tablesorter/archive/master.zip -d ./libraries/tablesorter.zip && extract-zip ./libraries/tablesorter.zip ./libraries/ && del ./libraries/tablesorter && mve ./libraries/tablesorter-master ./libraries/tablesorter && del ./libraries/tablesorter.zip",
     "foundation-update": "wget https://github.com/zurb/foundation-sites/archive/develop.zip -d ./libraries/foundation-6.zip && del ./libraries/foundation-6 && extract-zip ./libraries/foundation-6.zip ./libraries/foundation-6/ && del ./libraries/foundation-6.zip && echo \"Copying foundation JS files one level up as they've moved...\" && ncp ./libraries/foundation-6/foundation-sites-develop/ ./libraries/foundation-6/ && del ./libraries/foundation-6/foundation-sites-develop/ && echo \"Latest version of foundation downloaded, you'll need to run 'npm run scss' and 'npm run js' to build\"",
+    "motion-ui-update": "wget https://github.com/zurb/motion-ui/archive/master.zip -d ./libraries/motion-ui.zip && del ./libraries/motion-ui && extract-zip ./libraries/motion-ui.zip ./libraries/motion-ui/ && del ./libraries/motion-ui.zip && echo \"Copying Motion UI files one level up as they've moved...\" && ncp ./libraries/motion-ui/motion-ui-master/ ./libraries/motion-ui/ && del ./libraries/motion-ui/motion-ui-master/ && echo \"Latest version of Motion UI downloaded, you'll need to run 'npm run scss' to build\"",
     "old-foundation-update": "wget https://github.com/zurb/foundation-sites/archive/develop.zip -d ./libraries/foundation-6.zip && del ./libraries/foundation-6 && extract-zip ./libraries/foundation-6.zip ./libraries/foundation-6/ && del ./libraries/foundation-6.zip && echo \"Copying foundation JS files one level up as they've moved...\" && ncp ./libraries/foundation-6/js/vendor/ ./libraries/foundation-6/js/ ",
     "message_finished": "echo \"All done\""
   },
