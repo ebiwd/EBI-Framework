@@ -1695,10 +1695,10 @@ select {
       background-color: #006368;
       color: #fefefe; }
   .button.secondary {
-    background-color: #666;
+    background-color: #999;
     color: #fefefe; }
     .button.secondary:hover, .button.secondary:focus {
-      background-color: #525252;
+      background-color: #7a7a7a;
       color: #fefefe; }
   .button.success {
     background-color: #3adb76;
@@ -1733,11 +1733,11 @@ select {
         border-color: #003e41;
         color: #003e41; }
     .button.hollow.secondary {
-      border: 1px solid #666;
-      color: #666; }
+      border: 1px solid #999;
+      color: #999; }
       .button.hollow.secondary:hover, .button.hollow.secondary:focus {
-        border-color: #333333;
-        color: #333333; }
+        border-color: #4d4d4d;
+        color: #4d4d4d; }
     .button.hollow.success {
       border: 1px solid #3adb76;
       color: #3adb76; }
@@ -1855,7 +1855,7 @@ select {
   background: #007c82;
   color: #fefefe; }
   .badge.secondary {
-    background: #666;
+    background: #999;
     color: #fefefe; }
   .badge.success {
     background: #3adb76;
@@ -1958,10 +1958,10 @@ select {
       background-color: #006368;
       color: #fefefe; }
   .button-group.secondary .button {
-    background-color: #666;
+    background-color: #999;
     color: #fefefe; }
     .button-group.secondary .button:hover, .button-group.secondary .button:focus {
-      background-color: #525252;
+      background-color: #7a7a7a;
       color: #fefefe; }
   .button-group.success .button {
     background-color: #3adb76;
@@ -2015,7 +2015,7 @@ select {
   .callout.primary {
     background-color: #c6fcff; }
   .callout.secondary {
-    background-color: #e8e8e8; }
+    background-color: #f0f0f0; }
   .callout.success {
     background-color: #e1faea; }
   .callout.warning {
@@ -2522,7 +2522,7 @@ select {
   background: white;
   color: #007c82; }
   .label.secondary {
-    background: #666;
+    background: #999;
     color: #fefefe; }
   .label.success {
     background: #3adb76;
@@ -2786,7 +2786,7 @@ body {
   .progress.primary .progress-meter {
     background-color: #007c82; }
   .progress.secondary .progress-meter {
-    background-color: #666; }
+    background-color: #999; }
   .progress.success .progress-meter {
     background-color: #3adb76; }
   .progress.warning .progress-meter {
