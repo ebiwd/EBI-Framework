@@ -869,3 +869,11 @@ table.no-stripe tbody tr:nth-child(even) { background-color: #fff; }
 
 /* tag */
 @include ebi-tag;
+
+/* defenition lists */
+dl dt {
+  font-weight: 400;
+  font-size: 1.1rem;
+  a { border-bottom: none; color: $ebi-colour-dark-grey; }
+  a:hover { border-bottom: 1px dotted; }
+} 

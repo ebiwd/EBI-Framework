@@ -1072,3 +1072,13 @@ table.no-stripe tbody tr:nth-child(even) {
   white-space: nowrap;
   background: #007c82;
   color: white; }
+
+/* defenition lists */
+dl dt {
+  font-weight: 400;
+  font-size: 1.1rem; }
+  dl dt a {
+    border-bottom: none;
+    color: #666; }
+  dl dt a:hover {
+    border-bottom: 1px dotted; }
