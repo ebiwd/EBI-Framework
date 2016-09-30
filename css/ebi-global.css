@@ -86,6 +86,13 @@ a:active {
   background-color: #666;
   padding: 0 0.2em; }
 
+.callout {
+  background: #f7f7f7;
+  border: none; }
+
+div.warning {
+  border: none; }
+
 .ebi-background, a.ebi-background, .tag.ebi-background, .button.ebi-background {
   background: #007c82; }
 

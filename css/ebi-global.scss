@@ -80,6 +80,7 @@ a:active {
   padding: 0 0.2em;
 }
 
+.callout { background: $ebi-colour-light-grey; border: none; } div.warning { border: none; }
 .ebi-background, a.ebi-background, .tag.ebi-background, .button.ebi-background       { background: $ebi-colour-main; }
 .services-background, a.services-background, .tag.services-background, .button.services-background  { background: $ebi-colour-services; }
 .research-background, a.research-background, .tag.research-background, .button.research-background  { background: $ebi-colour-research; }
