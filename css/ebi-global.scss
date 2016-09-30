@@ -734,6 +734,16 @@ code { font-size: .95rem; }
   margin-bottom: 1px; border-right: 1px solid #fff;
 }
 
+/* intro unit */
+.intro-unit {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  h2 { font-size: 3rem; margin-bottom: 0; }
+  h3 { padding-bottom: 1rem; }
+  .lead { color: $secondary-color; margin-bottom: .5rem; }
+}
+
+
 /* read more */
 a.read-more:after,
 a.readmore:after,
