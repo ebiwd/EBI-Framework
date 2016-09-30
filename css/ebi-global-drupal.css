@@ -63,6 +63,7 @@ body.is-reveal-open #status-messages { top: 30% !important; position: fixed !imp
 /* Sidebar menus aren't horizontal */
 .shortcuts ul.menu ul.menu,
 .sidebar ul.menu ul.menu { padding-left: .75em; }
+.intro-unit .menu.menu-tree-menu > li,
 .shortcuts .menu > li,
 .sidebar .menu > li { display: list-item; }
 .shortcuts .menu > li > a,
