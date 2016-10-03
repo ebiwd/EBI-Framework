@@ -111,3 +111,6 @@ body#tinymce { font-size: 1rem; margin: 0 1em; overflow-y: scroll !important; }
 
 /* For some drupal views we need to absue li items as columns */
 li.columns { list-style-type: none; }
+
+/* Breadcrumbs */
+ul.breadcrumbs { padding-top: 1rem; }
