@@ -827,7 +827,7 @@ code {
   border-bottom: none; }
 
 .related ul li a:hover {
-  border-bottom: 1px dotted #fff; }
+  text-decoration: underline; }
 
 .related ul li a:after {
   content: " >"; }

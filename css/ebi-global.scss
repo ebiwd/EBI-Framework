@@ -726,7 +726,7 @@ code { font-size: .95rem; }
 .related ul li { display:inline-block; width: 49%; padding-right: 0; font-size: .9rem; }
 .related ul:after { content: " "; height: .5rem; display: block; clear: both; } // a clearfix to show background
 .related ul li a { color: #fff; border-bottom:none; }
-.related ul li a:hover { border-bottom: 1px dotted #fff; }
+.related ul li a:hover { text-decoration: underline; }
 .related ul li a:after { content: " >"; }
 
 /* button grid */
@@ -876,4 +876,4 @@ dl dt {
   font-size: 1.1rem;
   a { border-bottom: none; color: $ebi-colour-dark-grey; }
   a:hover { border-bottom: 1px dotted; }
-} 
+}
