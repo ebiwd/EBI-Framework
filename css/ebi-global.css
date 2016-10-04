@@ -638,6 +638,10 @@ body .thumbnail {
   opacity: .8;
   overflow: hidden; }
 
+.medium-4 > .with-overlay,
+.medium-3 > .with-overlay {
+  margin-bottom: .75rem; }
+
 .with-overlay {
   position: relative; }
   .with-overlay .caption {
