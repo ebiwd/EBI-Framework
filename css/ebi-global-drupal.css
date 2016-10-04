@@ -116,8 +116,7 @@ li.columns { list-style-type: none; }
 ul.breadcrumbs { padding-top: 1rem; }
 
 /* Panels IPE */
-.medium-4 > .panels-ipe-sort-container .with-overlay,
-.medium-3 > .panels-ipe-sort-container .with-overlay {
-  // sidebar overlays should always have a bottom margin
+.medium-4 .panels-ipe-portlet-content > .with-overlay,
+.medium-3 .panels-ipe-portlet-content > .with-overlay {
   margin-bottom: .75rem;
 }
