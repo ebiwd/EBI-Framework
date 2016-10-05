@@ -267,9 +267,11 @@ header .masthead {
   background-position: 100% 100%;
   background-repeat: no-repeat;
   color: #fff;
-  width: 40rem;
   height: 20rem;
   padding-right: 17rem; }
+
+#embl-dropdown.is-open {
+  min-width: 400px; }
 
 #embl-dropdown h6 {
   color: white;

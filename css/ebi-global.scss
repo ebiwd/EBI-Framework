@@ -243,10 +243,10 @@ a:active {
     background-position: 100% 100%;
     background-repeat: no-repeat;
     color: #fff;
-    width: 40rem;
     height: 20rem;
     padding-right: 17rem;
   }
+  #embl-dropdown.is-open { min-width: 400px; }
   #embl-dropdown h6 { color: white; font-weight: 700; }
   #embl-dropdown .button { color: #007c82; background: #fff; }
   #embl-dropdown.dropdown-pane { left: 0; } //fix position of menu, to prevent horizontal scrolling of page
