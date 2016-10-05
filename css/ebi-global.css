@@ -117,28 +117,28 @@ div.warning {
 .secondary-background, a.secondary-background, .tag.secondary-background, .button.secondary-background {
   background: #666; }
 
-.ebi-color, .ebi-color a, .ebi-color a:visited, .ebi-color h3, .ebi-color h4, .label.ebi-color, a.ebi-color, a:hover.ebi-color {
+.ebi-color, .ebi-color cite, .ebi-color a, .ebi-color a:visited, .ebi-color h3, .ebi-color h4, .label.ebi-color, a.ebi-color, a:hover.ebi-color {
   color: #007c82; }
 
-.services-color, .services-color a, .services-color a:visited, .services-color h3, .services-color h4, .label.services-color, a.services-color, a:hover.services-color {
+.services-color, .services-color cite, .services-color a, .services-color a:visited, .services-color h3, .services-color h4, .label.services-color, a.services-color, a:hover.services-color {
   color: #389198; }
 
-.research-color, .research-color a, .research-color a:visited, .research-color h3, .research-color h4, .label.research-color, a.research-color, a:hover.research-color {
+.research-color, .research-color cite, .research-color a, .research-color a:visited, .research-color h3, .research-color h4, .label.research-color, a.research-color, a:hover.research-color {
   color: #6dab49; }
 
-.training-color, .training-color a, .training-color a:visited, .training-color h3, .training-color h4, .label.training-color, a.training-color, a:hover.training-color {
+.training-color, .training-color cite, .training-color a, .training-color a:visited, .training-color h3, .training-color h4, .label.training-color, a.training-color, a:hover.training-color {
   color: #e9b400; }
 
-.industry-color, .industry-color a, .industry-color a:visited, .industry-color h3, .industry-color h4, .label.industry-color, a.industry-color, a:hover.industry-color {
+.industry-color, .industry-color cite, .industry-color a, .industry-color a:visited, .industry-color h3, .industry-color h4, .label.industry-color, a.industry-color, a:hover.industry-color {
   color: #0086b4; }
 
-.elixir-color, .elixir-color a, .elixir-color a:visited, .elixir-color h3, .elixir-color h4, .label.elixir-color, a.elixir-color, a:hover.elixir-color {
+.elixir-color, .elixir-color cite, .elixir-color a, .elixir-color a:visited, .elixir-color h3, .elixir-color h4, .label.elixir-color, a.elixir-color, a:hover.elixir-color {
   color: #fb6a2a; }
 
-.white-color, .white-color a, .white-color a:visited, .white-color h3, .white-color h4, .label.white-color, a.white-color, a:hover.white-color {
+.white-color, .white-color cite, .white-color a, .white-color a:visited, .white-color h3, .white-color h4, .label.white-color, a.white-color, a:hover.white-color {
   color: white; }
 
-.secondary-color, .secondary-color a, .secondary-color a:visited, .secondary-color h3, .secondary-color h4, .label.secondary-color, a.secondary-color, a:hover.secondary-color {
+.secondary-color, .secondary-color cite, .secondary-color a, .secondary-color a:visited, .secondary-color h3, .secondary-color h4, .label.secondary-color, a.secondary-color, a:hover.secondary-color {
   color: #666; }
 
 /*
@@ -642,9 +642,11 @@ body .thumbnail {
 .medium-3 > .with-overlay {
   margin-bottom: .75rem; }
 
+panels-ipe-sort-container
 .with-overlay {
   position: relative; }
-  .with-overlay .caption {
+  panels-ipe-sort-container
+.with-overlay .caption {
     background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.7));
     background: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.7));
     background: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.7));
@@ -657,25 +659,29 @@ body .thumbnail {
     color: #fff;
     opacity: 1;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.8); }
-  .with-overlay .caption:hover {
+  panels-ipe-sort-container
+.with-overlay .caption:hover {
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
     background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
     background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
     color: #FFF; }
-  .with-overlay .caption .inner {
+  panels-ipe-sort-container
+.with-overlay .caption .inner {
     position: absolute;
     bottom: 5%;
     width: 95%;
     padding-right: 4rem; }
-  .with-overlay .caption > a.inner {
+  panels-ipe-sort-container
+.with-overlay .caption > a.inner {
     color: #fff;
     text-decoration: none;
     border-bottom: none;
     font-size: 1.4rem;
     line-height: 1.4em;
     padding-top: 50%; }
-  .with-overlay .caption > a:after {
+  panels-ipe-sort-container
+.with-overlay .caption > a:after {
     font-family: "EBI-Functional";
     content: " >";
     display: inline-block;
@@ -684,7 +690,8 @@ body .thumbnail {
     position: relative;
     top: -.1rem;
     left: 2rem; }
-  .with-overlay .caption:hover > a.inner {
+  panels-ipe-sort-container
+.with-overlay .caption:hover > a.inner {
     color: #fff; }
 
 dd {
