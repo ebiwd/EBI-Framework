@@ -245,8 +245,16 @@ a:active {
     color: #fff;
     height: 20rem;
     padding-right: 17rem;
+    min-width: 39.9375em;
   }
-  #embl-dropdown.is-open { min-width: 400px; }
+  @media screen and (max-width: 39.9375em) {
+    #embl-dropdown {
+      // do not show embl-dropdown on small screens at all
+      display: none;
+      width: 0 !important;
+      overflow: hidden;
+    }
+  }
   #embl-dropdown h6 { color: white; font-weight: 700; }
   #embl-dropdown .button { color: #007c82; background: #fff; }
   #embl-dropdown.dropdown-pane { left: 0; } //fix position of menu, to prevent horizontal scrolling of page
@@ -520,6 +528,13 @@ a:active {
       margin-left: 57px;
     }
   }
+  // begin to hide bits of dropdown toggle as screen shrinks
+  @media screen and (max-width: 53em) {
+    .embl-selector .button { width: 0px; padding-right:0; overflow: hidden;}
+    .embl-selector .button:after { display: none; }
+    #local-masthead nav ul#global-nav.menu li a { padding-right: .5rem; padding-left: .5rem;}
+  }
+
 
   /*
     LOCAL FOOTER

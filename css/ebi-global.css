@@ -268,10 +268,14 @@ header .masthead {
   background-repeat: no-repeat;
   color: #fff;
   height: 20rem;
-  padding-right: 17rem; }
+  padding-right: 17rem;
+  min-width: 39.9375em; }
 
-#embl-dropdown.is-open {
-  min-width: 400px; }
+@media screen and (max-width: 39.9375em) {
+  #embl-dropdown {
+    display: none;
+    width: 0 !important;
+    overflow: hidden; } }
 
 #embl-dropdown h6 {
   color: white;
@@ -580,6 +584,17 @@ body .breadcrumbs a {
   position: absolute;
   top: 22px;
   margin-left: 57px; }
+
+@media screen and (max-width: 53em) {
+  .embl-selector .button {
+    width: 0px;
+    padding-right: 0;
+    overflow: hidden; }
+  .embl-selector .button:after {
+    display: none; }
+  #local-masthead nav ul#global-nav.menu li a {
+    padding-right: .5rem;
+    padding-left: .5rem; } }
 
 /*
     LOCAL FOOTER
