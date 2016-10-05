@@ -642,11 +642,9 @@ body .thumbnail {
 .medium-3 > .with-overlay {
   margin-bottom: .75rem; }
 
-panels-ipe-sort-container
 .with-overlay {
   position: relative; }
-  panels-ipe-sort-container
-.with-overlay .caption {
+  .with-overlay .caption {
     background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.7));
     background: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.7));
     background: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.7));
@@ -659,29 +657,25 @@ panels-ipe-sort-container
     color: #fff;
     opacity: 1;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.8); }
-  panels-ipe-sort-container
-.with-overlay .caption:hover {
+  .with-overlay .caption:hover {
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
     background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
     background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
     color: #FFF; }
-  panels-ipe-sort-container
-.with-overlay .caption .inner {
+  .with-overlay .caption .inner {
     position: absolute;
     bottom: 5%;
     width: 95%;
     padding-right: 4rem; }
-  panels-ipe-sort-container
-.with-overlay .caption > a.inner {
+  .with-overlay .caption > a.inner {
     color: #fff;
     text-decoration: none;
     border-bottom: none;
     font-size: 1.4rem;
     line-height: 1.4em;
     padding-top: 50%; }
-  panels-ipe-sort-container
-.with-overlay .caption > a:after {
+  .with-overlay .caption > a:after {
     font-family: "EBI-Functional";
     content: " >";
     display: inline-block;
@@ -690,8 +684,7 @@ panels-ipe-sort-container
     position: relative;
     top: -.1rem;
     left: 2rem; }
-  panels-ipe-sort-container
-.with-overlay .caption:hover > a.inner {
+  .with-overlay .caption:hover > a.inner {
     color: #fff; }
 
 dd {

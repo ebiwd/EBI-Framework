@@ -99,7 +99,6 @@ a:active {
 .white-color, .white-color cite, .white-color a, .white-color a:visited, .white-color h3, .white-color h4, .label.white-color, a.white-color, a:hover.white-color { color: $ebi-colour-white; }
 .secondary-color, .secondary-color cite, .secondary-color a, .secondary-color a:visited, .secondary-color h3, .secondary-color h4, .label.secondary-color, a.secondary-color, a:hover.secondary-color {color: $ebi-colour-dark-grey;}
 
-
   /*
     SITE-WIDE MASTHEAD LAYOUT AND SIZE
     Generic rules for global and local mastheads
@@ -598,8 +597,6 @@ a:active {
     // sidebar overlays should always have a bottom margin
     margin-bottom: .75rem;
   }
-
-  panels-ipe-sort-container
 
   .with-overlay {
     position: relative;
