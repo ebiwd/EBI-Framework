@@ -48,26 +48,19 @@
   jQuery("body.google-analytics-loaded .masthead a").mousedown( function(e) {
     analyticsTrackInteraction(e.srcElement,'Masthead');
   });
-  jQuery("body.google-analytics-loaded .shortcuts.transparent li a").mousedown( function(e) {
+  jQuery("body.google-analytics-loaded .related ul li > a").mousedown( function(e) {
     analyticsTrackInteraction(e.srcElement,'Popular');
   });
-  jQuery("body.google-analytics-loaded .shortcuts.submenu a").mousedown( function(e) {
-    analyticsTrackInteraction(e.srcElement,'Shortcuts submenu');
+  jQuery("body.google-analytics-loaded .with-overlay a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Highlight box');
   });
-  jQuery("body.google-analytics-loaded .shortcuts.transparent div.panel-pane > a").mousedown( function(e) {
-    analyticsTrackInteraction(e.srcElement,'Highlight boxes');
+  jQuery("body.google-analytics-loaded .intro-unit a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Intro');
   });
-  jQuery("body.google-analytics-loaded .shortcuts.transparent div.panel-pane > p > a").mousedown( function(e) {
-    analyticsTrackInteraction(e.srcElement,'Highlight boxes');
+  jQuery("body.google-analytics-loaded .main.columns a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Main content');
   });
-  jQuery("body.google-analytics-loaded #intro .panel-pane a").mousedown( function(e) {
-    analyticsTrackInteraction(e.srcElement,'Intro - grey');
-  });
-  jQuery("body.google-analytics-loaded .panel-pane.intro a").mousedown( function(e) {
-    analyticsTrackInteraction(e.srcElement,'Intro - white');
-  });
-  jQuery("body.google-analytics-loaded #content .panels-flexible-column-first a").mousedown( function(e) {
-    // NOTE: this css selector may not capture all layouts!
+  jQuery("body.google-analytics-loaded #main-content-area a").mousedown( function(e) {
     analyticsTrackInteraction(e.srcElement,'Main content');
   });
   jQuery("body.google-analytics-loaded #global-footer a").mousedown( function(e) {
