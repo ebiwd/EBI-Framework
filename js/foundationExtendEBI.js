@@ -19,6 +19,99 @@
     $(this).removeClass('x onX').val('').change().keyup();
   });
 
+
+  // Analytics tracking
+  // This code tracks the user's clicks in various parts of the EBI site and logs them as GA events.
+  // Links in non-generic regions can be tracked by adding '.track-with-analytics-events' to a parent div. Careful with the scoping.
+  var ga = ga || [];
+  if (ga.loaded) { jQuery('body').addClass('google-analytics-loaded'); }   // Confirm GA is loaded, add a class if found
+
+  // Utility method
+  if (!Array.prototype.last){
+    Array.prototype.last = function(){
+      return this[this.length - 1];
+    };
+  };
+
+  function analyticsTrackInteraction(actedOnItem, parentContainer) {
+    var linkName = jQuery(actedOnItem).text().toString();
+    // if there's no text, it's probably and image...
+    if (linkName.length == 0 && jQuery(actedOnItem).attr('src')) linkName = jQuery(actedOnItem).attr('src').split('/').last();
+    if (linkName.length == 0 && jQuery(actedOnItem).val()) linkName = jQuery(actedOnItem).val();
+    // console.log(parentContainer,linkName);
+    ga('send', 'event', 'UI', 'UI Element / ' + parentContainer, linkName);
+  }
+
+  // Only track these areas
+  // This could be done more efficently with a general capture of links,
+  // but we're running against the page's unload -- so speed over elegance.
+  jQuery("body.google-analytics-loaded .masthead a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Masthead');
+  });
+  jQuery("body.google-analytics-loaded .shortcuts.transparent li a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Popular');
+  });
+  jQuery("body.google-analytics-loaded .shortcuts.submenu a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Shortcuts submenu');
+  });
+  jQuery("body.google-analytics-loaded .shortcuts.transparent div.panel-pane > a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Highlight boxes');
+  });
+  jQuery("body.google-analytics-loaded .shortcuts.transparent div.panel-pane > p > a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Highlight boxes');
+  });
+  jQuery("body.google-analytics-loaded #intro .panel-pane a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Intro - grey');
+  });
+  jQuery("body.google-analytics-loaded .panel-pane.intro a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Intro - white');
+  });
+  jQuery("body.google-analytics-loaded #content .panels-flexible-column-first a").mousedown( function(e) {
+    // NOTE: this css selector may not capture all layouts!
+    analyticsTrackInteraction(e.srcElement,'Main content');
+  });
+  jQuery("body.google-analytics-loaded #global-footer a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Footer');
+  });
+  jQuery("body.google-analytics-loaded #global-search input").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Global search');
+  });
+  jQuery("body.google-analytics-loaded #local-search input").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Local search');
+  });
+  jQuery("body.google-analytics-loaded #ebi_search input#search_submit").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Homepage search');
+  });
+  jQuery("body.google-analytics-loaded .homepage-promo-images-wrapper a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Homepage section boxes');
+  });
+  jQuery("body.google-analytics-loaded .track-with-analytics-events a").mousedown( function(e) {
+    analyticsTrackInteraction(e.srcElement,'Manually tracked area');
+  });
+
+  // log control+f and command+f
+  // base method via http://stackoverflow.com/a/6680403
+  var keydown = null;
+  if (jQuery('body').hasClass('google-analytics-loaded')) {
+    jQuery(window).keydown(function(e) {
+      // the user does ctrl+f action
+      if ( ( e.keyCode == 70 && ( e.ctrlKey || e.metaKey ) ) ||
+         ( e.keyCode == 191 ) ) {
+        keydown = new Date().getTime();
+      }
+      return true;
+    }).blur(function() {
+      // and then browser window blurs, indicating shift to UI
+      if ( keydown !== null ) {
+        var delta = new Date().getTime() - keydown;
+        if ( delta > 0 && delta < 1000 ) {
+          ga('send', 'event', 'UI', 'UI Element / Keyboard', 'Browser in page search');
+        }
+        keydown = null;
+      }
+    });
+  }
+
   $.fn.foundationExtendEBI = function() {
 
     // Insert EMBL dropdown menu
