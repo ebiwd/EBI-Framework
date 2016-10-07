@@ -33,27 +33,27 @@
 
         var dropdownDiv = document.createElement("div");              
         dropdownDiv.innerHTML = '<div id="embl-dropdown" class="dropdown-pane bottom" data-dropdown>' +
-                  '<p>EMBL-EBI in Hinxton is one of five EMBL locations across europe.<br/> <a href="#" class="small readmore">More about EMBL-EBI</a></p>' +
+                  '<p>EMBL-EBI in Hinxton is one of five EMBL locations across europe.<br/> <a href="https://www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
                   '<h6>Connect to another EMBL location</h6>' +
                   '<div class="small-collapse small-up-2 padding-bottom-large clearfix">' +
                     '<div class="column padding-bottom-medium">' +
-                      '<a href="#" class="">Grenoble</a>' +
+                      '<a href="https://www.embl.fr/" class="">Grenoble</a>' +
                       '<div class="small">Structural Biology</div>' +
                     '</div>' +
                     '<div class="column padding-bottom-medium">' +
-                      '<a href="#" class="">Hamburg</a>' +
+                      '<a href="http://www.embl-hamburg.de/" class="">Hamburg</a>' +
                       '<div class="small">Structural Biology</div>' +
                     '</div>' +
                     '<div class="column padding-bottom-medium">' +
-                      '<a href="#" class="">Heidelberg</a>' +
+                      '<a href="https://www.embl.de/" class="">Heidelberg</a>' +
                       '<div class="small">Main Laboratory</div>' +
                     '</div>' +
                     '<div class="column padding-bottom-medium">' +
-                      '<a href="#" class="">Monterotondo</a>' +
+                      '<a href="http://www.embl.it/" class="">Monterotondo</a>' +
                       '<div class="small">Mouse Biology</div>' +
                     '</div>' +
                   '</div>' +
-                  '<p><a href="#" class="button readmore">Or learn more about EMBL</a></p>' +
+                  '<p><a href="http://embl.org/" class="button readmore">Or learn more about EMBL</a></p>' +
                 '</div>';
         document.getElementById("global-masthead").appendChild(dropdownDiv);  
         
