@@ -487,6 +487,9 @@ a:active {
     color: #0a0a0a;
     font-family: Consolas, "Liberation Mono", Courier, monospace;
   }
+  .title-cap { text-transform: capitalize; }
+  .uppercase { text-transform: uppercase; }
+  .lowercase { text-transform: lowercase; }
 
   /* Custom styling for different local masthead */
   #local-title.logo-only img,
