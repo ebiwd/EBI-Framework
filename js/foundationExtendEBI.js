@@ -4,7 +4,19 @@
 */
 
 // Analytics tracking
+// This code tracks the user's clicks in various parts of the EBI site and logs them as GA events.
+// Links in non-generic regions can be tracked by adding '.track-with-analytics-events' to a parent div. Careful with the scoping.
 // -------------
+var ga = ga || [];
+if (ga.loaded) { jQuery('body').addClass('google-analytics-loaded'); }   // Confirm GA is loaded, add a class if found
+
+// Utility method
+if (!Array.prototype.last){
+  Array.prototype.last = function(){
+    return this[this.length - 1];
+  };
+};
+
 function analyticsTrackInteraction(actedOnItem, parentContainer) {
   var linkName = jQuery(actedOnItem).text().toString();
   // if there's no text, it's probably and image...
@@ -94,19 +106,6 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     $(this).removeClass('x onX').val('').change().keyup();
   });
 
-
-  // Analytics tracking
-  // This code tracks the user's clicks in various parts of the EBI site and logs them as GA events.
-  // Links in non-generic regions can be tracked by adding '.track-with-analytics-events' to a parent div. Careful with the scoping.
-  var ga = ga || [];
-  if (ga.loaded) { jQuery('body').addClass('google-analytics-loaded'); }   // Confirm GA is loaded, add a class if found
-
-  // Utility method
-  if (!Array.prototype.last){
-    Array.prototype.last = function(){
-      return this[this.length - 1];
-    };
-  };
 
   $.fn.foundationExtendEBI = function() {
 
