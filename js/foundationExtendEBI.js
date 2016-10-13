@@ -30,40 +30,41 @@ function analyticsTrackInteraction(actedOnItem, parentContainer) {
 // This could be done more efficently with a general capture of links,
 // but we're running against the page's unload -- so speed over elegance.
 jQuery("body.google-analytics-loaded .masthead a").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Masthead');
+  analyticsTrackInteraction(e.target,'Masthead');
 });
 jQuery("body.google-analytics-loaded .related ul li > a").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Popular');
+  analyticsTrackInteraction(e.target,'Popular');
 });
 jQuery("body.google-analytics-loaded .with-overlay a").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Highlight box');
+  analyticsTrackInteraction(e.target,'Highlight box');
 });
 jQuery("body.google-analytics-loaded .intro-unit a").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Intro');
+  analyticsTrackInteraction(e.target,'Intro');
 });
-jQuery("body.google-analytics-loaded .main.columns a").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Main content');
+jQuery("body.google-analytics-loaded .main.columns > article > .row > .medium-8 a, \
+  body.google-analytics-loaded .main.columns > article > .row > .medium-12 a\
+  body.google-analytics-loaded .main.columns > article > .row > .medium-10 a\
+  body.google-analytics-loaded #main-content-area a").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Main content');
 });
-jQuery("body.google-analytics-loaded #main-content-area a").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Main content');
+jQuery("body.google-analytics-loaded .main.columns > article > .row > .medium-4 a, \
+  body.google-analytics-loaded .main.columns > article > .row > .medium-3").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Sidebar');
 });
 jQuery("body.google-analytics-loaded #global-footer a").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Footer');
+  analyticsTrackInteraction(e.target,'Footer');
 });
 jQuery("body.google-analytics-loaded #global-search input").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Global search');
+  analyticsTrackInteraction(e.target,'Global search');
 });
 jQuery("body.google-analytics-loaded #local-search input").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Local search');
+  analyticsTrackInteraction(e.target,'Local search');
 });
 jQuery("body.google-analytics-loaded #ebi_search input#search_submit").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Homepage search');
-});
-jQuery("body.google-analytics-loaded .homepage-promo-images-wrapper a").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Homepage section boxes');
+  analyticsTrackInteraction(e.target,'Homepage search');
 });
 jQuery("body.google-analytics-loaded .track-with-analytics-events a").mousedown( function(e) {
-  analyticsTrackInteraction(e.srcElement,'Manually tracked area');
+  analyticsTrackInteraction(e.target,'Manually tracked area');
 });
 
 // log control+f and command+f
