@@ -451,6 +451,15 @@ a:active {
     }
   }
 
+  /* Secondary menu */
+  ul.menu.secondary-menu,
+  .secondary-menu ul.menu {
+    padding-bottom: 1rem;
+
+    a, a:hover { border-bottom: none; }
+    li { display: inline-block; } // renders links as bricks, not table cells
+  }
+
   /* List: inline horizontal */
   ul.inline li { display: inline-block; }
 
@@ -743,7 +752,13 @@ code { font-size: .95rem; }
   background: none;
   padding: .5rem 0 0 1.1rem;
 }
-.related ul li { display:inline-block; width: 49%; padding-right: 0; font-size: .9rem; }
+.related ul li {
+  display:inline-block;
+  width: 49%;
+  padding-right: 0;
+  font-size: .9rem;
+  min-width: 7rem; // for odd mid-break points, ensure the text doesn't get too small
+}
 .related ul:after { content: " "; height: .5rem; display: block; clear: both; } // a clearfix to show background
 .related ul li a { color: #fff; border-bottom:none; }
 .related ul li a:hover { text-decoration: underline; }
