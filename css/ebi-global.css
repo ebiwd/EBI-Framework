@@ -479,6 +479,18 @@ ul.leaders {
     padding-left: 0.33em;
     background: white; }
 
+/* Secondary menu */
+ul.menu.secondary-menu,
+.secondary-menu ul.menu {
+  padding-bottom: 1rem; }
+  ul.menu.secondary-menu a, ul.menu.secondary-menu a:hover,
+  .secondary-menu ul.menu a,
+  .secondary-menu ul.menu a:hover {
+    border-bottom: none; }
+  ul.menu.secondary-menu li,
+  .secondary-menu ul.menu li {
+    display: inline-block; }
+
 /* List: inline horizontal */
 ul.inline li {
   display: inline-block; }
@@ -837,7 +849,8 @@ code {
   display: inline-block;
   width: 49%;
   padding-right: 0;
-  font-size: .9rem; }
+  font-size: .9rem;
+  min-width: 7rem; }
 
 .related ul:after {
   content: " ";
