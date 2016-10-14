@@ -232,33 +232,26 @@ header .masthead {
   margin-top: -1px;
   color: #fff; }
 
-/* Menu triangles */
-#local-masthead nav ul#secondary-menu-links.menu li a:hover:after,
-#local-masthead nav ul#global-nav.menu li a:hover:after,
-#local-masthead nav ul.menu li a:hover:after {
-  position: relative;
-  content: '';
-  width: 0;
-  display: block;
-  left: 50%;
-  top: 6px;
-  height: 0;
-  bottom: 0;
-  margin: 0 -36px -5px -18px;
-  border-left: 18px solid transparent;
-  border-right: 18px solid transparent;
-  border-bottom: 5px solid black;
-  border-top: none;
-  -moz-transform: scale(0.999);
-  -webkit-backface-visibility: hidden; }
-
-#local-masthead nav ul#global-nav.menu li.float-right a:hover:after {
-  display: none; }
-
-#local-masthead nav ul#secondary-menu-links.menu li a:hover:after,
-#local-masthead nav ul.dropdown.menu.float-left li a:hover:after {
-  border-bottom-color: #fff;
-  margin-bottom: -5px; }
+/* Menu triangles for global bar */
+@media screen and (max-width: 39.9375em) {
+  #local-masthead nav ul#secondary-menu-links.menu li a:hover:after {
+    position: relative;
+    content: '';
+    width: 0;
+    display: block;
+    left: 50%;
+    top: 6px;
+    height: 0;
+    bottom: 0;
+    margin: 0 -36px -5px -18px;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 5px solid black;
+    border-top: none;
+    -moz-transform: scale(0.999);
+    -webkit-backface-visibility: hidden; }
+  #local-masthead nav ul#global-nav.menu li.float-right a:hover:after {
+    display: none; } }
 
 /* EMBL Dropdwon styles */
 #embl-dropdown {
