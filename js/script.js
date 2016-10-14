@@ -149,21 +149,22 @@
   })();
    
   // Tap the location bar to scroll to the top
-  (function scrollMeUp() {
-    var localMasthead = document.getElementById('local-masthead');
-    localMasthead.onclick = function(e){
-      if (e.target.nodeName == 'A')
-        return;
-      // if jQuery then do it all pretty like
-      if (window.jQuery) {  
-        $('html,body').animate({
-          scrollTop: 0
-        }, 700);
-      } else {
-        window.scrollTo(0,0);
-      }
-    }
-  })();
+  // Disabled for v1.1 per https://github.com/ebiwd/EBI-Framework/issues/23
+  // (function scrollMeUp() {
+  //   var localMasthead = document.getElementById('local-masthead');
+  //   localMasthead.onclick = function(e){
+  //     if (e.target.nodeName == 'A')
+  //       return;
+  //     // if jQuery then do it all pretty like
+  //     if (window.jQuery) {  
+  //       $('html,body').animate({
+  //         scrollTop: 0
+  //       }, 700);
+  //     } else {
+  //       window.scrollTo(0,0);
+  //     }
+  //   }
+  // })();
 
   // Assign global nav background images through meta tags
   (function assignImageByMetaTags() {
