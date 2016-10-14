@@ -1097,7 +1097,9 @@ table.no-stripe tbody tr:nth-child(even) {
 @media screen and (min-width: 40em) {
   body.full-width .row {
     max-width: 96%;
-    min-width: 1000px; } }
+    min-width: 1000px; }
+  body.full-width .row .row {
+    max-width: 100%; } }
 
 /* tag */
 .tag {
