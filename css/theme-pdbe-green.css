@@ -9,7 +9,6 @@ a {
 dl dt a,
 a.label,
 .label,
-.tabs-title > a:hover,
 a:hover,
 a:focus,
 a:active {
@@ -29,6 +28,7 @@ a.special { background-color: #7cd17c; }
 .button.primary {
   background-color: rgb(116,179,96);
 }
+.tabs-title > a:hover,
 .button.primary:hover,
 .button.primary:focus,
 .button:hover,
