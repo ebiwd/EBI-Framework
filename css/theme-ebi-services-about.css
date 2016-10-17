@@ -9,6 +9,7 @@ a {
 dl dt a,
 a.label,
 .label,
+.tabs-title > a:hover,
 a:hover,
 a:focus,
 a:active {
@@ -23,6 +24,7 @@ a.special { background-color: #7cd17c; }
 
 .menu .active > a,
 .tag,
+.tabs-title > a:hover
 .button,
 .button.primary {
   background-color: rgb(56,145,152);
@@ -32,6 +34,11 @@ a.special { background-color: #7cd17c; }
 .button:hover,
 .button:focus,
 .button:active { background: rgba(56,145,152,.9); }
+
+.tabs-title > a:focus,
+.tabs-title > a[aria-selected='true'] {
+  color: #fff;
+  background: #666; }
 
 div#local-masthead { background-color: rgb(56,145,152); }
 
