@@ -835,6 +835,19 @@ code {
 .button.hover {
   background-color: rgba(255, 255, 255, 0.5); }
 
+/* tabs */
+.tabs-title > a {
+  border-bottom: none; }
+
+.tabs-title > a:hover {
+  background-color: #007c82;
+  color: white; }
+
+.tabs-title > a:focus,
+.tabs-title > a[aria-selected='true'] {
+  color: white;
+  background: #666; }
+
 /* related / popular */
 .related {
   background: #333;
