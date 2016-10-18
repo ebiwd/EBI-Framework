@@ -8,8 +8,9 @@
 .button-group li a.button.secondary:active,
 .button-group li a.button.secondary:hover { background: #333; color: #fff; }
 
-/* Don't underline active research tabs */
-#local-masthead nav ul.research-group-menu li a.active { border-bottom: none; }
+/* Don't underline active tabs, or highligh active trails */
+#local-masthead nav ul li a.active { border-bottom: none; }
+#local-masthead ul li.active-trail a { background: none; color: #fff; font-weight: 400;}
 
 /* Pad top of content */
 main.row { margin-top: .5rem; }
