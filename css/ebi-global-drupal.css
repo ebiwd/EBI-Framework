@@ -9,7 +9,7 @@
 .button-group li a.button.secondary:hover { background: #333; color: #fff; }
 
 /* Don't underline active tabs, or highligh active trails */
-#local-masthead nav ul li a.active { border-bottom: none; }
+#local-masthead nav ul li a.active {border-bottom: none;background: #fff;color: #333;}
 #local-masthead ul li.active-trail a.active { background: none; color: #fff; font-weight: 400; border-right: 1px solid #fff; }
 #local-masthead ul li.active a.active { background: #fff; color: #333; font-weight: 600; border-right: none; }
 
