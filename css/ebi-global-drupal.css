@@ -10,7 +10,7 @@
 
 /* Don't underline active tabs, or highligh active trails */
 #local-masthead nav ul li a.active { border-bottom: none; }
-#local-masthead ul li.active-trail a { background: none; color: #fff; font-weight: 400;}
+#local-masthead ul li.active-trail a.active { background: none; color: #fff; font-weight: 400;}
 
 /* Pad top of content */
 main.row { margin-top: .5rem; }
