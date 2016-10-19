@@ -122,11 +122,11 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
         var dropdownDiv = document.createElement("div");              
         dropdownDiv.innerHTML = '<div id="embl-dropdown" class="dropdown-pane bottom" data-dropdown>' +
-                  '<p>EMBL-EBI in Hinxton is one of five EMBL locations across europe.<br/> <a href="https://www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
+                  '<p>EMBL-EBI in Hinxton is one of five EMBL locations across europe.<br/> <a href="//www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
                   '<h6>Connect to another EMBL location</h6>' +
                   '<div class="small-collapse small-up-2 padding-bottom-large clearfix">' +
                     '<div class="column padding-bottom-medium">' +
-                      '<a href="https://www.embl.fr/" class="">Grenoble</a>' +
+                      '<a href="http://www.embl.fr/" class="">Grenoble</a>' +
                       '<div class="small">Structural Biology</div>' +
                     '</div>' +
                     '<div class="column padding-bottom-medium">' +
@@ -134,7 +134,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
                       '<div class="small">Structural Biology</div>' +
                     '</div>' +
                     '<div class="column padding-bottom-medium">' +
-                      '<a href="https://www.embl.de/" class="">Heidelberg</a>' +
+                      '<a href="http://www.embl.de/" class="">Heidelberg</a>' +
                       '<div class="small">Main Laboratory</div>' +
                     '</div>' +
                     '<div class="column padding-bottom-medium">' +
