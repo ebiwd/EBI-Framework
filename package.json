@@ -1,35 +1,43 @@
 {
   "//@2": [
-    "NOTE: This file is to be used with npm to build out your libraries and SCSS",
-    "If you do not intend to use npm, you can ignore this file",
+    "NOTE: This file is to be used with npm to build out your libraries and SCSS.",
+    "If you do not intend to use npm, you can ignore this file.",
     "Run by: npm run <script_name>",
-    " -- Most likely you want: npm run scss",
+    " -- Don't forget that you will need to run 'npm install' the first time",
+    " -- Most likely you want: 'npm run scss' which will build the foundation _settings.scss and ebi.global.scss",
+    " -- If you want to build foundation from source you'll need to run 'foundation-update' and then the scripts 'scss' and 'js'.",
     "END NOTE"
   ],
   "name": "ebi_framework",
   "version": "1.1.0",
   "scripts": {
     "test": "echo \"To do: no test specified\" && exit 1",
-    "scss": "node-sass -o css css && csso ./css/ebi-global.css --output ./css/ebi-global.min.css",
-    "//@14": [
+    "scss": "node-sass -o css css && csso ./css/ebi-global.css --output ./css/ebi-global.min.css && npm run foundation-scss",
+    "foundation-scss": "node-sass ./css/foundation/_settings.scss ./libraries/foundation-6/css/foundation.css && csso ./libraries/foundation-6/css/foundation.css --output ./libraries/foundation-6/css/foundation.min.css",
+    "js": "npm run foundation-js",
+    "foundation-js": "cpx './libraries/foundation-6/dist/*.js' ./libraries/foundation-6/js",
+    "//@18": [
       "-- Our buildscript: With this line we concat all libraries to be installed at once --"
     ],
-    "libraries": "npm run tablesorter && npm run foundation && npm run message_finished",
-    "//@18": [
+    "libraries": "npm run tablesorter && npm run foundation-update && npm run motion-ui-update && npm run message_finished",
+    "//@22": [
       "-- All our libraries, not intended to be run indiviudually --"
     ],
     "tablesorter": "wget https://github.com/Mottie/tablesorter/archive/master.zip -d ./libraries/tablesorter.zip && extract-zip ./libraries/tablesorter.zip ./libraries/ && del ./libraries/tablesorter && mve ./libraries/tablesorter-master ./libraries/tablesorter && del ./libraries/tablesorter.zip",
-    "foundation": "wget http://foundation.zurb.com/sites/download/complete -d ./libraries/foundation-6.zip && del ./libraries/foundation-6 && extract-zip ./libraries/foundation-6.zip ./libraries/foundation-6/ && del ./libraries/foundation-6.zip && echo \"Copying foundation JS files one level up as they've moved...\" && ncp ./libraries/foundation-6/js/vendor/ ./libraries/foundation-6/js/ ",
+    "foundation-update": "wget https://github.com/zurb/foundation-sites/archive/develop.zip -d ./libraries/foundation-6.zip && del ./libraries/foundation-6 && extract-zip ./libraries/foundation-6.zip ./libraries/foundation-6/ && del ./libraries/foundation-6.zip && echo \"Copying foundation JS files one level up as they've moved...\" && ncp ./libraries/foundation-6/foundation-sites-develop/ ./libraries/foundation-6/ && del ./libraries/foundation-6/foundation-sites-develop/ && echo \"Latest version of foundation downloaded, you'll need to run 'npm run scss' and 'npm run js' to build\"",
+    "motion-ui-update": "wget https://github.com/zurb/motion-ui/archive/master.zip -d ./libraries/motion-ui.zip && del ./libraries/motion-ui && extract-zip ./libraries/motion-ui.zip ./libraries/motion-ui/ && del ./libraries/motion-ui.zip && echo \"Copying Motion UI files one level up as they've moved...\" && ncp ./libraries/motion-ui/motion-ui-master/ ./libraries/motion-ui/ && del ./libraries/motion-ui/motion-ui-master/ && echo \"Latest version of Motion UI downloaded, you'll need to run 'npm run scss' to build\"",
+    "old-foundation-update": "wget https://github.com/zurb/foundation-sites/archive/develop.zip -d ./libraries/foundation-6.zip && del ./libraries/foundation-6 && extract-zip ./libraries/foundation-6.zip ./libraries/foundation-6/ && del ./libraries/foundation-6.zip && echo \"Copying foundation JS files one level up as they've moved...\" && ncp ./libraries/foundation-6/js/vendor/ ./libraries/foundation-6/js/ ",
     "message_finished": "echo \"All done\""
   },
   "private": true,
   "devDependencies": {
+    "cpx": "^1.3.1",
     "csso": "^2.1.1",
     "del-cli": "^0.2.0",
     "extract-zip": "^1.5.0",
     "mve": "^0.1.2",
     "ncp": "^2.0.0",
-    "node-sass": "^3.7.0",
+    "node-sass": "^3.4.2",
     "node-wget": "^0.4.2"
   },
   "dependencies": {}

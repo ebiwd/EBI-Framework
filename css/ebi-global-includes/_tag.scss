@@ -1,0 +1,53 @@
+// Custom tag class for Foundation-based EBI framework
+
+////
+/// @group tag
+////
+
+/// Default background color for tags.
+/// @type Color
+$tag-background: $primary-color !default;
+
+/// Default text color for tags.
+/// @type Color
+$tag-color: foreground($tag-background) !default;
+
+/// Default font size for tags.
+/// @type Number
+$tag-font-size: 0.8rem !default;
+
+/// Default padding inside tags.
+/// @type Number
+$tag-padding: 0.33333rem 0.5rem !default;
+
+/// Default radius of tags.
+/// @type Number
+$tag-radius: $global-radius !default;
+
+/// Generates base styles for a tag.
+@mixin tag {
+  display: inline-block;
+  padding: $tag-padding;
+  font-size: $tag-font-size;
+  line-height: 1;
+  white-space: nowrap;
+  // cursor: default;
+}
+
+@mixin ebi-tag {
+  .tag {
+    @include tag;
+
+    background: $tag-background;
+    color: $tag-color;
+
+    // @each $name, $color in $foundation-palette {
+    //   @if $name != primary {
+    //     &.#{$name} {
+    //       background: $color;
+    //       color: foreground($color);
+    //     }
+    //   }
+    // }
+  }
+}

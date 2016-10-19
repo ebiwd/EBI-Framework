@@ -11,28 +11,28 @@
    ********** */
 h4 { font-size: 1.3rem; }
 
-#intro h2, .shortcuts h3, #outro h3, div.highlight h3 {
+.shortcuts h3, #outro h3, div.highlight h3 {
     color: #333;
 }
 
 #intro h2 {
     margin: 0;
     margin-bottom: 5px;
-    padding-top: 13px;
     border-bottom: 1px solid #ccc;
 }
 
-#intro { background-color: rgb(237, 237, 237);
-  border-radius: 5px;
-  margin-left: 9px;
-  margin-right: 0px;
-  padding-bottom: 9px;
-  padding-left: .5rem;
-  margin-top: .5rem; }
+#intro {
+  padding-bottom: 1rem;
+  }
+
+#outro {
+  background-color: #ededed;
+  padding: 9px;
+}
 
 img.float-l {
-    float: left;
-    margin: 0 9px 20px 0;
+  float: left;
+  margin: 0 9px 20px 0;
 }
 
 .shortcuts h2,
@@ -375,7 +375,6 @@ div.highlight {
      font-weight: bold;
    }
    .section-industry #intro {
-     padding: 9px;
    }
    .section-industry .views-field-field-ind-event-image {
      float: right;
@@ -792,8 +791,11 @@ div.highlight {
      padding: 0.1em 0.2em;
      border-radius: 3px;
    }
-   .view-all-events .views-row, .view-industry-events .views-row, .view-training-eve .views-row {
+   .view-all-events .views-row, .view-training-eve .views-row {
      margin: 9px;
+   }
+   .view-industry-events .views-row {
+     margin: 0 0 1rem;
    }
    html.fontface .view-all-events .title:before, html.fontface .view-industry-events .title:before, html.fontface .view-training-eve .title:before {
      font-family: 'EBI-Generic';
@@ -1275,9 +1277,9 @@ form input {margin:0.2em 0.1em 0.2em 0.2em;font-family:'Helvetica Neue',Helvetic
 ----------------------------------------------------------------------------------------------------*/
 
 .alpha,
-.oldie .alpha { margin-left: 0; }
+.oldie .alpha { margin-left: 0; padding-left: 0; }
 .omega,
-.oldie .omega { margin-right: 0; }
+.oldie .omega { margin-right: 0; padding-right: 0; }
 
 /* Grid >> 24 Columns
 ----------------------------------------------------------------------------------------------------*/

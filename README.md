@@ -1,22 +1,28 @@
 # EBI-Framework
 
-- [View the demo and documentation] (http://ebiwd.github.io/EBI-Framework/)
-- [Get the latest release] (https://github.com/ebiwd/EBI-Framework/releases/latest)
-
-## About
 This, the EBI Visual Framework, is the successor to the current EBI Compliance Theme and is targeted for an autumn 2016 release.
 
-The project is an enhancement atop the Compliance Theme, updating the visual styles to EBI print colours and text, modern web design best practices -- such as responsive design, and to move to a versioned framework for improved maintenance cycles.
+Homed here are the various assets that make the EBI Visual Framewok (CSS, JS, and a few images and build scripts).
 
-As of 7 June the project is in beta and we are focussing on outreach to minimise any unknown use cases before we begin focussing on bugs and optimisation.
+## Do I need to download this?
 
-The first release will be v1.1 -- the current EBI Compliance Theme is the v1.0.
+No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/blank.html).
 
-## Quick start
-For a quick start, run with the HTML templates in the /sample-site directory (these are a work in progress), and [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Framework/blob/gh-pages/sample-site/migrations/testMigration.js)
+### Tell me more on using this...
+
+- Quick start: see the [HTML demos in the EBI Pattern Library /sample-site directory] (https://github.com/ebiwd/EBI-Pattern-library/tree/gh-pages/sample-site/boilerplate).
+- Guidance and help: check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins] (https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
+- Test for compatibility: if you're migrating an exsisting site [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Framework/blob/gh-pages/sample-site/migrations/testMigration.js)
+- Import legacy style and grids: if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS] (https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css)
+- Bonus: once you're up and running, [check out the pattern library] (https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and good.
 
 ## About the framework
-In all, an evolutionary step of the current EMBL-EBI web compliance kit, this project aims to continue the efforts of the existing guidance by providing:
+
+The project is an evolution of the 2013 EBI Compliance Theme, updating visual styles to better match EMBL-EBI print colours and text, modern web design best practices -- such as responsive design, and to move to a versioned framework for improved maintenance cycles.
+
+The first release is v1.1 -- the current EBI Compliance Theme is the v1.0. Version 1.2 will follow six months after this is released.
+
+This project continues efforts of the existing guidance by providing:
 
 - Modularisation of framework components that will:
   - Require fewer roll-your-own solutions
@@ -52,10 +58,7 @@ A short list of concerns that need to be kept in mind during the dev process.
 - Standardised feedback capturing
 
 ## Outreach
-It is key that we reach out to the current EBI Compliance user base so we:
-
-1. Can fully accommodate the needs of content and data
-2. Ensure that users understand why these changes are being done, how it will benefit development, and how to make use of the changes
+As users of this tooling are spread across the institute, ongoing out reach is vital.
 
 ### Methods of outreach
 Not all developers are in the same place, so we plan to make use of multiple channels:
@@ -100,10 +103,16 @@ That is:
 ```
 //www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/js/script.js
 ```
+
+### Building from NPM
+We expect the vast majority of users to link to the built CSS and JS files (as shown in the sample HTML files), however some teams may want to download the EBI Framework and modify it for performance or deeper appearance issues.
+
+We've configured the system to build with NPM (no need for gulp or bower).
+
+To get started, have a look at `package.json`. Likely the the `npm run scss` command will cover 90% of use cases.
+
 ## Roadmap
 - v1.2: Guidance and templates for wide-screen content engagements;
         Use the masthead image as a skybox promo/feature
-        Flexbox implementation
-        More aggressive removal of redundant Compliance CSS
 - v1.4: Unit testing
 - v1.5: Add animation guidance and tooling ([see this] (https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))

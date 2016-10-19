@@ -3,7 +3,108 @@
    Ken Hawkins (khawkins@ebi.ac.uk)
 */
 
+// Analytics tracking
+// This code tracks the user's clicks in various parts of the EBI site and logs them as GA events.
+// Links in non-generic regions can be tracked by adding '.track-with-analytics-events' to a parent div. Careful with the scoping.
+// -------------
+var ga = ga || [];
+if (ga.loaded) { jQuery('body').addClass('google-analytics-loaded'); }   // Confirm GA is loaded, add a class if found
+
+// Utility method
+if (!Array.prototype.last){
+  Array.prototype.last = function(){
+    return this[this.length - 1];
+  };
+};
+
+function analyticsTrackInteraction(actedOnItem, parentContainer) {
+  var linkName = jQuery(actedOnItem).text().toString();
+  // if there's no text, it's probably and image...
+  if (linkName.length == 0 && jQuery(actedOnItem).attr('src')) linkName = jQuery(actedOnItem).attr('src').split('/').last();
+  if (linkName.length == 0 && jQuery(actedOnItem).val()) linkName = jQuery(actedOnItem).val();
+  // console.log(parentContainer,linkName);
+  ga('send', 'event', 'UI', 'UI Element / ' + parentContainer, linkName);
+}
+
+// Only track these areas
+// This could be done more efficently with a general capture of links,
+// but we're running against the page's unload -- so speed over elegance.
+jQuery("body.google-analytics-loaded .masthead a").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Masthead');
+});
+jQuery("body.google-analytics-loaded .related ul li > a").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Popular');
+});
+jQuery("body.google-analytics-loaded .with-overlay a").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Highlight box');
+});
+jQuery("body.google-analytics-loaded .intro-unit a").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Intro');
+});
+jQuery("body.google-analytics-loaded .main.columns > article > .row > .medium-8 a, \
+  body.google-analytics-loaded .main.columns > article > .row > .medium-12 a\
+  body.google-analytics-loaded .main.columns > article > .row > .medium-10 a\
+  body.google-analytics-loaded #main-content-area a").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Main content');
+});
+jQuery("body.google-analytics-loaded .main.columns > article > .row > .medium-4 a, \
+  body.google-analytics-loaded .main.columns > article > .row > .medium-3").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Sidebar');
+});
+jQuery("body.google-analytics-loaded #global-footer a").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Footer');
+});
+jQuery("body.google-analytics-loaded #global-search input").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Global search');
+});
+jQuery("body.google-analytics-loaded #local-search input").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Local search');
+});
+jQuery("body.google-analytics-loaded #ebi_search input#search_submit").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Homepage search');
+});
+// todo: homepage search return
+// $('textarea').bind("enterKey",function(e){
+//    //do stuff here
+// });
+// $('textarea').keyup(function(e){
+//     if(e.keyCode == 13)
+//     {
+//         $(this).trigger("enterKey");
+//     }
+// });
+
+jQuery("body.google-analytics-loaded .track-with-analytics-events a").mousedown( function(e) {
+  analyticsTrackInteraction(e.target,'Manually tracked area');
+});
+// To do: track livefilter
+// input.filter[type="text"]').on("keyup", function() {
+
+// log control+f and command+f
+// base method via http://stackoverflow.com/a/6680403
+var keydown = null;
+if (jQuery('body').hasClass('google-analytics-loaded')) {
+  jQuery(window).keydown(function(e) {
+    // the user does ctrl+f action
+    if ( ( e.keyCode == 70 && ( e.ctrlKey || e.metaKey ) ) ||
+       ( e.keyCode == 191 ) ) {
+      keydown = new Date().getTime();
+    }
+    return true;
+  }).blur(function() {
+    // and then browser window blurs, indicating shift to UI
+    if ( keydown !== null ) {
+      var delta = new Date().getTime() - keydown;
+      if ( delta > 0 && delta < 1000 ) {
+        ga('send', 'event', 'UI', 'UI Element / Keyboard', 'Browser in page search');
+      }
+      keydown = null;
+    }
+  });
+}
+
 // Foundation specific extensions of functionality
+// -------------
 (function($) {
 
   // Clearable text inputs
@@ -19,7 +120,53 @@
     $(this).removeClass('x onX').val('').change().keyup();
   });
 
+
   $.fn.foundationExtendEBI = function() {
+
+    // Insert EMBL dropdown menu
+    (function insertEMBLdropdown() {
+
+      try {
+        // remove any current dropdown
+        if ((elem=document.getElementById('embl-dropdown')) !== null) {
+          document.getElementById('embl-dropdown').remove();
+        }
+        // document.getElementById('embl-dropdown').innerHTML = '';
+
+        var dropdownDiv = document.createElement("div");              
+        dropdownDiv.innerHTML = '<div id="embl-dropdown" class="dropdown-pane bottom" data-dropdown>' +
+                  '<p>EMBL-EBI in Hinxton is one of five EMBL locations across europe.<br/> <a href="https://www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
+                  '<h6>Connect to another EMBL location</h6>' +
+                  '<div class="small-collapse small-up-2 padding-bottom-large clearfix">' +
+                    '<div class="column padding-bottom-medium">' +
+                      '<a href="https://www.embl.fr/" class="">Grenoble</a>' +
+                      '<div class="small">Structural Biology</div>' +
+                    '</div>' +
+                    '<div class="column padding-bottom-medium">' +
+                      '<a href="http://www.embl-hamburg.de/" class="">Hamburg</a>' +
+                      '<div class="small">Structural Biology</div>' +
+                    '</div>' +
+                    '<div class="column padding-bottom-medium">' +
+                      '<a href="https://www.embl.de/" class="">Heidelberg</a>' +
+                      '<div class="small">Main Laboratory</div>' +
+                    '</div>' +
+                    '<div class="column padding-bottom-medium">' +
+                      '<a href="http://www.embl.it/" class="">Monterotondo</a>' +
+                      '<div class="small">Mouse Biology</div>' +
+                    '</div>' +
+                  '</div>' +
+                  '<p><a href="http://embl.org/" class="button readmore">Or learn more about EMBL</a></p>' +
+                '</div>';
+        document.getElementById("global-masthead").appendChild(dropdownDiv);  
+        
+        // invoke the the foundation dropdown
+        var options = {closeOnClick: true},
+            dropdownEbiMenu = new Foundation.Dropdown($('#embl-dropdown'), options);
+      }
+      catch(err) {};
+
+    })();
+
     // Link overlay images
     $(function() {
       $('.with-overlay').click(function(e) {

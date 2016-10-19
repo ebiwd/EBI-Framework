@@ -4,15 +4,11 @@
   jQuery('head').append('<script defer="defer" src="//ebiwd.github.io/EBI-Framework/sample-site/migrations/testMigration.js"></script>\n');
 
   If your page does not have jQuery, you can load with four lines of vaniala JS:
-    var filerefJquery=document.createElement('script')
-    filerefJquery.setAttribute("type","text/javascript")
-    filerefJquery.setAttribute("src", "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
-    document.getElementsByTagName("head")[0].appendChild(filerefJquery)
-
     var fileref=document.createElement('script')
     fileref.setAttribute("type","text/javascript")
     fileref.setAttribute("src", "//ebiwd.github.io/EBI-Framework/sample-site/migrations/testMigration.js")
     document.getElementsByTagName("head")[0].appendChild(fileref)
+
 
 1) Swap out the old compliance CSS/JS
 2) Swap out the omega grid for the Foundation grid
@@ -362,7 +358,7 @@ function testMigration(steppingTimeSpeed) {
   // }, steppingTime());
 
   setTimeout(function(){
-    jQuery('#local-masthead #local-title.columns, #local-masthead #local-search.medium-6, #local-masthead .medium-6.last').wrapAll('<div class="masthead row"/>');
+    jQuery('#local-masthead #local-title, #local-masthead #local-search.medium-6, #local-masthead .medium-6.last').wrapAll('<div class="masthead row"/>');
     console.log('Local title and search: wrapping in a new div with classes .masthead.row');
     console.log('------------------\n');
   }, steppingTime());

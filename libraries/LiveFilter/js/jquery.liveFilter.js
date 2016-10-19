@@ -7,7 +7,8 @@
 
 /*
   NOTE: this has been forked from master for EBI needs:
-  https://github.com/mikemerritt/LiveFilter/pull/14/commits/6f6023d108d4b3a70157392f3231e245610dcc72
+  1) https://github.com/mikemerritt/LiveFilter/pull/14/
+  2) https://github.com/mikemerritt/LiveFilter/pull/15
 */
 
 (function($){
@@ -97,6 +98,7 @@
         }
 
       }
+
       return false;
     });
 
@@ -114,10 +116,6 @@
       });
 
       input.blur(function() {
-        // var defaultVal = $(this).attr('value'); // sets the programatic value
-        // if (defaultVal === '') {
-        //   $(this).attr('value', options.defaultText);
-        // }
         var currentVal = $(this).val(); 
         if (currentVal === '') {
           $(this).val(options.defaultText);
@@ -134,6 +132,13 @@
 
       var input = $(this);
       clearTimeout(keyDelay);
+
+      // Add a class that the text has been processed
+      if (input.val() !== '') {
+        wrap.addClass('live-filter-processed');
+      } else {
+        wrap.removeClass('live-filter-processed');
+      }
 
       // Setting timeout for performance reasons.
       keyDelay = setTimeout(function () { 

@@ -2,9 +2,10 @@
 $ebi-colour-dark: #222;
 $ebi-colour-light: #f8f8f8;
 $ebi-colour-dark-grey: #666;;
+$ebi-colour-medium-grey: #999;;
 $ebi-colour-light-grey: #f7f7f7;
 $ebi-colour-light-green: rgb(109,171,73);
-$ebi-colour-dark-green: rgb(2,100,105);
+$ebi-colour-dark-green: rgb(56,145,152);
 $ebi-colour-petrol: rgb(0,124,130);
 $ebi-colour-gold: rgb(233,180,0);
 $ebi-colour-orange: rgb(251,106,42);
@@ -21,8 +22,7 @@ $ebi-colour-training: $ebi-colour-gold;
 $ebi-colour-industry: $ebi-colour-blue;
 $ebi-colour-elixir: $ebi-colour-orange;
 
-
-// Generic colours not attached to the EBI brand
+// Generic colours
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
@@ -35,6 +35,17 @@ $body-font-color: $ebi-colour-dark;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-font-family-serif: 'EB Garamond', 'georgia', serif;
 
+// Label tweaks
+$label-background: $ebi-colour-white;
+$label-color: $primary-color;
+$label-padding: 0.33333rem 0;
+
+// Tags
+$tag-background: $primary-color;
+$tag-color: $label-background;
+$tag-font-size: 0.8rem;
+$tag-padding: 0.33333rem 0.5rem;
+
 // These don't do anything yet...
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -44,3 +55,4 @@ $global-radius: 0;
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
+$global-flexbox: false;

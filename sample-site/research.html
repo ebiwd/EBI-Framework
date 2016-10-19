@@ -8,7 +8,7 @@
   <!-- Use the .htaccess and remove these lines to avoid edge case issues.
    More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
   <!-- START: default Drupal Head Metatags -->
   <meta charset="utf-8">
@@ -46,14 +46,14 @@
    For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
 
   <!-- Full build -->
-  <!-- <script src="https://www.ebi.ac.uk/web_guidelines/js/libs/modernizr.minified.2.1.6.js"></script> -->
+  <!-- <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.minified.2.1.6.js"></script> -->
 
   <!-- custom build (lacks most of the "advanced" HTML5 support -->
-  <script type="text/javascript" src="https://www.ebi.ac.uk/web_guidelines/js/libs/modernizr.custom.49274.js"></script>
-  <link rel="stylesheet" href="https://ebiwd.github.io/EBI-Framework/libraries/foundation-6/css/foundation.css" type="text/css">
-  <link rel="stylesheet" href="https://ebiwd.github.io/EBI-Framework/css/ebi-global.css" type="text/css">
-  <link rel="stylesheet" href="https://ebiwd.github.io/EBI-Framework/fonts/fonts.css" type="text/css">
-  <link rel="stylesheet" href="https://ebiwd.github.io/EBI-Framework/css/theme-ebi-research.css" type="text/css">
+  <script type="text/javascript" src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.custom.49274.js"></script>
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/libraries/foundation-6/css/foundation.css" type="text/css">
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/ebi-global.css" type="text/css">
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.1/fonts.css" type="text/css">
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/theme-ebi-research.css" type="text/css">
 </head>
 
 <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-527 node-type-panel role-anonymous-user user-0 page-research section-research subsection-overview subdomain-none subsite-none level1 datacentre-hx environment-dev lightbox-processed global-search piwik-loaded">
@@ -78,19 +78,19 @@
         <div id="local-masthead" class="meta-background-image" data-sticky="true" data-sticky-on="large" data-top-anchor="180" data-btm-anchor="300000">
           <div id="global-masthead" class="clearfix">
             <!--This has to be one line and no newline characters-->
-            <a href="https://www.ebi.ac.uk/www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>
+            <a href="//www.ebi.ac.uk/www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>
             <nav>
               <div class="row">
                 <ul id="global-nav" class="menu">
                   <!-- set active class as appropriate -->
                   <li id="home-mobile" class="">
-                    <a href="https://www.ebi.ac.uk/www.ebi.ac.uk"></a>
+                    <a href="//www.ebi.ac.uk/www.ebi.ac.uk"></a>
                   </li>
-                  <li id="home" class="active"><a href="https://www.ebi.ac.uk/www.ebi.ac.uk"><i class="icon icon-generic" data-icon="H"></i> EMBL-EBI</a></li>
-                  <li id="services"><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="("></i> Services</a></li>
-                  <li id="research"><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon=")"></i> Research</a></li>
-                  <li id="training"><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>
-                  <li id="about"><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="i"></i> About us</a></li>
+                  <li id="home" class="active"><a href="//www.ebi.ac.uk/www.ebi.ac.uk"><i class="icon icon-generic" data-icon="H"></i> EMBL-EBI</a></li>
+                  <li id="services"><a href="//www.ebi.ac.uk/www.ebi.ac.uk/services"><i class="icon icon-generic" data-icon="("></i> Services</a></li>
+                  <li id="research"><a href="//www.ebi.ac.uk/www.ebi.ac.uk/research"><i class="icon icon-generic" data-icon=")"></i> Research</a></li>
+                  <li id="training"><a href="//www.ebi.ac.uk/www.ebi.ac.uk/training"><i class="icon icon-generic" data-icon="t"></i> Training</a></li>
+                  <li id="about"><a href="//www.ebi.ac.uk/www.ebi.ac.uk/about"><i class="icon icon-generic" data-icon="i"></i> About us</a></li>
                   <li id="search">
                     <a href="#" data-toggle="search-global-dropdown"><i class="icon icon-functional" data-icon="1"></i> <span class="show-for-small-only">Search</span></a>
                     <div id="search-global-dropdown" class="dropdown-pane" data-dropdown="" data-options="closeOnClick:true;">
@@ -109,10 +109,8 @@
                     </div>
                   </li>
                   <li class="float-right show-for-medium embl-selector">
-                    <button class="button" type="button" data-toggle="embl-dropdown">Hinxton</button>
-                    <div id="embl-dropdown" class="dropdown-pane" data-dropdown="" data-options="closeOnClick:true;">
-                      to come.
-                    </div>
+                    <button class="button float-right" type="button" data-toggle="embl-dropdown">Hinxton</button>
+                    <!-- The dropdown menu will be programatically added by script.js -->
                   </li>
                 </ul>
               </div>
@@ -223,7 +221,7 @@
                                 <td class="col-1 col-first">
 
                                   <div class="image">
-                                    <a href="/research/bateman" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/bateman_alex_web_2014.jpg" alt="Alex Bateman"></a>
+                                    <a href="/research/bateman" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/bateman_alex_web_2014.jpg" alt="Alex Bateman"></a>
                                   </div>
                                   <p class="name"><a href="/research/bateman">Alex Bateman</a></p>
                                   <div class="views-field views-field-text-4">
@@ -235,7 +233,7 @@
                                 <td class="col-2">
 
                                   <div class="image">
-                                    <a href="/research/beltrao" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/BELTRAO_Pedro_72_0.jpg" alt="Pedro Beltrao"></a>
+                                    <a href="/research/beltrao" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/BELTRAO_Pedro_72_0.jpg" alt="Pedro Beltrao"></a>
                                   </div>
                                   <p class="name"><a href="/research/beltrao">Pedro Beltrao</a></p>
                                   <div class="views-field views-field-text-4">
@@ -247,7 +245,7 @@
                                 <td class="col-3">
 
                                   <div class="image">
-                                    <a href="/research/birney" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/birney_ewan_web_2015.jpg" alt="Ewan Birney"></a>
+                                    <a href="/research/birney" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/birney_ewan_web_2015.jpg" alt="Ewan Birney"></a>
                                   </div>
                                   <p class="name"><a href="/research/birney">Ewan Birney</a></p>
                                   <div class="views-field views-field-text-4">
@@ -259,7 +257,7 @@
                                 <td class="col-4 col-last">
 
                                   <div class="image">
-                                    <a href="/research/brazma" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/Brazma_Alvis_72.jpg" alt="Alvis Brazma"></a>
+                                    <a href="/research/brazma" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/Brazma_Alvis_72.jpg" alt="Alvis Brazma"></a>
                                   </div>
                                   <p class="name"><a href="/research/brazma">Alvis Brazma</a></p>
                                   <div class="views-field views-field-text-4">
@@ -273,7 +271,7 @@
                                 <td class="col-1 col-first">
 
                                   <div class="image">
-                                    <a href="/research/enright" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/enright_anton.jpg" alt="Anton Enright"></a>
+                                    <a href="/research/enright" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/enright_anton.jpg" alt="Anton Enright"></a>
                                   </div>
                                   <p class="name"><a href="/research/enright">Anton Enright</a></p>
                                   <div class="views-field views-field-text-4">
@@ -285,7 +283,7 @@
                                 <td class="col-2">
 
                                   <div class="image">
-                                    <a href="/research/flicek" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/Flicek_Paul_72.jpg" alt="Paul Flicek"></a>
+                                    <a href="/research/flicek" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/Flicek_Paul_72.jpg" alt="Paul Flicek"></a>
                                   </div>
                                   <p class="name"><a href="/research/flicek">Paul Flicek</a></p>
                                   <div class="views-field views-field-text-4">
@@ -297,7 +295,7 @@
                                 <td class="col-3">
 
                                   <div class="image">
-                                    <a href="/research/gerstung" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/gerstung_moritz_web.jpg" alt="Moritz Gerstung"></a>
+                                    <a href="/research/gerstung" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/gerstung_moritz_web.jpg" alt="Moritz Gerstung"></a>
                                   </div>
                                   <p class="name"><a href="/research/gerstung">Moritz Gerstung</a></p>
                                   <div class="views-field views-field-text-4">
@@ -309,7 +307,7 @@
                                 <td class="col-4 col-last">
 
                                   <div class="image">
-                                    <a href="/research/goldman" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/goldman_nick_web_2014.jpg" alt="Nick Goldman"></a>
+                                    <a href="/research/goldman" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/goldman_nick_web_2014.jpg" alt="Nick Goldman"></a>
                                   </div>
                                   <p class="name"><a href="/research/goldman">Nick Goldman</a></p>
                                   <div class="views-field views-field-text-4">
@@ -323,7 +321,7 @@
                                 <td class="col-1 col-first">
 
                                   <div class="image">
-                                    <a href="/research/kleywegt" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/KLEYWEGT_Gerard_220.jpg" alt="Gerard Kleywegt"></a>
+                                    <a href="/research/kleywegt" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/KLEYWEGT_Gerard_220.jpg" alt="Gerard Kleywegt"></a>
                                   </div>
                                   <p class="name"><a href="/research/kleywegt">Gerard Kleywegt</a></p>
                                   <div class="views-field views-field-text-4">
@@ -335,7 +333,7 @@
                                 <td class="col-2">
 
                                   <div class="image">
-                                    <a href="/research/marioni" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/MARINONI_John_72.jpg" alt="John Marioni"></a>
+                                    <a href="/research/marioni" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/MARINONI_John_72.jpg" alt="John Marioni"></a>
                                   </div>
                                   <p class="name"><a href="/research/marioni">John Marioni</a></p>
                                   <div class="views-field views-field-text-4">
@@ -347,7 +345,7 @@
                                 <td class="col-3">
 
                                   <div class="image">
-                                    <a href="/research/saez-rodriguez" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/SAEZ-ROD_Julio_72_0.jpg" alt="Julio Saez-Rodriguez"></a>
+                                    <a href="/research/saez-rodriguez" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/SAEZ-ROD_Julio_72_0.jpg" alt="Julio Saez-Rodriguez"></a>
                                   </div>
                                   <p class="name"><a href="/research/saez-rodriguez">Julio Saez-Rodriguez</a></p>
                                   <div class="views-field views-field-text-4">
@@ -359,7 +357,7 @@
                                 <td class="col-4 col-last">
 
                                   <div class="image">
-                                    <a href="/research/stegle" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/stegl_oliver_web_2015.jpg" alt="Oliver Stegle"></a>
+                                    <a href="/research/stegle" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/stegl_oliver_web_2015.jpg" alt="Oliver Stegle"></a>
                                   </div>
                                   <p class="name"><a href="/research/stegle">Oliver Stegle</a></p>
                                   <div class="views-field views-field-text-4">
@@ -373,7 +371,7 @@
                                 <td class="col-1 col-first">
 
                                   <div class="image">
-                                    <a href="/research/steinbeck" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/STEINBECK_Chris_72_0.jpg" alt="Christoph Steinbeck"></a>
+                                    <a href="/research/steinbeck" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/STEINBECK_Chris_72_0.jpg" alt="Christoph Steinbeck"></a>
                                   </div>
                                   <p class="name"><a href="/research/steinbeck">Christoph Steinbeck</a></p>
                                   <div class="views-field views-field-text-4">
@@ -385,7 +383,7 @@
                                 <td class="col-2">
 
                                   <div class="image">
-                                    <a href="/research/teichmann" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/teichmann_sarah_web-2014.jpg" alt="Sarah Teichmann"></a>
+                                    <a href="/research/teichmann" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/teichmann_sarah_web-2014.jpg" alt="Sarah Teichmann"></a>
                                   </div>
                                   <p class="name"><a href="/research/teichmann">Sarah Teichmann</a></p>
                                   <div class="views-field views-field-text-4">
@@ -397,7 +395,7 @@
                                 <td class="col-3">
 
                                   <div class="image">
-                                    <a href="/research/thornton" class="no-underline"><img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/THORNTON_Janet_72.jpg" alt="Janet Thornton"></a>
+                                    <a href="/research/thornton" class="no-underline"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styles/thumbnail/public/person/image/THORNTON_Janet_72.jpg" alt="Janet Thornton"></a>
                                   </div>
                                   <p class="name"><a href="/research/thornton">Janet Thornton</a></p>
                                   <div class="views-field views-field-text-4">
@@ -431,14 +429,14 @@
                     <div class="shortcuts submenu">
                       <div class="panel-pane pane-custom pane-5 columns medium-2 clearfix">
                         <ul class="no-bullet">
-                          <li><a href="https://www.ebi.ac.uk/research/publications" class="icon icon-generic" data-icon="P">All publications</a></li>
-                          <li><a href="https://www.ebi.ac.uk/research/postdocs" class="icon icon-generic" data-icon="c">Postdocs</a></li>
-                          <li><a href="https://www.ebi.ac.uk/research/eipp" class="icon icon-generic" data-icon="A">PhD Programme</a></li>
-                          <li><a href="https://www.ebi.ac.uk/about/jobs/visitors-and-scholars" class="icon icon-generic" data-icon="n">Visitors</a></li>
-                          <li><a href="https://www.ebi.ac.uk/about/events/2015/embl-ebi-open-day-2015" class="icon icon-generic" data-icon="*">Open day</a></li>
-                          <li><a href="https://www.ebi.ac.uk/about/jobs" class="icon icon-generic" data-icon="c">Jobs</a></li>
+                          <li><a href="//www.ebi.ac.uk/research/publications" class="icon icon-generic" data-icon="P">All publications</a></li>
+                          <li><a href="//www.ebi.ac.uk/research/postdocs" class="icon icon-generic" data-icon="c">Postdocs</a></li>
+                          <li><a href="//www.ebi.ac.uk/research/eipp" class="icon icon-generic" data-icon="A">PhD Programme</a></li>
+                          <li><a href="//www.ebi.ac.uk/about/jobs/visitors-and-scholars" class="icon icon-generic" data-icon="n">Visitors</a></li>
+                          <li><a href="//www.ebi.ac.uk/about/events/2015/embl-ebi-open-day-2015" class="icon icon-generic" data-icon="*">Open day</a></li>
+                          <li><a href="//www.ebi.ac.uk/about/jobs" class="icon icon-generic" data-icon="c">Jobs</a></li>
                           <li><a href="http://www.embl.de/research/" class="icon icon-generic icon-c4" data-icon="&amp;">EMBL research</a></li>
-                          <li><a href="https://www.ebi.ac.uk/about/people" class="icon icon-generic" data-icon="C">Contacts</a></li>
+                          <li><a href="//www.ebi.ac.uk/about/people" class="icon icon-generic" data-icon="C">Contacts</a></li>
                         </ul>
                       </div>
                     </div>
@@ -541,7 +539,7 @@
                           body.section-research #local-masthead.meta-background-image {
                             background-position: 100% 100%;
                             background-size: initial;
-                            background-image: url("https://ebiwd.github.io/EBI-Framework/images/backgrounds/research-green-2.jpg");
+                            background-image: url("//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/images/backgrounds/research-green-2.jpg");
                             background-color: rgb(0, 0, 0);
                           }
                         </style>
@@ -605,57 +603,57 @@
       <div id="global-footer" class="columns medium-12">
 
         <nav id="global-nav-expanded" class="row">
-          <div class="columns small-6 medium-2 "> <a href="https://www.ebi.ac.uk" title="EMBL-EBI"><span class="ebi-logo"></span></a>
+          <div class="columns small-6 medium-2 "> <a href="//www.ebi.ac.uk" title="EMBL-EBI"><span class="ebi-logo"></span></a>
             <ul>
-              <li class="first"><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/about/news">News</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/about/events">Events</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/about/partnerships">Collaboration</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/about/contact">Contact us</a> </li>
+              <li class="first"><a href="//www.ebi.ac.uk/www.ebi.ac.uk/about/news">News</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/about/events">Events</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/about/partnerships">Collaboration</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/about/contact">Contact us</a> </li>
               <li class="last"><a href="http://intranet.ebi.ac.uk">Intranet</a></li>
             </ul>
           </div>
           <div class="columns small-6 medium-2 ">
-            <h5 class="services"><a class="services-color" href="https://www.ebi.ac.uk/www.ebi.ac.uk/services">Services</a></h5>
+            <h5 class="services"><a class="services-color" href="//www.ebi.ac.uk/www.ebi.ac.uk/services">Services</a></h5>
             <ul>
-              <li class="first"><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/services">By topic</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/services/all">By name (A-Z)</a></li>
-              <li class="last"><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/support">Help &amp; Support</a></li>
+              <li class="first"><a href="//www.ebi.ac.uk/www.ebi.ac.uk/services">By topic</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/services/all">By name (A-Z)</a></li>
+              <li class="last"><a href="//www.ebi.ac.uk/www.ebi.ac.uk/support">Help &amp; Support</a></li>
             </ul>
           </div>
           <div class="columns small-6 medium-2 ">
-            <h5 class="research"><a class="research-color" href="https://www.ebi.ac.uk/www.ebi.ac.uk/research">Research</a></h5>
+            <h5 class="research"><a class="research-color" href="//www.ebi.ac.uk/www.ebi.ac.uk/research">Research</a></h5>
             <ul>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/research/publications">Publications</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/research/groups">Research groups</a></li>
-              <li class="last"><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="https://www.ebi.ac.uk/www.ebi.ac.uk/research/eipp">PhDs</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/research/publications">Publications</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/research/groups">Research groups</a></li>
+              <li class="last"><a href="//www.ebi.ac.uk/www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="//www.ebi.ac.uk/www.ebi.ac.uk/research/eipp">PhDs</a></li>
             </ul>
           </div>
           <div class="columns small-6 medium-2 ">
-            <h5 class="training"><a class="training-color" href="https://www.ebi.ac.uk/www.ebi.ac.uk/training">Training</a></h5>
+            <h5 class="training"><a class="training-color" href="//www.ebi.ac.uk/www.ebi.ac.uk/training">Training</a></h5>
             <ul>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/training/handson">Train at EBI</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/training/online">Train online</a></li>
-              <li class="last"><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/training/contact-us">Contact organisers</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/training/handson">Train at EBI</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/training/online">Train online</a></li>
+              <li class="last"><a href="//www.ebi.ac.uk/www.ebi.ac.uk/training/contact-us">Contact organisers</a></li>
             </ul>
           </div>
           <div class="columns small-6 medium-2 ">
-            <h5 class="industry"><a class="industry-color" href="https://www.ebi.ac.uk/www.ebi.ac.uk/industry">Industry</a></h5>
+            <h5 class="industry"><a class="industry-color" href="//www.ebi.ac.uk/www.ebi.ac.uk/industry">Industry</a></h5>
             <ul>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/industry/private">Members Area</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/industry/workshops">Workshops</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li>
-              <li class="last"><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/industry/private">Members Area</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/industry/workshops">Workshops</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li>
+              <li class="last"><a href="//www.ebi.ac.uk/www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li>
             </ul>
           </div>
           <div class="columns small-6 medium-2 ">
-            <h5 class="about"><a class="ebi-color" href="https://www.ebi.ac.uk/www.ebi.ac.uk/about">About EMBL-EBI</a></h5>
+            <h5 class="about"><a class="ebi-color" href="//www.ebi.ac.uk/www.ebi.ac.uk/about">About EMBL-EBI</a></h5>
             <ul>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/about/leadership">Leadership</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/about/funding">Funding</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/about/people">People &amp; groups</a></li>
-              <li><a href="https://www.ebi.ac.uk/www.ebi.ac.uk/about/travel">Visit us</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/about/leadership">Leadership</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/about/funding">Funding</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/about/people">People &amp; groups</a></li>
+              <li><a href="//www.ebi.ac.uk/www.ebi.ac.uk/about/travel">Visit us</a></li>
             </ul>
           </div>
         </nav>
@@ -676,15 +674,15 @@
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <!--
-<script src="https://www.ebi.ac.uk/ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="//www.ebi.ac.uk/ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 -->
 
 
   <!-- Your custom JavaScript file scan go here... change names accordingly -->
   <!--
-<script defer="defer" src="https://www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
-<script defer="defer" src="https://www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
 -->
   <!-- end scripts-->
 
@@ -700,11 +698,11 @@
 -->
 
   <!-- page_bottom -->
-  <script defer="defer" src="https://ebiwd.github.io/EBI-Framework/js/cookiebanner.js"></script>
-  <script defer="defer" src="https://ebiwd.github.io/EBI-Framework/js/foot.js"></script>
-  <script defer="defer" src="https://ebiwd.github.io/EBI-Framework/js/script.js"></script>
-  <script src="https://ebiwd.github.io/EBI-Framework/libraries/foundation-6/js/foundation.js"></script>
-  <script src="https://ebiwd.github.io/EBI-Framework/js/foundationExtendEBI.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/js/cookiebanner.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/js/foot.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/js/script.js"></script>
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/libraries/foundation-6/js/foundation.js"></script>
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/js/foundationExtendEBI.js"></script>
   <script type="text/JavaScript">$(document).foundation();</script>
   <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
 

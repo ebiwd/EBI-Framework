@@ -6,6 +6,9 @@ a {
   color: #222;
 }
 
+dl dt a,
+a.label,
+.label,
 a:hover,
 a:focus,
 a:active {
@@ -19,18 +22,23 @@ h3 { color: #444444; }
 a.special { background-color: #7cd17c; }
 
 .menu .active > a,
-a.label,
-.label,
+.tag,
+.tabs-title > a:hover
 .button,
-.button.primary {       
+.button.primary {
   background-color: rgb(109,171,73);
-  color: #f8f8f8;
-}   
+}
+.tabs-title > a:hover,
 .button.primary:hover,
 .button.primary:focus,
 .button:hover,
 .button:focus,
 .button:active { background: rgba(109,171,73,.9); }
+
+.tabs-title > a:focus,
+.tabs-title > a[aria-selected='true'] {
+  color: #fff;
+  background: #666; }
 
 div#local-masthead { background-color: rgb(109,171,73); }
 
