@@ -10,11 +10,11 @@ No. The vast majority of users should link to the EBI hosted files. You'll load 
 
 ### Tell me more on using this...
 
-- Quick start: see the [HTML demos in the EBI Pattern Library /sample-site directory] (https://github.com/ebiwd/EBI-Pattern-library/tree/gh-pages/sample-site/boilerplate).
-- Guidance and help: check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins] (https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
-- Test for compatibility: if you're migrating an exsisting site [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Framework/blob/gh-pages/sample-site/migrations/testMigration.js)
-- Import legacy style and grids: if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS] (https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css)
-- Bonus: once you're up and running, [check out the pattern library] (https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and good.
+- Quick start: see the [HTML demos in the EBI Pattern Library /sample-site directory] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/).
+- Test for compatibility: if you're migrating an exsisting site [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Pattern-library/blob/gh-pages/sample-site/migrations/testMigration.js).
+- Import legacy style and grids: if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS] (https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css).
+- Guidance: For the updated web guidelines, [check out the pattern library] (https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
+- Help! Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins] (https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
 
 ## About the framework
 
