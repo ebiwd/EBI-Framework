@@ -4,17 +4,17 @@ This, the EBI Visual Framework, is the successor to the current EBI Compliance T
 
 Homed here are the various assets that make the EBI Visual Framewok (CSS, JS, and a few images and build scripts).
 
-## Do I need to download this?
+## Where do I start? How do I use this?
+
+1. Quick start: see the [HTML demos in the EBI Pattern Library /sample-site directory] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/).
+2. Test for compatibility: if you're migrating an exsisting site [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Pattern-library/blob/gh-pages/sample-site/migrations/testMigration.js).
+3. Import legacy style and grids: if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS] (https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css).
+4. Guidance: For the updated web guidelines, [check out the pattern library] (https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
+5. Help! Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins] (https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
+
+### Do I need to download this?
 
 No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/blank.html).
-
-### Tell me more on using this...
-
-- Quick start: see the [HTML demos in the EBI Pattern Library /sample-site directory] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/).
-- Test for compatibility: if you're migrating an exsisting site [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Pattern-library/blob/gh-pages/sample-site/migrations/testMigration.js).
-- Import legacy style and grids: if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS] (https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css).
-- Guidance: For the updated web guidelines, [check out the pattern library] (https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
-- Help! Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins] (https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
 
 ## About the framework
 
@@ -42,25 +42,7 @@ This project continues efforts of the existing guidance by providing:
   - NPM updating (optional)
 - Collaboration: A more collaborative code base (note this is on GitHub) to offer a better path for code collaboration and integration
 
-## Considerations
-A short list of concerns that need to be kept in mind during the dev process.
-
-- Handling non text-centric web applications/services: need to ensure that audience is considered/brought into fold
-  - Design pattern library/kitchen sink is potential mitigation
-- There are generally several flavours of any visual tooling, a stronger pattern library would be helpful
-- Table functionality is generally very simple; it seems guidance could help push this forward
-- Mobile and widescreen support is generally weak throughout
-- Layouts are simple/weak/inconsistent; templates and samples would help
-- Must be conscious to supply enough vital documentation/patterns, but without recreating the Foundation documentation
-- Do we keep documentation as one long file, or split into multiple...
-- Presently sample code blocks are kept to a minimum to keep the document shorter and increase our flexibility -- as our audience is devs, we may not need code samples at all, as code source should suffice?
-- Many of the colour palette tags ( .primary-*, .secondary-a-*, .secondary-b-*, .complement-* ) appear to have no usage (wget + grep) and could likely be removed from the base style sheets. We should survey, pilot in alpha.
-- Standardised feedback capturing
-
 ## Outreach
-As users of this tooling are spread across the institute, ongoing out reach is vital.
-
-### Methods of outreach
 Not all developers are in the same place, so we plan to make use of multiple channels:
 
 - Github: Many developers already live in the Github ecosystem, engaging them here will also fit well into the pull request/issue queue ecosystem.
