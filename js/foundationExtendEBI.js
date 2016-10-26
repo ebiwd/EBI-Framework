@@ -29,43 +29,80 @@ function analyticsTrackInteraction(actedOnItem, parentContainer) {
 // Only track these areas
 // This could be done more efficently with a general capture of links,
 // but we're running against the page's unload -- so speed over elegance.
-jQuery("body.google-analytics-loaded .masthead a").mousedown( function(e) {
+
+// Automatically detected areas
+// These are largely legacy...
+jQuery("body.google-analytics-loaded .masthead").on('mousedown', 'a', function(e) {
   analyticsTrackInteraction(e.target,'Masthead');
 });
-jQuery("body.google-analytics-loaded .related ul li > a").mousedown( function(e) {
+jQuery("body.google-analytics-loaded .related ul").on('mousedown', 'li > a', function(e) {
   analyticsTrackInteraction(e.target,'Popular');
 });
-jQuery("body.google-analytics-loaded .with-overlay a").mousedown( function(e) {
+jQuery("body.google-analytics-loaded .with-overlay").on('mousedown', 'a', function(e) {
   analyticsTrackInteraction(e.target,'Highlight box');
 });
-jQuery("body.google-analytics-loaded .intro-unit a").mousedown( function(e) {
+jQuery("body.google-analytics-loaded .intro-unit").on('mousedown', 'a', function(e) {
   analyticsTrackInteraction(e.target,'Intro');
 });
-jQuery("body.google-analytics-loaded .main.columns > article > .row > .medium-8 a, \
-  body.google-analytics-loaded .main.columns > article > .row > .medium-12 a\
-  body.google-analytics-loaded .main.columns > article > .row > .medium-10 a\
-  body.google-analytics-loaded #main-content-area a").mousedown( function(e) {
+jQuery("body.google-analytics-loaded #main-content-area").on('mousedown', 'a', function(e) {
   analyticsTrackInteraction(e.target,'Main content');
 });
-jQuery("body.google-analytics-loaded .main.columns > article > .row > .medium-4 a, \
-  body.google-analytics-loaded .main.columns > article > .row > .medium-3").mousedown( function(e) {
-  analyticsTrackInteraction(e.target,'Sidebar');
-});
-jQuery("body.google-analytics-loaded #global-footer a").mousedown( function(e) {
+// jQuery("body.google-analytics-loaded .main.columns > article > .row > .medium-4 a, \
+//   body.google-analytics-loaded .main.columns > article > .row > .medium-3").mousedown( function(e) {
+//   analyticsTrackInteraction(e.target,'Sidebar');
+// });
+jQuery("body.google-analytics-loaded #global-footer").on( 'mousedown', 'a', function(e) {
   analyticsTrackInteraction(e.target,'Footer');
 });
-jQuery("body.google-analytics-loaded #global-search input").mousedown( function(e) {
+jQuery("body.google-analytics-loaded #global-search").on( 'mousedown', 'input' function(e) {
   analyticsTrackInteraction(e.target,'Global search');
 });
-jQuery("body.google-analytics-loaded #local-search input").mousedown( function(e) {
+jQuery("body.google-analytics-loaded #local-search").on( 'mousedown', 'input' function(e) {
   analyticsTrackInteraction(e.target,'Local search');
 });
-jQuery("body.google-analytics-loaded #ebi_search input#search_submit").mousedown( function(e) {
+jQuery("body.google-analytics-loaded #ebi_search").on( 'mousedown', 'input#search_submit' function(e) {
   analyticsTrackInteraction(e.target,'Homepage search');
 });
-jQuery("body.google-analytics-loaded .track-with-analytics-events a").mousedown( function(e) {
+
+// Editor defined areas
+// These areas will be manually tagged by content editors or implement by devs
+jQuery("body.google-analytics-loaded .analytics-content-intro").on( 'mousedown', 'a', function(e) {
+  analyticsTrackInteraction(e.target,'Intro');
+});
+jQuery("body.google-analytics-loaded .analytics-content-main").on( 'mousedown', 'a', function(e) {
+  analyticsTrackInteraction(e.target,'Main content');
+});
+jQuery("body.google-analytics-loaded .analytics-content-sidebar").on( 'mousedown', 'a', function(e) {
+  analyticsTrackInteraction(e.target,'Sidebar');
+});
+jQuery("body.google-analytics-loaded .analytics-content-left").on( 'mousedown', 'a', function(e) {
+  analyticsTrackInteraction(e.target,'Left content');
+});
+jQuery("body.google-analytics-loaded .analytics-content-right").on( 'mousedown', 'a', function(e) {
+  analyticsTrackInteraction(e.target,'Right content');
+});
+jQuery("body.google-analytics-loaded .analtyics-content-footer").on( 'mousedown', 'a', function(e) {
+  analyticsTrackInteraction(e.target,'Content footer');
+});
+
+
+
+// todo: homepage search return
+// $('textarea').bind("enterKey",function(e){
+//    //do stuff here
+// });
+// $('textarea').keyup(function(e){
+//     if(e.keyCode == 13)
+//     {
+//         $(this).trigger("enterKey");
+//     }
+// });
+
+jQuery("body.google-analytics-loaded .track-with-analytics-events a").on( 'mousedown', function(e) {
   analyticsTrackInteraction(e.target,'Manually tracked area');
 });
+// To do: track livefilter
+// input.filter[type="text"]').on("keyup", function() {
 
 // log control+f and command+f
 // base method via http://stackoverflow.com/a/6680403
