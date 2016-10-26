@@ -28,6 +28,8 @@ a.special { background-color: #7cd17c; }
 .button.primary {
   background-color: rgb(233,180,0);
 }
+a.tag:hover { color: #fff; }
+
 .tabs-title > a:hover,
 .button.primary:hover,
 .button.primary:focus,
