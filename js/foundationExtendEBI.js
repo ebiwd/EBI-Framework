@@ -54,13 +54,13 @@ jQuery("body.google-analytics-loaded #main-content-area").on('mousedown', 'a', f
 jQuery("body.google-analytics-loaded #global-footer").on( 'mousedown', 'a', function(e) {
   analyticsTrackInteraction(e.target,'Footer');
 });
-jQuery("body.google-analytics-loaded #global-search").on( 'mousedown', 'input' function(e) {
+jQuery("body.google-analytics-loaded #global-search").on( 'mousedown', 'input', function(e) {
   analyticsTrackInteraction(e.target,'Global search');
 });
-jQuery("body.google-analytics-loaded #local-search").on( 'mousedown', 'input' function(e) {
+jQuery("body.google-analytics-loaded #local-search").on( 'mousedown', 'input', function(e) {
   analyticsTrackInteraction(e.target,'Local search');
 });
-jQuery("body.google-analytics-loaded #ebi_search").on( 'mousedown', 'input#search_submit' function(e) {
+jQuery("body.google-analytics-loaded #ebi_search").on( 'mousedown', 'input#search_submit', function(e) {
   analyticsTrackInteraction(e.target,'Homepage search');
 });
 
