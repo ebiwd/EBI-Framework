@@ -35,11 +35,15 @@ $tag-radius: $global-radius !default;
 }
 
 @mixin ebi-tag {
+  a.tag {
+    color: $tag-color;
+  }
   .tag {
     @include tag;
 
     background: $tag-background;
     color: $tag-color;
+    border-bottom: none;
 
     // @each $name, $color in $foundation-palette {
     //   @if $name != primary {

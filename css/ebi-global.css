@@ -1115,6 +1115,9 @@ table.no-stripe tbody tr:nth-child(even) {
     max-width: 100%; } }
 
 /* tag */
+a.tag {
+  color: white; }
+
 .tag {
   display: inline-block;
   padding: 0.33333rem 0.5rem;
@@ -1122,7 +1125,8 @@ table.no-stripe tbody tr:nth-child(even) {
   line-height: 1;
   white-space: nowrap;
   background: #007c82;
-  color: white; }
+  color: white;
+  border-bottom: none; }
 
 /* defenition lists */
 dl dt {
