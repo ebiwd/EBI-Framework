@@ -37,6 +37,7 @@ $tag-radius: $global-radius !default;
 @mixin ebi-tag {
   a.tag {
     color: $tag-color;
+    border-bottom-style: none;
   }
   .tag {
     @include tag;

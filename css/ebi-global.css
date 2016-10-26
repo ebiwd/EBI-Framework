@@ -114,6 +114,7 @@ div.warning {
 .white-background, a.white-background, .tag.white-background, .button.white-background {
   background: white; }
 
+.tag.secondary,
 .secondary-background, a.secondary-background, .tag.secondary-background, .button.secondary-background {
   background: #666; }
 
@@ -1116,7 +1117,8 @@ table.no-stripe tbody tr:nth-child(even) {
 
 /* tag */
 a.tag {
-  color: white; }
+  color: white;
+  border-bottom-style: none; }
 
 .tag {
   display: inline-block;
