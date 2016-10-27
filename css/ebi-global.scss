@@ -761,25 +761,35 @@ code { font-size: .95rem; }
 
 /* related / popular */
 .related {
-  background: #333;
-  margin-top: 4.25rem
-}
-.related h3 {
-  color: #fff;
-  background: none;
+  background: $ebi-colour-dark;
+  margin-top: 4.25rem;
+  color: $ebi-colour-white;
   padding: .5rem 0 0 1.1rem;
+
+  h3 {
+    color: $ebi-colour-white;
+    background: none;
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin-left: 0;
+    margin-top: .25rem;
+
+    li {
+      display:inline-block;
+      width: 49%;
+      padding-right: 0;
+      font-size: .9rem;
+      min-width: 7rem; // for odd mid-break points, ensure the text doesn't get too small
+
+      a { color: $ebi-colour-white; border-bottom:none; }
+      a:hover { text-decoration: underline; }
+      a:after { content: " >"; }
+    }
+  }
+  ul:after { content: " "; height: .5rem; display: block; clear: both; } // a clearfix to show background
 }
-.related ul li {
-  display:inline-block;
-  width: 49%;
-  padding-right: 0;
-  font-size: .9rem;
-  min-width: 7rem; // for odd mid-break points, ensure the text doesn't get too small
-}
-.related ul:after { content: " "; height: .5rem; display: block; clear: both; } // a clearfix to show background
-.related ul li a { color: #fff; border-bottom:none; }
-.related ul li a:hover { text-decoration: underline; }
-.related ul li a:after { content: " >"; }
 
 /* button grid */
 // Wrap a groupd of a.button.columns with div.button-grid to make a, you guessed it: grid

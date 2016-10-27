@@ -857,36 +857,35 @@ code {
 
 /* related / popular */
 .related {
-  background: #333;
-  margin-top: 4.25rem; }
-
-.related h3 {
-  color: #fff;
-  background: none;
+  background: #222;
+  margin-top: 4.25rem;
+  color: white;
   padding: .5rem 0 0 1.1rem; }
-
-.related ul li {
-  display: inline-block;
-  width: 49%;
-  padding-right: 0;
-  font-size: .9rem;
-  min-width: 7rem; }
-
-.related ul:after {
-  content: " ";
-  height: .5rem;
-  display: block;
-  clear: both; }
-
-.related ul li a {
-  color: #fff;
-  border-bottom: none; }
-
-.related ul li a:hover {
-  text-decoration: underline; }
-
-.related ul li a:after {
-  content: " >"; }
+  .related h3 {
+    color: white;
+    background: none;
+    margin-bottom: 0; }
+  .related ul {
+    margin-left: 0;
+    margin-top: .25rem; }
+    .related ul li {
+      display: inline-block;
+      width: 49%;
+      padding-right: 0;
+      font-size: .9rem;
+      min-width: 7rem; }
+      .related ul li a {
+        color: white;
+        border-bottom: none; }
+      .related ul li a:hover {
+        text-decoration: underline; }
+      .related ul li a:after {
+        content: " >"; }
+  .related ul:after {
+    content: " ";
+    height: .5rem;
+    display: block;
+    clear: both; }
 
 /* button grid */
 .button-grid a.button.columns {
