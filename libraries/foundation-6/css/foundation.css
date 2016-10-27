@@ -1225,7 +1225,7 @@ h6 {
   h4 small,
   h5 small,
   h6 small {
-    color: #cacaca;
+    color: #999;
     line-height: 0; }
 
 h1 {
@@ -1275,7 +1275,7 @@ hr {
   height: 0;
   border-right: 0;
   border-top: 0;
-  border-bottom: 1px solid #cacaca;
+  border-bottom: 1px solid #999;
   border-left: 0;
   margin: 1.25rem auto;
   clear: both; }
@@ -1310,7 +1310,7 @@ dl {
 blockquote {
   margin: 0 0 1rem;
   padding: 0.5625rem 1.25rem 0 1.1875rem;
-  border-left: 1px solid #cacaca; }
+  border-left: 1px solid #999; }
   blockquote, blockquote p {
     line-height: 1.6;
     color: #8a8a8a; }
@@ -1332,7 +1332,7 @@ code {
   font-weight: normal;
   color: #0a0a0a;
   background-color: #e6e6e6;
-  border: 1px solid #cacaca;
+  border: 1px solid #999;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
 kbd {
@@ -1460,7 +1460,7 @@ textarea {
   width: 100%;
   height: 2.4375rem;
   padding: 0.5rem;
-  border: 1px solid #cacaca;
+  border: 1px solid #999;
   margin: 0 0 1rem;
   font-family: inherit;
   font-size: 1rem;
@@ -1476,7 +1476,7 @@ textarea {
     border: 1px solid #8a8a8a;
     background-color: #fefefe;
     outline: none;
-    box-shadow: 0 0 5px #cacaca;
+    box-shadow: 0 0 5px #999;
     transition: box-shadow 0.5s, border-color 0.25s ease-in-out; }
 
 textarea {
@@ -1486,7 +1486,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  color: #cacaca; }
+  color: #999; }
 
 input:disabled, input[readonly],
 textarea:disabled,
@@ -1563,7 +1563,7 @@ label {
   padding: 0 1rem;
   background: #e6e6e6;
   color: #0a0a0a;
-  border: 1px solid #cacaca;
+  border: 1px solid #999;
   white-space: nowrap;
   width: 1%;
   height: 100%; }
@@ -1600,7 +1600,7 @@ legend {
   max-width: 100%; }
 
 .fieldset {
-  border: 1px solid #cacaca;
+  border: 1px solid #999;
   padding: 1.25rem;
   margin: 1.125rem 0; }
   .fieldset legend {
@@ -1612,7 +1612,7 @@ legend {
 select {
   height: 2.4375rem;
   padding: 0.5rem;
-  border: 1px solid #cacaca;
+  border: 1px solid #999;
   margin: 0 0 1rem;
   font-size: 1rem;
   font-family: inherit;
@@ -1882,7 +1882,7 @@ select {
     cursor: default;
     text-transform: uppercase; }
     .breadcrumbs li:not(:last-child)::after {
-      color: #cacaca;
+      color: #999;
       content: "/";
       margin: 0 0.75rem;
       position: relative;
@@ -1893,7 +1893,7 @@ select {
     .breadcrumbs a:hover {
       text-decoration: underline; }
   .breadcrumbs .disabled {
-    color: #cacaca;
+    color: #999;
     cursor: not-allowed; }
 
 .button-group {
@@ -2155,8 +2155,8 @@ select {
     left: 0;
     box-shadow: 0 7px 0 #fefefe, 0 14px 0 #fefefe; }
   .menu-icon:hover::after {
-    background: #cacaca;
-    box-shadow: 0 7px 0 #cacaca, 0 14px 0 #cacaca; }
+    background: #999;
+    box-shadow: 0 7px 0 #999, 0 14px 0 #999; }
 
 .menu-icon.dark {
   position: relative;
@@ -2233,7 +2233,7 @@ select {
 
 .dropdown-pane {
   background-color: white;
-  border: 1px solid #cacaca;
+  border: 1px solid #999;
   border-radius: 0;
   display: block;
   font-size: 1rem;
@@ -2462,7 +2462,7 @@ select {
   min-width: 200px;
   z-index: 1;
   background: #fefefe;
-  border: 1px solid #cacaca; }
+  border: 1px solid #999; }
   .is-dropdown-submenu .is-dropdown-submenu-parent > a::after {
     right: 14px;
     margin-top: -3px; }
@@ -2716,7 +2716,7 @@ body {
     width: 1.2rem;
     height: 1.2rem;
     margin: 0.1rem;
-    background-color: #cacaca;
+    background-color: #999;
     border-radius: 50%; }
     .orbit-bullets button:hover {
       background-color: #8a8a8a; }
@@ -2757,7 +2757,7 @@ body {
     cursor: default; }
   .pagination .disabled {
     padding: 0.1875rem 0.625rem;
-    color: #cacaca;
+    color: #999;
     cursor: not-allowed; }
     .pagination .disabled:hover {
       background: transparent; }
@@ -2779,7 +2779,7 @@ body {
   margin-left: 0.5rem; }
 
 .progress {
-  background-color: #cacaca;
+  background-color: #999;
   height: 1rem;
   margin-bottom: 1rem;
   border-radius: 0; }
@@ -2830,7 +2830,7 @@ body {
   display: inline-block;
   max-width: 100%;
   height: 0.5rem;
-  background-color: #cacaca;
+  background-color: #999;
   transition: all 0.2s ease-in-out; }
   .slider-fill.is-dragging {
     transition: all 0s linear; }
@@ -2926,7 +2926,7 @@ html.is-reveal-open body {
   display: none;
   z-index: 1006;
   padding: 1rem;
-  border: 1px solid #cacaca;
+  border: 1px solid #999;
   background-color: #fefefe;
   border-radius: 0;
   position: relative;
@@ -3009,7 +3009,7 @@ html.is-reveal-open body {
   margin-bottom: 0; }
 
 .switch-paddle {
-  background: #cacaca;
+  background: #999;
   cursor: pointer;
   display: block;
   position: relative;

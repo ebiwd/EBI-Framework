@@ -118,6 +118,9 @@ div.warning {
 .secondary-background, a.secondary-background, .tag.secondary-background, .button.secondary-background {
   background: #666; }
 
+.medium-gray-background, a.medium-gray-background, .tag.medium-gray-background, .button.medium-gray-background {
+  background: #999; }
+
 .ebi-color, .ebi-color cite, .ebi-color a, .ebi-color a:visited, .ebi-color h3, .ebi-color h4, .label.ebi-color, a.ebi-color, a:hover.ebi-color {
   color: #007c82; }
 
@@ -141,6 +144,9 @@ div.warning {
 
 .secondary-color, .secondary-color cite, .secondary-color a, .secondary-color a:visited, .secondary-color h3, .secondary-color h4, .label.secondary-color, a.secondary-color, a:hover.secondary-color {
   color: #666; }
+
+.medium-gray-color, .medium-gray-color cite, .medium-gray-color a, .medium-gray-color a:visited, .medium-gray-color h3, .medium-gray-color h4, .label.medium-gray-color, a.medium-gray-color, a:hover.medium-gray-color {
+  color: #999; }
 
 /*
     SITE-WIDE MASTHEAD LAYOUT AND SIZE
