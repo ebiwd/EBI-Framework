@@ -88,8 +88,9 @@ a:active {
 .industry-background, a.industry-background, .tag.industry-background, .button.industry-background  { background: $ebi-colour-industry; }
 .elixir-background, a.elixir-background, .tag.elixir-background, .button.elixir-background    { background: $ebi-colour-elixir; }
 .white-background, a.white-background, .tag.white-background, .button.white-background     { background: $ebi-colour-white; }
-.tag.secondary, 
+.tag.secondary,
 .secondary-background, a.secondary-background, .tag.secondary-background, .button.secondary-background { background: $ebi-colour-dark-grey; }
+.medium-gray-background, a.medium-gray-background, .tag.medium-gray-background, .button.medium-gray-background { background: $ebi-colour-medium-grey; }
 
 .ebi-color, .ebi-color cite, .ebi-color a, .ebi-color a:visited, .ebi-color h3, .ebi-color h4, .label.ebi-color, a.ebi-color, a:hover.ebi-color { color: $ebi-colour-petrol; }
 .services-color, .services-color cite, .services-color a, .services-color a:visited, .services-color h3, .services-color h4, .label.services-color, a.services-color, a:hover.services-color { color: $ebi-colour-services; }
@@ -99,6 +100,7 @@ a:active {
 .elixir-color, .elixir-color cite, .elixir-color a, .elixir-color a:visited, .elixir-color h3, .elixir-color h4, .label.elixir-color, a.elixir-color, a:hover.elixir-color { color: $ebi-colour-elixir; }
 .white-color, .white-color cite, .white-color a, .white-color a:visited, .white-color h3, .white-color h4, .label.white-color, a.white-color, a:hover.white-color { color: $ebi-colour-white; }
 .secondary-color, .secondary-color cite, .secondary-color a, .secondary-color a:visited, .secondary-color h3, .secondary-color h4, .label.secondary-color, a.secondary-color, a:hover.secondary-color {color: $ebi-colour-dark-grey;}
+.medium-gray-color, .medium-gray-color cite, .medium-gray-color a, .medium-gray-color a:visited, .medium-gray-color h3, .medium-gray-color h4, .label.medium-gray-color, a.medium-gray-color, a:hover.medium-gray-color {color: $ebi-colour-medium-gray;}
 
   /*
     SITE-WIDE MASTHEAD LAYOUT AND SIZE
