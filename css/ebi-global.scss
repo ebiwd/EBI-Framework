@@ -760,6 +760,7 @@ code { font-size: .95rem; }
 }
 
 /* related / popular */
+// Todo: This should be a mixin...
 .related {
   background: $ebi-colour-dark;
   margin-top: 4.25rem;

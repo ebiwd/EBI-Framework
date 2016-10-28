@@ -34,6 +34,7 @@ a.tag:hover { color: #fff; }
 .tabs-title > a:hover,
 .button.primary:hover,
 .button.primary:focus,
+.button.hover,
 .button:hover,
 .button:focus,
 .button:active { background: rgba(0,124,130,.9); }
