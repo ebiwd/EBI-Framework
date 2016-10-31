@@ -1,5 +1,5 @@
 /* Copyright (c) EMBL-EBI 2016
-   Authors: 
+   Authors:
    Ken Hawkins (khawkins@ebi.ac.uk)
 */
 
@@ -132,9 +132,9 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 (function($) {
 
   // Clearable text inputs
-  // via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text 
+  // via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text
   // -------------
-  function tog(v){return v?'addClass':'removeClass';} 
+  function tog(v){return v?'addClass':'removeClass';}
   $(document).on('input', '.clearable', function(){
     $(this)[tog(this.value)]('x');
   }).on('mousemove', '.x', function( e ){
@@ -157,7 +157,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
         }
         // document.getElementById('embl-dropdown').innerHTML = '';
 
-        var dropdownDiv = document.createElement("div");              
+        var dropdownDiv = document.createElement("div");
         dropdownDiv.innerHTML = '<div id="embl-dropdown" class="dropdown-pane bottom" data-dropdown>' +
                   '<p>EMBL-EBI in Hinxton is one of five EMBL locations across europe.<br/> <a href="//www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
                   '<h6>Connect to another EMBL location</h6>' +
@@ -181,8 +181,8 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
                   '</div>' +
                   '<p><a href="http://embl.org/" class="button readmore">Or learn more about EMBL</a></p>' +
                 '</div>';
-        document.getElementById("global-masthead").appendChild(dropdownDiv);  
-        
+        document.getElementById("global-masthead").appendChild(dropdownDiv);
+
         // invoke the the foundation dropdown
         var options = {closeOnClick: true},
             dropdownEbiMenu = new Foundation.Dropdown($('#embl-dropdown'), options);
@@ -268,8 +268,8 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
       if ( (changeDirection == 'init') || (changeDirection == 'decrease') ) {
         if (localMenuWidthUsed > localMenuWidthAvail) {
           // create dropdown if needed
-          if ($(localMenuClass + ' li.extra-items-menu').length == 0) { 
-            $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');            
+          if ($(localMenuClass + ' li.extra-items-menu').length == 0) {
+            $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
             localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').width();
             // invoke foundation to create dropdown functionality when we add the menu
             var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass));
@@ -282,13 +282,13 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
               $(this).detach().prependTo(localMenuClass + ' li.extra-items-menu ul.menu');
             } // we could break when <= but this should be pretty fast
           });
-        } 
+        }
       }
 
       if (changeDirection == 'increase') {
 
         // does the dropdown exist?
-        if ($(localMenuClass + ' li.extra-items-menu').length > 0) { 
+        if ($(localMenuClass + ' li.extra-items-menu').length > 0) {
 
           // if the menu is shorter than full width, we can perhaps restore some menu items from the dropdown
           var spaceToWorkWith = localMenuWidthAvail - localMenuWidthUsed;
@@ -305,7 +305,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
           }
 
           // if there's just one item left, perhaps we should delete the dropdown menu
-          if ($(localMenuClass + ' li.extra-items-menu li').length == 1) { 
+          if ($(localMenuClass + ' li.extra-items-menu li').length == 1) {
             spaceToWorkWith = spaceToWorkWith + $(localMenuClass + ' li.extra-items-menu').width();
             if (spaceToWorkWith > $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').width()) {
               // ok, we should move item up from dropdwon, this will leave us with 0 items and we'll delete in next if
@@ -313,13 +313,13 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
             }
           }
 
-          if ($(localMenuClass + ' li.extra-items-menu li').length == 0) { 
-            // if the dropdown is empty, destroy the dropdown and remove it 
-            // $(localMenuClass).foundation('destroy'); 
+          if ($(localMenuClass + ' li.extra-items-menu li').length == 0) {
+            // if the dropdown is empty, destroy the dropdown and remove it
+            // $(localMenuClass).foundation('destroy');
             $(localMenuClass + ' li.extra-items-menu').remove();
           }
         }
-      }  
+      }
 
     }
 
