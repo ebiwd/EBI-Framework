@@ -249,11 +249,11 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     // var localMenuClass = '#secondary-menu-links'; // for testing
     // $(localMenuClass).addClass('dropdown'); // for testing
     var localMenuLeftPadding = parseInt($('#local-masthead .masthead > nav ul').css('padding-left')); // account for padding of ul
-    var localMenuWidthAvail = $('#local-masthead .masthead > nav').width() - localMenuLeftPadding;
+    var localMenuWidthAvail = $('#local-masthead .masthead > nav').innerWidth() - localMenuLeftPadding;
 
     function localNavSpilloverMenu(changeDirection) {
       var localMenuWidthUsed = 0;
-      var localMenuRightSideWidth = $('#local-masthead .masthead > nav ul.float-right.menu').width(); // width of any right-side nav, which would change on browser resize
+      var localMenuRightSideWidth = $('#local-masthead .masthead > nav ul.float-right.menu').outerWidth(); // width of any right-side nav, which would change on browser resize
       localMenuRightSideWidth = localMenuRightSideWidth + 5; // padding, eleminate NaN
 
       // Calculate how much space we've used
@@ -270,7 +270,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
           // Create dropdown if needed
           if ($(localMenuClass + ' li.extra-items-menu').length == 0) {
             $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
-            localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').width(); // Account for width of li.extra-items-menu
+            localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').outerWidth(); // Account for width of li.extra-items-menu
             // invoke foundation to create dropdown functionality when we add the menu
             var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass));
           }
@@ -278,7 +278,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
           // loop through each menu item in reverse, and slice off the first as it's the dropdown
           $($(localMenuClass+' > li').get().reverse().slice(1)).each( function() {
             if (localMenuWidthUsed > localMenuWidthAvail) { // do we need to hide more items?
-              localMenuWidthUsed = localMenuWidthUsed - $(this).width();
+              localMenuWidthUsed = localMenuWidthUsed - $(this).outerWidth();
               $(this).detach().prependTo(localMenuClass + ' li.extra-items-menu ul.menu');
             } // we could break when <= but this should be pretty fast
           });
@@ -295,8 +295,9 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
           // as the dropdown menu is the width of longest menu item, it's not practical to get the length of each,
           //   so if the longest item could fit, we'll restore an item
-          while (spaceToWorkWith > $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').width()) {
-            spaceToWorkWith = spaceToWorkWith - $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').width();
+          var spaceRequiredForFirstHiddenChild =  $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').outerWidth();
+          while (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
+            spaceToWorkWith = spaceToWorkWith - spaceRequiredForFirstHiddenChild;
             $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
             if ($(localMenuClass + ' li.extra-items-menu li').length == 1)  {
               // exit if just 1 item left in menu
@@ -304,10 +305,10 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
             }
           }
 
-          // if there's just one item left, perhaps we should delete the dropdown menu
+          // if there's just one item left, see if we should delete the dropdown menu
           if ($(localMenuClass + ' li.extra-items-menu li').length == 1) {
-            spaceToWorkWith = spaceToWorkWith + $(localMenuClass + ' li.extra-items-menu').width();
-            if (spaceToWorkWith > $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').width()) {
+            spaceToWorkWith = spaceToWorkWith + $(localMenuClass + ' li.extra-items-menu').innerWidth();
+            if (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
               // ok, we should move item up from dropdwon, this will leave us with 0 items and we'll delete in next if
               $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
             }
@@ -326,8 +327,9 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     localNavSpilloverMenu('init');
     // re-calc menus on browser change, if it affect width of localMenuWidthAvail
     $(window).resize( function() {
-      var widthChangeAmount = $('#local-masthead .masthead > nav').width() - localMenuWidthAvail;
-      if (widthChangeAmount != 0) localMenuWidthAvail = $('#local-masthead .masthead > nav').width();
+      var snapshot_localMenuWidthAvail = $('#local-masthead .masthead > nav').innerWidth();
+      var widthChangeAmount = snapshot_localMenuWidthAvail - localMenuWidthAvail;
+      if (widthChangeAmount != 0) localMenuWidthAvail = snapshot_localMenuWidthAvail;
       // we look for changes of more than 1 to reduce jitter
       if (widthChangeAmount > 1)  localNavSpilloverMenu('increase');
       if (widthChangeAmount < -1) localNavSpilloverMenu('decrease');
