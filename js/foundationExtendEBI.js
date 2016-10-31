@@ -246,10 +246,10 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     // Clone the local menu into a mobile-only menu
     // -----------
     var localMenuClass = '#local-masthead .masthead > nav ul.dropdown.menu.float-left';
-    // var localMenuClass = '#secondary-menu-links'; // temp for testing
-    // $(localMenuClass).addClass('dropdown'); // temp for testing
     var localMenuWidthAvail = $('#local-masthead .masthead > nav').width();
     // var localMenuWidthTotal = $(localMenuClass).width();
+    // var localMenuClass = '#secondary-menu-links'; // for testing
+    // $(localMenuClass).addClass('dropdown'); // for testing
 
     function localNavSpilloverMenu(changeDirection) {
       var localMenuWidthUsed = 0;
@@ -258,7 +258,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
       // Calculate how much space we've used
       $(localMenuClass+' > li').each( function() {
-        localMenuWidthUsed = localMenuWidthUsed + $(this).width();
+        localMenuWidthUsed = localMenuWidthUsed + $(this).outerWidth();
       });
 
       // account for any float-right menu
@@ -267,10 +267,10 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
       // do we need to make space?
       if ( (changeDirection == 'init') || (changeDirection == 'decrease') ) {
         if (localMenuWidthUsed > localMenuWidthAvail) {
-          // create dropdown if needed
+          // Create dropdown if needed
           if ($(localMenuClass + ' li.extra-items-menu').length == 0) {
             $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
-            localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').width();
+            localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').width(); // Account for width of li.extra-items-menu
             // invoke foundation to create dropdown functionality when we add the menu
             var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass));
           }
