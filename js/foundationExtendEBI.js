@@ -246,9 +246,10 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     // Clone the local menu into a mobile-only menu
     // -----------
     var localMenuClass = '#local-masthead .masthead > nav ul.dropdown.menu.float-left';
-    var localMenuWidthAvail = $('#local-masthead .masthead > nav').width();
     // var localMenuClass = '#secondary-menu-links'; // for testing
     // $(localMenuClass).addClass('dropdown'); // for testing
+    var localMenuLeftPadding = parseInt($('#local-masthead .masthead > nav ul').css('padding-left')); // account for padding of ul
+    var localMenuWidthAvail = $('#local-masthead .masthead > nav').width() - localMenuLeftPadding;
 
     function localNavSpilloverMenu(changeDirection) {
       var localMenuWidthUsed = 0;
