@@ -247,13 +247,12 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     // -----------
     var localMenuClass = '#local-masthead .masthead > nav ul.dropdown.menu.float-left';
     var localMenuWidthAvail = $('#local-masthead .masthead > nav').width();
-    // var localMenuWidthTotal = $(localMenuClass).width();
     // var localMenuClass = '#secondary-menu-links'; // for testing
     // $(localMenuClass).addClass('dropdown'); // for testing
 
     function localNavSpilloverMenu(changeDirection) {
       var localMenuWidthUsed = 0;
-      var localMenuRightSideWidth = $('#local-masthead .masthead > nav ul.float-right.menu').width(); // width of any right-side nav, this could change on browser resize
+      var localMenuRightSideWidth = $('#local-masthead .masthead > nav ul.float-right.menu').width(); // width of any right-side nav, which would change on browser resize
       localMenuRightSideWidth = localMenuRightSideWidth + 5; // padding, eleminate NaN
 
       // Calculate how much space we've used
@@ -261,10 +260,10 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
         localMenuWidthUsed = localMenuWidthUsed + $(this).outerWidth();
       });
 
-      // account for any float-right menu
+      // Account for any float-right menu
       localMenuWidthUsed = localMenuWidthUsed + localMenuRightSideWidth;
 
-      // do we need to make space?
+      // Do we need to make space?
       if ( (changeDirection == 'init') || (changeDirection == 'decrease') ) {
         if (localMenuWidthUsed > localMenuWidthAvail) {
           // Create dropdown if needed
