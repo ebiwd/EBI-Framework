@@ -245,27 +245,23 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
     // Clone the local menu into a mobile-only menu
     // -----------
-    var localMenuClass = '#local-masthead .masthead > nav ul.dropdown.menu.float-left';
+    var localMenuClass = '#local-masthead .masthead > nav > ul.dropdown.menu.float-left';
     // var localMenuClass = '#secondary-menu-links'; // for testing
     // $(localMenuClass).addClass('dropdown'); // for testing
     var localMenuLeftPadding = parseInt($('#local-masthead .masthead > nav ul').css('padding-left')); // account for padding of ul
     var localMenuWidthAvail = $('#local-masthead .masthead > nav').innerWidth() - localMenuLeftPadding;
 
     function localNavSpilloverMenu(changeDirection) {
-      var localMenuWidthUsed = 0;
+      var localMenuWidthUsed = $(localMenuClass).outerWidth(); // how much space is occupied by the ul
       var localMenuRightSideWidth = $('#local-masthead .masthead > nav ul.float-right.menu').outerWidth(); // width of any right-side nav, which would change on browser resize
-      localMenuRightSideWidth = localMenuRightSideWidth + 5; // padding, eleminate NaN
-
-      // Calculate how much space we've used
-      $(localMenuClass+' > li').each( function() {
-        localMenuWidthUsed = localMenuWidthUsed + $(this).outerWidth();
-      });
+      localMenuRightSideWidth = localMenuRightSideWidth + 5; // padding, eleminate NaN if it doesn't exsist
 
       // Account for any float-right menu
       localMenuWidthUsed = localMenuWidthUsed + localMenuRightSideWidth;
 
       // Do we need to make space?
       if ( (changeDirection == 'init') || (changeDirection == 'decrease') ) {
+        console.log(localMenuWidthUsed, localMenuWidthAvail);
         if (localMenuWidthUsed > localMenuWidthAvail) {
           // Create dropdown if needed
           if ($(localMenuClass + ' li.extra-items-menu').length == 0) {
