@@ -193,7 +193,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
     // Link overlay images
     $(function() {
-      $('.with-overlay').click(function(e) {
+      $('.with-overlay').on('click',function(e) {
         var href = $(this).find('a:first').attr('href') || '';
         if (href.length > 0) {
           window.location.href = href;
@@ -216,7 +216,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     // Smooth scroll anchor links for jQuery users
     // -----------
     $(function() {
-      $('a[href*=#]:not([href=#])').click(function() {
+      $('a[href*=\\#]:not([href=\\#])').on('click', function() {
         // Table compatibility
         if ($(this).parent().parent().hasClass('tabs')) {
           return true; //exit
