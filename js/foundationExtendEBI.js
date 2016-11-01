@@ -271,7 +271,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
           // Create dropdown if needed
           if ($(localMenuClass + ' li.extra-items-menu').length == 0) {
             $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
-            localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' li.extra-items-menu').outerWidth(); // Account for width of li.extra-items-menu
+            localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' > li.extra-items-menu').outerWidth(); // Account for width of li.extra-items-menu
             // invoke foundation to create dropdown functionality when we add the menu
             var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass));
           }
@@ -280,7 +280,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
           $($(localMenuClass+' > li').get().reverse().slice(1)).each( function() {
             if (localMenuWidthUsed > localMenuWidthAvail) { // do we need to hide more items?
               localMenuWidthUsed = localMenuWidthUsed - $(this).outerWidth();
-              $(this).detach().prependTo(localMenuClass + ' li.extra-items-menu ul.menu');
+              $(this).detach().prependTo(localMenuClass + ' > li.extra-items-menu > ul.menu');
             } // we could break when <= but this should be pretty fast
           });
         }
@@ -296,11 +296,11 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
           // as the dropdown menu is the width of longest menu item, it's not practical to get the length of each,
           //   so if the longest item could fit, we'll restore an item
-          var spaceRequiredForFirstHiddenChild =  $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').outerWidth();
+          var spaceRequiredForFirstHiddenChild =  $(localMenuClass+' li.extra-items-menu > ul.menu > li:first-child').outerWidth();
           while (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
             spaceToWorkWith = spaceToWorkWith - spaceRequiredForFirstHiddenChild;
-            $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
-            if ($(localMenuClass + ' li.extra-items-menu li').length == 1)  {
+            $(localMenuClass+' li.extra-items-menu > ul.menu > li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
+            if ($(localMenuClass + ' > li.extra-items-menu > ul > li').length == 1)  {
               // exit if just 1 item left in menu
               break;
             }
