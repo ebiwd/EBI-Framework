@@ -252,9 +252,15 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     var localMenuWidthAvail = $('#local-masthead .masthead > nav').innerWidth() - localMenuLeftPadding;
 
     function localNavSpilloverMenu(changeDirection) {
-      var localMenuWidthUsed = $(localMenuClass).outerWidth(); // how much space is occupied by the ul
+      var localMenuWidthUsed = 0; // Track how much space is occupied by the ul
       var localMenuRightSideWidth = $('#local-masthead .masthead > nav ul.float-right.menu').outerWidth(); // width of any right-side nav, which would change on browser resize
       localMenuRightSideWidth = localMenuRightSideWidth + 1; // padding, eleminate NaN if it doesn't exsist
+
+      // Calculate how much space we've used
+      // We calculate each li and not the parent ul as some teams may make the ul 100% wide
+      $(localMenuClass+' > li').each( function() {
+        localMenuWidthUsed = localMenuWidthUsed + $(this).outerWidth();   
+      });   
 
       // Account for any float-right menu
       localMenuWidthUsed = localMenuWidthUsed + localMenuRightSideWidth;
