@@ -1,3 +1,6 @@
+# Release date approaching
+Teams have been testing and building with the new framework for 2 months and changes are falling ever more in the optimisation category. A stable release is planned for the next Web Guidelines Committee on 6 December.
+
 # EBI-Framework
 
 This, the EBI Visual Framework, is the successor to the current EBI Compliance Theme and is targeted for an autumn 2016 release.
