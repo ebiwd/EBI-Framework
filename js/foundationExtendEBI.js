@@ -267,6 +267,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
       // Create dropdown if needed
       if ($(localMenuClass + ' li.extra-items-menu').length == 0) {
+        // responsiveMenuSubMenuBugFix: see https://github.com/ebiwd/EBI-Framework/issues/50
         var responsiveMenuSubMenuBugFix = '<li class="bug-fix-placeholder" style="display:none !important;"><a href="#">A workaround</a> <ul class="menu"> <li><a href="#">for a bug where the dropdown menu fails sometimes unless there are two submenus in the submenu</a></li></ul>  </li>';
         $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu">'+responsiveMenuSubMenuBugFix+'</ul></li>');
         // $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
