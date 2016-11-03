@@ -265,15 +265,20 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
       // Account for any float-right menu
       localMenuWidthUsed = localMenuWidthUsed + localMenuRightSideWidth;
 
+      // Create dropdown if needed
+      if ($(localMenuClass + ' li.extra-items-menu').length == 0) {
+        $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
+        localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' > li.extra-items-menu').outerWidth(); // Account for width of li.extra-items-menu
+        // invoke foundation to create dropdown functionality when we add the menu
+        var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass));
+      }
+
       // Do we need to make space?
       if ( (changeDirection == 'init') || (changeDirection == 'decrease') ) {
         if (localMenuWidthUsed > localMenuWidthAvail) {
-          // Create dropdown if needed
-          if ($(localMenuClass + ' li.extra-items-menu').length == 0) {
-            $(localMenuClass).append('<li class="extra-items-menu"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
-            localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' > li.extra-items-menu').outerWidth(); // Account for width of li.extra-items-menu
-            // invoke foundation to create dropdown functionality when we add the menu
-            var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass));
+          // show dropdown, if hidden 
+          if ($(localMenuClass + ' li.extra-items-menu:visible').length == 0) {
+            $(localMenuClass + ' li.extra-items-menu').show();
           }
 
           // loop through each menu item in reverse, and slice off the first as it's the dropdown
@@ -289,7 +294,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
       if (changeDirection == 'increase') {
 
         // does the dropdown exist?
-        if ($(localMenuClass + ' li.extra-items-menu').length > 0) {
+        if ($(localMenuClass + ' li.extra-items-menu:visible').length > 0) {
 
           // if the menu is shorter than full width, we can perhaps restore some menu items from the dropdown
           var spaceToWorkWith = localMenuWidthAvail - localMenuWidthUsed;
@@ -300,7 +305,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
           while (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
             spaceToWorkWith = spaceToWorkWith - spaceRequiredForFirstHiddenChild;
             $(localMenuClass+' li.extra-items-menu > ul.menu > li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
-            if ($(localMenuClass + ' > li.extra-items-menu > ul > li').length == 1)  {
+            if ($(localMenuClass + ' > li.extra-items-menu > ul > li:visible').length == 1)  {
               // exit if just 1 item left in menu
               break;
             }
@@ -315,10 +320,9 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
             }
           }
 
-          if ($(localMenuClass + ' li.extra-items-menu li').length == 0) {
-            // if the dropdown is empty, destroy the dropdown and remove it
-            // $(localMenuClass).foundation('destroy');
-            $(localMenuClass + ' li.extra-items-menu').remove();
+          if ($(localMenuClass + ' li.extra-items-menu > ul > li').length == 0) {
+            // if the dropdown has no visible items, hide it
+            $(localMenuClass + ' li.extra-items-menu').hide();
           }
         }
       }
