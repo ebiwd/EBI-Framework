@@ -258,7 +258,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
       // Calculate how much space we've used
       // We calculate each li and not the parent ul as some teams may make the ul 100% wide
-      $(localMenuClass+' > li').each( function() {
+      $(localMenuClass+' > li:not(".bug-fix-placeholder")').each( function() {
         localMenuWidthUsed = localMenuWidthUsed + $(this).outerWidth();   
       });   
 
@@ -267,7 +267,9 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
       // Create dropdown if needed
       if ($(localMenuClass + ' li.extra-items-menu').length == 0) {
-        $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
+        var responsiveMenuSubMenuBugFix = '<li class="bug-fix-placeholder" style="display:none !important;"><a href="#">A workaround</a> <ul class="menu"> <li><a href="#">for a bug where the dropdown menu fails sometimes unless there are two submenus in the submenu</a></li></ul>  </li>';
+        $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu">'+responsiveMenuSubMenuBugFix+'</ul></li>');
+        // $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
         localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' > li.extra-items-menu').outerWidth(); // Account for width of li.extra-items-menu
         // invoke foundation to create dropdown functionality when we add the menu
         var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass));
@@ -294,36 +296,35 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
       if (changeDirection == 'increase') {
 
         // does the dropdown exist?
-        if ($(localMenuClass + ' li.extra-items-menu:visible').length > 0) {
+        if ($(localMenuClass + ' li.extra-items-menu:visible').length == 1) {
 
           // if the menu is shorter than full width, we can perhaps restore some menu items from the dropdown
           var spaceToWorkWith = localMenuWidthAvail - localMenuWidthUsed;
 
           // as the dropdown menu is the width of longest menu item, it's not practical to get the length of each,
           //   so if the longest item could fit, we'll restore an item
-          var spaceRequiredForFirstHiddenChild =  $(localMenuClass+' li.extra-items-menu > ul.menu > li:first-child').outerWidth();
+          var spaceRequiredForFirstHiddenChild =  $(localMenuClass+' > li.extra-items-menu > ul.menu > li:first-child').outerWidth();
           while (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
             spaceToWorkWith = spaceToWorkWith - spaceRequiredForFirstHiddenChild;
-            $(localMenuClass+' li.extra-items-menu > ul.menu > li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
-            if ($(localMenuClass + ' > li.extra-items-menu > ul > li:visible').length == 1)  {
-              // exit if just 1 item left in menu
+            $(localMenuClass+' > li.extra-items-menu > ul.menu > li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
+            if ($(localMenuClass + ' > li.extra-items-menu > ul.menu > li:not(".bug-fix-placeholder")').length == 0)  {
+              // if the dropdown has no visible items, hide it
+              $(localMenuClass + ' li.extra-items-menu').hide();
               break;
             }
           }
 
-          // if there's just one item left, see if we should delete the dropdown menu
-          if ($(localMenuClass + ' li.extra-items-menu li').length == 1) {
-            spaceToWorkWith = spaceToWorkWith + $(localMenuClass + ' li.extra-items-menu').innerWidth();
-            if (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
-              // ok, we should move item up from dropdwon, this will leave us with 0 items and we'll delete in next if
-              $(localMenuClass+' li.extra-items-menu ul.menu li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
-            }
-          }
+          // if there's no or just one item left, see if we should not count the width of the dropdown menu
+          // if ($(localMenuClass + ' li.extra-items-menu > ul > li:not(".bug-fix-placeholder")').length == 1) {
+          //   spaceToWorkWith = spaceToWorkWith + $(localMenuClass + ' > li.extra-items-menu').innerWidth();
+          //   if (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
+          //     // ok, we should move last item up from dropdwon, this will leave us with 0 items 
+          //     $(localMenuClass+' > li.extra-items-menu > ul.menu > li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
+          //     // if the dropdown has no visible items, hide it
+          //     $(localMenuClass + ' li.extra-items-menu').hide();
+          //   }
+          // }
 
-          if ($(localMenuClass + ' li.extra-items-menu > ul > li').length == 0) {
-            // if the dropdown has no visible items, hide it
-            $(localMenuClass + ' li.extra-items-menu').hide();
-          }
         }
       }
 
