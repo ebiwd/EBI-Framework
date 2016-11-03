@@ -1114,11 +1114,9 @@ table.no-stripe tbody tr:nth-child(even) {
 
 /* wide screen support */
 @media screen and (min-width: 40em) {
-  body.full-width .row {
-    max-width: 99%;
-    min-width: 1000px; }
+  body.full-width .row,
   body.full-width .row .row {
-    max-width: 100%; } }
+    max-width: 150rem; } }
 
 /* tag */
 a.tag {
