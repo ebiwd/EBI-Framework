@@ -63,6 +63,7 @@
 // Global variables and styles
 @import 'libraries/foundation-6/scss/global';
 @import 'css/ebi-global-includes/ebi_theme_settings'; // override foundation with EBI styling
+@import 'css/ebi-global-includes/badge'; // custom badge class
 // if you wish to specify your own service defaults...
 // @import 'css/ebi-gloabl-includes/ebi_foundation_overides';
 
@@ -76,7 +77,7 @@
 @import 'libraries/foundation-6/scss/components/button-group';
 @import 'libraries/foundation-6/scss/components/accordion-menu';
 @import 'libraries/foundation-6/scss/components/accordion';
-@import 'libraries/foundation-6/scss/components/badge';
+// @import 'libraries/foundation-6/scss/components/badge'; // EBI override to remove sizing spec
 @import 'libraries/foundation-6/scss/components/breadcrumbs';
 @import 'libraries/foundation-6/scss/components/callout';
 @import 'libraries/foundation-6/scss/components/close-button';
@@ -279,7 +280,7 @@ $badge-background: $primary-color;
 $badge-color: foreground($badge-background);
 $badge-padding: 0.3em;
 $badge-minwidth: 2.1em;
-$badge-font-size: inherit;
+// $badge-font-size: 0.6rem; // Depreciated
 
 // 10. Breadcrumbs
 // ---------------
