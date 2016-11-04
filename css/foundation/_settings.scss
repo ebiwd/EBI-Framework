@@ -279,7 +279,7 @@ $badge-background: $primary-color;
 $badge-color: foreground($badge-background);
 $badge-padding: 0.3em;
 $badge-minwidth: 2.1em;
-$badge-font-size: 0.6rem;
+$badge-font-size: inherit;
 
 // 10. Breadcrumbs
 // ---------------
