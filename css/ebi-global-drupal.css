@@ -33,6 +33,8 @@ body .form-actions.form-wrapper button {
   }
 
 input[type="checkbox"], input[type="radio"] { vertical-align: text-top; }
+/* no padding on facet checkboxes */
+.form-type-checkboxes input[type="checkbox"] { vertical-align: middle; margin-bottom: 0; }
 
 /* Misc */
 #panels-edit-display-form h2.label { background: none; }
