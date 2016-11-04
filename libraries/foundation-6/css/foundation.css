@@ -1849,7 +1849,7 @@ select {
   display: inline-block;
   padding: 0.3em;
   min-width: 2.1em;
-  font-size: 0.6rem;
+  font-size: inherit;
   text-align: center;
   border-radius: 50%;
   background: #007c82;
