@@ -140,6 +140,9 @@ a:active {
     #local-masthead nav ul#global-nav.menu li#home-mobile { display: none; }
   }
 
+  /* Disable global-masthead search when told */
+  body.no-global-search #global-masthead ul#global-nav li#search { display: none; }
+
   #global-masthead {
     ul#global-nav li a:hover,
     ul#global-nav li a:active,
