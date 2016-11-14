@@ -79,6 +79,19 @@
     catch(err) {}
   })();
 
+  // disable the global search if a page defines a local search
+  // can also be disable by adding class 'no-global-search' to the body element
+  (function manageGlobalSearch() {
+    try {
+      var hasLocalSearch = document.getElementById('local-search') !== null;
+      var hasLocalEBISearch = document.getElementById('ebi_search') !== null;
+      if (hasLocalSearch || hasLocalEBISearch) {
+        document.body.className += ' no-global-search';
+      }
+    }
+    catch (err) {}
+  })();
+
   // Add error alerts for 'no input' on search boxes
   (function searchNullError() {
     try {

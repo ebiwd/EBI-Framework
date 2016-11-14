@@ -187,6 +187,10 @@ nav a:hover {
   #local-masthead nav ul#global-nav.menu li#home-mobile {
     display: none; } }
 
+/* Disable global-masthead search when told */
+body.no-global-search #global-masthead ul#global-nav li#search {
+  display: none; }
+
 #global-masthead {
   /* custom colour for Home */
   /* custom colour for Services */
