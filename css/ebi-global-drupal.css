@@ -85,7 +85,7 @@ div.warning {
 /* Do not show default page title on panel pages */
 body.page-node h2#page-title { display: none; }
 /* But show for revisions */
-body.page-node.page-node-revisions h2#page-title { display: none; } 
+body.page-node.page-node-revisions h2#page-title { display: block; } 
 
 /* Allow showing of drupal status messages statically */
 body.is-reveal-open #status-messages.static {
