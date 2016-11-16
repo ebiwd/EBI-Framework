@@ -2,6 +2,7 @@
 @import 'ebi-global-includes/ebi_theme_settings'; // default EBI styling
 // @import 'ebi-gloabl-includes/ebi_foundation_overides';
 @import 'ebi-global-includes/tag'; // custom tag class
+@import 'ebi-global-includes/lite_tweaks';
 
 // This code is the EBI layer atop the Foundation base styling
 
@@ -918,3 +919,6 @@ dl dt {
   a { border-bottom: none; color: $ebi-colour-dark-grey; }
   a:hover { border-bottom: 1px dotted; }
 }
+
+/* lite version tweaks */
+@include lite-tweaks;

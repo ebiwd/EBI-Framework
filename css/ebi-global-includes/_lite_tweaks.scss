@@ -1,0 +1,9 @@
+
+////
+/// @lite_tweaks
+/// Modification to work better in lite mode
+////
+
+@mixin lite-tweaks {
+  a { text-decoration: none; }
+}
