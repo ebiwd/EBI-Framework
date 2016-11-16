@@ -648,8 +648,8 @@ $use-animations: false;
   @else {
     @include foundation-flex-grid;
   }
-  @include foundation-typography;
-  @include foundation-forms;
+  // @include foundation-typography;
+  // @include foundation-forms;
   @include foundation-button;
   @include foundation-accordion;
   @include foundation-accordion-menu;
@@ -660,33 +660,33 @@ $use-animations: false;
   @include foundation-close-button;
   @include foundation-menu;
   @include foundation-menu-icon;
-  @include foundation-drilldown-menu;
+  // @include foundation-drilldown-menu;
   @include foundation-dropdown;
   @include foundation-dropdown-menu;
-  @include foundation-flex-video;
+  // @include foundation-flex-video;
   @include foundation-label;
-  @include foundation-media-object;
-  @include foundation-off-canvas;
-  @include foundation-orbit;
+  // @include foundation-media-object;
+  // @include foundation-off-canvas;
+  // @include foundation-orbit;
   @include foundation-pagination;
   @include foundation-progress-bar;
-  @include foundation-slider;
-  @include foundation-sticky;
-  @include foundation-reveal;
-  @include foundation-switch;
-  @include foundation-table;
-  @include foundation-tabs;
+  // @include foundation-slider;
+  // @include foundation-sticky;
+  // @include foundation-reveal;
+  // @include foundation-switch;
+  // @include foundation-table;
+  // @include foundation-tabs;
   @include foundation-thumbnail;
-  @include foundation-title-bar;
-  @include foundation-tooltip;
-  @include foundation-top-bar;
+  // @include foundation-title-bar;
+  // @include foundation-tooltip;
+  // @include foundation-top-bar;
   @include foundation-visibility-classes;
   @include foundation-float-classes;
 
-  @if $use-animations {
-    @include motion-ui-transitions;
-    @include motion-ui-animations;
-  }
+  // @if $use-animations {
+  //   @include motion-ui-transitions;
+  //   @include motion-ui-animations;
+  // }
 
   @if $flex {
     @include foundation-flex-classes;
