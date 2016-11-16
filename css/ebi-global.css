@@ -1125,3 +1125,7 @@ dl dt {
     color: #666; }
   dl dt a:hover {
     border-bottom: 1px dotted; }
+
+/* lite version tweaks */
+a {
+  text-decoration: none; }
