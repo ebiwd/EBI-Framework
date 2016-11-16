@@ -1,3 +1,7 @@
+# NOTE!
+
+This is currently in active development and testing. Please consult web development if you are interested, it is very likely to change!
+
 # EBI-Framework Lite version
 
 This is trimmed version of the [EBI Visual Framework v1.1](https://github.com/ebiwd/EBI-Framework).
@@ -12,6 +16,22 @@ Homed here are the various assets that make the EBI Visual Framework (CSS, JS, a
 
 Start by seeing the documentation for the main release: https://github.com/ebiwd/EBI-Framework
 
+_Sample boilerplate page to come_
+
 ### What's different
 
-To come.
+- The Foundation Framework has been much trimmed (by roughly 1,300 lines or 30%), removed:
+  - Forms
+  - Tables
+  - Typography
+  - A plethora of components
+- Foundation JS
+  - No dropdown menu
+  - Removal of EMBL-EBI dropdown nicities
+- foundationExtendEBI.js has been emptied, that means:
+  - No value add scripts for responsive tables, filtering
+  - Google Analytics bonuses
+  - Drop down menu polishing, scrolling, etc.
+- jQuery is not used by default
+
+Still working are the basic colour palettes, layout, and responsive components.
