@@ -46,7 +46,9 @@ class Interchange {
    * @private
    */
   _events() {
-    $(window).on('resize.zf.interchange', Foundation.util.throttle(this._reflow.bind(this), 50));
+    $(window).on('resize.zf.interchange', Foundation.util.throttle(() => {
+      this._reflow();
+    }, 50));
   }
 
   /**
@@ -61,7 +63,6 @@ class Interchange {
     for (var i in this.rules) {
       if(this.rules.hasOwnProperty(i)) {
         var rule = this.rules[i];
-
         if (window.matchMedia(rule.query).matches) {
           match = rule;
         }
@@ -139,7 +140,7 @@ class Interchange {
 
     // Replacing images
     if (this.$element[0].nodeName === 'IMG') {
-      this.$element.attr('src', path).load(function() {
+      this.$element.attr('src', path).on('load', function() {
         _this.currentPath = path;
       })
       .trigger(trigger);

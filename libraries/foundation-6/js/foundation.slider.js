@@ -175,7 +175,7 @@ class Slider {
         var handlePos = parseFloat(this.$handle[0].style[lOrT]);
         //calculate the new min-height/width for the fill bar. Use isNaN to prevent false positives for numbers <= 0
         //based on the percentage of movement of the handle being manipulated, less the opposing handle's left/top position, plus the percentage w/h of the handle itself
-        dim = movement - (isNaN(handlePos) ? this.options.initialStart/((this.options.end-this.options.start)/100) : handlePos) + handlePct;
+        dim = movement - (isNaN(handlePos) ? (this.options.initialStart - this.options.start)/((this.options.end-this.options.start)/100) : handlePos) + handlePct;
       }
       // assign the min-height/width to our css object
       css[`min-${hOrW}`] = `${dim}%`;
@@ -204,6 +204,7 @@ class Slider {
         _this.$fill.css(css);
       }
     });
+
 
     /**
      * Fires when the value has not been change for a given time.
@@ -292,7 +293,7 @@ class Slider {
       } else {
         barXY = eventFromBar;
       }
-      offsetPct = percent(barXY, barDim);
+      var offsetPct = percent(barXY, barDim);
 
       value = (this.options.end - this.options.start) * offsetPct + this.options.start;
 
@@ -447,6 +448,8 @@ class Slider {
     this.handles.off('.zf.slider');
     this.inputs.off('.zf.slider');
     this.$element.off('.zf.slider');
+
+    clearTimeout(this.timeout);
 
     Foundation.unregisterPlugin(this);
   }

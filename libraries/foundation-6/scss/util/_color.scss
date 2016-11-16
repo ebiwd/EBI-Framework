@@ -26,7 +26,7 @@
   }
 }
 
-/// Scales a color to be lighter if it's light, or darker if it's dark. Use this function to tint a color appropriate to its lightness.
+/// Scales a color to be darker if it's light, or lighter if it's dark. Use this function to tint a color appropriate to its lightness.
 ///
 /// @param {Color} $color - Color to scale.
 /// @param {Percentage} $scale [5%] - Amount to scale up or down.
@@ -38,6 +38,19 @@
     $scale: -$scale;
   }
   @return scale-color($color, $lightness: $scale);
+}
+
+/// Get color from foundation-palette
+///
+/// @param {key} color key from foundation-palette
+///
+/// @returns {Color} color from foundation-palette
+@function get-color($key) {
+  @if map-has-key($foundation-palette, $key) {
+    @return map-get($foundation-palette, $key);
+  } @else {
+    @error 'given $key is not available in $foundation-palette';
+  }
 }
 
 /// Transfers the colors in the `$foundation-palette` variable into the legacy color variables, such as `$primary-color` and `$secondary-color`. Call this mixin below the Global section of your settings file to properly migrate your codebase.
