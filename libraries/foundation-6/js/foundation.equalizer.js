@@ -5,6 +5,8 @@
 /**
  * Equalizer module.
  * @module foundation.equalizer
+ * @requires foundation.util.mediaQuery
+ * @requires foundation.util.timerAndImageLoader if equalizer contains images
  */
 
 class Equalizer {
@@ -34,6 +36,7 @@ class Equalizer {
 
     this.$watched = $watched.length ? $watched : this.$element.find('[data-equalizer-watch]');
     this.$element.attr('data-resize', (eqId || Foundation.GetYoDigits(6, 'eq')));
+	this.$element.attr('data-mutate', (eqId || Foundation.GetYoDigits(6, 'eq')));
 
     this.hasNested = this.$element.find('[data-equalizer]').length > 0;
     this.isNested = this.$element.parentsUntil(document.body, '[data-equalizer]').length > 0;
@@ -68,7 +71,8 @@ class Equalizer {
     this.isOn = false;
     this.$element.off({
       '.zf.equalizer': this._bindHandler.onPostEqualizedBound,
-      'resizeme.zf.trigger': this._bindHandler.onResizeMeBound
+      'resizeme.zf.trigger': this._bindHandler.onResizeMeBound,
+	  'mutateme.zf.trigger': this._bindHandler.onResizeMeBound
     });
   }
 
@@ -99,6 +103,7 @@ class Equalizer {
       this.$element.on('postequalized.zf.equalizer', this._bindHandler.onPostEqualizedBound);
     }else{
       this.$element.on('resizeme.zf.trigger', this._bindHandler.onResizeMeBound);
+	  this.$element.on('mutateme.zf.trigger', this._bindHandler.onResizeMeBound);
     }
     this.isOn = true;
   }
@@ -108,7 +113,7 @@ class Equalizer {
    * @private
    */
   _checkMQ() {
-    var tooSmall = !Foundation.MediaQuery.atLeast(this.options.equalizeOn);
+    var tooSmall = !Foundation.MediaQuery.is(this.options.equalizeOn);
     if(tooSmall){
       if(this.isOn){
         this._pauseEvents();
@@ -153,6 +158,9 @@ class Equalizer {
    * @private
    */
   _isStacked() {
+    if (!this.$watched[0] || !this.$watched[1]) {
+      return true;
+    }
     return this.$watched[0].getBoundingClientRect().top !== this.$watched[1].getBoundingClientRect().top;
   }
 

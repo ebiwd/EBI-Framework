@@ -85,9 +85,9 @@ dropdown_menu:
 
 equalizer:
   js: equalizer
-
-flex_video:
-  sass: flex-video
+  js_utils:
+    - mediaQuery
+    - timerAndImageLoader
 
 interchange:
   js: interchange
@@ -133,6 +133,9 @@ progress_bar:
 
 progress_element:
   sass: progress-element
+
+responsive_embed:
+  sass: responsive-embed
 
 responsive_menu:
   js: responsiveMenu
