@@ -609,6 +609,9 @@ body .breadcrumbs a {
 /*
     GLOBAL FOOTER
   ================================ */
+footer a, footer a:visited {
+  color: #666; }
+
 #global-footer {
   border-top: 5px solid #eee;
   padding-top: .5rem; }
