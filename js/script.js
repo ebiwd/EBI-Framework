@@ -79,20 +79,41 @@
     catch(err) {}
   })();
 
-  // disable the global search if a page defines a local search
-  // can also be disable by adding class 'no-global-search' to the body element
+  // Disable the global search if a page defines a local search.
+  // Can also be disable by adding class 'no-global-search' to the body element.
   (function manageGlobalSearch() {
     try {
       var hasLocalSearch = document.getElementById('local-search') !== null;
       var hasLocalEBISearch = document.getElementById('ebi_search') !== null;
       if (hasLocalSearch || hasLocalEBISearch) {
         document.body.className += ' no-global-search';
+      } else {
+        // If the page gets a global search, we specify how the dropdown box should be. #RespectMyAuthoriti
+        var html = '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="large-8 large-push-2">' +
+                      '<fieldset>' +
+                        '<div class="input-group">' +
+                          '<input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">' +
+                          '<div class="input-group-button">' +
+                            '<input type="submit" name="submit" value="Search" class="button">' +
+                            '<input type="hidden" name="db" value="allebi" checked="checked">' +
+                            '<input type="hidden" name="requestFrom" value="global-masthead" checked="checked">' +
+                          '</div>' +
+                        '</div>' +
+                      '</fieldset> ' +
+                    '</form>';
+
+        try {
+          var gloablSearch = document.getElementById('search-global-dropdown');
+          gloablSearch.innerHTML = html;
+        } catch (err) {
+          setTimeout(init, 500);
+        }
       }
     }
     catch (err) {}
   })();
 
-  // Add error alerts for 'no input' on search boxes
+  // Add error alerts for 'no input' on search boxes.
   (function searchNullError() {
     try {
       var disabled = document.body.className.indexOf('no-search-error') !== -1;
