@@ -577,7 +577,7 @@ body .breadcrumbs a {
 .embl-selector .button:hover {
   background-color: #888; }
 
-.embl-selector .button::after {
+.embl-selector .button[aria-expanded="false"]::after {
   content: '';
   display: block;
   width: 0;
