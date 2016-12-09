@@ -504,7 +504,7 @@ a:active {
     }
     .button.hover,
     .button:hover { background-color: #888; }
-    .button::after {
+    .button[aria-expanded="false"]::after {
       content: '';
       display: block;
       width: 0;
