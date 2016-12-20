@@ -1,11 +1,9 @@
-# Release date approaching
-Teams have been testing and building with the new framework for 2 months and changes are falling ever more in the optimisation category. A stable release is planned for the next Web Guidelines Committee on 6 December.
+# Framework v1.1 now stable
+At the (6 December Web Guidelines Committee meeting)[https://www.ebi.ac.uk/seqdb/confluence/display/WGC/2016-12-06+Meeting+notes] the EBI Visual Framework v1.1 became "stable". Edits will now focus on bug fixing, the pattern library, and planning for a (1.2 release in summer 2017)[https://github.com/ebiwd/EBI-Framework/milestone/2].
 
 # EBI-Framework
 
-This, the EBI Visual Framework, is the successor to the current EBI Compliance Theme and is targeted for an autumn 2016 release.
-
-Homed here are the various assets that make the EBI Visual Framewok (CSS, JS, and a few images and build scripts).
+This, the EBI Visual Framework, is the successor to the current EBI Compliance Theme. Homed here are the various assets that make the EBI Visual Framewok (CSS, JS, and a few images and build scripts).
 
 ## Where do I start? How do I use this?
 
