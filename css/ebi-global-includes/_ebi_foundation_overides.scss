@@ -1,1 +1,9 @@
-// Nothing yet
+// Generates base styles for a tag.
+@mixin ebi-foundation-overides {
+  // Resolve display of native dropdowns in FF and Safari
+  // https://github.com/ebiwd/EBI-Framework/issues/58
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+}

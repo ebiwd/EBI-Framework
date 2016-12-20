@@ -3244,3 +3244,7 @@ a.thumbnail {
 
 .clearfix::after {
   clear: both; }
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
