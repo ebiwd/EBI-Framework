@@ -1,5 +1,5 @@
 # Framework v1.1 now stable
-At the (6 December Web Guidelines Committee meeting)[https://www.ebi.ac.uk/seqdb/confluence/display/WGC/2016-12-06+Meeting+notes] the EBI Visual Framework v1.1 became "stable". Edits will now focus on bug fixing, the pattern library, and planning for a (1.2 release in summer 2017)[https://github.com/ebiwd/EBI-Framework/milestone/2].
+At the [6 December Web Guidelines Committee meeting](https://www.ebi.ac.uk/seqdb/confluence/display/WGC/2016-12-06+Meeting+notes) the EBI Visual Framework v1.1 became "stable". Edits will now focus on bug fixing, the pattern library, and planning for a [1.2 release in summer 2017](https://github.com/ebiwd/EBI-Framework/milestone/2).
 
 # EBI-Framework
 
