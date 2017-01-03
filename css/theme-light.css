@@ -1,0 +1,60 @@
+/*
+  Colour palette: Light
+  This theme is based off theme-embl-petrol.css but notably adds the section:
+  "white on light masthead stlying"
+  to allow for a local-masthead menu that is dark text on white.
+  For more background, see: https://github.com/ebiwd/EBI-Framework/issues/34
+*/
+
+
+a {
+  color: #222;
+}
+
+dl dt a,
+a.label,
+.label,
+a:hover,
+a:focus,
+a:active {
+  color: rgb(0,124,130);
+}
+
+h1 { color: #666; }
+h2 { color: rgb(0,124,130); }
+h3 { color: #444444; }
+
+a.special { background-color: #7cd17c; }
+
+.menu .active > a,
+.tag,
+.tabs-title > a:hover
+.button,
+.button.primary {
+  background-color: rgb(0,124,130);
+}
+a.tag:hover { color: #fff; }
+
+.tabs-title > a:hover,
+.button.primary:hover,
+.button.primary:focus,
+.button.hover,
+.button:hover,
+.button:focus,
+.button:active { background: rgba(0,124,130,.9); }
+
+.tabs-title > a:focus,
+.tabs-title > a[aria-selected='true'] {
+  color: #fff;
+  background: #666; }
+
+div#local-masthead {background-color: #eee;}
+
+/* white on light masthead stlying */
+#local-masthead nav ul.menu li { border-right-color: #EEE; }
+#local-masthead h1, #local-masthead h4, #local-masthead p, #local-masthead a,
+#local-masthead .masthead .menu > li > a { color: #666; }
+#local-masthead .masthead .menu > li > a:hover { color: rgb(0,124,130); }
+#local-masthead .masthead .menu > li.active-trail > a { background: rgb(0,124,130);; color: #fff }
+
+/* end */
