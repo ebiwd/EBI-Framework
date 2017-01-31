@@ -47,7 +47,7 @@
 
 /**
  * Foundation for Sites by ZURB
- * Version 6.2.4
+ * Version 6.3.0
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
@@ -65,6 +65,16 @@
 @import 'css/ebi-global-includes/ebi_theme_settings'; // override foundation with EBI styling
 @import 'css/ebi-global-includes/badge'; // custom badge class
 @import 'css/ebi-global-includes/ebi_foundation_overides';
+
+// Include Foundation dependencies in the build
+// Via: https://github.com/zurb/foundation-sites/issues/9467#issuecomment-267598540
+@import "libraries/foundation-6/_vendor/normalize-scss/sass/normalize";
+@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/helpers/true';
+@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/functions/purge';
+@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/functions/remove';
+@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/functions/replace';
+@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/functions/to-list';
 
 // Components
 @import 'libraries/foundation-6/scss/grid/grid';
@@ -84,7 +94,7 @@
 @import 'libraries/foundation-6/scss/components/dropdown-menu';
 @import 'libraries/foundation-6/scss/components/dropdown';
 @import 'libraries/foundation-6/scss/components/flex';
-@import 'libraries/foundation-6/scss/components/flex-video';
+@import 'libraries/foundation-6/scss/components/responsive-embed';
 @import 'libraries/foundation-6/scss/components/label';
 @import 'libraries/foundation-6/scss/components/media-object';
 @import 'libraries/foundation-6/scss/components/menu';
@@ -662,7 +672,7 @@ $use-animations: false;
   @include foundation-drilldown-menu;
   @include foundation-dropdown;
   @include foundation-dropdown-menu;
-  @include foundation-flex-video;
+  @include foundation-responsive-embed;
   @include foundation-label;
   @include foundation-media-object;
   @include foundation-off-canvas;
