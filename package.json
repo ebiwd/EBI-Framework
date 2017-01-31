@@ -12,21 +12,29 @@
   "version": "1.1.0",
   "scripts": {
     "test": "echo \"To do: no test specified\" && exit 1",
-    "scss": "node-sass -o css css && csso ./css/ebi-global.css --output ./css/ebi-global.min.css && npm run foundation-scss",
-    "foundation-scss": "node-sass ./css/foundation/_settings.scss ./libraries/foundation-6/css/foundation.css && csso ./libraries/foundation-6/css/foundation.css --output ./libraries/foundation-6/css/foundation.min.css",
+    "scss": "node-sass -o css css && csso ./css/ebi-global.css --output ./css/ebi-global.min.css && npm run foundation-scss-full-fat && npm run foundation-scss-lite && npm run foundation-scss-extras",
+    "//@16": [
+      "Foundation build variants",
+      "We build three variants to allow a 'lite' edition.",
+      " -- Full fat: the standard 'give me everything' build ",
+      " -- Lite: the very basics for the EBI look and feel",
+      " -- Extra: This + the lite version = full fat"
+    ],
+    "foundation-scss-full-fat": "node-sass ./css/foundation/_settings-full-fat.scss ./libraries/foundation-6/css/foundation.css && csso ./libraries/foundation-6/css/foundation.css --output ./libraries/foundation-6/css/foundation.min.css",
+    "foundation-scss-lite":     "node-sass ./css/foundation/_settings-lite.scss ./libraries/foundation-6/css/foundation-lite.css && csso ./libraries/foundation-6/css/foundation-lite.css --output ./libraries/foundation-6/css/foundation-lite.min.css",
+    "foundation-scss-extras":   "node-sass ./css/foundation/_settings-extras.scss ./libraries/foundation-6/css/foundation-extras.css && csso ./libraries/foundation-6/css/foundation-extras.css --output ./libraries/foundation-6/css/foundation-extras.min.css",
     "js": "npm run foundation-js",
     "foundation-js": "cpx './libraries/foundation-6/dist/*.js' ./libraries/foundation-6/js",
-    "//@18": [
+    "//@28": [
       "-- Our buildscript: With this line we concat all libraries to be installed at once --"
     ],
     "libraries": "npm run tablesorter && npm run foundation-update && npm run motion-ui-update && npm run message_finished",
-    "//@22": [
+    "//@32": [
       "-- All our libraries, not intended to be run indiviudually --"
     ],
     "tablesorter": "wget https://github.com/Mottie/tablesorter/archive/master.zip -d ./libraries/tablesorter.zip && extract-zip ./libraries/tablesorter.zip ./libraries/ && del ./libraries/tablesorter && mve ./libraries/tablesorter-master ./libraries/tablesorter && del ./libraries/tablesorter.zip",
     "foundation-update": "wget https://github.com/zurb/foundation-sites/archive/develop.zip -d ./libraries/foundation-6.zip && del ./libraries/foundation-6 && extract-zip ./libraries/foundation-6.zip ./libraries/foundation-6/ && del ./libraries/foundation-6.zip && echo \"Copying foundation JS files one level up as they've moved...\" && ncp ./libraries/foundation-6/foundation-sites-develop/ ./libraries/foundation-6/ && del ./libraries/foundation-6/foundation-sites-develop/ && echo \"Latest version of foundation downloaded, you'll need to run 'npm run scss' and 'npm run js' to build\"",
     "motion-ui-update": "wget https://github.com/zurb/motion-ui/archive/master.zip -d ./libraries/motion-ui.zip && del ./libraries/motion-ui && extract-zip ./libraries/motion-ui.zip ./libraries/motion-ui/ && del ./libraries/motion-ui.zip && echo \"Copying Motion UI files one level up as they've moved...\" && ncp ./libraries/motion-ui/motion-ui-master/ ./libraries/motion-ui/ && del ./libraries/motion-ui/motion-ui-master/ && echo \"Latest version of Motion UI downloaded, you'll need to run 'npm run scss' to build\"",
-    "old-foundation-update": "wget https://github.com/zurb/foundation-sites/archive/develop.zip -d ./libraries/foundation-6.zip && del ./libraries/foundation-6 && extract-zip ./libraries/foundation-6.zip ./libraries/foundation-6/ && del ./libraries/foundation-6.zip && echo \"Copying foundation JS files one level up as they've moved...\" && ncp ./libraries/foundation-6/js/vendor/ ./libraries/foundation-6/js/ ",
     "message_finished": "echo \"All done\""
   },
   "private": true,
