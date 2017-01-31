@@ -1,21 +1,20 @@
-# Framework v1.1 now stable
-At the [6 December Web Guidelines Committee meeting](https://www.ebi.ac.uk/seqdb/confluence/display/WGC/2016-12-06+Meeting+notes) the EBI Visual Framework v1.1 became "stable". Edits will now focus on bug fixing, the pattern library, and planning for a [1.2 release in summer 2017](https://github.com/ebiwd/EBI-Framework/milestone/2).
+# EBI-Framework v1.2
 
-# EBI-Framework
+This is an early EBI Visual Framework dev version of the v1.2 targeted for a summer 2017 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
 
-This, the EBI Visual Framework, is the successor to the current EBI Compliance Theme. Homed here are the various assets that make the EBI Visual Framewok (CSS, JS, and a few images and build scripts).
+To view plans for v1.2 (and to join the discussion), [see issue 61](https://github.com/ebiwd/EBI-Framework/issues/61).
 
 ## Where do I start? How do I use this?
 
-1. Quick start: 
+1. Quick start:
   - see the [HTML demos in the EBI Pattern Library /sample-site directory] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/).
-2. Test for compatibility: 
-  - if you're migrating an exsisting site [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Pattern-library/blob/gh-pages/sample-site/migrations/testMigration.js).
-3. Import legacy style and grids: 
+2. Test for compatibility:
+  - if you're migrating an existing site [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Pattern-library/blob/gh-pages/sample-site/migrations/testMigration.js).
+3. Import legacy style and grids:
   - if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS] (https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css).
-4. Guidance: 
+4. Guidance:
   - For the updated web guidelines, [check out the pattern library] (https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
-5. Help! 
+5. Help!
   - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins] (https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
 
 ### Do I need to download this?
@@ -84,7 +83,7 @@ The support for previous major versions (branches) is still being considered, bu
 Where's version 1.0, you ask? Version 1.0 is the [current EBI Compliance theme] (https://www.ebi.ac.uk/web_guidelines/html/compliance/).
 
 ### Test releases
-Testing releases will be identified in their tag, a la: `V1.1.0-alpha`, where `.0-alpha` is the tag. `-alpha`, `-beta` and `-dev` are the anticipated tag suffixes. 
+Testing releases will be identified in their tag, a la: `V1.1.0-alpha`, where `.0-alpha` is the tag. `-alpha`, `-beta` and `-dev` are the anticipated tag suffixes.
 
 ### Variant releases
 There are no officially supported variant, however a "lite" version is being considered. With the branch of `v1.1-lite`.
