@@ -13,9 +13,9 @@
 
 class Slider {
   /**
-   * Creates a new instance of a drilldown menu.
+   * Creates a new instance of a slider control.
    * @class
-   * @param {jQuery} element - jQuery object to make into an accordion menu.
+   * @param {jQuery} element - jQuery object to make into a slider control.
    * @param {Object} options - Overrides to the default plugin settings.
    */
   constructor(element, options) {
@@ -105,6 +105,63 @@ class Slider {
     this.setHandles();
   }
   /**
+  * @function
+  * @private
+  * @param {Number} value - floating point (the value) to be transformed using to a relative position on the slider (the inverse of _value)
+  */
+  _pctOfBar(value) {
+    var pctOfBar = percent(value - this.options.start, this.options.end - this.options.start)
+
+    switch(this.options.positionValueFunction) {
+    case "pow":
+      pctOfBar = this._logTransform(pctOfBar);
+      break;
+    case "log":
+      pctOfBar = this._powTransform(pctOfBar);
+      break;
+    }
+
+    return pctOfBar.toFixed(2)
+  }
+
+  /**
+  * @function
+  * @private
+  * @param {Number} pctOfBar - floating point, the relative position of the slider (typically between 0-1) to be transformed to a value
+  */
+  _value(pctOfBar) {
+    switch(this.options.positionValueFunction) {
+    case "pow":
+      pctOfBar = this._powTransform(pctOfBar);
+      break;
+    case "log":
+      pctOfBar = this._logTransform(pctOfBar);
+      break;
+    }
+    var value = (this.options.end - this.options.start) * pctOfBar + this.options.start;
+
+    return value
+  }
+
+  /**
+  * @function
+  * @private
+  * @param {Number} value - floating point (typically between 0-1) to be transformed using the log function
+  */
+  _logTransform(value) {
+    return baseLog(this.options.nonLinearBase, ((value*(this.options.nonLinearBase-1))+1))
+  }
+
+  /**
+  * @function
+  * @private
+  * @param {Number} value - floating point (typically between 0-1) to be transformed using the power function
+  */
+  _powTransform(value) {
+    return (Math.pow(this.options.nonLinearBase, value) - 1) / (this.options.nonLinearBase - 1)
+  }
+
+  /**
    * Sets the position of the selected handle and fill bar.
    * @function
    * @private
@@ -151,7 +208,7 @@ class Slider {
         handleDim = $hndl[0].getBoundingClientRect()[hOrW],
         elemDim = this.$element[0].getBoundingClientRect()[hOrW],
         //percentage of bar min/max value based on click or drag point
-        pctOfBar = percent(location - this.options.start, this.options.end - this.options.start).toFixed(2),
+        pctOfBar = this._pctOfBar(location),
         //number of actual pixels to shift the handle, based on the percentage obtained above
         pxToMove = (elemDim - handleDim) * pctOfBar,
         //percentage of bar to shift the handle
@@ -313,7 +370,7 @@ class Slider {
       }
       var offsetPct = percent(barXY, barDim);
 
-      value = (this.options.end - this.options.start) * offsetPct + this.options.start;
+      value = this._value(offsetPct);
 
       // turn everything around for RTL, yay math!
       if (Foundation.rtl() && !this.options.vertical) {value = this.options.end - value;}
@@ -490,67 +547,78 @@ Slider.defaults = {
   /**
    * Minimum value for the slider scale.
    * @option
-   * @example 0
+   * @type {number}
+   * @default 0
    */
   start: 0,
   /**
    * Maximum value for the slider scale.
    * @option
-   * @example 100
+   * @type {number}
+   * @default 100
    */
   end: 100,
   /**
    * Minimum value change per change event.
    * @option
-   * @example 1
+   * @type {number}
+   * @default 1
    */
   step: 1,
   /**
    * Value at which the handle/input *(left handle/first input)* should be set to on initialization.
    * @option
-   * @example 0
+   * @type {number}
+   * @default 0
    */
   initialStart: 0,
   /**
    * Value at which the right handle/second input should be set to on initialization.
    * @option
-   * @example 100
+   * @type {number}
+   * @default 100
    */
   initialEnd: 100,
   /**
    * Allows the input to be located outside the container and visible. Set to by the JS
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   binding: false,
   /**
    * Allows the user to click/tap on the slider bar to select a value.
    * @option
-   * @example true
+   * @type {boolean}
+   * @default true
    */
   clickSelect: true,
   /**
    * Set to true and use the `vertical` class to change alignment to vertical.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   vertical: false,
   /**
    * Allows the user to drag the slider handle(s) to select a value.
    * @option
-   * @example true
+   * @type {boolean}
+   * @default true
    */
   draggable: true,
   /**
    * Disables the slider and prevents event listeners from being applied. Double checked by JS with `disabledClass`.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   disabled: false,
   /**
    * Allows the use of two handles. Double checked by the JS. Changes some logic handling.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   doubleSided: false,
   /**
@@ -560,7 +628,8 @@ Slider.defaults = {
   /**
    * Number of decimal places the plugin should go to for floating point precision.
    * @option
-   * @example 2
+   * @type {number}
+   * @default 2
    */
   decimal: 2,
   /**
@@ -570,27 +639,45 @@ Slider.defaults = {
   /**
    * Time, in ms, to animate the movement of a slider handle if user clicks/taps on the bar. Needs to be manually set if updating the transition time in the Sass settings.
    * @option
-   * @example 200
+   * @type {number}
+   * @default 200
    */
   moveTime: 200,//update this if changing the transition time in the sass
   /**
    * Class applied to disabled sliders.
    * @option
-   * @example 'disabled'
+   * @type {string}
+   * @default 'disabled'
    */
   disabledClass: 'disabled',
   /**
    * Will invert the default layout for a vertical<span data-tooltip title="who would do this???"> </span>slider.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   invertVertical: false,
   /**
    * Milliseconds before the `changed.zf-slider` event is triggered after value change.
    * @option
-   * @example 500
+   * @type {number}
+   * @default 500
    */
-  changedDelay: 500
+  changedDelay: 500,
+  /**
+  * Basevalue for non-linear sliders
+  * @option
+  * @type {number}
+  * @default 5
+  */
+  nonLinearBase: 5,
+  /**
+  * Basevalue for non-linear sliders, possible values are: `'linear'`, `'pow'` & `'log'`. Pow and Log use the nonLinearBase setting.
+  * @option
+  * @type {string}
+  * @default 'linear'
+  */
+  positionValueFunction: 'linear',
 };
 
 function percent(frac, num) {
@@ -598,6 +685,9 @@ function percent(frac, num) {
 }
 function absPosition($handle, dir, clickPos, param) {
   return Math.abs(($handle.position()[dir] + ($handle[param]() / 2)) - clickPos);
+}
+function baseLog(base, value) {
+  return Math.log(value)/Math.log(base)
 }
 
 // Window exports

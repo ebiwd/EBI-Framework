@@ -29,8 +29,6 @@ class Reveal {
       'ENTER': 'open',
       'SPACE': 'open',
       'ESCAPE': 'close',
-      'TAB': 'tab_forward',
-      'SHIFT_TAB': 'tab_backward'
     });
   }
 
@@ -82,11 +80,10 @@ class Reveal {
    * Creates an overlay div to display behind the modal.
    * @private
    */
-  _makeOverlay(id) {
-    var $overlay = $('<div></div>')
-                    .addClass('reveal-overlay')
-                    .appendTo(this.options.appendTo);
-    return $overlay;
+  _makeOverlay() {
+    return $('<div></div>')
+      .addClass('reveal-overlay')
+      .appendTo(this.options.appendTo);
   }
 
   /**
@@ -256,6 +253,7 @@ class Reveal {
           })
           .focus();
         addRevealOpenClasses();
+        Foundation.Keyboard.trapFocus(_this.$element);
       }
       if (this.options.overlay) {
         Foundation.Motion.animateIn(this.$overlay, 'fade-in');
@@ -282,6 +280,7 @@ class Reveal {
         'tabindex': -1
       })
       .focus();
+    Foundation.Keyboard.trapFocus(this.$element);
 
     /**
      * Fires when the modal has successfully opened.
@@ -332,26 +331,6 @@ class Reveal {
       var $target = $(this);
       // handle keyboard event with keyboard util
       Foundation.Keyboard.handleKey(e, 'Reveal', {
-        tab_forward: function() {
-          _this.focusableElements = Foundation.Keyboard.findFocusable(_this.$element);
-          if (_this.$element.find(':focus').is(_this.focusableElements.eq(-1))) { // left modal downwards, setting focus to first element
-            _this.focusableElements.eq(0).focus();
-            return true;
-          }
-          if (_this.focusableElements.length === 0) { // no focusable elements inside the modal at all, prevent tabbing in general
-            return true;
-          }
-        },
-        tab_backward: function() {
-          _this.focusableElements = Foundation.Keyboard.findFocusable(_this.$element);
-          if (_this.$element.find(':focus').is(_this.focusableElements.eq(0)) || _this.$element.is(':focus')) { // left modal upwards, setting focus to last element
-            _this.focusableElements.eq(-1).focus();
-            return true;
-          }
-          if (_this.focusableElements.length === 0) { // no focusable elements inside the modal at all, prevent tabbing in general
-            return true;
-          }
-        },
         open: function() {
           if (_this.$element.find(':focus').is(_this.$element.find('[data-close]'))) {
             setTimeout(function() { // set focus back to anchor if close button has been activated
@@ -400,14 +379,15 @@ class Reveal {
     }
     // jQuery method of hiding
     else {
+
+      this.$element.hide(this.options.hideDelay);
+
       if (this.options.overlay) {
         this.$overlay.hide(0, finishUp);
       }
       else {
         finishUp();
       }
-
-      this.$element.hide(this.options.hideDelay);
     }
 
     // Conditionals to remove extra event listeners added on open
@@ -423,15 +403,22 @@ class Reveal {
 
     function finishUp() {
       if (_this.isMobile) {
-        $('html, body').removeClass('is-reveal-open');
+        if ($('.reveal:visible').length === 0) {
+          $('html, body').removeClass('is-reveal-open');
+        }
         if(_this.originalScrollPos) {
           $('body').scrollTop(_this.originalScrollPos);
           _this.originalScrollPos = null;
         }
       }
       else {
-        $('body').removeClass('is-reveal-open');
+        if ($('.reveal:visible').length  === 0) {
+          $('body').removeClass('is-reveal-open');
+        }
       }
+
+
+      Foundation.Keyboard.releaseFocus(_this.$element);
 
       _this.$element.attr('aria-hidden', true);
 
@@ -453,7 +440,7 @@ class Reveal {
     this.isActive = false;
      if (_this.options.deepLink) {
        if (window.history.replaceState) {
-         window.history.replaceState("", document.title, window.location.pathname);
+         window.history.replaceState('', document.title, window.location.href.replace(`#${this.id}`, ''));
        } else {
          window.location.hash = '';
        }
@@ -493,91 +480,106 @@ Reveal.defaults = {
   /**
    * Motion-UI class to use for animated elements. If none used, defaults to simple show/hide.
    * @option
-   * @example 'slide-in-left'
+   * @type {string}
+   * @default ''
    */
   animationIn: '',
   /**
    * Motion-UI class to use for animated elements. If none used, defaults to simple show/hide.
    * @option
-   * @example 'slide-out-right'
+   * @type {string}
+   * @default ''
    */
   animationOut: '',
   /**
    * Time, in ms, to delay the opening of a modal after a click if no animation used.
    * @option
-   * @example 10
+   * @type {number}
+   * @default 0
    */
   showDelay: 0,
   /**
    * Time, in ms, to delay the closing of a modal after a click if no animation used.
    * @option
-   * @example 10
+   * @type {number}
+   * @default 0
    */
   hideDelay: 0,
   /**
    * Allows a click on the body/overlay to close the modal.
    * @option
-   * @example true
+   * @type {boolean}
+   * @default true
    */
   closeOnClick: true,
   /**
    * Allows the modal to close if the user presses the `ESCAPE` key.
    * @option
-   * @example true
+   * @type {boolean}
+   * @default true
    */
   closeOnEsc: true,
   /**
    * If true, allows multiple modals to be displayed at once.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   multipleOpened: false,
   /**
    * Distance, in pixels, the modal should push down from the top of the screen.
    * @option
-   * @example auto
+   * @type {number|string}
+   * @default auto
    */
   vOffset: 'auto',
   /**
    * Distance, in pixels, the modal should push in from the side of the screen.
    * @option
-   * @example auto
+   * @type {number|string}
+   * @default auto
    */
   hOffset: 'auto',
   /**
    * Allows the modal to be fullscreen, completely blocking out the rest of the view. JS checks for this as well.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   fullScreen: false,
   /**
    * Percentage of screen height the modal should push up from the bottom of the view.
    * @option
-   * @example 10
+   * @type {number}
+   * @default 10
    */
   btmOffsetPct: 10,
   /**
    * Allows the modal to generate an overlay div, which will cover the view when modal opens.
    * @option
-   * @example true
+   * @type {boolean}
+   * @default true
    */
   overlay: true,
   /**
    * Allows the modal to remove and reinject markup on close. Should be true if using video elements w/o using provider's api, otherwise, videos will continue to play in the background.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   resetOnClose: false,
   /**
    * Allows the modal to alter the url on open/close, and allows the use of the `back` button to close modals. ALSO, allows a modal to auto-maniacally open on page load IF the hash === the modal's user-set id.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   deepLink: false,
     /**
    * Allows the modal to append to custom div.
    * @option
-   * @example false
+   * @type {string}
+   * @default "body"
    */
   appendTo: "body"
 

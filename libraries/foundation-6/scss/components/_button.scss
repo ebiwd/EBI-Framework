@@ -30,7 +30,7 @@ $button-background-hover: scale-color($button-background, $lightness: -15%) !def
 /// @type List
 $button-color: $white !default;
 
-/// Font color for buttons, if the background is light.
+/// Alternative font color for buttons.
 /// @type List
 $button-color-alt: $black !default;
 
@@ -46,6 +46,10 @@ $button-sizes: (
   default: 0.9rem,
   large: 1.25rem,
 ) !default;
+
+/// Coloring classes. A map of classes to output in your CSS, like `.secondary`, `.success`, and so on.
+/// @type Map
+$button-palette: $foundation-palette !default;
 
 /// opacity for a disabled button.
 /// @type List
@@ -114,7 +118,7 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !defau
   $background-hover-lightness: $button-background-hover-lightness
 ) {
   @if $color == auto {
-    $color: foreground($background, $button-color-alt, $button-color);
+    $color: color-pick-contrast($background, ($button-color, $button-color-alt));
   }
 
   @if $background-hover == auto {
@@ -154,13 +158,22 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !defau
 }
 
 /// Adds disabled styles to a button by fading the element, reseting the cursor, and disabling pointer events.
-@mixin button-disabled($color: $primary-color) {
+/// @param [Color] $background [$primary-color] - Background color of the disabled button.
+/// @param [Color] $color [$button-color] - Text color of the disabled button. Set to `auto` to have the mixin automatically generate a color based on the background color.
+@mixin button-disabled(
+  $background: $primary-color,
+  $color: $button-color
+) {
+  @if $color == auto {
+    $color: color-pick-contrast($background, ($button-color, $button-color-alt));
+  }
+
   opacity: $button-opacity-disabled;
   cursor: not-allowed;
 
-  &:hover, &:focus {
-    background-color: $color;
-    color: $button-color;
+  &, &:hover, &:focus {
+    background-color: $background;
+    color: $color;
   }
 }
 
@@ -226,7 +239,7 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !defau
     &.expanded { @include button-expand; }
 
     // Colors
-    @each $name, $color in $foundation-palette {
+    @each $name, $color in $button-palette {
       @if $button-fill != hollow {
         &.#{$name} {
           @include button-style($color, auto, auto);
@@ -249,7 +262,7 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !defau
         @include button-hollow;
         @include button-hollow-style;
 
-        @each $name, $color in $foundation-palette {
+        @each $name, $color in $button-palette {
           &.#{$name} {
             @include button-hollow-style($color);
           }
@@ -262,9 +275,9 @@ $button-transition: background-color 0.25s ease-out, color 0.25s ease-out !defau
     &[disabled] {
       @include button-disabled;
 
-      @each $name, $color in $foundation-palette {
+      @each $name, $color in $button-palette {
         &.#{$name} {
-          @include button-disabled($color);
+          @include button-disabled($color, auto);
         }
       }
     }

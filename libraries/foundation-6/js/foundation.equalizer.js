@@ -236,8 +236,8 @@ class Equalizer {
    * Changes the CSS height property of each child in an Equalizer parent to match the tallest by row
    * @param {array} groups - An array of heights of children within Equalizer container grouped by row with element,height and max as last child
    * @fires Equalizer#preequalized
-   * @fires Equalizer#preequalizedRow
-   * @fires Equalizer#postequalizedRow
+   * @fires Equalizer#preequalizedrow
+   * @fires Equalizer#postequalizedrow
    * @fires Equalizer#postequalized
    */
   applyHeightByRow(groups) {
@@ -254,7 +254,7 @@ class Equalizer {
       }
       /**
         * Fires before the heights per row are applied
-        * @event Equalizer#preequalizedRow
+        * @event Equalizer#preequalizedrow
         */
       this.$element.trigger('preequalizedrow.zf.equalizer');
       for (var j = 0, lenJ = (groupsILength-1); j < lenJ ; j++) {
@@ -262,7 +262,7 @@ class Equalizer {
       }
       /**
         * Fires when the heights per row have been applied
-        * @event Equalizer#postequalizedRow
+        * @event Equalizer#postequalizedrow
         */
       this.$element.trigger('postequalizedrow.zf.equalizer');
     }
@@ -291,19 +291,22 @@ Equalizer.defaults = {
   /**
    * Enable height equalization when stacked on smaller screens.
    * @option
-   * @example true
+   * @type {boolean}
+   * @default false
    */
   equalizeOnStack: false,
   /**
    * Enable height equalization row by row.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   equalizeByRow: false,
   /**
    * String representing the minimum breakpoint size the plugin should equalize heights on.
    * @option
-   * @example 'medium'
+   * @type {string}
+   * @default ''
    */
   equalizeOn: ''
 };

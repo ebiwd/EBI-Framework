@@ -23,11 +23,11 @@ $global-lineheight: 1.5 !default;
 /// Colors used for buttons, callouts, links, etc. There must always be a color called `primary`.
 /// @type Map
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #777,
+  primary: #1779ba,
+  secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
-  alert: #ec5840,
+  alert: #cc4b37,
 ) !default;
 
 /// Color used for light gray UI items.
@@ -103,18 +103,14 @@ $global-left: if($global-text-direction == rtl, right, left);
 $global-right: if($global-text-direction == rtl, left, right);
 
 // Internal variables used for colors
-$primary-color: map-get($foundation-palette, primary);
-$secondary-color: map-get($foundation-palette, secondary);
-$success-color: map-get($foundation-palette, success);
-$warning-color: map-get($foundation-palette, warning);
-$alert-color: map-get($foundation-palette, alert);
-
-// Remove this in 6.3
-$-zf-menu-icon-imported: false;
-$-zf-flex-classes-imported: false;
+$primary-color: get-color(primary);
+$secondary-color: get-color(secondary);
+$success-color: get-color(success);
+$warning-color: get-color(warning);
+$alert-color: get-color(alert);
 
 @mixin foundation-global-styles {
-  // @include -zf-normalize;
+  @include -zf-normalize;
 
   // These styles are applied to a <meta> tag, which is read by the Foundation JavaScript
   .foundation-mq {
@@ -171,6 +167,7 @@ $-zf-flex-classes-imported: false;
 
   // Make select elements are 100% width by default
   select {
+    box-sizing: border-box;
     width: 100%;
     border-radius: $global-radius;
   }
@@ -200,6 +197,11 @@ $-zf-flex-classes-imported: false;
     line-height: 1;
   }
 
+  // Prevent text overflow on pre
+  pre {
+    overflow: auto;
+  }
+
   // Internal classes to show/hide elements in JavaScript
   .is-visible {
     display: block !important;
@@ -212,6 +214,6 @@ $-zf-flex-classes-imported: false;
 
 /// Loads normalize.css.
 /// @access private
-// @mixin -zf-normalize {
-//   @include normalize();
-// }
+@mixin -zf-normalize {
+  @include normalize();
+}

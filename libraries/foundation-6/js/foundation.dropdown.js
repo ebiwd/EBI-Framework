@@ -27,9 +27,7 @@ class Dropdown {
     Foundation.Keyboard.register('Dropdown', {
       'ENTER': 'open',
       'SPACE': 'open',
-      'ESCAPE': 'close',
-      'TAB': 'tab_forward',
-      'SHIFT_TAB': 'tab_backward'
+      'ESCAPE': 'close'
     });
   }
 
@@ -183,20 +181,21 @@ class Dropdown {
     if(this.options.hover){
       this.$anchor.off('mouseenter.zf.dropdown mouseleave.zf.dropdown')
       .on('mouseenter.zf.dropdown', function(){
-            if($('body[data-whatinput="mouse"]').is('*')) {
-              clearTimeout(_this.timeout);
-              _this.timeout = setTimeout(function(){
-                _this.open();
-                _this.$anchor.data('hover', true);
-              }, _this.options.hoverDelay);
-            }
-          }).on('mouseleave.zf.dropdown', function(){
-            clearTimeout(_this.timeout);
-            _this.timeout = setTimeout(function(){
-              _this.close();
-              _this.$anchor.data('hover', false);
-            }, _this.options.hoverDelay);
-          });
+        var bodyData = $('body').data();
+        if(typeof(bodyData.whatinput) === 'undefined' || bodyData.whatinput === 'mouse') {
+          clearTimeout(_this.timeout);
+          _this.timeout = setTimeout(function(){
+            _this.open();
+            _this.$anchor.data('hover', true);
+          }, _this.options.hoverDelay);
+        }
+      }).on('mouseleave.zf.dropdown', function(){
+        clearTimeout(_this.timeout);
+        _this.timeout = setTimeout(function(){
+          _this.close();
+          _this.$anchor.data('hover', false);
+        }, _this.options.hoverDelay);
+      });
       if(this.options.hoverPane){
         this.$element.off('mouseenter.zf.dropdown mouseleave.zf.dropdown')
             .on('mouseenter.zf.dropdown', function(){
@@ -216,26 +215,6 @@ class Dropdown {
         visibleFocusableElements = Foundation.Keyboard.findFocusable(_this.$element);
 
       Foundation.Keyboard.handleKey(e, 'Dropdown', {
-        tab_forward: function() {
-          if (_this.$element.find(':focus').is(visibleFocusableElements.eq(-1))) { // left modal downwards, setting focus to first element
-            if (_this.options.trapFocus) { // if focus shall be trapped
-              visibleFocusableElements.eq(0).focus();
-              e.preventDefault();
-            } else { // if focus is not trapped, close dropdown on focus out
-              _this.close();
-            }
-          }
-        },
-        tab_backward: function() {
-          if (_this.$element.find(':focus').is(visibleFocusableElements.eq(0)) || _this.$element.is(':focus')) { // left modal upwards, setting focus to last element
-            if (_this.options.trapFocus) { // if focus shall be trapped
-              visibleFocusableElements.eq(-1).focus();
-              e.preventDefault();
-            } else { // if focus is not trapped, close dropdown on focus out
-              _this.close();
-            }
-          }
-        },
         open: function() {
           if ($target.is(_this.$anchor)) {
             _this.open();
@@ -281,7 +260,7 @@ class Dropdown {
   open() {
     // var _this = this;
     /**
-     * Fires to close other open dropdowns
+     * Fires to close other open dropdowns, typically when dropdown is opening
      * @event Dropdown#closeme
      */
     this.$element.trigger('closeme.zf.dropdown', this.$element.attr('id'));
@@ -300,6 +279,10 @@ class Dropdown {
     }
 
     if(this.options.closeOnClick){ this._addBodyHandler(); }
+
+    if (this.options.trapFocus) {
+      Foundation.Keyboard.trapFocus(this.$element);
+    }
 
     /**
      * Fires once the dropdown is visible.
@@ -334,7 +317,15 @@ class Dropdown {
       this.counter = 4;
       this.usedPositions.length = 0;
     }
+    /**
+     * Fires once the dropdown is no longer visible.
+     * @event Dropdown#hide
+     */
     this.$element.trigger('hide.zf.dropdown', [this.$element]);
+
+    if (this.options.trapFocus) {
+      Foundation.Keyboard.releaseFocus(this.$element);
+    }
   }
 
   /**
@@ -364,63 +355,73 @@ class Dropdown {
 
 Dropdown.defaults = {
   /**
-   * Class that designates bounding container of Dropdown (Default: window)
+   * Class that designates bounding container of Dropdown (default: window)
    * @option
-   * @example 'dropdown-parent'
+   * @type {?string}
+   * @default null
    */
   parentClass: null,
   /**
    * Amount of time to delay opening a submenu on hover event.
    * @option
-   * @example 250
+   * @type {number}
+   * @default 250
    */
   hoverDelay: 250,
   /**
    * Allow submenus to open on hover events
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   hover: false,
   /**
    * Don't close dropdown when hovering over dropdown pane
    * @option
-   * @example true
+   * @type {boolean}
+   * @default false
    */
   hoverPane: false,
   /**
    * Number of pixels between the dropdown pane and the triggering element on open.
    * @option
-   * @example 1
+   * @type {number}
+   * @default 1
    */
   vOffset: 1,
   /**
    * Number of pixels between the dropdown pane and the triggering element on open.
    * @option
-   * @example 1
+   * @type {number}
+   * @default 1
    */
   hOffset: 1,
   /**
    * Class applied to adjust open position. JS will test and fill this in.
    * @option
-   * @example 'top'
+   * @type {string}
+   * @default ''
    */
   positionClass: '',
   /**
    * Allow the plugin to trap focus to the dropdown pane if opened with keyboard commands.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   trapFocus: false,
   /**
    * Allow the plugin to set focus to the first focusable element within the pane, regardless of method of opening.
    * @option
-   * @example true
+   * @type {boolean}
+   * @default false
    */
   autoFocus: false,
   /**
    * Allows a click on the body to close the dropdown.
    * @option
-   * @example false
+   * @type {boolean}
+   * @default false
    */
   closeOnClick: false
 }

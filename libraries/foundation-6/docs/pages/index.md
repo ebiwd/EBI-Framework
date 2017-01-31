@@ -8,9 +8,9 @@ tags:
 
 ## Installing
 
-There are a number of ways to install Foundation for Sites. If you're just getting started, we recommend downloading Yeti Launch, which allows you to quickly set up starter projects with any Foundation framework. You can also install our Node CLI to do the same thing.
+There are a number of ways to install Foundation for Sites. If you're just getting started, we recommend installing our Node CLI, which allows you to quickly set up starter projects with any Foundation framework.
 
-It's also possible to manually install Foundation for Sites into your project through npm, Bower, Meteor, or Composer.
+It's also possible to manually install Foundation for Sites into your project through npm, Bower, Meteor, NuGet or Composer.
 
 <a href="installation.html" class="large button">Install Foundation for Sites</a>
 
@@ -89,7 +89,7 @@ Get to know the pieces of Foundation.
     <section>
       <h4>Typography</h4>
       <ul>
-        <li><a href="base-typography.html">Base Styles</a></li>
+        <li><a href="typography-base.html">Base Styles</a></li>
         <li><a href="typography-helpers.html">Helper Classes</a></li>
       </ul>
     </section>
@@ -135,6 +135,7 @@ Get to know the pieces of Foundation.
       <ul>
         <li><a href="accordion.html">Accordion</a></li>
         <li><a href="callout.html">Callout</a></li>
+        <li><a href="card.html">Card</a></li>
         <li><a href="dropdown.html">Dropdown</a></li>
         <li><a href="media-object.html">Media Object</a></li>
         <li><a href="off-canvas.html">Off-canvas</a></li>
