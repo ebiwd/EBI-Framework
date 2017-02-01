@@ -24,7 +24,7 @@
     "foundation-scss-lite":     "node-sass ./css/foundation/_settings-lite.scss ./libraries/foundation-6/css/foundation-lite.css && csso ./libraries/foundation-6/css/foundation-lite.css --output ./libraries/foundation-6/css/foundation-lite.min.css",
     "foundation-scss-extras":   "node-sass ./css/foundation/_settings-extras.scss ./libraries/foundation-6/css/foundation-extras.css && csso ./libraries/foundation-6/css/foundation-extras.css --output ./libraries/foundation-6/css/foundation-extras.min.css",
     "js": "npm run foundation-js",
-    "foundation-js": "cpx './libraries/foundation-6/dist/*.js' ./libraries/foundation-6/js",
+    "foundation-js": "cpx './libraries/foundation-6/dist/js/*.js' ./libraries/foundation-6/js",
     "//@28": [
       "-- Our buildscript: With this line we concat all libraries to be installed at once --"
     ],
