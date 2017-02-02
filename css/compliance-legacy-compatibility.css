@@ -67,6 +67,7 @@ div.highlight {
    }
    .event-teaser div.date {
      display: block;
+     font-weight: bold;
    }
    .event-teaser .event-field {
      display: block;
@@ -602,8 +603,18 @@ div.highlight {
      text-align: left;
      padding-right: 0;
      border-bottom: none;
-     background-color: #998d5d;
-     color: #ffffff;
+     background-color: #FFF;
+     color: #222;
+     border-bottom: 1px solid rgb(233,180,0);
+   }
+   .section-training tbody th h4 {
+       color: #222;
+       font-weight: 300;
+       line-height: 1rem;
+   }
+   .section-training tbody th .icon {
+        position: relative;
+       top: 5px;
    }
    .section-training #content table.contenttable_lmenu th {
      border: 1px solid #ADADAF;
@@ -664,7 +675,7 @@ div.highlight {
      color: #FFF;
      border: none;
      padding: 6px 8px;
-     background: rgb(218, 181, 74);
+     background: rgb(233,180,0);
    }
    .section-training .event-registration-status a:hover {
      background: rgb(144, 116, 35);
@@ -1188,7 +1199,7 @@ form fieldset {background-color:#f7f7f7;border:2px solid #eee;padding:0.5em 0.5e
 form legend {font-size:100%;background-color:#e5e5e5;color:#222;padding:0.1em 0.5em;border:2px solid #d8d8d8}
 form legend span {color:#000;font-size:138.5%;font-weight:bold;margin:0 4px}
 form legend.hide {visibility:hidden}
-form label {display:inline;margin-right:0.3em}
+form label {display:inline;margin-right:0.3em;font-weight: bold;}
 form input {margin:0.2em 0.1em 0.2em 0.2em;font-family:'Helvetica Neue',Helvetica,sans-serif;vertical-align:middle}
 
 /* OMEGA GRID
