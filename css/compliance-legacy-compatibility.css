@@ -132,6 +132,7 @@ div.highlight {
      margin: 0 9px;
      display: block;
    }
+   .course-teaser .start-now a:visited,
    .course-teaser .start-now a:link {
      border: 1px solid #fff;
      display: block;
