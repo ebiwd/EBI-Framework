@@ -77,7 +77,7 @@ div.highlight {
    .event-teaser {
      margin-bottom: 1.3em;
    }
-   .event-teaser span {
+   .event-teaser > span {
      display: inline-block;
    }
    .event-teaser div.date {

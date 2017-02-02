@@ -45,4 +45,11 @@ a.tag:hover { color: #fff; }
 
 div#local-masthead { background-color: rgb(233,180,0); }
 
+body main.row { margin-top: 1.5rem; }
+body .form-checkboxes .form-item,
+body .form-radios .form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* end */
