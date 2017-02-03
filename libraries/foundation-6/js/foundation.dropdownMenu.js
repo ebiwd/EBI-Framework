@@ -99,9 +99,9 @@ class DropdownMenu {
     };
 
     if (this.options.clickOpen || hasTouch) {
-      this.$menuItems.on('click.zf.dropdownmenu touchstart.zf.dropdownmenu', handleClickFn);
+      this.$menuItems.on('click.zf.dropdownmenu', handleClickFn);
     }
-    
+
     // Handle Leaf element Clicks
     if(_this.options.closeOnClickInside){
       this.$menuItems.on('click.zf.dropdownmenu touchend.zf.dropdownmenu', function(e) {
@@ -111,7 +111,7 @@ class DropdownMenu {
         }
       });
     }
-    
+
     if (!this.options.disableHover) {
       this.$menuItems.on('mouseenter.zf.dropdownmenu', function(e) {
         var $elem = $(this),
