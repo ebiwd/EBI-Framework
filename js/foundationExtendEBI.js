@@ -259,8 +259,8 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
       // Calculate how much space we've used
       // We calculate each li and not the parent ul as some teams may make the ul 100% wide
       $(localMenuClass+' > li:not(".bug-fix-placeholder")').each( function() {
-        localMenuWidthUsed = localMenuWidthUsed + $(this).outerWidth();   
-      });   
+        localMenuWidthUsed = localMenuWidthUsed + $(this).outerWidth();
+      });
 
       // Account for any float-right menu
       localMenuWidthUsed = localMenuWidthUsed + localMenuRightSideWidth;
@@ -273,13 +273,14 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
         // $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
         localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' > li.extra-items-menu').outerWidth(); // Account for width of li.extra-items-menu
         // invoke foundation to create dropdown functionality when we add the menu
-        var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass));
+        var options = {closeOnClickInside: false}; // Prevent a bug in foundation 6.2.4 that prevents mobile clicking :(
+        var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass),options);
       }
 
       // Do we need to make space?
       if ( (changeDirection == 'init') || (changeDirection == 'decrease') ) {
         if (localMenuWidthUsed > localMenuWidthAvail) {
-          // show dropdown, if hidden 
+          // show dropdown, if hidden
           if ($(localMenuClass + ' li.extra-items-menu:visible').length == 0) {
             $(localMenuClass + ' li.extra-items-menu').show();
           }
@@ -319,7 +320,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
           // if ($(localMenuClass + ' li.extra-items-menu > ul > li:not(".bug-fix-placeholder")').length == 1) {
           //   spaceToWorkWith = spaceToWorkWith + $(localMenuClass + ' > li.extra-items-menu').innerWidth();
           //   if (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
-          //     // ok, we should move last item up from dropdwon, this will leave us with 0 items 
+          //     // ok, we should move last item up from dropdwon, this will leave us with 0 items
           //     $(localMenuClass+' > li.extra-items-menu > ul.menu > li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
           //     // if the dropdown has no visible items, hide it
           //     $(localMenuClass + ' li.extra-items-menu').hide();
