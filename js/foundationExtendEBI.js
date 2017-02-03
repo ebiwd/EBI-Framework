@@ -273,7 +273,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
         // $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
         localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' > li.extra-items-menu').outerWidth(); // Account for width of li.extra-items-menu
         // invoke foundation to create dropdown functionality when we add the menu
-        var options = {closeOnClickInside: false}; // Prevent a bug in foundation 6.2.4 that prevents mobile clicking :(
+        var options = {closeOnClickInside: false, closeOnClick: false}; // Prevent a bug in foundation 6.2.4 that prevents mobile clicking :(
         var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass),options);
       }
 
