@@ -191,7 +191,15 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
     })();
 
+    // Focus searchbox on global nav button click
+    // ---------
+    // Ideally we would have used Foundation's "data-auto-focus", but this came after the HTML was widely circulated
+    $('a[data-toggle="search-global-dropdown"]').click( function() {
+      if($(this).is(':not(.hover)')) { setTimeout(function() { $('input#global-searchbox').focus() }, 100); }
+    });
+
     // Link overlay images
+    // ---------
     $(function() {
       $('.with-overlay').on('click',function(e) {
         var href = $(this).find('a:first').attr('href') || '';
