@@ -191,6 +191,14 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
     })();
 
+
+    // Focus searchbox on global nav button click
+    // ---------
+    // Ideally we would have used Foundation's "data-auto-focus", but this came after the HTML was widely circulated
+    $('a[data-toggle="search-global-dropdown"]').click( function() {
+      if($(this).is(':not(.hover)')) { setTimeout(function() { $('input#global-searchbox').focus() }, 100); }
+    });
+
     // Link overlay images
     $(function() {
       $('.with-overlay').on('click',function(e) {
@@ -202,6 +210,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     });
 
     // Responsive support for tables
+    // ---------
     // Clone the class from a parent TH to any child TD
     $('table.responsive-table').each( function() {
       var columnsToAppend = $(this).find('th');
