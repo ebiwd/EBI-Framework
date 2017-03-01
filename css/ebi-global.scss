@@ -910,15 +910,15 @@ table.no-stripe tbody tr:nth-child(even) { background-color: #fff; }
 table .padding-none th,
 table .padding-none td
 table.padding-none tbody th,
-table.padding-none tbody td,
-table.data-table tbody th,
-table.data-table tbody td {
+table.padding-none tbody td {
   padding: 0;
 }
 table .padding-small th,
 table .padding-small td
-table.padding-small tbody th,
-table.padding-small tbody td {
+table.padding-small tbody th, 
+table.padding-small tbody td,
+table.data-table tbody th,
+table.data-table tbody td {
   padding: 0rem 0.2rem 0.2rem;
 }
 /* None 100% wide tables */
@@ -927,6 +927,12 @@ table.width-auto { width: auto; }
 /* some images should be stretched, such as sparkline-style gifs */
 table.data-table img,
 img.stretch { height: inherit; }
+/* align table cell text to top */
+table.data-table td,
+table.align-top td,
+table td.align-top {
+  vertical-align: top;
+}
 
 /* wide screen support */
 @media screen and (min-width: 40em) {

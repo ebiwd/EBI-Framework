@@ -18,6 +18,7 @@ a:active {
 h1 { color: #f7f7f7; }
 h2 { color: rgb(233,180,0); }
 h3 { color: #444444; }
+h4 { color: #222; }
 
 a.special { background-color: #7cd17c; }
 
@@ -44,5 +45,12 @@ a.tag:hover { color: #fff; }
   background: #666; }
 
 div#local-masthead { background-color: rgb(233,180,0); }
+
+body main.row { margin-top: 1.5rem; }
+body .form-checkboxes .form-item,
+body .form-radios .form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 /* end */
