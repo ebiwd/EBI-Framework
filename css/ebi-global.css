@@ -178,7 +178,7 @@ nav a:hover {
     display: block;
     height: 50px;
     width: 67px;
-    background-image: url("https://ebiwd.github.io/EBI-Framework/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
+    background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
     background-size: 64px 47px;
     background-repeat: no-repeat;
     margin-left: 6px; } }
@@ -622,7 +622,7 @@ footer a, footer a:visited {
     display: block;
     height: 53px;
     width: 89%;
-    background-image: url("https://ebiwd.github.io/EBI-Framework/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg");
+    background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg");
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: -.25rem;
@@ -1097,6 +1097,38 @@ table.tablesorter thead tr th.tablesorter-headerDesc {
 /* No colour striping tables */
 table.no-stripe tbody tr:nth-child(even) {
   background-color: #fff; }
+
+/* Data table solutions */
+/* Tables with custom padding */
+table .padding-none th,
+table .padding-none td
+table.padding-none tbody th,
+table.padding-none tbody td {
+  padding: 0; }
+
+table .padding-small th,
+table .padding-small td
+table.padding-small tbody th,
+table.padding-small tbody td,
+table.data-table tbody th,
+table.data-table tbody td {
+  padding: 0rem 0.2rem 0.2rem; }
+
+/* None 100% wide tables */
+table.data-table,
+table.width-auto {
+  width: auto; }
+
+/* some images should be stretched, such as sparkline-style gifs */
+table.data-table img,
+img.stretch {
+  height: inherit; }
+
+/* align table cell text to top */
+table.data-table td,
+table.align-top td,
+table td.align-top {
+  vertical-align: top; }
 
 /* wide screen support */
 @media screen and (min-width: 40em) {
