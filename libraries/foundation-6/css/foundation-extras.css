@@ -377,6 +377,18 @@ select {
     display: inline-block;
     float: right;
     margin-left: 1em; }
+  .button.dropdown.hollow::after {
+    border-top-color: #007c82; }
+  .button.dropdown.hollow.primary::after {
+    border-top-color: #1779ba; }
+  .button.dropdown.hollow.secondary::after {
+    border-top-color: #767676; }
+  .button.dropdown.hollow.success::after {
+    border-top-color: #3adb76; }
+  .button.dropdown.hollow.warning::after {
+    border-top-color: #ffae00; }
+  .button.dropdown.hollow.alert::after {
+    border-top-color: #cc4b37; }
   .button.arrow-only::after {
     top: -0.1em;
     float: none;
@@ -1481,6 +1493,7 @@ html.is-reveal-open,
 html.is-reveal-open body {
   min-height: 100%;
   overflow: hidden;
+  position: fixed;
   user-select: none; }
 
 .reveal-overlay {
