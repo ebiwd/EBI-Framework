@@ -4,6 +4,11 @@ This is an early EBI Visual Framework dev version of the v1.2 targeted for a sum
 
 To view plans for v1.2 (and to join the discussion), [see issue 61](https://github.com/ebiwd/EBI-Framework/issues/61).
 
+Test code is availble for useage from the wwwdev server at: 
+- http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/
+- http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js
+- http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css
+
 ## Where do I start? How do I use this?
 
 1. Quick start:
