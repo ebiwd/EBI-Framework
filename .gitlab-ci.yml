@@ -18,7 +18,7 @@ variables:
     - echo -e "Host *\n\tIdentityFile ~/.ssh/%r\n\tStrictHostKeyChecking no" >> ~/.ssh/config
     
 stages:
-  deploy
+  - deploy
   
 deploy_dev:
   <<: *deploy_setup
