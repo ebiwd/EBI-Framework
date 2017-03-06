@@ -1,0 +1,43 @@
+image: alpine
+
+#project specific variables can be defines here, or overridden project settings
+variables:
+  SERVER_DEV: ebi-cli.ebi.ac.uk
+  SCRIPT_DEV: update-ebi-framework
+  SERVER_PROD: ebi-cli.ebi.ac.uk
+  SCRIPT_PROD: update-ebi-framework-prod
+# do not define here, put in project variables
+  SSH_USER: username
+  SSH_KEY: secret-key
+  
+#setup ssh keys
+.deploy_setup: &deploy_setup
+  before_script:
+    - mkdir ~/.ssh
+    - echo -e "${SSH_KEY}" >> ~/.ssh/${SSH_USER} && chmod 400 ~/.ssh/${SSH_USER}
+    - echo -e "Host *\n\tIdentityFile ~/.ssh/%r\n\tStrictHostKeyChecking no" >> ~/.ssh/config
+    
+stages:
+  deploy
+  
+deploy_dev:
+  <<: *deploy_setup
+  stage: deploy
+  script: 
+    - ssh -t ${SSH_USER}@${SERVER_DEV} ${SCRIPT_DEV}
+  only: 
+    - branches
+  environment: 
+    name: dev
+    url: ${DEV_URL}
+    
+deploy_live:
+  <<: *deploy_setup
+  stage: deploy
+  script: 
+    - ssh -t ${SSH_USER}@${SERVER_PROD} ${SCRIPT_PROD}
+  only: 
+    - tags
+  environment: 
+    name: live
+    url: ${LIVE_URL}
