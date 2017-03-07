@@ -1,11 +1,13 @@
-image: alpine
+image: netroby/alpine-rsync
 
 #project specific variables can be defines here, or overridden project settings
 variables:
   SERVER_DEV: ebi-cli.ebi.ac.uk
-  SCRIPT_DEV: update-ebi-framework
+  SCRIPT_DEV: ~/bin/update-ebi-framework
+  DEV_URL: http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework
   SERVER_PROD: ebi-cli.ebi.ac.uk
-  SCRIPT_PROD: update-ebi-framework-prod
+  SCRIPT_PROD: ~/bin/update-ebi-framework-prod
+  PROD_URL: http://www.ebi.ac.uk/web_guidelines/EBI-Framework
 # do not define here, put in project variables
   SSH_USER: username
   SSH_KEY: secret-key
@@ -41,3 +43,4 @@ deploy_live:
   environment: 
     name: live
     url: ${LIVE_URL}
+    
