@@ -111,3 +111,4 @@ To get started, have a look at `package.json`. Likely the the `npm run scss` com
         Use the masthead image as a skybox promo/feature
 - v1.4: Unit testing
 - v1.5: Add animation guidance and tooling ([see this] (https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))
+ 
