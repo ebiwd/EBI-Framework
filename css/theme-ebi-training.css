@@ -24,7 +24,7 @@ a.special { background-color: #7cd17c; }
 
 .menu .active > a,
 .tag,
-.tabs-title > a:hover
+.tabs-title > a:hover,
 .button,
 .button.primary {
   background-color: rgb(233,180,0);
