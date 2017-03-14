@@ -912,6 +912,7 @@ table .padding-none td
 table.padding-none tbody th,
 table.padding-none tbody td {
   padding: 0;
+  border-spacing: 0;
 }
 table .padding-small th,
 table .padding-small td
@@ -920,6 +921,11 @@ table.padding-small tbody td,
 table.data-table tbody th,
 table.data-table tbody td {
   padding: 0rem 0.2rem 0.2rem;
+  border-spacing: 0;
+}
+/* border lines on data tables without striping */
+table.no-stripe.data-table tbody td {
+  border-top: 1px solid $ebi-colour-light-grey;
 }
 /* None 100% wide tables */
 table.data-table,
@@ -928,10 +934,15 @@ table.width-auto { width: auto; }
 table.data-table img,
 img.stretch { height: inherit; }
 /* align table cell text to top */
+table.data-table th,
 table.data-table td,
 table.align-top td,
 table td.align-top {
   vertical-align: top;
+}
+/* highlight table header background */
+table.data-table thead {
+  background: $ebi-colour-light-grey;
 }
 
 /* wide screen support */
