@@ -907,11 +907,17 @@ table.no-stripe tbody tr:nth-child(even) { background-color: #fff; }
 
 /* Data table solutions */
 /* Tables with custom padding */
+table.padding-none {
+  border-spacing: 0;
+}
 table .padding-none th,
 table .padding-none td
 table.padding-none tbody th,
 table.padding-none tbody td {
   padding: 0;
+}
+table.data-table,
+table.padding-small {
   border-spacing: 0;
 }
 table .padding-small th,
@@ -921,7 +927,6 @@ table.padding-small tbody td,
 table.data-table tbody th,
 table.data-table tbody td {
   padding: 0rem 0.2rem 0.2rem;
-  border-spacing: 0;
 }
 /* border lines on data tables without striping */
 table.no-stripe.data-table tbody td {
