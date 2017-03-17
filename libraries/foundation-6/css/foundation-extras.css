@@ -1006,7 +1006,7 @@ select {
   line-height: 1;
   white-space: nowrap;
   cursor: default;
-  background: white;
+  background: none;
   color: #007c82; }
   .label.primary {
     background: #1779ba;
