@@ -147,43 +147,11 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
   $.fn.foundationExtendEBI = function() {
 
-    // Insert EMBL dropdown menu
-    (function insertEMBLdropdown() {
+    // Activate EMBL dropdown menu
+    (function activateEMBLdropdown() {
+      // the menu has already been added in script.js
 
       try {
-        // remove any current dropdown
-        if ((elem=document.getElementById('embl-dropdown')) !== null) {
-          document.getElementById('embl-dropdown').remove();
-        }
-        // document.getElementById('embl-dropdown').innerHTML = '';
-
-        var dropdownDiv = document.createElement("div");
-        dropdownDiv.innerHTML = '<div id="embl-dropdown" class="dropdown-pane bottom" data-dropdown>' +
-                  '<p>EMBL-EBI in Hinxton is one of five EMBL locations across europe.<br/> <a href="//www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
-                  '<h6>Connect to another EMBL location</h6>' +
-                  '<div class="small-collapse small-up-2 padding-bottom-large clearfix">' +
-                    '<div class="column padding-bottom-medium">' +
-                      '<a href="http://www.embl.fr/" class="">Grenoble</a>' +
-                      '<div class="small">Structural Biology</div>' +
-                    '</div>' +
-                    '<div class="column padding-bottom-medium">' +
-                      '<a href="http://www.embl-hamburg.de/" class="">Hamburg</a>' +
-                      '<div class="small">Structural Biology</div>' +
-                    '</div>' +
-                    '<div class="column padding-bottom-medium">' +
-                      '<a href="http://www.embl.de/" class="">Heidelberg</a>' +
-                      '<div class="small">Main Laboratory</div>' +
-                    '</div>' +
-                    '<div class="column padding-bottom-medium">' +
-                      '<a href="http://www.embl.it/" class="">Monterotondo</a>' +
-                      '<div class="small">Mouse Biology</div>' +
-                    '</div>' +
-                  '</div>' +
-                  '<p><a href="http://embl.org/" class="button readmore">Or learn more about EMBL</a></p>' +
-                '</div>';
-        document.getElementById("global-masthead").appendChild(dropdownDiv);
-
-        // invoke the the foundation dropdown
         var options = {closeOnClick: true},
             dropdownEbiMenu = new Foundation.Dropdown($('#embl-dropdown'), options);
       }
@@ -210,6 +178,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     });
 
     // Responsive support for tables
+    // ---------
     // Clone the class from a parent TH to any child TD
     $('table.responsive-table').each( function() {
       var columnsToAppend = $(this).find('th');
@@ -287,7 +256,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
       // Do we need to make space?
       if ( (changeDirection == 'init') || (changeDirection == 'decrease') ) {
         if (localMenuWidthUsed > localMenuWidthAvail) {
-          // show dropdown, if hidden 
+          // show dropdown, if hidden
           if ($(localMenuClass + ' li.extra-items-menu:visible').length == 0) {
             $(localMenuClass + ' li.extra-items-menu').show();
           }
