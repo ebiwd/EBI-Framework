@@ -655,9 +655,13 @@ ul.tree.vertical {
   ul.tree.vertical li > a {
     display: inline;
     padding: 0; }
+  ul.tree.vertical li > a.active {
+    margin-left: -.75rem;
+    border-bottom: none; }
   ul.tree.vertical li > a.active:before {
-    content: "9 ";
-    font-family: 'EBI-Functional'; }
+    content: "9";
+    font-family: 'EBI-Functional';
+    color: #999; }
   ul.tree.vertical li > ul.tree.vertical {
     margin: 0.5rem;
     padding-left: 0.5rem;
