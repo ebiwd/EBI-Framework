@@ -586,6 +586,19 @@ a:active {
 
   } // END #ebi-footer-meta
 
+  /* Vertical menu trees */
+  ul.tree.vertical {
+    margin-left: 0;
+    font-size: .9rem;
+    li { margin-bottom: .5rem; }
+    li > a { display: inline; padding: 0; }
+    li > a.active:before { content: "9 "; font-family: 'EBI-Functional'; }
+    li > ul.tree.vertical {
+      margin: 0.5rem ;
+      padding-left: 0.5rem;
+      border-left: 3px solid #999;
+    }
+  }
 
   /*
     MISC TWEAKS
