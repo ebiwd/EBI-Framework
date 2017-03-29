@@ -592,7 +592,8 @@ a:active {
     font-size: .9rem;
     li { margin-bottom: .5rem; }
     li > a { display: inline; padding: 0; }
-    li > a.active:before { content: "9 "; font-family: 'EBI-Functional'; }
+    li > a.active { margin-left: -.75rem; border-bottom: none; }
+    li > a.active:before { content: "9"; font-family: 'EBI-Functional'; color: #999; }
     li > ul.tree.vertical {
       margin: 0.5rem ;
       padding-left: 0.5rem;
