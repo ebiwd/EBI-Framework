@@ -148,14 +148,15 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
   $.fn.foundationExtendEBI = function() {
 
     // Activate EMBL dropdown menu
+    // Note: the menu content has already been added in script.js
     (function activateEMBLdropdown() {
-      // the menu has already been added in script.js
-
-      try {
-        var options = {closeOnClick: true},
-            dropdownEbiMenu = new Foundation.Dropdown($('#embl-dropdown'), options);
-      }
-      catch(err) {};
+      setTimeout(function() { // A small buffer incase scripts are loaded out of order
+        try {
+          var options = {closeOnClick: true},
+              dropdownEbiMenu = new Foundation.Dropdown($('#embl-dropdown'), options);
+        }
+        catch(err) {};
+      }, 200);
 
     })();
 
