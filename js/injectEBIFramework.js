@@ -38,14 +38,13 @@ function injectEBIFramework() {
       buildEBIHtml();
     } catch (err) {
       setTimeout(executeFoundation, 500);
-    }    
+    }
   }
 
   (function includeScripts() {
-    var requireScripts = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/libraries/foundation-6/js/foundation.js',
-                          '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/js/foundationExtendEBI.js',
-                          '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/js/foot.js',
-                          '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/libraries/modernizr/modernizr.custom.49274.js'];
+    var requireScripts = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/js/foundation.js',
+                          '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/foundationExtendEBI.js',
+                          '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/foot.js'];
     function init() {
       try {
         var existingScripts = document.getElementsByTagName('script');
@@ -69,15 +68,15 @@ function injectEBIFramework() {
         setTimeout(init, 500);
       }
     }
-    init(); 
+    init();
   })(); // END function includeScripts
 
 
   (function includeStyles() {
-    var requireStyles = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/theme-embl-petrol.css',
-                         '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/ebi-global.css',
-                         '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/libraries/foundation-6/css/foundation.css',
-                         '//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.1/fonts.css'];
+    var requireStyles = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-embl-petrol.css',
+                         '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css',
+                         '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css',
+                         '//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css'];
 
     function init() {
       try {
@@ -97,13 +96,13 @@ function injectEBIFramework() {
         setTimeout(init, 500);
       }
     }
-    init(); 
+    init();
   })(); // END function includeStyles
 
 
   function buildEBIHtml() {
     // Wait for jQuery to load and start building content
-    $(document).ready(function() { 
+    $(document).ready(function() {
 
       // Prepare content
       var EBIHeader = '<div id="skip-to">' +
@@ -197,6 +196,6 @@ function injectEBIFramework() {
 
     });
   }
-  
+
 
 } // END function injectEBIFramework
