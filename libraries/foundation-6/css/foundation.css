@@ -3795,6 +3795,12 @@ a.thumbnail {
     .show-for-portrait {
       display: block !important; } }
 
+.is-visible-block {
+  display: block !important; }
+
+.is-visible-inline {
+  display: inline-block !important; }
+
 .float-left {
   float: left !important; }
 
