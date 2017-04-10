@@ -55,6 +55,7 @@
   @include foundation-tooltip;
   @include foundation-top-bar;
   @include foundation-visibility-classes;
+  @include ebi-visibility;
   @include foundation-float-classes;
 
   @if $use-animations {

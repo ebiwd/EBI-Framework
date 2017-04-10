@@ -1,0 +1,12 @@
+// Custom tag class for Foundation-based EBI framework
+
+////
+/// @group visibility
+////
+
+/// Some extra visibility classes for edge cases
+/// as described in: https://github.com/ebiwd/EBI-Framework/issues/30
+@mixin ebi-visibility {
+  .is-visible-block { display:block !important; }
+  .is-visible-inline { display:inline-block !important; }
+}

@@ -63,6 +63,7 @@
 @import 'libraries/foundation-6/scss/global';
 @import 'css/ebi-global-includes/ebi_theme_settings'; // override foundation with EBI styling
 @import 'css/ebi-global-includes/badge'; // custom badge class
+@import 'css/ebi-global-includes/ebi_visibility'; // extra visibility classes
 @import 'css/ebi-global-includes/ebi_foundation_overides';
 
 // Include Foundation dependencies in the build
