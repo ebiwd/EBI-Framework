@@ -218,27 +218,27 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
     // Create a dynamic height for the menu bar when stuck
     // -----------
-    var desiredStuckMenuHeight = $('#local-masthead .masthead').outerHeight();
-    $("<style id='dynamic-stuck-height' type='text/css'> div#local-masthead.sticky.is-stuck{ margin-top: -" + desiredStuckMenuHeight + "px !important;} </style>").appendTo("body");
+    var desiredStuckMenuHeight = $('#masthead .masthead').outerHeight();
+    $("<style id='dynamic-stuck-height' type='text/css'> div#masthead.sticky.is-stuck{ margin-top: -" + desiredStuckMenuHeight + "px !important;} </style>").appendTo("body");
 
     // Clone the local menu into a mobile-only menu
     // -----------
-    var localMenuClass = '#local-masthead .masthead > nav > ul.dropdown.menu.float-left';
+    var localMenuClass = '#masthead .masthead-inner > nav > ul.dropdown.menu.float-left';
     // var localMenuClass = '#secondary-menu-links'; // for testing
     // $(localMenuClass).addClass('dropdown'); // for testing
-    var localMenuLeftPadding = parseInt($('#local-masthead .masthead > nav ul').css('padding-left')); // account for padding of ul
-    var localMenuWidthAvail = $('#local-masthead .masthead > nav').innerWidth() - localMenuLeftPadding;
+    var localMenuLeftPadding = parseInt($('#masthead .masthead-inner > nav ul').css('padding-left')); // account for padding of ul
+    var localMenuWidthAvail = $('#masthead .masthead-inner > nav').innerWidth() - localMenuLeftPadding;
 
     function localNavSpilloverMenu(changeDirection) {
       var localMenuWidthUsed = 0; // Track how much space is occupied by the ul
-      var localMenuRightSideWidth = $('#local-masthead .masthead > nav ul.float-right.menu').outerWidth(); // width of any right-side nav, which would change on browser resize
+      var localMenuRightSideWidth = $('#masthead .masthead-inner > nav ul.float-right.menu').outerWidth(); // width of any right-side nav, which would change on browser resize
       localMenuRightSideWidth = localMenuRightSideWidth + 1; // padding, eleminate NaN if it doesn't exsist
 
       // Calculate how much space we've used
       // We calculate each li and not the parent ul as some teams may make the ul 100% wide
       $(localMenuClass+' > li:not(".bug-fix-placeholder")').each( function() {
-        localMenuWidthUsed = localMenuWidthUsed + $(this).outerWidth();   
-      });   
+        localMenuWidthUsed = localMenuWidthUsed + $(this).outerWidth();
+      });
 
       // Account for any float-right menu
       localMenuWidthUsed = localMenuWidthUsed + localMenuRightSideWidth;
@@ -252,6 +252,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
         localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' > li.extra-items-menu').outerWidth(); // Account for width of li.extra-items-menu
         // invoke foundation to create dropdown functionality when we add the menu
         var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass));
+        var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass),options);
       }
 
       // Do we need to make space?
@@ -297,7 +298,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
           // if ($(localMenuClass + ' li.extra-items-menu > ul > li:not(".bug-fix-placeholder")').length == 1) {
           //   spaceToWorkWith = spaceToWorkWith + $(localMenuClass + ' > li.extra-items-menu').innerWidth();
           //   if (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
-          //     // ok, we should move last item up from dropdwon, this will leave us with 0 items 
+          //     // ok, we should move last item up from dropdwon, this will leave us with 0 items
           //     $(localMenuClass+' > li.extra-items-menu > ul.menu > li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
           //     // if the dropdown has no visible items, hide it
           //     $(localMenuClass + ' li.extra-items-menu').hide();
@@ -312,7 +313,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     localNavSpilloverMenu('init');
     // re-calc menus on browser change, if it affect width of localMenuWidthAvail
     $(window).resize( function() {
-      var snapshot_localMenuWidthAvail = $('#local-masthead .masthead > nav').innerWidth();
+      var snapshot_localMenuWidthAvail = $('#masthead .masthead-inner > nav').innerWidth();
       var widthChangeAmount = snapshot_localMenuWidthAvail - localMenuWidthAvail;
       if (widthChangeAmount != 0) localMenuWidthAvail = snapshot_localMenuWidthAvail;
       // we look for changes of more than 1 to reduce jitter
