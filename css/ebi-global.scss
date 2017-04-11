@@ -534,7 +534,7 @@ a:active {
   /*
     LOCAL FOOTER
   =============================== */
-  #local-footer {
+  .local-footer {
     border-top: 2px solid #eee;
   }
 
@@ -547,7 +547,7 @@ a:active {
     }
   }
 
-  #global-footer {
+  .global-footer {
     border-top: 5px solid #eee;
     padding-top: .5rem;
 
@@ -583,14 +583,14 @@ a:active {
     a:active{
       border-bottom: 1px dashed #e4e4e4;
     }
-  } // END #global-footer
+  } // END .global-footer
 
-  #ebi-footer-meta {
+  .ebi-footer-meta {
     font-size: 85%; margin-bottom: 9px;
 
     p.address { color: #888; }
 
-  } // END #ebi-footer-meta
+  } // END .ebi-footer-meta
 
 
   /*
@@ -874,7 +874,7 @@ a.more:after {
   .masthead-black-bar nav,
   .masthead nav,
   form#local-search,
-  #global-footer,
+  .global-footer,
   #search_ebi,
   #shortcuts,
   #ebi_search_results { display: none; }

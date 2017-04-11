@@ -173,7 +173,7 @@ function injectEBIFramework() {
                       '</div>';
 
 
-      var EBIFooter = '<div id="global-footer">' +
+      var EBIFooter = '<div id="global-footer" class="global-footer">' +
                       '<nav id="global-nav-expanded" class="row">' +
                         '<!-- Footer will be automatically inserted by footer.js -->' +
                       '</nav>' +

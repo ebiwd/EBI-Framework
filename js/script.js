@@ -32,18 +32,6 @@
 })();
 
 (function fixes() {
-
-  // set text in copyright notice, adjust to current year
-  // (function copyrightFix() {
-  //   try {
-  //     var d = new Date();
-  //     document.getElementById('ebi-footer-meta').innerHTML = "" +
-  //       "<p class=\"address\">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp; &nbsp; +44 (0)1223 49 44 44</p>" +
-  //       "<p>Copyright &copy; EMBL-EBI " + d.getFullYear() + " | EBI is an outstation of the <a href=\"http://www.embl.org\">European Molecular Biology Laboratory</a> | <a href=\"/about/terms-of-use\">Terms of use</a></p>";
-  //   }
-  //   catch (err) {}
-  // })();
-
   // mark pdf/doc/txt links with link-pdf/link-doc/link-txt classes
   // exclude links with images
   // include only links to own domains
