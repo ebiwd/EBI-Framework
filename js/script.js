@@ -50,12 +50,12 @@
   (function externalLinks() {
     function isOwnDomain(url) {
       return (url.indexOf('//') === -1 ||
-        url.indexOf('//www.ebi.ac.uk') !== -1 || 
-        url.indexOf('//wwwdev.ebi.ac.uk') !== -1 || 
+        url.indexOf('//www.ebi.ac.uk') !== -1 ||
+        url.indexOf('//wwwdev.ebi.ac.uk') !== -1 ||
         url.indexOf('//srs.ebi.ac.uk') !== -1 ||
-        url.indexOf('//frontier.ebi.ac.uk') !== -1 || 
+        url.indexOf('//frontier.ebi.ac.uk') !== -1 ||
         url.indexOf('//ftp.ebi.ac.uk') !== -1 ||
-        url.indexOf('//intranet.ebi.ac.uk') !== -1 || 
+        url.indexOf('//intranet.ebi.ac.uk') !== -1 ||
         url.indexOf('//pdbe.org') !== -1 ||
         url.indexOf('//' + document.domain) !== -1);
     }
@@ -96,7 +96,7 @@
                           '<div class="input-group-button">' +
                             '<input type="submit" name="submit" value="Search" class="button">' +
                             '<input type="hidden" name="db" value="allebi" checked="checked">' +
-                            '<input type="hidden" name="requestFrom" value="global-masthead" checked="checked">' +
+                            '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' +
                           '</div>' +
                         '</div>' +
                       '</fieldset> ' +
@@ -134,13 +134,13 @@
           var searchError = searchBoxes[searchBox].errorText || 'Please enter a search term';
           var searchAction = (searchForm) ? searchForm.action : '';
           var isEbiSearch = searchAction.indexOf('/ebisearch/') !== -1;
-          
+
           if (searchForm && searchInput && isEbiSearch) {
             // add reference to other items for onsubmit anonymous function
             searchForm.searchInput = searchInput;
             searchForm.searchInputDefault = searchInputDefault;
             searchForm.searchError = searchError;
-            
+
             searchForm.onsubmit = function() {
               searchInput = this.searchInput;
               searchInputDefault = this.searchInputDefault;
@@ -148,7 +148,7 @@
 
               // Ensure input is trimmed
               searchInput.value = searchInput.value.trim();
-              
+
               if (searchInput.value === searchInputDefault || searchInput.value === '') {
                 alert(searchError);
                 return false;
@@ -161,15 +161,15 @@
     }
     catch (err) {}
   })();
-  
+
   // Remove global-nav/global-nav-expanded from header/footer
   // if body.no-global-nav is set
   (function hideGlobalNav() {
     try {
-      var hasGlobalMasthead = document.getElementById('global-masthead') !== null;
+      var hasGlobalMasthead = document.getElementById('masthead-black-bar') !== null;
       var disabled = document.body.className.indexOf('no-global-nav') !== -1;
       var elem;
-      
+
       if (hasGlobalMasthead && disabled) {
         if ((elem=document.getElementById('global-nav')) !== null) {
           elem.parentNode.removeChild(elem);
@@ -181,16 +181,16 @@
     }
     catch (err) {}
   })();
-   
+
   // Tap the location bar to scroll to the top
   // Disabled for v1.1 per https://github.com/ebiwd/EBI-Framework/issues/23
   // (function scrollMeUp() {
-  //   var localMasthead = document.getElementById('local-masthead');
-  //   localMasthead.onclick = function(e){
+  //   var masthead = document.getElementById('masthead');
+  //   masthead.onclick = function(e){
   //     if (e.target.nodeName == 'A')
   //       return;
   //     // if jQuery then do it all pretty like
-  //     if (window.jQuery) {  
+  //     if (window.jQuery) {
   //       $('html,body').animate({
   //         scrollTop: 0
   //       }, 700);
@@ -202,18 +202,18 @@
 
   // Assign global nav background images through meta tags
   (function assignImageByMetaTags() {
-    var localMasthead = document.getElementById('local-masthead');
+    var masthead = document.getElementById('masthead');
     // check for both ebi: and ebi- formatted meta tags
-    var localMastheadColor = document.querySelector("meta[name='ebi:localmasthead-color']") || document.querySelector("meta[name='ebi-localmasthead-color']");
-    var localMastheadImage = document.querySelector("meta[name='ebi:localmasthead-image']") || document.querySelector("meta[name='ebi-localmasthead-image']");
+    var mastheadColor = document.querySelector("meta[name='ebi:masthead-color']") || document.querySelector("meta[name='ebi-masthead-color']");
+    var mastheadImage = document.querySelector("meta[name='ebi:masthead-image']") || document.querySelector("meta[name='ebi-masthead-image']");
 
-    if (localMastheadColor != null) {
-      localMasthead.style.backgroundColor = localMastheadColor.getAttribute("content");
-      localMasthead.className += ' meta-background-color';
+    if (mastheadColor != null) {
+      masthead.style.backgroundColor = mastheadColor.getAttribute("content");
+      masthead.className += ' meta-background-color';
     }
-    if (localMastheadImage != null) {      
-      localMasthead.style.backgroundImage = 'url(' + localMastheadImage.getAttribute("content") + ')'; 
-      localMasthead.className += ' meta-background-image';
+    if (mastheadImage != null) {
+      masthead.style.backgroundImage = 'url(' + mastheadImage.getAttribute("content") + ')';
+      masthead.className += ' meta-background-image';
     }
   })();
 
@@ -250,11 +250,11 @@
                 '</div>' +
                 '<p><a href="http://embl.org/" class="button readmore">Or learn more about EMBL</a></p>' +
               '</div>';
-      document.getElementById("global-masthead").appendChild(dropdownDiv);
+      document.getElementById("masthead-black-bar").appendChild(dropdownDiv);
       // We don't invoke the dropdown here, as that method depends on how you're using the Framework
     }
     catch(err) {};
 
   })();
-  
+
 })();
