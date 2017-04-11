@@ -218,7 +218,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
     // Create a dynamic height for the menu bar when stuck
     // -----------
-    var desiredStuckMenuHeight = $('#masthead .masthead').outerHeight();
+    var desiredStuckMenuHeight = $('#masthead .masthead-inner').outerHeight();
     $("<style id='dynamic-stuck-height' type='text/css'> div#masthead.sticky.is-stuck{ margin-top: -" + desiredStuckMenuHeight + "px !important;} </style>").appendTo("body");
 
     // Clone the local menu into a mobile-only menu
