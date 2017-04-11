@@ -292,16 +292,8 @@ header .masthead-inner {
 
 /* Local masthead secondary links on mobile */
 @media screen and (max-width: 39.9375em) {
-  .masthead ul.menu.dropdown.float-right {
-    /*  clear: both;
-      position: relative;
-      height: 0;*/ }
   .masthead ul.menu.dropdown.float-right > li {
     margin-bottom: -50px; }
-  .masthead ul.menu.dropdown.float-right a {
-    /*color: $ebi-colour-dark-grey;*/ }
-  body .masthead ul.menu.dropdown.float-right > .has-submenu.is-down-arrow > a::after {
-    /* border-color: $ebi-colour-dark-grey transparent transparent;*/ }
   .masthead nav ul#global-nav.menu li {
     float: none;
     display: inline-block; }
@@ -337,7 +329,7 @@ header .masthead-inner {
   .masthead h1,
   .masthead h4,
   .masthead p,
-  .masthead a {
+  .masthead a, .masthead a:hover, .masthead a:active, .masthead a:visited {
     color: #fff; }
   .masthead ul li.is-active a,
   .masthead ul li a:hover,
@@ -818,30 +810,24 @@ nav.orbit-bullets button.thumbnail.image > img {
 code {
   font-size: .95rem; }
 
-/* hide */
 .hidden, .hide {
   display: none; }
 
-/* inline-block */
 .inline-block {
   display: inline-block; }
 
-/* no margins */
 .no-margin {
   margin: 0; }
 
-/* no underline for links */
 .no-underline a, a.no-underline {
   border-bottom: none;
   text-decoration: none; }
 
-/* buttons */
 .button:focus,
 .button:hover,
 .button.hover {
   background-color: rgba(255, 255, 255, 0.5); }
 
-/* tabs */
 .tabs-title > a {
   border-bottom: none; }
 
@@ -904,7 +890,6 @@ code {
     color: #666;
     margin-bottom: .5rem; }
 
-/* read more */
 a.read-more:after,
 a.readmore:after,
 a.more:after {
