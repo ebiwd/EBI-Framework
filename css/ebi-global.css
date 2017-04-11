@@ -172,9 +172,9 @@ nav a:hover {
 
 /* Mobile logo */
 @media screen and (max-width: 40em) {
-  #local-masthead nav ul#global-nav.menu li#home {
+  #local-masthead nav ul#global-nav.menu li.home {
     display: none; }
-  #local-masthead nav ul#global-nav.menu li#home-mobile a {
+  #local-masthead nav ul#global-nav.menu li.home-mobile a {
     display: block;
     height: 50px;
     width: 67px;
@@ -184,11 +184,11 @@ nav a:hover {
     margin-left: 6px; } }
 
 @media screen and (min-width: 40em) {
-  #local-masthead nav ul#global-nav.menu li#home-mobile {
+  #local-masthead nav ul#global-nav.menu li.home-mobile {
     display: none; } }
 
 /* Disable global-masthead search when told */
-body.no-global-search #global-masthead ul#global-nav li#search {
+body.no-global-search #global-masthead ul#global-nav li.search {
   display: none; }
 
 #global-masthead {
@@ -196,7 +196,8 @@ body.no-global-search #global-masthead ul#global-nav li#search {
   /* custom colour for Services */
   /* custom colour for Research */
   /* custom colour for Training */
-  /* custom colour for About us */ }
+  /* custom colour for About us */
+  /* Custom icon for search */ }
   #global-masthead ul#global-nav li a:hover,
   #global-masthead ul#global-nav li a:active,
   #global-masthead ul#global-nav li a:focus,
@@ -207,29 +208,47 @@ body.no-global-search #global-masthead ul#global-nav li#search {
   #global-masthead ul#global-nav li.active a,
   #global-masthead ul#global-nav li.active-trail a {
     background: black; }
-  #global-masthead ul li#home a:hover,
-  #global-masthead ul li#home a:active,
-  #global-masthead ul li#home a:focus {
+  #global-masthead ul li.home a:before {
+    font-family: 'EBI-Generic';
+    content: 'H '; }
+  #global-masthead ul li.home a:hover,
+  #global-masthead ul li.home a:active,
+  #global-masthead ul li.home a:focus {
     background-color: #007c82; }
-  #global-masthead ul li#services a:hover,
-  #global-masthead ul li#services a:active,
-  #global-masthead ul li#services a:focus {
+  #global-masthead ul li.services a:before {
+    font-family: 'EBI-Generic';
+    content: '( '; }
+  #global-masthead ul li.services a:hover,
+  #global-masthead ul li.services a:active,
+  #global-masthead ul li.services a:focus {
     background-color: #389198; }
-  #global-masthead ul li#research a:hover,
-  #global-masthead ul li#research a:active,
-  #global-masthead ul li#research a:focus {
+  #global-masthead ul li.research a:before {
+    font-family: 'EBI-Generic';
+    content: ') '; }
+  #global-masthead ul li.research a:hover,
+  #global-masthead ul li.research a:active,
+  #global-masthead ul li.research a:focus {
     background-color: #6dab49; }
-  #global-masthead ul li#training a:hover,
-  #global-masthead ul li#training a:active,
-  #global-masthead ul li#training a:focus {
+  #global-masthead ul li.training a:before {
+    font-family: 'EBI-Generic';
+    content: 't '; }
+  #global-masthead ul li.training a:hover,
+  #global-masthead ul li.training a:active,
+  #global-masthead ul li.training a:focus {
     background-color: #e9b400; }
-  #global-masthead ul li#about a:hover,
-  #global-masthead ul li#about a:active,
-  #global-masthead ul li#about a:focus,
-  #global-masthead ul li#about-us a:hover,
-  #global-masthead ul li#about-us a:active,
-  #global-masthead ul li#about-us a:focus {
+  #global-masthead ul li.about a:before {
+    font-family: 'EBI-Generic';
+    content: 'i '; }
+  #global-masthead ul li.about a:hover,
+  #global-masthead ul li.about a:active,
+  #global-masthead ul li.about a:focus,
+  #global-masthead ul li.about-us a:hover,
+  #global-masthead ul li.about-us a:active,
+  #global-masthead ul li.about-us a:focus {
     background-color: #389198; }
+  #global-masthead ul li.search a:before {
+    font-family: 'EBI-Functional';
+    content: '1'; }
 
 header .masthead {
   padding-top: 2.5rem;
@@ -286,7 +305,7 @@ header .masthead {
   #local-masthead nav ul#global-nav.menu li {
     float: none;
     display: inline-block; }
-  #local-masthead nav ul#global-nav.menu li#home-mobile {
+  #local-masthead nav ul#global-nav.menu li.home-mobile {
     float: left; }
   ul#global-nav {
     text-align: right; }
