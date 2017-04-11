@@ -114,9 +114,9 @@ function injectEBIFramework() {
                         '</ul>' +
                       '</div>' +
                       '<div>' +
-                        '<div id="local-masthead">' +
+                        '<div id="masthead" class="masthead">' +
                           '<header>' +
-                            '<div id="global-masthead" class="clearfix">' +
+                            '<div id="masthead-black-bar" class="clearfix masthead-black-bar">' +
                               '<!--This has to be one line and no newline characters-->' +
                               '<a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>' +
                               '<nav>' +
@@ -139,7 +139,7 @@ function injectEBIFramework() {
                                               '<div class="input-group-button">' +
                                                 '<input type="submit" name="submit" value="Search" class="button">' +
                                                 '<input type="hidden" name="db" value="allebi" checked="checked">' +
-                                                '<input type="hidden" name="requestFrom" value="global-masthead" checked="checked">' +
+                                                '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' +
                                               '</div>' +
                                             '</div>' +
                                           '</fieldset>' +
@@ -154,7 +154,7 @@ function injectEBIFramework() {
                                 '</div>' +
                               '</nav>' +
                             '</div>' +
-                            // '<div class="masthead row">' +
+                            // '<div class="masthead-inner row">' +
                             //   '<!-- local-title -->' +
                             //   '<div class="columns medium-7" id="local-title">' +
                             //     '<h1><a href="//ebiwd.github.io/EBI-Pattern-library" title="Back to EBI Pattern library homepage">EMBL Weekly news dashbaord</a></h1>' +

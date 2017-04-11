@@ -62,7 +62,7 @@ a.button, a.button:visited { color: $ebi-colour-light; }
 
 /* Colour - defaults to be reset by custom stylesheet
 ===================================================*/
-div#global-masthead { background-color: #333; }
+div.masthead-black-bar { background-color: #333; }
 h1, h2, h3, h4, h5, h6 { color: $body-font-color; }
 
 h4 { color: $ebi-colour-medium-grey; }
@@ -113,19 +113,19 @@ a:active {
   nav a,
   nav a:hover { border-bottom: none; }
 
-  #local-masthead {
+  .masthead {
     // highlight links in the textual area of the local masthead
     #local-title .columns a { border-bottom: 1px dotted rgb(255,255,255); }
-    #local-masthead #local-title .columns a:hover { border-bottom: none; }
+    .masthead #local-title .columns a:hover { border-bottom: none; }
   }
 
   /* Global menu styling */
-  #local-masthead nav ul#global-nav.menu li { border-right: none; }
+  .masthead nav ul#global-nav.menu li { border-right: none; }
 
   /* Mobile logo */
   @media screen and (max-width: 40em) {
-    #local-masthead nav ul#global-nav.menu li.home { display: none; }
-    #local-masthead nav ul#global-nav.menu li.home-mobile a {
+    .masthead nav ul#global-nav.menu li.home { display: none; }
+    .masthead nav ul#global-nav.menu li.home-mobile a {
       display: block;
       height: 50px;
       width: 67px;
@@ -136,13 +136,13 @@ a:active {
     }
   }
   @media screen and (min-width: 40em) {
-    #local-masthead nav ul#global-nav.menu li.home-mobile { display: none; }
+    .masthead nav ul#global-nav.menu li.home-mobile { display: none; }
   }
 
-  /* Disable global-masthead search when told */
-  body.no-global-search #global-masthead ul#global-nav li.search { display: none; }
+  /* Disable masthead-black-bar search when told */
+  body.no-global-search .masthead-black-bar ul#global-nav li.search { display: none; }
 
-  #global-masthead {
+  .masthead-black-bar {
     ul#global-nav li a:hover,
     ul#global-nav li a:active,
     ul#global-nav li a:focus,
@@ -223,7 +223,7 @@ a:active {
 
   }
 
-  header .masthead {
+  header .masthead-inner {
     padding-top: 2.5rem;
     color: #fff;
   }
@@ -237,7 +237,7 @@ a:active {
     color: #fff;
   }
 
-  // END #local-masthead
+  // END .masthead
 
   /* EMBL Dropdwon styles */
   #embl-dropdown {
@@ -264,26 +264,26 @@ a:active {
 
   /* Local masthead secondary links on mobile */
   @media screen and (max-width: 39.9375em) {
-    #local-masthead ul.menu.dropdown.float-right {
+    .masthead ul.menu.dropdown.float-right {
     /*  clear: both;
       position: relative;
       height: 0;*/
     }
 
-    #local-masthead ul.menu.dropdown.float-right > li {
+    .masthead ul.menu.dropdown.float-right > li {
      margin-bottom: -50px;
     }
 
-    #local-masthead ul.menu.dropdown.float-right a {
+    .masthead ul.menu.dropdown.float-right a {
       /*color: $ebi-colour-dark-grey;*/
     }
 
-    body #local-masthead ul.menu.dropdown.float-right > .has-submenu.is-down-arrow > a::after {
+    body .masthead ul.menu.dropdown.float-right > .has-submenu.is-down-arrow > a::after {
      /* border-color: $ebi-colour-dark-grey transparent transparent;*/
     }
 
-    #local-masthead nav ul#global-nav.menu li { float: none; display: inline-block; }
-    #local-masthead nav ul#global-nav.menu li.home-mobile { float: left; }
+    .masthead nav ul#global-nav.menu li { float: none; display: inline-block; }
+    .masthead nav ul#global-nav.menu li.home-mobile { float: left; }
 
     ul#global-nav { text-align: right; }
 
@@ -310,7 +310,7 @@ a:active {
   }
 
   /* Local menu styling */
-  #local-masthead {
+  .masthead {
     background-repeat: no-repeat;
     background-position: 100% 82%;
     background-size: cover;
@@ -336,7 +336,7 @@ a:active {
 
     nav { font-size: .9rem; clear: both; }
 
-    .masthead nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
+    .masthead-inner nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
     nav ul.menu li { border-right: 1px solid $ebi-colour-light; float: left;
                      margin-left: 0; /* compliance compatibility */
                                      }
@@ -348,14 +348,14 @@ a:active {
 
   div#local-title { margin-bottom: 1rem; }
 
-  #local-masthead.meta-background-image {
+  .masthead.meta-background-image {
     background-position: 100% 100%;
     background-size: initial;
   }
 
   /* tweak sticky behaviour */
-  div#local-masthead { width: 100%; position: static; -webkit-transform: none; transform: none; }
-  div#local-masthead.sticky.is-stuck { position: fixed; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+  div.masthead { width: 100%; position: static; -webkit-transform: none; transform: none; }
+  div.masthead.sticky.is-stuck { position: fixed; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
 
   input#local-searchbox,
@@ -368,14 +368,14 @@ a:active {
   #content {
     padding: 0.5rem 0 1.5rem;
   }
-  body.section-about #local-masthead {
+  body.section-about .masthead {
     background-color: $ebi-colour-petrol;
   }
-  body.section-industry #local-masthead {
+  body.section-industry .masthead {
     background-color: $ebi-colour-industry;
   }
   body.section-research {
-    #local-masthead {
+    .masthead {
       background-color: $ebi-colour-light-green;
     }
     #local-title h1,
@@ -384,10 +384,10 @@ a:active {
       color: #FFF;
     }
   }
-  body.section-services #local-masthead {
+  body.section-services .masthead {
     background-color: $ebi-colour-services;
   }
-  body.section-training #local-masthead {
+  body.section-training .masthead {
     background-color: $ebi-colour-training;
   }
   body.section-training #local-title  {
@@ -397,7 +397,7 @@ a:active {
       color: #222;
     }
   }
-  body.section-home #local-masthead {
+  body.section-home .masthead {
     background-color: $ebi-colour-petrol;
   }
 
@@ -542,7 +542,7 @@ a:active {
   @media screen and (max-width: 53em) {
     .embl-selector .button { width: 0px; padding-right:0; overflow: hidden;}
     .embl-selector .button:after { display: none; }
-    #local-masthead nav ul#global-nav.menu li a { padding-right: .5rem; padding-left: .5rem;}
+    .masthead nav ul#global-nav.menu li a { padding-right: .5rem; padding-left: .5rem;}
   }
 
 
@@ -892,8 +892,8 @@ a.more:after {
 @media print {
   a, a:visited { border-bottom: none; }
   #skip-to,
-  #global-masthead nav,
-  #local-masthead nav,
+  .masthead-black-bar nav,
+  .masthead nav,
   form#local-search,
   #global-footer,
   #search_ebi,

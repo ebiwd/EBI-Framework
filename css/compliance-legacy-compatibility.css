@@ -314,7 +314,7 @@ div.highlight {
      margin-left: 9px;
      margin-right: 9px;
    }
-   body.subsite-pdbe div#local-masthead {
+   body.subsite-pdbe div.masthead {
      background: #d8e5d8 url(/sites/ebi.ac.uk/themes/custom/ebicompliance/images/PDBe-banner_mono.png) top right no-repeat !important;
    }
    body.subsite-pdbe div#local-title h1, body.subsite-pdbe div#local-title p, body.subsite-pdbe div#local-title a {
@@ -329,10 +329,10 @@ div.highlight {
      -moz-hyphens: auto;
      hyphens: auto;
    }
-   body.subsite-ega #local-masthead, body.subsite-ega.section-about #local-masthead, body.subsite-ega.front #local-masthead {
+   body.subsite-ega .masthead, body.subsite-ega.section-about .masthead, body.subsite-ega.front .masthead {
      background: #156765 url(/sites/ebi.ac.uk/themes/custom/ebicompliance/images/EBI_banner_Homepage.jpg) top right no-repeat;
    }
-   body.subsite-eva #local-masthead, body.subsite-eva.section-about #local-masthead, body.subsite-eva.front #local-masthead {
+   body.subsite-eva .masthead, body.subsite-eva.section-about .masthead, body.subsite-eva.front .masthead {
      background: #156765 url(/sites/ebi.ac.uk/themes/custom/ebicompliance/images/EBI_banner_Homepage.jpg) top right no-repeat;
    }
    .page-industry-private-projects div.caption p {
@@ -714,10 +714,10 @@ div.highlight {
      background-color: #bfdcee;
      border-bottom: 0px none;
    }
-   body.subdomain-intranet.front #local-masthead, body.subdomain-intranet #local-masthead {
+   body.subdomain-intranet.front .masthead, body.subdomain-intranet .masthead {
      background: #156765 url(/sites/ebi.ac.uk/themes/custom/ebicompliance/images/EBI_banner_Intranet.jpg) top right no-repeat;
    }
-   body.subdomain-rdf #local-masthead, body.subsite-rdf #local-masthead {
+   body.subdomain-rdf .masthead, body.subsite-rdf .masthead {
      background: #60bdc4 url(/sites/ebi.ac.uk/themes/custom/ebicompliance/images/EBI_SERVICES_Banner.jpg) top right no-repeat;
    }
    div.caption-inner {
@@ -1152,7 +1152,7 @@ div.highlight {
    .field-name-field-relatied-stories, .field-name-field-url {
      padding: 0 9px;
    }
-   #local-masthead nav div+div {
+   .masthead nav div+div {
      display: none;
    }
    a.no-underline {

@@ -43,6 +43,6 @@ a.tag:hover { color: #fff; }
   color: #fff;
   background: #666; }
 
-div#local-masthead { background-color: rgb(56,145,152); }
+div.masthead { background-color: rgb(56,145,152); }
 
 /* end */
