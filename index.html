@@ -47,8 +47,8 @@
   <!-- If you have a custom header image or colour -->
   <!--
   -->
-  <meta name="ebi:localmasthead-color" content="#091314" />
-  <meta name="ebi:localmasthead-image" content="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/backgrounds/embl-ebi-background-4.jpg" />
+  <meta name="ebi:masthead-color" content="#091314" />
+  <meta name="ebi:masthead-image" content="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/backgrounds/embl-ebi-background-4.jpg" />
 
     <!-- you can replace this with theme-[projectname].css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
   <!-- also inform ES so we can host your colour palette file -->
@@ -73,10 +73,10 @@
   </div>
 
   <div data-sticky-container>
-    <div id="local-masthead" data-sticky data-sticky-on="large" data-top-anchor="180" data-btm-anchor="300000">
+    <div id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="180" data-btm-anchor="300000">
       <header>
 
-        <div id="global-masthead" class="clearfix">
+        <div id="masthead-black-bar" class="clearfix masthead-black-bar">
           <!--This has to be one line and no newline characters-->
           <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>
 
@@ -100,7 +100,7 @@
                           <div class="input-group-button">
                             <input type="submit" name="submit" value="Search" class="button">
                             <input type="hidden" name="db" value="allebi" checked="checked">
-                            <input type="hidden" name="requestFrom" value="global-masthead" checked="checked">
+                            <input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">
                           </div>
                         </div>
                       </fieldset>
@@ -117,7 +117,7 @@
 
         </div>
 
-        <div class="masthead row">
+        <div class="masthead-inner row">
 
           <!-- local-title -->
           <div class="columns medium-7" id="local-title">
@@ -188,8 +188,8 @@
       -->
 
       <div id="main-content-area" class="medium-12 columns">
-        <h2>EBI Visual Framework </h2>
-        <p>This is an early implementation of v1.2 of the framework, for more information:</p>
+        <h2>EBI Visual Framework</h2>
+        <p>This is a development implementation of the EBI Visual Framework v1.2; for more information:</p>
         <ul>
           <li><a href="https://github.com/ebiwd/EBI-Framework/tree/v1.2" class="readmore">Check out the GitHub branch</a></li>
           <li><a href="https://github.com/ebiwd/EBI-Framework/issues/61" class="readmore">Read and discuss the roadmap</a></li>
