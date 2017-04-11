@@ -608,7 +608,7 @@ body .breadcrumbs a {
 /*
     LOCAL FOOTER
   =============================== */
-#local-footer {
+.local-footer {
   border-top: 2px solid #eee; }
 
 /*
@@ -617,13 +617,13 @@ body .breadcrumbs a {
 footer a, footer a:visited {
   color: #666; }
 
-#global-footer {
+.global-footer {
   border-top: 5px solid #eee;
   padding-top: .5rem; }
-  #global-footer h5 {
+  .global-footer h5 {
     margin-top: 1.25rem;
     margin-bottom: 5px; }
-  #global-footer .ebi-logo {
+  .global-footer .ebi-logo {
     display: block;
     height: 53px;
     width: 89%;
@@ -633,21 +633,21 @@ footer a, footer a:visited {
     margin-left: -.25rem;
     position: relative;
     top: 8px; }
-  #global-footer p {
+  .global-footer p {
     margin: 0 0 5px 0; }
-  #global-footer ul {
+  .global-footer ul {
     margin-left: 0;
     font-size: 85%;
     list-style: none; }
-  #global-footer a:hover,
-  #global-footer a:focus,
-  #global-footer a:active {
+  .global-footer a:hover,
+  .global-footer a:focus,
+  .global-footer a:active {
     border-bottom: 1px dashed #e4e4e4; }
 
-#ebi-footer-meta {
+.ebi-footer-meta {
   font-size: 85%;
   margin-bottom: 9px; }
-  #ebi-footer-meta p.address {
+  .ebi-footer-meta p.address {
     color: #888; }
 
 /*
@@ -1051,7 +1051,7 @@ a.more:after {
   .masthead-black-bar nav,
   .masthead nav,
   form#local-search,
-  #global-footer,
+  .global-footer,
   #search_ebi,
   #shortcuts,
   #ebi_search_results {
