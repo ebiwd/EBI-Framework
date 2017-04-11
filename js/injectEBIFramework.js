@@ -117,8 +117,6 @@ function injectEBIFramework() {
                         '<div id="masthead" class="masthead">' +
                           '<header>' +
                             '<div id="masthead-black-bar" class="clearfix masthead-black-bar">' +
-                              '<!--This has to be one line and no newline characters-->' +
-                              '<a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><span class="ebi-logo"></span></a>' +
                               '<nav>' +
                                 '<div class="row">' +
                                   '<ul id="global-nav" class="menu">' +
