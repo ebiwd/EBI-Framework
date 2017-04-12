@@ -142,7 +142,7 @@ a:active {
   /* Disable masthead-black-bar search when told */
   body.no-global-search .masthead-black-bar ul.menu li.search { display: none; }
 
-  .masthead-black-bar {
+  .masthead .masthead-black-bar {
     ul.menu li a:hover,
     ul.menu li a:active,
     ul.menu li a:focus,

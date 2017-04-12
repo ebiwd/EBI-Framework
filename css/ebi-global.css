@@ -191,7 +191,7 @@ nav a:hover {
 body.no-global-search .masthead-black-bar ul.menu li.search {
   display: none; }
 
-.masthead-black-bar {
+.masthead .masthead-black-bar {
   /* custom colour for Home */
   /* custom colour for Services */
   /* custom colour for Research */
@@ -199,65 +199,65 @@ body.no-global-search .masthead-black-bar ul.menu li.search {
   /* custom colour for About us */
   /* Custom icon for search */
   /* EMBL Dropdwon styles */ }
-  .masthead-black-bar ul.menu li a:hover,
-  .masthead-black-bar ul.menu li a:active,
-  .masthead-black-bar ul.menu li a:focus,
-  .masthead-black-bar ul.menu li.active a,
-  .masthead-black-bar ul.menu li.active-trail a {
+  .masthead .masthead-black-bar ul.menu li a:hover,
+  .masthead .masthead-black-bar ul.menu li a:active,
+  .masthead .masthead-black-bar ul.menu li a:focus,
+  .masthead .masthead-black-bar ul.menu li.active a,
+  .masthead .masthead-black-bar ul.menu li.active-trail a {
     color: white;
     border-bottom: none; }
-  .masthead-black-bar ul.menu li.active a,
-  .masthead-black-bar ul.menu li.active-trail a {
+  .masthead .masthead-black-bar ul.menu li.active a,
+  .masthead .masthead-black-bar ul.menu li.active-trail a {
     background: black; }
-  .masthead-black-bar ul li.home a:before {
+  .masthead .masthead-black-bar ul li.home a:before {
     font-family: 'EBI-Generic';
     content: 'H '; }
-  .masthead-black-bar ul li.home a:hover,
-  .masthead-black-bar ul li.home a:active,
-  .masthead-black-bar ul li.home a:focus {
+  .masthead .masthead-black-bar ul li.home a:hover,
+  .masthead .masthead-black-bar ul li.home a:active,
+  .masthead .masthead-black-bar ul li.home a:focus {
     background-color: #007c82; }
-  .masthead-black-bar ul li.services a:before {
+  .masthead .masthead-black-bar ul li.services a:before {
     font-family: 'EBI-Generic';
     content: '( '; }
-  .masthead-black-bar ul li.services a:hover,
-  .masthead-black-bar ul li.services a:active,
-  .masthead-black-bar ul li.services a:focus {
+  .masthead .masthead-black-bar ul li.services a:hover,
+  .masthead .masthead-black-bar ul li.services a:active,
+  .masthead .masthead-black-bar ul li.services a:focus {
     background-color: #389198; }
-  .masthead-black-bar ul li.research a:before {
+  .masthead .masthead-black-bar ul li.research a:before {
     font-family: 'EBI-Generic';
     content: ') '; }
-  .masthead-black-bar ul li.research a:hover,
-  .masthead-black-bar ul li.research a:active,
-  .masthead-black-bar ul li.research a:focus {
+  .masthead .masthead-black-bar ul li.research a:hover,
+  .masthead .masthead-black-bar ul li.research a:active,
+  .masthead .masthead-black-bar ul li.research a:focus {
     background-color: #6dab49; }
-  .masthead-black-bar ul li.training a:before {
+  .masthead .masthead-black-bar ul li.training a:before {
     font-family: 'EBI-Generic';
     content: 't '; }
-  .masthead-black-bar ul li.training a:hover,
-  .masthead-black-bar ul li.training a:active,
-  .masthead-black-bar ul li.training a:focus {
+  .masthead .masthead-black-bar ul li.training a:hover,
+  .masthead .masthead-black-bar ul li.training a:active,
+  .masthead .masthead-black-bar ul li.training a:focus {
     background-color: #e9b400; }
-  .masthead-black-bar ul li.about a:before {
+  .masthead .masthead-black-bar ul li.about a:before {
     font-family: 'EBI-Generic';
     content: 'i '; }
-  .masthead-black-bar ul li.about a:hover,
-  .masthead-black-bar ul li.about a:active,
-  .masthead-black-bar ul li.about a:focus,
-  .masthead-black-bar ul li.about-us a:hover,
-  .masthead-black-bar ul li.about-us a:active,
-  .masthead-black-bar ul li.about-us a:focus {
+  .masthead .masthead-black-bar ul li.about a:hover,
+  .masthead .masthead-black-bar ul li.about a:active,
+  .masthead .masthead-black-bar ul li.about a:focus,
+  .masthead .masthead-black-bar ul li.about-us a:hover,
+  .masthead .masthead-black-bar ul li.about-us a:active,
+  .masthead .masthead-black-bar ul li.about-us a:focus {
     background-color: #389198; }
-  .masthead-black-bar ul li.search a:before {
+  .masthead .masthead-black-bar ul li.search a:before {
     font-family: 'EBI-Functional';
     content: '1'; }
-  .masthead-black-bar ul li.search .dropdown-pane {
+  .masthead .masthead-black-bar ul li.search .dropdown-pane {
     width: 100%;
     left: 0;
     background: #222;
     border: none;
     margin-top: -2px;
     color: #fff; }
-  .masthead-black-bar .dropdown-pane.embl-dropdown {
+  .masthead .masthead-black-bar .dropdown-pane.embl-dropdown {
     background-color: #007c82;
     background-image: url("../images/map.png");
     background-position: 100% 100%;
@@ -267,14 +267,14 @@ body.no-global-search .masthead-black-bar ul.menu li.search {
     padding-right: 17rem;
     min-width: 39.9375em;
     left: 0; }
-    .masthead-black-bar .dropdown-pane.embl-dropdown h6 {
+    .masthead .masthead-black-bar .dropdown-pane.embl-dropdown h6 {
       color: white;
       font-weight: 700; }
-    .masthead-black-bar .dropdown-pane.embl-dropdown .button {
+    .masthead .masthead-black-bar .dropdown-pane.embl-dropdown .button {
       color: #007c82;
       background: #fff; }
   @media screen and (max-width: 39.9375em) {
-    .masthead-black-bar .dropdown-pane.embl-dropdown {
+    .masthead .masthead-black-bar .dropdown-pane.embl-dropdown {
       display: none;
       width: 0 !important;
       overflow: hidden; } }
