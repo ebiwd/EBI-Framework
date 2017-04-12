@@ -638,8 +638,22 @@ body .breadcrumbs a {
 .ebi-footer-meta {
   font-size: 85%;
   margin-bottom: 9px; }
-  .ebi-footer-meta p.address {
-    color: #888; }
+
+/*
+    COOKIE BANNER
+  =============================== */
+.cookie-banner {
+  position: fixed;
+  background-color: #222;
+  width: 100%;
+  padding: 1rem;
+  left: 0;
+  bottom: 0;
+  color: #eee; }
+  .cookie-banner a, .cookie-banner a:hover {
+    color: #f8f8f8; }
+  .cookie-banner .text {
+    margin-right: 2em; }
 
 /*
     MISC TWEAKS
