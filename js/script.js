@@ -9,7 +9,6 @@
         url.indexOf('//www.ebi.ac.uk') !== -1 ||
         url.indexOf('//wwwdev.ebi.ac.uk') !== -1 ||
         url.indexOf('//srs.ebi.ac.uk') !== -1 ||
-        url.indexOf('//frontier.ebi.ac.uk') !== -1 ||
         url.indexOf('//ftp.ebi.ac.uk') !== -1 ||
         url.indexOf('//intranet.ebi.ac.uk') !== -1 ||
         url.indexOf('//pdbe.org') !== -1 ||
@@ -57,7 +56,6 @@
                         '</div>' +
                       '</fieldset> ' +
                     '</form>';
-
         try {
           var gloablSearch = document.getElementById('search-global-dropdown');
           gloablSearch.innerHTML = html;
@@ -70,10 +68,10 @@
   })();
 
   // Add error alerts for 'no input' on search boxes.
+  // Todo: this, perhaps, shoule be moved to a value-add script file
   (function searchNullError() {
     try {
       var disabled = document.body.className.indexOf('no-search-error') !== -1;
-
       // Array of search box definition objects, specify inputNode, defaultText (optional, default ''), errorText (optional, default 'Please enter a search term')
       var searchBoxes = [
         { inputNode: document.getElementById('global-searchbox') }, // in global masthead
@@ -138,24 +136,6 @@
     catch (err) {}
   })();
 
-  // Tap the location bar to scroll to the top
-  // Disabled for v1.1 per https://github.com/ebiwd/EBI-Framework/issues/23
-  // (function scrollMeUp() {
-  //   var masthead = document.getElementById('masthead');
-  //   masthead.onclick = function(e){
-  //     if (e.target.nodeName == 'A')
-  //       return;
-  //     // if jQuery then do it all pretty like
-  //     if (window.jQuery) {
-  //       $('html,body').animate({
-  //         scrollTop: 0
-  //       }, 700);
-  //     } else {
-  //       window.scrollTo(0,0);
-  //     }
-  //   }
-  // })();
-
   // Assign global nav background images through meta tags
   (function assignImageByMetaTags() {
     var masthead = document.getElementById('masthead');
@@ -210,72 +190,77 @@
       // We don't invoke the dropdown here, as that method depends on how you're using the Framework
     }
     catch(err) {};
-
   })();
-
 })();
 
 (function updateFoot() {
-    var html = '' + '<div class="columns small-6 medium-2 "> ' + ' <a href="//www.ebi.ac.uk" title="EMBL-EBI"><span class="ebi-logo"></span></a> ' + ' <ul> ' + ' </ul> ' + ' </div> ' + ' ' + ' <div class="columns small-6 medium-2 "> ' + ' <h5 class="services"><a class="services-color" href="//www.ebi.ac.uk/services">Services</a></h5> ' + ' <ul> ' + ' <li class="first"><a href="//www.ebi.ac.uk/services">By topic</a></li> ' + ' <li><a href="//www.ebi.ac.uk/services/all">By name (A-Z)</a></li> ' + ' <li class="last"><a href="//www.ebi.ac.uk/support">Help &amp; Support</a></li> ' + ' </ul> ' + ' </div> ' + ' ' + ' <div class="columns small-6 medium-2 "> ' + ' <h5 class="research"><a class="research-color" href="//www.ebi.ac.uk/research">Research</a></h5> ' + ' <ul> ' + ' <li><a href="//www.ebi.ac.uk/research/publications">Publications</a></li> ' + ' <li><a href="//www.ebi.ac.uk/research/groups">Research groups</a></li> ' + ' <li class="last"><a href="//www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="//www.ebi.ac.uk/research/eipp">PhDs</a></li> ' + ' </ul> ' + ' </div> ' + ' ' + ' <div class="columns small-6 medium-2 "> ' + ' <h5 class="training"><a class="training-color" href="//www.ebi.ac.uk/training">Training</a></h5> ' + ' <ul> ' + ' <li><a href="//www.ebi.ac.uk/training/handson">Train at EBI</a></li> ' + ' <li><a href="//www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li> ' + ' <li><a href="//www.ebi.ac.uk/training/online">Train online</a></li> ' + ' <li class="last"><a href="//www.ebi.ac.uk/training/contact-us">Contact organisers</a></li> ' + ' </ul> ' + ' </div> ' + ' ' + ' <div class="columns small-6 medium-2 "> ' + ' <h5 class="industry"><a class="industry-color" href="//www.ebi.ac.uk/industry">Industry</a></h5> ' + ' <ul> ' + ' <li><a href="//www.ebi.ac.uk/industry/private">Members Area</a></li> ' + ' <li><a href="//www.ebi.ac.uk/industry/workshops">Workshops</a></li> ' + ' <li><a href="//www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li> ' + ' <li class="last"><a href="//www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li> ' + ' </ul> ' + ' </div> ' + ' ' + ' <div class="columns small-6 medium-2 "> ' + ' <h5 class="about"><a class="ebi-color" href="//www.ebi.ac.uk/about">About EMBL-EBI</a></h5> ' + ' <ul> ' +
-    ' <li><a href="//www.ebi.ac.uk/about/contact">Contact us</a> ' +
-    ' <li><a href="//www.ebi.ac.uk/about/events">Events</a></li> ' +
-    ' <li><a href="//www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li> ' +
-    ' <li class="first"><a href="//www.ebi.ac.uk/about/news">News</a></li> ' +
-    ' <li><a href="//www.ebi.ac.uk/about/people">People &amp; groups</a></li> ' +
-    ' </ul> ' + ' </div>' + '';
+    var html = '<div class="columns small-6 medium-2 ">' +
+      '<a href="//www.ebi.ac.uk" title="EMBL-EBI"><span class="ebi-logo"></span></a>'  +
+    '</div>' +
+    '<div class="columns small-6 medium-2">' +
+      '<h5 class="services"><a class="services-color" href="//www.ebi.ac.uk/services">Services</a></h5><ul>' + ' <li class="first"><a href="//www.ebi.ac.uk/services">By topic</a></li> ' + ' <li><a href="//www.ebi.ac.uk/services/all">By name (A-Z)</a></li> ' + ' <li class="last"><a href="//www.ebi.ac.uk/support">Help &amp; Support</a></li> ' + '</ul></div>' +
+    '<div class="columns small-6 medium-2">' +
+      '<h5 class="research"><a class="research-color" href="//www.ebi.ac.uk/research">Research</a></h5><ul>' + ' <li><a href="//www.ebi.ac.uk/research/publications">Publications</a></li> ' + ' <li><a href="//www.ebi.ac.uk/research/groups">Research groups</a></li> ' + ' <li class="last"><a href="//www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="//www.ebi.ac.uk/research/eipp">PhDs</a></li> ' +
+    '</ul></div>' +
+    '<div class="columns small-6 medium-2"> ' +
+      '<h5 class="training"><a class="training-color" href="//www.ebi.ac.uk/training">Training</a></h5><ul>' + ' <li><a href="//www.ebi.ac.uk/training/handson">Train at EBI</a></li> ' + ' <li><a href="//www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li> ' + ' <li><a href="//www.ebi.ac.uk/training/online">Train online</a></li> ' + ' <li class="last"><a href="//www.ebi.ac.uk/training/contact-us">Contact organisers</a></li> ' +
+    '</ul></div> ' +
+    '<div class="columns small-6 medium-2"> ' +
+      '<h5 class="industry"><a class="industry-color" href="//www.ebi.ac.uk/industry">Industry</a></h5><ul>' + ' <li><a href="//www.ebi.ac.uk/industry/private">Members Area</a></li> ' + ' <li><a href="//www.ebi.ac.uk/industry/workshops">Workshops</a></li> ' + ' <li><a href="//www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li> ' + ' <li class="last"><a href="//www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li> ' + '</ul></div> ' +
+    '<div class="columns small-6 medium-2"> ' +
+      '<h5 class="about"><a class="ebi-color" href="//www.ebi.ac.uk/about">About EMBL-EBI</a></h5><ul> ' + ' <li><a href="//www.ebi.ac.uk/about/contact">Contact us</a>' + '<li><a href="//www.ebi.ac.uk/about/events">Events</a></li> ' + ' <li><a href="//www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li> ' + ' <li class="first"><a href="//www.ebi.ac.uk/about/news">News</a></li> ' + ' <li><a href="//www.ebi.ac.uk/about/people">People &amp; groups</a></li> ' +
+    '</ul></div>';
 
     function init() {
-        try {
-            var foot = document.getElementById('global-nav-expanded');
-            foot.innerHTML = html;
-        } catch (err) {
-            setTimeout(init, 500);
-        }
+      try {
+        var foot = document.getElementById('global-nav-expanded');
+        foot.innerHTML = html;
+      } catch (err) {
+        setTimeout(init, 500);
+      }
     }
     init();
 })();
 
 (function updateFooterMeta() {
     var d = new Date();
-    var html = '<div class="columns">' + '<p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK. +44 (0)1223 49 44 44</p> <p class="legal">Copyright &copy; EMBL-EBI ' + d.getFullYear() + ' | EMBL-EBI is <a href="http://www.embl.org/">part of the European Molecular Biology Laboratory</a> | <a href="//www.ebi.ac.uk/about/terms-of-use">Terms of use</a>' +
-    '<a class="readmore float-right" href="http://intranet.ebi.ac.uk">Intranet</a>' +
-    '</p>' + '</div>';
+    var html = '<div class="columns">' +
+                  '<p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK. +44 (0)1223 49 44 44</p> <p class="legal">Copyright &copy; EMBL-EBI ' + d.getFullYear() + ' | EMBL-EBI is <a href="http://www.embl.org/">part of the European Molecular Biology Laboratory</a> | <a href="//www.ebi.ac.uk/about/terms-of-use">Terms of use</a>' +
+                  '<a class="readmore float-right" href="http://intranet.ebi.ac.uk">Intranet</a>' +
+                '</p></div>';
 
     function init() {
         try {
-            var foot = document.getElementById('ebi-footer-meta');
-            foot.innerHTML = html;
-        } catch (err) {
-            setTimeout(init, 500);
-        }
+          var foot = document.getElementById('ebi-footer-meta');
+          foot.innerHTML = html;
+        } catch (err) { setTimeout(init, 500); }
     }
     init();
 })();
 (function includeScripts() {
-    var requireScripts = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/script.js', '//www.ebi.ac.uk/web_guidelines/js/downtime.js?' + Math.round(new Date().getTime() / 3600000)];
+  var requireScripts = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/script.js', // make sure we have script.js from where we expect
+                        '//www.ebi.ac.uk/web_guidelines/js/downtime.js?' + Math.round(new Date().getTime() / 3600000)]; // refresh downtime.js once an hour
 
-    function init() {
-        try {
-            var existingScripts = document.getElementsByTagName('script');
-            var gotScript, i, j, putScript;
-            for (j = 0; j < requireScripts.length; j++) {
-                for (gotScript = false, i = 0; i < existingScripts.length; i++)
-                    if (existingScripts[i].src.indexOf(requireScripts[j]) !== -1)
-                        gotScript = true;
-                if (!gotScript) {
-                    putComment = document.createComment(requireScripts[j] + ' automatically inserted');
-                    putScript = document.createElement('script');
-                    putScript.type = 'text/javascript';
-                    putScript.src = requireScripts[j];
-                    document.body.appendChild(putComment);
-                    document.body.appendChild(putScript);
-                }
-            }
-        } catch (err) {
-            setTimeout(init, 500);
+  function init() {
+      try {
+        var existingScripts = document.getElementsByTagName('script');
+        var gotScript, i, j, putScript;
+        for (j = 0; j < requireScripts.length; j++) {
+          for (gotScript = false, i = 0; i < existingScripts.length; i++)
+            if (existingScripts[i].src.indexOf(requireScripts[j]) !== -1)
+              gotScript = true;
+          if (!gotScript) {
+            putComment = document.createComment(requireScripts[j] + ' automatically inserted');
+            putScript = document.createElement('script');
+            putScript.type = 'text/javascript';
+            putScript.src = requireScripts[j];
+            document.body.appendChild(putComment);
+            document.body.appendChild(putScript);
+          }
         }
-    }
-    init();
+      } catch (err) { setTimeout(init, 500); }
+  }
+  init();
 })();
 
 (function cookieBanner() {
@@ -291,8 +276,7 @@
 
   function getCookie(c_name) {
     var i, x, y, ARRcookies=document.cookie.split(";");
-    for (i=0; i<ARRcookies.length; i++)
-    {
+    for (i=0; i<ARRcookies.length; i++) {
       x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
       y = ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
       x = x.replace(/^\s+|\s+$/g,"");
@@ -302,36 +286,18 @@
     }
   }
 
-  function createStyles() {
-    var head = document.head || document.getElementsByTagName('head')[0];
-    var style = document.createElement('style');
-
-    style.type = 'text/css';
-    var css = "" +
-    "  #cookie-banner {position:fixed;background-color:#111;width:100%;padding:.75rem;left:0;bottom:0;color:#eee;}" +
-    "  #cookie-banner a {color:#fff;}" +
-    "  .text {margin-right:2em;}";
-
-    if (style.styleSheet){
-      style.styleSheet.cssText = css;
-    } else {
-      style.appendChild(document.createTextNode(css));
-    }
-
-    head.appendChild(style);
-  }
-
   function createBanner() {
     var banner = document.createElement('div');
     var wrapper = document.createElement('div');
     var inner = document.createElement('div');
 
     banner.id = "cookie-banner";
+    banner.className = "cookie-banner";
     wrapper.className = "row";
     wrapper.innerHTML = "" +
-    "  <div class='text'>This website uses cookies. By continuing to browse this site, you are agreeing to the use of our site cookies. " +
-    "  To find out more, see our <a href='//www.ebi.ac.uk/about/terms-of-use'>Terms of Use</a>.</div>" +
-    "  <div id='cookie-dismiss'>  <button class='close-button' style='top: 0.3rem; color:#fff;' aria-label='Close alert' type='button'><span aria-hidden='true'>&times;</span></button></div>" +
+    "<span class='text'>This website uses cookies. By continuing to browse this site, you are agreeing to the use of our site cookies. " +
+    "To find out more, see our <a href='//www.ebi.ac.uk/about/terms-of-use'>Terms of Use</a>.</span>" +
+    "<div id='cookie-dismiss'><button class='close-button' style='top: 0.3rem; color:#fff;' aria-label='Close alert' type='button'><span aria-hidden='true'>&times;</span></button></div>" +
     "";
 
     document.body.appendChild(banner);
@@ -353,23 +319,16 @@
   function init() {
     try {
       if (getCookie('cookies-accepted') !== 'true') {
-        createStyles();
         createBanner();
         openBanner();
-
         setCookie('cookies-accepted', 'true', 90); // show cookie message only once
-
         document.getElementById('cookie-dismiss').onclick = function() {
           closeBanner();
           return false;
         };
       }
     }
-    catch(err) {
-      setTimeout(init, 100);
-    }
+    catch(err) { setTimeout(init, 100); }
   }
-
   init();
-
 })();

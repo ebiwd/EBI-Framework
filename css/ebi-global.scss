@@ -583,11 +583,22 @@ a:active {
 
   .ebi-footer-meta {
     font-size: 85%; margin-bottom: 9px;
-
-    p.address { color: #888; }
-
   } // END .ebi-footer-meta
 
+  /*
+    COOKIE BANNER
+  =============================== */
+  .cookie-banner {
+    position:fixed;
+    background-color:$ebi-colour-dark;
+    width:100%;
+    padding:$global-padding;
+    left:0;
+    bottom:0;
+    color:#eee;
+    a, a:hover { color:$ebi-colour-light; }
+    .text { margin-right:2em; }
+  }  // END .cookie-banner
 
   /*
     MISC TWEAKS
