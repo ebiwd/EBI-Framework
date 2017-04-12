@@ -1,36 +1,4 @@
-/* Copyright (c) EMBL-EBI 2016 */
-(function temporaryFixes() {
-  // TEMPORARY FIX
-  // hide global navigation and search for /pdbe, /msd
-/*
-  (function hideGlobalStuff() {
-    try {
-      if (document.location.pathname.substr(0,5) === '/pdbe' || document.location.pathname.substr(0,4) === '/msd') {
-        if (document.body.className.indexOf('no-global-nav') === -1) document.body.className += ' no-global-nav';
-        if (document.body.className.indexOf('no-global-search') === -1) document.body.className += ' no-global-search';
-      }
-    }
-    catch(err) {
-    }
-  })();
-*/
-
-  // TEMPORARY FIX
-  // if on frontier.ebi.ac.uk ensure global nav links are pointing to frontier domain
-  (function globalnavFix() {
-    try {
-      if (document.domain === 'frontier.ebi.ac.uk') {
-        document.getElementById('services').innerHTML = "<a href=\"/services\">Services</a>";
-        document.getElementById('research').innerHTML = "<a href=\"/research\">Research</a>";
-        document.getElementById('training').innerHTML = "<a href=\"/training\">Training</a>";
-        document.getElementById('industry').innerHTML = "<a href=\"/industry\">Industry</a>";
-        (document.getElementById('about') || document.getElementById('about-us')).innerHTML = "<a href=\"/about\">About us</a>";
-      }
-    }
-    catch (err) {}
-  })();
-})();
-
+/* Copyright (c) EMBL-EBI 2017 */
 (function fixes() {
   // mark pdf/doc/txt links with link-pdf/link-doc/link-txt classes
   // exclude links with images
