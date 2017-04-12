@@ -184,11 +184,11 @@ nav a:hover {
     margin-left: 6px; } }
 
 @media screen and (min-width: 40em) {
-  .masthead nav ul#global-nav.menu li.home-mobile {
+  .masthead .masthead-black-bar nav ul.menu li.home-mobile {
     display: none; } }
 
 /* Disable masthead-black-bar search when told */
-body.no-global-search .masthead-black-bar ul#global-nav li.search {
+body.no-global-search .masthead-black-bar ul.menu li.search {
   display: none; }
 
 .masthead-black-bar {
@@ -197,16 +197,17 @@ body.no-global-search .masthead-black-bar ul#global-nav li.search {
   /* custom colour for Research */
   /* custom colour for Training */
   /* custom colour for About us */
-  /* Custom icon for search */ }
-  .masthead-black-bar ul#global-nav li a:hover,
-  .masthead-black-bar ul#global-nav li a:active,
-  .masthead-black-bar ul#global-nav li a:focus,
-  .masthead-black-bar ul#global-nav li.active a,
-  .masthead-black-bar ul#global-nav li.active-trail a {
+  /* Custom icon for search */
+  /* EMBL Dropdwon styles */ }
+  .masthead-black-bar ul.menu li a:hover,
+  .masthead-black-bar ul.menu li a:active,
+  .masthead-black-bar ul.menu li a:focus,
+  .masthead-black-bar ul.menu li.active a,
+  .masthead-black-bar ul.menu li.active-trail a {
     color: white;
     border-bottom: none; }
-  .masthead-black-bar ul#global-nav li.active a,
-  .masthead-black-bar ul#global-nav li.active-trail a {
+  .masthead-black-bar ul.menu li.active a,
+  .masthead-black-bar ul.menu li.active-trail a {
     background: black; }
   .masthead-black-bar ul li.home a:before {
     font-family: 'EBI-Generic';
@@ -249,67 +250,60 @@ body.no-global-search .masthead-black-bar ul#global-nav li.search {
   .masthead-black-bar ul li.search a:before {
     font-family: 'EBI-Functional';
     content: '1'; }
+  .masthead-black-bar ul li.search .dropdown-pane {
+    width: 100%;
+    left: 0;
+    background: #222;
+    border: none;
+    margin-top: -2px;
+    color: #fff; }
+  .masthead-black-bar .dropdown-pane.embl-dropdown {
+    background-color: #007c82;
+    background-image: url("../images/map.png");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 20rem;
+    padding-right: 17rem;
+    min-width: 39.9375em;
+    left: 0; }
+    .masthead-black-bar .dropdown-pane.embl-dropdown h6 {
+      color: white;
+      font-weight: 700; }
+    .masthead-black-bar .dropdown-pane.embl-dropdown .button {
+      color: #007c82;
+      background: #fff; }
+  @media screen and (max-width: 39.9375em) {
+    .masthead-black-bar .dropdown-pane.embl-dropdown {
+      display: none;
+      width: 0 !important;
+      overflow: hidden; } }
 
 header .masthead-inner {
   padding-top: 2.5rem;
   color: #fff; }
 
-#search-global-dropdown {
-  width: 100%;
-  left: 0;
-  background: #222;
-  border: none;
-  margin-top: -2px;
-  color: #fff; }
-
-/* EMBL Dropdwon styles */
-#embl-dropdown {
-  background-color: #007c82;
-  background-image: url("../images/map.png");
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  color: #fff;
-  height: 20rem;
-  padding-right: 17rem;
-  min-width: 39.9375em; }
-
-@media screen and (max-width: 39.9375em) {
-  #embl-dropdown {
-    display: none;
-    width: 0 !important;
-    overflow: hidden; } }
-
-#embl-dropdown h6 {
-  color: white;
-  font-weight: 700; }
-
-#embl-dropdown .button {
-  color: #007c82;
-  background: #fff; }
-
-#embl-dropdown.dropdown-pane {
-  left: 0; }
-
 /* Local masthead secondary links on mobile */
 @media screen and (max-width: 39.9375em) {
   .masthead ul.menu.dropdown.float-right > li {
     margin-bottom: -50px; }
-  .masthead nav ul#global-nav.menu li {
-    float: none;
-    display: inline-block; }
-  .masthead nav ul#global-nav.menu li.home-mobile {
-    float: left; }
-  ul#global-nav {
-    text-align: right; }
-  /* make icon bar smaller for mobile */
-  ul#global-nav.menu > li > a > img, ul#global-nav.menu > li > a > i {
-    display: block;
-    margin: 0 auto 0.25rem;
-    font-size: 16px; }
-  ul#global-nav.menu > li > a {
-    text-align: center;
-    font-size: 10px;
-    padding: .6rem .35rem; } }
+  .masthead .masthead-black-bar nav ul.menu {
+    text-align: right;
+    /* make icon bar smaller for mobile */ }
+    .masthead .masthead-black-bar nav ul.menu li {
+      float: none;
+      display: inline-block; }
+    .masthead .masthead-black-bar nav ul.menu li.home-mobile {
+      float: left; }
+    .masthead .masthead-black-bar nav ul.menu > li > a > img,
+    .masthead .masthead-black-bar nav ul.menu > li > a:before {
+      display: block;
+      margin: 0 auto 0.25rem;
+      font-size: 16px; }
+    .masthead .masthead-black-bar nav ul.menu > li > a {
+      text-align: center;
+      font-size: 10px;
+      padding: .6rem .35rem; } }
 
 /*
     LOCAL MASTHEAD
@@ -601,7 +595,7 @@ body .breadcrumbs a {
     overflow: hidden; }
   .embl-selector .button:after {
     display: none; }
-  .masthead nav ul#global-nav.menu li a {
+  .masthead .masthead-black-bar nav ul.menu li a {
     padding-right: .5rem;
     padding-left: .5rem; } }
 
@@ -614,9 +608,6 @@ body .breadcrumbs a {
 /*
     GLOBAL FOOTER
   ================================ */
-footer a, footer a:visited {
-  color: #666; }
-
 .global-footer {
   border-top: 5px solid #eee;
   padding-top: .5rem; }
