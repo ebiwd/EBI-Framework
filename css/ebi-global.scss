@@ -276,7 +276,7 @@ a:active {
 
       /* make icon bar smaller for mobile */
       > li > a > img,
-      > li > a > i {
+      > li > a:before {
         display: block;
         margin: 0 auto 0.25rem;
         font-size: 16px;
