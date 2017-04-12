@@ -136,24 +136,24 @@ a:active {
     }
   }
   @media screen and (min-width: 40em) {
-    .masthead nav ul#global-nav.menu li.home-mobile { display: none; }
+    .masthead .masthead-black-bar nav ul.menu li.home-mobile { display: none; }
   }
 
   /* Disable masthead-black-bar search when told */
-  body.no-global-search .masthead-black-bar ul#global-nav li.search { display: none; }
+  body.no-global-search .masthead-black-bar ul.menu li.search { display: none; }
 
   .masthead-black-bar {
-    ul#global-nav li a:hover,
-    ul#global-nav li a:active,
-    ul#global-nav li a:focus,
-    ul#global-nav li.active a,
-    ul#global-nav li.active-trail a {
+    ul.menu li a:hover,
+    ul.menu li a:active,
+    ul.menu li a:focus,
+    ul.menu li.active a,
+    ul.menu li.active-trail a {
       color: white;
       border-bottom: none;
     }
 
-    ul#global-nav li.active a,
-    ul#global-nav li.active-trail a {
+    ul.menu li.active a,
+    ul.menu li.active-trail a {
       background: rgb(0,0,0);
     }
 
@@ -221,69 +221,71 @@ a:active {
       content: '1';
     }
 
+    ul li.search .dropdown-pane {
+      width: 100%;
+      left: 0;
+      background: $ebi-colour-dark;
+      border: none;
+      margin-top: -2px;
+      color: #fff;
+    }
+
+    /* EMBL Dropdwon styles */
+    .dropdown-pane.embl-dropdown {
+      background-color: #007c82;
+      background-image: url('../images/map.png');
+      background-position: 100% 100%;
+      background-repeat: no-repeat;
+      color: #fff;
+      height: 20rem;
+      padding-right: 17rem;
+      min-width: 39.9375em;
+      left: 0; //fix position of menu, to prevent horizontal scrolling of page
+
+      h6 { color: white; font-weight: 700; }
+      .button { color: #007c82; background: #fff; }
+    }
+    @media screen and (max-width: 39.9375em) {
+      .dropdown-pane.embl-dropdown {
+        // do not show embl-dropdown on small screens at all
+        display: none;
+        width: 0 !important;
+        overflow: hidden;
+      }
+    }
+
   }
 
   header .masthead-inner {
     padding-top: 2.5rem;
     color: #fff;
   }
-
-  #search-global-dropdown {
-    width: 100%;
-    left: 0;
-    background: $ebi-colour-dark;
-    border: none;
-    margin-top: -2px;
-    color: #fff;
-  }
-
   // END .masthead
-
-  /* EMBL Dropdwon styles */
-  #embl-dropdown {
-    background-color: #007c82;
-    background-image: url('../images/map.png');
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    color: #fff;
-    height: 20rem;
-    padding-right: 17rem;
-    min-width: 39.9375em;
-  }
-  @media screen and (max-width: 39.9375em) {
-    #embl-dropdown {
-      // do not show embl-dropdown on small screens at all
-      display: none;
-      width: 0 !important;
-      overflow: hidden;
-    }
-  }
-  #embl-dropdown h6 { color: white; font-weight: 700; }
-  #embl-dropdown .button { color: #007c82; background: #fff; }
-  #embl-dropdown.dropdown-pane { left: 0; } //fix position of menu, to prevent horizontal scrolling of page
 
   /* Local masthead secondary links on mobile */
   @media screen and (max-width: 39.9375em) {
     .masthead ul.menu.dropdown.float-right > li {
-     margin-bottom: -50px;
+      margin-bottom: -50px;
     }
 
-    .masthead nav ul#global-nav.menu li { float: none; display: inline-block; }
-    .masthead nav ul#global-nav.menu li.home-mobile { float: left; }
+    .masthead .masthead-black-bar nav ul.menu {
+      text-align: right;
 
-    ul#global-nav { text-align: right; }
+      li { float: none; display: inline-block; }
+      li.home-mobile { float: left; }
 
-    /* make icon bar smaller for mobile */
-    ul#global-nav.menu > li > a > img, ul#global-nav.menu > li > a > i {
-      display: block;
-      margin: 0 auto 0.25rem;
-      font-size: 16px;
-    }
-
-    ul#global-nav.menu > li > a {
+      /* make icon bar smaller for mobile */
+      > li > a > img,
+      > li > a > i {
+        display: block;
+        margin: 0 auto 0.25rem;
+        font-size: 16px;
+      }
+      > li > a {
         text-align: center;
         font-size: 10px;
         padding: .6rem .35rem;
+      }
     }
   }
 
@@ -527,7 +529,7 @@ a:active {
   @media screen and (max-width: 53em) {
     .embl-selector .button { width: 0px; padding-right:0; overflow: hidden;}
     .embl-selector .button:after { display: none; }
-    .masthead nav ul#global-nav.menu li a { padding-right: .5rem; padding-left: .5rem;}
+    .masthead .masthead-black-bar nav ul.menu li a { padding-right: .5rem; padding-left: .5rem;}
   }
 
 

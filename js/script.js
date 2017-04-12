@@ -215,7 +215,7 @@
       }
 
       var dropdownDiv = document.createElement("div");
-      dropdownDiv.innerHTML = '<div id="embl-dropdown" class="dropdown-pane bottom" data-dropdown>' +
+      dropdownDiv.innerHTML = '<div id="embl-dropdown" class="embl-dropdown dropdown-pane bottom" data-dropdown>' +
                 '<p>EMBL-EBI in Hinxton is one of five EMBL locations across europe.<br/> <a href="//www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
                 '<h6>Connect to another EMBL location</h6>' +
                 '<div class="small-collapse small-up-2 padding-bottom-large clearfix">' +
