@@ -1,36 +1,32 @@
 # EBI-Framework v1.2
 
-This is an early EBI Visual Framework dev version of the v1.2 targeted for a summer 2017 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
+This is an early EBI Visual Framework dev version of the v1.2 targeted for a July 2017 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
 
 To view plans for v1.2 (and to join the discussion), [see issue 61](https://github.com/ebiwd/EBI-Framework/issues/61).
 
-Test code is availble for useage from the wwwdev server at: 
-- http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/
-- http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js
-- http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css
+Code is available for usage at:
+- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/
+- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js
+- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css
 
 ## Where do I start? How do I use this?
 
 1. Quick start:
-  - see the [HTML demos in the EBI Pattern Library /sample-site directory] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/).
-2. Test for compatibility:
-  - if you're migrating an existing site [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Pattern-library/blob/gh-pages/sample-site/migrations/testMigration.js).
-3. Import legacy style and grids:
-  - if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS] (https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css).
-4. Guidance:
+  - see the [HTML demos in the EBI Pattern Library /sample-site directory] (https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/).
+2. Guidance:
   - For the updated web guidelines, [check out the pattern library] (https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
-5. Help!
+3. Help!
   - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins] (https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
 
 ### Do I need to download this?
 
-No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/blank.html).
+No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page] (https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/boilerplate/blank.html).
 
 ## About the framework
 
-The project is an evolution of the 2013 EBI Compliance Theme, updating visual styles to better match EMBL-EBI print colours and text, modern web design best practices -- such as responsive design, and to move to a versioned framework for improved maintenance cycles.
+This project helps ensure brand consistency and the easy use of modern web design best practices -- such as responsive design, iterative maintenance cycles, and UX-tested patterns.
 
-The first release is v1.1 -- the current EBI Compliance Theme is the v1.0. Version 1.2 will follow six months after this is released.
+Releases are planned six months apart, generally in summer/winter. The exact timing and features are discussed in the Web Guidelines Committee and in this project's issue queue.
 
 This project continues efforts of the existing guidance by providing:
 
@@ -82,16 +78,15 @@ Difference between major, minor releases:
 - Major releases (1.1, 1.2, 1.3...) can have breaking changes and any such changes will be detailed and tested.
 - Minor releases (0.0.X) will not have changes to code structure or parts and will mainly add features or update visual assets (such as logos or icon fonts).
 
-
 The support for previous major versions (branches) is still being considered, but the current suggestion is that the last three major version will be supported with updates to assets, fonts, and critical EMBl and EBI branding.
 
-Where's version 1.0, you ask? Version 1.0 is the [current EBI Compliance theme] (https://www.ebi.ac.uk/web_guidelines/html/compliance/).
+Where's version 1.0, you ask? Version 1.0 is the [old EBI Compliance theme] (https://www.ebi.ac.uk/web_guidelines/html/compliance/).
 
 ### Test releases
-Testing releases will be identified in their tag, a la: `V1.1.0-alpha`, where `.0-alpha` is the tag. `-alpha`, `-beta` and `-dev` are the anticipated tag suffixes.
+Testing releases will be identified in their tag, a la: `V1.1.0-alpha`, where `.0-alpha` is the tag. `-alpha`, `-beta` and `-dev` are common tag suffixes.
 
 ### Variant releases
-There are no officially supported variant, however a "lite" version is being considered. With the branch of `v1.1-lite`.
+There are no officially supported variants. An Angular-specific variant is being considered.
 
 ### Deployment
 Files are hosted in this pattern:
@@ -111,7 +106,7 @@ We've configured the system to build with NPM (no need for gulp or bower).
 To get started, have a look at `package.json`. Likely the the `npm run scss` command will cover 90% of use cases.
 
 ## Roadmap
-- v1.2: Guidance and templates for wide-screen content engagements;
-        Use the masthead image as a skybox promo/feature
+- v1.2: https://github.com/ebiwd/EBI-Framework/issues/61
+- v1.3: Angular 1st class support, accessibility improvements
 - v1.4: Unit testing
 - v1.5: Add animation guidance and tooling ([see this] (https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))
