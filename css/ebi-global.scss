@@ -585,6 +585,19 @@ a:active {
     font-size: 85%; margin-bottom: 9px;
   } // END .ebi-footer-meta
 
+  /* Compact vertical menu trees */
+  ul.simple.vertical.menu {
+    margin-left: 0;
+    font-size: .9rem;
+    li {
+      margin-bottom: .5rem;
+      display: block;
+      > a { display: inline; padding: 0; }
+      > a.active:before { content: "9 "; font-family: 'EBI-Functional'; }
+      > ul.simple.menu { margin: 0.5rem; }
+    }
+  }
+
   /*
     COOKIE BANNER
   =============================== */
