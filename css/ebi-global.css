@@ -639,6 +639,22 @@ body .breadcrumbs a {
   font-size: 85%;
   margin-bottom: 9px; }
 
+/* Compact vertical menu trees */
+ul.simple.vertical.menu {
+  margin-left: 0;
+  font-size: .9rem; }
+  ul.simple.vertical.menu li {
+    margin-bottom: .5rem;
+    display: block; }
+    ul.simple.vertical.menu li > a {
+      display: inline;
+      padding: 0; }
+    ul.simple.vertical.menu li > a.active:before {
+      content: "9 ";
+      font-family: 'EBI-Functional'; }
+    ul.simple.vertical.menu li > ul.simple.menu {
+      margin: 0.5rem; }
+
 /*
     COOKIE BANNER
   =============================== */
