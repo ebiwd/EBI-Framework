@@ -54,7 +54,7 @@
                             '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' +
                           '</div>' +
                         '</div>' +
-                      '</fieldset> ' +
+                      '</fieldset>' +
                     '</form>';
         try {
           var gloablSearch = document.getElementById('search-global-dropdown');

@@ -3044,7 +3044,8 @@ select {
 
 .pagination {
   margin-left: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  text-align: center; }
   .pagination::before, .pagination::after {
     display: table;
     content: ' '; }
@@ -3072,7 +3073,7 @@ select {
   .pagination .current {
     padding: 0.1875rem 0.625rem;
     background: #007c82;
-    color: foreground(#007c82);
+    color: #fefefe;
     cursor: default; }
   .pagination .disabled {
     padding: 0.1875rem 0.625rem;

@@ -12,7 +12,7 @@ Code is available for usage at:
 ## Where do I start? How do I use this?
 
 1. Quick start:
-  - see the [HTML demos in the EBI Pattern Library /sample-site directory] (https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/).
+  - See the [HTML demos in the EBI Pattern Library /sample-site directory] (https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/).
 2. Guidance:
   - For the updated web guidelines, [check out the pattern library] (https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
 3. Help!
