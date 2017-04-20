@@ -21,15 +21,16 @@
       " -- Extra: This + the lite version = full fat"
     ],
     "foundation-scss-full-fat": "node-sass ./css/foundation/_settings-full-fat.scss ./libraries/foundation-6/css/foundation.css && csso ./libraries/foundation-6/css/foundation.css --output ./libraries/foundation-6/css/foundation.min.css",
-    "foundation-scss-lite":     "node-sass ./css/foundation/_settings-lite.scss ./libraries/foundation-6/css/foundation-lite.css && csso ./libraries/foundation-6/css/foundation-lite.css --output ./libraries/foundation-6/css/foundation-lite.min.css",
-    "foundation-scss-extras":   "node-sass ./css/foundation/_settings-extras.scss ./libraries/foundation-6/css/foundation-extras.css && csso ./libraries/foundation-6/css/foundation-extras.css --output ./libraries/foundation-6/css/foundation-extras.min.css",
-    "js": "npm run foundation-js",
+    "foundation-scss-lite": "node-sass ./css/foundation/_settings-lite.scss ./libraries/foundation-6/css/foundation-lite.css && csso ./libraries/foundation-6/css/foundation-lite.css --output ./libraries/foundation-6/css/foundation-lite.min.css",
+    "foundation-scss-extras": "node-sass ./css/foundation/_settings-extras.scss ./libraries/foundation-6/css/foundation-extras.css && csso ./libraries/foundation-6/css/foundation-extras.css --output ./libraries/foundation-6/css/foundation-extras.min.css",
+    "ebi-js": "concat-cli -f js/ebi-global-includes/script/*.js -o js/script.js",
+    "js": "npm run foundation-js && npm run ebi-js",
     "foundation-js": "cpx './libraries/foundation-6/dist/js/*.js' ./libraries/foundation-6/js",
-    "//@28": [
+    "//@29": [
       "-- Our buildscript: With this line we concat all libraries to be installed at once --"
     ],
     "libraries": "npm run tablesorter && npm run foundation-update && npm run motion-ui-update && npm run message_finished",
-    "//@32": [
+    "//@33": [
       "-- All our libraries, not intended to be run indiviudually --"
     ],
     "tablesorter": "wget https://github.com/Mottie/tablesorter/archive/master.zip -d ./libraries/tablesorter.zip && extract-zip ./libraries/tablesorter.zip ./libraries/ && del ./libraries/tablesorter && mve ./libraries/tablesorter-master ./libraries/tablesorter && del ./libraries/tablesorter.zip",
@@ -39,6 +40,8 @@
   },
   "private": true,
   "devDependencies": {
+    "concat-cli": "^4.0.0",
+    "concatenate-files": "^0.1.1",
     "cpx": "^1.3.1",
     "csso": "^2.1.1",
     "del-cli": "^0.2.0",
