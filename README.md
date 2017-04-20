@@ -98,12 +98,15 @@ That is:
 //www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/js/script.js
 ```
 
-### Building from NPM
+#### Building from NPM
 We expect the vast majority of users to link to the built CSS and JS files (as shown in the sample HTML files), however some teams may want to download the EBI Framework and modify it for performance or deeper appearance issues.
 
 We've configured the system to build with NPM (no need for gulp or bower).
 
 To get started, have a look at `package.json`. Likely the the `npm run scss` command will cover 90% of use cases.
+
+#### Deploying with NPM
+Releases are available via NPM at https://www.npmjs.com/package/ebi-framework
 
 ## Roadmap
 - v1.2: https://github.com/ebiwd/EBI-Framework/issues/61
