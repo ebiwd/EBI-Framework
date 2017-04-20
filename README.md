@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ebiwd/EBI-Framework.svg?branch=master)](https://travis-ci.org/ebiwd/EBI-Framework)
+[![Build Status](https://travis-ci.org/ebiwd/EBI-Framework.svg?branch=v1.2)](https://travis-ci.org/ebiwd/EBI-Framework)
 
 # EBI-Framework v1.2
 
