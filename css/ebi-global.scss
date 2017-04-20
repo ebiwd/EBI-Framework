@@ -26,7 +26,6 @@
 
   We do not recommend you edit this file. Rather add any overrides using the pattern in theme-template.css,
   or if you're using Sass you can override settings in _theme_settings.scss
-
 */
 
 body h1, body h2, body h3 { font-weight: 300; }
@@ -62,7 +61,7 @@ a.button, a.button:visited { color: $ebi-colour-light; }
 
 /* Colour - defaults to be reset by custom stylesheet
 ===================================================*/
-div.masthead-black-bar { background-color: #333; }
+.masthead-black-bar { background-color: #333; }
 h1, h2, h3, h4, h5, h6 { color: $body-font-color; }
 
 h4 { color: $ebi-colour-medium-grey; }
@@ -116,16 +115,16 @@ a:active {
   .masthead {
     // highlight links in the textual area of the local masthead
     #local-title .columns a { border-bottom: 1px dotted rgb(255,255,255); }
-    .masthead #local-title .columns a:hover { border-bottom: none; }
+    #local-title .columns a:hover { border-bottom: none; }
   }
 
   /* Global menu styling */
-  .masthead nav ul#global-nav.menu li { border-right: none; }
+  nav ul#global-nav.menu li { border-right: none; display: inline-block; }
 
   /* Mobile logo */
   @media screen and (max-width: 40em) {
-    .masthead nav ul#global-nav.menu li.home { display: none; }
-    .masthead nav ul#global-nav.menu li.home-mobile a {
+    nav ul#global-nav.menu li.home { display: none; }
+    nav ul#global-nav.menu li.home-mobile a {
       display: block;
       height: 50px;
       width: 67px;
@@ -136,13 +135,15 @@ a:active {
     }
   }
   @media screen and (min-width: 40em) {
-    .masthead .masthead-black-bar nav ul.menu li.home-mobile { display: none; }
+    nav ul#global-nav.menu li.home-mobile { display: none; }
   }
 
   /* Disable masthead-black-bar search when told */
   body.no-global-search .masthead-black-bar ul.menu li.search { display: none; }
 
-  .masthead .masthead-black-bar {
+  .masthead-black-bar {
+    a,
+    a:hover,
     ul.menu li a:hover,
     ul.menu li a:active,
     ul.menu li a:focus,
@@ -256,7 +257,7 @@ a:active {
 
   }
 
-  header .masthead-inner {
+  .masthead-inner {
     padding-top: 2.5rem;
     color: #fff;
   }
@@ -268,7 +269,7 @@ a:active {
       margin-bottom: -50px;
     }
 
-    .masthead .masthead-black-bar nav ul.menu {
+    .masthead-black-bar nav ul.menu {
       text-align: right;
 
       li { float: none; display: inline-block; }
@@ -324,7 +325,6 @@ a:active {
 
     nav { font-size: .9rem; clear: both; }
 
-    .masthead-inner nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
     nav ul.menu li { border-right: 1px solid $ebi-colour-light; float: left;
                      margin-left: 0; /* compliance compatibility */
                                      }
@@ -334,6 +334,8 @@ a:active {
     nav ul.menu li.float-right { border-right: none; }
   }
 
+  .masthead-inner nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
+
   div#local-title { margin-bottom: 1rem; }
 
   .masthead.meta-background-image {
@@ -342,7 +344,7 @@ a:active {
   }
 
   /* tweak sticky behaviour */
-  div.masthead { width: 100%; position: static; -webkit-transform: none; transform: none; }
+  div.masthead.sticky { width: 100%; position: static; -webkit-transform: none; transform: none; }
   div.masthead.sticky.is-stuck { position: fixed; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
   input#local-searchbox,
@@ -352,7 +354,7 @@ a:active {
   }
   #local-search .input-group-button { vertical-align: top; }
 
-  #content {
+  #main-content-area {
     padding: 0.5rem 0 1.5rem;
   }
   body.section-about .masthead {
@@ -529,7 +531,7 @@ a:active {
   @media screen and (max-width: 53em) {
     .embl-selector .button { width: 0px; padding-right:0; overflow: hidden;}
     .embl-selector .button:after { display: none; }
-    .masthead .masthead-black-bar nav ul.menu li a { padding-right: .5rem; padding-left: .5rem;}
+    .masthead-black-bar nav ul.menu li a { padding-right: .5rem; padding-left: .5rem;}
   }
 
 

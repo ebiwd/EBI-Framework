@@ -146,7 +146,6 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
 
   $.fn.foundationExtendEBI = function() {
-
     // Activate EMBL dropdown menu
     // Note: the menu content has already been added in script.js
     (function activateEMBLdropdown() {
@@ -157,7 +156,6 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
         }
         catch(err) {};
       }, 200);
-
     })();
 
     // Focus searchbox on global nav button click
@@ -168,7 +166,6 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
     });
 
     // Link overlay images
-    // ---------
     $(function() {
       $('.with-overlay').on('click',function(e) {
         var href = $(this).find('a:first').attr('href') || '';
@@ -218,20 +215,20 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
 
     // Create a dynamic height for the menu bar when stuck
     // -----------
-    var desiredStuckMenuHeight = $('#masthead .masthead-inner').outerHeight();
-    $("<style id='dynamic-stuck-height' type='text/css'> div#masthead.sticky.is-stuck{ margin-top: -" + desiredStuckMenuHeight + "px !important;} </style>").appendTo("body");
+    var desiredStuckMenuHeight = $('.masthead-inner').outerHeight() - $('.masthead-inner > nav > ul.menu').outerHeight();
+    $("<style id='dynamic-stuck-height' type='text/css'> .masthead.sticky.is-stuck{ margin-top: -" + desiredStuckMenuHeight + "px !important;} </style>").appendTo("body");
 
     // Clone the local menu into a mobile-only menu
     // -----------
-    var localMenuClass = '#masthead .masthead-inner > nav > ul.dropdown.menu.float-left';
+    var localMenuClass = '.masthead-inner > nav > ul.dropdown.menu.float-left';
     // var localMenuClass = '#secondary-menu-links'; // for testing
     // $(localMenuClass).addClass('dropdown'); // for testing
-    var localMenuLeftPadding = parseInt($('#masthead .masthead-inner > nav ul').css('padding-left')); // account for padding of ul
-    var localMenuWidthAvail = $('#masthead .masthead-inner > nav').innerWidth() - localMenuLeftPadding;
+    var localMenuLeftPadding = parseInt($('.masthead-inner > nav ul').css('padding-left')); // account for padding of ul
+    var localMenuWidthAvail = $('.masthead-inner > nav').innerWidth() - localMenuLeftPadding;
 
     function localNavSpilloverMenu(changeDirection) {
       var localMenuWidthUsed = 0; // Track how much space is occupied by the ul
-      var localMenuRightSideWidth = $('#masthead .masthead-inner > nav ul.float-right.menu').outerWidth(); // width of any right-side nav, which would change on browser resize
+      var localMenuRightSideWidth = $('.masthead-inner > nav ul.float-right.menu').outerWidth(); // width of any right-side nav, which would change on browser resize
       localMenuRightSideWidth = localMenuRightSideWidth + 1; // padding, eleminate NaN if it doesn't exsist
 
       // Calculate how much space we've used
@@ -304,23 +301,19 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
           //     $(localMenuClass + ' li.extra-items-menu').hide();
           //   }
           // }
-
         }
       }
-
     }
 
     localNavSpilloverMenu('init');
     // re-calc menus on browser change, if it affect width of localMenuWidthAvail
     $(window).resize( function() {
-      var snapshot_localMenuWidthAvail = $('#masthead .masthead-inner > nav').innerWidth();
+      var snapshot_localMenuWidthAvail = $('.masthead-inner > nav').innerWidth();
       var widthChangeAmount = snapshot_localMenuWidthAvail - localMenuWidthAvail;
       if (widthChangeAmount != 0) localMenuWidthAvail = snapshot_localMenuWidthAvail;
       // we look for changes of more than 1 to reduce jitter
       if (widthChangeAmount > 1)  localNavSpilloverMenu('increase');
       if (widthChangeAmount < -1) localNavSpilloverMenu('decrease');
     });
-
   }
-
 }(jQuery));
