@@ -38,7 +38,19 @@
     "motion-ui-update": "wget https://github.com/zurb/motion-ui/archive/master.zip -d ./libraries/motion-ui.zip && del ./libraries/motion-ui && extract-zip ./libraries/motion-ui.zip ./libraries/motion-ui/ && del ./libraries/motion-ui.zip && echo \"Copying Motion UI files one level up as they've moved...\" && ncp ./libraries/motion-ui/motion-ui-master/ ./libraries/motion-ui/ && del ./libraries/motion-ui/motion-ui-master/ && echo \"Latest version of Motion UI downloaded, you'll need to run 'npm run scss' to build\"",
     "message_finished": "echo \"All done\""
   },
-  "private": true,
+  "name": "EBI-Framework",
+  "description": "Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).",
+  "version": "v1.2.0-alpha.2",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ebiwd/EBI-Framework.git"
+  },
+  "author": {
+    "name": "EBI Web Development",
+    "email": "khawkins@ebi.ac.uk",
+    "url": "https://github.com/ebiwd"
+  },
   "devDependencies": {
     "concat-cli": "^4.0.0",
     "concatenate-files": "^0.1.1",

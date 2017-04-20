@@ -1,6 +1,6 @@
 # EBI-Framework v1.2
 
-This is an early EBI Visual Framework dev version of the v1.2 targeted for a July 2017 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
+v1.2 is targeted for a July 2017 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
 
 To view plans for v1.2 (and to join the discussion), [see issue 61](https://github.com/ebiwd/EBI-Framework/issues/61).
 
