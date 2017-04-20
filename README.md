@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ebiwd/EBI-Framework.svg?branch=master)](https://travis-ci.org/ebiwd/EBI-Framework)
+
 # EBI-Framework v1.2
 
 v1.2 is targeted for a July 2017 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
