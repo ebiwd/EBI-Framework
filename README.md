@@ -24,7 +24,7 @@ Code is available for usage at:
 
 No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page](https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/boilerplate/blank.html).
 
-## About the framework
+## About the framework 
 
 This project helps ensure brand consistency and the easy use of modern web design best practices -- such as responsive design, iterative maintenance cycles, and UX-tested patterns.
 
