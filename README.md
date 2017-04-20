@@ -14,15 +14,15 @@ Code is available for usage at:
 ## Where do I start? How do I use this?
 
 1. Quick start:
-  - See the [HTML demos in the EBI Pattern Library /sample-site directory] (https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/).
+  - See the [HTML demos in the EBI Pattern Library /sample-site directory](https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/).
 2. Guidance:
-  - For the updated web guidelines, [check out the pattern library] (https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
+  - For the updated web guidelines, [check out the pattern library](https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
 3. Help!
-  - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins] (https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
+  - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
 
 ### Do I need to download this?
 
-No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page] (https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/boilerplate/blank.html).
+No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page](https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/boilerplate/blank.html).
 
 ## About the framework
 
@@ -43,7 +43,7 @@ This project continues efforts of the existing guidance by providing:
   - Enhanced mobile support
 - Pattern library for reusable components to speed development and reduce fragmentation (in progress, more targeted for 1.2 release)
   - Page-specific header colours and images through metatags: meta-background-image, meta-background-color
-  - Built in [pattern support through Foundation Framework] (http://foundation.zurb.com/sites/docs/grid.html)
+  - Built in [pattern support through Foundation Framework](http://foundation.zurb.com/sites/docs/grid.html)
 - Page lifecycle tracking: An improved meta-tag based model for maintaining and tracking content freshness, ownership, and intent
 - Regular updates: A versioning system for the framework to help track changes, features, and usage
   - Sass support (optional)
@@ -82,7 +82,7 @@ Difference between major, minor releases:
 
 The support for previous major versions (branches) is still being considered, but the current suggestion is that the last three major version will be supported with updates to assets, fonts, and critical EMBl and EBI branding.
 
-Where's version 1.0, you ask? Version 1.0 is the [old EBI Compliance theme] (https://www.ebi.ac.uk/web_guidelines/html/compliance/).
+Where's version 1.0, you ask? Version 1.0 is the [old EBI Compliance theme](https://www.ebi.ac.uk/web_guidelines/html/compliance/).
 
 ### Test releases
 Testing releases will be identified in their tag, a la: `V1.1.0-alpha`, where `.0-alpha` is the tag. `-alpha`, `-beta` and `-dev` are common tag suffixes.
@@ -97,7 +97,7 @@ Files are hosted in this pattern:
 ```
 That is:
 ```
-//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/js/script.js
+//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/script.js
 ```
 
 #### Building from NPM
@@ -114,4 +114,4 @@ Releases are available via NPM at https://www.npmjs.com/package/ebi-framework
 - v1.2: https://github.com/ebiwd/EBI-Framework/issues/61
 - v1.3: Angular 1st class support, accessibility improvements
 - v1.4: Unit testing
-- v1.5: Add animation guidance and tooling ([see this] (https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))
+- v1.5: Add animation guidance and tooling ([see this](https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))

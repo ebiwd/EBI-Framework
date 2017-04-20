@@ -18,7 +18,6 @@
 
   We do not recommend you edit this file. Rather add any overrides using the pattern in theme-template.css,
   or if you're using Sass you can override settings in _theme_settings.scss
-
 */
 body h1, body h2, body h3 {
   font-weight: 300; }
@@ -61,7 +60,7 @@ a.button, a.button:visited {
 
 /* Colour - defaults to be reset by custom stylesheet
 ===================================================*/
-div.masthead-black-bar {
+.masthead-black-bar {
   background-color: #333; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -163,18 +162,19 @@ nav a:hover {
 .masthead #local-title .columns a {
   border-bottom: 1px dotted white; }
 
-.masthead .masthead #local-title .columns a:hover {
+.masthead #local-title .columns a:hover {
   border-bottom: none; }
 
 /* Global menu styling */
-.masthead nav ul#global-nav.menu li {
-  border-right: none; }
+nav ul#global-nav.menu li {
+  border-right: none;
+  display: inline-block; }
 
 /* Mobile logo */
 @media screen and (max-width: 40em) {
-  .masthead nav ul#global-nav.menu li.home {
+  nav ul#global-nav.menu li.home {
     display: none; }
-  .masthead nav ul#global-nav.menu li.home-mobile a {
+  nav ul#global-nav.menu li.home-mobile a {
     display: block;
     height: 50px;
     width: 67px;
@@ -184,14 +184,14 @@ nav a:hover {
     margin-left: 6px; } }
 
 @media screen and (min-width: 40em) {
-  .masthead .masthead-black-bar nav ul.menu li.home-mobile {
+  nav ul#global-nav.menu li.home-mobile {
     display: none; } }
 
 /* Disable masthead-black-bar search when told */
 body.no-global-search .masthead-black-bar ul.menu li.search {
   display: none; }
 
-.masthead .masthead-black-bar {
+.masthead-black-bar {
   /* custom colour for Home */
   /* custom colour for Services */
   /* custom colour for Research */
@@ -199,65 +199,67 @@ body.no-global-search .masthead-black-bar ul.menu li.search {
   /* custom colour for About us */
   /* Custom icon for search */
   /* EMBL Dropdwon styles */ }
-  .masthead .masthead-black-bar ul.menu li a:hover,
-  .masthead .masthead-black-bar ul.menu li a:active,
-  .masthead .masthead-black-bar ul.menu li a:focus,
-  .masthead .masthead-black-bar ul.menu li.active a,
-  .masthead .masthead-black-bar ul.menu li.active-trail a {
+  .masthead-black-bar a,
+  .masthead-black-bar a:hover,
+  .masthead-black-bar ul.menu li a:hover,
+  .masthead-black-bar ul.menu li a:active,
+  .masthead-black-bar ul.menu li a:focus,
+  .masthead-black-bar ul.menu li.active a,
+  .masthead-black-bar ul.menu li.active-trail a {
     color: white;
     border-bottom: none; }
-  .masthead .masthead-black-bar ul.menu li.active a,
-  .masthead .masthead-black-bar ul.menu li.active-trail a {
+  .masthead-black-bar ul.menu li.active a,
+  .masthead-black-bar ul.menu li.active-trail a {
     background: black; }
-  .masthead .masthead-black-bar ul li.home a:before {
+  .masthead-black-bar ul li.home a:before {
     font-family: 'EBI-Generic';
     content: 'H '; }
-  .masthead .masthead-black-bar ul li.home a:hover,
-  .masthead .masthead-black-bar ul li.home a:active,
-  .masthead .masthead-black-bar ul li.home a:focus {
+  .masthead-black-bar ul li.home a:hover,
+  .masthead-black-bar ul li.home a:active,
+  .masthead-black-bar ul li.home a:focus {
     background-color: #007c82; }
-  .masthead .masthead-black-bar ul li.services a:before {
+  .masthead-black-bar ul li.services a:before {
     font-family: 'EBI-Generic';
     content: '( '; }
-  .masthead .masthead-black-bar ul li.services a:hover,
-  .masthead .masthead-black-bar ul li.services a:active,
-  .masthead .masthead-black-bar ul li.services a:focus {
+  .masthead-black-bar ul li.services a:hover,
+  .masthead-black-bar ul li.services a:active,
+  .masthead-black-bar ul li.services a:focus {
     background-color: #389198; }
-  .masthead .masthead-black-bar ul li.research a:before {
+  .masthead-black-bar ul li.research a:before {
     font-family: 'EBI-Generic';
     content: ') '; }
-  .masthead .masthead-black-bar ul li.research a:hover,
-  .masthead .masthead-black-bar ul li.research a:active,
-  .masthead .masthead-black-bar ul li.research a:focus {
+  .masthead-black-bar ul li.research a:hover,
+  .masthead-black-bar ul li.research a:active,
+  .masthead-black-bar ul li.research a:focus {
     background-color: #6dab49; }
-  .masthead .masthead-black-bar ul li.training a:before {
+  .masthead-black-bar ul li.training a:before {
     font-family: 'EBI-Generic';
     content: 't '; }
-  .masthead .masthead-black-bar ul li.training a:hover,
-  .masthead .masthead-black-bar ul li.training a:active,
-  .masthead .masthead-black-bar ul li.training a:focus {
+  .masthead-black-bar ul li.training a:hover,
+  .masthead-black-bar ul li.training a:active,
+  .masthead-black-bar ul li.training a:focus {
     background-color: #e9b400; }
-  .masthead .masthead-black-bar ul li.about a:before {
+  .masthead-black-bar ul li.about a:before {
     font-family: 'EBI-Generic';
     content: 'i '; }
-  .masthead .masthead-black-bar ul li.about a:hover,
-  .masthead .masthead-black-bar ul li.about a:active,
-  .masthead .masthead-black-bar ul li.about a:focus,
-  .masthead .masthead-black-bar ul li.about-us a:hover,
-  .masthead .masthead-black-bar ul li.about-us a:active,
-  .masthead .masthead-black-bar ul li.about-us a:focus {
+  .masthead-black-bar ul li.about a:hover,
+  .masthead-black-bar ul li.about a:active,
+  .masthead-black-bar ul li.about a:focus,
+  .masthead-black-bar ul li.about-us a:hover,
+  .masthead-black-bar ul li.about-us a:active,
+  .masthead-black-bar ul li.about-us a:focus {
     background-color: #389198; }
-  .masthead .masthead-black-bar ul li.search a:before {
+  .masthead-black-bar ul li.search a:before {
     font-family: 'EBI-Functional';
     content: '1'; }
-  .masthead .masthead-black-bar ul li.search .dropdown-pane {
+  .masthead-black-bar ul li.search .dropdown-pane {
     width: 100%;
     left: 0;
     background: #222;
     border: none;
     margin-top: -2px;
     color: #fff; }
-  .masthead .masthead-black-bar .dropdown-pane.embl-dropdown {
+  .masthead-black-bar .dropdown-pane.embl-dropdown {
     background-color: #007c82;
     background-image: url("../images/map.png");
     background-position: 100% 100%;
@@ -267,19 +269,19 @@ body.no-global-search .masthead-black-bar ul.menu li.search {
     padding-right: 17rem;
     min-width: 39.9375em;
     left: 0; }
-    .masthead .masthead-black-bar .dropdown-pane.embl-dropdown h6 {
+    .masthead-black-bar .dropdown-pane.embl-dropdown h6 {
       color: white;
       font-weight: 700; }
-    .masthead .masthead-black-bar .dropdown-pane.embl-dropdown .button {
+    .masthead-black-bar .dropdown-pane.embl-dropdown .button {
       color: #007c82;
       background: #fff; }
   @media screen and (max-width: 39.9375em) {
-    .masthead .masthead-black-bar .dropdown-pane.embl-dropdown {
+    .masthead-black-bar .dropdown-pane.embl-dropdown {
       display: none;
       width: 0 !important;
       overflow: hidden; } }
 
-header .masthead-inner {
+.masthead-inner {
   padding-top: 2.5rem;
   color: #fff; }
 
@@ -287,20 +289,20 @@ header .masthead-inner {
 @media screen and (max-width: 39.9375em) {
   .masthead ul.menu.dropdown.float-right > li {
     margin-bottom: -50px; }
-  .masthead .masthead-black-bar nav ul.menu {
+  .masthead-black-bar nav ul.menu {
     text-align: right;
     /* make icon bar smaller for mobile */ }
-    .masthead .masthead-black-bar nav ul.menu li {
+    .masthead-black-bar nav ul.menu li {
       float: none;
       display: inline-block; }
-    .masthead .masthead-black-bar nav ul.menu li.home-mobile {
+    .masthead-black-bar nav ul.menu li.home-mobile {
       float: left; }
-    .masthead .masthead-black-bar nav ul.menu > li > a > img,
-    .masthead .masthead-black-bar nav ul.menu > li > a:before {
+    .masthead-black-bar nav ul.menu > li > a > img,
+    .masthead-black-bar nav ul.menu > li > a:before {
       display: block;
       margin: 0 auto 0.25rem;
       font-size: 16px; }
-    .masthead .masthead-black-bar nav ul.menu > li > a {
+    .masthead-black-bar nav ul.menu > li > a {
       text-align: center;
       font-size: 10px;
       padding: .6rem .35rem; } }
@@ -342,10 +344,6 @@ header .masthead-inner {
   .masthead nav {
     font-size: .9rem;
     clear: both; }
-  .masthead .masthead-inner nav i {
-    line-height: .9em;
-    font-size: .8em;
-    margin-top: -3px; }
   .masthead nav ul.menu li {
     border-right: 1px solid #f8f8f8;
     float: left;
@@ -357,6 +355,11 @@ header .masthead-inner {
   .masthead nav ul.menu li.float-right {
     border-right: none; }
 
+.masthead-inner nav i {
+  line-height: .9em;
+  font-size: .8em;
+  margin-top: -3px; }
+
 div#local-title {
   margin-bottom: 1rem; }
 
@@ -365,7 +368,7 @@ div#local-title {
   background-size: initial; }
 
 /* tweak sticky behaviour */
-div.masthead {
+div.masthead.sticky {
   width: 100%;
   position: static;
   -webkit-transform: none;
@@ -389,7 +392,7 @@ input#local-searchbox,
 #local-search .input-group-button {
   vertical-align: top; }
 
-#content {
+#main-content-area {
   padding: 0.5rem 0 1.5rem; }
 
 body.section-about .masthead {
@@ -595,7 +598,7 @@ body .breadcrumbs a {
     overflow: hidden; }
   .embl-selector .button:after {
     display: none; }
-  .masthead .masthead-black-bar nav ul.menu li a {
+  .masthead-black-bar nav ul.menu li a {
     padding-right: .5rem;
     padding-left: .5rem; } }
 
