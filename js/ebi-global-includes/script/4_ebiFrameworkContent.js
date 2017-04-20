@@ -103,42 +103,27 @@ function ebiFrameworkUpdateFoot() {
 }
 
 function ebiFrameworkUpdateFooterMeta() {
-    var d = new Date();
-    var html = '<div class="columns">' +
-                  '<p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK. +44 (0)1223 49 44 44</p> <p class="legal">Copyright &copy; EMBL-EBI ' + d.getFullYear() + ' | EMBL-EBI is <a href="http://www.embl.org/">part of the European Molecular Biology Laboratory</a> | <a href="//www.ebi.ac.uk/about/terms-of-use">Terms of use</a>' +
-                  '<a class="readmore float-right" href="http://intranet.ebi.ac.uk">Intranet</a>' +
-                '</p></div>';
+  var d = new Date();
+  var html = '<div class="columns">' +
+                '<p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK. +44 (0)1223 49 44 44</p> <p class="legal">Copyright &copy; EMBL-EBI ' + d.getFullYear() + ' | EMBL-EBI is <a href="http://www.embl.org/">part of the European Molecular Biology Laboratory</a> | <a href="//www.ebi.ac.uk/about/terms-of-use">Terms of use</a>' +
+                '<a class="readmore float-right" href="http://intranet.ebi.ac.uk">Intranet</a>' +
+              '</p></div>';
 
-    function init() {
-        try {
-          var foot = document.getElementById('ebi-footer-meta');
-          foot.innerHTML = html;
-        } catch (err) { setTimeout(init, 500); }
-    }
-    init();
+  function init() {
+    try {
+      var foot = document.getElementById('ebi-footer-meta');
+      foot.innerHTML = html;
+    } catch (err) { setTimeout(init, 500); }
+  }
+  init();
 }
 
 function ebiFrameworkIncludeScripts() {
-  var requireScripts = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/script.js', // make sure we have script.js from where we expect
-                        '//www.ebi.ac.uk/web_guidelines/js/downtime.js?' + Math.round(new Date().getTime() / 3600000)]; // refresh downtime.js once an hour
-  function init() {
-      try {
-        var existingScripts = document.getElementsByTagName('script');
-        var gotScript, i, j, putScript;
-        for (j = 0; j < requireScripts.length; j++) {
-          for (gotScript = false, i = 0; i < existingScripts.length; i++)
-            if (existingScripts[i].src.indexOf(requireScripts[j]) !== -1)
-              gotScript = true;
-          if (!gotScript) {
-            putComment = document.createComment(requireScripts[j] + ' automatically inserted');
-            putScript = document.createElement('script');
-            putScript.type = 'text/javascript';
-            putScript.src = requireScripts[j];
-            document.body.appendChild(putComment);
-            document.body.appendChild(putScript);
-          }
-        }
-      } catch (err) { setTimeout(init, 500); }
-  }
-  init();
+  var downtimeScript =  '//www.ebi.ac.uk/web_guidelines/js/downtime.js?' + Math.round(new Date().getTime() / 3600000);
+  putComment = document.createComment(downtimeScript + ' automatically inserted');
+  putScript = document.createElement('script');
+  putScript.type = 'text/javascript';
+  putScript.src = downtimeScript;
+  document.body.appendChild(putComment);
+  document.body.appendChild(putScript);
 }
