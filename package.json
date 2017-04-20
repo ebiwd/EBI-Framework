@@ -11,7 +11,7 @@
   "name": "ebi-framework",
   "version": "1.2.0-alpha.2",
   "scripts": {
-    "test": "echo \"To do: no test specified\" && exit 1",
+    "test": "npm run scss && npm run js",
     "scss": "node-sass -o css css && csso ./css/ebi-global.css --output ./css/ebi-global.min.css && npm run foundation-scss-full-fat && npm run foundation-scss-lite && npm run foundation-scss-extras",
     "//@16": [
       "Foundation build variants",
