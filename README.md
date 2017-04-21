@@ -11,6 +11,18 @@ Code is available for usage at:
 - http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js
 - http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css
 
+### Should I upgrade?
+We recommend upgrading to v1.2 in a number of scenarios:
+1. You have a site that is activley maintained and want to increase performance and ensure better responsive design and accesibility.
+2. You're developing with a JS framework like React or Angular, we've made a number of important stuctural changes.
+3. You have a site using the old EBI Compliance theme and want a less intrusive upgrade and want to use the EBI Visual Framework 'lite' implementation.
+
+### Do I have to upgrade?
+If you're using the EBI Visual Framework v1.1 it is not required that you upgrade.
+
+### How do I migrate?
+Follow the migration guide: https://github.com/ebiwd/EBI-Framework/issues/85#issuecomment-296141733
+
 ## Where do I start? How do I use this?
 
 1. Quick start:
