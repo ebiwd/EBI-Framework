@@ -21,7 +21,7 @@ We recommend upgrading to v1.2 in a number of scenarios:
 If you're using the EBI Visual Framework v1.1 it is not required that you upgrade.
 
 ### How do I migrate?
-Follow the migration guide: https://github.com/ebiwd/EBI-Framework/issues/85#issuecomment-296141733
+Follow the migration guide: https://github.com/ebiwd/EBI-Framework/issues/85
 
 ## Where do I start? How do I use this?
 
