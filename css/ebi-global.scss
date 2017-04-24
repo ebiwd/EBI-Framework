@@ -354,9 +354,6 @@ a:active {
   }
   #local-search .input-group-button { vertical-align: top; }
 
-  #main-content-area {
-    padding: 0.5rem 0 1.5rem;
-  }
   body.section-about .masthead {
     background-color: $ebi-colour-petrol;
   }
@@ -464,6 +461,7 @@ a:active {
   .callout.tiny { padding: 0rem; }
 
   /* Breadcrumbs */
+  .breadcrumbs { padding-top: 0.5rem; }
   body .breadcrumbs a { color: #888; }
 
   /* extend Froundation utility selectors/classes */
