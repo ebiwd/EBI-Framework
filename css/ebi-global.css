@@ -368,13 +368,13 @@ div#local-title {
   background-size: initial; }
 
 /* tweak sticky behaviour */
-div.masthead.sticky {
+.masthead.sticky {
   width: 100%;
   position: static;
   -webkit-transform: none;
   transform: none; }
 
-div.masthead.sticky.is-stuck {
+.masthead.sticky.is-stuck {
   position: fixed;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
@@ -391,9 +391,6 @@ input#local-searchbox,
 
 #local-search .input-group-button {
   vertical-align: top; }
-
-#main-content-area {
-  padding: 0.5rem 0 1.5rem; }
 
 body.section-about .masthead {
   background-color: #007c82; }
@@ -501,6 +498,9 @@ ul li.badge {
   padding: 0rem; }
 
 /* Breadcrumbs */
+.breadcrumbs {
+  padding-top: 0.5rem; }
+
 body .breadcrumbs a {
   color: #888; }
 
