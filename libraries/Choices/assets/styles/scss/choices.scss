@@ -1,24 +1,26 @@
+@import '../../../../../css/ebi-global-includes/ebi_theme_settings'; // default EBI styling
+
 /*===============================
 =            Choices            =
 ===============================*/
 
 $choices-selector: 'choices' !default;
-$choices-font-size-lg: 16px !default;
-$choices-font-size-md: 14px !default;
-$choices-font-size-sm: 12px !default;
+$choices-font-size-lg: 1.25rem !default;
+$choices-font-size-md: 1rem !default;
+$choices-font-size-sm: .8rem !default;
 $choices-guttering: 24px !default;
-$choices-border-radius: 2.5px !default;
-$choices-border-radius-item: 20px !default;
+$choices-border-radius: 0 !default;
+$choices-border-radius-item: 0 !default;
 $choices-bg-color: #f9f9f9 !default;
-$choices-bg-color-disabled: #EAEAEA !default;
-$choices-bg-color-dropdown: #FFFFFF !default;
+$choices-bg-color-disabled: $ebi-colour-light-grey;
+$choices-bg-color-dropdown: $ebi-colour-light;
 $choices-text-color: #333333 !default;
 $choices-keyline-color: #DDDDDD !default;
-$choices-primary-color: #00BCD4 !default;
+$choices-primary-color: $primary-color;
 $choices-disabled-color: #eaeaea !default;
 $choices-highlight-color: $choices-primary-color !default;
 $choices-button-icon-path: '../../icons' !default;
-$choices-button-dimension: 8px !default;
+$choices-button-dimension: 20px !default;
 $choices-button-offset: 8px !default;
 
 .#{$choices-selector} {
@@ -89,18 +91,26 @@ $choices-button-offset: 8px !default;
   .#{$choices-selector}__button {
     position: relative;
     display: inline-block;
+    color: $choices-bg-color-dropdown;
     margin-top: 0;
-    margin-right: -$choices-button-offset/2;
+    // margin-right: -$choices-button-offset/2;
     margin-bottom: 0;
-    margin-left: $choices-button-offset;
-    padding-left: $choices-button-offset*2;
-    border-left: 1px solid darken($choices-primary-color, 10%);
-    background-image: url($choices-button-icon-path + '/cross.svg');
-    background-size: $choices-button-dimension;
+    // margin-left: $choices-button-offset;
+    // padding-left: $choices-button-offset*2;
+    // border-left: 1px solid darken($choices-primary-color, 10%);
+    // background-image: url($choices-button-icon-path + '/cross.svg');
+    // background-size: $choices-button-dimension;
     width: $choices-button-dimension;
     line-height: 1;
-    opacity: .75;
+    // opacity: .75;
     &:hover, &:focus { opacity: 1; }
+  }
+  .#{$choices-selector}__button:before {
+    content: 'x ';
+    font-size: $choices-font-size-sm;
+    font-family: 'EBI-Functional';
+    padding: 0.5rem .25rem;
+    display: inline-block;
   }
 }
 
@@ -108,7 +118,7 @@ $choices-button-offset: 8px !default;
   display: inline-block;
   vertical-align: top;
   width: 100%;
-  background-color: $choices-bg-color;
+  // background-color: $choices-bg-color;
   padding: 7.5px 7.5px 3.75px;
   border: 1px solid $choices-keyline-color;
   border-radius: $choices-border-radius;
@@ -231,7 +241,7 @@ $choices-button-offset: 8px !default;
 }
 
 .#{$choices-selector}__button {
-  text-indent: -9999px;
+  // text-indent: -9999px;
   -webkit-appearance: none;
   appearance: none;
   border: 0;
@@ -239,19 +249,22 @@ $choices-button-offset: 8px !default;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  overflow: hidden;
+  height: $choices-font-size-lg;
   &:focus { outline: none; }
 }
 
 .#{$choices-selector}__input {
   display: inline-block;
   vertical-align: baseline;
-  background-color: mix(#000000, #FFFFFF, 2.5%);
-  font-size: $choices-font-size-md;
+  // background-color: mix(#000000, #FFFFFF, 2.5%);
+  font-size: $choices-font-size-sm;
   margin-bottom: 5px;
   border: 0;
-  border-radius: 0;
+  // border-radius: 0;
   max-width: 100%;
-  padding: 4px 0 4px 2px;
+  box-shadow: none;
+  // padding: 4px 0 4px 2px;
   &:focus { outline: 0; }
 }
 
