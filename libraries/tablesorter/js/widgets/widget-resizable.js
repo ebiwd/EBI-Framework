@@ -1,4 +1,4 @@
-/*! Widget: resizable - updated 5/16/2015 (v2.26.1) */
+/*! Widget: resizable - updated 4/18/2017 (v2.28.8) */
 /*jshint browser:true, jquery:true, unused:false */
 ;(function ($, window) {
 	'use strict';
@@ -21,7 +21,7 @@
 			'.' + ts.css.resizableHandle + ' { position: absolute; display: inline-block; width: 8px;' +
 				'top: 1px; cursor: ew-resize; z-index: 3; user-select: none; -moz-user-select: none; }' +
 			'</style>';
-		$(s).appendTo('body');
+		$('head').append(s);
 	});
 
 	ts.resizable = {
@@ -163,6 +163,10 @@
 					tableHeight += $this.filter('[style*="height"]').length ? $this.height() : $this.children('table').height();
 				});
 			}
+
+			if ( !wo.resizable_includeFooter && c.$table.children('tfoot').length ) {
+				tableHeight -= c.$table.children('tfoot').height();
+			}
 			// subtract out table left position from resizable handles. Fixes #864
 			startPosition = c.$table.position().left;
 			$handles.each( function() {
@@ -254,8 +258,11 @@
 
 			// right click to reset columns to default widths
 			c.$table
-				.bind( 'columnUpdate' + namespace, function() {
+				.bind( 'columnUpdate pagerComplete resizableUpdate '.split( ' ' ).join( namespace + ' ' ), function() {
 					ts.resizable.setHandlePosition( c, wo );
+				})
+				.bind( 'resizableReset' + namespace, function() {
+					ts.resizableReset( c.table );
 				})
 				.find( 'thead:first' )
 				.add( $( c.namespace + '_extra_table' ).find( 'thead:first' ) )
@@ -330,10 +337,10 @@
 		options: {
 			resizable : true, // save column widths to storage
 			resizable_addLastColumn : false,
+			resizable_includeFooter: true,
 			resizable_widths : [],
 			resizable_throttle : false, // set to true (5ms) or any number 0-10 range
-			resizable_targetLast : false,
-			resizable_fullWidth : null
+			resizable_targetLast : false
 		},
 		init: function(table, thisWidget, c, wo) {
 			ts.resizable.init( c, wo );

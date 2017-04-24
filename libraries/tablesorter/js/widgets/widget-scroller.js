@@ -1,4 +1,4 @@
-/*! Widget: scroller - updated 4/29/2016 (v2.25.9) *//*
+/*! Widget: scroller - updated 4/18/2017 (v2.28.8) *//*
 	Copyright (C) 2011 T. Connell & Associates, Inc.
 
 	Dual-licensed under the MIT and GPL licenses
@@ -77,7 +77,9 @@
 			scroller_barWidth : null
 		},
 		format : function( table, c, wo ) {
-			if ( !c.isScrolling ) {
+			if ( c.isScrolling ) {
+				ts.scroller.resize( c, wo );
+			} else {
 				// initialize here instead of in widget init to give the
 				// filter widget time to finish building the filter row
 				ts.scroller.setup( c, wo );
@@ -111,7 +113,7 @@
 			when height < max height (filtering) */
 			'.' + tscss.scrollerTable + ' { position: relative; overflow: auto; }' +
 			'.' + tscss.scrollerTable + ' table.' + tscss.table +
-				' { border-top: 0; margin-top: 0; margin-bottom: 0; overflow: hidden; }' +
+				' { border-top: 0; margin-top: 0; margin-bottom: 0; overflow: hidden; max-width: initial; }' +
 			/* hide footer in original table */
 			'.' + tscss.scrollerTable + ' tfoot, .' + tscss.scrollerHideElement + ', .' + tscss.scrollerHideColumn +
 				' { display: none; }' +
@@ -137,7 +139,7 @@
 			'.' + tscss.scrollerWrap + ' .' + tscss.scrollerFixedPanel +
 				' { position: absolute; top: 0; bottom: 0; z-index: 2; left: 0; right: 0; } ' +
 			'</style>';
-		$( style ).appendTo( 'body' );
+		$( 'head' ).append( style );
 	});
 
 	ts.scroller = {
@@ -363,18 +365,22 @@
 
 		resize : function( c, wo ) {
 			if ( wo.scroller_isBusy ) { return; }
-			var index, borderWidth, setWidth, $headers, $this, temp,
+			var index, borderWidth, setWidth, $headers, $this,
 				tsScroller = ts.scroller,
 				$container = wo.scroller_$container,
 				$table = c.$table,
 				$tableWrap = $table.parent(),
 				$hdr = wo.scroller_$header,
 				$foot = wo.scroller_$footer,
+				$win = $(window),
+				position = [ $win.scrollLeft(), $win.scrollTop() ],
 				id = c.namespace.slice( 1 ) + 'tsscroller',
 				// Hide other scrollers so we can resize
 				$div = $( 'div.' + tscss.scrollerWrap + '[id!="' + id + '"]' )
 					.addClass( tscss.scrollerHideElement ),
-				row = '<tr class="' + tscss.scrollerSpacerRow + ' ' + c.selectorRemove.slice(1) + '">';
+				temp = 'padding:0;margin:0;border:0;height:0;max-height:0;min-height:0;',
+				row = '<tr class="' + tscss.scrollerSpacerRow + ' ' + c.selectorRemove.slice(1) +
+					'" style="' + temp + '">';
 
 			wo.scroller_calcWidths = [];
 
@@ -413,22 +419,22 @@
 						setWidth = $this.width();
 					}
 				}
-				row += '<td data-column="' + index + '" style="padding:0;margin:0;border:0;height:0;max-height:0;' +
-					'min-height:0;width:' + setWidth + 'px;min-width:' + setWidth + 'px;max-width:' + setWidth + 'px"></td>';
+				row += '<td data-column="' + index + '" style="' + temp + 'width:' + setWidth +
+					'px;min-width:' + setWidth + 'px;max-width:' + setWidth + 'px"></td>';
 
 				// save current widths
 				wo.scroller_calcWidths[ index ] = setWidth;
 			}
 			row += '</tr>';
-			c.$tbodies.eq(0).prepend( row ); // tbody
+			c.$tbodies.eq(0).append( row ); // tbody
 			$hdr.children( 'thead' ).append( row );
 			$foot.children( 'tfoot' ).append( row );
 
 			// include colgroup or alignment is off
 			ts.fixColumnWidth( c.table );
 			row = c.$table.children( 'colgroup' )[0].outerHTML;
-			$hdr.prepend( row );
-			$foot.prepend( row );
+			$hdr.append( row );
+			$foot.append( row );
 
 			temp = $tableWrap.parent().innerWidth() -
 				( tsScroller.hasScrollBar( $tableWrap ) ? wo.scroller_barSetWidth : 0 );
@@ -459,10 +465,13 @@
 				.find( '.' + tscss.scrollerFixed )
 				.find( '.' + tscss.scrollerTable )
 				.scrollTop( wo.scroller_saved[1] );
+			$win.scrollLeft( position[0] );
+			$win.scrollTop( position[1] );
 
 			// update resizable widget handles
 			setTimeout( function() {
 				c.$table.triggerHandler( 'resizableUpdate' );
+				c.$table.triggerHandler( 'scrollerComplete' );
 			}, 100 );
 
 		},
@@ -787,10 +796,11 @@
 
 			$fixedColumn.removeClass( tscss.scrollerHideElement );
 			for ( index = 0; index < fixedColumns; index++ ) {
+				temp = ':nth-child(' + ( index + 1 ) + ')';
 				$wrapper
 					.children( 'div' )
 					.children( 'table' )
-					.find( 'th:nth-child(' + ( index + 1 ) + '), td:nth-child(' + ( index + 1 ) + ')' )
+					.find( 'th' + temp + ', td' + temp + ', col' + temp )
 					.addClass( tscss.scrollerHideColumn );
 			}
 

@@ -7,3 +7,8 @@ npm-debug.log
 libraries/foundation-6
 !libraries/foundation-6/js
 !libraries/foundation-6/css
+
+# Ignore all of tablesorter contrib but a few custom things
+libraries/tablesorter
+!libraries/tablesorter/js
+!libraries/tablesorter/css

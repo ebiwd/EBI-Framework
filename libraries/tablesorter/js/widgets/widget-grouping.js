@@ -1,4 +1,4 @@
-/*! Widget: grouping - updated 5/16/2015 (v2.26.1) *//*
+/*! Widget: grouping - updated 11/26/2016 (v2.28.0) *//*
  * Requires tablesorter v2.8+ and jQuery 1.7+
  * by Rob Garrison
  */
@@ -57,6 +57,7 @@
 						part === 'day' ? month + ' ' + time.getDate() :
 						part === 'week' ? tsg.findWeek( wo, time.getDay() ) :
 						part === 'time' ? tsg.findTime( wo, time ) :
+						part === 'hour' ? tsg.findTime( wo, time, 'hour' ) :
 						wo.group_dateString( time, c, $column );
 				} else {
 					return wo.group_dateInvalid;
@@ -78,7 +79,7 @@
 				return wo.group_week[ cldrWeek[ day ] ];
 			}
 		},
-		findTime : function( wo, time ) {
+		findTime : function( wo, time, part ) {
 			var suffix,
 				// CLDR returns { am: "AM", pm: "PM", ... }
 				isObj = wo.group_time.am && wo.group_time.pm,
@@ -89,6 +90,9 @@
 				hours = ( '00' + p24 ).slice(-2),
 				min = ( '00' + time.getMinutes() ).slice(-2);
 			suffix = wo.group_time[ isObj ? [ 'am', 'pm' ][ period ] : period ];
+			if ( part === 'hour' ) {
+				return hours;
+			}
 			return hours + ':' + min + ( wo.group_time24Hour ? '' : ' ' + ( suffix || '' ) );
 		},
 
@@ -144,19 +148,17 @@
 					$label = $row.find( '.group-count' );
 					if ( $label.length ) {
 						if ( wo.group_count ) {
-							$label.html( wo.group_count.replace( /\{num\}/g, $rows.length ) );
+							$label.html( wo.group_count.toString().replace( /\{num\}/g, $rows.length ) );
 						}
 						if ( $.isFunction( wo.group_callback ) ) {
 							wo.group_callback( $row.find( 'td' ), $rows, data.column, c.table );
 						}
 					}
 				}
-
 				// save collapsed groups
 				if ( wo.group_saveGroups &&
 					!$.isEmptyObject( wo.group_collapsedGroups ) &&
 					wo.group_collapsedGroups[ wo.group_collapsedGroup ].length ) {
-
 					name = $row.find( '.group-name' ).text().toLowerCase() + $row.attr( 'data-group-index' );
 					isHidden = $.inArray( name, wo.group_collapsedGroups[ wo.group_collapsedGroup ] ) > -1;
 					$row.toggleClass( 'collapsed', isHidden );
@@ -169,10 +171,10 @@
 		},
 
 		groupHeaderHTML : function( c, wo, data ) {
-			var name = ( data.currentGroup || '' ).replace(/</g, '&lt;').replace(/>/g, '&gt;');
+			var name = ( data.currentGroup || '' ).toString().replace(/</g, '&lt;').replace(/>/g, '&gt;');
 			return '<tr class="group-header ' + c.selectorRemove.slice(1) +
 				'" unselectable="on" ' + ( c.tabIndex ? 'tabindex="0" ' : '' ) + 'data-group-index="' +
-				( data.groupIndex++ ) + '">' +
+				data.groupIndex + '">' +
 				'<td colspan="' + c.columns + '">' +
 					( wo.group_collapsible ? '<i/>' : '' ) +
 					'<span class="group-name">' + name + '</span>' +
@@ -183,8 +185,8 @@
 			// save current grouping
 			var saveName, direction,
 				savedGroup = false;
-			if (wo.group_collapsible && wo.group_saveGroups && ts.storage) {
-				wo.group_collapsedGroups = ts.storage( c.table, 'tablesorter-groups' ) || {};
+			if (wo.group_collapsible && wo.group_saveGroups) {
+				wo.group_collapsedGroups = ts.storage && ts.storage( c.table, 'tablesorter-groups' ) || {};
 				// include direction when saving groups (reversed numbers shows different range values)
 				direction = 'dir' + c.sortList[0][1];
 				// combine column, sort direction & grouping as save key
@@ -199,19 +201,23 @@
 		},
 		findColumnGroups : function( c, wo, data ) {
 			var tbodyIndex, norm_rows, $row, rowIndex, end, undef,
-				hasPager = ts.hasWidget( c.table, 'pager' );
+				hasPager = ts.hasWidget( c.table, 'pager' ),
+				p = c.pager || {};
 			data.groupIndex = 0;
 			for ( tbodyIndex = 0; tbodyIndex < c.$tbodies.length; tbodyIndex++ ) {
 				norm_rows = c.cache[ tbodyIndex ].normalized;
 				data.group = undef; // clear grouping across tbodies
-				rowIndex = hasPager ? c.pager.startRow - 1 : 0;
-				end = hasPager ? c.pager.endRow : norm_rows.length;
+				rowIndex = hasPager && !p.ajax ? p.startRow - 1 : 0;
+				end = hasPager ? p.endRow - ( p.ajax ? p.startRow : 0 ) : norm_rows.length;
 				for ( ; rowIndex < end; rowIndex++ ) {
 					data.rowData = norm_rows[ rowIndex ];
-					data.$row = data.rowData[ c.columns ].$row;
-					// fixes #438
-					if ( data.$row.is( ':visible' ) && tsg.types[ data.grouping[ 1 ] ] ) {
-						tsg.insertGroupHeader( c, wo, data );
+					// fixes #1232 - ajax issue; if endRow > norm_rows.length (after filtering), then data.rowData is undefined
+					if (data.rowData) {
+						data.$row = data.rowData[ c.columns ].$row;
+						// fixes #438
+						if ( data.$row.is( ':visible' ) && tsg.types[ data.grouping[ 1 ] ] ) {
+							tsg.insertGroupHeader( c, wo, data );
+						}
 					}
 				}
 			}
@@ -228,11 +234,13 @@
 				if ( $.isFunction( wo.group_formatter ) ) {
 					data.currentGroup = wo.group_formatter( ( data.group || '' ).toString(), data.column, c.table, c, wo, data ) || data.group;
 				}
-				data.$row.before( tsg.groupHeaderHTML( c, wo, data ) );
+				// add first() for grouping with childRows
+				data.$row.first().before( tsg.groupHeaderHTML( c, wo, data ) );
 				if ( wo.group_saveGroups && !data.savedGroup && wo.group_collapsed && wo.group_collapsible ) {
-					// all groups start collapsed
-					wo.group_collapsedGroups[ wo.group_collapsedGroup ].push( data.currentGroup );
+					// all groups start collapsed; data.groupIndex is 1 more than the expected index.
+					wo.group_collapsedGroups[ wo.group_collapsedGroup ].push( data.currentGroup + data.groupIndex );
 				}
+				data.groupIndex++;
 			}
 		},
 

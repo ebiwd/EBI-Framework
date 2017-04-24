@@ -1,4 +1,4 @@
-/*! Parser: input & select - updated 4/29/2016 (v2.25.9) *//*
+/*! Parser: input & select - updated 11/26/2016 (v2.28.0) *//*
  * for jQuery 1.7+ & tablesorter 2.7.11+
  * Demo: http://mottie.github.com/tablesorter/docs/example-widget-grouping.html
  */
@@ -110,6 +110,10 @@
 		type : 'text'
 	});
 
+	// update defaults for validator; values must be falsy
+	$.tablesorter.defaults.checkboxClass = '';
+	$.tablesorter.defaults.checkboxVisible = '';
+
 	// update select and all input types in the tablesorter cache when the change event fires.
 	// This method only works with jQuery 1.7+
 	// you can change it to use delegate (v1.4.3+) or live (v1.3+) as desired
@@ -135,7 +139,7 @@
 			$table.children( 'thead' ).find( 'input[type="checkbox"]' ).each( function() {
 				var column = $( this ).closest( 'td, th' ).attr( 'data-column' ),
 					vis = $rows.filter( '.' + checkboxClass + '-' + column ).length,
-					allChecked = vis === len;
+					allChecked = vis === len && len > 0;
 				if ( vis === 0 || allChecked ) {
 					this.checked = allChecked;
 					this.indeterminate = false;
