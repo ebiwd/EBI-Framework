@@ -344,8 +344,8 @@ a:active {
   }
 
   /* tweak sticky behaviour */
-  div.masthead.sticky { width: 100%; position: static; -webkit-transform: none; transform: none; }
-  div.masthead.sticky.is-stuck { position: fixed; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+  .masthead.sticky { width: 100%; position: static; -webkit-transform: none; transform: none; }
+  .masthead.sticky.is-stuck { position: fixed; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
   input#local-searchbox,
   #local-search [type="submit"] {
