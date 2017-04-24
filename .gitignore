@@ -2,3 +2,8 @@ node_modules
 .DS_store
 _site
 npm-debug.log
+
+# Ignore all of foundation contrib but a few custom things
+libraries/foundation-6
+!libraries/foundation-6/js
+!libraries/foundation-6/css

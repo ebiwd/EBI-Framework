@@ -81,8 +81,14 @@ class Reveal {
    * @private
    */
   _makeOverlay() {
+    var additionalOverlayClasses = '';
+
+    if (this.options.additionalOverlayClasses) {
+      additionalOverlayClasses = ' ' + this.options.additionalOverlayClasses;
+    }
+
     return $('<div></div>')
-      .addClass('reveal-overlay')
+      .addClass('reveal-overlay' + additionalOverlayClasses)
       .appendTo(this.options.appendTo);
   }
 
@@ -369,17 +375,13 @@ class Reveal {
     // Motion UI method of hiding
     if (this.options.animationOut) {
       if (this.options.overlay) {
-        Foundation.Motion.animateOut(this.$overlay, 'fade-out', finishUp);
-      }
-      else {
-        finishUp();
+        Foundation.Motion.animateOut(this.$overlay, 'fade-out');
       }
 
-      Foundation.Motion.animateOut(this.$element, this.options.animationOut);
+      Foundation.Motion.animateOut(this.$element, this.options.animationOut, finishUp);
     }
     // jQuery method of hiding
     else {
-
       this.$element.hide(this.options.hideDelay);
 
       if (this.options.overlay) {
@@ -581,8 +583,14 @@ Reveal.defaults = {
    * @type {string}
    * @default "body"
    */
-  appendTo: "body"
-
+  appendTo: "body",
+  /**
+   * Allows adding additional class names to the reveal overlay.
+   * @option
+   * @type {string}
+   * @default ''
+   */
+  additionalOverlayClasses: ''
 };
 
 // Window exports

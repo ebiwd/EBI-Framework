@@ -153,7 +153,6 @@ class Drilldown {
         });
       }
     });
-	  this.$element.on('mutateme.zf.trigger', this._resize.bind(this));
   }
 
   /**
@@ -166,6 +165,7 @@ class Drilldown {
       this._bindHandler = this._scrollTop.bind(this);
       this.$element.on('open.zf.drilldown hide.zf.drilldown closed.zf.drilldown',this._bindHandler);
     }
+    this.$element.on('mutateme.zf.trigger', this._resize.bind(this));
   }
 
   /**
@@ -176,7 +176,7 @@ class Drilldown {
   _scrollTop() {
     var _this = this;
     var $scrollTopElement = _this.options.scrollTopElement!=''?$(_this.options.scrollTopElement):_this.$element,
-        scrollPos = parseInt($scrollTopElement.offset().top+_this.options.scrollTopOffset);
+        scrollPos = parseInt($scrollTopElement.offset().top+_this.options.scrollTopOffset, 10);
     $('html, body').stop(true).animate({ scrollTop: scrollPos }, _this.options.animationDuration, _this.options.animationEasing,function(){
       /**
         * Fires after the menu has scrolled
@@ -410,7 +410,7 @@ class Drilldown {
       $(this).off('.zf.drilldown');
     });
 
-    this.$submenus.removeClass('drilldown-submenu-cover-previous');
+    this.$submenus.removeClass('drilldown-submenu-cover-previous invisible');
 
     this.$element.find('a').each(function(){
       var $link = $(this);
