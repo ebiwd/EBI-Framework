@@ -11,8 +11,8 @@
   "name": "ebi-framework",
   "version": "1.2.0-alpha.2",
   "scripts": {
-    "scss": "node-sass -o css css && csso ./css/ebi-global.css --output ./css/ebi-global.min.css && npm run foundation-scss-full-fat && npm run foundation-scss-lite && npm run foundation-scss-extras",
     "test": "npm run libraries && npm run scss && npm run js",
+    "scss": "node-sass -o css css && csso ./css/ebi-global.css --output ./css/ebi-global.min.css && npm run foundation-scss-full-fat && npm run foundation-scss-lite && npm run foundation-scss-extras && npm run choices-scss",
     "//@16": [
       "Foundation build variants",
       "We build three variants to allow a 'lite' edition.",
@@ -23,14 +23,15 @@
     "foundation-scss-full-fat": "node-sass ./css/foundation/_settings-full-fat.scss ./libraries/foundation-6/css/foundation.css && csso ./libraries/foundation-6/css/foundation.css --output ./libraries/foundation-6/css/foundation.min.css",
     "foundation-scss-lite": "node-sass ./css/foundation/_settings-lite.scss ./libraries/foundation-6/css/foundation-lite.css && csso ./libraries/foundation-6/css/foundation-lite.css --output ./libraries/foundation-6/css/foundation-lite.min.css",
     "foundation-scss-extras": "node-sass ./css/foundation/_settings-extras.scss ./libraries/foundation-6/css/foundation-extras.css && csso ./libraries/foundation-6/css/foundation-extras.css --output ./libraries/foundation-6/css/foundation-extras.min.css",
+    "choices-scss": "node-sass ./libraries/Choices/assets/styles/scss/choices.scss ./libraries/Choices/assets/styles/css/choices.css && csso ./libraries/Choices/assets/styles/css/choices.css --output ./libraries/Choices/assets/styles/css/choices.min.css",
     "ebi-js": "concat-cli -f js/ebi-global-includes/script/*.js -o js/script.js",
     "js": "npm run foundation-js && npm run ebi-js",
     "foundation-js": "cpx './libraries/foundation-6/dist/js/*.js' ./libraries/foundation-6/js",
-    "//@29": [
+    "//@30": [
       "-- Our buildscript: With this line we concat all libraries to be installed at once --"
     ],
     "libraries": "npm run tablesorter && npm run foundation-update && npm run motion-ui-update && npm run message_finished",
-    "//@33": [
+    "//@34": [
       "-- All our libraries, not intended to be run indiviudually --"
     ],
     "tablesorter": "wget https://github.com/Mottie/tablesorter/archive/master.zip -d ./libraries/tablesorter.zip && extract-zip ./libraries/tablesorter.zip ./libraries/ && del ./libraries/tablesorter && mve ./libraries/tablesorter-master ./libraries/tablesorter && del ./libraries/tablesorter.zip",
