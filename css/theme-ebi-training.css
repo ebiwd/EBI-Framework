@@ -44,7 +44,7 @@ a.tag:hover { color: #fff; }
   color: #fff;
   background: #666; }
 
-div.masthead { background-color: rgb(233,180,0); }
+.masthead { background-color: rgb(233,180,0); }
 
 body main.row { margin-top: 1.5rem; }
 body .form-checkboxes .form-item,

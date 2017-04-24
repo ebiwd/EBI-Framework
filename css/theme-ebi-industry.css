@@ -43,7 +43,7 @@ a.tag:hover { color: #fff; }
   color: #fff;
   background: #666; }
 
-div.masthead { background-color: rgb(0,134,180); }
+.masthead { background-color: rgb(0,134,180); }
 
 /* Menu hover triangle colour */
 .masthead nav ul#global-nav.menu li a:hover:after { border-bottom-color: rgb(0,134,180); }

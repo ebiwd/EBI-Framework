@@ -48,7 +48,7 @@ a.tag:hover { color: #fff; }
   color: #fff;
   background: #666; }
 
-div.masthead {background-color: #eee;}
+.masthead {background-color: #eee;}
 
 /* white on light masthead stlying */
 .masthead nav ul.menu li { border-right-color: #EEE; }
