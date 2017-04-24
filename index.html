@@ -45,21 +45,12 @@
   -->
 
   <!-- If you have a custom header image or colour -->
-  <!--
-  -->
   <meta name="ebi:masthead-color" content="#091314" />
   <meta name="ebi:masthead-image" content="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/backgrounds/embl-ebi-background-4.jpg" />
 
-    <!-- you can replace this with theme-[projectname].css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- you can replace this with theme-[projectname].css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
   <!-- also inform ES so we can host your colour palette file -->
   <link rel="stylesheet" href="css/theme-embl-petrol.css" type="text/css" media="all" />
-
-  <!-- for production the above can be replaced with -->
-  <!--
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css" />
-  -->
-
-  <!-- end CSS-->
 </head>
 
 <body class="level2"><!-- add any of your classes or IDs -->
@@ -125,13 +116,6 @@
                       <a href='#'> Item 1 sub</a>
                       <ul class='menu'>
                         <li><a href='#'>Item 1 subA</a></li>
-                        <li><a href='#'>Item 1 subB</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href='#'> Item 1 sub</a>
-                      <ul class='menu'>
-                        <li><a href='#'>Item 1 subA</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -146,8 +130,7 @@
     </div>
 
     <!-- Your menu structure should make a breadcrumb redundant, but if a breadcrump is needed uncomment the below -->
-    <!--
-    <nav aria-label="You are here:" role="navigation">
+    <nav aria-label="You are here:" role="navigation" class="row">
       <ul class="breadcrumbs">
         <li><a href="#">Home</a></li>
         <li><a href="#">Parent</a></li>
@@ -157,7 +140,6 @@
         </li>
       </ul>
     </nav>
-    -->
 
     <section id="main-content-area" class="row" role="main">
       <h2>EBI Visual Framework</h2>
@@ -191,19 +173,8 @@
     </div>
   </footer>
 
-
   <!-- JavaScript -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <!--
-  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
-  -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <!-- Your custom JavaScript file scan go here... change names accordingly -->
-  <!--
-  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
-  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
-  -->
   <script defer="defer" src="js/script.js"></script>
 
   <!-- The Foundation theme JavaScript -->
@@ -211,8 +182,6 @@
   <script src="js/foundationExtendEBI.js"></script>
   <script type="text/JavaScript">$(document).foundation();</script>
   <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
-<!--
-   -->
 
   <!-- Google Analytics details... -->
   <!-- Change UA-XXXXX-X to be your site's ID -->
@@ -224,6 +193,5 @@
     });
   </script>
   -->
-
 </body>
 </html>
