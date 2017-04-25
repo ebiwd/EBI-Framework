@@ -521,6 +521,16 @@ body .breadcrumbs a {
   padding: 0.125rem 0.3125rem 0.0625rem;
   overflow-x: auto; }
 
+pre {
+  overflow-x: auto; }
+
+pre > .code,
+pre > code {
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: .8rem; }
+
 .kbd {
   margin: 0;
   color: #0a0a0a;
