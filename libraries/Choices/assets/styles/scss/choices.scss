@@ -51,21 +51,19 @@ $choices-button-offset: 8px !default;
     margin: 0;
   }
   .#{$choices-selector}__button {
-    background-image: url($choices-button-icon-path + '/cross-inverse.svg');
-    padding: 0;
-    background-size: 8px;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    margin-top: -10px;
-    margin-right: 25px;
+    margin-left: .25rem;
     height: 20px;
     width: 20px;
-    border-radius: 10em;
     opacity: .5;
     &:hover, &:focus { opacity: 1; }
     &:focus { box-shadow: 0px 0px 0px 2px $choices-highlight-color; }
+    &:before {
+      content: 'x ';
+      font-size: $choices-font-size-sm;
+      font-family: 'EBI-Functional';
+      padding: 0.5rem .25rem;
+      display: inline-block;
+    }
   }
   &:after {
     content: "";
@@ -104,13 +102,13 @@ $choices-button-offset: 8px !default;
     line-height: 1;
     // opacity: .75;
     &:hover, &:focus { opacity: 1; }
-  }
-  .#{$choices-selector}__button:before {
-    content: 'x ';
-    font-size: $choices-font-size-sm;
-    font-family: 'EBI-Functional';
-    padding: 0.5rem .25rem;
-    display: inline-block;
+    &:before {
+      content: 'x ';
+      font-size: $choices-font-size-sm;
+      font-family: 'EBI-Functional';
+      padding: 0.5rem .25rem;
+      display: inline-block;
+    }
   }
 }
 
