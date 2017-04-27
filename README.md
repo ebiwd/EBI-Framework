@@ -1,5 +1,5 @@
-# Framework v1.1 now stable
-At the [6 December Web Guidelines Committee meeting](https://www.ebi.ac.uk/seqdb/confluence/display/WGC/2016-12-06+Meeting+notes) the EBI Visual Framework v1.1 became "stable". Edits will now focus on bug fixing, the pattern library, and planning for a [1.2 release in summer 2017](https://github.com/ebiwd/EBI-Framework/milestone/2).
+# Framework v1.2 beta coming soon
+The EBI Visual Framework v1.2 is under active development and will enter beta testing in May. [Learn more about v1.2](https://github.com/ebiwd/EBI-Framework/tree/v1.2)
 
 # EBI-Framework
 
@@ -8,15 +8,15 @@ This, the EBI Visual Framework, is the successor to the current EBI Compliance T
 ## Where do I start? How do I use this?
 
 1. Quick start: 
-  - see the [HTML demos in the EBI Pattern Library /sample-site directory] (https://ebiwd.github.io/EBI-Pattern-library/sample-site/).
+  - see the [HTML demos in the EBI Pattern Library /sample-site directory](https://ebiwd.github.io/EBI-Pattern-library/sample-site/).
 2. Test for compatibility: 
-  - if you're migrating an exsisting site [try out the in-browser migration JS] (https://github.com/ebiwd/EBI-Pattern-library/blob/gh-pages/sample-site/migrations/testMigration.js).
+  - if you're migrating an exsisting site [try out the in-browser migration JS](https://github.com/ebiwd/EBI-Pattern-library/blob/gh-pages/sample-site/migrations/testMigration.js).
 3. Import legacy style and grids: 
-  - if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS] (https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css).
+  - if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS](https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css).
 4. Guidance: 
-  - For the updated web guidelines, [check out the pattern library] (https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
+  - For the updated web guidelines, [check out the pattern library](https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
 5. Help! 
-  - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins] (https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
+  - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
 
 ### Do I need to download this?
 
@@ -41,7 +41,7 @@ This project continues efforts of the existing guidance by providing:
   - Enhanced mobile support
 - Pattern library for reusable components to speed development and reduce fragmentation (in progress, more targeted for 1.2 release)
   - Page-specific header colours and images through metatags: meta-background-image, meta-background-color
-  - Built in [pattern support through Foundation Framework] (http://foundation.zurb.com/sites/docs/grid.html)
+  - Built in [pattern support through Foundation Framework](http://foundation.zurb.com/sites/docs/grid.html)
 - Page lifecycle tracking: An improved meta-tag based model for maintaining and tracking content freshness, ownership, and intent
 - Regular updates: A versioning system for the framework to help track changes, features, and usage
   - Sass support (optional)
@@ -81,7 +81,7 @@ Difference between major, minor releases:
 
 The support for previous major versions (branches) is still being considered, but the current suggestion is that the last three major version will be supported with updates to assets, fonts, and critical EMBl and EBI branding.
 
-Where's version 1.0, you ask? Version 1.0 is the [current EBI Compliance theme] (https://www.ebi.ac.uk/web_guidelines/html/compliance/).
+Where's version 1.0, you ask? Version 1.0 is the [current EBI Compliance theme](https://www.ebi.ac.uk/web_guidelines/html/compliance/).
 
 ### Test releases
 Testing releases will be identified in their tag, a la: `V1.1.0-alpha`, where `.0-alpha` is the tag. `-alpha`, `-beta` and `-dev` are the anticipated tag suffixes. 
@@ -110,5 +110,5 @@ To get started, have a look at `package.json`. Likely the the `npm run scss` com
 - v1.2: Guidance and templates for wide-screen content engagements;
         Use the masthead image as a skybox promo/feature
 - v1.4: Unit testing
-- v1.5: Add animation guidance and tooling ([see this] (https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))
+- v1.5: Add animation guidance and tooling ([see this](https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))
  
