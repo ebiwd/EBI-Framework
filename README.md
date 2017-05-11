@@ -2,7 +2,7 @@
 
 # EBI-Framework v1.2
 
-v1.2 is targeted for a July 2017 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
+v1.2 is in beta and is targeted for a late-June 2017 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
 
 To view plans for v1.2 (and to join the discussion), [see issue 61](https://github.com/ebiwd/EBI-Framework/issues/61).
 
@@ -18,7 +18,7 @@ We recommend upgrading to v1.2 in a number of scenarios:
 3. You have a site using the old EBI Compliance theme and want a less intrusive upgrade and want to use the EBI Visual Framework 'lite' implementation.
 
 ### Do I have to upgrade?
-If you're using the EBI Visual Framework v1.1 it is not required that you upgrade.
+If you're using the EBI Visual Framework v1.1 it is not required that you upgrade, but there are [a number of improvements](https://github.com/ebiwd/EBI-Framework/issues/61) for sites that show a lot of data.
 
 ### How do I migrate?
 Follow the migration guide: https://github.com/ebiwd/EBI-Framework/issues/85
