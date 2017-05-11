@@ -56,7 +56,8 @@ a.image:visited {
   border-bottom: 0 none; }
 
 a.button, a.button:visited {
-  color: #f8f8f8; }
+  color: #f8f8f8;
+  white-space: nowrap; }
 
 /* Colour - defaults to be reset by custom stylesheet
 ===================================================*/
@@ -161,6 +162,9 @@ nav a:hover {
 
 .masthead #local-title .columns a {
   border-bottom: 1px dotted white; }
+
+.masthead #local-title .columns a.button {
+  border-bottom: none; }
 
 .masthead #local-title .columns a:hover {
   border-bottom: none; }
