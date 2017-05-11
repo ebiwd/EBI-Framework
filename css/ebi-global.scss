@@ -57,7 +57,7 @@ a.special {
 a:hover { opacity: .9; }
 a.image,
 a.image:visited { border-bottom: 0 none; }
-a.button, a.button:visited { color: $ebi-colour-light; }
+a.button, a.button:visited { color: $ebi-colour-light; white-space: nowrap; }
 
 /* Colour - defaults to be reset by custom stylesheet
 ===================================================*/
@@ -113,9 +113,12 @@ a:active {
   nav a:hover { border-bottom: none; }
 
   .masthead {
-    // highlight links in the textual area of the local masthead
-    #local-title .columns a { border-bottom: 1px dotted rgb(255,255,255); }
-    #local-title .columns a:hover { border-bottom: none; }
+    // underline links in the textual area of the local masthead
+    #local-title .columns {
+      a { border-bottom: 1px dotted rgb(255,255,255); }
+      a.button { border-bottom: none; }
+      a:hover { border-bottom: none; }
+    }
   }
 
   /* Global menu styling */
