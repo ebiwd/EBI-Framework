@@ -174,6 +174,10 @@ nav ul#global-nav.menu li {
   border-right: none;
   display: inline-block; }
 
+/* Disable masthead-black-bar search when told */
+body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
+  display: none; }
+
 /* Mobile logo */
 @media screen and (max-width: 40em) {
   nav ul#global-nav.menu li.home {
@@ -190,10 +194,6 @@ nav ul#global-nav.menu li {
 @media screen and (min-width: 40em) {
   nav ul#global-nav.menu li.home-mobile {
     display: none; } }
-
-/* Disable masthead-black-bar search when told */
-body.no-global-search .masthead-black-bar ul.menu li.search {
-  display: none; }
 
 .masthead-black-bar {
   /* custom colour for Home */
