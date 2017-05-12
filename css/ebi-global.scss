@@ -826,12 +826,16 @@ code { font-size: .95rem; }
 }
 
 // read more
-a.read-more:after,
-a.readmore:after,
-a.more:after {
-  content: " >";
-  font-family: "EBI-Functional";
-  font-size: .85em;
+
+a.read-more,
+a.readmore,
+a.more {
+  white-space: nowrap;
+  &:after {
+    content: " >";
+    font-family: "EBI-Functional";
+    font-size: .85em;
+  }
 }
 
 /* custom spacing */
