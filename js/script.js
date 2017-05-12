@@ -163,27 +163,33 @@ function ebiFrameworkInsertEMBLdropdown() {
 
     var dropdownDiv = document.createElement("div");
     dropdownDiv.innerHTML = '<div id="embl-dropdown" class="embl-dropdown dropdown-pane bottom" data-dropdown>' +
-              '<p>EMBL-EBI in Hinxton is one of five EMBL locations across europe.<br/> <a href="//www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
+              '<p>EMBL-EBI in Hinxton is one of six EMBL locations across europe.<br/> <a href="//www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
               '<h6>Connect to another EMBL location</h6>' +
-              '<div class="small-collapse small-up-2 padding-bottom-large clearfix">' +
-                '<div class="column padding-bottom-medium">' +
-                  '<a href="http://www.embl.fr/" class="">Grenoble</a>' +
-                  '<div class="small">Structural Biology</div>' +
+              '<div class="small-collapse padding-bottom-large clearfix">' +
+                '<div class="columns small-5 padding-bottom-medium">' +
+                  '<a href="http://www.embl.de/">Heidelberg</a>' +
+                  '<div class="small">Main laboratory</div>' +
                 '</div>' +
-                '<div class="column padding-bottom-medium">' +
-                  '<a href="http://www.embl-hamburg.de/" class="">Hamburg</a>' +
-                  '<div class="small">Structural Biology</div>' +
+                '<div class="columns small-7 padding-bottom-medium">' +
+                  '<a href="http://www.embl-barcelona.es/">Barcelona</a>' +
+                  '<div class="small">Tissue biology and disease modelling</div>' +
                 '</div>' +
-                '<div class="column padding-bottom-medium">' +
-                  '<a href="http://www.embl.de/" class="">Heidelberg</a>' +
-                  '<div class="small">Main Laboratory</div>' +
+                '<div class="columns small-5 padding-bottom-medium">' +
+                  '<a href="http://www.embl.fr/">Grenoble</a>' +
+                  '<div class="small">Structural biology</div>' +
                 '</div>' +
-                '<div class="column padding-bottom-medium">' +
-                  '<a href="http://www.embl.it/" class="">Monterotondo</a>' +
-                  '<div class="small">Mouse Biology</div>' +
+                '<div class="columns small-7 padding-bottom-medium">' +
+                  '<a href="http://www.embl-hamburg.de/">Hamburg</a>' +
+                  '<div class="small">Structural biology</div>' +
+                '</div>' +
+                '<div class="columns small-5 padding-bottom-medium">' +
+                  '<a href="http://www.embl.it/">Monterotondo</a>' +
+                  '<div class="small">Mouse biology</div>' +
+                '</div>' +
+                '<div class="columns small-7 padding-bottom-medium">' +
+                  '<a href="http://embl.org/" class="readmore">More about EMBL</a>' +
                 '</div>' +
               '</div>' +
-              '<p><a href="http://embl.org/" class="button readmore">Or learn more about EMBL</a></p>' +
             '</div>';
     document.getElementById("masthead-black-bar").appendChild(dropdownDiv);
     // We don't invoke the dropdown here, as that method depends on how you're using the Framework
