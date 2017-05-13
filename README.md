@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ebiwd/EBI-Framework.svg?branch=v1.2)](https://travis-ci.org/ebiwd/EBI-Framework)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/ebiwd/EBI-Framework)
 
 # EBI-Framework v1.2
 
