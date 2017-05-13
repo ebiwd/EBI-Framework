@@ -1,4 +1,4 @@
-/* Copyright (c) EMBL-EBI 2016
+/* Copyright (c) EMBL-EBI 2017
    Authors:
    Ken Hawkins (khawkins@ebi.ac.uk)
 */
@@ -8,124 +8,139 @@
 // Links in non-generic regions can be tracked by adding '.track-with-analytics-events' to a parent div. Careful with the scoping.
 // -------------
 var ga = ga || [];
-if (ga.loaded) { jQuery('body').addClass('google-analytics-loaded'); }   // Confirm GA is loaded, add a class if found
+var numberOfEbiGaChecks = 0;
+var numberOfEbiGaChecksLimit = 1;
+function ebiGaCheck() {
+  if (ga.loaded) {
+    jQuery('body').addClass('google-analytics-loaded'); // Confirm GA is loaded, add a class if found
+    ebiGaInit();
+  } else {
+    if (numberOfEbiGaChecks < numberOfEbiGaChecksLimit) {
+      numberOfEbiGaChecks++;
+      setTimeout(ebiGaCheck, 900); // give a second check if GA was slow to load
+    }
+  }
+}
+ebiGaCheck(); // invoke analytics check
 
-// Utility method
-if (!Array.prototype.last){
-  Array.prototype.last = function(){
-    return this[this.length - 1];
+// initialise the tracking of various areas
+function ebiGaInit() {
+  // Utility method
+  if (!Array.prototype.last){
+    Array.prototype.last = function(){
+      return this[this.length - 1];
+    };
   };
-};
 
-function analyticsTrackInteraction(actedOnItem, parentContainer) {
-  var linkName = jQuery(actedOnItem).text().toString();
-  // if there's no text, it's probably and image...
-  if (linkName.length == 0 && jQuery(actedOnItem).attr('src')) linkName = jQuery(actedOnItem).attr('src').split('/').last();
-  if (linkName.length == 0 && jQuery(actedOnItem).val()) linkName = jQuery(actedOnItem).val();
-  // console.log(parentContainer,linkName);
-  ga('send', 'event', 'UI', 'UI Element / ' + parentContainer, linkName);
-}
+  function analyticsTrackInteraction(actedOnItem, parentContainer) {
+    var linkName = jQuery(actedOnItem).text().toString();
+    // if there's no text, it's probably and image...
+    if (linkName.length == 0 && jQuery(actedOnItem).attr('src')) linkName = jQuery(actedOnItem).attr('src').split('/').last();
+    if (linkName.length == 0 && jQuery(actedOnItem).val()) linkName = jQuery(actedOnItem).val();
+    // console.log(parentContainer,linkName);
+    ga('send', 'event', 'UI', 'UI Element / ' + parentContainer, linkName);
+  }
 
-// Only track these areas
-// This could be done more efficently with a general capture of links,
-// but we're running against the page's unload -- so speed over elegance.
+  // Only track these areas
+  // This could be done more efficently with a general capture of links,
+  // but we're running against the page's unload -- so speed over elegance.
 
-// Automatically detected areas
-// These are largely legacy...
-jQuery("body.google-analytics-loaded .masthead").on('mousedown', 'a', function(e) {
-  analyticsTrackInteraction(e.target,'Masthead');
-});
-jQuery("body.google-analytics-loaded .related ul").on('mousedown', 'li > a', function(e) {
-  analyticsTrackInteraction(e.target,'Popular');
-});
-jQuery("body.google-analytics-loaded .with-overlay").on('mousedown', 'a', function(e) {
-  analyticsTrackInteraction(e.target,'Highlight box');
-});
-jQuery("body.google-analytics-loaded .intro-unit").on('mousedown', 'a', function(e) {
-  analyticsTrackInteraction(e.target,'Intro');
-});
-jQuery("body.google-analytics-loaded #main-content-area").on('mousedown', 'a', function(e) {
-  analyticsTrackInteraction(e.target,'Main content');
-});
-// jQuery("body.google-analytics-loaded .main.columns > article > .row > .medium-4 a, \
-//   body.google-analytics-loaded .main.columns > article > .row > .medium-3").mousedown( function(e) {
-//   analyticsTrackInteraction(e.target,'Sidebar');
-// });
-jQuery("body.google-analytics-loaded #global-footer").on( 'mousedown', 'a', function(e) {
-  analyticsTrackInteraction(e.target,'Footer');
-});
-jQuery("body.google-analytics-loaded #global-search").on( 'mousedown', 'input', function(e) {
-  analyticsTrackInteraction(e.target,'Global search');
-});
-jQuery("body.google-analytics-loaded #local-search").on( 'mousedown', 'input', function(e) {
-  analyticsTrackInteraction(e.target,'Local search');
-});
-jQuery("body.google-analytics-loaded #ebi_search").on( 'mousedown', 'input#search_submit', function(e) {
-  analyticsTrackInteraction(e.target,'Homepage search');
-});
-
-// Editor defined areas
-// These areas will be manually tagged by content editors or implement by devs
-jQuery("body.google-analytics-loaded .analytics-content-intro").on( 'mousedown', 'a', function(e) {
-  analyticsTrackInteraction(e.target,'Intro');
-});
-jQuery("body.google-analytics-loaded .analytics-content-main").on( 'mousedown', 'a', function(e) {
-  analyticsTrackInteraction(e.target,'Main content');
-});
-jQuery("body.google-analytics-loaded .analytics-content-sidebar").on( 'mousedown', 'a', function(e) {
-  analyticsTrackInteraction(e.target,'Sidebar');
-});
-jQuery("body.google-analytics-loaded .analytics-content-left").on( 'mousedown', 'a', function(e) {
-  analyticsTrackInteraction(e.target,'Left content');
-});
-jQuery("body.google-analytics-loaded .analytics-content-right").on( 'mousedown', 'a', function(e) {
-  analyticsTrackInteraction(e.target,'Right content');
-});
-jQuery("body.google-analytics-loaded .analtyics-content-footer").on( 'mousedown', 'a', function(e) {
-  analyticsTrackInteraction(e.target,'Content footer');
-});
-
-
-
-// todo: homepage search return
-// $('textarea').bind("enterKey",function(e){
-//    //do stuff here
-// });
-// $('textarea').keyup(function(e){
-//     if(e.keyCode == 13)
-//     {
-//         $(this).trigger("enterKey");
-//     }
-// });
-
-jQuery("body.google-analytics-loaded .track-with-analytics-events a").on( 'mousedown', function(e) {
-  analyticsTrackInteraction(e.target,'Manually tracked area');
-});
-// To do: track livefilter
-// input.filter[type="text"]').on("keyup", function() {
-
-// log control+f and command+f
-// base method via http://stackoverflow.com/a/6680403
-var keydown = null;
-if (jQuery('body').hasClass('google-analytics-loaded')) {
-  jQuery(window).keydown(function(e) {
-    // the user does ctrl+f action
-    if ( ( e.keyCode == 70 && ( e.ctrlKey || e.metaKey ) ) ||
-       ( e.keyCode == 191 ) ) {
-      keydown = new Date().getTime();
-    }
-    return true;
-  }).blur(function() {
-    // and then browser window blurs, indicating shift to UI
-    if ( keydown !== null ) {
-      var delta = new Date().getTime() - keydown;
-      if ( delta > 0 && delta < 1000 ) {
-        ga('send', 'event', 'UI', 'UI Element / Keyboard', 'Browser in page search');
-      }
-      keydown = null;
-    }
+  // Automatically detected areas
+  // These are largely legacy...
+  jQuery("body.google-analytics-loaded .masthead").on('mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Masthead');
   });
-}
+  jQuery("body.google-analytics-loaded .related ul").on('mousedown', 'li > a', function(e) {
+    analyticsTrackInteraction(e.target,'Popular');
+  });
+  jQuery("body.google-analytics-loaded .with-overlay").on('mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Highlight box');
+  });
+  jQuery("body.google-analytics-loaded .intro-unit").on('mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Intro');
+  });
+  jQuery("body.google-analytics-loaded #main-content-area").on('mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Main content');
+  });
+  // jQuery("body.google-analytics-loaded .main.columns > article > .row > .medium-4 a, \
+  //   body.google-analytics-loaded .main.columns > article > .row > .medium-3").mousedown( function(e) {
+  //   analyticsTrackInteraction(e.target,'Sidebar');
+  // });
+  jQuery("body.google-analytics-loaded #global-footer").on( 'mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Footer');
+  });
+  jQuery("body.google-analytics-loaded #global-search").on( 'mousedown', 'input', function(e) {
+    analyticsTrackInteraction(e.target,'Global search');
+  });
+  jQuery("body.google-analytics-loaded #local-search").on( 'mousedown', 'input', function(e) {
+    analyticsTrackInteraction(e.target,'Local search');
+  });
+  jQuery("body.google-analytics-loaded #ebi_search").on( 'mousedown', 'input#search_submit', function(e) {
+    analyticsTrackInteraction(e.target,'Homepage search');
+  });
+
+  // Editor defined areas
+  // These areas will be manually tagged by content editors or implement by devs
+  jQuery("body.google-analytics-loaded .analytics-content-intro").on( 'mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Intro');
+  });
+  jQuery("body.google-analytics-loaded .analytics-content-main").on( 'mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Main content');
+  });
+  jQuery("body.google-analytics-loaded .analytics-content-sidebar").on( 'mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Sidebar');
+  });
+  jQuery("body.google-analytics-loaded .analytics-content-left").on( 'mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Left content');
+  });
+  jQuery("body.google-analytics-loaded .analytics-content-right").on( 'mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Right content');
+  });
+  jQuery("body.google-analytics-loaded .analtyics-content-footer").on( 'mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Content footer');
+  });
+
+  // todo: homepage search return
+  // $('textarea').bind("enterKey",function(e){
+  //    //do stuff here
+  // });
+  // $('textarea').keyup(function(e){
+  //     if(e.keyCode == 13)
+  //     {
+  //         $(this).trigger("enterKey");
+  //     }
+  // });
+
+  jQuery("body.google-analytics-loaded .track-with-analytics-events a").on( 'mousedown', function(e) {
+    analyticsTrackInteraction(e.target,'Manually tracked area');
+  });
+  // To do: track livefilter
+  // input.filter[type="text"]').on("keyup", function() {
+
+  // log control+f and command+f
+  // base method via http://stackoverflow.com/a/6680403
+  var keydown = null;
+  if (jQuery('body').hasClass('google-analytics-loaded')) {
+    jQuery(window).keydown(function(e) {
+      // the user does ctrl+f action
+      if ( ( e.keyCode == 70 && ( e.ctrlKey || e.metaKey ) ) ||
+         ( e.keyCode == 191 ) ) {
+        keydown = new Date().getTime();
+      }
+      return true;
+    }).blur(function() {
+      // and then browser window blurs, indicating shift to UI
+      if ( keydown !== null ) {
+        var delta = new Date().getTime() - keydown;
+        if ( delta > 0 && delta < 1000 ) {
+          ga('send', 'event', 'UI', 'UI Element / Keyboard', 'Browser in page search');
+        }
+        keydown = null;
+      }
+    });
+  }
+} // END ebiGaInit
+
 
 // Foundation specific extensions of functionality
 // -------------
