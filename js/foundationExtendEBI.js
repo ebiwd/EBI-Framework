@@ -6,10 +6,15 @@
 // Analytics tracking
 // This code tracks the user's clicks in various parts of the EBI site and logs them as GA events.
 // Links in non-generic regions can be tracked by adding '.track-with-analytics-events' to a parent div. Careful with the scoping.
+//
+// Dev note:
+// add class verbose-analytics to your body for a readout to console on clicks, ala:
+// jQuery('body').addClass('verbose-analytics');
 // -------------
 var ga = ga || [];
 var numberOfEbiGaChecks = 0;
-var numberOfEbiGaChecksLimit = 1;
+var numberOfEbiGaChecksLimit = 2;
+var lastGaEventTime = Date.now(); // track the last time an event was send (don't double send)
 function ebiGaCheck() {
   if (ga.loaded) {
     jQuery('body').addClass('google-analytics-loaded'); // Confirm GA is loaded, add a class if found
@@ -23,30 +28,59 @@ function ebiGaCheck() {
 }
 ebiGaCheck(); // invoke analytics check
 
-// initialise the tracking of various areas
-function ebiGaInit() {
-  // Utility method
-  if (!Array.prototype.last){
-    Array.prototype.last = function(){
-      return this[this.length - 1];
-    };
+// Utility method
+if (!Array.prototype.last){
+  Array.prototype.last = function(){
+    return this[this.length - 1];
   };
+};
 
-  function analyticsTrackInteraction(actedOnItem, parentContainer) {
+function analyticsTrackInteraction(actedOnItem, parentContainer, customEventName) {
+  var customEventName = customEventName || []; // you can pass some custom text as a 3rd param
+
+  if (customEventName.length > 0) {
+    linkName = customEventName;
+  } else { // then derive a value
     var linkName = jQuery(actedOnItem).text().toString();
-    // if there's no text, it's probably and image...
+    // if there's no text, it's probably and image
     if (linkName.length == 0 && jQuery(actedOnItem).attr('src')) linkName = jQuery(actedOnItem).attr('src').split('/').last();
     if (linkName.length == 0 && jQuery(actedOnItem).val()) linkName = jQuery(actedOnItem).val();
-    // console.log(parentContainer,linkName);
-    ga('send', 'event', 'UI', 'UI Element / ' + parentContainer, linkName);
+
+    // special things for gloabl search box
+    if (parentContainer == 'Global search') {
+      linkName = 'query: ' + jQuery('#global-search input#query').val();
+    }
   }
 
+  // send to GA
+  // Only if more than 100ms has past since last click.
+  // Due to our structure, we fire multiple events, so we only send to GA the most specific event resolution
+  if ((Date.now() - lastGaEventTime) > 150) {
+    ga('send', 'event', 'UI', 'UI Element / ' + parentContainer, linkName);
+    lastGaEventTime = Date.now();
+
+    // conditional logging
+    if (jQuery('body').hasClass('verbose-analytics')) {
+      console.log('%c Verbose analytics on ', 'color: #FFF; background: #111; font-size: .75rem;');
+      console.log('clicked on: %o ',actedOnItem);
+      console.log('sent to GA: ', 'event ->', 'UI ->', 'UI Element / ' + parentContainer + ' ->', linkName, '; at: ',lastGaEventTime);
+    }
+  }
+} // END analyticsTrackInteraction
+
+// initialise the tracking of various areas
+function ebiGaInit() {
   // Only track these areas
   // This could be done more efficently with a general capture of links,
   // but we're running against the page's unload -- so speed over elegance.
 
-  // Automatically detected areas
-  // These are largely legacy...
+  // Order these by specificity -- only the first invoked will be sent to GA
+  jQuery("body.google-analytics-loaded .track-with-analytics-events a").on('mousedown', function(e) {
+    analyticsTrackInteraction(e.target,'Manually tracked area');
+  });
+  jQuery("body.google-analytics-loaded .masthead-black-bar").on('mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Black bar');
+  });
   jQuery("body.google-analytics-loaded .masthead").on('mousedown', 'a', function(e) {
     analyticsTrackInteraction(e.target,'Masthead');
   });
@@ -56,48 +90,34 @@ function ebiGaInit() {
   jQuery("body.google-analytics-loaded .with-overlay").on('mousedown', 'a', function(e) {
     analyticsTrackInteraction(e.target,'Highlight box');
   });
-  jQuery("body.google-analytics-loaded .intro-unit").on('mousedown', 'a', function(e) {
-    analyticsTrackInteraction(e.target,'Intro');
-  });
-  jQuery("body.google-analytics-loaded #main-content-area").on('mousedown', 'a', function(e) {
-    analyticsTrackInteraction(e.target,'Main content');
-  });
-  // jQuery("body.google-analytics-loaded .main.columns > article > .row > .medium-4 a, \
-  //   body.google-analytics-loaded .main.columns > article > .row > .medium-3").mousedown( function(e) {
-  //   analyticsTrackInteraction(e.target,'Sidebar');
-  // });
-  jQuery("body.google-analytics-loaded #global-footer").on( 'mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded #global-footer").on('mousedown', 'a', function(e) {
     analyticsTrackInteraction(e.target,'Footer');
   });
-  jQuery("body.google-analytics-loaded #global-search").on( 'mousedown', 'input', function(e) {
+  jQuery("body.google-analytics-loaded #global-search").on('mousedown', 'input', function(e) {
     analyticsTrackInteraction(e.target,'Global search');
   });
-  jQuery("body.google-analytics-loaded #local-search").on( 'mousedown', 'input', function(e) {
+  jQuery("body.google-analytics-loaded #local-search").on('mousedown', 'input', function(e) {
     analyticsTrackInteraction(e.target,'Local search');
   });
-  jQuery("body.google-analytics-loaded #ebi_search").on( 'mousedown', 'input#search_submit', function(e) {
-    analyticsTrackInteraction(e.target,'Homepage search');
-  });
-
-  // Editor defined areas
-  // These areas will be manually tagged by content editors or implement by devs
-  jQuery("body.google-analytics-loaded .analytics-content-intro").on( 'mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .analytics-content-intro, body.google-analytics-loaded .intro-unit").on('mousedown', 'a', function(e) {
     analyticsTrackInteraction(e.target,'Intro');
   });
-  jQuery("body.google-analytics-loaded .analytics-content-main").on( 'mousedown', 'a', function(e) {
-    analyticsTrackInteraction(e.target,'Main content');
-  });
-  jQuery("body.google-analytics-loaded .analytics-content-sidebar").on( 'mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .analytics-content-sidebar").on('mousedown', 'a', function(e) {
     analyticsTrackInteraction(e.target,'Sidebar');
   });
-  jQuery("body.google-analytics-loaded .analytics-content-left").on( 'mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .analytics-content-left").on('mousedown', 'a', function(e) {
     analyticsTrackInteraction(e.target,'Left content');
   });
-  jQuery("body.google-analytics-loaded .analytics-content-right").on( 'mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .analytics-content-right").on('mousedown', 'a', function(e) {
     analyticsTrackInteraction(e.target,'Right content');
   });
-  jQuery("body.google-analytics-loaded .analtyics-content-footer").on( 'mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .analytics-content-footer").on('mousedown', 'a', function(e) {
     analyticsTrackInteraction(e.target,'Content footer');
+  });
+
+  // catch all -- should come last
+  jQuery("body.google-analytics-loaded #main-content-area, body.google-analytics-loaded .analytics-content-main").on('mousedown', 'a', function(e) {
+    analyticsTrackInteraction(e.target,'Main content');
   });
 
   // todo: homepage search return
@@ -111,9 +131,6 @@ function ebiGaInit() {
   //     }
   // });
 
-  jQuery("body.google-analytics-loaded .track-with-analytics-events a").on( 'mousedown', function(e) {
-    analyticsTrackInteraction(e.target,'Manually tracked area');
-  });
   // To do: track livefilter
   // input.filter[type="text"]').on("keyup", function() {
 
