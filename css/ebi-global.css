@@ -808,9 +808,6 @@ blockquote.drop-quote::first-line {
 @media screen and (max-width: 75rem) {
   body ul.dropdown.menu.float-left {
     padding-left: .5rem; }
-  body #content {
-    padding-right: .5rem;
-    padding-left: .5rem; }
   body h1 {
     font-size: 2.5rem; }
   body h2 {
