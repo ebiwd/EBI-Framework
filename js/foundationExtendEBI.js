@@ -158,11 +158,185 @@ function ebiGaInit() {
   }
 } // END ebiGaInit
 
-
 // Foundation specific extensions of functionality
 // -------------
-(function($) {
 
+// Activate EMBL dropdown menu
+// -------------
+// Note: the menu content has already been added in script.js
+// if you pass options as 'reInit', it will destory any existing menu and add a new one
+function activateEMBLdropdown(options) {
+  (function($) {
+    var options = options || '',
+        dropDownOptions = {closeOnClick: true};
+
+    if (options == 'reInit') {
+      // try to destory any existing menu
+      try {
+        $('#embl-dropdown').foundation('close');
+        $('#embl-dropdown').foundation('destroy');
+      }
+      catch(err) {
+        // silently fail
+      };
+      // bootstrap the menu
+      ebiFrameworkInsertEMBLdropdown(); // re-insert menu
+      activateEMBLdropdown(); // activate this
+    } else {
+      // we assume we're bootstraping the dropdown fresh
+      setTimeout(function() { // A small buffer incase scripts are loaded out of order
+        try {
+          var dropdownEbiMenu = new Foundation.Dropdown($('#embl-dropdown'), dropDownOptions);
+        }
+        catch(err) {
+          // silently fail
+        };
+      }, 200);
+    }
+  }(jQuery));
+} // END activateEMBLdropdown
+
+// Smooth scroll anchor links for jQuery users
+// -------------
+function smoothScrollAnchorLinksEBI() {
+  (function($) {
+    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+      // Table compatibility
+      if ($(this).parent().parent().hasClass('tabs')) {
+        return true; //exit
+      }
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash),
+            targetName = this.hash;
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top - 40
+          }, {
+            duration: 1000,
+            complete: function(){ window.location.hash = targetName; }
+          });
+          return false;
+        }
+      }
+    });
+  }(jQuery));
+} // END smoothScrollAnchorLinksEBI
+
+// Respond the local nav to browser window width
+// -----------
+function invokeResponsiveMenuEBI() {
+  (function($) {
+    // Create a dynamic height for the menu bar when stuck
+    // -----------
+    var desiredStuckMenuHeight = $('.masthead-inner').outerHeight() - $('.masthead-inner > nav > ul.menu').outerHeight();
+    $("<style id='dynamic-stuck-height' type='text/css'> .masthead.sticky.is-stuck{ margin-top: -" + desiredStuckMenuHeight + "px !important;} </style>").appendTo("body");
+
+    // Clone the local menu into a mobile-only menu
+    // -----------
+    var localMenuClass = '.masthead-inner > nav > ul.dropdown.menu.float-left';
+
+    // Does the local men exist?
+    if ($(localMenuClass).length > 0) {
+      // var localMenuClass = '#secondary-menu-links'; // for testing
+      // $(localMenuClass).addClass('dropdown'); // for testing
+      var localMenuLeftPadding = parseInt($('.masthead-inner > nav ul').css('padding-left')); // account for padding of ul
+      var localMenuWidthAvail = $('.masthead-inner > nav').innerWidth() - localMenuLeftPadding;
+
+      function localNavSpilloverMenu(changeDirection) {
+        var localMenuWidthUsed = 0; // Track how much space is occupied by the ul
+        var localMenuRightSideWidth = $('.masthead-inner > nav ul.float-right.menu').outerWidth(); // width of any right-side nav, which would change on browser resize
+        localMenuRightSideWidth = localMenuRightSideWidth + 1; // padding, eleminate NaN if it doesn't exsist
+
+        // Calculate how much space we've used
+        // We calculate each li and not the parent ul as some teams may make the ul 100% wide
+        $(localMenuClass+' > li:not(".bug-fix-placeholder")').each( function() {
+          localMenuWidthUsed = localMenuWidthUsed + $(this).outerWidth();
+        });
+
+        // Account for any float-right menu
+        localMenuWidthUsed = localMenuWidthUsed + localMenuRightSideWidth;
+
+        // Create dropdown if needed
+        if ($(localMenuClass + ' li.extra-items-menu').length == 0) {
+          // responsiveMenuSubMenuBugFix: see https://github.com/ebiwd/EBI-Framework/issues/50
+          var responsiveMenuSubMenuBugFix = '<li class="bug-fix-placeholder" style="display:none !important;"><a href="#">A workaround</a> <ul class="menu"> <li><a href="#">for a bug where the dropdown menu fails sometimes unless there are two submenus in the submenu</a></li></ul>  </li>';
+          $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu">'+responsiveMenuSubMenuBugFix+'</ul></li>');
+          // $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
+          localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' > li.extra-items-menu').outerWidth(); // Account for width of li.extra-items-menu
+          // invoke foundation to create dropdown functionality when we add the menu
+          var options = {closeOnClickInside: false, closeOnClick: false}; // Prevent a bug in foundation 6.2.4 that prevents mobile clicking :(
+          var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass),options);
+        }
+
+        // Do we need to make space?
+        if ( (changeDirection == 'init') || (changeDirection == 'decrease') ) {
+          if (localMenuWidthUsed > localMenuWidthAvail) {
+            // show dropdown, if hidden
+            if ($(localMenuClass + ' li.extra-items-menu:visible').length == 0) {
+              $(localMenuClass + ' li.extra-items-menu').show();
+            }
+
+            // loop through each menu item in reverse, and slice off the first as it's the dropdown
+            $($(localMenuClass+' > li').get().reverse().slice(1)).each( function() {
+              if (localMenuWidthUsed > localMenuWidthAvail) { // do we need to hide more items?
+                localMenuWidthUsed = localMenuWidthUsed - $(this).outerWidth();
+                $(this).detach().prependTo(localMenuClass + ' > li.extra-items-menu > ul.menu');
+              } // we could break when <= but this should be pretty fast
+            });
+          }
+        }
+
+        if (changeDirection == 'increase') {
+          // does the dropdown exist?
+          if ($(localMenuClass + ' li.extra-items-menu:visible').length == 1) {
+
+            // if the menu is shorter than full width, we can perhaps restore some menu items from the dropdown
+            var spaceToWorkWith = localMenuWidthAvail - localMenuWidthUsed;
+
+            // as the dropdown menu is the width of longest menu item, it's not practical to get the length of each,
+            //   so if the longest item could fit, we'll restore an item
+            var spaceRequiredForFirstHiddenChild =  $(localMenuClass+' > li.extra-items-menu > ul.menu > li:first-child').outerWidth();
+            while (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
+              spaceToWorkWith = spaceToWorkWith - spaceRequiredForFirstHiddenChild;
+              $(localMenuClass+' > li.extra-items-menu > ul.menu > li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
+              if ($(localMenuClass + ' > li.extra-items-menu > ul.menu > li:not(".bug-fix-placeholder")').length == 0)  {
+                // if the dropdown has no visible items, hide it
+                $(localMenuClass + ' li.extra-items-menu').hide();
+                break;
+              }
+            }
+
+            // if there's no or just one item left, see if we should not count the width of the dropdown menu
+            // if ($(localMenuClass + ' li.extra-items-menu > ul > li:not(".bug-fix-placeholder")').length == 1) {
+            //   spaceToWorkWith = spaceToWorkWith + $(localMenuClass + ' > li.extra-items-menu').innerWidth();
+            //   if (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
+            //     // ok, we should move last item up from dropdwon, this will leave us with 0 items
+            //     $(localMenuClass+' > li.extra-items-menu > ul.menu > li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
+            //     // if the dropdown has no visible items, hide it
+            //     $(localMenuClass + ' li.extra-items-menu').hide();
+            //   }
+            // }
+          }
+        }
+      }
+
+      localNavSpilloverMenu('init');
+      // re-calc menus on browser change, if it affect width of localMenuWidthAvail
+      $(window).resize( function() {
+        var snapshot_localMenuWidthAvail = $('.masthead-inner > nav').innerWidth();
+        var widthChangeAmount = snapshot_localMenuWidthAvail - localMenuWidthAvail;
+        if (widthChangeAmount != 0) localMenuWidthAvail = snapshot_localMenuWidthAvail;
+        // we look for changes of more than 1 to reduce jitter
+        if (widthChangeAmount > 1)  localNavSpilloverMenu('increase');
+        if (widthChangeAmount < -1) localNavSpilloverMenu('decrease');
+      });
+    }
+  }(jQuery));
+} // END invokeResponsiveMenuEBI
+
+// Default invokation of foundationExtendEBI
+(function($) {
   // Clearable text inputs
   // via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text
   // -------------
@@ -179,16 +353,13 @@ function ebiGaInit() {
 
   $.fn.foundationExtendEBI = function() {
     // Activate EMBL dropdown menu
-    // Note: the menu content has already been added in script.js
-    (function activateEMBLdropdown() {
-      setTimeout(function() { // A small buffer incase scripts are loaded out of order
-        try {
-          var options = {closeOnClick: true},
-              dropdownEbiMenu = new Foundation.Dropdown($('#embl-dropdown'), options);
-        }
-        catch(err) {};
-      }, 200);
-    })();
+    activateEMBLdropdown();
+
+    // Smooth scroll anchor links for jQuery users
+    smoothScrollAnchorLinksEBI();
+
+    // Respond the local nav to browser window width
+    invokeResponsiveMenuEBI();
 
     // Focus searchbox on global nav button click
     // ---------
@@ -198,14 +369,12 @@ function ebiGaInit() {
     });
 
     // Link overlay images
-    $(function() {
-      $('.with-overlay').on('click',function(e) {
-        var href = $(this).find('a:first').attr('href') || '';
-        if (href.length > 0) {
-          window.location.href = href;
-        }
-      })
-    });
+    $('.with-overlay').on('click',function(e) {
+      var href = $(this).find('a:first').attr('href') || '';
+      if (href.length > 0) {
+        window.location.href = href;
+      }
+    })
 
     // Responsive support for tables
     // ---------
@@ -220,132 +389,5 @@ function ebiGaInit() {
       };
     });
 
-    // Smooth scroll anchor links for jQuery users
-    // -----------
-    $(function() {
-      $('a[href*=\\#]:not([href=\\#])').on('click', function() {
-        // Table compatibility
-        if ($(this).parent().parent().hasClass('tabs')) {
-          return true; //exit
-        }
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash),
-              targetName = this.hash;
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 40
-            }, {
-              duration: 1000,
-              complete: function(){ window.location.hash = targetName; }
-            });
-            return false;
-          }
-        }
-      });
-    });
-
-    // Create a dynamic height for the menu bar when stuck
-    // -----------
-    var desiredStuckMenuHeight = $('.masthead-inner').outerHeight() - $('.masthead-inner > nav > ul.menu').outerHeight();
-    $("<style id='dynamic-stuck-height' type='text/css'> .masthead.sticky.is-stuck{ margin-top: -" + desiredStuckMenuHeight + "px !important;} </style>").appendTo("body");
-
-    // Clone the local menu into a mobile-only menu
-    // -----------
-    var localMenuClass = '.masthead-inner > nav > ul.dropdown.menu.float-left';
-    // var localMenuClass = '#secondary-menu-links'; // for testing
-    // $(localMenuClass).addClass('dropdown'); // for testing
-    var localMenuLeftPadding = parseInt($('.masthead-inner > nav ul').css('padding-left')); // account for padding of ul
-    var localMenuWidthAvail = $('.masthead-inner > nav').innerWidth() - localMenuLeftPadding;
-
-    function localNavSpilloverMenu(changeDirection) {
-      var localMenuWidthUsed = 0; // Track how much space is occupied by the ul
-      var localMenuRightSideWidth = $('.masthead-inner > nav ul.float-right.menu').outerWidth(); // width of any right-side nav, which would change on browser resize
-      localMenuRightSideWidth = localMenuRightSideWidth + 1; // padding, eleminate NaN if it doesn't exsist
-
-      // Calculate how much space we've used
-      // We calculate each li and not the parent ul as some teams may make the ul 100% wide
-      $(localMenuClass+' > li:not(".bug-fix-placeholder")').each( function() {
-        localMenuWidthUsed = localMenuWidthUsed + $(this).outerWidth();
-      });
-
-      // Account for any float-right menu
-      localMenuWidthUsed = localMenuWidthUsed + localMenuRightSideWidth;
-
-      // Create dropdown if needed
-      if ($(localMenuClass + ' li.extra-items-menu').length == 0) {
-        // responsiveMenuSubMenuBugFix: see https://github.com/ebiwd/EBI-Framework/issues/50
-        var responsiveMenuSubMenuBugFix = '<li class="bug-fix-placeholder" style="display:none !important;"><a href="#">A workaround</a> <ul class="menu"> <li><a href="#">for a bug where the dropdown menu fails sometimes unless there are two submenus in the submenu</a></li></ul>  </li>';
-        $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu">'+responsiveMenuSubMenuBugFix+'</ul></li>');
-        // $(localMenuClass).append('<li class="extra-items-menu" style="display:none;"><a href="#">Also in this section</a><ul class="menu"></ul></li>');
-        localMenuWidthUsed = localMenuWidthUsed + $(localMenuClass + ' > li.extra-items-menu').outerWidth(); // Account for width of li.extra-items-menu
-        // invoke foundation to create dropdown functionality when we add the menu
-        var options = {closeOnClickInside: false, closeOnClick: false}; // Prevent a bug in foundation 6.2.4 that prevents mobile clicking :(
-        var responsiveMenu = new Foundation.DropdownMenu($(localMenuClass),options);
-      }
-
-      // Do we need to make space?
-      if ( (changeDirection == 'init') || (changeDirection == 'decrease') ) {
-        if (localMenuWidthUsed > localMenuWidthAvail) {
-          // show dropdown, if hidden
-          if ($(localMenuClass + ' li.extra-items-menu:visible').length == 0) {
-            $(localMenuClass + ' li.extra-items-menu').show();
-          }
-
-          // loop through each menu item in reverse, and slice off the first as it's the dropdown
-          $($(localMenuClass+' > li').get().reverse().slice(1)).each( function() {
-            if (localMenuWidthUsed > localMenuWidthAvail) { // do we need to hide more items?
-              localMenuWidthUsed = localMenuWidthUsed - $(this).outerWidth();
-              $(this).detach().prependTo(localMenuClass + ' > li.extra-items-menu > ul.menu');
-            } // we could break when <= but this should be pretty fast
-          });
-        }
-      }
-
-      if (changeDirection == 'increase') {
-
-        // does the dropdown exist?
-        if ($(localMenuClass + ' li.extra-items-menu:visible').length == 1) {
-
-          // if the menu is shorter than full width, we can perhaps restore some menu items from the dropdown
-          var spaceToWorkWith = localMenuWidthAvail - localMenuWidthUsed;
-
-          // as the dropdown menu is the width of longest menu item, it's not practical to get the length of each,
-          //   so if the longest item could fit, we'll restore an item
-          var spaceRequiredForFirstHiddenChild =  $(localMenuClass+' > li.extra-items-menu > ul.menu > li:first-child').outerWidth();
-          while (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
-            spaceToWorkWith = spaceToWorkWith - spaceRequiredForFirstHiddenChild;
-            $(localMenuClass+' > li.extra-items-menu > ul.menu > li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
-            if ($(localMenuClass + ' > li.extra-items-menu > ul.menu > li:not(".bug-fix-placeholder")').length == 0)  {
-              // if the dropdown has no visible items, hide it
-              $(localMenuClass + ' li.extra-items-menu').hide();
-              break;
-            }
-          }
-
-          // if there's no or just one item left, see if we should not count the width of the dropdown menu
-          // if ($(localMenuClass + ' li.extra-items-menu > ul > li:not(".bug-fix-placeholder")').length == 1) {
-          //   spaceToWorkWith = spaceToWorkWith + $(localMenuClass + ' > li.extra-items-menu').innerWidth();
-          //   if (spaceToWorkWith > spaceRequiredForFirstHiddenChild) {
-          //     // ok, we should move last item up from dropdwon, this will leave us with 0 items
-          //     $(localMenuClass+' > li.extra-items-menu > ul.menu > li:first-child').detach().insertBefore(localMenuClass+' li.extra-items-menu');
-          //     // if the dropdown has no visible items, hide it
-          //     $(localMenuClass + ' li.extra-items-menu').hide();
-          //   }
-          // }
-        }
-      }
-    }
-
-    localNavSpilloverMenu('init');
-    // re-calc menus on browser change, if it affect width of localMenuWidthAvail
-    $(window).resize( function() {
-      var snapshot_localMenuWidthAvail = $('.masthead-inner > nav').innerWidth();
-      var widthChangeAmount = snapshot_localMenuWidthAvail - localMenuWidthAvail;
-      if (widthChangeAmount != 0) localMenuWidthAvail = snapshot_localMenuWidthAvail;
-      // we look for changes of more than 1 to reduce jitter
-      if (widthChangeAmount > 1)  localNavSpilloverMenu('increase');
-      if (widthChangeAmount < -1) localNavSpilloverMenu('decrease');
-    });
   }
 }(jQuery));
