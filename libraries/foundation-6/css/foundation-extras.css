@@ -413,7 +413,7 @@ select {
   border-bottom: 0;
   font-size: 0.75rem;
   line-height: 1;
-  color: foreground(#fefefe, #007c82); }
+  color: #007c82; }
   :last-child:not(.is-active) > .accordion-title {
     border-bottom: 1px solid #e6e6e6;
     border-radius: 0 0 0 0; }
@@ -434,7 +434,7 @@ select {
   border: 1px solid #e6e6e6;
   border-bottom: 0;
   background-color: #fefefe;
-  color: foreground(#fefefe, #222); }
+  color: #222; }
   :last-child > .accordion-content:last-child {
     border-bottom: 1px solid #e6e6e6; }
 
@@ -465,19 +465,19 @@ select {
   text-align: center;
   border-radius: 50%;
   background: #007c82;
-  color: foreground(#007c82); }
+  color: #fefefe; }
   .badge.secondary {
     background: #999;
-    color: foreground(#999); }
+    color: #fefefe; }
   .badge.success {
     background: #3adb76;
-    color: foreground(#3adb76); }
+    color: #fefefe; }
   .badge.warning {
     background: #ffae00;
-    color: foreground(#ffae00); }
+    color: #fefefe; }
   .badge.alert {
     background: #ec5840;
-    color: foreground(#ec5840); }
+    color: #fefefe; }
 
 .button-group {
   margin-bottom: 1rem;
@@ -1806,7 +1806,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   border: 1px solid #e6e6e6;
   border-top: 0;
   background: #fefefe;
-  color: foreground(#fefefe, #007c82);
+  color: #007c82;
   transition: all 0.5s ease; }
 
 .tabs-content.vertical {
