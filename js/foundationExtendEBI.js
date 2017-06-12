@@ -350,7 +350,6 @@ function invokeResponsiveMenuEBI() {
     $(this).removeClass('x onX').val('').change().keyup();
   });
 
-
   $.fn.foundationExtendEBI = function() {
     // Activate EMBL dropdown menu
     activateEMBLdropdown();

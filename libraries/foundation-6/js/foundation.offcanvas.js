@@ -72,9 +72,8 @@ class OffCanvas {
       this.options.revealOn = this.options.revealOn || this.$element[0].className.match(/(reveal-for-medium|reveal-for-large)/g)[0].split('-')[2];
       this._setMQChecker();
     }
-
-    if (this.options.transitionTime) {
-      this.$element.css('transition-duration', this.options.transitionTime);
+    if (!this.options.transitionTime === true) {
+      this.options.transitionTime = parseFloat(window.getComputedStyle($('[data-off-canvas]')[0]).transitionDuration) * 1000;
     }
   }
 
@@ -204,12 +203,6 @@ class OffCanvas {
       window.scrollTo(0, 0);
     } else if (this.options.forceTo === 'bottom') {
       window.scrollTo(0,document.body.scrollHeight);
-    }
-
-    if (this.options.transitionTime && this.options.transition !== 'overlap') {
-      this.$element.siblings('[data-off-canvas-content]').css('transition-duration', this.options.transitionTime);
-    } else {
-      this.$element.siblings('[data-off-canvas-content]').css('transition-duration', '');
     }
 
     /**
@@ -373,9 +366,9 @@ OffCanvas.defaults = {
    * Amount of time in ms the open and close transition requires. If none selected, pulls from body style.
    * @option
    * @type {number}
-   * @default null
+   * @default 0
    */
-  transitionTime: null,
+  transitionTime: 0,
 
   /**
    * Type of transition for the offcanvas menu. Options are 'push', 'detached' or 'slide'.

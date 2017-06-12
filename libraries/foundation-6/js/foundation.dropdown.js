@@ -348,7 +348,6 @@ class Dropdown {
   destroy() {
     this.$element.off('.zf.trigger').hide();
     this.$anchor.off('.zf.dropdown');
-    $(document.body).off('click.zf.dropdown');
 
     Foundation.unregisterPlugin(this);
   }

@@ -35,12 +35,6 @@ class Interchange {
    * @private
    */
   _init() {
-    var id = this.$element[0].id || Foundation.GetYoDigits(6, 'interchange');
-    this.$element.attr({
-      'data-resize': id,
-      'id': id
-    });
-
     this._addBreakpoints();
     this._generateRules();
     this._reflow();
@@ -52,7 +46,9 @@ class Interchange {
    * @private
    */
   _events() {
-    this.$element.off('resizeme.zf.trigger').on('resizeme.zf.trigger', () => {this._reflow();});
+    $(window).on('resize.zf.interchange', Foundation.util.throttle(() => {
+      this._reflow();
+    }, 50));
   }
 
   /**
@@ -178,7 +174,7 @@ class Interchange {
    * @function
    */
   destroy() {
-    this.$element.off('resizeme.zf.trigger')
+    //TODO this.
   }
 }
 

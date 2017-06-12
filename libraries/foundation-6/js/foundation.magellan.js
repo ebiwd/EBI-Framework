@@ -5,7 +5,6 @@
 /**
  * Magellan module.
  * @module foundation.magellan
- * @requires foundation.smoothScroll
  */
 
 class Magellan {
@@ -110,20 +109,18 @@ class Magellan {
    * @function
    */
   scrollToLoc(loc) {
+    // Do nothing if target does not exist to prevent errors
+    if (!$(loc).length) {return false;}
     this._inTransition = true;
-    var _this = this;
+    var _this = this,
+        scrollPos = Math.round($(loc).offset().top - this.options.threshold / 2 - this.options.barOffset);
 
-    var options = {
-      animationEasing: this.options.animationEasing,
-      animationDuration: this.options.animationDuration,
-      threshold: this.options.threshold,
-      offset: this.options.offset
-    };
-
-    Foundation.SmoothScroll.scrollToLoc(loc, options, function() {
-      _this._inTransition = false; 
-      _this._updateActive();
-    })
+    $('html, body').stop(true).animate(
+      { scrollTop: scrollPos },
+      this.options.animationDuration,
+      this.options.animationEasing,
+      function() {_this._inTransition = false; _this._updateActive()}
+    );
   }
 
   /**
@@ -152,7 +149,7 @@ class Magellan {
       var isDown = this.scrollPos < winPos,
           _this = this,
           curVisible = this.points.filter(function(p, i){
-            return isDown ? p - _this.options.offset <= winPos : p - _this.options.offset - _this.options.threshold <= winPos;
+            return isDown ? p - _this.options.barOffset <= winPos : p - _this.options.barOffset - _this.options.threshold <= winPos;
           });
       curIdx = curVisible.length ? curVisible.length - 1 : 0;
     }
@@ -245,7 +242,7 @@ Magellan.defaults = {
    * @type {number}
    * @default 0
    */
-  offset: 0
+  barOffset: 0
 }
 
 // Window exports
