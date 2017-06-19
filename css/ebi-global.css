@@ -93,59 +93,61 @@ a:active {
 div.warning {
   border: none; }
 
-.ebi-background, a.ebi-background, .tag.ebi-background, .button.ebi-background {
+a.ebi-background, .ebi-background, .ebi-background.button, .ebi-background.button:hover, .ebi-background.tag {
   background: #007c82; }
 
-.services-background, a.services-background, .tag.services-background, .button.services-background {
+a.services-background, .services-background, .services-background.button, .services-background.button:hover, .services-background.tag {
   background: #389198; }
 
-.research-background, a.research-background, .tag.research-background, .button.research-background {
+a.research-background, .research-background, .research-background.button, .research-background.button:hover, .research-background.tag {
   background: #6dab49; }
 
-.training-background, a.training-background, .tag.training-background, .button.training-background {
+a.training-background, .training-background, .training-background.button, .training-background.button:hover, .training-background.tag {
   background: #e9b400; }
 
-.industry-background, a.industry-background, .tag.industry-background, .button.industry-background {
+a.industry-background, .industry-background, .industry-background.button, .industry-background.button:hover, .industry-background.tag {
   background: #0086b4; }
 
-.elixir-background, a.elixir-background, .tag.elixir-background, .button.elixir-background {
+a.elixir-background, .elixir-background, .elixir-background.button, .elixir-background.button:hover, .elixir-background.tag {
   background: #fb6a2a; }
 
-.white-background, a.white-background, .tag.white-background, .button.white-background {
+a.white-background, .white-background, .white-background.button, .white-background.button:hover, .white-background.tag {
   background: white; }
 
-.tag.secondary,
-.secondary-background, a.secondary-background, .tag.secondary-background, .button.secondary-background {
+a.secondary-background, .secondary-background, .secondary-background.button, .secondary-background.button:hover, .secondary-background.tag {
   background: #666; }
 
-.medium-gray-background, a.medium-gray-background, .tag.medium-gray-background, .button.medium-gray-background {
+.tag.secondary {
+  background: #666; }
+
+a.medium-gray-background, .medium-gray-background, .medium-gray-background.button, .medium-gray-background.button:hover, .medium-gray-background.tag {
   background: #999; }
 
-.ebi-color, .ebi-color cite, .ebi-color a, .ebi-color a:hover, .ebi-color a:visited, .ebi-color h3, .ebi-color h4, .label.ebi-color, a.ebi-color, a:hover.ebi-color {
+.label.ebi-color, a.ebi-color, a:hover.ebi-color, .ebi-color, .ebi-color cite, .ebi-color a, .ebi-color a:hover, .ebi-color a:visited, .ebi-color h3, .ebi-color h4 {
   color: #007c82; }
 
-.services-color, .services-color cite, .services-color a, .services-color a:hover, .services-color a:visited, .services-color h3, .services-color h4, .label.services-color, a.services-color, a:hover.services-color {
+.label.services-color, a.services-color, a:hover.services-color, .services-color, .services-color cite, .services-color a, .services-color a:hover, .services-color a:visited, .services-color h3, .services-color h4 {
   color: #389198; }
 
-.research-color, .research-color cite, .research-color a, .research-color a:hover, .research-color a:visited, .research-color h3, .research-color h4, .label.research-color, a.research-color, a:hover.research-color {
+.label.research-color, a.research-color, a:hover.research-color, .research-color, .research-color cite, .research-color a, .research-color a:hover, .research-color a:visited, .research-color h3, .research-color h4 {
   color: #6dab49; }
 
-.training-color, .training-color cite, .training-color a, .training-color a:hover, .training-color a:visited, .training-color h3, .training-color h4, .label.training-color, a.training-color, a:hover.training-color {
+.label.training-color, a.training-color, a:hover.training-color, .training-color, .training-color cite, .training-color a, .training-color a:hover, .training-color a:visited, .training-color h3, .training-color h4 {
   color: #e9b400; }
 
-.industry-color, .industry-color cite, .industry-color a, .industry-color a:hover, .industry-color a:visited, .industry-color h3, .industry-color h4, .label.industry-color, a.industry-color, a:hover.industry-color {
+.label.industry-color, a.industry-color, a:hover.industry-color, .industry-color, .industry-color cite, .industry-color a, .industry-color a:hover, .industry-color a:visited, .industry-color h3, .industry-color h4 {
   color: #0086b4; }
 
-.elixir-color, .elixir-color cite, .elixir-color a, .elixir-color a:hover, .elixir-color a:visited, .elixir-color h3, .elixir-color h4, .label.elixir-color, a.elixir-color, a:hover.elixir-color {
+.label.elixir-color, a.elixir-color, a:hover.elixir-color, .elixir-color, .elixir-color cite, .elixir-color a, .elixir-color a:hover, .elixir-color a:visited, .elixir-color h3, .elixir-color h4 {
   color: #fb6a2a; }
 
-.white-color, .white-color cite, .white-color a, .white-color a:hover, .white-color a:visited, .white-color h3, .white-color h4, .label.white-color, a.white-color, a:hover.white-color {
+.label.white-color, a.white-color, a:hover.white-color, .white-color, .white-color cite, .white-color a, .white-color a:hover, .white-color a:visited, .white-color h3, .white-color h4 {
   color: white; }
 
-.secondary-color, .secondary-color cite, .secondary-color a, .secondary-color a:hover, .secondary-color a:visited, .secondary-color h3, .secondary-color h4, .label.secondary-color, a.secondary-color, a:hover.secondary-color {
+.label.secondary-color, a.secondary-color, a:hover.secondary-color, .secondary-color, .secondary-color cite, .secondary-color a, .secondary-color a:hover, .secondary-color a:visited, .secondary-color h3, .secondary-color h4 {
   color: #666; }
 
-.medium-gray-color, .medium-gray-color cite, .medium-gray-color a, .medium-gray-color hover, .medium-gray-color a:visited, .medium-gray-color h3, .medium-gray-color h4, .label.medium-gray-color, a.medium-gray-color, a:hover.medium-gray-color {
+.label.medium-gray-color, a.medium-gray-color, a:hover.medium-gray-color, .medium-gray-color, .medium-gray-color cite, .medium-gray-color a, .medium-gray-color a:hover, .medium-gray-color a:visited, .medium-gray-color h3, .medium-gray-color h4 {
   color: #999; }
 
 /*
@@ -705,6 +707,27 @@ body .thumbnail {
   opacity: .8;
   overflow: hidden; }
 
+a.highlight-caption,
+.highlight-caption {
+  z-index: 1;
+  position: relative;
+  top: -3rem;
+  color: #fff;
+  padding: .25rem .5rem;
+  background: #333;
+  border-bottom: none; }
+
+.highlight-caption.highlight-caption-big {
+  top: -8rem;
+  display: inline-block;
+  margin-bottom: -5rem; }
+
+.position-relative > .highlight-caption.highlight-caption-big {
+  position: absolute;
+  top: initial;
+  bottom: 3%;
+  margin-bottom: 0; }
+
 .medium-4 > .with-overlay,
 .medium-3 > .with-overlay {
   margin-bottom: .75rem; }
@@ -848,8 +871,23 @@ code {
 .hidden, .hide {
   display: none; }
 
+.inline {
+  display: inline; }
+
 .inline-block {
   display: inline-block; }
+
+.position-relative {
+  position: relative; }
+
+.position-absolute {
+  position: absolute; }
+
+.position-static {
+  position: static; }
+
+.position-fixed {
+  position: fixed; }
 
 .no-margin {
   margin: 0; }
