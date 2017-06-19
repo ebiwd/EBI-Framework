@@ -79,26 +79,81 @@ a:active {
 }
 
 .callout { background: $ebi-colour-light-grey; border: none; } div.warning { border: none; }
-.ebi-background, a.ebi-background, .tag.ebi-background, .button.ebi-background       { background: $ebi-colour-main; }
-.services-background, a.services-background, .tag.services-background, .button.services-background  { background: $ebi-colour-services; }
-.research-background, a.research-background, .tag.research-background, .button.research-background  { background: $ebi-colour-research; }
-.training-background, a.training-background, .tag.training-background, .button.training-background  { background: $ebi-colour-training; }
-.industry-background, a.industry-background, .tag.industry-background, .button.industry-background  { background: $ebi-colour-industry; }
-.elixir-background, a.elixir-background, .tag.elixir-background, .button.elixir-background    { background: $ebi-colour-elixir; }
-.white-background, a.white-background, .tag.white-background, .button.white-background     { background: $ebi-colour-white; }
-.tag.secondary,
-.secondary-background, a.secondary-background, .tag.secondary-background, .button.secondary-background { background: $ebi-colour-dark-grey; }
-.medium-gray-background, a.medium-gray-background, .tag.medium-gray-background, .button.medium-gray-background { background: $ebi-colour-medium-grey; }
 
-.ebi-color, .ebi-color cite, .ebi-color a, .ebi-color a:hover, .ebi-color a:visited, .ebi-color h3, .ebi-color h4, .label.ebi-color, a.ebi-color, a:hover.ebi-color { color: $ebi-colour-petrol; }
-.services-color, .services-color cite, .services-color a, .services-color a:hover, .services-color a:visited, .services-color h3, .services-color h4, .label.services-color, a.services-color, a:hover.services-color { color: $ebi-colour-services; }
-.research-color, .research-color cite, .research-color a, .research-color a:hover, .research-color a:visited, .research-color h3, .research-color h4, .label.research-color, a.research-color, a:hover.research-color { color: $ebi-colour-light-green; }
-.training-color, .training-color cite, .training-color a, .training-color a:hover, .training-color a:visited, .training-color h3, .training-color h4, .label.training-color, a.training-color, a:hover.training-color { color: $ebi-colour-training; }
-.industry-color, .industry-color cite, .industry-color a, .industry-color a:hover, .industry-color a:visited, .industry-color h3, .industry-color h4, .label.industry-color, a.industry-color, a:hover.industry-color { color: $ebi-colour-industry; }
-.elixir-color, .elixir-color cite, .elixir-color a, .elixir-color a:hover, .elixir-color a:visited, .elixir-color h3, .elixir-color h4, .label.elixir-color, a.elixir-color, a:hover.elixir-color { color: $ebi-colour-elixir; }
-.white-color, .white-color cite, .white-color a, .white-color a:hover, .white-color a:visited, .white-color h3, .white-color h4, .label.white-color, a.white-color, a:hover.white-color { color: $ebi-colour-white; }
-.secondary-color, .secondary-color cite, .secondary-color a, .secondary-color a:hover, .secondary-color a:visited, .secondary-color h3, .secondary-color h4, .label.secondary-color, a.secondary-color, a:hover.secondary-color {color: $ebi-colour-dark-grey;}
-.medium-gray-color, .medium-gray-color cite, .medium-gray-color a, .medium-gray-color hover, .medium-gray-color a:visited, .medium-gray-color h3, .medium-gray-color h4, .label.medium-gray-color, a.medium-gray-color, a:hover.medium-gray-color {color: $ebi-colour-medium-grey;}
+.ebi-background {
+  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-main; }
+}
+.services-background {
+  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-services; }
+}
+.research-background {
+  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-research; }
+}
+.training-background {
+  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-training; }
+}
+.industry-background {
+  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-industry; }
+}
+.elixir-background {
+  @at-root a#{&}, &,, &.button, &.button:hover, &.tag { background: $ebi-colour-elixir; }
+}
+.white-background {
+  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-white; }
+}
+.secondary-background {
+  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-dark-grey; }
+}
+.tag.secondary { background: $ebi-colour-dark-grey; }
+.medium-gray-background {
+  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-medium-grey; }
+}
+
+.ebi-color {
+  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+    color: $ebi-colour-petrol;
+  }
+}
+.services-color {
+  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+    color: $ebi-colour-services;
+  }
+}
+.research-color {
+  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+    color: $ebi-colour-light-green;
+  }
+}
+.training-color {
+  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+    color: $ebi-colour-training;
+  }
+}
+.industry-color {
+  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+    color: $ebi-colour-industry;
+  }
+}
+.elixir-color {
+  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+    color: $ebi-colour-elixir;
+  }
+}
+.white-color {
+  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+    color: $ebi-colour-white;
+  }
+}
+.secondary-color {
+  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+    color: $ebi-colour-dark-grey;
+  }
+}
+.medium-gray-color {
+  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+    color: $ebi-colour-medium-grey;
+  }
+}
 
   /*
     SITE-WIDE MASTHEAD LAYOUT AND SIZE
