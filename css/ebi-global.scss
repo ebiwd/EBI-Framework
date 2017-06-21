@@ -110,47 +110,47 @@ a:active {
 }
 
 .ebi-color {
-  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
     color: $ebi-colour-petrol;
   }
 }
 .services-color {
-  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
     color: $ebi-colour-services;
   }
 }
 .research-color {
-  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
     color: $ebi-colour-light-green;
   }
 }
 .training-color {
-  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
     color: $ebi-colour-training;
   }
 }
 .industry-color {
-  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
     color: $ebi-colour-industry;
   }
 }
 .elixir-color {
-  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
     color: $ebi-colour-elixir;
   }
 }
 .white-color {
-  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
     color: $ebi-colour-white;
   }
 }
 .secondary-color {
-  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
     color: $ebi-colour-dark-grey;
   }
 }
 .medium-gray-color {
-  @at-root .label#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
     color: $ebi-colour-medium-grey;
   }
 }
