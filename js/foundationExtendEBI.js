@@ -11,12 +11,11 @@
 // add class verbose-analytics to your body for a readout to console on clicks, ala:
 // jQuery('body').addClass('verbose-analytics');
 // -------------
-var ga = ga || [];
 var numberOfEbiGaChecks = 0;
 var numberOfEbiGaChecksLimit = 2;
 var lastGaEventTime = Date.now(); // track the last time an event was send (don't double send)
 function ebiGaCheck() {
-  if (ga.loaded) {
+  if (ga && ga.loaded) {
     jQuery('body').addClass('google-analytics-loaded'); // Confirm GA is loaded, add a class if found
     ebiGaInit();
   } else {
@@ -56,7 +55,7 @@ function analyticsTrackInteraction(actedOnItem, parentContainer, customEventName
   // Only if more than 100ms has past since last click.
   // Due to our structure, we fire multiple events, so we only send to GA the most specific event resolution
   if ((Date.now() - lastGaEventTime) > 150) {
-    ga('send', 'event', 'UI', 'UI Element / ' + parentContainer, linkName);
+    ga && ga('send', 'event', 'UI', 'UI Element / ' + parentContainer, linkName);
     lastGaEventTime = Date.now();
 
     // conditional logging
@@ -150,7 +149,7 @@ function ebiGaInit() {
       if ( keydown !== null ) {
         var delta = new Date().getTime() - keydown;
         if ( delta > 0 && delta < 1000 ) {
-          ga('send', 'event', 'UI', 'UI Element / Keyboard', 'Browser in page search');
+          ga && ga('send', 'event', 'UI', 'UI Element / Keyboard', 'Browser in page search');
         }
         keydown = null;
       }
