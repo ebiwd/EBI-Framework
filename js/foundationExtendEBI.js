@@ -15,10 +15,12 @@ var numberOfEbiGaChecks = 0;
 var numberOfEbiGaChecksLimit = 2;
 var lastGaEventTime = Date.now(); // track the last time an event was send (don't double send)
 function ebiGaCheck() {
-  if (ga && ga.loaded) {
-    jQuery('body').addClass('google-analytics-loaded'); // Confirm GA is loaded, add a class if found
-    ebiGaInit();
-  } else {
+  try {
+    if (ga && ga.loaded) {
+      jQuery('body').addClass('google-analytics-loaded'); // Confirm GA is loaded, add a class if found
+      ebiGaInit();
+    }
+  } catch (err) {
     if (numberOfEbiGaChecks < numberOfEbiGaChecksLimit) {
       numberOfEbiGaChecks++;
       setTimeout(ebiGaCheck, 900); // give a second check if GA was slow to load
