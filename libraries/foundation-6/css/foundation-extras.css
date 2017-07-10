@@ -1806,7 +1806,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   border: 1px solid #e6e6e6;
   border-top: 0;
   background: #fefefe;
-  color: #007c82;
+  color: #222;
   transition: all 0.5s ease; }
 
 .tabs-content.vertical {
