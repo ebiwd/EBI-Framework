@@ -45,7 +45,7 @@ function ebiFrameworkInsertEMBLdropdown() {
 
     var dropdownDiv = document.createElement("div");
     dropdownDiv.innerHTML = '<div id="embl-dropdown" class="embl-dropdown dropdown-pane bottom" data-dropdown>' +
-              '<p>EMBL-EBI in Hinxton is one of six EMBL locations across europe.<br/> <a href="//www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
+              '<p>EMBL-EBI in Hinxton, Cambridge is one of <br/>six EMBL locations across europe.<br/> <a href="//www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
               '<h6>Connect to another EMBL location</h6>' +
               '<div class="small-collapse padding-bottom-large clearfix">' +
                 '<div class="columns small-5 padding-bottom-medium">' +
@@ -65,8 +65,8 @@ function ebiFrameworkInsertEMBLdropdown() {
                   '<div class="small">Structural biology</div>' +
                 '</div>' +
                 '<div class="columns small-5 padding-bottom-medium">' +
-                  '<a href="http://www.embl.it/">Monterotondo</a>' +
-                  '<div class="small">Mouse biology</div>' +
+                  '<a href="http://www.embl.it/">Rome</a>' +
+                  '<div class="small">Epigenetics and neurobiology</div>' +
                 '</div>' +
                 '<div class="columns small-7 padding-bottom-medium">' +
                   '<a href="http://embl.org/" class="readmore">More about EMBL</a>' +
