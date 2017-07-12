@@ -11,4 +11,7 @@ function ebiFrameworkInvokeScripts() {
   ebiFrameworkCookieBanner();
 }
 
-ebiFrameworkInvokeScripts(); // init
+// init
+document.addEventListener("DOMContentLoaded", function(event) {
+  ebiFrameworkInvokeScripts();
+});
