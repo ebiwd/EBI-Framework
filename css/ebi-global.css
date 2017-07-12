@@ -266,7 +266,7 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
     margin-top: -2px;
     color: #fff; }
   .masthead-black-bar .dropdown-pane.embl-dropdown {
-    background-color: #007c82;
+    background-color: #333;
     background-image: url("../images/map.png");
     background-position: 100% 100%;
     background-repeat: no-repeat;
