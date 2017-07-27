@@ -27,9 +27,9 @@ Follow the migration guide: https://github.com/ebiwd/EBI-Framework/issues/85
 ## Where do I start? How do I use this?
 
 1. Quick start:
-  - See the [HTML demos in the EBI Pattern Library /sample-site directory](https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/).
+  - See the [HTML boilerplate demos in the EBI Style Lab](http://www.ebi.ac.uk/style-lab/websites/sample-site/).
 2. Guidance:
-  - For the updated web guidelines, [check out the pattern library](https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
+  - For web guidelines, [check out the Style Labe](http://www.ebi.ac.uk/style-lab/websites/sample-site/) for guidance on making your site look proper and correct.
 3. Help!
   - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
 
