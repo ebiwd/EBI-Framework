@@ -12,24 +12,31 @@ Code is available for usage at:
 - http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js
 - http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css
 
-### Should I upgrade?
-We recommend upgrading to v1.2 in a number of scenarios:
-1. You have a site that is activley maintained and want to increase performance and ensure better responsive design and accesibility.
-2. You're developing with a JS framework like React or Angular, we've made a number of important stuctural changes.
-3. You have a site using the old EBI Compliance theme and want a less intrusive upgrade and want to use the EBI Visual Framework 'lite' implementation.
+### On v1.1? Should you upgrade?
 
-### Do I have to upgrade?
+We recommend upgrading to v1.2 in a number of scenarios:
+
+1. You have a site that is actively maintained and want to increase performance and ensure better responsive design and accessibility.
+1. You're developing with a JS framework like React or Angular, we've made a number of important structural changes.
+1. You have a site using the old EBI Compliance theme and want a less intrusive upgrade and want to use the EBI Visual Framework 'lite' implementation.
+
+To review planning for v1.2 (or to add comment), [see issue 61](https://github.com/ebiwd/EBI-Framework/issues/61).
+
+
+### Do you have to upgrade?
+
 If you're using the EBI Visual Framework v1.1 it is not required that you upgrade, but there are [a number of improvements](https://github.com/ebiwd/EBI-Framework/issues/61) for sites that show a lot of data.
 
-### How do I migrate?
+### How to migrate from v1.1?
+
 Follow the migration guide: https://github.com/ebiwd/EBI-Framework/issues/85
 
-## Where do I start? How do I use this?
+## Where to start? How to use this?
 
 1. Quick start:
-  - See the [HTML boilerplate demos in the EBI Style Lab](http://www.ebi.ac.uk/style-lab/websites/sample-site/).
+  - See the [HTML boilerplate demos in the EBI Style Lab](https://www.ebi.ac.uk/style-lab/websites/sample-site/).
 2. Guidance:
-  - For web guidelines, [check out the Style Labe](http://www.ebi.ac.uk/style-lab/websites/sample-site/) for guidance on making your site look proper and correct.
+  - For web guidelines, [check out the Style Labe](https://www.ebi.ac.uk/style-lab/websites/sample-site/) for guidance on making your site look proper and correct.
 3. Help!
   - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
 
@@ -37,7 +44,7 @@ Follow the migration guide: https://github.com/ebiwd/EBI-Framework/issues/85
 
 No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page](https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/boilerplate/blank.html).
 
-## About the framework  
+## About the EBI Visual Framework  
 
 This project helps ensure brand consistency and the easy use of modern web design best practices -- such as responsive design, iterative maintenance cycles, and UX-tested patterns.
 
