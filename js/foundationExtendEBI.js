@@ -390,4 +390,27 @@ function invokeResponsiveMenuEBI() {
     });
 
   }
+
+  /* Allow invokation of of foundation and foundationExtendEBI with data attributes
+
+    <body data-foundationInvoke="document" data-foundationExtendEBI="document">
+
+    This saves the need of placing the below on your page:
+    <script type="text/JavaScript">$(document).foundation();</script>
+    <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+    Background: https://github.com/ebiwd/EBI-Framework/issues/77  
+  */
+  var bodyData = $('body').data();
+  if (bodyData.foundationInvoke) {
+    bodyData.foundationInvoke = bodyData.foundationInvoke || 'document';
+    if (bodyData.foundationInvoke === 'true') bodyData.foundationInvoke = 'document';
+    $(bodyData.foundationInvoke).foundation();
+  }
+  if (bodyData.foundationExtendEBI) {
+    bodyData.foundationExtendEBI = bodyData.foundationExtendEBI || 'document';
+    if (bodyData.foundationExtendEBI === 'true') bodyData.foundationExtendEBI = 'document';
+    $(bodyData.foundationExtendEBI).foundationExtendEBI();
+  }
+
 }(jQuery));
