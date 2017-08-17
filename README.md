@@ -1,35 +1,35 @@
-[![Build Status](https://travis-ci.org/ebiwd/EBI-Framework.svg?branch=v1.2)](https://travis-ci.org/ebiwd/EBI-Framework)
+[![Build Status](https://travis-ci.org/ebiwd/EBI-Framework.svg?branch=v1.3)](https://travis-ci.org/ebiwd/EBI-Framework)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/ebiwd/EBI-Framework)
 
-# EBI-Framework v1.2
+# EBI-Framework v1.3
 
-v1.2 is in beta and is targeted for a late-June 2017 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
+v1.3 is in beta and is targeted for a January 2018 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
 
-To view plans for v1.2 (and to join the discussion), [see issue 61](https://github.com/ebiwd/EBI-Framework/issues/61).
+To view plans for v1.3 (and to join the discussion), [see issue 103](https://github.com/ebiwd/EBI-Framework/issues/103).
 
 Code is available for usage at:
-- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/
-- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js
-- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css
+- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/
+- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js
+- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css
 
 ### On v1.1? Should you upgrade?
 
-We recommend upgrading to v1.2 in a number of scenarios:
+We recommend upgrading to v1.3 in a number of scenarios:
 
-1. You have a site that is actively maintained and want to increase performance and ensure better responsive design and accessibility.
-1. You're developing with a JS framework like React or Angular, we've made a number of important structural changes.
-1. You have a site using the old EBI Compliance theme and want a less intrusive upgrade and want to use the EBI Visual Framework 'lite' implementation.
+1. You don't want or can't use the Foundation Framework core libraries
+1. You're a 3rd party site or service and want less of the "EBI look"
+1. More to come.
 
-To review planning for v1.2 (or to add comment), [see issue 61](https://github.com/ebiwd/EBI-Framework/issues/61).
+To review planning for v1.3 (or to add comment), [see issue 103](https://github.com/ebiwd/EBI-Framework/issues/103).
 
 
 ### Do you have to upgrade?
 
-If you're using the EBI Visual Framework v1.1 it is not required that you upgrade, but there are [a number of improvements](https://github.com/ebiwd/EBI-Framework/issues/61) for sites that show a lot of data.
+If you're using the EBI Visual Framework v1.1 or v1.2 it is not required that you upgrade, but there are [a number of improvements](https://github.com/ebiwd/EBI-Framework/issues/103) for sites that show a lot of data.
 
-### How to migrate from v1.1?
+### How to migrate from v1.2?
 
-Follow the migration guide: https://github.com/ebiwd/EBI-Framework/issues/85
+Follow the migration guide: [To come]
 
 ## Where to start? How to use this?
 
@@ -38,11 +38,11 @@ Follow the migration guide: https://github.com/ebiwd/EBI-Framework/issues/85
 2. Guidance:
   - For web guidelines, [check out the Style Labe](https://www.ebi.ac.uk/style-lab/websites/sample-site/) for guidance on making your site look proper and correct.
 3. Help!
-  - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
+  - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) in the Web Development team.
 
 ### Do I need to download this?
 
-No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page](https://ebiwd.github.io/EBI-Pattern-library/sample-site-v1.2/boilerplate/blank.html).
+No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page](https://www.ebi.ac.uk/style-lab/websites/sample-site/boilerplate/blank.html).
 
 ## About the EBI Visual Framework  
 
@@ -117,7 +117,7 @@ Files are hosted in this pattern:
 ```
 That is:
 ```
-//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/script.js
+//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js
 ```
 
 #### Building from NPM
@@ -131,7 +131,8 @@ To get started, have a look at `package.json`. Likely the the `npm run scss` com
 Releases are available via NPM at https://www.npmjs.com/package/ebi-framework
 
 ## Roadmap
-- v1.2: https://github.com/ebiwd/EBI-Framework/issues/61
-- v1.3: Angular 1st class support, accessibility improvements
+- v1.1: Major update to the 2013 look and functionality
+- v1.2: [Major improvements around modularity, structure and visual refinements](https://github.com/ebiwd/EBI-Framework/issues/61)
+- v1.3: To come
 - v1.4: Unit testing
 - v1.5: Add animation guidance and tooling ([see this](https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))

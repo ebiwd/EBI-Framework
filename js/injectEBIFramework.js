@@ -42,9 +42,9 @@ function injectEBIFramework() {
   }
 
   (function includeScripts() {
-    var requireScripts = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/js/foundation.js',
-                          '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/foundationExtendEBI.js',
-                          '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/foot.js'];
+    var requireScripts = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js',
+                          '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js',
+                          '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foot.js'];
     function init() {
       try {
         var existingScripts = document.getElementsByTagName('script');
@@ -73,10 +73,10 @@ function injectEBIFramework() {
 
 
   (function includeStyles() {
-    var requireStyles = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-embl-petrol.css',
-                         '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css',
-                         '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css',
-                         '//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css'];
+    var requireStyles = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/theme-embl-petrol.css',
+                         '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css',
+                         '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/css/foundation.css',
+                         '//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css'];
 
     function init() {
       try {
