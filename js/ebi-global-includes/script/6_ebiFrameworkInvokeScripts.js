@@ -17,7 +17,7 @@ function ebiFrameworkInvokeScripts() {
  **/
 document.addEventListener("DOMContentLoaded", function(event) {
   var bodyData = document.body.dataset;
-  if (bodyData.ebiFrameworkInvokeScripts != false) {
+  if (bodyData["ebiFrameworkInvokeScripts"] != false) {
     ebiFrameworkInvokeScripts();
   }
 });
