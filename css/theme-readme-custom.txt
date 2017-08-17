@@ -1,3 +1,6 @@
-How to create and use a custom colour palette for your project
--------------
-- If you wish to build your colour palette, you can use Sass and the file  ebi-global-includes/_ebi_theme_settings.scss
+If you wish to build your colour palette:
+- Basic:
+  Clone css/theme-template.css
+- Advanced; utilise sass by:
+    1. modifying ebi-global-includes/_ebi_theme_settings.scss
+    2. running `npm run scss`

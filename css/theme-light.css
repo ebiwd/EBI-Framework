@@ -6,7 +6,6 @@
   For more background, see: https://github.com/ebiwd/EBI-Framework/issues/34
 */
 
-
 a {
   color: #222;
 }
@@ -50,6 +49,6 @@ a.tag:hover { color: #fff; }
 .masthead h1, .masthead h4, .masthead p, .masthead a,
 .masthead .masthead-inner .menu > li > a { color: #666; }
 .masthead .masthead-inner .menu > li > a:hover { color: rgb(0,124,130); }
-.masthead .masthead-inner .menu > li.active-trail > a { background: rgb(0,124,130);; color: #fff }
+.masthead .masthead-inner .menu > li.active-trail > a { background: rgb(0,124,130); color: #fff }
 
 /* end */
