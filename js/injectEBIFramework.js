@@ -76,7 +76,7 @@ function injectEBIFramework() {
     var requireStyles = ['//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/theme-embl-petrol.css',
                          '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css',
                          '//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/css/foundation.css',
-                         '//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css'];
+                         '//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css'];
 
     function init() {
       try {
