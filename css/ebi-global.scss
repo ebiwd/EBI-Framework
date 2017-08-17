@@ -682,30 +682,33 @@ a:active {
       color: #fff;
       opacity: 1;
       text-shadow: 0 2px 0 rgba(0,0,0,.8);
+
+      &:hover {
+        background: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+        background: -o-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+        background: -moz-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+        color: #FFF;
+
+        > a.inner { color: #fff;  }
+      }
+      .inner {
+        position: absolute;
+        bottom: 5%;
+        width: 95%;
+        padding-right: 4rem;
+      }
+      > a.inner {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: none;
+        font-size: 1.4rem;
+        line-height: 1.4em;
+        padding-top: 50%;
+      }
+      > a:after { font-family: "EBI-Functional"; content: " >"; display: inline-block; float: right; font-size: 1.7rem; position: relative; top: -.1rem; left: 2rem;}
     }
-    .caption:hover {
-      background: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-      background: -o-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-      background: -moz-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-      color: #FFF;
-    }
-    .caption .inner {
-      position: absolute;
-      bottom: 5%;
-      width: 95%;
-      padding-right: 4rem;
-    }
-    .caption > a.inner {
-      color: #fff;
-      text-decoration: none;
-      border-bottom: none;
-      font-size: 1.4rem;
-      line-height: 1.4em;
-      padding-top: 50%;
-    }
-    .caption > a:after { font-family: "EBI-Functional"; content: " >"; display: inline-block; float: right; font-size: 1.7rem; position: relative; top: -.1rem; left: 2rem;}
-    .caption:hover > a.inner { color: #fff;  }
+
   } // END .with-overlay
 
   // dl

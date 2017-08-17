@@ -722,35 +722,35 @@ a.highlight-caption,
     color: #fff;
     opacity: 1;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.8); }
-  .with-overlay .caption:hover {
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
-    background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
-    color: #FFF; }
-  .with-overlay .caption .inner {
-    position: absolute;
-    bottom: 5%;
-    width: 95%;
-    padding-right: 4rem; }
-  .with-overlay .caption > a.inner {
-    color: #fff;
-    text-decoration: none;
-    border-bottom: none;
-    font-size: 1.4rem;
-    line-height: 1.4em;
-    padding-top: 50%; }
-  .with-overlay .caption > a:after {
-    font-family: "EBI-Functional";
-    content: " >";
-    display: inline-block;
-    float: right;
-    font-size: 1.7rem;
-    position: relative;
-    top: -.1rem;
-    left: 2rem; }
-  .with-overlay .caption:hover > a.inner {
-    color: #fff; }
+    .with-overlay .caption:hover {
+      background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
+      background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
+      background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(100, 100, 100, 0.3));
+      color: #FFF; }
+      .with-overlay .caption:hover > a.inner {
+        color: #fff; }
+    .with-overlay .caption .inner {
+      position: absolute;
+      bottom: 5%;
+      width: 95%;
+      padding-right: 4rem; }
+    .with-overlay .caption > a.inner {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: none;
+      font-size: 1.4rem;
+      line-height: 1.4em;
+      padding-top: 50%; }
+    .with-overlay .caption > a:after {
+      font-family: "EBI-Functional";
+      content: " >";
+      display: inline-block;
+      float: right;
+      font-size: 1.7rem;
+      position: relative;
+      top: -.1rem;
+      left: 2rem; }
 
 dd {
   padding-bottom: 1rem; }
