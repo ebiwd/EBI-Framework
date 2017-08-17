@@ -1,0 +1,59 @@
+// Custom tag class for Foundation-based EBI framework
+
+////
+/// @group embl-selector
+////
+
+/// Classses to theme the embl dropdown selector for the .masthead-black-bar
+@mixin embl-selector {
+  .dropdown-pane.embl-dropdown {
+    background-image: url('../images/map.png');
+    height: 21rem;
+    left: 0; //fix position of menu, to prevent horizontal scrolling of page
+
+    h6 { color: white; font-weight: 700; }
+    .button { color: #007c82; background: #fff; }
+  }
+  @media screen and (max-width: 39.9375em) {
+    .dropdown-pane.embl-dropdown {
+      // do not show embl-dropdown on small screens at all
+      display: none;
+      width: 0 !important;
+      overflow: hidden;
+    }
+  }
+
+  .embl-selector {
+    .button,
+    .button.hover,
+    .button:focus,
+    .button:hover {
+      background: no-repeat 4px 50% url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
+      padding-left: 108px;
+      background-size: 100px;
+      padding-right: 17px;
+      height: 37px;
+      line-height: 12px;
+    }
+    .button.hover,
+    .button:hover { background-color: #888; }
+    .button[aria-expanded="false"]::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border: inset 4px;
+      border-color: #fff transparent transparent;
+      border-top-style: solid;
+      position: absolute;
+      top: 18px;
+      margin-left: 55px;
+    }
+  }
+  // begin to hide bits of dropdown toggle as screen shrinks
+  @media screen and (max-width: 53em) {
+    .embl-selector .button { width: 0px; padding-right:0; overflow: hidden;}
+    .embl-selector .button:after { display: none; }
+    .masthead-black-bar nav ul.menu li a { padding-right: .5rem; padding-left: .5rem;}
+  }
+}

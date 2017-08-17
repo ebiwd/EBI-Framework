@@ -1,6 +1,7 @@
 // Various includes
 @import 'ebi-global-includes/ebi_theme_settings'; // default EBI styling
 @import 'ebi-global-includes/tag'; // custom tag class
+@import 'ebi-global-includes/embl_selector'; // EMBL Dropdown selector for .masthead-black-bar
 
 // This code is the EBI layer atop the Foundation base styling
 
@@ -289,14 +290,12 @@ a:active {
       color: #fff;
     }
 
-    /* EMBL Dropdwon styles */
-    .dropdown-pane.embl-dropdown {
+    /* masthead dropdwon styles */
+    .dropdown-pane {
       background-color: #333;
-      background-image: url('../images/map.png');
       background-position: 100% 100%;
       background-repeat: no-repeat;
       color: #fff;
-      height: 21rem;
       padding-right: 17rem;
       min-width: 39.9375em;
       left: 0; //fix position of menu, to prevent horizontal scrolling of page
@@ -304,14 +303,9 @@ a:active {
       h6 { color: white; font-weight: 700; }
       .button { color: #007c82; background: #fff; }
     }
-    @media screen and (max-width: 39.9375em) {
-      .dropdown-pane.embl-dropdown {
-        // do not show embl-dropdown on small screens at all
-        display: none;
-        width: 0 !important;
-        overflow: hidden;
-      }
-    }
+
+    /* EMBL Selector dropdown */
+    @include embl-selector;
 
   }
 
@@ -361,9 +355,8 @@ a:active {
     background-repeat: no-repeat;
     background-position: 100% 82%;
     background-size: cover;
-    /*background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');*/
-    /* Base64 for IE/FF */
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIxNDcgMjQ4IDYwIDI0OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gY2xhc3M9InN0MCIgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjA1IiBwb2ludHM9IjE0NywzNjMuNiAyNTkuMywzNjMuNiAyNTkuMyw0MjguNCAyMDMuMiw0NjAuOSAxNDcsNDI4LjQgIi8+PC9zdmc+Jyk7');
+    // triangle svg background
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
 
     h1,
     h4,
@@ -564,42 +557,6 @@ a:active {
   #local-title.logo-title-strapline h1 { display: inline; line-height: 100%; }
   #local-title.logo-title-strapline h1 { font-size: 270%; }
   #local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
-
-  /* embl selector */
-  .embl-selector {
-    .button,
-    .button.hover,
-    .button:focus,
-    .button:hover {
-      background: no-repeat 4px 50% url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
-      padding-left: 108px;
-      background-size: 100px;
-      padding-right: 17px;
-      height: 37px;
-      line-height: 12px;
-    }
-    .button.hover,
-    .button:hover { background-color: #888; }
-    .button[aria-expanded="false"]::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 0;
-      border: inset 4px;
-      border-color: #fff transparent transparent;
-      border-top-style: solid;
-      position: absolute;
-      top: 18px;
-      margin-left: 55px;
-    }
-  }
-  // begin to hide bits of dropdown toggle as screen shrinks
-  @media screen and (max-width: 53em) {
-    .embl-selector .button { width: 0px; padding-right:0; overflow: hidden;}
-    .embl-selector .button:after { display: none; }
-    .masthead-black-bar nav ul.menu li a { padding-right: .5rem; padding-left: .5rem;}
-  }
-
 
   /*
     LOCAL FOOTER
@@ -911,7 +868,6 @@ code { font-size: .95rem; }
 }
 
 // read more
-
 a.read-more,
 a.readmore,
 a.more {
@@ -979,15 +935,6 @@ a.more {
 .padding-bottom-medium { padding-bottom: .5rem; }
 .padding-bottom-large { padding-bottom: 1rem; }
 .padding-bottom-xlarge { padding-bottom: 2rem; }
-
-/* icon to indicate link is a PDF file */
-// a span.link-pdf { background: url(http://www.ebi.ac.uk/inc/images/icon_pdf.gif) right center no-repeat; padding: 0 18px 0 0; }
-// h1 a span.link-pdf,
-// h2 a span.link-pdf,
-// h3 a span.link-pdf,
-// h4 a span.link-pdf,
-// h5 a span.link-pdf,
-// h6 a span.link-pdf { display:none; }
 
 /* print styles */
 @media print {
