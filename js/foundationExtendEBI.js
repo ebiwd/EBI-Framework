@@ -15,14 +15,18 @@ var numberOfEbiGaChecks = 0;
 var numberOfEbiGaChecksLimit = 2;
 var lastGaEventTime = Date.now(); // track the last time an event was send (don't double send)
 function ebiGaCheck() {
+  numberOfEbiGaChecks++;
   try {
     if (ga && ga.loaded) {
       jQuery('body').addClass('google-analytics-loaded'); // Confirm GA is loaded, add a class if found
       ebiGaInit();
+    } else {
+      if (numberOfEbiGaChecks <= numberOfEbiGaChecksLimit) {
+        setTimeout(ebiGaCheck, 900); // give a second check if GA was slow to load
+      }
     }
   } catch (err) {
-    if (numberOfEbiGaChecks < numberOfEbiGaChecksLimit) {
-      numberOfEbiGaChecks++;
+    if (numberOfEbiGaChecks <= numberOfEbiGaChecksLimit) {
       setTimeout(ebiGaCheck, 900); // give a second check if GA was slow to load
     }
   }
@@ -399,7 +403,7 @@ function invokeResponsiveMenuEBI() {
     <script type="text/JavaScript">$(document).foundation();</script>
     <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
 
-    Background: https://github.com/ebiwd/EBI-Framework/issues/77  
+    Background: https://github.com/ebiwd/EBI-Framework/issues/77
   */
   var bodyData = $('body').data();
   if (bodyData.foundationInvoke) {
