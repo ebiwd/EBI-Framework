@@ -10,7 +10,7 @@
 
 // manually add back the foreground mixin
 // https://github.com/ebiwd/EBI-Framework/issues/84
-// @import 'libraries/foundation-6/scss/util/util/math';
+// @import 'node_modules/foundation-sites/scss/util/util/math';
 
 /// Checks the lightness of `$color`, and if it passes the `$threshold` of lightness, it returns the `$yes` color. Otherwise, it returns the `$no` color. Use this function to dynamically output a foreground color based on a given background color.
 ///

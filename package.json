@@ -26,7 +26,7 @@
     "choices-scss": "node-sass ./libraries/Choices/assets/styles/scss/choices.scss ./libraries/Choices/assets/styles/css/choices.css && csso ./libraries/Choices/assets/styles/css/choices.css --output ./libraries/Choices/assets/styles/css/choices.min.css",
     "ebi-js": "concat-cli -f js/ebi-global-includes/script/*.js -o js/script.js",
     "js": "npm run foundation-js && npm run ebi-js",
-    "foundation-js": "cpx './libraries/foundation-6/dist/js/*.js' ./libraries/foundation-6/js",
+    "foundation-js": "cpx './node_modules/foundation-sites/js/*.js' ./libraries/foundation-6/js",
     "//@30": [
       "-- Our buildscript: With this line we concat all libraries to be installed at once --"
     ],
@@ -35,7 +35,7 @@
       "-- All our libraries, not intended to be run indiviudually --"
     ],
     "tablesorter": "wget https://github.com/Mottie/tablesorter/archive/master.zip -d ./libraries/tablesorter.zip && extract-zip ./libraries/tablesorter.zip ./libraries/ && del ./libraries/tablesorter && mve ./libraries/tablesorter-master ./libraries/tablesorter && del ./libraries/tablesorter.zip",
-    "foundation-update": "wget https://github.com/zurb/foundation-sites/archive/v6.4.2.zip -d ./libraries/foundation-6.zip && del ./libraries/foundation-6 && extract-zip ./libraries/foundation-6.zip ./libraries/foundation-6/ && del ./libraries/foundation-6.zip && echo \"Copying foundation JS files one level up as they've moved...\" && ncp ./libraries/foundation-6/foundation-sites-6.4.2/ ./libraries/foundation-6/ && del ./libraries/foundation-6/foundation-sites-develop/ && echo \"Latest version of foundation downloaded, you'll need to run 'npm run scss' and 'npm run js' to build\"",
+    "foundation-update": "npm install foundation-sites && echo \"Latest version of foundation downloaded, you'll need to run 'npm run scss' and 'npm run js' to build\"",
     "motion-ui-update": "wget https://github.com/zurb/motion-ui/archive/v1.2.2.zip -d ./libraries/motion-ui.zip && del ./libraries/motion-ui && extract-zip ./libraries/motion-ui.zip ./libraries/motion-ui/ && del ./libraries/motion-ui.zip && echo \"Copying Motion UI files one level up as they've moved...\" && ncp ./libraries/motion-ui/motion-ui-1.2.2/ ./libraries/motion-ui/ && del ./libraries/motion-ui/motion-ui-master/ && echo \"Latest version of Motion UI downloaded, you'll need to run 'npm run scss' to build\"",
     "message_finished": "echo \"All done\""
   },
@@ -53,6 +53,7 @@
     "csso": "^2.1.1",
     "del-cli": "^0.2.0",
     "extract-zip": "1.6.0",
+    "foundation-sites": "^6.4.2",
     "mve": "^0.1.2",
     "ncp": "^2.0.0",
     "node-sass": "^3.4.2",

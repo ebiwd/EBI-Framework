@@ -57,10 +57,10 @@
 //  and update the @import.
 
 // Sass utilities
-@import 'libraries/foundation-6/scss/util/util';
+@import 'node_modules/foundation-sites/scss/util/util';
 
 // Global variables and styles
-@import 'libraries/foundation-6/scss/global';
+@import 'node_modules/foundation-sites/scss/global';
 @import 'css/ebi-global-includes/ebi_theme_settings'; // override foundation with EBI styling
 @import 'css/ebi-global-includes/badge'; // custom badge class
 @import 'css/ebi-global-includes/pagination'; // custom badge class
@@ -69,51 +69,51 @@
 
 // Include Foundation dependencies in the build
 // Via: https://github.com/zurb/foundation-sites/issues/9467#issuecomment-267598540
-@import "libraries/foundation-6/_vendor/normalize-scss/sass/normalize";
-@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
-@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/helpers/true';
-@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/functions/purge';
-@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/functions/remove';
-@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/functions/replace';
-@import 'libraries/foundation-6/_vendor/sassy-lists/stylesheets/functions/to-list';
+@import 'node_modules/foundation-sites/_vendor/normalize-scss/sass/normalize';
+@import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/true';
+@import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/purge';
+@import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/remove';
+@import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/replace';
+@import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/to-list';
 
 // Components
-@import 'libraries/foundation-6/scss/grid/grid';
-@import 'libraries/foundation-6/scss/typography/typography';
-@import 'libraries/foundation-6/scss/forms/forms';
-@import 'libraries/foundation-6/scss/components/visibility';
-@import 'libraries/foundation-6/scss/components/float';
-@import 'libraries/foundation-6/scss/components/button';
-@import 'libraries/foundation-6/scss/components/button-group';
-@import 'libraries/foundation-6/scss/components/accordion-menu';
-@import 'libraries/foundation-6/scss/components/accordion';
-// @import 'libraries/foundation-6/scss/components/badge'; // EBI override to remove sizing spec
-@import 'libraries/foundation-6/scss/components/breadcrumbs';
-@import 'libraries/foundation-6/scss/components/callout';
-@import 'libraries/foundation-6/scss/components/close-button';
-@import 'libraries/foundation-6/scss/components/drilldown';
-@import 'libraries/foundation-6/scss/components/dropdown-menu';
-@import 'libraries/foundation-6/scss/components/dropdown';
-@import 'libraries/foundation-6/scss/components/flex';
-@import 'libraries/foundation-6/scss/components/responsive-embed';
-@import 'libraries/foundation-6/scss/components/label';
-@import 'libraries/foundation-6/scss/components/media-object';
-@import 'libraries/foundation-6/scss/components/menu';
-@import 'libraries/foundation-6/scss/components/menu-icon';
-@import 'libraries/foundation-6/scss/components/off-canvas';
-@import 'libraries/foundation-6/scss/components/orbit';
-// @import 'libraries/foundation-6/scss/components/pagination'; // EBI override
-@import 'libraries/foundation-6/scss/components/progress-bar';
-@import 'libraries/foundation-6/scss/components/reveal';
-@import 'libraries/foundation-6/scss/components/slider';
-@import 'libraries/foundation-6/scss/components/sticky';
-@import 'libraries/foundation-6/scss/components/switch';
-@import 'libraries/foundation-6/scss/components/table';
-@import 'libraries/foundation-6/scss/components/tabs';
-@import 'libraries/foundation-6/scss/components/title-bar';
-@import 'libraries/foundation-6/scss/components/top-bar';
-@import 'libraries/foundation-6/scss/components/thumbnail';
-@import 'libraries/foundation-6/scss/components/tooltip';
+@import 'node_modules/foundation-sites/scss/grid/grid';
+@import 'node_modules/foundation-sites/scss/typography/typography';
+@import 'node_modules/foundation-sites/scss/forms/forms';
+@import 'node_modules/foundation-sites/scss/components/visibility';
+@import 'node_modules/foundation-sites/scss/components/float';
+@import 'node_modules/foundation-sites/scss/components/button';
+@import 'node_modules/foundation-sites/scss/components/button-group';
+@import 'node_modules/foundation-sites/scss/components/accordion-menu';
+@import 'node_modules/foundation-sites/scss/components/accordion';
+// @import 'node_modules/foundation-sites/scss/components/badge'; // EBI override to remove sizing spec
+@import 'node_modules/foundation-sites/scss/components/breadcrumbs';
+@import 'node_modules/foundation-sites/scss/components/callout';
+@import 'node_modules/foundation-sites/scss/components/close-button';
+@import 'node_modules/foundation-sites/scss/components/drilldown';
+@import 'node_modules/foundation-sites/scss/components/dropdown-menu';
+@import 'node_modules/foundation-sites/scss/components/dropdown';
+@import 'node_modules/foundation-sites/scss/components/flex';
+@import 'node_modules/foundation-sites/scss/components/responsive-embed';
+@import 'node_modules/foundation-sites/scss/components/label';
+@import 'node_modules/foundation-sites/scss/components/media-object';
+@import 'node_modules/foundation-sites/scss/components/menu';
+@import 'node_modules/foundation-sites/scss/components/menu-icon';
+@import 'node_modules/foundation-sites/scss/components/off-canvas';
+@import 'node_modules/foundation-sites/scss/components/orbit';
+// @import 'node_modules/foundation-sites/scss/components/pagination'; // EBI override
+@import 'node_modules/foundation-sites/scss/components/progress-bar';
+@import 'node_modules/foundation-sites/scss/components/reveal';
+@import 'node_modules/foundation-sites/scss/components/slider';
+@import 'node_modules/foundation-sites/scss/components/sticky';
+@import 'node_modules/foundation-sites/scss/components/switch';
+@import 'node_modules/foundation-sites/scss/components/table';
+@import 'node_modules/foundation-sites/scss/components/tabs';
+@import 'node_modules/foundation-sites/scss/components/title-bar';
+@import 'node_modules/foundation-sites/scss/components/top-bar';
+@import 'node_modules/foundation-sites/scss/components/thumbnail';
+@import 'node_modules/foundation-sites/scss/components/tooltip';
 @import 'libraries/motion-ui/src/motion-ui';
 
 // 1. Global
