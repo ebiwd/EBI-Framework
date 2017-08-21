@@ -15,14 +15,18 @@ var numberOfEbiGaChecks = 0;
 var numberOfEbiGaChecksLimit = 2;
 var lastGaEventTime = Date.now(); // track the last time an event was send (don't double send)
 function ebiGaCheck() {
+  numberOfEbiGaChecks++;
   try {
     if (ga && ga.loaded) {
       jQuery('body').addClass('google-analytics-loaded'); // Confirm GA is loaded, add a class if found
       ebiGaInit();
+    } else {
+      if (numberOfEbiGaChecks <= numberOfEbiGaChecksLimit) {
+        setTimeout(ebiGaCheck, 900); // give a second check if GA was slow to load
+      }
     }
   } catch (err) {
-    if (numberOfEbiGaChecks < numberOfEbiGaChecksLimit) {
-      numberOfEbiGaChecks++;
+    if (numberOfEbiGaChecks <= numberOfEbiGaChecksLimit) {
       setTimeout(ebiGaCheck, 900); // give a second check if GA was slow to load
     }
   }
@@ -79,19 +83,19 @@ function ebiGaInit() {
   jQuery("body.google-analytics-loaded .track-with-analytics-events a").on('mousedown', function(e) {
     analyticsTrackInteraction(e.target,'Manually tracked area');
   });
-  jQuery("body.google-analytics-loaded .masthead-black-bar").on('mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .masthead-black-bar").on('mousedown', 'a, button', function(e) {
     analyticsTrackInteraction(e.target,'Black bar');
   });
-  jQuery("body.google-analytics-loaded .masthead").on('mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .masthead").on('mousedown', 'a, button', function(e) {
     analyticsTrackInteraction(e.target,'Masthead');
   });
   jQuery("body.google-analytics-loaded .related ul").on('mousedown', 'li > a', function(e) {
     analyticsTrackInteraction(e.target,'Popular');
   });
-  jQuery("body.google-analytics-loaded .with-overlay").on('mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .with-overlay").on('mousedown', 'a, button', function(e) {
     analyticsTrackInteraction(e.target,'Highlight box');
   });
-  jQuery("body.google-analytics-loaded #global-footer").on('mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded #global-footer").on('mousedown', 'a, button', function(e) {
     analyticsTrackInteraction(e.target,'Footer');
   });
   jQuery("body.google-analytics-loaded #global-search").on('mousedown', 'input', function(e) {
@@ -100,24 +104,24 @@ function ebiGaInit() {
   jQuery("body.google-analytics-loaded #local-search").on('mousedown', 'input', function(e) {
     analyticsTrackInteraction(e.target,'Local search');
   });
-  jQuery("body.google-analytics-loaded .analytics-content-intro, body.google-analytics-loaded .intro-unit").on('mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .analytics-content-intro, body.google-analytics-loaded .intro-unit").on('mousedown', 'a, button', function(e) {
     analyticsTrackInteraction(e.target,'Intro');
   });
-  jQuery("body.google-analytics-loaded .analytics-content-sidebar").on('mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .analytics-content-sidebar").on('mousedown', 'a, button', function(e) {
     analyticsTrackInteraction(e.target,'Sidebar');
   });
-  jQuery("body.google-analytics-loaded .analytics-content-left").on('mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .analytics-content-left").on('mousedown', 'a, button', function(e) {
     analyticsTrackInteraction(e.target,'Left content');
   });
-  jQuery("body.google-analytics-loaded .analytics-content-right").on('mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .analytics-content-right").on('mousedown', 'a, button', function(e) {
     analyticsTrackInteraction(e.target,'Right content');
   });
-  jQuery("body.google-analytics-loaded .analytics-content-footer").on('mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded .analytics-content-footer").on('mousedown', 'a, button', function(e) {
     analyticsTrackInteraction(e.target,'Content footer');
   });
 
   // catch all -- should come last
-  jQuery("body.google-analytics-loaded #main-content-area, body.google-analytics-loaded .analytics-content-main").on('mousedown', 'a', function(e) {
+  jQuery("body.google-analytics-loaded #main-content-area, body.google-analytics-loaded .analytics-content-main").on('mousedown', 'a, button', function(e) {
     analyticsTrackInteraction(e.target,'Main content');
   });
 
@@ -399,7 +403,7 @@ function invokeResponsiveMenuEBI() {
     <script type="text/JavaScript">$(document).foundation();</script>
     <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
 
-    Background: https://github.com/ebiwd/EBI-Framework/issues/77  
+    Background: https://github.com/ebiwd/EBI-Framework/issues/77
   */
   var bodyData = $('body').data();
   if (bodyData.foundationInvoke) {
