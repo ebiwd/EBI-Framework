@@ -631,9 +631,12 @@ pre > code {
     margin-left: 0;
     font-size: 85%;
     list-style: none; }
+  .global-footer a {
+    color: #666; }
   .global-footer a:hover,
   .global-footer a:focus,
   .global-footer a:active {
+    color: #666;
     border-bottom: 1px dashed #e4e4e4; }
 
 .ebi-footer-meta {
