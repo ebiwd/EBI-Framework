@@ -642,9 +642,14 @@ a:active {
       list-style: none;
     }
 
+    a {
+      color: $ebi-colour-dark-grey;
+    }
+
     a:hover,
     a:focus,
     a:active{
+      color: $ebi-colour-dark-grey;
       border-bottom: 1px dashed #e4e4e4;
     }
   } // END .global-footer
