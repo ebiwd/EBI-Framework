@@ -6,6 +6,10 @@
  * compatibility issues.
  */
 
+// Include all EBI branding
+$include-ebi-global-styles: true !global;
+@import '../ebi-global.scss';
+
 // Include the common settings
 @import 'settings-common';
 
@@ -75,3 +79,8 @@
 
 // ebi-specific fixes
 @include ebi-foundation-overides;
+
+// ebi-styles
+@if $include-ebi-global-styles {
+  @include ebi-base-styles;
+}

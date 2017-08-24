@@ -12,7 +12,7 @@
   "version": "1.3.0",
   "scripts": {
     "test": "npm run libraries && npm run scss && npm run js",
-    "scss": "node-sass -o css css && csso ./css/ebi-global.css --output ./css/ebi-global.min.css && npm run foundation-scss-full-fat && npm run foundation-scss-lite && npm run foundation-scss-extras && npm run choices-scss",
+    "scss": "npm run foundation-scss-full-fat && npm run foundation-scss-lite && npm run foundation-scss-extras && npm run choices-scss",
     "//@16": [
       "Foundation build variants",
       "We build three variants to allow a 'lite' edition.",
@@ -20,9 +20,9 @@
       " -- Lite: the very basics for the EBI look and feel",
       " -- Extra: This + the lite version = full fat"
     ],
-    "foundation-scss-full-fat": "node-sass ./css/foundation/_settings-full-fat.scss ./libraries/foundation-6/css/foundation.css && csso ./libraries/foundation-6/css/foundation.css --output ./libraries/foundation-6/css/foundation.min.css",
-    "foundation-scss-lite": "node-sass ./css/foundation/_settings-lite.scss ./libraries/foundation-6/css/foundation-lite.css && csso ./libraries/foundation-6/css/foundation-lite.css --output ./libraries/foundation-6/css/foundation-lite.min.css",
-    "foundation-scss-extras": "node-sass ./css/foundation/_settings-extras.scss ./libraries/foundation-6/css/foundation-extras.css && csso ./libraries/foundation-6/css/foundation-extras.css --output ./libraries/foundation-6/css/foundation-extras.min.css",
+    "foundation-scss-full-fat": "node-sass ./css/foundation/_settings-full-fat.scss ./css/ebi-global.css && csso ./css/ebi-global.css --output ./css/ebi-global.min.css",
+    "foundation-scss-lite": "node-sass ./css/foundation/_settings-lite.scss ./css/ebi-lite.css && csso ./css/ebi-lite.css --output ./css/ebi-lite.min.css",
+    "foundation-scss-extras": "node-sass ./css/foundation/_settings-extras.scss ./css/ebi-extras.css && csso ./css/ebi-extras.css --output ./css/ebi-extras.min.css",
     "choices-scss": "node-sass ./libraries/Choices/assets/styles/scss/choices.scss ./libraries/Choices/assets/styles/css/choices.css && csso ./libraries/Choices/assets/styles/css/choices.css --output ./libraries/Choices/assets/styles/css/choices.min.css",
     "ebi-js": "concat-cli -f js/ebi-global-includes/script/*.js -o js/script.js",
     "js": "npm run foundation-js && npm run ebi-js",

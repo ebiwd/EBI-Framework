@@ -26,1004 +26,1005 @@
 @import 'ebi-global-includes/tag'; // custom tag class
 @import 'ebi-global-includes/embl_selector'; // EMBL Dropdown selector for .masthead-black-bar
 
+@mixin ebi-base-styles {
+  body h1, body h2, body h3 { font-weight: 300; }
 
-body h1, body h2, body h3 { font-weight: 300; }
+  li { word-wrap: break-word; }
 
-li { word-wrap: break-word; }
-
-// padding for page content
-body.table-layout table {
-  padding: 0;
-}
-
-// Links
-a,
-a:visited {
-  border-bottom-width: 1px;
-  border-bottom-style: dotted;
-  border-bottom-color: inherit;
-}
-a.active,
-a:hover,
-a:active { border-bottom-style: solid; }
-a.special {
-  font-style: italic;
-  border-bottom-style:double;
-  border-bottom-width: 3px;
-  padding: 0.1em 0.3em;
-}
-a:hover { opacity: .9; }
-a.image,
-a.image:visited { border-bottom: 0 none; }
-a.button, a.button:visited { color: $ebi-colour-light; white-space: nowrap; }
-
-// Colour - defaults to be reset by custom stylesheet
-.masthead-black-bar { background-color: #333; }
-h1, h2, h3, h4, h5, h6 { color: $body-font-color; }
-
-h4 { color: $ebi-colour-medium-grey; }
-a { color:#3e3e3e; }
-a:visited { color: $ebi-colour-dark-grey; }
-a:hover,
-a:focus,
-a:active {
-  color: #000;
-}
-.text-highlight {
-  color: $ebi-colour-light;
-  background-color: $ebi-colour-dark-grey;
-  padding: 0 0.2em;
-}
-
-.callout { background: $ebi-colour-light-grey; border: none; } div.warning { border: none; }
-
-.ebi-background {
-  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-main; }
-}
-.services-background {
-  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-services; }
-}
-.research-background {
-  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-research; }
-}
-.training-background {
-  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-training; }
-}
-.industry-background {
-  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-industry; }
-}
-.elixir-background {
-  @at-root a#{&}, &,, &.button, &.button:hover, &.tag { background: $ebi-colour-elixir; }
-}
-.white-background {
-  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-white; }
-}
-.secondary-background {
-  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-dark-grey; }
-}
-.tag.secondary { background: $ebi-colour-dark-grey; }
-.medium-gray-background {
-  @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-medium-grey; }
-}
-
-.ebi-color {
-  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
-    color: $ebi-colour-petrol;
+  // padding for page content
+  body.table-layout table {
+    padding: 0;
   }
-}
-.services-color {
-  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
-    color: $ebi-colour-services;
-  }
-}
-.research-color {
-  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
-    color: $ebi-colour-light-green;
-  }
-}
-.training-color {
-  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
-    color: $ebi-colour-training;
-  }
-}
-.industry-color {
-  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
-    color: $ebi-colour-industry;
-  }
-}
-.elixir-color {
-  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
-    color: $ebi-colour-elixir;
-  }
-}
-.white-color {
-  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
-    color: $ebi-colour-white;
-  }
-}
-.secondary-color {
-  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
-    color: $ebi-colour-dark-grey;
-  }
-}
-.medium-gray-color {
-  @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
-    color: $ebi-colour-medium-grey;
-  }
-}
 
-  // SITE-WIDE MASTHEAD LAYOUT AND SIZE
-  // Generic rules for global and local mastheads
+  // Links
+  a,
+  a:visited {
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: inherit;
+  }
+  a.active,
+  a:hover,
+  a:active { border-bottom-style: solid; }
+  a.special {
+    font-style: italic;
+    border-bottom-style:double;
+    border-bottom-width: 3px;
+    padding: 0.1em 0.3em;
+  }
+  a:hover { opacity: .9; }
+  a.image,
+  a.image:visited { border-bottom: 0 none; }
+  a.button, a.button:visited { color: $ebi-colour-light; white-space: nowrap; }
 
-  // GLOBAL MASTHEAD
-  #local-title a,
-  nav a,
-  nav a:hover { border-bottom: none; }
+  // Colour - defaults to be reset by custom stylesheet
+  .masthead-black-bar { background-color: #333; }
+  h1, h2, h3, h4, h5, h6 { color: $body-font-color; }
 
-  .masthead {
-    // underline links in the textual area of the local masthead
-    #local-title .columns {
-      a { border-bottom: 1px dotted rgb(255,255,255); }
-      a.button { border-bottom: none; }
-      a:hover { border-bottom: none; }
+  h4 { color: $ebi-colour-medium-grey; }
+  a { color:#3e3e3e; }
+  a:visited { color: $ebi-colour-dark-grey; }
+  a:hover,
+  a:focus,
+  a:active {
+    color: #000;
+  }
+  .text-highlight {
+    color: $ebi-colour-light;
+    background-color: $ebi-colour-dark-grey;
+    padding: 0 0.2em;
+  }
+
+  .callout { background: $ebi-colour-light-grey; border: none; } div.warning { border: none; }
+
+  .ebi-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-main; }
+  }
+  .services-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-services; }
+  }
+  .research-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-research; }
+  }
+  .training-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-training; }
+  }
+  .industry-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-industry; }
+  }
+  .elixir-background {
+    @at-root a#{&}, &,, &.button, &.button:hover, &.tag { background: $ebi-colour-elixir; }
+  }
+  .white-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-white; }
+  }
+  .secondary-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-dark-grey; }
+  }
+  .tag.secondary { background: $ebi-colour-dark-grey; }
+  .medium-gray-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-medium-grey; }
+  }
+
+  .ebi-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-petrol;
+    }
+  }
+  .services-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-services;
+    }
+  }
+  .research-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-light-green;
+    }
+  }
+  .training-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-training;
+    }
+  }
+  .industry-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-industry;
+    }
+  }
+  .elixir-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-elixir;
+    }
+  }
+  .white-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-white;
+    }
+  }
+  .secondary-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-dark-grey;
+    }
+  }
+  .medium-gray-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-medium-grey;
     }
   }
 
-  // Global menu styling
-  nav ul#global-nav.menu li { border-right: none; display: inline-block; }
+    // SITE-WIDE MASTHEAD LAYOUT AND SIZE
+    // Generic rules for global and local mastheads
 
-  // Disable masthead-black-bar search when told
-  body.no-global-search .masthead-black-bar ul#global-nav.menu li.search { display: none; }
+    // GLOBAL MASTHEAD
+    #local-title a,
+    nav a,
+    nav a:hover { border-bottom: none; }
 
-  // Mobile logo
-  @media screen and (max-width: 40em) {
-    nav ul#global-nav.menu li.home { display: none; }
-    nav ul#global-nav.menu li.home-mobile a {
-      display: block;
-      height: 50px;
-      width: 67px;
-      background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
-      background-size: 64px 47px;
+    .masthead {
+      // underline links in the textual area of the local masthead
+      #local-title .columns {
+        a { border-bottom: 1px dotted rgb(255,255,255); }
+        a.button { border-bottom: none; }
+        a:hover { border-bottom: none; }
+      }
+    }
+
+    // Global menu styling
+    nav ul#global-nav.menu li { border-right: none; display: inline-block; }
+
+    // Disable masthead-black-bar search when told
+    body.no-global-search .masthead-black-bar ul#global-nav.menu li.search { display: none; }
+
+    // Mobile logo
+    @media screen and (max-width: 40em) {
+      nav ul#global-nav.menu li.home { display: none; }
+      nav ul#global-nav.menu li.home-mobile a {
+        display: block;
+        height: 50px;
+        width: 67px;
+        background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
+        background-size: 64px 47px;
+        background-repeat: no-repeat;
+        margin-left: 6px;
+      }
+    }
+    @media screen and (min-width: 40em) {
+      nav ul#global-nav.menu li.home-mobile { display: none; }
+    }
+
+    .masthead-black-bar {
+      a,
+      a:hover,
+      ul.menu li a:hover,
+      ul.menu li a:active,
+      ul.menu li a:focus,
+      ul.menu li.active a,
+      ul.menu li.active-trail a {
+        color: white;
+        border-bottom: none;
+      }
+
+      ul.menu li.active a,
+      ul.menu li.active-trail a {
+        background: rgb(0,0,0);
+      }
+
+      // custom colour for Home
+      ul li.home a:before {
+        font-family: 'EBI-Generic';
+        content: 'H ';
+      }
+      ul li.home a:hover,
+      ul li.home a:active,
+      ul li.home a:focus {
+        background-color: $ebi-colour-petrol;
+      }
+
+      // custom colour for Services
+      ul li.services a:before {
+        font-family: 'EBI-Generic';
+        content: '( ';
+      }
+      ul li.services a:hover,
+      ul li.services a:active,
+      ul li.services a:focus {
+        background-color: $ebi-colour-services;
+      }
+
+      // custom colour for Research
+      ul li.research a:before {
+        font-family: 'EBI-Generic';
+        content: ') ';
+      }
+      ul li.research a:hover,
+      ul li.research a:active,
+      ul li.research a:focus {
+        background-color: $ebi-colour-light-green;
+      }
+
+      // custom colour for Training
+      ul li.training a:before {
+        font-family: 'EBI-Generic';
+        content: 't ';
+      }
+      ul li.training a:hover,
+      ul li.training a:active,
+      ul li.training a:focus {
+        background-color: $ebi-colour-training;
+      }
+
+      // custom colour for about us
+      ul li.about a:before {
+        font-family: 'EBI-Generic';
+        content: 'i ';
+      }
+      ul li.about a:hover,
+      ul li.about a:active,
+      ul li.about a:focus,
+      ul li.about-us a:hover,
+      ul li.about-us a:active,
+      ul li.about-us a:focus {
+        background-color: $ebi-colour-services;
+      }
+
+      // custom icon for search
+      ul li.search a:before {
+        font-family: 'EBI-Functional';
+        content: '1';
+      }
+
+      ul li.search .dropdown-pane {
+        width: 100%;
+        left: 0;
+        background: $ebi-colour-dark;
+        border: none;
+        margin-top: -2px;
+        color: #fff;
+      }
+
+      // masthead dropdwon styles
+      .dropdown-pane {
+        background-color: #333;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        color: #fff;
+        padding-right: 17rem;
+        min-width: 39.9375em;
+        left: 0; //fix position of menu, to prevent horizontal scrolling of page
+
+        h6 { color: white; font-weight: 700; }
+        .button { color: #007c82; background: #fff; }
+      }
+
+      // EMBL Selector dropdown
+      @include embl-selector;
+
+    }
+
+    .masthead-inner {
+      padding-top: 2.5rem;
+      color: #fff;
+    }
+    // END .masthead
+
+    // Local masthead secondary links on mobile
+    @media screen and (max-width: 39.9375em) {
+      .masthead ul.menu.dropdown.float-right > li {
+        margin-bottom: -50px;
+      }
+
+      .masthead-black-bar nav ul.menu {
+        text-align: right;
+
+        li { float: none; display: inline-block; }
+        li.home-mobile { float: left; }
+
+        // make icon bar smaller for mobile
+        > li > a > img,
+        > li > a:before {
+          display: block;
+          margin: 0 auto 0.25rem;
+          font-size: 16px;
+        }
+        > li > a {
+          text-align: center;
+          font-size: 10px;
+          padding: .6rem .35rem;
+        }
+      }
+    }
+
+    // LOCAL MASTHEAD
+    #skip-to {
+      top: -5000px;
+      position: absolute;
+    }
+
+    // Local menu styling
+    .masthead {
       background-repeat: no-repeat;
-      margin-left: 6px;
-    }
-  }
-  @media screen and (min-width: 40em) {
-    nav ul#global-nav.menu li.home-mobile { display: none; }
-  }
+      background-position: 100% 82%;
+      background-size: cover;
+      // triangle svg background
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
 
-  .masthead-black-bar {
-    a,
-    a:hover,
-    ul.menu li a:hover,
-    ul.menu li a:active,
-    ul.menu li a:focus,
-    ul.menu li.active a,
-    ul.menu li.active-trail a {
-      color: white;
-      border-bottom: none;
+      h1,
+      h4,
+      p,
+      a, a:hover, a:active, a:visited {
+        color: #fff;
+      }
+      ul li.is-active a,
+      ul li a:hover,
+      nav ul li a.hover,
+      nav ul li a:hover { background-color: rgba(255,255,255,.5); color: #444; }
+      nav ul li.active a,
+      nav ul li a:active,
+      ul li.active-trail a,
+      ul li.active a:visited,
+      ul li.active-trail a:visited { background-color: rgba(255,255,255,1); color: #444;border-bottom: 0;}
+
+      nav { font-size: .9rem; clear: both; }
+
+      nav ul.menu li { border-right: 1px solid $ebi-colour-light; float: left;
+                       margin-left: 0; /* compliance compatibility */
+                                       }
+      nav ul.menu li:last-child,
+      nav ul.menu li.active { border-right: 0; }
+
+      nav ul.menu li.float-right { border-right: none; }
     }
 
-    ul.menu li.active a,
-    ul.menu li.active-trail a {
-      background: rgb(0,0,0);
+    .masthead-inner nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
+
+    div#local-title { margin-bottom: 1rem; }
+
+    .masthead.meta-background-image {
+      background-position: 100% 100%;
+      background-size: initial;
     }
 
-    // custom colour for Home
-    ul li.home a:before {
-      font-family: 'EBI-Generic';
-      content: 'H ';
+    // tweak sticky behaviour
+    .masthead.sticky { width: 100%; position: static; -webkit-transform: none; transform: none; }
+    .masthead.sticky.is-stuck { position: fixed; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+    input#local-searchbox,
+    #local-search [type="submit"] {
+      display: inline-block; margin: 0;
+      vertical-align: top; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;
     }
-    ul li.home a:hover,
-    ul li.home a:active,
-    ul li.home a:focus {
+    #local-search .input-group-button { vertical-align: top; }
+
+    body.section-about .masthead {
+      background-color: $ebi-colour-petrol;
+    }
+    body.section-industry .masthead {
+      background-color: $ebi-colour-industry;
+    }
+    body.section-research {
+      .masthead {
+        background-color: $ebi-colour-light-green;
+      }
+      #local-title h1,
+      #local-title p,
+      #local-title a {
+        color: #FFF;
+      }
+    }
+    body.section-services .masthead {
+      background-color: $ebi-colour-services;
+    }
+    body.section-training .masthead {
+      background-color: $ebi-colour-training;
+    }
+    body.section-training #local-title  {
+      h1,
+      #local-title p,
+      #local-title a {
+        color: #222;
+      }
+    }
+    body.section-home .masthead {
       background-color: $ebi-colour-petrol;
     }
 
-    // custom colour for Services
-    ul li.services a:before {
-      font-family: 'EBI-Generic';
-      content: '( ';
-    }
-    ul li.services a:hover,
-    ul li.services a:active,
-    ul li.services a:focus {
-      background-color: $ebi-colour-services;
-    }
+    // tweak to foundation menu; hide submenu until rendered by JS
+    ul.menu.dropdown ul.menu { display: none; }
+    ul.menu.dropdown ul.menu.is-dropdown-submenu.js-dropdown-active { display:block; }
+    .dropdown.menu > li.is-dropdown-submenu-parent > a::after { border-color: #FFF transparent transparent; }
 
-    // custom colour for Research
-    ul li.research a:before {
-      font-family: 'EBI-Generic';
-      content: ') ';
+    // active sidebar items
+    .menu > li > a.active { font-weight: bold; }
+
+    // dropdown arrow
+    body .dropdown.menu .has-submenu.is-down-arrow > a::after {
+      border-color: rgba(0,0,0,.4) transparent transparent;
     }
-    ul li.research a:hover,
-    ul li.research a:active,
-    ul li.research a:focus {
-      background-color: $ebi-colour-light-green;
+    body .dropdown.menu .has-submenu.is-right-arrow > a::after {
+      border-color: transparent transparent transparent rgba(0,0,0,.4);
+    }
+    body header nav .menu.dropdown > .has-submenu.is-down-arrow > a::after {
+      border-color: #fff transparent transparent;
     }
 
-    // custom colour for Training
-    ul li.training a:before {
-      font-family: 'EBI-Generic';
-      content: 't ';
-    }
-    ul li.training a:hover,
-    ul li.training a:active,
-    ul li.training a:focus {
-      background-color: $ebi-colour-training;
-    }
+    /* accomodate legend.label */
+    legend.label { display: block; }
 
-    // custom colour for about us
-    ul li.about a:before {
-      font-family: 'EBI-Generic';
-      content: 'i ';
-    }
-    ul li.about a:hover,
-    ul li.about a:active,
-    ul li.about a:focus,
-    ul li.about-us a:hover,
-    ul li.about-us a:active,
-    ul li.about-us a:focus {
-      background-color: $ebi-colour-services;
-    }
+    /* List ...... leaders */
+    ul.leaders {
+      max-width: 40em;
+      padding: 0;
+      overflow-x: hidden;
+      list-style: none;
 
-    // custom icon for search
-    ul li.search a:before {
-      font-family: 'EBI-Functional';
-      content: '1';
-    }
+      li:before {
+        float: left;
+        width: 0;
+        white-space: nowrap;
+        content:
+           ". . . . . . . . . . . . . . . . . . . . "
+           ". . . . . . . . . . . . . . . . . . . . "
+           ". . . . . . . . . . . . . . . . . . . . "
+           ". . . . . . . . . . . . . . . . . . . . ";
+      }
 
-    ul li.search .dropdown-pane {
-      width: 100%;
-      left: 0;
-      background: $ebi-colour-dark;
-      border: none;
-      margin-top: -2px;
-      color: #fff;
+      span:first-child {
+        padding-right: 0.33em;
+        background: white;
+      }
+      span + span {
+        float: right;
+        padding-left: 0.33em;
+        background: white;
+      }
     }
 
-    // masthead dropdwon styles
-    .dropdown-pane {
-      background-color: #333;
-      background-position: 100% 100%;
-      background-repeat: no-repeat;
-      color: #fff;
-      padding-right: 17rem;
-      min-width: 39.9375em;
-      left: 0; //fix position of menu, to prevent horizontal scrolling of page
+    /* Secondary menu */
+    ul.menu.secondary-menu,
+    .secondary-menu ul.menu {
+      padding-bottom: 1rem;
 
-      h6 { color: white; font-weight: 700; }
-      .button { color: #007c82; background: #fff; }
+      a, a:hover { border-bottom: none; }
+      li { display: inline-block; } // renders links as bricks, not table cells
     }
 
-    // EMBL Selector dropdown
-    @include embl-selector;
+    /* List: inline horizontal */
+    ul.inline li { display: inline-block; }
 
-  }
+    /* List: icon bullets */
+    li.icon-bullet { list-style-type: none; text-indent: -1.3em; }
 
-  .masthead-inner {
-    padding-top: 2.5rem;
-    color: #fff;
-  }
-  // END .masthead
+    /* Badge list */
+    ul li a.badge,
+    ul li.badge { font-size: inherit; }
 
-  // Local masthead secondary links on mobile
-  @media screen and (max-width: 39.9375em) {
-    .masthead ul.menu.dropdown.float-right > li {
-      margin-bottom: -50px;
+    /* Callout tiny */
+    .callout.tiny { padding: 0rem; }
+
+    /* Breadcrumbs */
+    .breadcrumbs { padding-top: 0.5rem; }
+    body .breadcrumbs a { color: #888; }
+
+    /* extend Froundation utility selectors/classes */
+    .small { font-size: 80%; line-height: inherit; }
+    .nowrap { white-space: nowrap; }
+    .code {
+      font-family: Consolas, "Liberation Mono", Courier, monospace;
+      font-weight: normal;
+      color: #0a0a0a;
+      background-color: #e6e6e6;
+      border: 1px solid #cacaca;
+      padding: 0.125rem 0.3125rem 0.0625rem;
+      overflow-x: auto;
+    }
+    pre {
+      overflow-x: auto;
+    }
+    pre > .code,
+    pre > code {
+      padding: 0;
+      border: 0;
+      background: none;
+      font-size: .8rem;
+    }
+    .kbd {
+      margin: 0;
+      color: #0a0a0a;
+      font-family: Consolas, "Liberation Mono", Courier, monospace;
+    }
+    .title-cap { text-transform: capitalize; }
+    .uppercase { text-transform: uppercase; }
+    .lowercase { text-transform: lowercase; }
+
+    /* Custom styling for different local masthead */
+    #local-title.logo-only img,
+    #local-title.logo-title img,
+    #local-title.logo-title-strapline img { float: left; margin: 1em 0.69em 0.69em; }
+    #local-title.logo-title span,
+    #local-title.logo-title-strapline span { display:block; margin: 1em 0 0.69em 0; float:left; }
+    #local-title.logo-title span { margin-top: 2.3em; }
+    #local-title.logo-title h1,
+    #local-title.logo-title-strapline h1 { display: inline; line-height: 100%; }
+    #local-title.logo-title-strapline h1 { font-size: 270%; }
+    #local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
+
+    // LOCAL FOOTER
+    .local-footer {
+      border-top: 2px solid #eee;
     }
 
-    .masthead-black-bar nav ul.menu {
-      text-align: right;
+    // GLOBAL FOOTER
+    .global-footer {
+      border-top: 5px solid #eee;
+      padding-top: .5rem;
 
-      li { float: none; display: inline-block; }
-      li.home-mobile { float: left; }
+      h5 {
+        margin-top: 1.25rem;
+        margin-bottom: 5px;
+      }
 
-      // make icon bar smaller for mobile
-      > li > a > img,
-      > li > a:before {
+      .ebi-logo {
         display: block;
-        margin: 0 auto 0.25rem;
-        font-size: 16px;
+        height: 53px;
+        width: 89%;
+        background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: -.25rem;
+        position: relative;
+        top: 8px;
       }
-      > li > a {
-        text-align: center;
-        font-size: 10px;
-        padding: .6rem .35rem;
+
+      p {
+         margin: 0 0 5px 0;
+      }
+
+      ul {
+        margin-left: 0;
+        font-size: 85%;
+        list-style: none;
+      }
+
+      a {
+        color: $ebi-colour-dark-grey;
+      }
+
+      a:hover,
+      a:focus,
+      a:active{
+        color: $ebi-colour-dark-grey;
+        border-bottom: 1px dashed #e4e4e4;
+      }
+    } // END .global-footer
+
+    .ebi-footer-meta {
+      font-size: 85%; margin-bottom: 9px;
+    } // END .ebi-footer-meta
+
+    /* Compact vertical menu trees */
+    ul.simple.vertical.menu {
+      margin-left: 0;
+      font-size: .9rem;
+      li {
+        margin-bottom: .5rem;
+        display: block;
+        > a { display: inline; padding: 0; }
+        > a.active:before { content: "9 "; font-family: 'EBI-Functional'; }
+        > ul.simple.menu { margin: 0.5rem; }
       }
     }
-  }
 
-  // LOCAL MASTHEAD
-  #skip-to {
-    top: -5000px;
-    position: absolute;
-  }
-
-  // Local menu styling
-  .masthead {
-    background-repeat: no-repeat;
-    background-position: 100% 82%;
-    background-size: cover;
-    // triangle svg background
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
-
-    h1,
-    h4,
-    p,
-    a, a:hover, a:active, a:visited {
-      color: #fff;
-    }
-    ul li.is-active a,
-    ul li a:hover,
-    nav ul li a.hover,
-    nav ul li a:hover { background-color: rgba(255,255,255,.5); color: #444; }
-    nav ul li.active a,
-    nav ul li a:active,
-    ul li.active-trail a,
-    ul li.active a:visited,
-    ul li.active-trail a:visited { background-color: rgba(255,255,255,1); color: #444;border-bottom: 0;}
-
-    nav { font-size: .9rem; clear: both; }
-
-    nav ul.menu li { border-right: 1px solid $ebi-colour-light; float: left;
-                     margin-left: 0; /* compliance compatibility */
-                                     }
-    nav ul.menu li:last-child,
-    nav ul.menu li.active { border-right: 0; }
-
-    nav ul.menu li.float-right { border-right: none; }
-  }
-
-  .masthead-inner nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
-
-  div#local-title { margin-bottom: 1rem; }
-
-  .masthead.meta-background-image {
-    background-position: 100% 100%;
-    background-size: initial;
-  }
-
-  // tweak sticky behaviour
-  .masthead.sticky { width: 100%; position: static; -webkit-transform: none; transform: none; }
-  .masthead.sticky.is-stuck { position: fixed; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-
-  input#local-searchbox,
-  #local-search [type="submit"] {
-    display: inline-block; margin: 0;
-    vertical-align: top; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;
-  }
-  #local-search .input-group-button { vertical-align: top; }
-
-  body.section-about .masthead {
-    background-color: $ebi-colour-petrol;
-  }
-  body.section-industry .masthead {
-    background-color: $ebi-colour-industry;
-  }
-  body.section-research {
-    .masthead {
-      background-color: $ebi-colour-light-green;
-    }
-    #local-title h1,
-    #local-title p,
-    #local-title a {
-      color: #FFF;
-    }
-  }
-  body.section-services .masthead {
-    background-color: $ebi-colour-services;
-  }
-  body.section-training .masthead {
-    background-color: $ebi-colour-training;
-  }
-  body.section-training #local-title  {
-    h1,
-    #local-title p,
-    #local-title a {
-      color: #222;
-    }
-  }
-  body.section-home .masthead {
-    background-color: $ebi-colour-petrol;
-  }
-
-  // tweak to foundation menu; hide submenu until rendered by JS
-  ul.menu.dropdown ul.menu { display: none; }
-  ul.menu.dropdown ul.menu.is-dropdown-submenu.js-dropdown-active { display:block; }
-  .dropdown.menu > li.is-dropdown-submenu-parent > a::after { border-color: #FFF transparent transparent; }
-
-  // active sidebar items
-  .menu > li > a.active { font-weight: bold; }
-
-  // dropdown arrow
-  body .dropdown.menu .has-submenu.is-down-arrow > a::after {
-    border-color: rgba(0,0,0,.4) transparent transparent;
-  }
-  body .dropdown.menu .has-submenu.is-right-arrow > a::after {
-    border-color: transparent transparent transparent rgba(0,0,0,.4);
-  }
-  body header nav .menu.dropdown > .has-submenu.is-down-arrow > a::after {
-    border-color: #fff transparent transparent;
-  }
-
-  /* accomodate legend.label */
-  legend.label { display: block; }
-
-  /* List ...... leaders */
-  ul.leaders {
-    max-width: 40em;
-    padding: 0;
-    overflow-x: hidden;
-    list-style: none;
-
-    li:before {
-      float: left;
-      width: 0;
-      white-space: nowrap;
-      content:
-         ". . . . . . . . . . . . . . . . . . . . "
-         ". . . . . . . . . . . . . . . . . . . . "
-         ". . . . . . . . . . . . . . . . . . . . "
-         ". . . . . . . . . . . . . . . . . . . . ";
+    // cookie banner
+    .cookie-banner {
+      position:fixed;
+      background-color: $ebi-colour-dark;
+      width:100%;
+      padding: $global-padding;
+      left:0;
+      bottom:0;
+      color:#eee;
+      a, a:hover { color: $ebi-colour-light; }
+      .text { margin-right:2em; }
     }
 
-    span:first-child {
-      padding-right: 0.33em;
-      background: white;
-    }
-    span + span {
-      float: right;
-      padding-left: 0.33em;
-      background: white;
-    }
-  }
+    // MISC TWEAKS
+    ul.menu { font-size: .9rem; }
 
-  /* Secondary menu */
-  ul.menu.secondary-menu,
-  .secondary-menu ul.menu {
-    padding-bottom: 1rem;
-
-    a, a:hover { border-bottom: none; }
-    li { display: inline-block; } // renders links as bricks, not table cells
-  }
-
-  /* List: inline horizontal */
-  ul.inline li { display: inline-block; }
-
-  /* List: icon bullets */
-  li.icon-bullet { list-style-type: none; text-indent: -1.3em; }
-
-  /* Badge list */
-  ul li a.badge,
-  ul li.badge { font-size: inherit; }
-
-  /* Callout tiny */
-  .callout.tiny { padding: 0rem; }
-
-  /* Breadcrumbs */
-  .breadcrumbs { padding-top: 0.5rem; }
-  body .breadcrumbs a { color: #888; }
-
-  /* extend Froundation utility selectors/classes */
-  .small { font-size: 80%; line-height: inherit; }
-  .nowrap { white-space: nowrap; }
-  .code {
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    font-weight: normal;
-    color: #0a0a0a;
-    background-color: #e6e6e6;
-    border: 1px solid #cacaca;
-    padding: 0.125rem 0.3125rem 0.0625rem;
-    overflow-x: auto;
-  }
-  pre {
-    overflow-x: auto;
-  }
-  pre > .code,
-  pre > code {
-    padding: 0;
-    border: 0;
-    background: none;
-    font-size: .8rem;
-  }
-  .kbd {
-    margin: 0;
-    color: #0a0a0a;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-  }
-  .title-cap { text-transform: capitalize; }
-  .uppercase { text-transform: uppercase; }
-  .lowercase { text-transform: lowercase; }
-
-  /* Custom styling for different local masthead */
-  #local-title.logo-only img,
-  #local-title.logo-title img,
-  #local-title.logo-title-strapline img { float: left; margin: 1em 0.69em 0.69em; }
-  #local-title.logo-title span,
-  #local-title.logo-title-strapline span { display:block; margin: 1em 0 0.69em 0; float:left; }
-  #local-title.logo-title span { margin-top: 2.3em; }
-  #local-title.logo-title h1,
-  #local-title.logo-title-strapline h1 { display: inline; line-height: 100%; }
-  #local-title.logo-title-strapline h1 { font-size: 270%; }
-  #local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
-
-  // LOCAL FOOTER
-  .local-footer {
-    border-top: 2px solid #eee;
-  }
-
-  // GLOBAL FOOTER
-  .global-footer {
-    border-top: 5px solid #eee;
-    padding-top: .5rem;
-
-    h5 {
-      margin-top: 1.25rem;
-      margin-bottom: 5px;
+    // image tweaks
+    body .thumbnail { box-shadow: none; }
+    .caption {
+      line-height: 1.3em;
+      font-family: sans-serif;
+      font-size: .85rem;
+      opacity: .8;
+      overflow: hidden;
     }
 
-    .ebi-logo {
-      display: block;
-      height: 53px;
-      width: 89%;
-      background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      margin-left: -.25rem;
+    // image .highlight-caption
+    a.highlight-caption,
+    .highlight-caption {
+      z-index: 1;
       position: relative;
-      top: 8px;
+      top: -3rem;
+      color: #fff;
+      padding: .25rem .5rem;
+      background: #333;
+      border-bottom: none;
+    }
+    .highlight-caption.highlight-caption-big {
+      top: -8rem;
+      display: inline-block;
+      margin-bottom: -5rem;
+    }
+    // better positioning when combined with position-relative
+    .position-relative > .highlight-caption.highlight-caption-big {
+      position: absolute;
+      top: initial;
+      bottom: 3%;
+      margin-bottom: 0;
     }
 
-    p {
-       margin: 0 0 5px 0;
+    // image overlays
+    .medium-4 > .with-overlay,
+    .medium-3 > .with-overlay {
+      // sidebar overlays should always have a bottom margin
+      margin-bottom: .75rem;
+    }
+
+    .with-overlay {
+      position: relative;
+
+      .caption {
+        background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.7));
+        background: -o-linear-gradient(transparent, rgba(0,0,0,0.7));
+        background: -moz-linear-gradient(transparent, rgba(0,0,0,0.7));
+        background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        position: absolute;
+        top:0;
+        height: 100%;
+        width: 100%;
+        padding: 5% 5%;
+        color: #fff;
+        opacity: 1;
+        text-shadow: 0 2px 0 rgba(0,0,0,.8);
+
+        &:hover {
+          background: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+          background: -o-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+          background: -moz-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+          background: linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+          color: #FFF;
+
+          > a.inner { color: #fff;  }
+        }
+        .inner {
+          position: absolute;
+          bottom: 5%;
+          width: 95%;
+          padding-right: 4rem;
+        }
+        > a.inner {
+          color: #fff;
+          text-decoration: none;
+          border-bottom: none;
+          font-size: 1.4rem;
+          line-height: 1.4em;
+          padding-top: 50%;
+        }
+        > a:after { font-family: "EBI-Functional"; content: " >"; display: inline-block; float: right; font-size: 1.7rem; position: relative; top: -.1rem; left: 2rem;}
+      }
+
+    } // END .with-overlay
+
+    // dl
+    dd { padding-bottom: 1rem; }
+
+    .serif { font-family: $body-font-family-serif;  font-size: 1.1rem; }
+    .sans-serif { font-family: $body-font-family;  font-size: 1.1rem; }
+    .serif .sans-serif { font-size: 1rem; } // reset font size when nesting
+
+    .block { display: block; }
+    .clear { clear: both; }
+
+    body .has-tip { font-weight: normal; line-height: 1em; background: rgba(0,0,0,.03); }
+
+    /* Float left for pullquotes */
+    blockquote.float-left {
+      border-left: none;
+      text-align: right;
+      border-right: 1px solid #cacaca;
+      margin-right: 1rem;
+    }
+
+    blockquote.lead { margin-left: 1rem; border-left-color: rgba(0,0,0,0); border-right-color: rgba(0,0,0,0);}
+    blockquote.lead.quote:before {
+      content: "“";
+      position: relative;
+      top: -1.5rem;
+      left: -1.5rem;
+      font-size: 3rem;
+      display: block;
+      height: 0px;
+    }
+
+    /* bigger first line for some blockquotes */
+    blockquote.drop-quote::first-line {
+      font-size: 1.6rem;
+    }
+
+    /* tweaks to foundation's mobile settings */
+    @media screen and (max-width: 75rem) {
+      body {
+        ul.dropdown.menu.float-left { padding-left: .5rem; }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+      } // END body
+    }
+
+    /* Orbit thumbnails */
+    nav.orbit-bullets button.thumbnail { width: auto; border-radius: 0; }
+    nav.orbit-bullets button.thumbnail.is-active { box-shadow: 0 0 1px  #444; }
+    nav.orbit-bullets button.thumbnail.image {width: 4rem; height: 3rem; overflow: hidden;}
+    nav.orbit-bullets button.thumbnail.image > img { min-width: 6rem; margin-left: -2rem; }
+
+    /* Disable padding on left or right of foundation columns */
+    .columns.no-pad-right { padding-right: 0; }
+    .columns.no-pad-left { padding-left: 0; }
+
+  /* mono-space fonts are fat */
+  code { font-size: .95rem; }
+
+  // hide
+  .hidden, .hide { display: none; }
+  // inline-block
+  .inline { display: inline; }
+  .inline-block { display: inline-block; }
+  // positioning
+  .position-relative { position: relative; }
+  .position-absolute { position: absolute; }
+  .position-static { position: static; }
+  .position-fixed { position: fixed; }
+  // no margins
+  .no-margin { margin: 0; }
+  // no underline for links
+  .no-underline a, a.no-underline { border-bottom: none; text-decoration: none; }
+  // buttons
+  .button:focus,
+  .button:hover,
+  .button.hover { opacity: .8;}
+  // tabs
+  .tabs-title > {
+    a { border-bottom: none; }
+    a:hover {
+      background-color: $ebi-colour-main;
+      color: $ebi-colour-white;
+    }
+    a:focus,
+    a[aria-selected='true'] {
+      color: $ebi-colour-white;
+      background: $ebi-colour-dark-grey;
+    }
+  }
+
+  /* related / popular */
+  // Todo: This should be a mixin...
+  .related {
+    background: $ebi-colour-dark;
+    margin-top: 4.25rem;
+    color: $ebi-colour-white;
+    padding: .5rem 0 0 1.1rem;
+
+    h3 {
+      color: $ebi-colour-white;
+      background: none;
+      margin-bottom: 0;
     }
 
     ul {
       margin-left: 0;
-      font-size: 85%;
-      list-style: none;
-    }
+      margin-top: .25rem;
 
-    a {
-      color: $ebi-colour-dark-grey;
-    }
+      li {
+        display:inline-block;
+        width: 49%;
+        padding-right: 0;
+        font-size: .9rem;
+        min-width: 7rem; // for odd mid-break points, ensure the text doesn't get too small
 
-    a:hover,
-    a:focus,
-    a:active{
-      color: $ebi-colour-dark-grey;
-      border-bottom: 1px dashed #e4e4e4;
-    }
-  } // END .global-footer
-
-  .ebi-footer-meta {
-    font-size: 85%; margin-bottom: 9px;
-  } // END .ebi-footer-meta
-
-  /* Compact vertical menu trees */
-  ul.simple.vertical.menu {
-    margin-left: 0;
-    font-size: .9rem;
-    li {
-      margin-bottom: .5rem;
-      display: block;
-      > a { display: inline; padding: 0; }
-      > a.active:before { content: "9 "; font-family: 'EBI-Functional'; }
-      > ul.simple.menu { margin: 0.5rem; }
-    }
-  }
-
-  // cookie banner
-  .cookie-banner {
-    position:fixed;
-    background-color: $ebi-colour-dark;
-    width:100%;
-    padding: $global-padding;
-    left:0;
-    bottom:0;
-    color:#eee;
-    a, a:hover { color: $ebi-colour-light; }
-    .text { margin-right:2em; }
-  }
-
-  // MISC TWEAKS
-  ul.menu { font-size: .9rem; }
-
-  // image tweaks
-  body .thumbnail { box-shadow: none; }
-  .caption {
-    line-height: 1.3em;
-    font-family: sans-serif;
-    font-size: .85rem;
-    opacity: .8;
-    overflow: hidden;
-  }
-
-  // image .highlight-caption
-  a.highlight-caption,
-  .highlight-caption {
-    z-index: 1;
-    position: relative;
-    top: -3rem;
-    color: #fff;
-    padding: .25rem .5rem;
-    background: #333;
-    border-bottom: none;
-  }
-  .highlight-caption.highlight-caption-big {
-    top: -8rem;
-    display: inline-block;
-    margin-bottom: -5rem;
-  }
-  // better positioning when combined with position-relative
-  .position-relative > .highlight-caption.highlight-caption-big {
-    position: absolute;
-    top: initial;
-    bottom: 3%;
-    margin-bottom: 0;
-  }
-
-  // image overlays
-  .medium-4 > .with-overlay,
-  .medium-3 > .with-overlay {
-    // sidebar overlays should always have a bottom margin
-    margin-bottom: .75rem;
-  }
-
-  .with-overlay {
-    position: relative;
-
-    .caption {
-      background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.7));
-      background: -o-linear-gradient(transparent, rgba(0,0,0,0.7));
-      background: -moz-linear-gradient(transparent, rgba(0,0,0,0.7));
-      background: linear-gradient(transparent, rgba(0,0,0,0.7));
-      position: absolute;
-      top:0;
-      height: 100%;
-      width: 100%;
-      padding: 5% 5%;
-      color: #fff;
-      opacity: 1;
-      text-shadow: 0 2px 0 rgba(0,0,0,.8);
-
-      &:hover {
-        background: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-        background: -o-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-        background: -moz-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-        background: linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-        color: #FFF;
-
-        > a.inner { color: #fff;  }
+        a { color: $ebi-colour-white; border-bottom:none; }
+        a:hover { text-decoration: underline; }
+        a:after { content: " >"; }
       }
-      .inner {
-        position: absolute;
-        bottom: 5%;
-        width: 95%;
-        padding-right: 4rem;
-      }
-      > a.inner {
-        color: #fff;
-        text-decoration: none;
-        border-bottom: none;
-        font-size: 1.4rem;
-        line-height: 1.4em;
-        padding-top: 50%;
-      }
-      > a:after { font-family: "EBI-Functional"; content: " >"; display: inline-block; float: right; font-size: 1.7rem; position: relative; top: -.1rem; left: 2rem;}
     }
-
-  } // END .with-overlay
-
-  // dl
-  dd { padding-bottom: 1rem; }
-
-  .serif { font-family: $body-font-family-serif;  font-size: 1.1rem; }
-  .sans-serif { font-family: $body-font-family;  font-size: 1.1rem; }
-  .serif .sans-serif { font-size: 1rem; } // reset font size when nesting
-
-  .block { display: block; }
-  .clear { clear: both; }
-
-  body .has-tip { font-weight: normal; line-height: 1em; background: rgba(0,0,0,.03); }
-
-  /* Float left for pullquotes */
-  blockquote.float-left {
-    border-left: none;
-    text-align: right;
-    border-right: 1px solid #cacaca;
-    margin-right: 1rem;
+    ul:after { content: " "; height: .5rem; display: block; clear: both; } // a clearfix to show background
   }
 
-  blockquote.lead { margin-left: 1rem; border-left-color: rgba(0,0,0,0); border-right-color: rgba(0,0,0,0);}
-  blockquote.lead.quote:before {
-    content: "“";
-    position: relative;
-    top: -1.5rem;
-    left: -1.5rem;
-    font-size: 3rem;
-    display: block;
-    height: 0px;
+  /* button grid */
+  // Wrap a groupd of a.button.columns with div.button-grid to make a, you guessed it: grid
+  .button-grid a.button.columns {
+    margin-bottom: 1px; border-right: 1px solid #fff;
   }
 
-  /* bigger first line for some blockquotes */
-  blockquote.drop-quote::first-line {
-    font-size: 1.6rem;
+  /* intro unit */
+  .intro-unit {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    h2 { font-size: 3rem; margin-bottom: 0; }
+    h3 { padding-bottom: 1rem; }
+    .lead { color: $secondary-color; margin-bottom: .5rem; }
   }
 
-  /* tweaks to foundation's mobile settings */
-  @media screen and (max-width: 75rem) {
-    body {
-      ul.dropdown.menu.float-left { padding-left: .5rem; }
-      h1 { font-size: 2.5rem; }
-      h2 { font-size: 2rem; }
-      h3 { font-size: 1.5rem; }
-      h4 { font-size: 1.25rem; }
-    } // END body
-  }
-
-  /* Orbit thumbnails */
-  nav.orbit-bullets button.thumbnail { width: auto; border-radius: 0; }
-  nav.orbit-bullets button.thumbnail.is-active { box-shadow: 0 0 1px  #444; }
-  nav.orbit-bullets button.thumbnail.image {width: 4rem; height: 3rem; overflow: hidden;}
-  nav.orbit-bullets button.thumbnail.image > img { min-width: 6rem; margin-left: -2rem; }
-
-  /* Disable padding on left or right of foundation columns */
-  .columns.no-pad-right { padding-right: 0; }
-  .columns.no-pad-left { padding-left: 0; }
-
-/* mono-space fonts are fat */
-code { font-size: .95rem; }
-
-// hide
-.hidden, .hide { display: none; }
-// inline-block
-.inline { display: inline; }
-.inline-block { display: inline-block; }
-// positioning
-.position-relative { position: relative; }
-.position-absolute { position: absolute; }
-.position-static { position: static; }
-.position-fixed { position: fixed; }
-// no margins
-.no-margin { margin: 0; }
-// no underline for links
-.no-underline a, a.no-underline { border-bottom: none; text-decoration: none; }
-// buttons
-.button:focus,
-.button:hover,
-.button.hover { opacity: .8;}
-// tabs
-.tabs-title > {
-  a { border-bottom: none; }
-  a:hover {
-    background-color: $ebi-colour-main;
-    color: $ebi-colour-white;
-  }
-  a:focus,
-  a[aria-selected='true'] {
-    color: $ebi-colour-white;
-    background: $ebi-colour-dark-grey;
-  }
-}
-
-/* related / popular */
-// Todo: This should be a mixin...
-.related {
-  background: $ebi-colour-dark;
-  margin-top: 4.25rem;
-  color: $ebi-colour-white;
-  padding: .5rem 0 0 1.1rem;
-
-  h3 {
-    color: $ebi-colour-white;
-    background: none;
-    margin-bottom: 0;
-  }
-
-  ul {
-    margin-left: 0;
-    margin-top: .25rem;
-
-    li {
-      display:inline-block;
-      width: 49%;
-      padding-right: 0;
-      font-size: .9rem;
-      min-width: 7rem; // for odd mid-break points, ensure the text doesn't get too small
-
-      a { color: $ebi-colour-white; border-bottom:none; }
-      a:hover { text-decoration: underline; }
-      a:after { content: " >"; }
+  // read more
+  a.read-more,
+  a.readmore,
+  a.more {
+    white-space: nowrap;
+    &:after {
+      content: " >";
+      font-family: "EBI-Functional";
+      font-size: .85em;
     }
   }
-  ul:after { content: " "; height: .5rem; display: block; clear: both; } // a clearfix to show background
-}
 
-/* button grid */
-// Wrap a groupd of a.button.columns with div.button-grid to make a, you guessed it: grid
-.button-grid a.button.columns {
-  margin-bottom: 1px; border-right: 1px solid #fff;
-}
+  /* custom spacing */
+  .margin-top-none { margin-top: 0; }
+  .margin-top-xsmall { margin-top: .1rem; }
+  .margin-top-small { margin-top: .25rem; }
+  .margin-top-medium { margin-top: .5rem; }
+  .margin-top-large { margin-top: 1rem; }
+  .margin-top-xlarge { margin-top: 2rem; }
 
-/* intro unit */
-.intro-unit {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-  h2 { font-size: 3rem; margin-bottom: 0; }
-  h3 { padding-bottom: 1rem; }
-  .lead { color: $secondary-color; margin-bottom: .5rem; }
-}
+  .margin-left-none { margin-left: 0; }
+  .margin-left-xsmall { margin-left: .1rem; }
+  .margin-left-small { margin-left: .25rem; }
+  .margin-left-medium { margin-left: .5rem; }
+  .margin-left-large { margin-left: 1rem; }
+  .margin-left-xlarge { margin-left: 2rem; }
 
-// read more
-a.read-more,
-a.readmore,
-a.more {
-  white-space: nowrap;
-  &:after {
-    content: " >";
-    font-family: "EBI-Functional";
-    font-size: .85em;
+  .margin-right-none { margin-right: 0; }
+  .margin-right-xsmall { margin-right: .1rem; }
+  .margin-right-small { margin-right: .25rem; }
+  .margin-right-medium { margin-right: .5rem; }
+  .margin-right-large { margin-right: 1rem; }
+  .margin-right-xlarge { margin-right: 2rem; }
+
+  .margin-bottom-none { margin-bottom: 0; }
+  .margin-bottom-xsmall { margin-bottom: .1rem; }
+  .margin-bottom-small { margin-bottom: .25rem; }
+  .margin-bottom-medium { margin-bottom: .5rem; }
+  .margin-bottom-large { margin-bottom: 1rem; }
+  .margin-bottom-xlarge { margin-bottom: 2rem; }
+
+  .padding-top-none { padding-top: 0; }
+  .padding-top-xsmall { padding-top: .1rem; }
+  .padding-top-small { padding-top: .25rem; }
+  .padding-top-medium { padding-top: .5rem; }
+  .padding-top-large { padding-top: 1rem; }
+  .padding-top-xlarge { padding-top: 2rem; }
+
+  .padding-left-none { padding-left: 0; }
+  .padding-left-xsmall { padding-left: .1rem; }
+  .padding-left-small { padding-left: .25rem; }
+  .padding-left-medium { padding-left: .5rem; }
+  .padding-left-large { padding-left: 1rem; }
+  .padding-left-xlarge { padding-left: 2rem; }
+
+  .padding-right-none { padding-right: 0; }
+  .padding-right-xsmall { padding-right: .1rem; }
+  .padding-right-small { padding-right: .25rem; }
+  .padding-right-medium { padding-right: .5rem; }
+  .padding-right-large { padding-right: 1rem; }
+  .padding-right-xlarge { padding-right: 2rem; }
+
+  .padding-bottom-none { padding-bottom: 0; }
+  .padding-bottom-xsmall { padding-bottom: .1rem; }
+  .padding-bottom-small { padding-bottom: .25rem; }
+  .padding-bottom-medium { padding-bottom: .5rem; }
+  .padding-bottom-large { padding-bottom: 1rem; }
+  .padding-bottom-xlarge { padding-bottom: 2rem; }
+
+  /* print styles */
+  @media print {
+    a, a:visited { border-bottom: none; }
+    #skip-to,
+    .masthead-black-bar nav,
+    .masthead nav,
+    form#local-search,
+    .global-footer,
+    #search_ebi,
+    #shortcuts,
+    #ebi_search_results { display: none; }
   }
-}
 
-/* custom spacing */
-.margin-top-none { margin-top: 0; }
-.margin-top-xsmall { margin-top: .1rem; }
-.margin-top-small { margin-top: .25rem; }
-.margin-top-medium { margin-top: .5rem; }
-.margin-top-large { margin-top: 1rem; }
-.margin-top-xlarge { margin-top: 2rem; }
-
-.margin-left-none { margin-left: 0; }
-.margin-left-xsmall { margin-left: .1rem; }
-.margin-left-small { margin-left: .25rem; }
-.margin-left-medium { margin-left: .5rem; }
-.margin-left-large { margin-left: 1rem; }
-.margin-left-xlarge { margin-left: 2rem; }
-
-.margin-right-none { margin-right: 0; }
-.margin-right-xsmall { margin-right: .1rem; }
-.margin-right-small { margin-right: .25rem; }
-.margin-right-medium { margin-right: .5rem; }
-.margin-right-large { margin-right: 1rem; }
-.margin-right-xlarge { margin-right: 2rem; }
-
-.margin-bottom-none { margin-bottom: 0; }
-.margin-bottom-xsmall { margin-bottom: .1rem; }
-.margin-bottom-small { margin-bottom: .25rem; }
-.margin-bottom-medium { margin-bottom: .5rem; }
-.margin-bottom-large { margin-bottom: 1rem; }
-.margin-bottom-xlarge { margin-bottom: 2rem; }
-
-.padding-top-none { padding-top: 0; }
-.padding-top-xsmall { padding-top: .1rem; }
-.padding-top-small { padding-top: .25rem; }
-.padding-top-medium { padding-top: .5rem; }
-.padding-top-large { padding-top: 1rem; }
-.padding-top-xlarge { padding-top: 2rem; }
-
-.padding-left-none { padding-left: 0; }
-.padding-left-xsmall { padding-left: .1rem; }
-.padding-left-small { padding-left: .25rem; }
-.padding-left-medium { padding-left: .5rem; }
-.padding-left-large { padding-left: 1rem; }
-.padding-left-xlarge { padding-left: 2rem; }
-
-.padding-right-none { padding-right: 0; }
-.padding-right-xsmall { padding-right: .1rem; }
-.padding-right-small { padding-right: .25rem; }
-.padding-right-medium { padding-right: .5rem; }
-.padding-right-large { padding-right: 1rem; }
-.padding-right-xlarge { padding-right: 2rem; }
-
-.padding-bottom-none { padding-bottom: 0; }
-.padding-bottom-xsmall { padding-bottom: .1rem; }
-.padding-bottom-small { padding-bottom: .25rem; }
-.padding-bottom-medium { padding-bottom: .5rem; }
-.padding-bottom-large { padding-bottom: 1rem; }
-.padding-bottom-xlarge { padding-bottom: 2rem; }
-
-/* print styles */
-@media print {
-  a, a:visited { border-bottom: none; }
-  #skip-to,
-  .masthead-black-bar nav,
-  .masthead nav,
-  form#local-search,
-  .global-footer,
-  #search_ebi,
-  #shortcuts,
-  #ebi_search_results { display: none; }
-}
-
-/* Clearable text inputs
-   Also need JS, via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text */
-input.clearable {
-  background: #fff url('data:image/gif;base64,R0lGODlhBwAHAIAAAP///5KSkiH5BAAAAAAALAAAAAAHAAcAAAIMTICmsGrIXnLxuDMLADs=') no-repeat right -10px center;
-  padding: 3px 25px 3px 4px;
-  transition: background 0.4s;
-}
-input.clearable.x  { background-position: right 12px center; } /* (jQ) Show icon */
-input.clearable.onX{ cursor: pointer; } /* (jQ) hover cursor style */
-input.clearable::-ms-clear {display: none; width:0; height:0;} /* Remove IE default X */
-
-
-/* Tablesorter styling */
-table.tablesorter thead tr th,
-table.tablesorter thead tr th.tablesorter-headerUnSorted {
-  background-image: url(../libraries/tablesorter/css/images/black-unsorted.gif);
-  background-repeat: no-repeat;
-  background-position: center right;
-  cursor: pointer;
-}
-table.tablesorter thead tr th.tablesorter-headerAsc { background-image: url(../libraries/tablesorter/css/images/black-asc.gif); }
-table.tablesorter thead tr th.tablesorter-headerDesc { background-image: url(../libraries/tablesorter/css/images/black-desc.gif); }
-
-/* No colour striping tables */
-table.no-stripe tbody tr:nth-child(even) { background-color: #fff; }
-
-/* Data table solutions */
-/* Tables with custom padding */
-table.padding-none {
-  border-spacing: 0;
-}
-table .padding-none th,
-table .padding-none td
-table.padding-none tbody th,
-table.padding-none tbody td {
-  padding: 0;
-}
-table.data-table,
-table.padding-small {
-  border-spacing: 0;
-}
-table .padding-small th,
-table .padding-small td
-table.padding-small tbody th,
-table.padding-small tbody td,
-table.data-table tbody th,
-table.data-table tbody td {
-  padding: 0rem 0.2rem 0.2rem;
-}
-/* border lines on data tables without striping */
-table.no-stripe.data-table tbody td {
-  border-top: 1px solid $ebi-colour-light-grey;
-}
-/* None 100% wide tables */
-table.data-table,
-table.width-auto { width: auto; }
-/* some images should be stretched, such as sparkline-style gifs */
-table.data-table img,
-img.stretch { height: inherit; }
-/* align table cell text to top */
-table.data-table th,
-table.data-table td,
-table.align-top td,
-table td.align-top {
-  vertical-align: top;
-}
-/* highlight table header background */
-table.data-table thead {
-  background: $ebi-colour-light-grey;
-}
-
-/* wide screen support */
-@media screen and (min-width: 40em) {
-  body.full-width .row,
-  body.full-width .row .row {
-    max-width: 150rem;
+  /* Clearable text inputs
+     Also need JS, via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text */
+  input.clearable {
+    background: #fff url('data:image/gif;base64,R0lGODlhBwAHAIAAAP///5KSkiH5BAAAAAAALAAAAAAHAAcAAAIMTICmsGrIXnLxuDMLADs=') no-repeat right -10px center;
+    padding: 3px 25px 3px 4px;
+    transition: background 0.4s;
   }
-}
+  input.clearable.x  { background-position: right 12px center; } /* (jQ) Show icon */
+  input.clearable.onX{ cursor: pointer; } /* (jQ) hover cursor style */
+  input.clearable::-ms-clear {display: none; width:0; height:0;} /* Remove IE default X */
 
-/* tag */
-@include ebi-tag;
 
-/* defenition lists */
-dl dt {
-  font-weight: 400;
-  font-size: 1.1rem;
-  a { border-bottom: none; color: $ebi-colour-dark-grey; }
-  a:hover { border-bottom: 1px dotted; }
+  /* Tablesorter styling */
+  table.tablesorter thead tr th,
+  table.tablesorter thead tr th.tablesorter-headerUnSorted {
+    background-image: url(../libraries/tablesorter/css/images/black-unsorted.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+  }
+  table.tablesorter thead tr th.tablesorter-headerAsc { background-image: url(../libraries/tablesorter/css/images/black-asc.gif); }
+  table.tablesorter thead tr th.tablesorter-headerDesc { background-image: url(../libraries/tablesorter/css/images/black-desc.gif); }
+
+  /* No colour striping tables */
+  table.no-stripe tbody tr:nth-child(even) { background-color: #fff; }
+
+  /* Data table solutions */
+  /* Tables with custom padding */
+  table.padding-none {
+    border-spacing: 0;
+  }
+  table .padding-none th,
+  table .padding-none td,
+  table.padding-none tbody th,
+  table.padding-none tbody td {
+    padding: 0;
+  }
+  table.data-table,
+  table.padding-small {
+    border-spacing: 0;
+  }
+  table .padding-small th,
+  table .padding-small td,
+  table.padding-small tbody th,
+  table.padding-small tbody td,
+  table.data-table tbody th,
+  table.data-table tbody td {
+    padding: 0rem 0.2rem 0.2rem;
+  }
+  /* border lines on data tables without striping */
+  table.no-stripe.data-table tbody td {
+    border-top: 1px solid $ebi-colour-light-grey;
+  }
+  /* None 100% wide tables */
+  table.data-table,
+  table.width-auto { width: auto; }
+  /* some images should be stretched, such as sparkline-style gifs */
+  table.data-table img,
+  img.stretch { height: inherit; }
+  /* align table cell text to top */
+  table.data-table th,
+  table.data-table td,
+  table.align-top td,
+  table td.align-top {
+    vertical-align: top;
+  }
+  /* highlight table header background */
+  table.data-table thead {
+    background: $ebi-colour-light-grey;
+  }
+
+  /* wide screen support */
+  @media screen and (min-width: 40em) {
+    body.full-width .row,
+    body.full-width .row .row {
+      max-width: 150rem;
+    }
+  }
+
+  /* tag */
+  @include ebi-tag;
+
+  /* defenition lists */
+  dl dt {
+    font-weight: 400;
+    font-size: 1.1rem;
+    a { border-bottom: none; color: $ebi-colour-dark-grey; }
+    a:hover { border-bottom: 1px dotted; }
+  }
 }
