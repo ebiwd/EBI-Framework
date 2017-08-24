@@ -22,9 +22,9 @@
 */
 
 // Various includes
-@import 'ebi-global-includes/ebi_theme_settings'; // default EBI styling
-@import 'ebi-global-includes/tag'; // custom tag class
-@import 'ebi-global-includes/embl_selector'; // EMBL Dropdown selector for .masthead-black-bar
+@import 'ebi_theme_settings'; // default EBI styling
+@import 'tag'; // custom tag class
+@import 'embl_selector'; // EMBL Dropdown selector for .masthead-black-bar
 
 @mixin ebi-base-styles {
   body h1, body h2, body h3 { font-weight: 300; }

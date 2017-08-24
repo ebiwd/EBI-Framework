@@ -61,11 +61,11 @@
 
 // Global variables and styles
 @import 'node_modules/foundation-sites/scss/global';
-@import 'css/ebi-global-includes/ebi_theme_settings'; // override foundation with EBI styling
-@import 'css/ebi-global-includes/badge'; // custom badge class
-@import 'css/ebi-global-includes/pagination'; // custom badge class
-@import 'css/ebi-global-includes/ebi_visibility'; // extra visibility classes
-@import 'css/ebi-global-includes/ebi_foundation_overides';
+@import 'css/ebi-css-build/ebi_theme_settings'; // override foundation with EBI styling
+@import 'css/ebi-css-build/badge'; // custom badge class
+@import 'css/ebi-css-build/pagination'; // custom badge class
+@import 'css/ebi-css-build/ebi_visibility'; // extra visibility classes
+@import 'css/ebi-css-build/ebi_foundation_overides';
 
 // Include Foundation dependencies in the build
 // Via: https://github.com/zurb/foundation-sites/issues/9467#issuecomment-267598540
