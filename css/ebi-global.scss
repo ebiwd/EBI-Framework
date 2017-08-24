@@ -31,11 +31,6 @@
 
   li { word-wrap: break-word; }
 
-  // padding for page content
-  body.table-layout table {
-    padding: 0;
-  }
-
   // Links
   a,
   a:visited {
@@ -152,644 +147,630 @@
     }
   }
 
-    // SITE-WIDE MASTHEAD LAYOUT AND SIZE
-    // Generic rules for global and local mastheads
+  // SITE-WIDE MASTHEAD LAYOUT AND SIZE
+  // Generic rules for global and local mastheads
 
-    // GLOBAL MASTHEAD
-    #local-title a,
-    nav a,
-    nav a:hover { border-bottom: none; }
+  // GLOBAL MASTHEAD
+  #local-title a,
+  nav a,
+  nav a:hover { border-bottom: none; }
 
-    .masthead {
-      // underline links in the textual area of the local masthead
-      #local-title .columns {
-        a { border-bottom: 1px dotted rgb(255,255,255); }
-        a.button { border-bottom: none; }
-        a:hover { border-bottom: none; }
-      }
+  .masthead {
+    // underline links in the textual area of the local masthead
+    #local-title .columns {
+      a { border-bottom: 1px dotted rgb(255,255,255); }
+      a.button { border-bottom: none; }
+      a:hover { border-bottom: none; }
     }
+  }
 
-    // Global menu styling
-    nav ul#global-nav.menu li { border-right: none; display: inline-block; }
+  // Global menu styling
+  nav ul#global-nav.menu li { border-right: none; display: inline-block; }
 
-    // Disable masthead-black-bar search when told
-    body.no-global-search .masthead-black-bar ul#global-nav.menu li.search { display: none; }
+  // Disable masthead-black-bar search when told
+  body.no-global-search .masthead-black-bar ul#global-nav.menu li.search { display: none; }
 
-    // Mobile logo
-    @media screen and (max-width: 40em) {
-      nav ul#global-nav.menu li.home { display: none; }
-      nav ul#global-nav.menu li.home-mobile a {
-        display: block;
-        height: 50px;
-        width: 67px;
-        background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
-        background-size: 64px 47px;
-        background-repeat: no-repeat;
-        margin-left: 6px;
-      }
-    }
-    @media screen and (min-width: 40em) {
-      nav ul#global-nav.menu li.home-mobile { display: none; }
-    }
-
-    .masthead-black-bar {
-      a,
-      a:hover,
-      ul.menu li a:hover,
-      ul.menu li a:active,
-      ul.menu li a:focus,
-      ul.menu li.active a,
-      ul.menu li.active-trail a {
-        color: white;
-        border-bottom: none;
-      }
-
-      ul.menu li.active a,
-      ul.menu li.active-trail a {
-        background: rgb(0,0,0);
-      }
-
-      // custom colour for Home
-      ul li.home a:before {
-        font-family: 'EBI-Generic';
-        content: 'H ';
-      }
-      ul li.home a:hover,
-      ul li.home a:active,
-      ul li.home a:focus {
-        background-color: $ebi-colour-petrol;
-      }
-
-      // custom colour for Services
-      ul li.services a:before {
-        font-family: 'EBI-Generic';
-        content: '( ';
-      }
-      ul li.services a:hover,
-      ul li.services a:active,
-      ul li.services a:focus {
-        background-color: $ebi-colour-services;
-      }
-
-      // custom colour for Research
-      ul li.research a:before {
-        font-family: 'EBI-Generic';
-        content: ') ';
-      }
-      ul li.research a:hover,
-      ul li.research a:active,
-      ul li.research a:focus {
-        background-color: $ebi-colour-light-green;
-      }
-
-      // custom colour for Training
-      ul li.training a:before {
-        font-family: 'EBI-Generic';
-        content: 't ';
-      }
-      ul li.training a:hover,
-      ul li.training a:active,
-      ul li.training a:focus {
-        background-color: $ebi-colour-training;
-      }
-
-      // custom colour for about us
-      ul li.about a:before {
-        font-family: 'EBI-Generic';
-        content: 'i ';
-      }
-      ul li.about a:hover,
-      ul li.about a:active,
-      ul li.about a:focus,
-      ul li.about-us a:hover,
-      ul li.about-us a:active,
-      ul li.about-us a:focus {
-        background-color: $ebi-colour-services;
-      }
-
-      // custom icon for search
-      ul li.search a:before {
-        font-family: 'EBI-Functional';
-        content: '1';
-      }
-
-      ul li.search .dropdown-pane {
-        width: 100%;
-        left: 0;
-        background: $ebi-colour-dark;
-        border: none;
-        margin-top: -2px;
-        color: #fff;
-      }
-
-      // masthead dropdwon styles
-      .dropdown-pane {
-        background-color: #333;
-        background-position: 100% 100%;
-        background-repeat: no-repeat;
-        color: #fff;
-        padding-right: 17rem;
-        min-width: 39.9375em;
-        left: 0; //fix position of menu, to prevent horizontal scrolling of page
-
-        h6 { color: white; font-weight: 700; }
-        .button { color: #007c82; background: #fff; }
-      }
-
-      // EMBL Selector dropdown
-      @include embl-selector;
-
-    }
-
-    .masthead-inner {
-      padding-top: 2.5rem;
-      color: #fff;
-    }
-    // END .masthead
-
-    // Local masthead secondary links on mobile
-    @media screen and (max-width: 39.9375em) {
-      .masthead ul.menu.dropdown.float-right > li {
-        margin-bottom: -50px;
-      }
-
-      .masthead-black-bar nav ul.menu {
-        text-align: right;
-
-        li { float: none; display: inline-block; }
-        li.home-mobile { float: left; }
-
-        // make icon bar smaller for mobile
-        > li > a > img,
-        > li > a:before {
-          display: block;
-          margin: 0 auto 0.25rem;
-          font-size: 16px;
-        }
-        > li > a {
-          text-align: center;
-          font-size: 10px;
-          padding: .6rem .35rem;
-        }
-      }
-    }
-
-    // LOCAL MASTHEAD
-    #skip-to {
-      top: -5000px;
-      position: absolute;
-    }
-
-    // Local menu styling
-    .masthead {
+  // Mobile logo
+  @media screen and (max-width: 40em) {
+    nav ul#global-nav.menu li.home { display: none; }
+    nav ul#global-nav.menu li.home-mobile a {
+      display: block;
+      height: 50px;
+      width: 67px;
+      background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
+      background-size: 64px 47px;
       background-repeat: no-repeat;
-      background-position: 100% 82%;
-      background-size: cover;
-      // triangle svg background
-      background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
-
-      h1,
-      h4,
-      p,
-      a, a:hover, a:active, a:visited {
-        color: #fff;
-      }
-      ul li.is-active a,
-      ul li a:hover,
-      nav ul li a.hover,
-      nav ul li a:hover { background-color: rgba(255,255,255,.5); color: #444; }
-      nav ul li.active a,
-      nav ul li a:active,
-      ul li.active-trail a,
-      ul li.active a:visited,
-      ul li.active-trail a:visited { background-color: rgba(255,255,255,1); color: #444;border-bottom: 0;}
-
-      nav { font-size: .9rem; clear: both; }
-
-      nav ul.menu li { border-right: 1px solid $ebi-colour-light; float: left;
-                       margin-left: 0; /* compliance compatibility */
-                                       }
-      nav ul.menu li:last-child,
-      nav ul.menu li.active { border-right: 0; }
-
-      nav ul.menu li.float-right { border-right: none; }
+      margin-left: 6px;
     }
+  }
+  @media screen and (min-width: 40em) {
+    nav ul#global-nav.menu li.home-mobile { display: none; }
+  }
 
-    .masthead-inner nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
-
-    div#local-title { margin-bottom: 1rem; }
-
-    .masthead.meta-background-image {
-      background-position: 100% 100%;
-      background-size: initial;
-    }
-
-    // tweak sticky behaviour
-    .masthead.sticky { width: 100%; position: static; -webkit-transform: none; transform: none; }
-    .masthead.sticky.is-stuck { position: fixed; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-
-    input#local-searchbox,
-    #local-search [type="submit"] {
-      display: inline-block; margin: 0;
-      vertical-align: top; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;
-    }
-    #local-search .input-group-button { vertical-align: top; }
-
-    body.section-about .masthead {
-      background-color: $ebi-colour-petrol;
-    }
-    body.section-industry .masthead {
-      background-color: $ebi-colour-industry;
-    }
-    body.section-research {
-      .masthead {
-        background-color: $ebi-colour-light-green;
-      }
-      #local-title h1,
-      #local-title p,
-      #local-title a {
-        color: #FFF;
-      }
-    }
-    body.section-services .masthead {
-      background-color: $ebi-colour-services;
-    }
-    body.section-training .masthead {
-      background-color: $ebi-colour-training;
-    }
-    body.section-training #local-title  {
-      h1,
-      #local-title p,
-      #local-title a {
-        color: #222;
-      }
-    }
-    body.section-home .masthead {
-      background-color: $ebi-colour-petrol;
-    }
-
-    // tweak to foundation menu; hide submenu until rendered by JS
-    ul.menu.dropdown ul.menu { display: none; }
-    ul.menu.dropdown ul.menu.is-dropdown-submenu.js-dropdown-active { display:block; }
-    .dropdown.menu > li.is-dropdown-submenu-parent > a::after { border-color: #FFF transparent transparent; }
-
-    // active sidebar items
-    .menu > li > a.active { font-weight: bold; }
-
-    // dropdown arrow
-    body .dropdown.menu .has-submenu.is-down-arrow > a::after {
-      border-color: rgba(0,0,0,.4) transparent transparent;
-    }
-    body .dropdown.menu .has-submenu.is-right-arrow > a::after {
-      border-color: transparent transparent transparent rgba(0,0,0,.4);
-    }
-    body header nav .menu.dropdown > .has-submenu.is-down-arrow > a::after {
-      border-color: #fff transparent transparent;
-    }
-
-    /* accomodate legend.label */
-    legend.label { display: block; }
-
-    /* List ...... leaders */
-    ul.leaders {
-      max-width: 40em;
-      padding: 0;
-      overflow-x: hidden;
-      list-style: none;
-
-      li:before {
-        float: left;
-        width: 0;
-        white-space: nowrap;
-        content:
-           ". . . . . . . . . . . . . . . . . . . . "
-           ". . . . . . . . . . . . . . . . . . . . "
-           ". . . . . . . . . . . . . . . . . . . . "
-           ". . . . . . . . . . . . . . . . . . . . ";
-      }
-
-      span:first-child {
-        padding-right: 0.33em;
-        background: white;
-      }
-      span + span {
-        float: right;
-        padding-left: 0.33em;
-        background: white;
-      }
-    }
-
-    /* Secondary menu */
-    ul.menu.secondary-menu,
-    .secondary-menu ul.menu {
-      padding-bottom: 1rem;
-
-      a, a:hover { border-bottom: none; }
-      li { display: inline-block; } // renders links as bricks, not table cells
-    }
-
-    /* List: inline horizontal */
-    ul.inline li { display: inline-block; }
-
-    /* List: icon bullets */
-    li.icon-bullet { list-style-type: none; text-indent: -1.3em; }
-
-    /* Badge list */
-    ul li a.badge,
-    ul li.badge { font-size: inherit; }
-
-    /* Callout tiny */
-    .callout.tiny { padding: 0rem; }
-
-    /* Breadcrumbs */
-    .breadcrumbs { padding-top: 0.5rem; }
-    body .breadcrumbs a { color: #888; }
-
-    /* extend Froundation utility selectors/classes */
-    .small { font-size: 80%; line-height: inherit; }
-    .nowrap { white-space: nowrap; }
-    .code {
-      font-family: Consolas, "Liberation Mono", Courier, monospace;
-      font-weight: normal;
-      color: #0a0a0a;
-      background-color: #e6e6e6;
-      border: 1px solid #cacaca;
-      padding: 0.125rem 0.3125rem 0.0625rem;
-      overflow-x: auto;
-    }
-    pre {
-      overflow-x: auto;
-    }
-    pre > .code,
-    pre > code {
-      padding: 0;
-      border: 0;
-      background: none;
-      font-size: .8rem;
-    }
-    .kbd {
-      margin: 0;
-      color: #0a0a0a;
-      font-family: Consolas, "Liberation Mono", Courier, monospace;
-    }
-    .title-cap { text-transform: capitalize; }
-    .uppercase { text-transform: uppercase; }
-    .lowercase { text-transform: lowercase; }
-
-    /* Custom styling for different local masthead */
-    #local-title.logo-only img,
-    #local-title.logo-title img,
-    #local-title.logo-title-strapline img { float: left; margin: 1em 0.69em 0.69em; }
-    #local-title.logo-title span,
-    #local-title.logo-title-strapline span { display:block; margin: 1em 0 0.69em 0; float:left; }
-    #local-title.logo-title span { margin-top: 2.3em; }
-    #local-title.logo-title h1,
-    #local-title.logo-title-strapline h1 { display: inline; line-height: 100%; }
-    #local-title.logo-title-strapline h1 { font-size: 270%; }
-    #local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
-
-    // LOCAL FOOTER
-    .local-footer {
-      border-top: 2px solid #eee;
-    }
-
-    // GLOBAL FOOTER
-    .global-footer {
-      border-top: 5px solid #eee;
-      padding-top: .5rem;
-
-      h5 {
-        margin-top: 1.25rem;
-        margin-bottom: 5px;
-      }
-
-      .ebi-logo {
-        display: block;
-        height: 53px;
-        width: 89%;
-        background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-left: -.25rem;
-        position: relative;
-        top: 8px;
-      }
-
-      p {
-         margin: 0 0 5px 0;
-      }
-
-      ul {
-        margin-left: 0;
-        font-size: 85%;
-        list-style: none;
-      }
-
-      a {
-        color: $ebi-colour-dark-grey;
-      }
-
-      a:hover,
-      a:focus,
-      a:active{
-        color: $ebi-colour-dark-grey;
-        border-bottom: 1px dashed #e4e4e4;
-      }
-    } // END .global-footer
-
-    .ebi-footer-meta {
-      font-size: 85%; margin-bottom: 9px;
-    } // END .ebi-footer-meta
-
-    /* Compact vertical menu trees */
-    ul.simple.vertical.menu {
-      margin-left: 0;
-      font-size: .9rem;
-      li {
-        margin-bottom: .5rem;
-        display: block;
-        > a { display: inline; padding: 0; }
-        > a.active:before { content: "9 "; font-family: 'EBI-Functional'; }
-        > ul.simple.menu { margin: 0.5rem; }
-      }
-    }
-
-    // cookie banner
-    .cookie-banner {
-      position:fixed;
-      background-color: $ebi-colour-dark;
-      width:100%;
-      padding: $global-padding;
-      left:0;
-      bottom:0;
-      color:#eee;
-      a, a:hover { color: $ebi-colour-light; }
-      .text { margin-right:2em; }
-    }
-
-    // MISC TWEAKS
-    ul.menu { font-size: .9rem; }
-
-    // image tweaks
-    body .thumbnail { box-shadow: none; }
-    .caption {
-      line-height: 1.3em;
-      font-family: sans-serif;
-      font-size: .85rem;
-      opacity: .8;
-      overflow: hidden;
-    }
-
-    // image .highlight-caption
-    a.highlight-caption,
-    .highlight-caption {
-      z-index: 1;
-      position: relative;
-      top: -3rem;
-      color: #fff;
-      padding: .25rem .5rem;
-      background: #333;
+  .masthead-black-bar {
+    a,
+    a:hover,
+    ul.menu li a:hover,
+    ul.menu li a:active,
+    ul.menu li a:focus,
+    ul.menu li.active a,
+    ul.menu li.active-trail a {
+      color: white;
       border-bottom: none;
     }
-    .highlight-caption.highlight-caption-big {
-      top: -8rem;
-      display: inline-block;
-      margin-bottom: -5rem;
-    }
-    // better positioning when combined with position-relative
-    .position-relative > .highlight-caption.highlight-caption-big {
-      position: absolute;
-      top: initial;
-      bottom: 3%;
-      margin-bottom: 0;
+
+    ul.menu li.active a,
+    ul.menu li.active-trail a {
+      background: rgb(0,0,0);
     }
 
-    // image overlays
-    .medium-4 > .with-overlay,
-    .medium-3 > .with-overlay {
-      // sidebar overlays should always have a bottom margin
-      margin-bottom: .75rem;
+    // custom colour for Home
+    ul li.home a:before {
+      font-family: 'EBI-Generic';
+      content: 'H ';
+    }
+    ul li.home a:hover,
+    ul li.home a:active,
+    ul li.home a:focus {
+      background-color: $ebi-colour-petrol;
     }
 
-    .with-overlay {
-      position: relative;
+    // custom colour for Services
+    ul li.services a:before {
+      font-family: 'EBI-Generic';
+      content: '( ';
+    }
+    ul li.services a:hover,
+    ul li.services a:active,
+    ul li.services a:focus {
+      background-color: $ebi-colour-services;
+    }
 
-      .caption {
-        background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.7));
-        background: -o-linear-gradient(transparent, rgba(0,0,0,0.7));
-        background: -moz-linear-gradient(transparent, rgba(0,0,0,0.7));
-        background: linear-gradient(transparent, rgba(0,0,0,0.7));
-        position: absolute;
-        top:0;
-        height: 100%;
-        width: 100%;
-        padding: 5% 5%;
-        color: #fff;
-        opacity: 1;
-        text-shadow: 0 2px 0 rgba(0,0,0,.8);
+    // custom colour for Research
+    ul li.research a:before {
+      font-family: 'EBI-Generic';
+      content: ') ';
+    }
+    ul li.research a:hover,
+    ul li.research a:active,
+    ul li.research a:focus {
+      background-color: $ebi-colour-light-green;
+    }
 
-        &:hover {
-          background: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-          background: -o-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-          background: -moz-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-          background: linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
-          color: #FFF;
+    // custom colour for Training
+    ul li.training a:before {
+      font-family: 'EBI-Generic';
+      content: 't ';
+    }
+    ul li.training a:hover,
+    ul li.training a:active,
+    ul li.training a:focus {
+      background-color: $ebi-colour-training;
+    }
 
-          > a.inner { color: #fff;  }
-        }
-        .inner {
-          position: absolute;
-          bottom: 5%;
-          width: 95%;
-          padding-right: 4rem;
-        }
-        > a.inner {
-          color: #fff;
-          text-decoration: none;
-          border-bottom: none;
-          font-size: 1.4rem;
-          line-height: 1.4em;
-          padding-top: 50%;
-        }
-        > a:after { font-family: "EBI-Functional"; content: " >"; display: inline-block; float: right; font-size: 1.7rem; position: relative; top: -.1rem; left: 2rem;}
-      }
+    // custom colour for about us
+    ul li.about a:before {
+      font-family: 'EBI-Generic';
+      content: 'i ';
+    }
+    ul li.about a:hover,
+    ul li.about a:active,
+    ul li.about a:focus,
+    ul li.about-us a:hover,
+    ul li.about-us a:active,
+    ul li.about-us a:focus {
+      background-color: $ebi-colour-services;
+    }
 
-    } // END .with-overlay
+    // custom icon for search
+    ul li.search a:before {
+      font-family: 'EBI-Functional';
+      content: '1';
+    }
 
-    // dl
-    dd { padding-bottom: 1rem; }
+    ul li.search .dropdown-pane {
+      width: 100%;
+      left: 0;
+      background: $ebi-colour-dark;
+      border: none;
+      margin-top: -2px;
+      color: #fff;
+    }
 
-    .serif { font-family: $body-font-family-serif;  font-size: 1.1rem; }
-    .sans-serif { font-family: $body-font-family;  font-size: 1.1rem; }
-    .serif .sans-serif { font-size: 1rem; } // reset font size when nesting
+    // masthead dropdwon styles
+    .dropdown-pane {
+      background-color: #333;
+      background-position: 100% 100%;
+      background-repeat: no-repeat;
+      color: #fff;
+      padding-right: 17rem;
+      min-width: 39.9375em;
+      left: 0; //fix position of menu, to prevent horizontal scrolling of page
 
-    .block { display: block; }
-    .clear { clear: both; }
+      h6 { color: white; font-weight: 700; }
+      .button { color: #007c82; background: #fff; }
+    }
 
-    body .has-tip { font-weight: normal; line-height: 1em; background: rgba(0,0,0,.03); }
+    // EMBL Selector dropdown
+    @include embl-selector;
 
-    /* Float left for pullquotes */
-    blockquote.float-left {
-      border-left: none;
+  }
+
+  .masthead-inner {
+    padding-top: 2.5rem;
+    color: #fff;
+  }
+  // END .masthead
+
+  // Local masthead secondary links on mobile
+  @media screen and (max-width: 39.9375em) {
+    .masthead ul.menu.dropdown.float-right > li {
+      margin-bottom: -50px;
+    }
+
+    .masthead-black-bar nav ul.menu {
       text-align: right;
-      border-right: 1px solid #cacaca;
-      margin-right: 1rem;
+
+      li { float: none; display: inline-block; }
+      li.home-mobile { float: left; }
+
+      // make icon bar smaller for mobile
+      > li > a > img,
+      > li > a:before {
+        display: block;
+        margin: 0 auto 0.25rem;
+        font-size: 16px;
+      }
+      > li > a {
+        text-align: center;
+        font-size: 10px;
+        padding: .6rem .35rem;
+      }
+    }
+  }
+
+  // LOCAL MASTHEAD
+  #skip-to {
+    top: -5000px;
+    position: absolute;
+  }
+
+  // Local menu styling
+  .masthead {
+    background-repeat: no-repeat;
+    background-position: 100% 82%;
+    background-size: cover;
+    // triangle svg background
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
+
+    h1,
+    h4,
+    p,
+    a, a:hover, a:active, a:visited {
+      color: #fff;
+    }
+    ul li.is-active a,
+    ul li a:hover,
+    nav ul li a.hover,
+    nav ul li a:hover { background-color: rgba(255,255,255,.5); color: #444; }
+    nav ul li.active a,
+    nav ul li a:active,
+    ul li.active-trail a,
+    ul li.active a:visited,
+    ul li.active-trail a:visited { background-color: rgba(255,255,255,1); color: #444;border-bottom: 0;}
+
+    nav { font-size: .9rem; clear: both; }
+
+    nav ul.menu li { border-right: 1px solid $ebi-colour-light; float: left;
+                     margin-left: 0; /* compliance compatibility */
+                                     }
+    nav ul.menu li:last-child,
+    nav ul.menu li.active { border-right: 0; }
+
+    nav ul.menu li.float-right { border-right: none; }
+  }
+
+  .masthead-inner nav i { line-height: .9em; font-size: .8em; margin-top: -3px; }
+
+  div#local-title { margin-bottom: 1rem; }
+
+  .masthead.meta-background-image {
+    background-position: 100% 100%;
+    background-size: initial;
+  }
+
+  // tweak sticky behaviour
+  .masthead.sticky { width: 100%; position: static; -webkit-transform: none; transform: none; }
+  .masthead.sticky.is-stuck { position: fixed; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+  input#local-searchbox,
+  #local-search [type="submit"] {
+    display: inline-block; margin: 0;
+    vertical-align: top; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;
+  }
+  #local-search .input-group-button { vertical-align: top; }
+
+  body.section-about .masthead {
+    background-color: $ebi-colour-petrol;
+  }
+  body.section-industry .masthead {
+    background-color: $ebi-colour-industry;
+  }
+  body.section-research {
+    .masthead {
+      background-color: $ebi-colour-light-green;
+    }
+    #local-title h1,
+    #local-title p,
+    #local-title a {
+      color: #FFF;
+    }
+  }
+  body.section-services .masthead {
+    background-color: $ebi-colour-services;
+  }
+  body.section-training .masthead {
+    background-color: $ebi-colour-training;
+  }
+  body.section-training #local-title  {
+    h1,
+    #local-title p,
+    #local-title a {
+      color: #222;
+    }
+  }
+  body.section-home .masthead {
+    background-color: $ebi-colour-petrol;
+  }
+
+  // tweak to foundation menu; hide submenu until rendered by JS
+  ul.menu.dropdown ul.menu { display: none; }
+  ul.menu.dropdown ul.menu.is-dropdown-submenu.js-dropdown-active { display:block; }
+  .dropdown.menu > li.is-dropdown-submenu-parent > a::after { border-color: #FFF transparent transparent; }
+
+  // active sidebar items
+  .menu > li > a.active { font-weight: bold; }
+
+  // dropdown arrow
+  body .dropdown.menu .has-submenu.is-down-arrow > a::after {
+    border-color: rgba(0,0,0,.4) transparent transparent;
+  }
+  body .dropdown.menu .has-submenu.is-right-arrow > a::after {
+    border-color: transparent transparent transparent rgba(0,0,0,.4);
+  }
+  body header nav .menu.dropdown > .has-submenu.is-down-arrow > a::after {
+    border-color: #fff transparent transparent;
+  }
+
+  /* accomodate legend.label */
+  legend.label { display: block; }
+
+  /* List ...... leaders */
+  ul.leaders {
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none;
+
+    li:before {
+      float: left;
+      width: 0;
+      white-space: nowrap;
+      content:
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . ";
     }
 
-    blockquote.lead { margin-left: 1rem; border-left-color: rgba(0,0,0,0); border-right-color: rgba(0,0,0,0);}
-    blockquote.lead.quote:before {
-      content: "“";
-      position: relative;
-      top: -1.5rem;
-      left: -1.5rem;
-      font-size: 3rem;
+    span:first-child {
+      padding-right: 0.33em;
+      background: white;
+    }
+    span + span {
+      float: right;
+      padding-left: 0.33em;
+      background: white;
+    }
+  }
+
+  /* Secondary menu */
+  ul.menu.secondary-menu,
+  .secondary-menu ul.menu {
+    padding-bottom: 1rem;
+
+    a, a:hover { border-bottom: none; }
+    li { display: inline-block; } // renders links as bricks, not table cells
+  }
+
+  /* List: inline horizontal */
+  ul.inline li { display: inline-block; }
+
+  /* List: icon bullets */
+  li.icon-bullet { list-style-type: none; text-indent: -1.3em; }
+
+  /* Badge list */
+  ul li a.badge,
+  ul li.badge { font-size: inherit; }
+
+  /* Callout tiny */
+  .callout.tiny { padding: 0rem; }
+
+  /* Breadcrumbs */
+  .breadcrumbs { padding-top: 0.5rem; }
+  body .breadcrumbs a { color: #888; }
+
+  /* extend Froundation utility selectors/classes */
+  .small { font-size: 80%; line-height: inherit; }
+  .nowrap { white-space: nowrap; }
+  .code {
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    color: #0a0a0a;
+    background-color: #e6e6e6;
+    border: 1px solid #cacaca;
+    padding: 0.125rem 0.3125rem 0.0625rem;
+    overflow-x: auto;
+  }
+  pre {
+    overflow-x: auto;
+  }
+  pre > .code,
+  pre > code {
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: .8rem;
+  }
+  .kbd {
+    margin: 0;
+    color: #0a0a0a;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+  }
+  .title-cap { text-transform: capitalize; }
+  .uppercase { text-transform: uppercase; }
+  .lowercase { text-transform: lowercase; }
+
+  /* Custom styling for different local masthead */
+  #local-title.logo-only img,
+  #local-title.logo-title img,
+  #local-title.logo-title-strapline img { float: left; margin: 1em 0.69em 0.69em; }
+  #local-title.logo-title span,
+  #local-title.logo-title-strapline span { display:block; margin: 1em 0 0.69em 0; float:left; }
+  #local-title.logo-title span { margin-top: 2.3em; }
+  #local-title.logo-title h1,
+  #local-title.logo-title-strapline h1 { display: inline; line-height: 100%; }
+  #local-title.logo-title-strapline h1 { font-size: 270%; }
+  #local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
+
+  // LOCAL FOOTER
+  .local-footer {
+    border-top: 2px solid #eee;
+  }
+
+  // GLOBAL FOOTER
+  .global-footer {
+    border-top: 5px solid #eee;
+    padding-top: .5rem;
+
+    h5 {
+      margin-top: 1.25rem;
+      margin-bottom: 5px;
+    }
+
+    .ebi-logo {
       display: block;
-      height: 0px;
+      height: 53px;
+      width: 89%;
+      background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-left: -.25rem;
+      position: relative;
+      top: 8px;
     }
 
-    /* bigger first line for some blockquotes */
-    blockquote.drop-quote::first-line {
-      font-size: 1.6rem;
+    p {
+       margin: 0 0 5px 0;
     }
 
-    /* tweaks to foundation's mobile settings */
-    @media screen and (max-width: 75rem) {
-      body {
-        ul.dropdown.menu.float-left { padding-left: .5rem; }
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 2rem; }
-        h3 { font-size: 1.5rem; }
-        h4 { font-size: 1.25rem; }
-      } // END body
+    ul {
+      margin-left: 0;
+      font-size: 85%;
+      list-style: none;
     }
 
-    /* Orbit thumbnails */
-    nav.orbit-bullets button.thumbnail { width: auto; border-radius: 0; }
-    nav.orbit-bullets button.thumbnail.is-active { box-shadow: 0 0 1px  #444; }
-    nav.orbit-bullets button.thumbnail.image {width: 4rem; height: 3rem; overflow: hidden;}
-    nav.orbit-bullets button.thumbnail.image > img { min-width: 6rem; margin-left: -2rem; }
+    a {
+      color: $ebi-colour-dark-grey;
+    }
 
-    /* Disable padding on left or right of foundation columns */
-    .columns.no-pad-right { padding-right: 0; }
-    .columns.no-pad-left { padding-left: 0; }
+    a:hover,
+    a:focus,
+    a:active{
+      color: $ebi-colour-dark-grey;
+      border-bottom: 1px dashed #e4e4e4;
+    }
+  } // END .global-footer
+
+  .ebi-footer-meta {
+    font-size: 85%; margin-bottom: 9px;
+  } // END .ebi-footer-meta
+
+  /* Compact vertical menu trees */
+  ul.simple.vertical.menu {
+    margin-left: 0;
+    font-size: .9rem;
+    li {
+      margin-bottom: .5rem;
+      display: block;
+      > a { display: inline; padding: 0; }
+      > a.active:before { content: "9 "; font-family: 'EBI-Functional'; }
+      > ul.simple.menu { margin: 0.5rem; }
+    }
+  }
+
+  // cookie banner
+  .cookie-banner {
+    position:fixed;
+    background-color: $ebi-colour-dark;
+    width:100%;
+    padding: $global-padding;
+    left:0;
+    bottom:0;
+    color:#eee;
+    a, a:hover { color: $ebi-colour-light; }
+    .text { margin-right:2em; }
+  }
+
+  // MISC TWEAKS
+  ul.menu { font-size: .9rem; }
+
+  // image tweaks
+  body .thumbnail { box-shadow: none; }
+  .caption {
+    line-height: 1.3em;
+    font-family: sans-serif;
+    font-size: .85rem;
+    opacity: .8;
+    overflow: hidden;
+  }
+
+  // image .highlight-caption
+  a.highlight-caption,
+  .highlight-caption {
+    z-index: 1;
+    position: relative;
+    top: -3rem;
+    color: #fff;
+    padding: .25rem .5rem;
+    background: #333;
+    border-bottom: none;
+  }
+  .highlight-caption.highlight-caption-big {
+    top: -8rem;
+    display: inline-block;
+    margin-bottom: -5rem;
+  }
+  // better positioning when combined with position-relative
+  .position-relative > .highlight-caption.highlight-caption-big {
+    position: absolute;
+    top: initial;
+    bottom: 3%;
+    margin-bottom: 0;
+  }
+
+  // image overlays
+  .medium-4 > .with-overlay,
+  .medium-3 > .with-overlay {
+    // sidebar overlays should always have a bottom margin
+    margin-bottom: .75rem;
+  }
+
+  .with-overlay {
+    position: relative;
+
+    .caption {
+      background: -webkit-linear-gradient(transparent, rgba(0,0,0,0.7));
+      background: -o-linear-gradient(transparent, rgba(0,0,0,0.7));
+      background: -moz-linear-gradient(transparent, rgba(0,0,0,0.7));
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      position: absolute;
+      top:0;
+      height: 100%;
+      width: 100%;
+      padding: 5% 5%;
+      color: #fff;
+      opacity: 1;
+      text-shadow: 0 2px 0 rgba(0,0,0,.8);
+
+      &:hover {
+        background: -webkit-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+        background: -o-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+        background: -moz-linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(100,100,100,0.3));
+        color: #FFF;
+
+        > a.inner { color: #fff;  }
+      }
+      .inner {
+        position: absolute;
+        bottom: 5%;
+        width: 95%;
+        padding-right: 4rem;
+      }
+      > a.inner {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: none;
+        font-size: 1.4rem;
+        line-height: 1.4em;
+        padding-top: 50%;
+      }
+      > a:after { font-family: "EBI-Functional"; content: " >"; display: inline-block; float: right; font-size: 1.7rem; position: relative; top: -.1rem; left: 2rem;}
+    }
+
+  } // END .with-overlay
+
+  // dl
+  dd { padding-bottom: 1rem; }
+
+  .serif { font-family: $body-font-family-serif;  font-size: 1.1rem; }
+  .sans-serif { font-family: $body-font-family;  font-size: 1.1rem; }
+  .serif .sans-serif { font-size: 1rem; } // reset font size when nesting
+
+  .block { display: block; }
+  .clear { clear: both; }
+
+  body .has-tip { font-weight: normal; line-height: 1em; background: rgba(0,0,0,.03); }
+
+  /* Float left for pullquotes */
+  blockquote.float-left {
+    border-left: none;
+    text-align: right;
+    border-right: 1px solid #cacaca;
+    margin-right: 1rem;
+  }
+
+  blockquote.lead { margin-left: 1rem; border-left-color: rgba(0,0,0,0); border-right-color: rgba(0,0,0,0);}
+  blockquote.lead.quote:before {
+    content: "“";
+    position: relative;
+    top: -1.5rem;
+    left: -1.5rem;
+    font-size: 3rem;
+    display: block;
+    height: 0px;
+  }
+
+  /* bigger first line for some blockquotes */
+  blockquote.drop-quote::first-line {
+    font-size: 1.6rem;
+  }
+
+  /* tweaks to foundation's mobile settings */
+  @media screen and (max-width: 75rem) {
+    body {
+      ul.dropdown.menu.float-left { padding-left: .5rem; }
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 2rem; }
+      h3 { font-size: 1.5rem; }
+      h4 { font-size: 1.25rem; }
+    } // END body
+  }
+
+  /* Orbit thumbnails */
+  nav.orbit-bullets button.thumbnail { width: auto; border-radius: 0; }
+  nav.orbit-bullets button.thumbnail.is-active { box-shadow: 0 0 1px  #444; }
+  nav.orbit-bullets button.thumbnail.image {width: 4rem; height: 3rem; overflow: hidden;}
+  nav.orbit-bullets button.thumbnail.image > img { min-width: 6rem; margin-left: -2rem; }
+
+  /* Disable padding on left or right of foundation columns */
+  .columns.no-pad-right { padding-right: 0; }
+  .columns.no-pad-left { padding-left: 0; }
 
   /* mono-space fonts are fat */
   code { font-size: .95rem; }
 
-  // hide
-  .hidden, .hide { display: none; }
-  // inline-block
-  .inline { display: inline; }
-  .inline-block { display: inline-block; }
-  // positioning
-  .position-relative { position: relative; }
-  .position-absolute { position: absolute; }
-  .position-static { position: static; }
-  .position-fixed { position: fixed; }
-  // no margins
-  .no-margin { margin: 0; }
-  // no underline for links
-  .no-underline a, a.no-underline { border-bottom: none; text-decoration: none; }
   // buttons
   .button:focus,
   .button:hover,
@@ -868,7 +849,43 @@
     }
   }
 
-  /* custom spacing */
+  // wide screen support
+  @media screen and (min-width: 40em) {
+    body.full-width .row,
+    body.full-width .row .row {
+      max-width: 150rem;
+    }
+  }
+
+  // tag
+  @include ebi-tag;
+
+  // defenition lists
+  dl dt {
+    font-weight: 400;
+    font-size: 1.1rem;
+    a { border-bottom: none; color: $ebi-colour-dark-grey; }
+    a:hover { border-bottom: 1px dotted; }
+  }
+}
+
+@mixin ebi-utility-styles {
+  // hide
+  .hidden, .hide { display: none; }
+  // inline-block
+  .inline { display: inline; }
+  .inline-block { display: inline-block; }
+  // positioning
+  .position-relative { position: relative; }
+  .position-absolute { position: absolute; }
+  .position-static { position: static; }
+  .position-fixed { position: fixed; }
+  // no margins
+  .no-margin { margin: 0; }
+  // no underline for links
+  .no-underline a, a.no-underline { border-bottom: none; text-decoration: none; }
+
+  // custom spacing
   .margin-top-none { margin-top: 0; }
   .margin-top-xsmall { margin-top: .1rem; }
   .margin-top-small { margin-top: .25rem; }
@@ -924,7 +941,9 @@
   .padding-bottom-medium { padding-bottom: .5rem; }
   .padding-bottom-large { padding-bottom: 1rem; }
   .padding-bottom-xlarge { padding-bottom: 2rem; }
+}
 
+@mixin ebi-print-styles {
   /* print styles */
   @media print {
     a, a:visited { border-bottom: none; }
@@ -937,7 +956,9 @@
     #shortcuts,
     #ebi_search_results { display: none; }
   }
+}
 
+@mixin ebi-clearable-inputs {
   /* Clearable text inputs
      Also need JS, via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text */
   input.clearable {
@@ -948,9 +969,15 @@
   input.clearable.x  { background-position: right 12px center; } /* (jQ) Show icon */
   input.clearable.onX{ cursor: pointer; } /* (jQ) hover cursor style */
   input.clearable::-ms-clear {display: none; width:0; height:0;} /* Remove IE default X */
+}
 
+@mixin ebi-table-styles {
+  // padding for page content
+  body.table-layout table {
+    padding: 0;
+  }
 
-  /* Tablesorter styling */
+  // Tablesorter styling
   table.tablesorter thead tr th,
   table.tablesorter thead tr th.tablesorter-headerUnSorted {
     background-image: url(../libraries/tablesorter/css/images/black-unsorted.gif);
@@ -961,7 +988,7 @@
   table.tablesorter thead tr th.tablesorter-headerAsc { background-image: url(../libraries/tablesorter/css/images/black-asc.gif); }
   table.tablesorter thead tr th.tablesorter-headerDesc { background-image: url(../libraries/tablesorter/css/images/black-desc.gif); }
 
-  /* No colour striping tables */
+  // No colour striping tables
   table.no-stripe tbody tr:nth-child(even) { background-color: #fff; }
 
   /* Data table solutions */
@@ -1007,24 +1034,5 @@
   /* highlight table header background */
   table.data-table thead {
     background: $ebi-colour-light-grey;
-  }
-
-  /* wide screen support */
-  @media screen and (min-width: 40em) {
-    body.full-width .row,
-    body.full-width .row .row {
-      max-width: 150rem;
-    }
-  }
-
-  /* tag */
-  @include ebi-tag;
-
-  /* defenition lists */
-  dl dt {
-    font-weight: 400;
-    font-size: 1.1rem;
-    a { border-bottom: none; color: $ebi-colour-dark-grey; }
-    a:hover { border-bottom: 1px dotted; }
   }
 }

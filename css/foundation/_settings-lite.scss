@@ -7,7 +7,8 @@
  */
 
 // Include all EBI branding
-$include-ebi-global-styles: true !global;
+$include-ebi-global-styles: false !global;
+$include-ebi-extra-styles: true !global;
 @import '../ebi-global.scss';
 
 // Include the common settings
@@ -81,6 +82,13 @@ $include-ebi-global-styles: true !global;
 @include ebi-foundation-overides;
 
 // ebi-styles
+// ebi-styles
 @if $include-ebi-global-styles {
   @include ebi-base-styles;
+  @include ebi-utility-styles;
+}
+@if $include-ebi-extra-styles {
+  @include ebi-print-styles;
+  @include ebi-clearable-inputs;
+  @include ebi-table-styles;
 }
