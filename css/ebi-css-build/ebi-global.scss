@@ -387,6 +387,7 @@
     a { border-bottom: none; color: $ebi-colour-dark-grey; }
     a:hover { border-bottom: 1px dotted; }
   }
+
 }
 
 @mixin ebi-related-pattern {
@@ -422,8 +423,3 @@
     ul:after { content: " "; height: .5rem; display: block; clear: both; } // a clearfix to show background
   }
 }
-
-@include ebi-utility-styles;
-@include ebi-table-styles;
-@include ebi-print-styles;
-@include ebi-clearable-inputs;
