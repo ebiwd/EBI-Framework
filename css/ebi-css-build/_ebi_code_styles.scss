@@ -1,0 +1,29 @@
+@mixin ebi-code-styles {
+  .code {
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    color: #0a0a0a;
+    background-color: #e6e6e6;
+    border: 1px solid #cacaca;
+    padding: 0.125rem 0.3125rem 0.0625rem;
+    overflow-x: auto;
+  }
+  pre {
+    overflow-x: auto;
+  }
+  pre > .code,
+  pre > code {
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: .8rem;
+  }
+  .kbd {
+    margin: 0;
+    color: #0a0a0a;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+  }
+  .title-cap { text-transform: capitalize; }
+  .uppercase { text-transform: uppercase; }
+  .lowercase { text-transform: lowercase; }
+}

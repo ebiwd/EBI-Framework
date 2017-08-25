@@ -1,0 +1,14 @@
+@mixin ebi-print-styles {
+  /* print styles */
+  @media print {
+    a, a:visited { border-bottom: none; }
+    #skip-to,
+    .masthead-black-bar nav,
+    .masthead nav,
+    form#local-search,
+    .global-footer,
+    #search_ebi,
+    #shortcuts,
+    #ebi_search_results { display: none; }
+  }
+}

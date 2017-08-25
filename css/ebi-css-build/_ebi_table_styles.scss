@@ -1,0 +1,65 @@
+@mixin ebi-table-styles {
+  // padding for page content
+  body.table-layout table {
+    padding: 0;
+  }
+
+  // Tablesorter styling
+  table.tablesorter thead tr th,
+  table.tablesorter thead tr th.tablesorter-headerUnSorted {
+    background-image: url(../libraries/tablesorter/css/images/black-unsorted.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+  }
+  table.tablesorter thead tr th.tablesorter-headerAsc { background-image: url(../libraries/tablesorter/css/images/black-asc.gif); }
+  table.tablesorter thead tr th.tablesorter-headerDesc { background-image: url(../libraries/tablesorter/css/images/black-desc.gif); }
+
+  // No colour striping tables
+  table.no-stripe tbody tr:nth-child(even) { background-color: #fff; }
+
+  /* Data table solutions */
+  /* Tables with custom padding */
+  table.padding-none {
+    border-spacing: 0;
+  }
+  table .padding-none th,
+  table .padding-none td,
+  table.padding-none tbody th,
+  table.padding-none tbody td {
+    padding: 0;
+  }
+  table.data-table,
+  table.padding-small {
+    border-spacing: 0;
+  }
+  table .padding-small th,
+  table .padding-small td,
+  table.padding-small tbody th,
+  table.padding-small tbody td,
+  table.data-table tbody th,
+  table.data-table tbody td {
+    padding: 0rem 0.2rem 0.2rem;
+  }
+  /* border lines on data tables without striping */
+  table.no-stripe.data-table tbody td {
+    border-top: 1px solid $ebi-colour-light-grey;
+  }
+  /* None 100% wide tables */
+  table.data-table,
+  table.width-auto { width: auto; }
+  /* some images should be stretched, such as sparkline-style gifs */
+  table.data-table img,
+  img.stretch { height: inherit; }
+  /* align table cell text to top */
+  table.data-table th,
+  table.data-table td,
+  table.align-top td,
+  table td.align-top {
+    vertical-align: top;
+  }
+  /* highlight table header background */
+  table.data-table thead {
+    background: $ebi-colour-light-grey;
+  }
+}

@@ -1,0 +1,76 @@
+@mixin ebi-color-styles {
+  .ebi-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-main; }
+  }
+  .services-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-services; }
+  }
+  .research-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-research; }
+  }
+  .training-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-training; }
+  }
+  .industry-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-industry; }
+  }
+  .elixir-background {
+    @at-root a#{&}, &,, &.button, &.button:hover, &.tag { background: $ebi-colour-elixir; }
+  }
+  .white-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-white; }
+  }
+  .secondary-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-dark-grey; }
+  }
+  .tag.secondary { background: $ebi-colour-dark-grey; }
+  .medium-gray-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-medium-grey; }
+  }
+
+  .ebi-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-petrol;
+    }
+  }
+  .services-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-services;
+    }
+  }
+  .research-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-light-green;
+    }
+  }
+  .training-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-training;
+    }
+  }
+  .industry-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-industry;
+    }
+  }
+  .elixir-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-elixir;
+    }
+  }
+  .white-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-white;
+    }
+  }
+  .secondary-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-dark-grey;
+    }
+  }
+  .medium-gray-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $ebi-colour-medium-grey;
+    }
+  }
+}
