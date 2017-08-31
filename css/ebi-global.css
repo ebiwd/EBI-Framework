@@ -5050,8 +5050,16 @@ code {
   .intro-unit h3 {
     padding-bottom: 1rem; }
   .intro-unit .lead {
-    color: #999;
+    color: #666;
     margin-bottom: .5rem; }
+
+a.external:after {
+  content: " x";
+  font-family: "EBI-Generic";
+  font-size: .65rem;
+  position: relative;
+  top: -1px;
+  margin-left: .4rem; }
 
 a.read-more,
 a.readmore,
