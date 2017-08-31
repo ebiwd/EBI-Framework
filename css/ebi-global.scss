@@ -915,8 +915,19 @@ code { font-size: .95rem; }
   .lead { color: $secondary-color; margin-bottom: .5rem; }
 }
 
-// read more
+// external links
+a.external{
+  &:after {
+    content: " x";
+    font-family: "EBI-Generic";
+    font-size: .65rem;
+    position: relative;
+    top: -1px;
+    margin-left: .4rem;
+  }
+}
 
+// read more
 a.read-more,
 a.readmore,
 a.more {
