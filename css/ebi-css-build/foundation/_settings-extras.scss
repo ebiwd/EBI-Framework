@@ -5,10 +5,7 @@
  * areas, but have a few specific pages where they want the added components.
  */
 
-// Include all EBI branding
-$include-ebi-global-styles: false !global;
-$include-ebi-extra-styles: true !global;
-@import '../ebi-global.scss';
+@import '../ebi_dev_note';
 
 // Include the common settings
 @import 'settings-common';
@@ -80,13 +77,7 @@ $include-ebi-extra-styles: true !global;
 // ebi-specific fixes
 // @include ebi-foundation-overides;
 
-// ebi-styles
-@if $include-ebi-global-styles {
-  @include ebi-base-styles;
-  @include ebi-utility-styles;
-}
-@if $include-ebi-extra-styles {
-  @include ebi-print-styles;
-  @include ebi-clearable-inputs;
-  @include ebi-table-styles;
-}
+// Include all EBI branding
+$include-ebi-global-styles: false !global;
+$include-ebi-extra-styles: true !global;
+@import '../ebi-global.scss';
