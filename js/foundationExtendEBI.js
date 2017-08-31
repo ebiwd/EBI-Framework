@@ -395,6 +395,18 @@ function invokeResponsiveMenuEBI() {
 
   }
 
+  // Programatically open external links in new tabs, and add '.external'
+  function addBlankTargetToExternalLinkEBI(parent) {
+    var parent = parent || '#content';
+    $(parent + ' a').filter(function() {
+       return this.hostname && this.hostname !== location.hostname;
+    }).attr('target','_blank');
+  }
+  function addExternalToBlankWindowLinksEBI(parent) {
+    var parent = parent || '#content';
+    $(parent + ' a[target="_blank"]').addClass('external');
+  }
+
   /* Allow invokation of of foundation and foundationExtendEBI with data attributes
 
     <body data-foundationInvoke="document" data-foundationExtendEBI="document">
@@ -415,6 +427,10 @@ function invokeResponsiveMenuEBI() {
     bodyData.foundationExtendEBI = bodyData.foundationExtendEBI || 'document';
     if (bodyData.foundationExtendEBI === 'true') bodyData.foundationExtendEBI = 'document';
     $(bodyData.foundationExtendEBI).foundationExtendEBI();
+  }
+  if (bodyData.addExternal) {
+    addBlankTargetToExternalLinkEBI();
+    addExternalToBlankWindowLinksEBI();
   }
 
 }(jQuery));
