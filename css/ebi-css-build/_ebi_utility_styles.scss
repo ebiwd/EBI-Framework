@@ -1,4 +1,8 @@
 @mixin ebi-utility-styles {
+  .title-cap { text-transform: capitalize; }
+  .uppercase { text-transform: uppercase; }
+  .lowercase { text-transform: lowercase; }
+
   .serif { font-family: $body-font-family-serif;  font-size: 1.1rem; }
   .sans-serif { font-family: $body-font-family;  font-size: 1.1rem; }
   .serif .sans-serif { font-size: 1rem; } // reset font size when nesting
