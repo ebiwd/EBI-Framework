@@ -966,6 +966,14 @@ code {
     color: #666;
     margin-bottom: .5rem; }
 
+a.external:after {
+  content: " x";
+  font-family: "EBI-Generic";
+  font-size: .65rem;
+  position: relative;
+  top: -1px;
+  margin-left: .4rem; }
+
 a.read-more,
 a.readmore,
 a.more {
