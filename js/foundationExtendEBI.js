@@ -73,6 +73,22 @@ function analyticsTrackInteraction(actedOnItem, parentContainer, customEventName
   }
 } // END analyticsTrackInteraction
 
+// Programatically open external links in new tabs, and add '.external'
+function addBlankTargetToExternalLinkEBI(parent) {
+  (function($) {
+    var parent = parent || '#content';
+    $(parent + ' a').filter(function() {
+       return this.hostname && this.hostname !== location.hostname;
+    }).attr('target','_blank');
+  }(jQuery));
+}
+function addExternalToBlankWindowLinksEBI(parent) {
+  (function($) {
+    var parent = parent || '#content';
+    $(parent + ' a[target="_blank"]').addClass('external');
+  }(jQuery));
+}
+
 // initialise the tracking of various areas
 function ebiGaInit() {
   // Only track these areas
@@ -393,18 +409,6 @@ function invokeResponsiveMenuEBI() {
       };
     });
 
-  }
-
-  // Programatically open external links in new tabs, and add '.external'
-  function addBlankTargetToExternalLinkEBI(parent) {
-    var parent = parent || '#content';
-    $(parent + ' a').filter(function() {
-       return this.hostname && this.hostname !== location.hostname;
-    }).attr('target','_blank');
-  }
-  function addExternalToBlankWindowLinksEBI(parent) {
-    var parent = parent || '#content';
-    $(parent + ' a[target="_blank"]').addClass('external');
   }
 
   /* Allow invokation of of foundation and foundationExtendEBI with data attributes
