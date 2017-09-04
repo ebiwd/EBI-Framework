@@ -421,10 +421,10 @@
 				e.stopPropagation();
 				ts.applyWidgetId( this, id );
 			})
-			.bind( 'applyWidgets' + namespace, function( e, init ) {
+			.bind( 'applyWidgets' + namespace, function( e, callback ) {
 				e.stopPropagation();
-				// apply widgets
-				ts.applyWidget( this, init );
+				// apply widgets (false = not initializing)
+				ts.applyWidget( this, false, callback );
 			})
 			.bind( 'refreshWidgets' + namespace, function( e, all, dontapply ) {
 				e.stopPropagation();
@@ -2130,6 +2130,7 @@
 					c.widgetInit[ name[ index ] ] = false;
 				}
 			}
+			c.$table.triggerHandler( 'widgetRemoveEnd', table );
 		},
 
 		refreshWidgets : function( table, doAll, dontapply ) {
