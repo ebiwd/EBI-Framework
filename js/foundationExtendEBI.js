@@ -1,45 +1,73 @@
-/* Copyright (c) EMBL-EBI 2017
-   Authors:
-   Ken Hawkins (khawkins@ebi.ac.uk)
-*/
+// Copyright (c) EMBL-EBI 2017
+// Authors:
+// - Ken Hawkins (khawkins@ebi.ac.uk)
+// Documentation generated with: https://github.com/documentationjs/documentation#documentation
 
-// Analytics tracking
-// This code tracks the user's clicks in various parts of the EBI site and logs them as GA events.
-// Links in non-generic regions can be tracked by adding '.track-with-analytics-events' to a parent div. Careful with the scoping.
-//
-// Dev note:
-// add class verbose-analytics to your body for a readout to console on clicks, ala:
-// jQuery('body').addClass('verbose-analytics');
-// -------------
-var numberOfEbiGaChecks = 0;
-var numberOfEbiGaChecksLimit = 2;
-var lastGaEventTime = Date.now(); // track the last time an event was send (don't double send)
-function ebiGaCheck() {
-  numberOfEbiGaChecks++;
-  try {
-    if (ga && ga.loaded) {
-      jQuery('body').addClass('google-analytics-loaded'); // Confirm GA is loaded, add a class if found
-      ebiGaInit();
-    } else {
+
+/**
+ * We poll the document until we find GA has loaded, or we've tried a few times.
+ * @param {number} [numberOfEbiGaChecks=counter]
+ * @param {number} [numberOfEbiGaChecksLimit=2]
+ */
+function ebiGaIndicateLoaded(numberOfEbiGaChecks, numberOfEbiGaChecksLimit) {
+  function ebiGaCheck() {
+    numberOfEbiGaChecks++;
+    try {
+      /**
+       * If successful we append `.google-analytics-loaded` to the `body` tag.
+       */
+      if (ga && ga.loaded) {
+        jQuery('body').addClass('google-analytics-loaded'); // Confirm GA is loaded, add a class if found
+        ebiGaInit();
+      } else {
+        if (numberOfEbiGaChecks <= numberOfEbiGaChecksLimit) {
+          setTimeout(ebiGaCheck, 900); // give a second check if GA was slow to load
+        }
+      }
+    } catch (err) {
       if (numberOfEbiGaChecks <= numberOfEbiGaChecksLimit) {
         setTimeout(ebiGaCheck, 900); // give a second check if GA was slow to load
       }
     }
-  } catch (err) {
-    if (numberOfEbiGaChecks <= numberOfEbiGaChecksLimit) {
-      setTimeout(ebiGaCheck, 900); // give a second check if GA was slow to load
-    }
   }
+  ebiGaCheck(); // invoke analytics check
 }
-ebiGaCheck(); // invoke analytics check
+ebiGaIndicateLoaded(0,2);
 
-// Utility method
+/**
+ * Utility method to get the last in an array
+ * @returns {var} the last item in the array
+ * @example linkName = jQuery(actedOnItem).attr('src').split('/').last();
+ */
 if (!Array.prototype.last){
   Array.prototype.last = function(){
     return this[this.length - 1];
   };
 };
 
+/**
+ * Track the last time an event was sent (don't double send)
+ * @param {Date} lastGaEventTime
+ */
+var lastGaEventTime = Date.now();
+
+/**
+ * Analytics tracking
+ * ---
+ * This code tracks the user's clicks in various parts of the EBI site and logs them as GA events.<br/>
+ * Links in non-generic regions can be tracked by adding '.track-with-analytics-events' to a parent div. Careful with the scoping.
+ *
+ * Dev note:
+ * add class verbose-analytics to your body for a readout to console on clicks, a la: <br/>
+ * `jQuery('body').addClass('verbose-analytics');`
+ * @param {element} actedOnItem
+ * @param {string} [parentContainer=Event group]
+ * @param {string} [customEventName=Event action]
+ * @example
+ * jQuery("body.google-analytics-loaded .analytics-content-footer").on('mousedown', 'a, button', function(e) {
+ *   analyticsTrackInteraction(e.target,'Content footer');
+ * });
+ */
 function analyticsTrackInteraction(actedOnItem, parentContainer, customEventName) {
   var customEventName = customEventName || []; // you can pass some custom text as a 3rd param
 
@@ -58,7 +86,7 @@ function analyticsTrackInteraction(actedOnItem, parentContainer, customEventName
   }
 
   // send to GA
-  // Only if more than 100ms has past since last click.
+  // Only if more than 100ms has past since last click.<br/>
   // Due to our structure, we fire multiple events, so we only send to GA the most specific event resolution
   if ((Date.now() - lastGaEventTime) > 150) {
     ga && ga('send', 'event', 'UI', 'UI Element / ' + parentContainer, linkName);
@@ -73,28 +101,14 @@ function analyticsTrackInteraction(actedOnItem, parentContainer, customEventName
   }
 } // END analyticsTrackInteraction
 
-// Programatically open external links in new tabs, and add '.external'
-function addBlankTargetToExternalLinkEBI(parent) {
-  (function($) {
-    var parent = parent || '#content';
-    $(parent + ' a').filter(function() {
-       return this.hostname && this.hostname !== location.hostname;
-    }).attr('target','_blank');
-  }(jQuery));
-}
-function addExternalToBlankWindowLinksEBI(parent) {
-  (function($) {
-    var parent = parent || '#content';
-    $(parent + ' a[target="_blank"]').addClass('external');
-  }(jQuery));
-}
-
-// initialise the tracking of various areas
+/**
+ * If GA is found, we initialise the tracking of various default areas
+ * Note
+ * ----
+ * This could be done more efficently with a general capture of links,
+ * but we're running against the page's unload -- so speed over elegance.
+ */
 function ebiGaInit() {
-  // Only track these areas
-  // This could be done more efficently with a general capture of links,
-  // but we're running against the page's unload -- so speed over elegance.
-
   // Order these by specificity -- only the first invoked will be sent to GA
   jQuery("body.google-analytics-loaded .track-with-analytics-events a").on('mousedown', function(e) {
     analyticsTrackInteraction(e.target,'Manually tracked area');
@@ -179,13 +193,41 @@ function ebiGaInit() {
   }
 } // END ebiGaInit
 
+/**
+ * Programatically open external links in new tabs
+ * @param {element} [parent=scope]
+ */
+function addBlankTargetToExternalLinkEBI(parent) {
+  (function($) {
+    var parent = parent || '#content';
+    $(parent + ' a').filter(function() {
+       return this.hostname && this.hostname !== location.hostname;
+    }).attr('target','_blank');
+  }(jQuery));
+}
+
+/**
+ * Programatically add '.external' to external links
+ * @param {element} [parent=scope]
+ */
+function addExternalToBlankWindowLinksEBI(parent) {
+  (function($) {
+    var parent = parent || '#content';
+    $(parent + ' a[target="_blank"]').addClass('external');
+  }(jQuery));
+}
+
+
 // Foundation specific extensions of functionality
 // -------------
 
-// Activate EMBL dropdown menu
-// -------------
-// Note: the menu content has already been added in script.js
-// if you pass options as 'reInit', it will destory any existing menu and add a new one
+/**
+ * Activate EMBL dropdown menu
+ * ---
+ * Note: the menu content has already been added in `script.js` <br/>
+ * If you pass options as 'reInit', it will destory any existing menu and add a new one.
+ * @param {string} [options=reInit]
+ */
 function activateEMBLdropdown(options) {
   (function($) {
     var options = options || '',
@@ -217,8 +259,9 @@ function activateEMBLdropdown(options) {
   }(jQuery));
 } // END activateEMBLdropdown
 
-// Smooth scroll anchor links for jQuery users
-// -------------
+/**
+ * Smooth scroll anchor links for jQuery users
+ */
 function smoothScrollAnchorLinksEBI() {
   (function($) {
     $('a[href*=\\#]:not([href=\\#])').on('click', function() {
@@ -244,8 +287,9 @@ function smoothScrollAnchorLinksEBI() {
   }(jQuery));
 } // END smoothScrollAnchorLinksEBI
 
-// Respond the local nav to browser window width
-// -----------
+/**
+ * Make the local nav menu responsive to the browser window width
+ */
 function invokeResponsiveMenuEBI() {
   (function($) {
     // Create a dynamic height for the menu bar when stuck
@@ -356,7 +400,9 @@ function invokeResponsiveMenuEBI() {
   }(jQuery));
 } // END invokeResponsiveMenuEBI
 
-// Default invokation of foundationExtendEBI
+/**
+ * Default invokation of foundationExtendEBI
+ */
 (function($) {
   // Clearable text inputs
   // via: http://stackoverflow.com/questions/6258521/clear-icon-inside-input-text
@@ -411,27 +457,37 @@ function invokeResponsiveMenuEBI() {
 
   }
 
-  /* Allow invokation of of foundation and foundationExtendEBI with data attributes
-
-    <body data-foundationInvoke="document" data-foundationExtendEBI="document">
-
-    This saves the need of placing the below on your page:
-    <script type="text/JavaScript">$(document).foundation();</script>
-    <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
-
-    Background: https://github.com/ebiwd/EBI-Framework/issues/77
-  */
+  /**
+   * Allow invokation of Foundation and foundationExtendEBI with data attributes
+   * ---
+   * This saves the need of placing the below on your page:<br/>
+   * `<script type="text/JavaScript">$(document).foundation();</script>`<br/>
+   * `<script type="text/JavaScript">$(document).foundationExtendEBI();</script>`<br/>
+   * Background: https://github.com/ebiwd/EBI-Framework/issues/77
+   */
   var bodyData = $('body').data();
+  /**
+   * @example
+   * <body data-foundationInvoke="document>
+   */
   if (bodyData.foundationInvoke) {
     bodyData.foundationInvoke = bodyData.foundationInvoke || 'document';
     if (bodyData.foundationInvoke === 'true') bodyData.foundationInvoke = 'document';
     $(bodyData.foundationInvoke).foundation();
   }
+  /**
+   * @example
+   * <body data-foundationExtendEBI="document">
+   */
   if (bodyData.foundationExtendEBI) {
     bodyData.foundationExtendEBI = bodyData.foundationExtendEBI || 'document';
     if (bodyData.foundationExtendEBI === 'true') bodyData.foundationExtendEBI = 'document';
     $(bodyData.foundationExtendEBI).foundationExtendEBI();
   }
+  /**
+   * @example
+   * <body data-addExternal="true">
+   */
   if (bodyData.addExternal) {
     addBlankTargetToExternalLinkEBI();
     addExternalToBlankWindowLinksEBI();
