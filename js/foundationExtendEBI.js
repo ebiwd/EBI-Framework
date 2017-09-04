@@ -6,7 +6,7 @@
 
 /**
  * We poll the document until we find GA has loaded, or we've tried a few times.
- * @param {number} [numberOfEbiGaChecks=counter]
+ * @param {number} numberOfEbiGaChecks counter
  * @param {number} [numberOfEbiGaChecksLimit=2]
  */
 function ebiGaIndicateLoaded(numberOfEbiGaChecks, numberOfEbiGaChecksLimit) {
@@ -61,8 +61,8 @@ var lastGaEventTime = Date.now();
  * add class verbose-analytics to your body for a readout to console on clicks, a la: <br/>
  * `jQuery('body').addClass('verbose-analytics');`
  * @param {element} actedOnItem
- * @param {string} [parentContainer=Event group]
- * @param {string} [customEventName=Event action]
+ * @param {string} parentContainer Event group
+ * @param {string} customEventName Event action
  * @example
  * jQuery("body.google-analytics-loaded .analytics-content-footer").on('mousedown', 'a, button', function(e) {
  *   analyticsTrackInteraction(e.target,'Content footer');
@@ -195,7 +195,7 @@ function ebiGaInit() {
 
 /**
  * Programatically open external links in new tabs
- * @param {element} [parent=scope]
+ * @param {element} parent scope
  */
 function addBlankTargetToExternalLinkEBI(parent) {
   (function($) {
@@ -208,7 +208,7 @@ function addBlankTargetToExternalLinkEBI(parent) {
 
 /**
  * Programatically add '.external' to external links
- * @param {element} [parent=scope]
+ * @param {element} parent scope
  */
 function addExternalToBlankWindowLinksEBI(parent) {
   (function($) {
@@ -226,7 +226,7 @@ function addExternalToBlankWindowLinksEBI(parent) {
  * ---
  * Note: the menu content has already been added in `script.js` <br/>
  * If you pass options as 'reInit', it will destory any existing menu and add a new one.
- * @param {string} [options=reInit]
+ * @param {string} options reInit
  */
 function activateEMBLdropdown(options) {
   (function($) {
@@ -468,7 +468,7 @@ function invokeResponsiveMenuEBI() {
   var bodyData = $('body').data();
   /**
    * @example
-   * <body data-foundationInvoke="document>
+   * <body data-foundationInvoke="document">
    */
   if (bodyData.foundationInvoke) {
     bodyData.foundationInvoke = bodyData.foundationInvoke || 'document';

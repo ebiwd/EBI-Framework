@@ -1,6 +1,9 @@
+/**
+ * Remove global-nav/global-nav-expanded from header/footer if body.no-global-nav is set
+ */
 function ebiFrameworkHideGlobalNav() {
-  // Remove global-nav/global-nav-expanded from header/footer
-  // if body.no-global-nav is set
+  //
+  //
   try {
     var hasGlobalMasthead = document.getElementById('masthead-black-bar') !== null;
     var disabled = document.body.className.indexOf('no-global-nav') !== -1;
@@ -18,8 +21,10 @@ function ebiFrameworkHideGlobalNav() {
   catch (err) {}
 }
 
+/**
+ * Assign global nav background images through meta tags
+ */
 function ebiFrameworkAssignImageByMetaTags() {
-  // Assign global nav background images through meta tags
   var masthead = document.getElementById('masthead');
   // check for both ebi: and ebi- formatted meta tags
   var mastheadColor = document.querySelector("meta[name='ebi:masthead-color']") || document.querySelector("meta[name='ebi-masthead-color']");
@@ -35,8 +40,10 @@ function ebiFrameworkAssignImageByMetaTags() {
   }
 }
 
+/**
+ * Insert EMBL dropdown menu into `#masthead-black-bar`
+ */
 function ebiFrameworkInsertEMBLdropdown() {
-  // Insert EMBL dropdown menu
   try {
     // remove any current dropdown
     if ((elem=document.getElementById('embl-dropdown')) !== null) {
@@ -79,6 +86,9 @@ function ebiFrameworkInsertEMBLdropdown() {
   catch(err) {};
 }
 
+/**
+ * Insert EBI Footer into `#global-nav-expanded`
+ */
 function ebiFrameworkUpdateFoot() {
   var html = '<div class="columns small-6 medium-2 ">' +
     '<a href="//www.ebi.ac.uk" title="EMBL-EBI"><span class="ebi-logo"></span></a>'  +
@@ -108,6 +118,9 @@ function ebiFrameworkUpdateFoot() {
   init();
 }
 
+/**
+ * Insert footer meta info into `#ebi-footer-meta`
+ */
 function ebiFrameworkUpdateFooterMeta() {
   var d = new Date();
   var html = '<div class="columns">' +

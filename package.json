@@ -37,7 +37,7 @@
     "tablesorter": "wget https://github.com/Mottie/tablesorter/archive/master.zip -d ./libraries/tablesorter.zip && extract-zip ./libraries/tablesorter.zip ./libraries/ && del ./libraries/tablesorter && mve ./libraries/tablesorter-master ./libraries/tablesorter && del ./libraries/tablesorter.zip",
     "foundation-update": "npm install foundation-sites && echo \"Latest version of foundation downloaded, you'll need to run 'npm run scss' and 'npm run js' to build\"",
     "motion-ui-update": "wget https://github.com/zurb/motion-ui/archive/v1.2.2.zip -d ./libraries/motion-ui.zip && del ./libraries/motion-ui && extract-zip ./libraries/motion-ui.zip ./libraries/motion-ui/ && del ./libraries/motion-ui.zip && echo \"Copying Motion UI files one level up as they've moved...\" && ncp ./libraries/motion-ui/motion-ui-1.2.2/ ./libraries/motion-ui/ && del ./libraries/motion-ui/motion-ui-master/ && echo \"Latest version of Motion UI downloaded, you'll need to run 'npm run scss' to build\"",
-    "documentation": "./node_modules/documentation/bin/documentation.js build ./js/** -f html -o docs -g && echo \"Updated JS docs.\"",
+    "documentation": " ./node_modules/documentation/bin/documentation.js build ./js/** -f md -o js/documenation.md -g && echo \"Updated JS docs.\"",
     "message_finished": "echo \"All done\""
   },
   "description": "Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).",

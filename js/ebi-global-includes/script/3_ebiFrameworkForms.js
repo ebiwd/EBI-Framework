@@ -1,6 +1,8 @@
+/**
+ * Disable the global search if a page defines a local search.<br/>
+ * Can also be disabled by adding class 'no-global-search' to the body element.
+ */
 function ebiFrameworkManageGlobalSearch() {
-  // Disable the global search if a page defines a local search.
-  // Can also be disable by adding class 'no-global-search' to the body element.
   try {
     var hasLocalSearch = document.getElementById('local-search') !== null;
     var hasLocalEBISearch = document.getElementById('ebi_search') !== null;
@@ -31,9 +33,11 @@ function ebiFrameworkManageGlobalSearch() {
   catch (err) {}
 }
 
+/**
+ * Add error alerts for 'no input' on search boxes.<br/>
+ * Todo: this, perhaps, shoule be moved to a value-add script file
+ */
 function ebiFrameworkSearchNullError() {
-  // Add error alerts for 'no input' on search boxes.
-  // Todo: this, perhaps, shoule be moved to a value-add script file
   try {
     var disabled = document.body.className.indexOf('no-search-error') !== -1;
     // Array of search box definition objects, specify inputNode, defaultText (optional, default ''), errorText (optional, default 'Please enter a search term')

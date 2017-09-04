@@ -1,3 +1,6 @@
+/**
+ * Insert and show the cookie banner.
+ */
 function ebiFrameworkCookieBanner() {
   function setCookie(c_name, value, exdays) {
     var exdate = new Date();
