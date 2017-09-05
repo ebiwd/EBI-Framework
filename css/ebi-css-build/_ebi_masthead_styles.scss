@@ -40,6 +40,8 @@
   }
 
   .masthead-black-bar {
+    background-color: $ebi-colour-dark;
+
     a,
     a:hover,
     ul.menu li a:hover,
@@ -131,7 +133,7 @@
 
     // masthead dropdwon styles
     .dropdown-pane {
-      background-color: #333;
+      background-color: $ebi-colour-dark;
       background-position: 100% 100%;
       background-repeat: no-repeat;
       color: #fff;
@@ -268,7 +270,7 @@
     h1,
     #local-title p,
     #local-title a {
-      color: #222;
+      color: $ebi-colour-dark;
     }
   }
   body.section-home .masthead {
