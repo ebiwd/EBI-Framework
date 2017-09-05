@@ -217,6 +217,8 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead-black-bar ul.menu li.active a,
   .masthead-black-bar ul.menu li.active-trail a {
     background: black; }
+  .masthead-black-bar ul li a:before {
+    display: inline-block; }
   .masthead-black-bar ul li.home a:before {
     font-family: 'EBI-Generic';
     content: 'H '; }
