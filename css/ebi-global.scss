@@ -216,6 +216,10 @@ a:active {
       background: rgb(0,0,0);
     }
 
+    ul li a:before {
+      display: inline-block; // safari 9 & 10 fix
+    }
+
     /* custom colour for Home */
     ul li.home a:before {
       font-family: 'EBI-Generic';
