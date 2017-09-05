@@ -61,6 +61,7 @@
     ul {
       li a:before {
         font-family: 'EBI-Generic';
+        display: inline-block; // safari 9 & 10 fix
       }
 
       // custom colour for Home
