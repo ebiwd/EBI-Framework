@@ -218,38 +218,39 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead-black-bar ul.menu li.active-trail a {
     background: black; }
   .masthead-black-bar ul li a:before {
-    display: inline-block; }
+    display: inline-block;
+    padding-right: .4rem; }
   .masthead-black-bar ul li.home a:before {
     font-family: 'EBI-Generic';
-    content: 'H '; }
+    content: 'H'; }
   .masthead-black-bar ul li.home a:hover,
   .masthead-black-bar ul li.home a:active,
   .masthead-black-bar ul li.home a:focus {
     background-color: #007c82; }
   .masthead-black-bar ul li.services a:before {
     font-family: 'EBI-Generic';
-    content: '( '; }
+    content: '('; }
   .masthead-black-bar ul li.services a:hover,
   .masthead-black-bar ul li.services a:active,
   .masthead-black-bar ul li.services a:focus {
     background-color: #389198; }
   .masthead-black-bar ul li.research a:before {
     font-family: 'EBI-Generic';
-    content: ') '; }
+    content: ')'; }
   .masthead-black-bar ul li.research a:hover,
   .masthead-black-bar ul li.research a:active,
   .masthead-black-bar ul li.research a:focus {
     background-color: #6dab49; }
   .masthead-black-bar ul li.training a:before {
     font-family: 'EBI-Generic';
-    content: 't '; }
+    content: 't'; }
   .masthead-black-bar ul li.training a:hover,
   .masthead-black-bar ul li.training a:active,
   .masthead-black-bar ul li.training a:focus {
     background-color: #e9b400; }
   .masthead-black-bar ul li.about a:before {
     font-family: 'EBI-Generic';
-    content: 'i '; }
+    content: 'i'; }
   .masthead-black-bar ul li.about a:hover,
   .masthead-black-bar ul li.about a:active,
   .masthead-black-bar ul li.about a:focus,
