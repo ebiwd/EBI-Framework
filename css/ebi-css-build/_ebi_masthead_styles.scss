@@ -58,77 +58,88 @@
       background: rgb(0,0,0);
     }
 
-    // custom colour for Home
-    ul li.home a:before {
-      font-family: 'EBI-Generic';
-      content: 'H ';
-    }
-    ul li.home a:hover,
-    ul li.home a:active,
-    ul li.home a:focus {
-      background-color: $ebi-colour-petrol;
-    }
+    ul {
+      li a:before {
+        font-family: 'EBI-Generic';
+      }
 
-    // custom colour for Services
-    ul li.services a:before {
-      font-family: 'EBI-Generic';
-      content: '( ';
-    }
-    ul li.services a:hover,
-    ul li.services a:active,
-    ul li.services a:focus {
-      background-color: $ebi-colour-services;
-    }
+      // custom colour for Home
+      li.home {
+        a:before {
+          content: 'H ';
+        }
+        a:hover,
+        a:active,
+        a:focus {
+          background-color: $ebi-colour-petrol;
+        }
+      }
 
-    // custom colour for Research
-    ul li.research a:before {
-      font-family: 'EBI-Generic';
-      content: ') ';
-    }
-    ul li.research a:hover,
-    ul li.research a:active,
-    ul li.research a:focus {
-      background-color: $ebi-colour-light-green;
-    }
+      // custom colour for Services
+      li.services {
+        a:before {
+          content: '( ';
+        }
+        a:hover,
+        a:active,
+        a:focus {
+          background-color: $ebi-colour-services;
+        }
+      }
 
-    // custom colour for Training
-    ul li.training a:before {
-      font-family: 'EBI-Generic';
-      content: 't ';
-    }
-    ul li.training a:hover,
-    ul li.training a:active,
-    ul li.training a:focus {
-      background-color: $ebi-colour-training;
-    }
+      // custom colour for Research
+      li.research {
+        a:before {
+          content: ') ';
+        }
+        a:hover,
+        a:active,
+        a:focus {
+          background-color: $ebi-colour-light-green;
+        }
+      }
 
-    // custom colour for about us
-    ul li.about a:before {
-      font-family: 'EBI-Generic';
-      content: 'i ';
-    }
-    ul li.about a:hover,
-    ul li.about a:active,
-    ul li.about a:focus,
-    ul li.about-us a:hover,
-    ul li.about-us a:active,
-    ul li.about-us a:focus {
-      background-color: $ebi-colour-services;
-    }
+      // custom colour for Training
+      li.training {
+        a:before {
+          content: 't ';
+        }
+        a:hover,
+        a:active,
+        a:focus {
+          background-color: $ebi-colour-training;
+        }
+      }
 
-    // custom icon for search
-    ul li.search a:before {
-      font-family: 'EBI-Functional';
-      content: '1';
-    }
+      // custom colour for about us
+      li.about {
+        a:before {
+          content: 'i ';
+        }
+      }
+      li.about a:hover,
+      li.about a:active,
+      li.about a:focus,
+      li.about-us a:hover,
+      li.about-us a:active,
+      li.about-us a:focus {
+        background-color: $ebi-colour-services;
+      }
 
-    ul li.search .dropdown-pane {
-      width: 100%;
-      left: 0;
-      background: $ebi-colour-dark;
-      border: none;
-      margin-top: -2px;
-      color: #fff;
+      // custom icon for search
+      li.search a:before {
+        font-family: 'EBI-Functional';
+        content: '1';
+      }
+
+      li.search .dropdown-pane {
+        width: 100%;
+        left: 0;
+        background: $ebi-colour-dark;
+        border: none;
+        margin-top: -2px;
+        color: #fff;
+      }
     }
 
     // masthead dropdwon styles
