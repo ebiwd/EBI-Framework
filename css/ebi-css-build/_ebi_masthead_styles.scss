@@ -62,12 +62,13 @@
       li a:before {
         font-family: 'EBI-Generic';
         display: inline-block; // safari 9 & 10 fix
+        padding-right: .4rem;
       }
 
       // custom colour for Home
       li.home {
         a:before {
-          content: 'H ';
+          content: 'H';
         }
         a:hover,
         a:active,
@@ -79,7 +80,7 @@
       // custom colour for Services
       li.services {
         a:before {
-          content: '( ';
+          content: '(';
         }
         a:hover,
         a:active,
@@ -91,7 +92,7 @@
       // custom colour for Research
       li.research {
         a:before {
-          content: ') ';
+          content: ')';
         }
         a:hover,
         a:active,
@@ -103,7 +104,7 @@
       // custom colour for Training
       li.training {
         a:before {
-          content: 't ';
+          content: 't';
         }
         a:hover,
         a:active,
@@ -115,7 +116,7 @@
       // custom colour for about us
       li.about {
         a:before {
-          content: 'i ';
+          content: 'i';
         }
       }
       li.about a:hover,
