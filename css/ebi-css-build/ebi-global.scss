@@ -304,7 +304,15 @@
   // mono-space fonts are fat
   code { font-size: .95rem; }
 
-  // buttons
+  // Button
+  //
+  // Your standard button suitable for clicking.
+  //
+  // :hover   - Highlights when hovering.
+  //
+  // Markup: documentation/button.html
+  //
+  // Style guide: components.button
   .button:focus,
   .button:hover,
   .button.hover { opacity: .8;}
