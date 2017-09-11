@@ -10,9 +10,10 @@
 @import 'ebi_color_styles';
 @import 'ebi_clearable_inputs';
 @import 'embl_selector'; // EMBL Dropdown selector for .masthead-black-bar
+@import 'https://code.cdn.mozilla.net/fonts/fira.css';
 
 @mixin ebi-base-styles {
-  body h1, body h2, body h3 { font-weight: 300; }
+  body h1, body h2, body h3, body h4, body h5 { font-weight: 600; }
 
   li { word-wrap: break-word; }
 
@@ -114,7 +115,7 @@
 
   // Breadcrumbs
   .breadcrumbs { padding-top: 0.5rem; }
-  body .breadcrumbs a { color: #888; }
+  body .breadcrumbs a { color: $medium-gray; border-bottom: none; }
 
   @include ebi-code-styles;
 
