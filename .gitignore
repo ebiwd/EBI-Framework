@@ -1,6 +1,5 @@
 node_modules
 .DS_store
-_site
 npm-debug.log
 
 # Ignore all of foundation contrib but a few custom things
@@ -18,3 +17,8 @@ libraries/motion-ui
 libraries/tablesorter
 !libraries/tablesorter/js
 !libraries/tablesorter/css
+
+# Jekull stuff
+_site/
+.sass-cache/
+.jekyll-metadata

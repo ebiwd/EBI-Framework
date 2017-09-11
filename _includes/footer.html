@@ -1,0 +1,50 @@
+<footer>
+  <div id="global-footer" class="global-footer">
+    <nav id="global-nav-expanded" class="global-nav-expanded row">
+      <!-- Footer will be automatically inserted by footer.js -->
+    </nav>
+    <section id="ebi-footer-meta" class="ebi-footer-meta row">
+      <!-- Footer meta will be automatically inserted by footer.js -->
+    </section>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<!--
+<script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- Your custom JavaScript file scan go here... change names accordingly -->
+<!-- <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/script.js"></script> -->
+<script defer="defer" src="js/script.js"></script>
+
+<!-- The Foundation theme JavaScript -->
+<script src="libraries/foundation-6/js/foundation.js"></script>
+<script src="js/foundationExtendEBI.js"></script>
+<!-- <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/js/foundation.js"></script> -->
+<!-- <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/foundationExtendEBI.js"></script> -->
+<script type="text/JavaScript">$(document).foundation();</script>
+<script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+{% comment %} Custom global JS could go here: {% endcomment %}
+{% for js in site.custom_js %}
+<script src="{{js}}"></script>
+{% endfor %}
+
+{% comment %} Custom Component Scripts (from individual .md files) go here: {% endcomment %}
+{% for js in page.javascript %}
+<script src="{{js}}"></script>
+{% endfor %}
+
+<!-- Google Analytics details... -->
+<!-- Change UA-XXXXX-X to be your site's ID -->
+<!--
+<script>
+  window._gaq = [['_setAccount','{{site.ga_code}}'],['_trackPageview'],['_trackPageLoadTime']];
+  Modernizr.load({
+    load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+  });
+</script>
+-->

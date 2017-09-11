@@ -1,0 +1,5 @@
+<ul class="posts">
+  {% for update in site.posts %}
+    <li><span>{{ update.date | date_to_string }}</span> » <a href="{{site.baseurl}}/{{ update.url }}" title="{{ update.title }}">{{ update.title }}</a></li>
+  {% endfor %}
+</ul>
