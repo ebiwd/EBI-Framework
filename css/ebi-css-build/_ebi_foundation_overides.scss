@@ -1,3 +1,6 @@
+// Correct dropdown colour
+$dropdown-menu-item-color-active: $ebi-colour-dark;
+
 // Generates base styles for a tag.
 @mixin ebi-foundation-overides {
   // Resolve display of native dropdowns in FF and Safari
