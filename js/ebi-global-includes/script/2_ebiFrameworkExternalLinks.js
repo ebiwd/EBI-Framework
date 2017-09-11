@@ -1,5 +1,7 @@
+/**
+ * Mark pdf/doc/txt links with link-pdf/link-doc/link-txt classes.
+ */
 function ebiFrameworkExternalLinks() {
-  // mark pdf/doc/txt links with link-pdf/link-doc/link-txt classes
   // exclude links with images
   // include only links to own domains
   function isOwnDomain(url) {
@@ -31,4 +33,3 @@ function ebiFrameworkExternalLinks() {
   }
   catch(err) {}
 }
-
