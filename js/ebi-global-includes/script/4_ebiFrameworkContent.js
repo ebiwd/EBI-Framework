@@ -1,9 +1,21 @@
 /**
+ * Utility function to toggle classes. Chiefly to show the #embl-bar.
+ */
+function ebiToggleClass(element, toggleClass){
+   var currentClass = element.className;
+   var newClass;
+   if(currentClass.split(" ").indexOf(toggleClass) > -1){ // has class
+      newClass = currentClass.replace(new RegExp('\\b'+toggleClass+'\\b','g'),"")
+   } else{
+      newClass = currentClass + " " + toggleClass;
+   }
+   element.className = newClass.trim();
+}
+
+/**
  * Remove global-nav/global-nav-expanded from header/footer if body.no-global-nav is set
  */
 function ebiFrameworkHideGlobalNav() {
-  //
-  //
   try {
     var hasGlobalMasthead = document.getElementById('masthead-black-bar') !== null;
     var disabled = document.body.className.indexOf('no-global-nav') !== -1;
