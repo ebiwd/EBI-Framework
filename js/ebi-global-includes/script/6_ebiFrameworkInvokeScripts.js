@@ -5,6 +5,7 @@
  * <body data-ebiFrameworkInvokeScripts="false">
  */
 function ebiFrameworkInvokeScripts() {
+  ebiFrameworkPopulateBlackBar();
   ebiFrameworkExternalLinks();
   ebiFrameworkManageGlobalSearch();
   ebiFrameworkSearchNullError();

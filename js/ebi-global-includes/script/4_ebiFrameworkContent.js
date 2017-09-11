@@ -53,6 +53,46 @@ function ebiFrameworkAssignImageByMetaTags() {
 }
 
 /**
+ * Populate `#masthead-black-bar`
+ */
+function ebiFrameworkPopulateBlackBar() {
+  try {
+    // Clear any existing black bar contents
+    if ((elem=document.getElementById('masthead-black-bar')) !== null) {
+      document.getElementById('masthead-black-bar').innerHTML = "&nbsp;";
+    }
+
+    var barContents = document.createElement("div");
+    barContents.innerHTML = '<nav class="row">'+
+      '<ul id="global-nav" class="menu global-nav text-right">'+
+        '<li class="home-mobile"><a href="//www.ebi.ac.uk"></a></li>'+
+        '<li class="location embl hide"><a href="http://www.embl.org">EMBL</a></li>'+
+        '<li class="location ebi hide"><a href="//www.ebi.ac.uk">EBI</a></li>'+
+        '<li class="location barcelona hide"><a href="#">Barcelona</a></li>'+
+        '<li class="location hamburg hide"><a href="#">Hamburg</a></li>'+
+        '<li class="location grenoble hide"><a href="#">Heidelberg</a></li>'+
+        '<li class="location grenoble hide"><a href="#">Grenoble</a></li>'+
+        '<li class="location rome hide"><a href="#">Rome</a></li>'+
+        '<li class="float-right show-for-medium embl-selector">'+
+          '<button class="button float-right">&nbsp;</button>'+
+        '</li>'+
+        '<li class="float-right search">'+
+          '<a href="#" data-toggle="search-global-dropdown"><span class="show-for-small-only">Search</span></a>'+
+          '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
+          '</div>'+
+        '</li>'+
+        '<li class="about"><a href="//www.ebi.ac.uk/about">About us</a></li>'+
+        '<li class="training"><a href="//www.ebi.ac.uk/training">Training</a></li>'+
+        '<li class="research"><a href="//www.ebi.ac.uk/research">Research</a></li>'+
+        '<li class="services"><a href="//www.ebi.ac.uk/services">Services</a></li>'+
+      '</ul>'+
+    '</nav>';
+    document.getElementById("masthead-black-bar").insertBefore(barContents,document.getElementById("masthead-black-bar").firstChild);
+  }
+  catch(err) {};
+}
+
+/**
  * Insert EMBL dropdown menu into `#masthead-black-bar`
  */
 function ebiFrameworkInsertEMBLdropdown() {
