@@ -18,6 +18,7 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
+@import 'https://code.cdn.mozilla.net/fonts/fira.css';
 @media print, screen and (min-width: 40em) {
   .reveal, .reveal.tiny, .reveal.small, .reveal.large {
     right: auto;
@@ -986,7 +987,7 @@ a.button:hover, a.button:focus {
 
 .dropdown.menu .is-active > a {
   background: transparent;
-  color: #1779ba; }
+  color: #222; }
 
 .no-js .dropdown.menu ul {
   display: none; }
