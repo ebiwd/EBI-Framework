@@ -46,16 +46,61 @@
       color: white;
     }
 
-    ul.menu li.active a,
-    ul.menu li.active-trail a {
-      background: rgb(0,0,0);
-    }
+    // EMBL Selector dropdown
+    @include embl-selector;
 
-    ul {
-      li a:before {
-        font-family: 'EBI-Generic';
-        display: inline-block; // safari 9 & 10 fix
-        padding-right: .4rem;
+    .global-nav {
+      a,
+      a:hover {
+        color: white;
+        border-bottom: none;
+      }
+
+      li a:hover,
+      li a:active,
+      li a:focus,
+      li.active a,
+      li.active-trail a {
+        color: white;
+        border-bottom: none;
+        background: rgb(0,0,0);
+      }
+
+      li {
+        a:before {
+          font-family: 'EBI-Generic';
+          display: inline-block; // safari 9 & 10 fix
+          padding-right: .4rem;
+        }
+        // a:hover,
+        // a:active,
+        // a:focus {
+        //   background-color: #000;
+        // }
+      }
+
+      li.home,
+      li.services,
+      li.research,
+      li.training,
+      li.about,
+      li.grenoble,
+      li.ebi,
+      li.hamburg,
+      li.heidelberg,
+      li.rome,
+      li.barcelona {
+        float: right;
+
+        &.active {
+          float: left;
+        }
+      }
+
+      li.location {
+        a:before {
+          content: '[';
+        }
       }
 
       // custom colour for Home
@@ -136,24 +181,8 @@
         margin-top: -2px;
         color: #fff;
       }
+
     }
-
-    // masthead dropdwon styles
-    .dropdown-pane {
-      background-color: $ebi-colour-dark;
-      background-position: 100% 100%;
-      background-repeat: no-repeat;
-      color: #fff;
-      padding-right: 17rem;
-      min-width: 39.9375em;
-      left: 0; //fix position of menu, to prevent horizontal scrolling of page
-
-      h6 { color: white; font-weight: 700; }
-      .button { color: #007c82; background: #fff; }
-    }
-
-    // EMBL Selector dropdown
-    @include embl-selector;
 
   }
 

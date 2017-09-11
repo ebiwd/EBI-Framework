@@ -6,13 +6,44 @@
 
 /// Classses to theme the embl dropdown selector for the .masthead-black-bar
 @mixin embl-selector {
+  li.embl-selector {
+    margin-left: 0.5rem;
+  }
+
+  .embl-bar {
+    height: 0; overflow: hidden;
+    display: none;
+    background-color: #000;
+    // color: #fff;
+    a {
+      // color: #fff;
+      // border-bottom: 1px dashed #fff;
+    }
+    a:hover { border-bottom: 1px solid #fff; }
+    .youarehere {
+      margin-left: -1.5rem;
+    }
+  }
+
+  .embl-bar.active {
+    display: block;
+    height: auto; overflow: visible;
+  }
+
   .dropdown-pane.embl-dropdown {
-    background-image: url('../images/map.png');
-    height: 21rem;
+    left: 0; //fix position of menu, to prevent horizontal scrolling of page
+
+    background-color: $ebi-colour-dark;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    min-width: 30em;
     left: 0; //fix position of menu, to prevent horizontal scrolling of page
 
     h6 { color: white; font-weight: 700; }
     .button { color: #007c82; background: #fff; }
+    a { border-bottom: 1px dashed $ebi-colour-dark-grey; }
+    a:hover { border-bottom: 1px solid $ebi-colour-dark-grey; }
   }
   @media screen and (max-width: 39.9375em) {
     .dropdown-pane.embl-dropdown {
@@ -23,16 +54,29 @@
     }
   }
 
-  .embl-selector {
+  .embl-selector.embl-ebi {
     .button,
     .button.hover,
     .button:focus,
     .button:hover {
       background: no-repeat 4px 50% url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
-      padding-left: 108px;
+      padding-left: 95px;
       background-size: 100px;
+    }
+  }
+
+  .embl-selector {
+    .button,
+    .button.hover,
+    .button:focus,
+    .button:hover {
+      background: no-repeat 100% 50% url(https://embl-design-language.github.io/Framework-for-Websites/assets/logos/EMBL-white.svg);
+      padding-left: 2px;
+      background-size: 62px;
+      // background: no-repeat 4px 50% url("https://embl-design-language.github.io/Framework-for-Websites/assets/logos/EMBL-white.svg");
+      // padding-left: 58px;
+      // background-size: 72px;
       padding-right: 17px;
-      height: 37px;
       line-height: 12px;
     }
     .button.hover,
