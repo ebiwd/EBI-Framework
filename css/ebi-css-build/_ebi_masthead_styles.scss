@@ -3,15 +3,13 @@
   // Generic rules for global and local mastheads
 
   // GLOBAL MASTHEAD
-  #local-title a,
-  nav a,
-  nav a:hover { border-bottom: none; }
+  #local-title a { border-bottom: none; }
 
   .masthead {
     // underline links in the textual area of the local masthead
     #local-title .columns {
       a { border-bottom: 1px dotted rgb(255,255,255); }
-      a.button { border-bottom: none; }
+      a.button,
       a:hover { border-bottom: none; }
     }
   }
@@ -42,15 +40,10 @@
   .masthead-black-bar {
     background-color: $ebi-colour-dark;
 
+    &,
     a,
-    a:hover,
-    ul.menu li a:hover,
-    ul.menu li a:active,
-    ul.menu li a:focus,
-    ul.menu li.active a,
-    ul.menu li.active-trail a {
+    a:hover {
       color: white;
-      border-bottom: none;
     }
 
     ul.menu li.active a,
@@ -215,6 +208,9 @@
     p,
     a, a:hover, a:active, a:visited {
       color: #fff;
+    }
+    ul li a {
+      border-bottom: 0;
     }
     ul li.is-active a,
     ul li a:hover,

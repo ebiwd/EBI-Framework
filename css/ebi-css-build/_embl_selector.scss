@@ -36,7 +36,7 @@
       line-height: 12px;
     }
     .button.hover,
-    .button:hover { background-color: #888; }
+    .button:hover { background-color: transparent; }
     .button[aria-expanded="false"]::after {
       content: '';
       display: block;
