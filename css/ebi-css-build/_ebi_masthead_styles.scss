@@ -66,7 +66,7 @@
         a:hover,
         a:active,
         a:focus {
-          background-color: $ebi-colour-petrol;
+          // background-color: $ebi-colour-petrol;
         }
       }
 
@@ -78,7 +78,7 @@
         a:hover,
         a:active,
         a:focus {
-          background-color: $ebi-colour-services;
+          // background-color: $ebi-colour-services;
         }
       }
 
@@ -90,7 +90,7 @@
         a:hover,
         a:active,
         a:focus {
-          background-color: $ebi-colour-light-green;
+          // background-color: $ebi-colour-light-green;
         }
       }
 
@@ -102,7 +102,7 @@
         a:hover,
         a:active,
         a:focus {
-          background-color: $ebi-colour-training;
+          // background-color: $ebi-colour-training;
         }
       }
 
@@ -118,13 +118,14 @@
       li.about-us a:hover,
       li.about-us a:active,
       li.about-us a:focus {
-        background-color: $ebi-colour-services;
+        // background-color: $ebi-colour-services;
       }
 
       // custom icon for search
       li.search a:before {
         font-family: 'EBI-Functional';
         content: '1';
+        padding-right: 0;
       }
 
       li.search .dropdown-pane {
