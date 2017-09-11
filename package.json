@@ -24,7 +24,7 @@
     "foundation-scss-lite": "node-sass ./css/ebi-css-build/foundation/_settings-lite.scss ./css/ebi-lite.css && csso ./css/ebi-lite.css --output ./css/ebi-lite.min.css",
     "foundation-scss-extras": "node-sass ./css/ebi-css-build/foundation/_settings-extras.scss ./css/ebi-extras.css && csso ./css/ebi-extras.css --output ./css/ebi-extras.min.css",
     "choices-scss": "node-sass ./libraries/Choices/assets/styles/scss/choices.scss ./libraries/Choices/assets/styles/css/choices.css && csso ./libraries/Choices/assets/styles/css/choices.css --output ./libraries/Choices/assets/styles/css/choices.min.css",
-    "ebi-js": "concat-cli -f js/ebi-css-build/script/*.js -o js/script.js",
+    "ebi-js": "concat-cli -f js/ebi-global-includes/script/*.js -o js/script.js",
     "js": "npm run foundation-js && npm run ebi-js && npm run documentation",
     "foundation-js": "cpx './node_modules/foundation-sites/js/*.js' ./libraries/foundation-6/js",
     "//@30": [
