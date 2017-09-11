@@ -26,7 +26,27 @@
   // no margins
   .no-margin { margin: 0; }
   // no underline for links
-  .no-underline a, a.no-underline { border-bottom: none; text-decoration: none; }
+  .no-underline a,
+  a.no-underline {
+    border-bottom: none;
+    text-decoration: none;
+
+    a.underline,
+    .underline {
+      border-bottom-width: 1px;
+      border-bottom-style: dotted;
+      border-bottom-color: inherit;
+    }
+  }
+  .no-underline a:hover,
+  a.no-underline:hover {
+    a.underline,
+    .underline {
+      border-bottom-width: 0;
+      border-bottom-style: none;
+      border-bottom-color: transparent;
+    }
+  }
 
   // custom spacing
   .margin-top-none { margin-top: 0; }

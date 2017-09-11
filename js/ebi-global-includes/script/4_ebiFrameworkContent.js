@@ -63,37 +63,59 @@ function ebiFrameworkInsertEMBLdropdown() {
     }
 
     var dropdownDiv = document.createElement("div");
-    dropdownDiv.innerHTML = '<div id="embl-dropdown" class="embl-dropdown dropdown-pane bottom" data-dropdown>' +
-              '<p>EMBL-EBI in Hinxton, Cambridge is one of <br/>six EMBL locations across europe.<br/> <a href="//www.ebi.ac.uk/about" class="small readmore">More about EMBL-EBI</a></p>' +
-              '<h6>Connect to another EMBL location</h6>' +
-              '<div class="small-collapse padding-bottom-large clearfix">' +
-                '<div class="columns small-5 padding-bottom-medium">' +
-                  '<a href="http://www.embl.de/">Heidelberg</a>' +
-                  '<div class="small">Main laboratory</div>' +
-                '</div>' +
-                '<div class="columns small-7 padding-bottom-medium">' +
-                  '<a href="http://www.embl-barcelona.es/">Barcelona</a>' +
-                  '<div class="small">Tissue biology and disease modelling</div>' +
-                '</div>' +
-                '<div class="columns small-5 padding-bottom-medium">' +
-                  '<a href="http://www.embl.fr/">Grenoble</a>' +
-                  '<div class="small">Structural biology</div>' +
-                '</div>' +
-                '<div class="columns small-7 padding-bottom-medium">' +
-                  '<a href="http://www.embl-hamburg.de/">Hamburg</a>' +
-                  '<div class="small">Structural biology</div>' +
-                '</div>' +
-                '<div class="columns small-5 padding-bottom-medium">' +
-                  '<a href="http://www.embl.it/">Rome</a>' +
-                  '<div class="small">Epigenetics and neurobiology</div>' +
-                '</div>' +
-                '<div class="columns small-7 padding-bottom-medium">' +
-                  '<a href="http://embl.org/" class="readmore">More about EMBL</a>' +
-                '</div>' +
-              '</div>' +
-            '</div>';
-    document.getElementById("masthead-black-bar").appendChild(dropdownDiv);
-    // We don't invoke the dropdown here, as that method depends on how you're using the Framework
+    dropdownDiv.innerHTML = '<nav id="embl-bar" class="embl-bar">'+
+      '<div class="row padding-bottom-medium">'+
+        '<div class="columns padding-top-medium">'+
+          '<button class="close-button" aria-label="Close alert" type="button"><span aria-hidden="true">×</span></button>'+
+        '</div>'+
+        '<div class="columns medium-8">'+
+          '<div class="large-8 medium-12">'+
+            '<p><h3 class="inline white-color">EMBL</h3> was founded in 1974 by its member states to promote the molecular life sciences in Europe and beyond.</p>'+
+          '</div>'+
+          '<div class="row large-up-5 medium-up-3 small-up-2 no-underline">'+
+            '<div class="column"><a class="" href="#research"><h5 class="inline white-color underline">Research</h5> the molecular basis of life</a></div>'+
+            '<div class="column"><a class="" href="#"><h5 class="inline white-color underline">Services</h5> and infrastructure for research</a></div>'+
+            '<div class="column"><a class="" href="#"><h5 class="inline white-color underline">Training</h5> and inspiring scientists</a></div>'+
+            '<div class="column"><a class="" href="#"><h5 class="inline white-color underline">Transfer</h5> and deverlopment of technology</a></div>'+
+            '<div class="column"><a class="" href="#"><h5 class="inline white-color underline">Integrating</h5> life science research in Europe</a></div>'+
+          '</div>'+
+          '<div class="margin-top-xlarge no-underline">'+
+            '<h3><a href="//embl.org" class="readmore">More about EMBL</a></h3>'+
+          '</div>'+
+        '</div>'+
+        '<div class="columns medium-4">'+
+          '<div class="large-10 medium-12">'+
+            '<p><h3 class="inline white-color">Six locations</h3> represent EMBL across Europe, each has its own focus.</p>'+
+          '</div>'+
+          '<div class="row large-up-3 medium-up-2 small-up-2">'+
+            '<div class="column"><h5><a href="//www.embl-barcelona.es/">Barcelona</a></h5><p class="small">Tissue biology and disease modelling</p></div>'+
+            '<div class="column"><h5><a href="//www.embl.fr/">Grenoble</a></h5><p class="small">Structural biology</p></div>'+
+            '<div class="column"><h5><a href="//www.embl-hamburg.de/">Hamburg</a></h5><p class="small">Structural biology</p></div>'+
+            '<div class="column"><h5><a href="//www.embl.de/">Heidelberg</a></h5><p class="small">Main laboratory</p></div>'+
+            '<div class="column">'+
+              '<h5><a href="//www.ebi.ac.uk/">Hinxton</a></h5>'+
+              '<span class="tag "><i class="icon icon-generic" data-icon="["></i> you are here</span>'+
+              '<p class="small margin-bottom-none">Bioinformatiocs at the EBI</p>'+
+            '</div>'+
+            '<div class="column"><h5><a href="//www.embl.it/">Rome</a></h5><p class="small">Epigenetics and neurobiology</p></div>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+    '</nav>';
+    document.getElementById("masthead-black-bar").insertBefore(dropdownDiv,document.getElementById("masthead-black-bar").firstChild);
+
+    // toggle the .embl-bar
+    var emblBar = document.querySelectorAll(".embl-bar")[0];
+    var emblSelector = document.querySelectorAll(".embl-selector")[0].addEventListener("click", function( event ) {
+      ebiToggleClass(emblBar,'active');
+      window.scrollTo(0, 0);
+    }, false);
+
+    var emblSelectorClose = document.querySelectorAll(".embl-bar .close-button")[0].addEventListener("click", function( event ) {
+      ebiToggleClass(emblBar,'active');
+      window.scrollTo(0, 0);
+    }, false);
+
   }
   catch(err) {};
 }
