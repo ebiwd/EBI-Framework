@@ -33,9 +33,9 @@
 
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="css/ebi-global.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/ebi-global.min.css" type="text/css" media="all" />
   <!-- <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" media="all"> -->
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all">
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="none" onload="if(media!=='all')media='all'">
 
   <!-- Use this CSS file for any custom styling -->
   <!--
@@ -54,7 +54,7 @@
 
     <!-- you can replace this with theme-[projectname].css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
   <!-- also inform ES so we can host your colour palette file -->
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-embl-petrol.css" type="text/css" media="all">
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-embl-petrol.css" type="text/css" media="none" onload="if(media!=='all')media='all'">
 
   <!-- for production the above can be replaced with -->
   <!--
