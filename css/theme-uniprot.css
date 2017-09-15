@@ -1,0 +1,59 @@
+/*
+	Colour palette: EMBL-EBI [project name] [main colour]
+  Save as theme-[projectname].css
+*/
+
+a {
+  color: #00709b;
+}
+
+dl dt a,
+a.label,
+.label,
+a:hover,
+a:focus,
+a:active {
+  color: #004965;
+}
+
+h1 { color: #b9772e; }
+h2 { color: #b9772e; }
+h3 { color: #b9772e; }
+
+a.special { background-color: #7cd17c; }
+
+.menu .active > a,
+.tag,
+.tabs-title > a:hover,
+.button,
+.button.primary {
+  padding: 2px 5px;
+  background-color: #cfe8ef;
+  background-image: -webkit-linear-gradient(top,#cfe8ef,#9acedd);
+  background-image: -moz-linear-gradient(top,#cfe8ef,#9acedd);
+  background-image: linear-gradient(top,#cfe8ef,#9acedd);
+  border: 1px solid #5caecd;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+
+a.tag:hover { color: #fff; }
+
+.tabs-title > a:hover,
+.button.primary:hover,
+.button.primary:focus {
+  color: #999;
+  border: 1px solid #ccc;
+}
+
+
+.tabs-title > a:focus,
+.tabs-title > a[aria-selected='true'] {
+  color: #000;
+  background: #87c1d9; }
+
+.masthead { background-color: #58ADCD; }
+
+/* end */
