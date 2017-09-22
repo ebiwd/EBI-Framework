@@ -23,7 +23,7 @@ h3 { color: #b9772e; }
 a.special { background-color: #7cd17c; }
 
 .tag,
-.tabs-title > a:hover,{
+.tabs-title > a:hover {
   padding: 2px 5px;
   background-color: #cfe8ef;
   background-image: -webkit-linear-gradient(top,#cfe8ef,#9acedd);
