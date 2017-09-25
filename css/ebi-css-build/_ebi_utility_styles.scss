@@ -104,4 +104,10 @@
   .padding-bottom-medium { padding-bottom: .5rem; }
   .padding-bottom-large { padding-bottom: 1rem; }
   .padding-bottom-xlarge { padding-bottom: 2rem; }
+
+  // Utility classes to size fonts
+  // Issue: https://github.com/ebiwd/EBI-Framework/issues/113
+  @for $i from 0 through 20 {
+    .size-#{$i*25} { font-size: 25%*$i; }
+  }
 }
