@@ -1112,3 +1112,10 @@ dl dt {
   a { border-bottom: none; color: $ebi-colour-dark-grey; }
   a:hover { border-bottom: 1px dotted; }
 }
+
+// Utility classes to size fonts
+// Issue: https://github.com/ebiwd/EBI-Framework/issues/113
+@for $i from 0 through 20 {
+  .size-#{$i*25} { font-size: 25%*$i; }
+}
+
