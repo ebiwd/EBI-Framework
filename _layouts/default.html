@@ -9,7 +9,7 @@
           <div class="masthead-inner row">
             <!-- local-title -->
             <div class="columns medium-7" id="local-title">
-              <h1><a href="{{ site.domain }}{{ site.baseurl }}" title="Back to {{ site.name }} homepage">{{ site.name }}</a></h1>
+              <h1><a href="{{ site.domain }}{{ site.baseurl }}" title="Back to {{ site.name }} homepage">{{ page.active_facet }}</a></h1>
             </div>
             <!-- /local-title -->
             <!-- local-nav -->
@@ -47,7 +47,7 @@
         </nav>
         -->
         <div class="medium-9 columns padding-top-large">
-        {{ content }}
+{{ content | markdownify}}
         </div>
         <div class="medium-3 columns sidebar" data-sticky-container>
         </div>

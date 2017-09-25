@@ -8,15 +8,18 @@
 @mixin embl-selector {
   li.embl-selector {
     margin-left: 0.5rem;
+    border-left: .5px solid rgba(255,255,255,.5);
+    padding-left: 1.5rem;
   }
 
   .embl-bar {
     height: 0; overflow: hidden;
     display: none;
-    background-color: #000;
+    background-color: #eee;
+    color: #222;
     // color: #fff;
     a {
-      // color: #fff;
+      color: #222;
       // border-bottom: 1px dashed #fff;
     }
     a:hover { border-bottom: 1px solid #fff; }

@@ -6,6 +6,7 @@
  */
 function ebiFrameworkInvokeScripts() {
   ebiFrameworkPopulateBlackBar();
+  ebiFrameworkActivateBlackBar();
   ebiFrameworkExternalLinks();
   ebiFrameworkManageGlobalSearch();
   ebiFrameworkSearchNullError();

@@ -6,6 +6,11 @@
   #local-title a { border-bottom: none; }
 
   .masthead {
+
+    // h1 {
+      // font-weight: 400;
+      // letter-spacing: -2px; // fira kerning on light fonts and default sizes sucks :(
+    // }
     // underline links in the textual area of the local masthead
     #local-title .columns {
       a { border-bottom: 1px dotted rgb(255,255,255); }
@@ -21,21 +26,21 @@
   body.no-global-search .masthead-black-bar ul#global-nav.menu li.search { display: none; }
 
   // Mobile logo
-  @media screen and (max-width: 40em) {
-    nav ul#global-nav.menu li.home { display: none; }
-    nav ul#global-nav.menu li.home-mobile a {
-      display: block;
-      height: 50px;
-      width: 67px;
-      background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
-      background-size: 64px 47px;
-      background-repeat: no-repeat;
-      margin-left: 6px;
-    }
-  }
-  @media screen and (min-width: 40em) {
-    nav ul#global-nav.menu li.home-mobile { display: none; }
-  }
+  // @media screen and (max-width: 40em) {
+    // nav ul#global-nav.menu li.home { display: none; }
+    // nav ul#global-nav.menu li.home-mobile a {
+    //   display: block;
+    //   height: 50px;
+    //   width: 67px;
+    //   background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
+    //   background-size: 64px 47px;
+    //   background-repeat: no-repeat;
+    //   margin-left: 6px;
+    // }
+  // }
+  // @media screen and (min-width: 40em) {
+  //   nav ul#global-nav.menu li.home-mobile { display: none; }
+  // }
 
   .masthead-black-bar {
     background-color: $ebi-colour-dark;
@@ -61,9 +66,15 @@
       li a:focus,
       li.active a,
       li.active-trail a {
-        color: white;
+        color: #fff;
         border-bottom: none;
-        background: rgb(0,0,0);
+        background-color: #000;
+        // margin-left: 3px;
+        // position: relative;
+        // top: -3px;
+      }
+      li.active a {
+        font-weight: 700;
       }
 
       li {
@@ -84,20 +95,38 @@
       li.research,
       li.training,
       li.about,
-      li.grenoble,
+      li.embl,
       li.ebi,
+      li.grenoble,
       li.hamburg,
       li.heidelberg,
+      li.hinxton,
       li.rome,
       li.barcelona {
         float: right;
 
+        &.hover {
+          float: none;
+        }
         &.active {
           float: left;
         }
       }
 
-      li.location {
+      li.embl,
+      li.ebi,
+      li.grenoble,
+      li.hamburg,
+      li.heidelberg,
+      li.hinxton,
+      li.rome,
+      li.barcelona {
+        &.hover a:before {
+          content: "" !important;
+        }
+      }
+
+      li.where {
         a:before {
           content: '[';
         }
@@ -202,7 +231,6 @@
       text-align: right;
 
       li { float: none; display: inline-block; }
-      li.home-mobile { float: left; }
 
       // make icon bar smaller for mobile
       > li > a > img,
