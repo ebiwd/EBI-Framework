@@ -579,12 +579,21 @@ a:active {
       background: no-repeat 4px 50% url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
       padding-left: 108px;
       background-size: 100px;
-      padding-right: 17px;
       height: 37px;
       line-height: 12px;
     }
     .button.hover,
     .button:hover { background-color: #888; }
+  }
+
+  // begin to hide bits of dropdown toggle as screen shrinks
+  @media screen and (max-width: 53em) {
+    .embl-selector .button { width: 0px; padding-right:0; overflow: hidden;}
+    .embl-selector .button:after { display: none; }
+    .masthead-black-bar nav ul.menu li a { padding-right: .5rem; padding-left: .5rem;}
+  }
+  @media screen and (min-width: 53.01em) {
+    // create triangle on larger screens
     .button[aria-expanded="false"]::after {
       content: '';
       display: block;
@@ -597,12 +606,15 @@ a:active {
       top: 18px;
       margin-left: 55px;
     }
-  }
-  // begin to hide bits of dropdown toggle as screen shrinks
-  @media screen and (max-width: 53em) {
-    .embl-selector .button { width: 0px; padding-right:0; overflow: hidden;}
-    .embl-selector .button:after { display: none; }
-    .masthead-black-bar nav ul.menu li a { padding-right: .5rem; padding-left: .5rem;}
+    .embl-selector {
+      .button,
+      .button.hover,
+      .button:focus,
+      .button:hover {
+        padding-right: 17px;
+      }
+    }
+  
   }
 
 
