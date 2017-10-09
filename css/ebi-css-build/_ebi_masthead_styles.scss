@@ -114,7 +114,7 @@
       }
 
       li.embl,
-      li.ebi,
+      // li.ebi,
       li.grenoble,
       li.hamburg,
       li.heidelberg,
@@ -133,7 +133,8 @@
       }
 
       // custom colour for Home
-      li.home {
+      li.home,
+      li.ebi {
         a:before {
           content: 'H';
         }

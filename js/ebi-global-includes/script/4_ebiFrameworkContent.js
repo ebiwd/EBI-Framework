@@ -67,7 +67,6 @@ function ebiFrameworkPopulateBlackBar() {
       '<ul id="global-nav" class="menu global-nav text-right">'+
         '<li class="home-mobile"><a href="//www.ebi.ac.uk"></a></li>'+
         '<li class="location embl hide"><a href="http://www.embl.org">EMBL</a></li>'+
-        '<li class="location ebi hide"><a href="//www.ebi.ac.uk">EBI</a></li>'+
         '<li class="location barcelona hide"><a href="#">Barcelona</a></li>'+
         '<li class="location hamburg hide"><a href="#">Hamburg</a></li>'+
         '<li class="location grenoble hide"><a href="#">Heidelberg</a></li>'+
@@ -85,6 +84,7 @@ function ebiFrameworkPopulateBlackBar() {
         '<li class="what training"><a href="//www.ebi.ac.uk/training">Training</a></li>'+
         '<li class="what research"><a href="//www.ebi.ac.uk/research">Research</a></li>'+
         '<li class="what services"><a href="//www.ebi.ac.uk/services">Services</a></li>'+
+        '<li class="location ebi"><a href="https://www.ebi.ac.uk">EMBL-EBI</a></li>'+
         // '<li class="float-right embl-selector">'+
         //   '<a class="button float-right">&nbsp;</a>'+
         // '</li>'+
@@ -158,12 +158,12 @@ function ebiFrameworkInsertEMBLdropdown() {
           '<div class="large-8 medium-12">'+
             '<p><h3 class="inline">EMBL</h3> was founded in 1974 by its member states to promote the molecular life sciences in Europe and beyond.</p>'+
           '</div>'+
-          '<div class="row large-up-5 medium-up-3 small-up-2 no-underline">'+
-            '<div class="column"><a class="" href="#research"><h5 class="inline underline">Research</h5> the molecular basis of life</a></div>'+
-            '<div class="column"><a class="" href="#"><h5 class="inline underline">Services</h5> and infrastructure for research</a></div>'+
-            '<div class="column"><a class="" href="#"><h5 class="inline underline">Training</h5> and inspiring scientists</a></div>'+
-            '<div class="column"><a class="" href="#"><h5 class="inline underline">Transfer</h5> and deverlopment of technology</a></div>'+
-            '<div class="column"><a class="" href="#"><h5 class="inline underline">Integrating</h5> life science research in Europe</a></div>'+
+          '<div class="row large-up-3 medium-up-3 small-up-2 no-underline medium-11">'+
+            '<div class="column padding-bottom-medium"><a class="" href="#research"><h5 class="inline underline">Research</h5> the molecular basis of life</a></div>'+
+            '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Services</h5> and infrastructure for research</a></div>'+
+            '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Training</h5> and inspiring scientists</a></div>'+
+            '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Transfer</h5> and deverlopment of technology</a></div>'+
+            '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Integrating</h5> life science research in Europe</a></div>'+
           '</div>'+
           '<div class="margin-top-xlarge no-underline">'+
             '<h3><a href="//embl.org" class="readmore">More about EMBL</a></h3>'+
