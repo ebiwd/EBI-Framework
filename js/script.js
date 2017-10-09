@@ -227,15 +227,61 @@ function ebiFrameworkPopulateBlackBar() {
           '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
           '</div>'+
         '</li>'+
-        '<li class="about"><a href="//www.ebi.ac.uk/about">About us</a></li>'+
-        '<li class="training"><a href="//www.ebi.ac.uk/training">Training</a></li>'+
-        '<li class="research"><a href="//www.ebi.ac.uk/research">Research</a></li>'+
-        '<li class="services"><a href="//www.ebi.ac.uk/services">Services</a></li>'+
+        '<li class="what about"><a href="//www.ebi.ac.uk/about">About us</a></li>'+
+        '<li class="what training"><a href="//www.ebi.ac.uk/training">Training</a></li>'+
+        '<li class="what research"><a href="//www.ebi.ac.uk/research">Research</a></li>'+
+        '<li class="what services"><a href="//www.ebi.ac.uk/services">Services</a></li>'+
+        // '<li class="float-right embl-selector">'+
+        //   '<a class="button float-right">&nbsp;</a>'+
+        // '</li>'+
+        // '<li class="what mission hide"><a href="//www.embl.org">More mission areas:</a></li>'+
       '</ul>'+
     '</nav>';
     document.getElementById("masthead-black-bar").insertBefore(barContents,document.getElementById("masthead-black-bar").firstChild);
   }
   catch(err) {};
+}
+
+/**
+ * Active tabs in `#masthead-black-bar` accoriding to metadata
+ */
+function ebiFrameworkActivateBlackBar() {
+  // Look at the embl:facet-* meta tags to set active states
+  //   <meta name="embl:facet-who"   content="primary" data-tag="Sample group" />
+  //   <meta name="embl:facet-what"  content="parent"  data-tag="Research" />
+  //   <meta name="embl:facet-where" content="parent"  data-tag="EBI" />
+  try {
+
+    function ebiGetFacet(passedAttribute){
+      var tag = "#masthead-black-bar ." + passedAttribute.toLowerCase();
+      return document.querySelectorAll(tag)[0];
+    }
+    var metas = document.getElementsByTagName('meta');
+    for (var i = 0; i < metas.length; i++) {
+      if (metas[i].getAttribute("name") == "embl:facet-who") {
+        if (metas[i].getAttribute("content").toLowerCase() == "parent") {
+          var targetFacet = ebiGetFacet(metas[i].getAttribute("data-tag"));
+          // todo: insert this as a new facet, i think?
+        }
+      }
+      if (metas[i].getAttribute("name") == "embl:facet-what") {
+        if (metas[i].getAttribute("content").toLowerCase() == "parent") {
+          var targetFacet = ebiGetFacet(metas[i].getAttribute("data-tag"));
+          ebiToggleClass(targetFacet,'active');
+        }
+      }
+      if (metas[i].getAttribute("name") == "embl:facet-where") {
+        if (metas[i].getAttribute("content").toLowerCase() == "parent") {
+          var targetFacet = ebiGetFacet(metas[i].getAttribute("data-tag"));
+          ebiToggleClass(targetFacet,'active');
+          ebiToggleClass(targetFacet,'hide'); // as we hide these by default
+        }
+      }
+    }
+
+  }
+  catch(err) {};
+
 }
 
 /**
@@ -256,14 +302,14 @@ function ebiFrameworkInsertEMBLdropdown() {
         '</div>'+
         '<div class="columns medium-8">'+
           '<div class="large-8 medium-12">'+
-            '<p><h3 class="inline white-color">EMBL</h3> was founded in 1974 by its member states to promote the molecular life sciences in Europe and beyond.</p>'+
+            '<p><h3 class="inline">EMBL</h3> was founded in 1974 by its member states to promote the molecular life sciences in Europe and beyond.</p>'+
           '</div>'+
           '<div class="row large-up-5 medium-up-3 small-up-2 no-underline">'+
-            '<div class="column"><a class="" href="#research"><h5 class="inline white-color underline">Research</h5> the molecular basis of life</a></div>'+
-            '<div class="column"><a class="" href="#"><h5 class="inline white-color underline">Services</h5> and infrastructure for research</a></div>'+
-            '<div class="column"><a class="" href="#"><h5 class="inline white-color underline">Training</h5> and inspiring scientists</a></div>'+
-            '<div class="column"><a class="" href="#"><h5 class="inline white-color underline">Transfer</h5> and deverlopment of technology</a></div>'+
-            '<div class="column"><a class="" href="#"><h5 class="inline white-color underline">Integrating</h5> life science research in Europe</a></div>'+
+            '<div class="column"><a class="" href="#research"><h5 class="inline underline">Research</h5> the molecular basis of life</a></div>'+
+            '<div class="column"><a class="" href="#"><h5 class="inline underline">Services</h5> and infrastructure for research</a></div>'+
+            '<div class="column"><a class="" href="#"><h5 class="inline underline">Training</h5> and inspiring scientists</a></div>'+
+            '<div class="column"><a class="" href="#"><h5 class="inline underline">Transfer</h5> and deverlopment of technology</a></div>'+
+            '<div class="column"><a class="" href="#"><h5 class="inline underline">Integrating</h5> life science research in Europe</a></div>'+
           '</div>'+
           '<div class="margin-top-xlarge no-underline">'+
             '<h3><a href="//embl.org" class="readmore">More about EMBL</a></h3>'+
@@ -271,7 +317,7 @@ function ebiFrameworkInsertEMBLdropdown() {
         '</div>'+
         '<div class="columns medium-4">'+
           '<div class="large-10 medium-12">'+
-            '<p><h3 class="inline white-color">Six locations</h3> represent EMBL across Europe, each has its own focus.</p>'+
+            '<p><h3 class="inline">Six locations</h3> represent EMBL across Europe, each has its own focus.</p>'+
           '</div>'+
           '<div class="row large-up-3 medium-up-2 small-up-2">'+
             '<div class="column"><h5><a href="//www.embl-barcelona.es/">Barcelona</a></h5><p class="small">Tissue biology and disease modelling</p></div>'+
@@ -301,6 +347,37 @@ function ebiFrameworkInsertEMBLdropdown() {
       ebiToggleClass(emblBar,'active');
       window.scrollTo(0, 0);
     }, false);
+
+
+    // we do this bit with jquery to prototype, would need ro rewire as vanilla JS..
+    // we do this bit with jquery to prototype, would need ro rewire as vanilla JS..
+    $('#masthead-black-bar .where.active').on('mouseover', function() {
+      emblResetContext(); // clear any other states
+      $('#masthead-black-bar .where.hide').addClass('hover').removeClass('hide');
+      // $('#masthead-black-bar .where.hide').removeClass('hide').addClass('hover');
+      $('#masthead-black-bar .what').addClass('hide');
+    });
+    $('#masthead-black-bar .what.active').on('mouseover', function() {
+      emblResetContext(); // clear any other states
+      $('#masthead-black-bar .what.mission').removeClass('hide');
+      $('#masthead-black-bar .what').addClass('hover');
+    });
+
+
+    // reset when user engages with content
+    function emblResetContext() {
+      // ebiFrameworkActivateBlackBar();
+      $('#masthead-black-bar .where.hover').removeClass('hover').addClass('hide');
+      $('#masthead-black-bar .what').removeClass('hide');
+      $('#masthead-black-bar .what.mission').addClass('hide');
+      $('#masthead-black-bar .what.hover').removeClass('hover');
+
+      // reset everything on the next mouse into content
+      $('#content').one('mouseover', function() {
+        console.log('purged');
+        emblResetContext();
+      });
+    }
 
   }
   catch(err) {};
@@ -451,6 +528,7 @@ function ebiFrameworkCookieBanner() {
  */
 function ebiFrameworkInvokeScripts() {
   ebiFrameworkPopulateBlackBar();
+  ebiFrameworkActivateBlackBar();
   ebiFrameworkExternalLinks();
   ebiFrameworkManageGlobalSearch();
   ebiFrameworkSearchNullError();

@@ -4382,22 +4382,6 @@ nav ul#global-nav.menu li {
 body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   display: none; }
 
-@media screen and (max-width: 40em) {
-  nav ul#global-nav.menu li.home {
-    display: none; }
-  nav ul#global-nav.menu li.home-mobile a {
-    display: block;
-    height: 50px;
-    width: 67px;
-    background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
-    background-size: 64px 47px;
-    background-repeat: no-repeat;
-    margin-left: 6px; } }
-
-@media screen and (min-width: 40em) {
-  nav ul#global-nav.menu li.home-mobile {
-    display: none; } }
-
 .masthead-black-bar {
   background-color: #222; }
   .masthead-black-bar,
@@ -4405,12 +4389,17 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead-black-bar a:hover {
     color: white; }
   .masthead-black-bar li.embl-selector {
-    margin-left: 0.5rem; }
+    margin-left: 0.5rem;
+    border-left: 0.5px solid rgba(255, 255, 255, 0.5);
+    padding-left: 1.5rem; }
   .masthead-black-bar .embl-bar {
     height: 0;
     overflow: hidden;
     display: none;
-    background-color: #000; }
+    background-color: #eee;
+    color: #222; }
+    .masthead-black-bar .embl-bar a {
+      color: #222; }
     .masthead-black-bar .embl-bar a:hover {
       border-bottom: 1px solid #fff; }
     .masthead-black-bar .embl-bar .youarehere {
@@ -4491,9 +4480,11 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead-black-bar .global-nav li a:focus,
   .masthead-black-bar .global-nav li.active a,
   .masthead-black-bar .global-nav li.active-trail a {
-    color: white;
+    color: #fff;
     border-bottom: none;
-    background: black; }
+    background-color: #000; }
+  .masthead-black-bar .global-nav li.active a {
+    font-weight: 700; }
   .masthead-black-bar .global-nav li a:before {
     font-family: 'EBI-Generic';
     display: inline-block;
@@ -4503,26 +4494,53 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead-black-bar .global-nav li.research,
   .masthead-black-bar .global-nav li.training,
   .masthead-black-bar .global-nav li.about,
-  .masthead-black-bar .global-nav li.grenoble,
+  .masthead-black-bar .global-nav li.embl,
   .masthead-black-bar .global-nav li.ebi,
+  .masthead-black-bar .global-nav li.grenoble,
   .masthead-black-bar .global-nav li.hamburg,
   .masthead-black-bar .global-nav li.heidelberg,
+  .masthead-black-bar .global-nav li.hinxton,
   .masthead-black-bar .global-nav li.rome,
   .masthead-black-bar .global-nav li.barcelona {
     float: right; }
+    .masthead-black-bar .global-nav li.home.hover,
+    .masthead-black-bar .global-nav li.services.hover,
+    .masthead-black-bar .global-nav li.research.hover,
+    .masthead-black-bar .global-nav li.training.hover,
+    .masthead-black-bar .global-nav li.about.hover,
+    .masthead-black-bar .global-nav li.embl.hover,
+    .masthead-black-bar .global-nav li.ebi.hover,
+    .masthead-black-bar .global-nav li.grenoble.hover,
+    .masthead-black-bar .global-nav li.hamburg.hover,
+    .masthead-black-bar .global-nav li.heidelberg.hover,
+    .masthead-black-bar .global-nav li.hinxton.hover,
+    .masthead-black-bar .global-nav li.rome.hover,
+    .masthead-black-bar .global-nav li.barcelona.hover {
+      float: none; }
     .masthead-black-bar .global-nav li.home.active,
     .masthead-black-bar .global-nav li.services.active,
     .masthead-black-bar .global-nav li.research.active,
     .masthead-black-bar .global-nav li.training.active,
     .masthead-black-bar .global-nav li.about.active,
-    .masthead-black-bar .global-nav li.grenoble.active,
+    .masthead-black-bar .global-nav li.embl.active,
     .masthead-black-bar .global-nav li.ebi.active,
+    .masthead-black-bar .global-nav li.grenoble.active,
     .masthead-black-bar .global-nav li.hamburg.active,
     .masthead-black-bar .global-nav li.heidelberg.active,
+    .masthead-black-bar .global-nav li.hinxton.active,
     .masthead-black-bar .global-nav li.rome.active,
     .masthead-black-bar .global-nav li.barcelona.active {
       float: left; }
-  .masthead-black-bar .global-nav li.location a:before {
+  .masthead-black-bar .global-nav li.embl.hover a:before,
+  .masthead-black-bar .global-nav li.ebi.hover a:before,
+  .masthead-black-bar .global-nav li.grenoble.hover a:before,
+  .masthead-black-bar .global-nav li.hamburg.hover a:before,
+  .masthead-black-bar .global-nav li.heidelberg.hover a:before,
+  .masthead-black-bar .global-nav li.hinxton.hover a:before,
+  .masthead-black-bar .global-nav li.rome.hover a:before,
+  .masthead-black-bar .global-nav li.barcelona.hover a:before {
+    content: "" !important; }
+  .masthead-black-bar .global-nav li.where a:before {
     content: '['; }
   .masthead-black-bar .global-nav li.home a:before {
     content: 'H'; }
@@ -4558,8 +4576,6 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
     .masthead-black-bar nav ul.menu li {
       float: none;
       display: inline-block; }
-    .masthead-black-bar nav ul.menu li.home-mobile {
-      float: left; }
     .masthead-black-bar nav ul.menu > li > a > img,
     .masthead-black-bar nav ul.menu > li > a:before {
       display: block;
@@ -4812,7 +4828,7 @@ pre > code {
 
 .global-footer {
   border-top: 5px solid #eee;
-  padding-top: .5rem; }
+  padding-top: 1.5rem; }
   .global-footer h5 {
     margin-top: 1.25rem;
     margin-bottom: 5px; }
@@ -5312,6 +5328,69 @@ a.no-underline:hover .underline {
 
 .padding-bottom-xlarge {
   padding-bottom: 2rem; }
+
+.size-0 {
+  font-size: 0%; }
+
+.size-25 {
+  font-size: 25%; }
+
+.size-50 {
+  font-size: 50%; }
+
+.size-75 {
+  font-size: 75%; }
+
+.size-100 {
+  font-size: 100%; }
+
+.size-125 {
+  font-size: 125%; }
+
+.size-150 {
+  font-size: 150%; }
+
+.size-175 {
+  font-size: 175%; }
+
+.size-200 {
+  font-size: 200%; }
+
+.size-225 {
+  font-size: 225%; }
+
+.size-250 {
+  font-size: 250%; }
+
+.size-275 {
+  font-size: 275%; }
+
+.size-300 {
+  font-size: 300%; }
+
+.size-325 {
+  font-size: 325%; }
+
+.size-350 {
+  font-size: 350%; }
+
+.size-375 {
+  font-size: 375%; }
+
+.size-400 {
+  font-size: 400%; }
+
+.size-425 {
+  font-size: 425%; }
+
+.size-450 {
+  font-size: 450%; }
+
+.size-475 {
+  font-size: 475%; }
+
+.size-500 {
+  font-size: 500%; }
 
 /* print styles */
 @media print {
