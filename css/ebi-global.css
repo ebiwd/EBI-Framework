@@ -4462,6 +4462,14 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
     position: absolute;
     top: 18px;
     margin-left: 55px; }
+  .masthead-black-bar .embl-selector.active {
+    background-color: #ddd;
+    padding-right: 1rem; }
+    .masthead-black-bar .embl-selector.active .button,
+    .masthead-black-bar .embl-selector.active .button.hover,
+    .masthead-black-bar .embl-selector.active .button:focus,
+    .masthead-black-bar .embl-selector.active .button:hover {
+      background-image: url(https://embl-design-language.github.io/Framework-for-Websites/assets/logos/EMBL-black.svg); }
   @media screen and (max-width: 53em) {
     .masthead-black-bar .embl-selector .button {
       width: 0px;
