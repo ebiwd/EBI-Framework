@@ -598,18 +598,6 @@ pre > code {
 .embl-selector .button:hover {
   background-color: #888; }
 
-.embl-selector .button[aria-expanded="false"]::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  border: inset 4px;
-  border-color: #fff transparent transparent;
-  border-top-style: solid;
-  position: absolute;
-  top: 18px;
-  margin-left: 55px; }
-
 @media screen and (max-width: 53em) {
   .embl-selector .button {
     width: 0px;
@@ -620,6 +608,24 @@ pre > code {
   .masthead-black-bar nav ul.menu li a {
     padding-right: .5rem;
     padding-left: .5rem; } }
+
+@media screen and (min-width: 53.01em) {
+  .button[aria-expanded="false"]::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 4px;
+    border-color: #fff transparent transparent;
+    border-top-style: solid;
+    position: absolute;
+    top: 18px;
+    margin-left: 55px; }
+  .embl-selector .button,
+  .embl-selector .button.hover,
+  .embl-selector .button:focus,
+  .embl-selector .button:hover {
+    padding-right: 17px; } }
 
 /*
     LOCAL FOOTER
@@ -1265,3 +1271,66 @@ dl dt {
     color: #666; }
   dl dt a:hover {
     border-bottom: 1px dotted; }
+
+.size-0 {
+  font-size: 0%; }
+
+.size-25 {
+  font-size: 25%; }
+
+.size-50 {
+  font-size: 50%; }
+
+.size-75 {
+  font-size: 75%; }
+
+.size-100 {
+  font-size: 100%; }
+
+.size-125 {
+  font-size: 125%; }
+
+.size-150 {
+  font-size: 150%; }
+
+.size-175 {
+  font-size: 175%; }
+
+.size-200 {
+  font-size: 200%; }
+
+.size-225 {
+  font-size: 225%; }
+
+.size-250 {
+  font-size: 250%; }
+
+.size-275 {
+  font-size: 275%; }
+
+.size-300 {
+  font-size: 300%; }
+
+.size-325 {
+  font-size: 325%; }
+
+.size-350 {
+  font-size: 350%; }
+
+.size-375 {
+  font-size: 375%; }
+
+.size-400 {
+  font-size: 400%; }
+
+.size-425 {
+  font-size: 425%; }
+
+.size-450 {
+  font-size: 450%; }
+
+.size-475 {
+  font-size: 475%; }
+
+.size-500 {
+  font-size: 500%; }
