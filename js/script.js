@@ -205,7 +205,7 @@ function ebiFrameworkPopulateBlackBar() {
   try {
     // Clear any existing black bar contents
     if ((elem=document.getElementById('masthead-black-bar')) !== null) {
-      document.getElementById('masthead-black-bar').innerHTML = "&nbsp;";
+      document.getElementById('masthead-black-bar').innerHTML = "";
     }
 
     var barContents = document.createElement("div");
