@@ -98,6 +98,17 @@
       margin-left: 55px;
     }
   }
+  .embl-selector.active {
+    background-color: #ddd;
+    padding-right: 1rem;
+    .button,
+    .button.hover,
+    .button:focus,
+    .button:hover {
+      background-image: url(https://embl-design-language.github.io/Framework-for-Websites/assets/logos/EMBL-black.svg);
+    }
+  }
+
   // begin to hide bits of dropdown toggle as screen shrinks
   @media screen and (max-width: 53em) {
     .embl-selector .button { width: 0px; padding-right:0; overflow: hidden;}
