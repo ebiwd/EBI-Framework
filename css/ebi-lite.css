@@ -1343,7 +1343,7 @@ h6, .h6 {
   h5 small, .h5 small,
   h6 small, .h6 small {
     line-height: 0;
-    color: #999; }
+    color: #777; }
 
 h1, .h1 {
   font-size: 1.5rem;
@@ -1412,7 +1412,7 @@ hr {
   margin: 1.25rem auto;
   border-top: 0;
   border-right: 0;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #777;
   border-left: 0; }
 
 ul,
@@ -1445,7 +1445,7 @@ dl {
 blockquote {
   margin: 0 0 1rem;
   padding: 0.5625rem 1.25rem 0 1.1875rem;
-  border-left: 1px solid #999; }
+  border-left: 1px solid #777; }
   blockquote, blockquote p {
     line-height: 1.6;
     color: #8a8a8a; }
@@ -1467,7 +1467,7 @@ figure {
 
 code {
   padding: 0.125rem 0.3125rem 0.0625rem;
-  border: 1px solid #999;
+  border: 1px solid #777;
   background-color: #e6e6e6;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;
@@ -1612,13 +1612,13 @@ ul.no-bullet, ol.no-bullet {
       margin: 0 0.75rem;
       opacity: 1;
       content: "/";
-      color: #999; }
+      color: #777; }
   .breadcrumbs a {
     color: #007c82; }
     .breadcrumbs a:hover {
       text-decoration: underline; }
   .breadcrumbs .disabled {
-    color: #999;
+    color: #777;
     cursor: not-allowed; }
 
 .menu {
@@ -1786,7 +1786,7 @@ ul.no-bullet, ol.no-bullet {
   padding: 1rem;
   visibility: hidden;
   display: none;
-  border: 1px solid #999;
+  border: 1px solid #777;
   border-radius: 0;
   background-color: white;
   font-size: 1rem; }

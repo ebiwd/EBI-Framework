@@ -33,7 +33,7 @@ textarea {
   height: 2.4375rem;
   margin: 0 0 1rem;
   padding: 0.5rem;
-  border: 1px solid #999;
+  border: 1px solid #777;
   border-radius: 0;
   background-color: #fefefe;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
@@ -49,7 +49,7 @@ textarea {
     outline: none;
     border: 1px solid #8a8a8a;
     background-color: #fefefe;
-    box-shadow: 0 0 5px #999;
+    box-shadow: 0 0 5px #777;
     transition: box-shadow 0.5s, border-color 0.25s ease-in-out; }
 
 textarea {
@@ -59,7 +59,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  color: #999; }
+  color: #777; }
 
 input:disabled, input[readonly],
 textarea:disabled,
@@ -135,7 +135,7 @@ label {
 
 .input-group-label {
   padding: 0 1rem;
-  border: 1px solid #999;
+  border: 1px solid #777;
   background: #e6e6e6;
   color: #0a0a0a;
   text-align: center;
@@ -181,7 +181,7 @@ legend {
 .fieldset {
   margin: 1.125rem 0;
   padding: 1.25rem;
-  border: 1px solid #999; }
+  border: 1px solid #777; }
   .fieldset legend {
     margin: 0;
     margin-left: -0.1875rem;
@@ -192,7 +192,7 @@ select {
   margin: 0 0 1rem;
   padding: 0.5rem;
   appearance: none;
-  border: 1px solid #999;
+  border: 1px solid #777;
   border-radius: 0;
   background-color: #fefefe;
   font-family: inherit;
@@ -214,7 +214,7 @@ select {
     outline: none;
     border: 1px solid #8a8a8a;
     background-color: #fefefe;
-    box-shadow: 0 0 5px #999;
+    box-shadow: 0 0 5px #777;
     transition: box-shadow 0.5s, border-color 0.25s ease-in-out; }
   select:disabled {
     background-color: #e6e6e6;
@@ -283,11 +283,11 @@ select {
       background-color: #006368;
       color: #fefefe; }
   .button.secondary {
-    background-color: #999;
-    color: #0a0a0a; }
+    background-color: #777;
+    color: #fefefe; }
     .button.secondary:hover, .button.secondary:focus {
-      background-color: #7a7a7a;
-      color: #0a0a0a; }
+      background-color: #5f5f5f;
+      color: #fefefe; }
   .button.success {
     background-color: #3adb76;
     color: #0a0a0a; }
@@ -322,8 +322,8 @@ select {
       opacity: 0.25;
       cursor: not-allowed; }
       .button.disabled.secondary, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        background-color: #999;
-        color: #0a0a0a; }
+        background-color: #777;
+        color: #fefefe; }
     .button.disabled.success, .button[disabled].success {
       opacity: 0.25;
       cursor: not-allowed; }
@@ -365,14 +365,14 @@ select {
           border: 1px solid #007c82;
           color: #007c82; }
     .button.hollow.secondary {
-      border: 1px solid #999;
-      color: #999; }
+      border: 1px solid #777;
+      color: #777; }
       .button.hollow.secondary:hover, .button.hollow.secondary:focus {
-        border-color: #4d4d4d;
-        color: #4d4d4d; }
+        border-color: #3c3c3c;
+        color: #3c3c3c; }
         .button.hollow.secondary:hover.disabled, .button.hollow.secondary:hover[disabled], .button.hollow.secondary:focus.disabled, .button.hollow.secondary:focus[disabled] {
-          border: 1px solid #999;
-          color: #999; }
+          border: 1px solid #777;
+          color: #777; }
     .button.hollow.success {
       border: 1px solid #3adb76;
       color: #3adb76; }
@@ -427,14 +427,14 @@ select {
       .button.clear.primary, .button.clear.primary.disabled, .button.clear.primary[disabled], .button.clear.primary:hover, .button.clear.primary:hover.disabled, .button.clear.primary:hover[disabled], .button.clear.primary:focus, .button.clear.primary:focus.disabled, .button.clear.primary:focus[disabled] {
         border-color: transparent; }
     .button.clear.secondary {
-      border: 1px solid #999;
-      color: #999; }
+      border: 1px solid #777;
+      color: #777; }
       .button.clear.secondary:hover, .button.clear.secondary:focus {
-        border-color: #4d4d4d;
-        color: #4d4d4d; }
+        border-color: #3c3c3c;
+        color: #3c3c3c; }
         .button.clear.secondary:hover.disabled, .button.clear.secondary:hover[disabled], .button.clear.secondary:focus.disabled, .button.clear.secondary:focus[disabled] {
-          border: 1px solid #999;
-          color: #999; }
+          border: 1px solid #777;
+          color: #777; }
       .button.clear.secondary, .button.clear.secondary.disabled, .button.clear.secondary[disabled], .button.clear.secondary:hover, .button.clear.secondary:hover.disabled, .button.clear.secondary:hover[disabled], .button.clear.secondary:focus, .button.clear.secondary:focus.disabled, .button.clear.secondary:focus[disabled] {
         border-color: transparent; }
     .button.clear.success {
@@ -489,7 +489,7 @@ select {
   .button.dropdown.hollow.primary::after {
     border-top-color: #007c82; }
   .button.dropdown.hollow.secondary::after {
-    border-top-color: #999; }
+    border-top-color: #777; }
   .button.dropdown.hollow.success::after {
     border-top-color: #3adb76; }
   .button.dropdown.hollow.warning::after {
@@ -645,7 +645,7 @@ a.button:hover, a.button:focus {
   background: #007c82;
   color: #fefefe; }
   .badge.secondary {
-    background: #999;
+    background: #777;
     color: #fefefe; }
   .badge.success {
     background: #3adb76;
@@ -721,11 +721,11 @@ a.button:hover, a.button:focus {
       background-color: #006368;
       color: #fefefe; }
   .button-group.secondary .button {
-    background-color: #999;
-    color: #0a0a0a; }
+    background-color: #777;
+    color: #fefefe; }
     .button-group.secondary .button:hover, .button-group.secondary .button:focus {
-      background-color: #7a7a7a;
-      color: #0a0a0a; }
+      background-color: #5f5f5f;
+      color: #fefefe; }
   .button-group.success .button {
     background-color: #3adb76;
     color: #0a0a0a; }
@@ -779,7 +779,7 @@ a.button:hover, a.button:focus {
     background-color: #c6fcff;
     color: #222; }
   .callout.secondary {
-    background-color: #f0f0f0;
+    background-color: #ebebeb;
     color: #222; }
   .callout.success {
     background-color: #e1faea;
@@ -838,8 +838,8 @@ a.button:hover, a.button:focus {
     box-shadow: 0 7px 0 #fefefe, 0 14px 0 #fefefe;
     content: ''; }
   .menu-icon:hover::after {
-    background: #999;
-    box-shadow: 0 7px 0 #999, 0 14px 0 #999; }
+    background: #777;
+    box-shadow: 0 7px 0 #777, 0 14px 0 #777; }
 
 .menu-icon.dark {
   position: relative;
@@ -1180,7 +1180,7 @@ a.button:hover, a.button:focus {
   z-index: 1;
   display: none;
   min-width: 200px;
-  border: 1px solid #999;
+  border: 1px solid #777;
   background: #fefefe; }
   .dropdown .is-dropdown-submenu a {
     padding: 0.7rem 1rem; }
@@ -1251,7 +1251,7 @@ a.button:hover, a.button:focus {
     background: #007c82;
     color: #0a0a0a; }
   .label.secondary {
-    background: #999;
+    background: #777;
     color: #0a0a0a; }
   .label.success {
     background: #3adb76;
@@ -1652,7 +1652,7 @@ a.button:hover, a.button:focus {
     height: 1.2rem;
     margin: 0.1rem;
     border-radius: 50%;
-    background-color: #999; }
+    background-color: #777; }
     .orbit-bullets button:hover {
       background-color: #8a8a8a; }
     .orbit-bullets button.is-active {
@@ -1693,7 +1693,7 @@ a.button:hover, a.button:focus {
     cursor: default; }
   .pagination .disabled {
     padding: 0.1875rem 0.625rem;
-    color: #999;
+    color: #777;
     cursor: not-allowed; }
     .pagination .disabled:hover {
       background: transparent; }
@@ -1718,11 +1718,11 @@ a.button:hover, a.button:focus {
   height: 1rem;
   margin-bottom: 1rem;
   border-radius: 0;
-  background-color: #999; }
+  background-color: #777; }
   .progress.primary .progress-meter {
     background-color: #007c82; }
   .progress.secondary .progress-meter {
-    background-color: #999; }
+    background-color: #777; }
   .progress.success .progress-meter {
     background-color: #3adb76; }
   .progress.warning .progress-meter {
@@ -1766,7 +1766,7 @@ a.button:hover, a.button:focus {
   display: inline-block;
   max-width: 100%;
   height: 0.5rem;
-  background-color: #999;
+  background-color: #777;
   transition: all 0.2s ease-in-out; }
   .slider-fill.is-dragging {
     transition: all 0s linear; }
@@ -1864,7 +1864,7 @@ html.is-reveal-open body {
   backface-visibility: hidden;
   display: none;
   padding: 1rem;
-  border: 1px solid #999;
+  border: 1px solid #777;
   border-radius: 0;
   background-color: #fefefe;
   position: relative;
@@ -1946,7 +1946,7 @@ html.is-reveal-open body {
   width: 4rem;
   height: 2rem;
   border-radius: 0;
-  background: #999;
+  background: #777;
   transition: all 0.25s ease-out;
   font-weight: inherit;
   color: inherit;
