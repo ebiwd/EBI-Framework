@@ -614,7 +614,7 @@ a:active {
         padding-right: 17px;
       }
     }
-  
+
   }
 
 
@@ -1026,13 +1026,21 @@ a.more {
 @media print {
   a, a:visited { border-bottom: none; }
   #skip-to,
-  .masthead-black-bar nav,
-  .masthead nav,
   form#local-search,
   .global-footer,
   #search_ebi,
   #shortcuts,
   #ebi_search_results { display: none; }
+  body { font-size: .9rem; } // slightly decrease font for print
+  // don't print main navigation links
+  .masthead-black-bar nav a[href]:after,
+  .masthead nav a[href]:after,
+  .masthead-inner a[href]:after {
+    content: " ";
+  }
+  // print at full width of page
+  .row { max-width: 100%; }
+
 }
 
 /* Clearable text inputs
@@ -1130,4 +1138,3 @@ dl dt {
 @for $i from 0 through 20 {
   .size-#{$i*25} { font-size: 25%*$i; }
 }
-

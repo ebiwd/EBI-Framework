@@ -129,3 +129,11 @@ ul.breadcrumbs { padding-top: 1rem; }
 .medium-3 .panels-ipe-portlet-content > .with-overlay {
   margin-bottom: .75rem;
 }
+
+/* print tweaks */
+@media print {
+  body.logged-in ul.button-group,
+  body.logged-in > .toolbar {
+    display: none;
+  }
+}
