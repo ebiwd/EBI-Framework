@@ -5406,14 +5406,20 @@ a.no-underline:hover .underline {
   a, a:visited {
     border-bottom: none; }
   #skip-to,
-  .masthead-black-bar nav,
-  .masthead nav,
   form#local-search,
   .global-footer,
   #search_ebi,
   #shortcuts,
   #ebi_search_results {
-    display: none; } }
+    display: none; }
+  body {
+    font-size: .9rem; }
+  .masthead-black-bar nav a[href]:after,
+  .masthead nav a[href]:after,
+  .masthead-inner a[href]:after {
+    content: " "; }
+  .row {
+    max-width: 100%; } }
 
 input.clearable {
   background: #fff url("data:image/gif;base64,R0lGODlhBwAHAIAAAP///5KSkiH5BAAAAAAALAAAAAAHAAcAAAIMTICmsGrIXnLxuDMLADs=") no-repeat right -10px center;
