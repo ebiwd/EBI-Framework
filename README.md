@@ -1,16 +1,23 @@
 [![Build Status](https://travis-ci.org/ebiwd/EBI-Framework.svg?branch=v1.2)](https://travis-ci.org/ebiwd/EBI-Framework)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/ebiwd/EBI-Framework)
 
+## Note: v1.3 in development
+
+This framework has potentially-breaking .x releases every 6 months, the next release (v1.3) is slated for January 2018. [More about that version](https://github.com/ebiwd/EBI-Framework/tree/v1.3), and [join the discussion](https://github.com/ebiwd/EBI-Framework/issues/103).
+
 # EBI-Framework v1.2
 
-v1.2 is in beta and is targeted for a late-June 2017 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
-
-To view plans for v1.2 (and to join the discussion), [see issue 61](https://github.com/ebiwd/EBI-Framework/issues/61).
+v1.2 was released in June 2017.
 
 Code is available for usage at:
 - http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/
 - http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js
 - http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css
+
+Guidance on using is available at:
+- https://www.ebi.ac.uk/style-lab/
+- https://www.ebi.ac.uk/style-lab/websites/
+- https://www.ebi.ac.uk/style-lab/websites/patterns/
 
 ### On v1.1? Should you upgrade?
 
