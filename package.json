@@ -9,7 +9,7 @@
     "END NOTE"
   ],
   "name": "ebi-framework",
-  "version": "1.2.5.1",
+  "version": "1.2.5",
   "scripts": {
     "test": "npm run libraries && npm run scss && npm run js",
     "scss": "node-sass -o css css && csso ./css/ebi-global.css --output ./css/ebi-global.min.css && npm run foundation-scss-full-fat && npm run foundation-scss-lite && npm run foundation-scss-extras && npm run choices-scss",
