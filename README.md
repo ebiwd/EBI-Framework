@@ -10,7 +10,12 @@ To view plans for v1.3 (and to join the discussion), [see issue 103](https://git
 Code is available for usage at:
 - http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/
 - http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js
-- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css
+- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3
+
+Guidance on using is available at:
+- https://www.ebi.ac.uk/style-lab/
+- https://www.ebi.ac.uk/style-lab/websites/
+- https://www.ebi.ac.uk/style-lab/websites/patterns/
 
 ### On v1.1? Should you upgrade?
 
@@ -21,7 +26,6 @@ We recommend upgrading to v1.3 in a number of scenarios:
 1. More to come.
 
 To review planning for v1.3 (or to add comment), [see issue 103](https://github.com/ebiwd/EBI-Framework/issues/103).
-
 
 ### Do you have to upgrade?
 
