@@ -12,6 +12,7 @@ a.label,
 .label,
 a:hover,
 a:focus,
+a:visited,
 a:active {
   color: #004965;
 }
