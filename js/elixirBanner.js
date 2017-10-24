@@ -13,8 +13,8 @@ function elixirBanner() {
         defaultColor = divElixirBanner.dataset.color;
         defaultColor = (defaultColor == 'orange' ? 'rgb(244,125,32)' : defaultColor);
         defaultColor = (defaultColor == 'grey' ? 'rgb(77,77,72)' : defaultColor);
-        defaultColor = (defaultColor == 'blue' ? 'rgb(190,191,50)' : defaultColor);
-        defaultColor = (defaultColor == 'green' ? 'rgb(79,138,156)' : defaultColor);
+        defaultColor = (defaultColor == 'green' ? 'rgb(190,191,50)' : defaultColor);
+        defaultColor = (defaultColor == 'blue' ? 'rgb(79,138,156)' : defaultColor);
       }
       if (typeof divElixirBanner.dataset.name !== "undefined") {
         defaultName = divElixirBanner.dataset.name;
