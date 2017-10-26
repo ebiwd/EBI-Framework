@@ -1,6 +1,6 @@
-# NOTE!
+# Depreciated 
 
-This is currently in active development and testing. Please consult web development if you are interested, it is very likely to change!
+This experiment has come to an end. If you're looking for a lite implementation, [you should use v1.2](https://github.com/ebiwd/EBI-Framework/tree/v1.2).
 
 # EBI-Framework Lite version
 
