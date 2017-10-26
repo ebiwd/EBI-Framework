@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# abort on error
+set -e;
+# abort on undefined variable
+set -u;
+
+# get current branch from git info
+PROJECT=${CI_PROJECT_NAME};
+BRANCH=${CI_COMMIT_REF_NAME};
+
+# set project base
+DEPLOY_PATH="web_guidelines/${PROJECT}/${BRANCH}";
+
+if [ "${1:-''}" = "prod" ]; then
+  S3_BUCKET=${S3_BUCKET_PROD};
+else
+  S3_BUCKET=${S3_BUCKET_DEV};
+fi;
+
+# push to AWS (exclude bin and .git)
+aws s3 sync . s3://${S3_BUCKET}/${DEPLOY_PATH} \
+  --exclude ".git*" \
+  --exclude "bin/*" \
+  ;
