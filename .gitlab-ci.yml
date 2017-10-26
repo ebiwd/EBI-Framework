@@ -3,14 +3,18 @@ image: netroby/alpine-rsync
 #project specific variables can be defines here, or overridden project settings
 variables:
   SERVER_DEV: ebi-cli.ebi.ac.uk
+  S3_BUCKET_DEV: dev.ebi.emblstatic.net
   SCRIPT_DEV: ~/bin/update-ebi-framework
   DEV_URL: http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework
   SERVER_PROD: ebi-cli.ebi.ac.uk
+  S3_BUCKET_PROD: origin.ebi.emblstatic.net
   SCRIPT_PROD: ~/bin/update-ebi-framework-prod
   PROD_URL: http://www.ebi.ac.uk/web_guidelines/EBI-Framework
 # do not define here, put in project variables
   SSH_USER: username
   SSH_KEY: secret-key
+  AWS_KEY: key
+  AWS_SECRET: secret-key
   
 #setup ssh keys
 .deploy_setup: &deploy_setup
@@ -44,3 +48,22 @@ deploy_live:
     name: live
     url: ${LIVE_URL}
     
+deploy_aws_dev:
+  image: ebiwd/alpine-ssh
+  stage: deploy
+  before_script:
+    - add-aws-key ${AWS_KEY} ${AWS_SECRET}
+  script: 
+    - bin/deploy-aws
+  only: 
+    - branches
+
+deploy_aws_live:
+  image: ebiwd/alpine-ssh
+  stage: deploy
+  before_script:
+    - add-aws-key ${AWS_KEY} ${AWS_SECRET}
+  script: 
+    - bin/deploy-aws prod
+  only: 
+    - tags
