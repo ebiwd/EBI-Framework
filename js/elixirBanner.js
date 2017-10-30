@@ -60,6 +60,7 @@ function elixirBanner() {
         <style>
         .elixir-ribbon {
           padding: 1rem 0;
+          background-color: `+defaultColor+`;
         }
         `+basicStylingForNonfoundationSites+`
         .elixir-ribbon,
@@ -67,7 +68,6 @@ function elixirBanner() {
         .elixir-ribbon a,
         .elixir-ribbon a:active,
         .elixir-ribbon a:hover {
-          background-color: `+defaultColor+`;
           color: #fff;
           text-decoration: none;
         }
