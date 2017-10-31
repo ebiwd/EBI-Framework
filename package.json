@@ -25,7 +25,8 @@
     "foundation-scss-extras": "node-sass ./css/ebi-css-build/foundation/_settings-extras.scss ./css/ebi-extras.css && csso ./css/ebi-extras.css --output ./css/ebi-extras.min.css",
     "choices-scss": "node-sass ./libraries/Choices/assets/styles/scss/choices.scss ./libraries/Choices/assets/styles/css/choices.css && csso ./libraries/Choices/assets/styles/css/choices.css --output ./libraries/Choices/assets/styles/css/choices.min.css",
     "ebi-js": "concat-cli -f js/ebi-global-includes/script/*.js -o js/script.js",
-    "js": "npm run foundation-js && npm run ebi-js && npm run documentation",
+    "ebi-js-min": "uglifyjs js/script.js -o js/script.min.js --compress && uglifyjs js/foundationExtendEBI.js -o js/foundationExtendEBI.min.js --compress && uglifyjs js/elixirBanner.js -o js/elixirBanner.min.js --compress",
+    "js": "npm run foundation-js && npm run ebi-js && npm run ebi-js-min && npm run documentation",
     "foundation-js": "cpx './node_modules/foundation-sites/js/*.js' ./libraries/foundation-6/js",
     "//@30": [
       "-- Our buildscript: With this line we concat all libraries to be installed at once --"
@@ -60,7 +61,8 @@
     "mve": "^0.1.2",
     "ncp": "^2.0.0",
     "node-sass": "^3.4.2",
-    "node-wget": "^0.4.2"
+    "node-wget": "^0.4.2",
+    "uglify-es": "^3.1.6"
   },
   "dependencies": {},
   "bugs": {
