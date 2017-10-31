@@ -3,7 +3,7 @@ image: netroby/alpine-rsync
 #project specific variables can be defines here, or overridden project settings
 variables:
   SERVER_DEV: ebi-cli.ebi.ac.uk
-  S3_BUCKET_DEV: dev.ebi.emblstatic.net
+  S3_BUCKET_DEV: origin.dev.ebi.emblstatic.net
   SCRIPT_DEV: ~/bin/update-ebi-framework
   DEV_URL: http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework
   SERVER_PROD: ebi-cli.ebi.ac.uk
