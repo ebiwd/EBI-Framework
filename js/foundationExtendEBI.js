@@ -81,7 +81,7 @@ jQuery("body.google-analytics-loaded .analytics-content-left").on( 'mousedown', 
 jQuery("body.google-analytics-loaded .analytics-content-right").on( 'mousedown', 'a', function(e) {
   analyticsTrackInteraction(e.target,'Right content');
 });
-jQuery("body.google-analytics-loaded .analtyics-content-footer").on( 'mousedown', 'a', function(e) {
+jQuery("body.google-analytics-loaded .analytics-content-footer").on( 'mousedown', 'a', function(e) {
   analyticsTrackInteraction(e.target,'Content footer');
 });
 
