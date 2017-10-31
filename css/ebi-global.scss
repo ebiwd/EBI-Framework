@@ -373,7 +373,7 @@ a:active {
     h1,
     h4,
     p,
-    a, a:hover, a:active, a:visited {
+    a, a:hover, a:active, a:focus, a:visited {
       color: #fff;
     }
     ul li.is-active a,

@@ -334,7 +334,7 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead h1,
   .masthead h4,
   .masthead p,
-  .masthead a, .masthead a:hover, .masthead a:active, .masthead a:visited {
+  .masthead a, .masthead a:hover, .masthead a:active, .masthead a:focus, .masthead a:visited {
     color: #fff; }
   .masthead ul li.is-active a,
   .masthead ul li a:hover,
