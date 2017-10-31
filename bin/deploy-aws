@@ -14,12 +14,16 @@ DEPLOY_PATH="web_guidelines/${PROJECT}/${BRANCH}";
 
 if [ "${1:-''}" = "prod" ]; then
   S3_BUCKET=${S3_BUCKET_PROD};
+  MAX_AGE=86400; # 24hrs
 else
   S3_BUCKET=${S3_BUCKET_DEV};
+  MAX_AGE=60; # 1min
 fi;
 
 # push to AWS (exclude bin and .git)
 aws s3 sync . s3://${S3_BUCKET}/${DEPLOY_PATH} \
   --exclude ".git*" \
   --exclude "bin/*" \
+  --delete \
+  --cache-control "max-age=${MAX_AGE}" \
   ;
