@@ -24,7 +24,7 @@ function elixirBanner() {
         defaultDescription = divElixirBanner.dataset.description;
       }
       if (typeof divElixirBanner.dataset.moreInformationLink !== "undefined") {
-        defualtLink = divElixirBanner.dataset.moreInformationLink.name;
+        defualtLink = divElixirBanner.dataset.moreInformationLink;
       }
       if (divElixirBanner.dataset.useBasicStyles === 'true') {
         basicStylingForNonfoundationSites = `
