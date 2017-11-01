@@ -7,6 +7,7 @@ function elixirBanner() {
       var defaultName = 'This',
           defaultDescription = 'This is part of the ELIXIR distributed infrastructure for life-science information.',
           basicStylingForNonfoundationSites = '',
+          defaultLink = 'https://www.elixir-europe.org/about-us/why-needed',
           defaultColor = 'blue'; // options: orange, grey, green, blue
 
       if (typeof divElixirBanner.dataset.color !== "undefined") {
@@ -21,6 +22,9 @@ function elixirBanner() {
       }
       if (typeof divElixirBanner.dataset.description !== "undefined") {
         defaultDescription = divElixirBanner.dataset.description;
+      }
+      if (typeof divElixirBanner.dataset.moreInformationLink !== "undefined") {
+        defualtLink = divElixirBanner.dataset.moreInformationLink.name;
       }
       if (divElixirBanner.dataset.useBasicStyles === 'true') {
         basicStylingForNonfoundationSites = `
@@ -42,7 +46,7 @@ function elixirBanner() {
       var html = `
         <div id="elixir-ribbon" class="elixir-ribbon">
           <div class="row">
-            <a href="#">
+            <a href="`+defaultLink+`">
               <div class="elixir-logo-kite"></div>
               <h5>
                 <span class="elixir-banner-name">`+defaultName+`</span> is part of the ELIXIR infrastructure
@@ -50,7 +54,7 @@ function elixirBanner() {
               <div id="elixir-banner-info">
                 <small>
                   <span class="elixir-banner-description">`+defaultDescription+`</span>
-                  <span class="readmore" href="#">Learn more &#8250;</span>
+                  <span class="readmore">Learn more &#8250;</span>
                 </small>
               </div>
             </a>
