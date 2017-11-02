@@ -55,6 +55,8 @@
     @include embl-selector;
 
     .global-nav {
+      font-size: .9rem;
+      
       a,
       a:hover {
         color: white;
@@ -281,7 +283,7 @@
     ul li.active a:visited,
     ul li.active-trail a:visited { background-color: rgba(255,255,255,1); color: #444;border-bottom: 0;}
 
-    nav { font-size: .9rem; clear: both; }
+    nav { clear: both; }
 
     nav ul.menu li { border-right: 1px solid $ebi-colour-light; float: left;
                      margin-left: 0; /* compliance compatibility */
