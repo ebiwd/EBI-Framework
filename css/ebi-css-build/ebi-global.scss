@@ -337,7 +337,9 @@
   // button grid
   // Wrap a groupd of a.button.columns with div.button-grid to make a, you guessed it: grid
   .button-grid a.button.columns {
-    margin-bottom: 1px; border-right: 1px solid #fff;
+    margin-bottom: 1px;
+    border: 0; //unset all other borders; see https://github.com/ebiwd/EBI-Framework/issues/95
+    border-right: 1px solid #fff;
   }
 
   // intro unit
