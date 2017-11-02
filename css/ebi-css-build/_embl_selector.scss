@@ -6,6 +6,16 @@
 
 /// Classses to theme the embl dropdown selector for the .masthead-black-bar
 @mixin embl-selector {
+
+  // peeking animation for black bar
+  transition: border-width 0.5s ease-in-out;
+  border-top: 0 solid #EEE;
+
+  &.peek {
+    border-top: 1rem solid #EEE;
+  }
+
+
   li.embl-selector {
     margin-left: 0.5rem;
     border-left: .5px solid rgba(255,255,255,.5);
@@ -113,6 +123,6 @@
   @media screen and (max-width: 53em) {
     .embl-selector .button { width: 0px; padding-right:0; overflow: hidden;}
     .embl-selector .button:after { display: none; }
-    .masthead-black-bar nav ul.menu li a { padding-right: .5rem; padding-left: .5rem;}
+    nav ul.menu li a { padding-right: .5rem; padding-left: .5rem;}
   }
 }

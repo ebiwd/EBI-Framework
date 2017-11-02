@@ -72,7 +72,7 @@ function ebiFrameworkPopulateBlackBar() {
         '<li class="location grenoble hide"><a href="#">Heidelberg</a></li>'+
         '<li class="location grenoble hide"><a href="#">Grenoble</a></li>'+
         '<li class="location rome hide"><a href="#">Rome</a></li>'+
-        '<li class="float-right show-for-medium embl-selector">'+
+        '<li id="embl-selector" class="float-right show-for-medium embl-selector">'+
           '<button class="button float-right">&nbsp;</button>'+
         '</li>'+
         '<li class="float-right search">'+
@@ -190,9 +190,22 @@ function ebiFrameworkInsertEMBLdropdown() {
     '</nav>';
     document.getElementById("masthead-black-bar").insertBefore(dropdownDiv,document.getElementById("masthead-black-bar").firstChild);
 
-    // toggle the .embl-bar
     var emblBar = document.querySelectorAll(".embl-bar")[0];
     var emblBarButton = document.querySelectorAll(".embl-selector")[0];
+    var blackBar = document.querySelectorAll(".masthead-black-bar")[0];
+
+    // add "peeking" animation for embl selector
+    emblBarButton.addEventListener("mouseenter", function( event ) {
+      blackBar.className += ' peek';
+
+      // reset the peeking after a short delay
+      setTimeout(function() {
+        blackBar.classList.remove("peek");
+      }, 500);
+    }, false);
+
+
+    // toggle the .embl-bar
     var emblSelector = document.querySelectorAll(".embl-selector")[0].addEventListener("click", function( event ) {
       ebiToggleClass(emblBar,'active');
       ebiToggleClass(emblBarButton,'active');
@@ -205,8 +218,6 @@ function ebiFrameworkInsertEMBLdropdown() {
       window.scrollTo(0, 0);
     }, false);
 
-
-    // we do this bit with jquery to prototype, would need ro rewire as vanilla JS..
     // we do this bit with jquery to prototype, would need ro rewire as vanilla JS..
     $('#masthead-black-bar .where.active').on('mouseover', function() {
       emblResetContext(); // clear any other states
