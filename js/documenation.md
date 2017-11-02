@@ -53,7 +53,7 @@
 
 ## ebiGetParameterByName
 
-[js/ebi-global-includes/script/1_about.js:16-24](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/1_about.js#L16-L24 "Source code on GitHub")
+[js/ebi-global-includes/script/1_about.js:16-24](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/1_about.js#L16-L24 "Source code on GitHub")
 
 Utility function to get params from the URL.
 
@@ -71,7 +71,7 @@ var foo = getParameterByName('foo'); // "lorem"
 
 ## ebiGetParameterByName
 
-[js/script.js:16-24](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L16-L24 "Source code on GitHub")
+[js/script.js:16-24](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L16-L24 "Source code on GitHub")
 
 Utility function to get params from the URL.
 
@@ -89,47 +89,47 @@ var foo = getParameterByName('foo'); // "lorem"
 
 ## ebiFrameworkExternalLinks
 
-[js/ebi-global-includes/script/2_ebiFrameworkExternalLinks.js:4-35](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/2_ebiFrameworkExternalLinks.js#L4-L35 "Source code on GitHub")
+[js/ebi-global-includes/script/2_ebiFrameworkExternalLinks.js:4-35](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/2_ebiFrameworkExternalLinks.js#L4-L35 "Source code on GitHub")
 
 Mark pdf/doc/txt links with link-pdf/link-doc/link-txt classes.
 
 ## ebiFrameworkExternalLinks
 
-[js/script.js:29-60](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L29-L60 "Source code on GitHub")
+[js/script.js:29-60](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L29-L60 "Source code on GitHub")
 
 Mark pdf/doc/txt links with link-pdf/link-doc/link-txt classes.
 
 ## ebiFrameworkManageGlobalSearch
 
-[js/ebi-global-includes/script/3_ebiFrameworkForms.js:5-34](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/3_ebiFrameworkForms.js#L5-L34 "Source code on GitHub")
+[js/ebi-global-includes/script/3_ebiFrameworkForms.js:5-34](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/3_ebiFrameworkForms.js#L5-L34 "Source code on GitHub")
 
 Disable the global search if a page defines a local search.<br/>
 Can also be disabled by adding class 'no-global-search' to the body element.
 
 ## ebiFrameworkManageGlobalSearch
 
-[js/script.js:66-95](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L66-L95 "Source code on GitHub")
+[js/script.js:66-95](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L66-L95 "Source code on GitHub")
 
 Disable the global search if a page defines a local search.<br/>
 Can also be disabled by adding class 'no-global-search' to the body element.
 
 ## ebiFrameworkSearchNullError
 
-[js/ebi-global-includes/script/3_ebiFrameworkForms.js:40-84](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/3_ebiFrameworkForms.js#L40-L84 "Source code on GitHub")
+[js/ebi-global-includes/script/3_ebiFrameworkForms.js:40-84](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/3_ebiFrameworkForms.js#L40-L84 "Source code on GitHub")
 
 Add error alerts for 'no input' on search boxes.<br/>
 Todo: this, perhaps, shoule be moved to a value-add script file
 
 ## ebiFrameworkSearchNullError
 
-[js/script.js:101-145](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L101-L145 "Source code on GitHub")
+[js/script.js:101-145](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L101-L145 "Source code on GitHub")
 
 Add error alerts for 'no input' on search boxes.<br/>
 Todo: this, perhaps, shoule be moved to a value-add script file
 
 ## ebiToggleClass
 
-[js/ebi-global-includes/script/4_ebiFrameworkContent.js:4-13](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L4-L13 "Source code on GitHub")
+[js/ebi-global-includes/script/4_ebiFrameworkContent.js:4-13](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L4-L13 "Source code on GitHub")
 
 Utility function to toggle classes. Chiefly to show the #embl-bar.
 
@@ -140,7 +140,7 @@ Utility function to toggle classes. Chiefly to show the #embl-bar.
 
 ## ebiToggleClass
 
-[js/script.js:150-159](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L150-L159 "Source code on GitHub")
+[js/script.js:150-159](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L150-L159 "Source code on GitHub")
 
 Utility function to toggle classes. Chiefly to show the #embl-bar.
 
@@ -151,103 +151,103 @@ Utility function to toggle classes. Chiefly to show the #embl-bar.
 
 ## ebiFrameworkHideGlobalNav
 
-[js/ebi-global-includes/script/4_ebiFrameworkContent.js:18-34](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L18-L34 "Source code on GitHub")
+[js/ebi-global-includes/script/4_ebiFrameworkContent.js:18-34](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L18-L34 "Source code on GitHub")
 
 Remove global-nav/global-nav-expanded from header/footer if body.no-global-nav is set
 
 ## ebiFrameworkHideGlobalNav
 
-[js/script.js:164-180](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L164-L180 "Source code on GitHub")
+[js/script.js:164-180](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L164-L180 "Source code on GitHub")
 
 Remove global-nav/global-nav-expanded from header/footer if body.no-global-nav is set
 
 ## ebiFrameworkAssignImageByMetaTags
 
-[js/ebi-global-includes/script/4_ebiFrameworkContent.js:39-53](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L39-L53 "Source code on GitHub")
+[js/ebi-global-includes/script/4_ebiFrameworkContent.js:39-53](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L39-L53 "Source code on GitHub")
 
 Assign global nav background images through meta tags
 
 ## ebiFrameworkAssignImageByMetaTags
 
-[js/script.js:185-199](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L185-L199 "Source code on GitHub")
+[js/script.js:185-199](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L185-L199 "Source code on GitHub")
 
 Assign global nav background images through meta tags
 
 ## ebiFrameworkPopulateBlackBar
 
-[js/ebi-global-includes/script/4_ebiFrameworkContent.js:58-97](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L58-L97 "Source code on GitHub")
+[js/ebi-global-includes/script/4_ebiFrameworkContent.js:58-97](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L58-L97 "Source code on GitHub")
 
 Populate `#masthead-black-bar`
 
 ## ebiFrameworkPopulateBlackBar
 
-[js/script.js:204-243](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L204-L243 "Source code on GitHub")
+[js/script.js:204-243](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L204-L243 "Source code on GitHub")
 
 Populate `#masthead-black-bar`
 
 ## ebiFrameworkActivateBlackBar
 
-[js/ebi-global-includes/script/4_ebiFrameworkContent.js:102-139](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L102-L139 "Source code on GitHub")
+[js/ebi-global-includes/script/4_ebiFrameworkContent.js:102-139](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L102-L139 "Source code on GitHub")
 
 Active tabs in `#masthead-black-bar` accoriding to metadata
 
 ## ebiFrameworkActivateBlackBar
 
-[js/script.js:248-285](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L248-L285 "Source code on GitHub")
+[js/script.js:248-285](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L248-L285 "Source code on GitHub")
 
 Active tabs in `#masthead-black-bar` accoriding to metadata
 
 ## ebiFrameworkInsertEMBLdropdown
 
-[js/ebi-global-includes/script/4_ebiFrameworkContent.js:144-252](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L144-L252 "Source code on GitHub")
+[js/ebi-global-includes/script/4_ebiFrameworkContent.js:144-260](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L144-L260 "Source code on GitHub")
 
 Insert EMBL dropdown menu into `#masthead-black-bar`
 
 ## ebiFrameworkInsertEMBLdropdown
 
-[js/script.js:290-398](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L290-L398 "Source code on GitHub")
+[js/script.js:290-406](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L290-L406 "Source code on GitHub")
 
 Insert EMBL dropdown menu into `#masthead-black-bar`
 
 ## ebiFrameworkUpdateFoot
 
-[js/ebi-global-includes/script/4_ebiFrameworkContent.js:257-287](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L257-L287 "Source code on GitHub")
+[js/ebi-global-includes/script/4_ebiFrameworkContent.js:265-295](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L265-L295 "Source code on GitHub")
 
 Insert EBI Footer into `#global-nav-expanded`
 
 ## ebiFrameworkUpdateFoot
 
-[js/script.js:403-433](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L403-L433 "Source code on GitHub")
+[js/script.js:411-441](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L411-L441 "Source code on GitHub")
 
 Insert EBI Footer into `#global-nav-expanded`
 
 ## ebiFrameworkUpdateFooterMeta
 
-[js/ebi-global-includes/script/4_ebiFrameworkContent.js:292-306](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L292-L306 "Source code on GitHub")
+[js/ebi-global-includes/script/4_ebiFrameworkContent.js:300-314](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L300-L314 "Source code on GitHub")
 
 Insert footer meta info into `#ebi-footer-meta`
 
 ## ebiFrameworkUpdateFooterMeta
 
-[js/script.js:438-452](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L438-L452 "Source code on GitHub")
+[js/script.js:446-460](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L446-L460 "Source code on GitHub")
 
 Insert footer meta info into `#ebi-footer-meta`
 
 ## ebiFrameworkCookieBanner
 
-[js/ebi-global-includes/script/5_ebiFrameworkCookieBanner.js:4-72](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/5_ebiFrameworkCookieBanner.js#L4-L72 "Source code on GitHub")
+[js/ebi-global-includes/script/5_ebiFrameworkCookieBanner.js:4-72](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/5_ebiFrameworkCookieBanner.js#L4-L72 "Source code on GitHub")
 
 Insert and show the cookie banner.
 
 ## ebiFrameworkCookieBanner
 
-[js/script.js:467-535](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L467-L535 "Source code on GitHub")
+[js/script.js:475-543](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L475-L543 "Source code on GitHub")
 
 Insert and show the cookie banner.
 
 ## ebiFrameworkInvokeScripts
 
-[js/ebi-global-includes/script/6_ebiFrameworkInvokeScripts.js:7-20](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/ebi-global-includes/script/6_ebiFrameworkInvokeScripts.js#L7-L20 "Source code on GitHub")
+[js/ebi-global-includes/script/6_ebiFrameworkInvokeScripts.js:7-20](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/ebi-global-includes/script/6_ebiFrameworkInvokeScripts.js#L7-L20 "Source code on GitHub")
 
 All scripts are automatically loaded, unless the page asked us not to.
 
@@ -260,7 +260,7 @@ Configurable with a data attribute:
 
 ## ebiFrameworkInvokeScripts
 
-[js/script.js:543-556](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/script.js#L543-L556 "Source code on GitHub")
+[js/script.js:551-564](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/script.js#L551-L564 "Source code on GitHub")
 
 All scripts are automatically loaded, unless the page asked us not to.
 
@@ -273,7 +273,7 @@ Configurable with a data attribute:
 
 ## ebiGaIndicateLoaded
 
-[js/foundationExtendEBI.js:12-34](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L12-L34 "Source code on GitHub")
+[js/foundationExtendEBI.js:12-34](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L12-L34 "Source code on GitHub")
 
 We poll the document until we find GA has loaded, or we've tried a few times.
 
@@ -284,13 +284,13 @@ We poll the document until we find GA has loaded, or we've tried a few times.
 
 ## setTimeout
 
-[js/foundationExtendEBI.js:19-26](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L19-L26 "Source code on GitHub")
+[js/foundationExtendEBI.js:19-26](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L19-L26 "Source code on GitHub")
 
 If successful we append `.google-analytics-loaded` to the `body` tag.
 
 ## last
 
-[js/foundationExtendEBI.js:42-46](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L42-L46 "Source code on GitHub")
+[js/foundationExtendEBI.js:42-46](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L42-L46 "Source code on GitHub")
 
 Utility method to get the last in an array
 
@@ -304,7 +304,7 @@ Returns **var** the last item in the array
 
 ## lastGaEventTime
 
-[js/foundationExtendEBI.js:52-52](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L52-L52 "Source code on GitHub")
+[js/foundationExtendEBI.js:52-52](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L52-L52 "Source code on GitHub")
 
 Track the last time an event was sent (don't double send)
 
@@ -314,7 +314,7 @@ Track the last time an event was sent (don't double send)
 
 ## analyticsTrackInteraction
 
-[js/foundationExtendEBI.js:71-102](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L71-L102 "Source code on GitHub")
+[js/foundationExtendEBI.js:71-102](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L71-L102 "Source code on GitHub")
 
 ## Analytics tracking
 
@@ -341,7 +341,7 @@ jQuery("body.google-analytics-loaded .analytics-content-footer").on('mousedown',
 
 ## ebiGaInit
 
-[js/foundationExtendEBI.js:111-194](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L111-L194 "Source code on GitHub")
+[js/foundationExtendEBI.js:111-194](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L111-L194 "Source code on GitHub")
 
 If GA is found, we initialise the tracking of various default areas
 
@@ -352,7 +352,7 @@ but we're running against the page's unload -- so speed over elegance.
 
 ## addBlankTargetToExternalLinkEBI
 
-[js/foundationExtendEBI.js:200-207](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L200-L207 "Source code on GitHub")
+[js/foundationExtendEBI.js:200-207](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L200-L207 "Source code on GitHub")
 
 Programatically open external links in new tabs
 
@@ -362,7 +362,7 @@ Programatically open external links in new tabs
 
 ## addExternalToBlankWindowLinksEBI
 
-[js/foundationExtendEBI.js:213-218](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L213-L218 "Source code on GitHub")
+[js/foundationExtendEBI.js:213-218](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L213-L218 "Source code on GitHub")
 
 Programatically add '.external' to external links
 
@@ -372,7 +372,7 @@ Programatically add '.external' to external links
 
 ## activateEMBLdropdown
 
-[js/foundationExtendEBI.js:231-260](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L231-L260 "Source code on GitHub")
+[js/foundationExtendEBI.js:231-260](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L231-L260 "Source code on GitHub")
 
 ## Activate EMBL dropdown menu
 
@@ -385,25 +385,25 @@ If you pass options as 'reInit', it will destory any existing menu and add a new
 
 ## smoothScrollAnchorLinksEBI
 
-[js/foundationExtendEBI.js:265-288](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L265-L288 "Source code on GitHub")
+[js/foundationExtendEBI.js:265-288](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L265-L288 "Source code on GitHub")
 
 Smooth scroll anchor links for jQuery users
 
 ## invokeResponsiveMenuEBI
 
-[js/foundationExtendEBI.js:293-401](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L293-L401 "Source code on GitHub")
+[js/foundationExtendEBI.js:293-401](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L293-L401 "Source code on GitHub")
 
 Make the local nav menu responsive to the browser window width
 
 ## jQuery
 
-[js/foundationExtendEBI.js:406-496](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L406-L496 "Source code on GitHub")
+[js/foundationExtendEBI.js:406-496](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L406-L496 "Source code on GitHub")
 
 Default invokation of foundationExtendEBI
 
 ## bodyData
 
-[js/foundationExtendEBI.js:468-468](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L468-L468 "Source code on GitHub")
+[js/foundationExtendEBI.js:468-468](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L468-L468 "Source code on GitHub")
 
 ## Allow invokation of Foundation and foundationExtendEBI with data attributes
 
@@ -414,7 +414,7 @@ Background: <https://github.com/ebiwd/EBI-Framework/issues/77>
 
 ## foundationInvoke
 
-[js/foundationExtendEBI.js:473-477](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L473-L477 "Source code on GitHub")
+[js/foundationExtendEBI.js:473-477](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L473-L477 "Source code on GitHub")
 
 **Examples**
 
@@ -424,7 +424,7 @@ Background: <https://github.com/ebiwd/EBI-Framework/issues/77>
 
 ## foundationExtendEBI
 
-[js/foundationExtendEBI.js:482-486](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L482-L486 "Source code on GitHub")
+[js/foundationExtendEBI.js:482-486](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L482-L486 "Source code on GitHub")
 
 **Examples**
 
@@ -434,7 +434,7 @@ Background: <https://github.com/ebiwd/EBI-Framework/issues/77>
 
 ## addExternal
 
-[js/foundationExtendEBI.js:491-494](https://github.com/ebiwd/EBI-Framework/blob/627951e9ec709988785cfb32fd1280e0c4580f39/js/foundationExtendEBI.js#L491-L494 "Source code on GitHub")
+[js/foundationExtendEBI.js:491-494](https://github.com/ebiwd/EBI-Framework/blob/04049e35e9d8d3d49a409336e76990822332d5de/js/foundationExtendEBI.js#L491-L494 "Source code on GitHub")
 
 **Examples**
 

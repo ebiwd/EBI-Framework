@@ -212,7 +212,6 @@ function ebiFrameworkInsertEMBLdropdown() {
       }
     }, false);
 
-
     // toggle the .embl-bar
     var emblSelector = document.querySelectorAll(".embl-selector")[0].addEventListener("click", function( event ) {
       ebiToggleClass(emblBar,'active');

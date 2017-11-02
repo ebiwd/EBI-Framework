@@ -340,14 +340,22 @@ function ebiFrameworkInsertEMBLdropdown() {
     var emblBarButton = document.querySelectorAll(".embl-selector")[0];
     var blackBar = document.querySelectorAll(".masthead-black-bar")[0];
 
+    // utility function to see if element has a class
+    // hasClass(element, 'class-deska');
+    function hasClass(element, cls) {
+      return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    }
+
     // add "peeking" animation for embl selector
     emblBarButton.addEventListener("mouseenter", function( event ) {
-      blackBar.className += ' peek';
-
-      // reset the peeking after a short delay
-      setTimeout(function() {
+      if (hasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
+        blackBar.className += ' peek';
+      }
+    }, false);
+    emblBarButton.addEventListener("mouseleave", function( event ) {
+      if (hasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
         blackBar.classList.remove("peek");
-      }, 500);
+      }
     }, false);
 
 
