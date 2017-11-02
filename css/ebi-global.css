@@ -4383,11 +4383,15 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   display: none; }
 
 .masthead-black-bar {
-  background-color: #222; }
+  background-color: #222;
+  transition: border-width 0.5s ease-in-out;
+  border-top: 0 solid #EEE; }
   .masthead-black-bar,
   .masthead-black-bar a,
   .masthead-black-bar a:hover {
     color: white; }
+  .masthead-black-bar.peek {
+    border-top: 1rem solid #EEE; }
   .masthead-black-bar li.embl-selector {
     margin-left: 0.5rem;
     border-left: 0.5px solid rgba(255, 255, 255, 0.5);
@@ -4477,7 +4481,7 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
       overflow: hidden; }
     .masthead-black-bar .embl-selector .button:after {
       display: none; }
-    .masthead-black-bar .masthead-black-bar nav ul.menu li a {
+    .masthead-black-bar nav ul.menu li a {
       padding-right: .5rem;
       padding-left: .5rem; } }
   .masthead-black-bar .global-nav {
