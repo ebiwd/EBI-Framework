@@ -4480,98 +4480,100 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
     .masthead-black-bar .masthead-black-bar nav ul.menu li a {
       padding-right: .5rem;
       padding-left: .5rem; } }
-  .masthead-black-bar .global-nav a,
-  .masthead-black-bar .global-nav a:hover {
-    color: white;
-    border-bottom: none; }
-  .masthead-black-bar .global-nav li a:hover,
-  .masthead-black-bar .global-nav li a:active,
-  .masthead-black-bar .global-nav li a:focus,
-  .masthead-black-bar .global-nav li.active a,
-  .masthead-black-bar .global-nav li.active-trail a {
-    color: #fff;
-    border-bottom: none;
-    background-color: #000; }
-  .masthead-black-bar .global-nav li.active a {
-    font-weight: 700; }
-  .masthead-black-bar .global-nav li a:before {
-    font-family: 'EBI-Generic';
-    display: inline-block;
-    padding-right: .4rem; }
-  .masthead-black-bar .global-nav li.home,
-  .masthead-black-bar .global-nav li.services,
-  .masthead-black-bar .global-nav li.research,
-  .masthead-black-bar .global-nav li.training,
-  .masthead-black-bar .global-nav li.about,
-  .masthead-black-bar .global-nav li.embl,
-  .masthead-black-bar .global-nav li.ebi,
-  .masthead-black-bar .global-nav li.grenoble,
-  .masthead-black-bar .global-nav li.hamburg,
-  .masthead-black-bar .global-nav li.heidelberg,
-  .masthead-black-bar .global-nav li.hinxton,
-  .masthead-black-bar .global-nav li.rome,
-  .masthead-black-bar .global-nav li.barcelona {
-    float: right; }
-    .masthead-black-bar .global-nav li.home.hover,
-    .masthead-black-bar .global-nav li.services.hover,
-    .masthead-black-bar .global-nav li.research.hover,
-    .masthead-black-bar .global-nav li.training.hover,
-    .masthead-black-bar .global-nav li.about.hover,
-    .masthead-black-bar .global-nav li.embl.hover,
-    .masthead-black-bar .global-nav li.ebi.hover,
-    .masthead-black-bar .global-nav li.grenoble.hover,
-    .masthead-black-bar .global-nav li.hamburg.hover,
-    .masthead-black-bar .global-nav li.heidelberg.hover,
-    .masthead-black-bar .global-nav li.hinxton.hover,
-    .masthead-black-bar .global-nav li.rome.hover,
-    .masthead-black-bar .global-nav li.barcelona.hover {
-      float: none; }
-    .masthead-black-bar .global-nav li.home.active,
-    .masthead-black-bar .global-nav li.services.active,
-    .masthead-black-bar .global-nav li.research.active,
-    .masthead-black-bar .global-nav li.training.active,
-    .masthead-black-bar .global-nav li.about.active,
-    .masthead-black-bar .global-nav li.embl.active,
-    .masthead-black-bar .global-nav li.ebi.active,
-    .masthead-black-bar .global-nav li.grenoble.active,
-    .masthead-black-bar .global-nav li.hamburg.active,
-    .masthead-black-bar .global-nav li.heidelberg.active,
-    .masthead-black-bar .global-nav li.hinxton.active,
-    .masthead-black-bar .global-nav li.rome.active,
-    .masthead-black-bar .global-nav li.barcelona.active {
-      float: left; }
-  .masthead-black-bar .global-nav li.embl.hover a:before,
-  .masthead-black-bar .global-nav li.grenoble.hover a:before,
-  .masthead-black-bar .global-nav li.hamburg.hover a:before,
-  .masthead-black-bar .global-nav li.heidelberg.hover a:before,
-  .masthead-black-bar .global-nav li.hinxton.hover a:before,
-  .masthead-black-bar .global-nav li.rome.hover a:before,
-  .masthead-black-bar .global-nav li.barcelona.hover a:before {
-    content: "" !important; }
-  .masthead-black-bar .global-nav li.where a:before {
-    content: '['; }
-  .masthead-black-bar .global-nav li.home a:before,
-  .masthead-black-bar .global-nav li.ebi a:before {
-    content: 'H'; }
-  .masthead-black-bar .global-nav li.services a:before {
-    content: '('; }
-  .masthead-black-bar .global-nav li.research a:before {
-    content: ')'; }
-  .masthead-black-bar .global-nav li.training a:before {
-    content: 't'; }
-  .masthead-black-bar .global-nav li.about a:before {
-    content: 'i'; }
-  .masthead-black-bar .global-nav li.search a:before {
-    font-family: 'EBI-Functional';
-    content: '1';
-    padding-right: 0; }
-  .masthead-black-bar .global-nav li.search .dropdown-pane {
-    width: 100%;
-    left: 0;
-    background: #222;
-    border: none;
-    margin-top: -2px;
-    color: #fff; }
+  .masthead-black-bar .global-nav {
+    font-size: .9rem; }
+    .masthead-black-bar .global-nav a,
+    .masthead-black-bar .global-nav a:hover {
+      color: white;
+      border-bottom: none; }
+    .masthead-black-bar .global-nav li a:hover,
+    .masthead-black-bar .global-nav li a:active,
+    .masthead-black-bar .global-nav li a:focus,
+    .masthead-black-bar .global-nav li.active a,
+    .masthead-black-bar .global-nav li.active-trail a {
+      color: #fff;
+      border-bottom: none;
+      background-color: #000; }
+    .masthead-black-bar .global-nav li.active a {
+      font-weight: 700; }
+    .masthead-black-bar .global-nav li a:before {
+      font-family: 'EBI-Generic';
+      display: inline-block;
+      padding-right: .4rem; }
+    .masthead-black-bar .global-nav li.home,
+    .masthead-black-bar .global-nav li.services,
+    .masthead-black-bar .global-nav li.research,
+    .masthead-black-bar .global-nav li.training,
+    .masthead-black-bar .global-nav li.about,
+    .masthead-black-bar .global-nav li.embl,
+    .masthead-black-bar .global-nav li.ebi,
+    .masthead-black-bar .global-nav li.grenoble,
+    .masthead-black-bar .global-nav li.hamburg,
+    .masthead-black-bar .global-nav li.heidelberg,
+    .masthead-black-bar .global-nav li.hinxton,
+    .masthead-black-bar .global-nav li.rome,
+    .masthead-black-bar .global-nav li.barcelona {
+      float: right; }
+      .masthead-black-bar .global-nav li.home.hover,
+      .masthead-black-bar .global-nav li.services.hover,
+      .masthead-black-bar .global-nav li.research.hover,
+      .masthead-black-bar .global-nav li.training.hover,
+      .masthead-black-bar .global-nav li.about.hover,
+      .masthead-black-bar .global-nav li.embl.hover,
+      .masthead-black-bar .global-nav li.ebi.hover,
+      .masthead-black-bar .global-nav li.grenoble.hover,
+      .masthead-black-bar .global-nav li.hamburg.hover,
+      .masthead-black-bar .global-nav li.heidelberg.hover,
+      .masthead-black-bar .global-nav li.hinxton.hover,
+      .masthead-black-bar .global-nav li.rome.hover,
+      .masthead-black-bar .global-nav li.barcelona.hover {
+        float: none; }
+      .masthead-black-bar .global-nav li.home.active,
+      .masthead-black-bar .global-nav li.services.active,
+      .masthead-black-bar .global-nav li.research.active,
+      .masthead-black-bar .global-nav li.training.active,
+      .masthead-black-bar .global-nav li.about.active,
+      .masthead-black-bar .global-nav li.embl.active,
+      .masthead-black-bar .global-nav li.ebi.active,
+      .masthead-black-bar .global-nav li.grenoble.active,
+      .masthead-black-bar .global-nav li.hamburg.active,
+      .masthead-black-bar .global-nav li.heidelberg.active,
+      .masthead-black-bar .global-nav li.hinxton.active,
+      .masthead-black-bar .global-nav li.rome.active,
+      .masthead-black-bar .global-nav li.barcelona.active {
+        float: left; }
+    .masthead-black-bar .global-nav li.embl.hover a:before,
+    .masthead-black-bar .global-nav li.grenoble.hover a:before,
+    .masthead-black-bar .global-nav li.hamburg.hover a:before,
+    .masthead-black-bar .global-nav li.heidelberg.hover a:before,
+    .masthead-black-bar .global-nav li.hinxton.hover a:before,
+    .masthead-black-bar .global-nav li.rome.hover a:before,
+    .masthead-black-bar .global-nav li.barcelona.hover a:before {
+      content: "" !important; }
+    .masthead-black-bar .global-nav li.where a:before {
+      content: '['; }
+    .masthead-black-bar .global-nav li.home a:before,
+    .masthead-black-bar .global-nav li.ebi a:before {
+      content: 'H'; }
+    .masthead-black-bar .global-nav li.services a:before {
+      content: '('; }
+    .masthead-black-bar .global-nav li.research a:before {
+      content: ')'; }
+    .masthead-black-bar .global-nav li.training a:before {
+      content: 't'; }
+    .masthead-black-bar .global-nav li.about a:before {
+      content: 'i'; }
+    .masthead-black-bar .global-nav li.search a:before {
+      font-family: 'EBI-Functional';
+      content: '1';
+      padding-right: 0; }
+    .masthead-black-bar .global-nav li.search .dropdown-pane {
+      width: 100%;
+      left: 0;
+      background: #222;
+      border: none;
+      margin-top: -2px;
+      color: #fff; }
 
 .masthead-inner {
   padding-top: 2.5rem;
@@ -4607,7 +4609,7 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead h1,
   .masthead h4,
   .masthead p,
-  .masthead a, .masthead a:hover, .masthead a:active, .masthead a:visited {
+  .masthead a, .masthead a:hover, .masthead a:focus, .masthead a:active, .masthead a:visited {
     color: #fff; }
   .masthead ul li a {
     border-bottom: 0; }
@@ -4626,7 +4628,6 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
     color: #444;
     border-bottom: 0; }
   .masthead nav {
-    font-size: .9rem;
     clear: both; }
   .masthead nav ul.menu li {
     border-right: 1px solid #f8f8f8;
@@ -4897,9 +4898,6 @@ ul.simple.vertical.menu {
     color: #f8f8f8; }
   .cookie-banner .text {
     margin-right: 2em; }
-
-ul.menu {
-  font-size: .9rem; }
 
 body .thumbnail {
   box-shadow: none; }
