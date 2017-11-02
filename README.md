@@ -129,7 +129,8 @@ We expect the vast majority of users to link to the built CSS and JS files (as s
 
 We've configured the system to build with NPM (no need for gulp or bower).
 
-To get started, have a look at `package.json`. Likely the the `npm run scss` command will cover 90% of use cases.
+1. Start with `npm install && npm run motion-ui-update`.
+2. For the rest, have a look at `package.json`. Likely the the `npm run scss` command will cover 90% of use cases.
 
 #### Deploying with NPM
 Releases are available via NPM at https://www.npmjs.com/package/ebi-framework
