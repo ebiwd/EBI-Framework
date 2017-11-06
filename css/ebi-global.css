@@ -4246,7 +4246,8 @@ select {
   -webkit-appearance: none; }
 
 body h1, body h2, body h3, body h4, body h5 {
-  font-weight: 600; }
+  font-weight: 300;
+  letter-spacing: -.5px; }
 
 li {
   word-wrap: break-word; }
@@ -5058,6 +5059,7 @@ code {
 
 .button-grid a.button.columns {
   margin-bottom: 1px;
+  border: 0;
   border-right: 1px solid #fff; }
 
 .intro-unit {
