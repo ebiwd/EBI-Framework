@@ -19,6 +19,7 @@
  * Licensed under MIT Open Source
  */
 @import 'https://code.cdn.mozilla.net/fonts/fira.css';
+@import 'https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css';
 @media print, screen and (min-width: 40em) {
   .reveal, .reveal.tiny, .reveal.small, .reveal.large {
     right: auto;
@@ -1312,7 +1313,7 @@ td {
 p {
   margin-bottom: 1rem;
   font-size: inherit;
-  line-height: 1.6;
+  line-height: 1.5;
   text-rendering: optimizeLegibility; }
 
 em,
@@ -1424,7 +1425,7 @@ ol,
 dl {
   margin-bottom: 1rem;
   list-style-position: outside;
-  line-height: 1.6; }
+  line-height: 1.5; }
 
 li {
   font-size: inherit; }
@@ -1451,7 +1452,7 @@ blockquote {
   padding: 0.5625rem 1.25rem 0 1.1875rem;
   border-left: 1px solid #777; }
   blockquote, blockquote p {
-    line-height: 1.6;
+    line-height: 1.5;
     color: #8a8a8a; }
 
 cite {
@@ -1473,7 +1474,7 @@ code {
   padding: 0.125rem 0.3125rem 0.0625rem;
   border: 1px solid #777;
   background-color: #e6e6e6;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;
   color: #0a0a0a; }
 
@@ -1481,7 +1482,7 @@ kbd {
   margin: 0;
   padding: 0.125rem 0.25rem 0;
   background-color: #e6e6e6;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace;
   color: #0a0a0a; }
 
 .subheader {
@@ -4611,6 +4612,9 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   background-position: 100% 82%;
   background-size: cover;
   background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>'); }
+  .masthead a,
+  .masthead button {
+    transition: background-color 0.5s ease, opacity 0.5s ease; }
   .masthead h1,
   .masthead h4,
   .masthead p,
@@ -4622,8 +4626,8 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead ul li a:hover,
   .masthead nav ul li a.hover,
   .masthead nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #444; }
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #f8f8f8; }
   .masthead nav ul li.active a,
   .masthead nav ul li a:active,
   .masthead ul li.active-trail a,
@@ -4787,7 +4791,7 @@ body .breadcrumbs a {
   border-bottom: none; }
 
 .code {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;
   color: #0a0a0a;
   background-color: #e6e6e6;
@@ -4808,7 +4812,7 @@ pre > code {
 .kbd {
   margin: 0;
   color: #0a0a0a;
-  font-family: Consolas, "Liberation Mono", Courier, monospace; }
+  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace; }
 
 /* Custom styling for different local masthead */
 #local-title.logo-only img,
@@ -5006,9 +5010,6 @@ nav.orbit-bullets button.thumbnail.image > img {
 .columns.no-pad-left {
   padding-left: 0; }
 
-code {
-  font-size: .95rem; }
-
 .button:focus,
 .button:hover,
 .button.hover {
@@ -5130,16 +5131,17 @@ dl dt {
 .lowercase {
   text-transform: lowercase; }
 
-.serif {
-  font-family: "EB Garamond", "georgia", serif;
-  font-size: 1.1rem; }
+.font-embl {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif; }
 
-.sans-serif {
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-  font-size: 1.1rem; }
+.font-code {
+  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace; }
 
-.serif .sans-serif {
-  font-size: 1rem; }
+.font-serif, .serif {
+  font-family: "EB Garamond", "georgia", serif; }
+
+.font-sans-serif, .sans-serif {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif; }
 
 .block {
   display: block; }
@@ -5440,6 +5442,9 @@ input.clearable::-ms-clear {
   display: none;
   width: 0;
   height: 0; }
+
+table {
+  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace; }
 
 body.table-layout table {
   padding: 0; }

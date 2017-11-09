@@ -19,6 +19,7 @@
  * Licensed under MIT Open Source
  */
 @import 'https://code.cdn.mozilla.net/fonts/fira.css';
+@import 'https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css';
 @media print, screen and (min-width: 40em) {
   .reveal, .reveal.tiny, .reveal.small, .reveal.large {
     right: auto;
@@ -2377,6 +2378,9 @@ input.clearable::-ms-clear {
   display: none;
   width: 0;
   height: 0; }
+
+table {
+  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace; }
 
 body.table-layout table {
   padding: 0; }
