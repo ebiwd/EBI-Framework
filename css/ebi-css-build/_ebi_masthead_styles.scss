@@ -264,6 +264,12 @@
     // triangle svg background
     background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
 
+    a,
+    button {
+      // smooth transitions of header elements
+      transition: background-color 0.5s ease, opacity 0.5s ease;
+    }
+
     h1,
     h4,
     p,
@@ -276,7 +282,7 @@
     ul li.is-active a,
     ul li a:hover,
     nav ul li a.hover,
-    nav ul li a:hover { background-color: rgba(255,255,255,.5); color: #444; }
+    nav ul li a:hover { background-color: rgba(0,0,0,.9); color: $ebi-colour-light; }
     nav ul li.active a,
     nav ul li a:active,
     ul li.active-trail a,
