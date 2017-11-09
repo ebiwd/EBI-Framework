@@ -79,6 +79,6 @@
 @include ebi-foundation-overides;
 
 // Include all EBI branding
-$include-ebi-global-styles: false !global;
-$include-ebi-extra-styles: true !global;
+$include-ebi-global-styles: true !global;
+$include-ebi-extra-styles: false !global;
 @import '../ebi-global.scss';
