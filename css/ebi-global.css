@@ -5444,7 +5444,8 @@ input.clearable::-ms-clear {
   height: 0; }
 
 table {
-  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace; }
+  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 0.9rem; }
 
 body.table-layout table {
   padding: 0; }
