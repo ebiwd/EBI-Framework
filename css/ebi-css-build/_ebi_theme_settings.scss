@@ -40,6 +40,8 @@ $body-antialiased: true;
 $body-font-color: $ebi-colour-dark;
 $body-font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
 $body-font-family-serif: 'EB Garamond', 'georgia', serif;
+$code-font-family: 'Fira Code', Consolas, 'Liberation Mono', Courier, monospace;
+$table-font-family: $code-font-family;
 
 // Set foundation colours
 $foundation-palette: (

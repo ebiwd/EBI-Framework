@@ -1,6 +1,6 @@
 @mixin ebi-code-styles {
   .code {
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-family: $code-font-family;
     font-weight: normal;
     color: #0a0a0a;
     background-color: #e6e6e6;
@@ -21,6 +21,6 @@
   .kbd {
     margin: 0;
     color: #0a0a0a;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-family: $code-font-family;
   }
 }

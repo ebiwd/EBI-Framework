@@ -1,4 +1,7 @@
 @mixin ebi-table-styles {
+  table {
+    font-family: $table-font-family;
+  }
   // padding for page content
   body.table-layout table {
     padding: 0;

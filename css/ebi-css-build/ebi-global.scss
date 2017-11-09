@@ -10,7 +10,10 @@
 @import 'ebi_color_styles';
 @import 'ebi_clearable_inputs';
 @import 'embl_selector'; // EMBL Dropdown selector for .masthead-black-bar
+
+// simple imports for the font while we test
 @import 'https://code.cdn.mozilla.net/fonts/fira.css';
+@import 'https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css';
 
 @mixin ebi-base-styles {
   body h1, body h2, body h3, body h4, body h5 { font-weight: 300; letter-spacing: -.5px}
@@ -303,7 +306,7 @@
   .columns.no-pad-left { padding-left: 0; }
 
   // mono-space fonts are fat
-  code { font-size: .95rem; }
+  // code { font-size: .95rem; }
 
   // Button
   //
