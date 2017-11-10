@@ -6,11 +6,6 @@
   #local-title a { border-bottom: none; }
 
   .masthead {
-
-    // h1 {
-      // font-weight: 400;
-      // letter-spacing: -2px; // fira kerning on light fonts and default sizes sucks :(
-    // }
     // underline links in the textual area of the local masthead
     #local-title .columns {
       a { border-bottom: 1px dotted rgb(255,255,255); }
@@ -50,9 +45,6 @@
     a:hover {
       color: white;
     }
-
-    // EMBL Selector dropdown
-    @include embl-selector;
 
     .global-nav {
       font-size: .9rem;

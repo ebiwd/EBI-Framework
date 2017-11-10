@@ -1,0 +1,250 @@
+@mixin ebi-base-styles {
+  body h1, body h2, body h3, body h4, body h5 { font-weight: 300; letter-spacing: -.5px}
+
+  li { word-wrap: break-word; }
+
+  a,
+  a:visited {
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: inherit;
+  }
+  a.active,
+  a:hover,
+  a:active { border-bottom-style: solid; }
+  a.special {
+    font-style: italic;
+    border-bottom-style:double;
+    border-bottom-width: 3px;
+    padding: 0.1em 0.3em;
+  }
+  a:hover { opacity: .9; }
+  a.image,
+  a.image:visited { border-bottom: 0 none; }
+  a.button, a.button:visited { color: $ebi-colour-light; white-space: nowrap; }
+
+  /* accomodate legend.label */
+  legend.label { display: block; }
+
+  /* Secondary menu */
+  ul.menu.secondary-menu,
+  .secondary-menu ul.menu {
+    padding-bottom: 1rem;
+
+    a, a:hover { border-bottom: none; }
+    li { display: inline-block; } // renders links as bricks, not table cells
+  }
+
+
+  // Callout tiny
+  .callout.tiny { padding: 0rem; }
+
+  // Breadcrumbs
+  .breadcrumbs { padding-top: 0.5rem; }
+  body .breadcrumbs a { color: $medium-gray; border-bottom: none; }
+
+  /* Custom styling for different local masthead */
+  #local-title.logo-only img,
+  #local-title.logo-title img,
+  #local-title.logo-title-strapline img { float: left; margin: 1em 0.69em 0.69em; }
+  #local-title.logo-title span,
+  #local-title.logo-title-strapline span { display:block; margin: 1em 0 0.69em 0; float:left; }
+  #local-title.logo-title span { margin-top: 2.3em; }
+  #local-title.logo-title h1,
+  #local-title.logo-title-strapline h1 { display: inline; line-height: 100%; }
+  #local-title.logo-title-strapline h1 { font-size: 270%; }
+  #local-title.logo-title-strapline p { display: inline; font-size: 123.1%; }
+
+  /* Compact vertical menu trees */
+  ul.simple.vertical.menu {
+    margin-left: 0;
+    font-size: .9rem;
+    li {
+      margin-bottom: .5rem;
+      display: block;
+      > a { display: inline; padding: 0; }
+      > a.active:before { content: "9 "; font-family: 'EBI-Functional'; }
+      > ul.simple.menu { margin: 0.5rem; }
+    }
+  }
+
+  // cookie banner
+  .cookie-banner {
+    position:fixed;
+    background-color: $ebi-colour-dark;
+    width:100%;
+    padding: $global-padding;
+    left:0;
+    bottom:0;
+    color:#eee;
+    a, a:hover { color: $ebi-colour-light; }
+    .text { margin-right:2em; }
+  }
+
+  // image tweaks
+  body .thumbnail { box-shadow: none; }
+  .caption {
+    line-height: 1.3em;
+    font-family: sans-serif;
+    font-size: .85rem;
+    opacity: .8;
+    overflow: hidden;
+  }
+
+  // image .highlight-caption
+  a.highlight-caption,
+  .highlight-caption {
+    z-index: 1;
+    position: relative;
+    top: -3rem;
+    color: #fff;
+    padding: .25rem .5rem;
+    background: #333;
+    border-bottom: none;
+  }
+  .highlight-caption.highlight-caption-big {
+    top: -8rem;
+    display: inline-block;
+    margin-bottom: -5rem;
+  }
+  // better positioning when combined with position-relative
+  .position-relative > .highlight-caption.highlight-caption-big {
+    position: absolute;
+    top: initial;
+    bottom: 3%;
+    margin-bottom: 0;
+  }
+
+
+  body .has-tip { font-weight: normal; line-height: 1em; background: rgba(0,0,0,.03); }
+
+  /* Float left for pullquotes */
+  blockquote.float-left {
+    border-left: none;
+    text-align: right;
+    border-right: 1px solid #cacaca;
+    margin-right: 1rem;
+  }
+
+  blockquote.lead { margin-left: 1rem; border-left-color: rgba(0,0,0,0); border-right-color: rgba(0,0,0,0);}
+  blockquote.lead.quote:before {
+    content: "“";
+    position: relative;
+    top: -1.5rem;
+    left: -1.5rem;
+    font-size: 3rem;
+    display: block;
+    height: 0px;
+  }
+
+  /* bigger first line for some blockquotes */
+  blockquote.drop-quote::first-line {
+    font-size: 1.6rem;
+  }
+
+  // tweaks to foundation's mobile settings
+  @media screen and (max-width: 75rem) {
+    body {
+      ul.dropdown.menu.float-left { padding-left: .5rem; }
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 2rem; }
+      h3 { font-size: 1.5rem; }
+      h4 { font-size: 1.25rem; }
+    }
+  }
+
+  // Orbit thumbnails
+  nav.orbit-bullets button.thumbnail { width: auto; border-radius: 0; }
+  nav.orbit-bullets button.thumbnail.is-active { box-shadow: 0 0 1px  #444; }
+  nav.orbit-bullets button.thumbnail.image {width: 4rem; height: 3rem; overflow: hidden;}
+  nav.orbit-bullets button.thumbnail.image > img { min-width: 6rem; margin-left: -2rem; }
+
+  // Disable padding on left or right of foundation columns
+  .columns.no-pad-right { padding-right: 0; }
+  .columns.no-pad-left { padding-left: 0; }
+
+  // Button
+  //
+  // Your standard button suitable for clicking.
+  //
+  // :hover   - Highlights when hovering.
+  //
+  // Markup: documentation/button.html
+  //
+  // Style guide: components.button
+  .button:focus,
+  .button:hover,
+  .button.hover { opacity: .8;}
+
+  // tabs
+  .tabs-title > {
+    a { border-bottom: none; }
+    a:hover {
+      background-color: $ebi-colour-main;
+      color: $ebi-colour-white;
+    }
+    a:focus,
+    a[aria-selected='true'] {
+      color: $ebi-colour-white;
+      background: $ebi-colour-dark-grey;
+    }
+  }
+
+  // button grid
+  // Wrap a groupd of a.button.columns with div.button-grid to make a, you guessed it: grid
+  .button-grid a.button.columns {
+    margin-bottom: 1px;
+    border: 0; //unset all other borders; see https://github.com/ebiwd/EBI-Framework/issues/95
+    border-right: 1px solid #fff;
+  }
+
+  // intro unit
+  .intro-unit {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    h2 { font-size: 3rem; margin-bottom: 0; }
+    h3 { padding-bottom: 1rem; }
+    .lead { color: $secondary-color; margin-bottom: .5rem; }
+  }
+
+  // external links
+  a.external{
+    &:after {
+      content: " x";
+      font-family: "EBI-Generic";
+      font-size: .65rem;
+      position: relative;
+      top: -1px;
+      margin-left: .4rem;
+    }
+  }
+
+  // read more
+  a.read-more,
+  a.readmore,
+  a.more {
+    white-space: nowrap;
+    &:after {
+      content: " >";
+      font-family: "EBI-Functional";
+      font-size: .85em;
+    }
+  }
+
+  // wide screen support
+  @media screen and (min-width: 40em) {
+    body.full-width .row,
+    body.full-width .row .row {
+      max-width: 150rem;
+    }
+  }
+
+  // defenition lists
+  dd { padding-bottom: 1rem; }
+  dl dt {
+    font-weight: 400;
+    font-size: 1.1rem;
+    a { border-bottom: none; color: $ebi-colour-dark-grey; }
+    a:hover { border-bottom: 1px dotted; }
+  }
+}

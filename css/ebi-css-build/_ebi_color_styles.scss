@@ -1,4 +1,24 @@
 @mixin ebi-color-styles {
+  h1, h2, h3, h4, h5, h6 { color: $body-font-color; }
+
+  h4 { color: $ebi-colour-medium-grey; }
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    color: $body-font-color;
+  }
+  a:visited { color: $ebi-colour-dark-grey; }
+
+  .text-highlight {
+    color: $ebi-colour-light;
+    background-color: $ebi-colour-dark-grey;
+    padding: 0 0.2em;
+  }
+
+  .callout { background: $ebi-colour-light-grey; border: none; }
+  div.warning { border: none; }
+
   .ebi-background {
     @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-main; }
   }
