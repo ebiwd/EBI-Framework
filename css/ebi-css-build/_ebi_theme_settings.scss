@@ -44,6 +44,10 @@ $code-font-family: 'Fira Code', Consolas, 'Liberation Mono', Courier, monospace;
 $table-font-family: $code-font-family;
 $table-font-size: 0.9rem;
 
+// masthead
+$masthead-background: $secondary-color;
+$masthead-font-color: $body-background;
+
 // Set foundation colours
 $foundation-palette: (
   primary: $primary-color,

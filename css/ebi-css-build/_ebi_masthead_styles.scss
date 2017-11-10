@@ -8,7 +8,7 @@
   .masthead {
     // underline links in the textual area of the local masthead
     #local-title .columns {
-      a { border-bottom: 1px dotted rgb(255,255,255); }
+      a { border-bottom: 1px dotted $masthead-font-color; }
       a.button,
       a:hover { border-bottom: none; }
     }
@@ -60,7 +60,7 @@
       li a:focus,
       li.active a,
       li.active-trail a {
-        color: #fff;
+        color: $ebi-colour-white;
         border-bottom: none;
         background-color: #000;
         // margin-left: 3px;
@@ -253,6 +253,7 @@
     background-repeat: no-repeat;
     background-position: 100% 82%;
     background-size: cover;
+    background-color: $masthead-background;
     // triangle svg background
     background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>');
 
@@ -266,7 +267,7 @@
     h4,
     p,
     a, a:hover, a:focus, a:active, a:visited {
-      color: #fff;
+      color: $masthead-font-color;
     }
     ul li a {
       border-bottom: 0;
@@ -274,16 +275,23 @@
     ul li.is-active a,
     ul li a:hover,
     nav ul li a.hover,
-    nav ul li a:hover { background-color: rgba(0,0,0,.9); color: $ebi-colour-light; }
+    nav ul li a:hover {
+      background-color: rgba($ebi-colour-dark,.9);
+      color: color-pick-contrast($masthead-font-color, $ebi-colour-light $ebi-colour-dark, 30%);
+    }
     nav ul li.active a,
     nav ul li a:active,
     ul li.active-trail a,
     ul li.active a:visited,
-    ul li.active-trail a:visited { background-color: rgba(255,255,255,1); color: #444;border-bottom: 0;}
+    ul li.active-trail a:visited {
+      background-color: color-pick-contrast($masthead-background, $ebi-colour-dark $ebi-colour-light, 30%);
+      color: $masthead-background;
+      border-bottom: 0;
+    }
 
     nav { clear: both; }
 
-    nav ul.menu li { border-right: 1px solid $ebi-colour-light; float: left;
+    nav ul.menu li { border-right: 1px solid $masthead-font-color; float: left;
                      margin-left: 0; /* compliance compatibility */
                                      }
     nav ul.menu li:last-child,
