@@ -1101,7 +1101,7 @@ table.data-table,
 table.width-auto { width: auto; }
 /* some images should be stretched, such as sparkline-style gifs */
 table.data-table img,
-img.stretch { height: inherit; }
+img.stretch { height: inherit; max-width: none;}
 /* align table cell text to top */
 table.data-table th,
 table.data-table td,
