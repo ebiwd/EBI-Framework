@@ -1233,7 +1233,8 @@ table.width-auto {
 /* some images should be stretched, such as sparkline-style gifs */
 table.data-table img,
 img.stretch {
-  height: inherit; }
+  height: inherit;
+  max-width: none; }
 
 /* align table cell text to top */
 table.data-table th,
