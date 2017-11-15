@@ -2915,10 +2915,10 @@ table.scroll {
   overflow-x: auto; }
 
 table.hover thead tr:hover {
-  background-color: #f3f3f3; }
+  background-color: #f4f4f4; }
 
 table.hover tfoot tr:hover {
-  background-color: #ececec; }
+  background-color: #ededed; }
 
 table.hover tbody tr:hover {
   background-color: #f9f9f9; }

@@ -114,6 +114,9 @@ div.warning {
 .white-background, a.white-background, .tag.white-background, .button.white-background {
   background: white; }
 
+.black-background, a.black-background, .tag.black-background, .button.black-background {
+  background: #0a0a0a; }
+
 .tag.secondary,
 .secondary-background, a.secondary-background, .tag.secondary-background, .button.secondary-background {
   background: #666; }
@@ -141,6 +144,9 @@ div.warning {
 
 .white-color, .white-color cite, .white-color a, .white-color a:visited, .white-color h3, .white-color h4, .label.white-color, a.white-color, a:hover.white-color {
   color: white; }
+
+.black-color, .black-color cite, .black-color a, .black-color a:visited, .black-color h3, .black-color h4, .label.black-color, a.black-color, a:hover.black-color {
+  color: #0a0a0a; }
 
 .secondary-color, .secondary-color cite, .secondary-color a, .secondary-color a:visited, .secondary-color h3, .secondary-color h4, .label.secondary-color, a.secondary-color, a:hover.secondary-color {
   color: #666; }
