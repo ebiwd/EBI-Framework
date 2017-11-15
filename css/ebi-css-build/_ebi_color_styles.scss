@@ -40,6 +40,9 @@
   .white-background {
     @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-white; }
   }
+  .black-background {
+    @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $black; }
+  }
   .secondary-background {
     @at-root a#{&}, &, &.button, &.button:hover, &.tag { background: $ebi-colour-dark-grey; }
   }
@@ -81,6 +84,11 @@
   .white-color {
     @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
       color: $ebi-colour-white;
+    }
+  }
+  .black-color {
+    @at-root .label#{&}, .button#{&}, a#{&}, a:hover#{&}, &, & cite, & a, & a:hover, & a:visited, & h3, & h4 {
+      color: $black;
     }
   }
   .secondary-color {
