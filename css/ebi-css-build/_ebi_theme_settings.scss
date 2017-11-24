@@ -42,7 +42,7 @@ $body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $body-font-family-serif: 'EB Garamond', 'georgia', serif;
 $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 $table-font-family: $code-font-family;
-$table-font-size: 0.9rem;
+$table-font-size: 1rem;
 
 // masthead
 $masthead-background: $secondary-color;
@@ -68,11 +68,18 @@ $tag-color: $label-background;
 $tag-font-size: 0.8rem;
 $tag-padding: 0.33333rem 0.5rem;
 
+// Headlines
+$global-weight-h1: 300;
+$global-weight-h2: 400;
+$global-weight-h3: 400;
+$global-weight-h4: 400;
+$global-weight-h5: 400;
+
 // These don't do anything yet...
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: normal;
-$global-weight-bold: 700;
+$global-weight-bold: 500;
 $global-radius: 0;
 $global-font-size: 100%;
 $global-width: rem-calc(1200);

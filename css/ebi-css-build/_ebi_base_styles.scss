@@ -1,8 +1,12 @@
 @mixin ebi-base-styles {
-  body h1, body h2, body h3, body h4, body h5 { font-weight: 300; letter-spacing: -.5px}
-
   li { word-wrap: break-word; }
 
+  h1 { font-weight: $global-weight-h1; }
+  h2 { font-weight: $global-weight-h2; }
+  h3 { font-weight: $global-weight-h3; }
+  h4 { font-weight: $global-weight-h4; }
+  h5 { font-weight: $global-weight-h5; }
+  
   a,
   a:visited {
     border-bottom-width: 1px;
