@@ -284,7 +284,7 @@
     ul li.active-trail a,
     ul li.active a:visited,
     ul li.active-trail a:visited {
-      background-color: color-pick-contrast($masthead-background, $ebi-colour-dark $ebi-colour-light, 30%);
+      background-color: color-pick-contrast($masthead-background, $ebi-colour-light $ebi-colour-dark, 30%);
       color: $masthead-background;
       border-bottom: 0;
     }
