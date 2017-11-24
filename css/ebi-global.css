@@ -1321,7 +1321,7 @@ i {
 
 strong,
 b {
-  font-weight: 700;
+  font-weight: 500;
   line-height: inherit; }
 
 small {
@@ -1443,7 +1443,7 @@ dl {
   margin-bottom: 1rem; }
   dl dt {
     margin-bottom: 0.3rem;
-    font-weight: 700; }
+    font-weight: 500; }
 
 blockquote {
   margin: 0 0 1rem;
@@ -1810,7 +1810,7 @@ select {
   margin-top: -0.5rem;
   margin-bottom: 1rem;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #ec5840; }
   .form-error.is-visible {
     display: block; }
@@ -3825,7 +3825,7 @@ table {
     background-color: #fefefe; }
   table caption {
     padding: 0.5rem 0.625rem 0.625rem;
-    font-weight: 700; }
+    font-weight: 500; }
   table thead {
     background: #f8f8f8;
     color: #222; }
@@ -3840,7 +3840,7 @@ table {
   table tfoot th,
   table tfoot td {
     padding: 0.5rem 0.625rem 0.625rem;
-    font-weight: 700;
+    font-weight: 500;
     text-align: left; }
   table tbody th,
   table tbody td {
@@ -3994,7 +3994,7 @@ a.thumbnail {
   position: relative;
   display: inline-block;
   border-bottom: dotted 1px #8a8a8a;
-  font-weight: 700;
+  font-weight: 500;
   cursor: help; }
 
 .tooltip {
@@ -4244,12 +4244,23 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none; }
 
-body h1, body h2, body h3, body h4, body h5 {
-  font-weight: 300;
-  letter-spacing: -.5px; }
-
 li {
   word-wrap: break-word; }
+
+h1 {
+  font-weight: 300; }
+
+h2 {
+  font-weight: 400; }
+
+h3 {
+  font-weight: 400; }
+
+h4 {
+  font-weight: 400; }
+
+h5 {
+  font-weight: 400; }
 
 a,
 a:visited {
@@ -4846,7 +4857,7 @@ ul li.badge {
   border-bottom: none; }
 
 .masthead #local-title .columns a {
-  border-bottom: 1px dotted white; }
+  border-bottom: 1px dotted #f8f8f8; }
 
 .masthead #local-title .columns a.button,
 .masthead #local-title .columns a:hover {
@@ -4999,7 +5010,7 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead h4,
   .masthead p,
   .masthead a, .masthead a:hover, .masthead a:focus, .masthead a:active, .masthead a:visited {
-    color: white; }
+    color: #f8f8f8; }
   .masthead ul li a {
     border-bottom: 0; }
   .masthead ul li.is-active a,
@@ -5013,13 +5024,13 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead ul li.active-trail a,
   .masthead ul li.active a:visited,
   .masthead ul li.active-trail a:visited {
-    background-color: #222;
+    background-color: #f8f8f8;
     color: #555;
     border-bottom: 0; }
   .masthead nav {
     clear: both; }
   .masthead nav ul.menu li {
-    border-right: 1px solid white;
+    border-right: 1px solid #f8f8f8;
     float: left;
     margin-left: 0;
     /* compliance compatibility */ }
@@ -5377,7 +5388,7 @@ input.clearable::-ms-clear {
 
 table {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-size: 0.9rem; }
+  font-size: 1rem; }
 
 body.table-layout table {
   padding: 0; }
