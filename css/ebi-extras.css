@@ -18,8 +18,6 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
-@import 'https://code.cdn.mozilla.net/fonts/fira.css';
-@import 'https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css';
 @media print, screen and (min-width: 40em) {
   .reveal, .reveal.tiny, .reveal.small, .reveal.large {
     right: auto;
@@ -2380,7 +2378,7 @@ input.clearable::-ms-clear {
   height: 0; }
 
 table {
-  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-size: 0.9rem; }
 
 body.table-layout table {
@@ -2437,7 +2435,8 @@ table.width-auto {
 /* some images should be stretched, such as sparkline-style gifs */
 table.data-table img,
 img.stretch {
-  height: inherit; }
+  height: inherit;
+  max-width: none; }
 
 /* align table cell text to top */
 table.data-table th,
@@ -2451,7 +2450,7 @@ table.data-table thead {
   background: #eaeaea; }
 
 .code {
-  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;
   color: #0a0a0a;
   background-color: #e6e6e6;
@@ -2473,7 +2472,7 @@ pre > code {
 .kbd {
   margin: 0;
   color: #0a0a0a;
-  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace; }
+  font-family: Consolas, "Liberation Mono", Courier, monospace; }
 
 .related {
   background: #222;

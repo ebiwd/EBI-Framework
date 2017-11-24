@@ -29,8 +29,6 @@
      * 3. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
-@import 'https://code.cdn.mozilla.net/fonts/fira.css';
-@import 'https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -455,7 +453,7 @@ body {
   margin: 0;
   padding: 0;
   background: white;
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #222;
@@ -1332,7 +1330,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   color: inherit;
@@ -1470,7 +1468,7 @@ code {
   padding: 0.125rem 0.3125rem 0.0625rem;
   border: 1px solid #777;
   background-color: #e6e6e6;
-  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;
   color: #0a0a0a; }
 
@@ -1478,7 +1476,7 @@ kbd {
   margin: 0;
   padding: 0.125rem 0.25rem 0;
   background-color: #e6e6e6;
-  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
   color: #0a0a0a; }
 
 .subheader {
@@ -2218,16 +2216,16 @@ dl dt {
   text-transform: lowercase; }
 
 .font-embl {
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .font-code {
-  font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace; }
+  font-family: Consolas, "Liberation Mono", Courier, monospace; }
 
 .font-serif, .serif {
   font-family: "EB Garamond", "georgia", serif; }
 
 .font-sans-serif, .sans-serif {
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .block {
   display: block; }
@@ -2557,7 +2555,7 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
     .masthead-black-bar .global-nav li a:focus,
     .masthead-black-bar .global-nav li.active a,
     .masthead-black-bar .global-nav li.active-trail a {
-      color: #fff;
+      color: white;
       border-bottom: none;
       background-color: #000; }
     .masthead-black-bar .global-nav li.active a {
@@ -2671,6 +2669,7 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   background-repeat: no-repeat;
   background-position: 100% 82%;
   background-size: cover;
+  background-color: #555;
   background-image: url('data:image/svg+xml;charset=UTF-8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="147 248 60 248" xml:space="preserve"><polygon class="st0" fill="#000" fill-opacity="0.05" points="147,363.6 259.3,363.6 259.3,428.4 203.2,460.9 147,428.4 "/></svg>'); }
   .masthead a,
   .masthead button {
@@ -2679,27 +2678,27 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead h4,
   .masthead p,
   .masthead a, .masthead a:hover, .masthead a:focus, .masthead a:active, .masthead a:visited {
-    color: #fff; }
+    color: white; }
   .masthead ul li a {
     border-bottom: 0; }
   .masthead ul li.is-active a,
   .masthead ul li a:hover,
   .masthead nav ul li a.hover,
   .masthead nav ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(34, 34, 34, 0.9);
     color: #f8f8f8; }
   .masthead nav ul li.active a,
   .masthead nav ul li a:active,
   .masthead ul li.active-trail a,
   .masthead ul li.active a:visited,
   .masthead ul li.active-trail a:visited {
-    background-color: white;
-    color: #444;
+    background-color: #222;
+    color: #555;
     border-bottom: 0; }
   .masthead nav {
     clear: both; }
   .masthead nav ul.menu li {
-    border-right: 1px solid #f8f8f8;
+    border-right: 1px solid white;
     float: left;
     margin-left: 0;
     /* compliance compatibility */ }
@@ -2879,6 +2878,9 @@ a.elixir-background, .elixir-background, .elixir-background.button, .elixir-back
 a.white-background, .white-background, .white-background.button, .white-background.button:hover, .white-background.tag {
   background: white; }
 
+a.black-background, .black-background, .black-background.button, .black-background.button:hover, .black-background.tag {
+  background: #0a0a0a; }
+
 a.secondary-background, .secondary-background, .secondary-background.button, .secondary-background.button:hover, .secondary-background.tag {
   background: #555; }
 
@@ -2908,6 +2910,9 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
 
 .label.white-color, .button.white-color, a.white-color, a:hover.white-color, .white-color, .white-color cite, .white-color a, .white-color a:hover, .white-color a:visited, .white-color h3, .white-color h4 {
   color: white; }
+
+.label.black-color, .button.black-color, a.black-color, a:hover.black-color, .black-color, .black-color cite, .black-color a, .black-color a:hover, .black-color a:visited, .black-color h3, .black-color h4 {
+  color: #0a0a0a; }
 
 .label.secondary-color, .button.secondary-color, a.secondary-color, a:hover.secondary-color, .secondary-color, .secondary-color cite, .secondary-color a, .secondary-color a:hover, .secondary-color a:visited, .secondary-color h3, .secondary-color h4 {
   color: #555; }
