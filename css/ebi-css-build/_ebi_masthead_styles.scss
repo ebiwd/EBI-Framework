@@ -46,6 +46,10 @@
       color: white;
     }
 
+    a:focus {
+      box-shadow: 0 0 2px color-pick-contrast($masthead-font-color, $ebi-colour-light $ebi-colour-dark, 30%);
+    }
+
     .global-nav {
       font-size: .9rem;
 
