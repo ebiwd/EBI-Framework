@@ -39,9 +39,13 @@ Follow the migration guide: [To come]
 
 1. Quick start:
   - See the [HTML boilerplate demos in the EBI Style Lab](https://www.ebi.ac.uk/style-lab/websites/sample-site/).
-2. Guidance:
+1. Guidance:
   - For web guidelines, [check out the Style Labe](https://www.ebi.ac.uk/style-lab/websites/sample-site/) for guidance on making your site look proper and correct.
-3. Help!
+1. Building directly from the CSS and JS:
+  - If you'd like to look into making direct use of the CSS and JS, see the programatically built documentation (this is an ongoing effort):
+    - [CSS](http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/styleguide/section-components.html)
+    - [JS](https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/documenation.md#table-of-contents)
+1. Help!
   - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) in the Web Development team.
 
 ### Do I need to download this?
