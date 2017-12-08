@@ -474,10 +474,6 @@ function ebiFrameworkIncludeAnnouncements() {
     // don't treat wwwdev as distinct from www
     currentHost = currentHost.replace(/wwwdev/g , "www");
 
-    // for (var i = 0; i < Object.keys(messages).length; i++) {
-    //    var currentKey = Object.keys(messages)[i]; // www.ebi.ac.uk/*, etc.
-    // }
-
     // try to show any possible variations of the url
     // Note: this is pretty simple stupid, but maybe it's more effective than a sophisticated solution?
     injectAnnouncements(messages[currentHost]);
@@ -485,15 +481,30 @@ function ebiFrameworkIncludeAnnouncements() {
     injectAnnouncements(messages[currentHost+'/*']);
     if (currentPath.length > 1) {
       // don't try to much no path or '/'
-      injectAnnouncements(messages[currentHost+currentPath]);
-      injectAnnouncements(messages[currentHost+currentPath+'*']);
-      injectAnnouncements(messages[currentHost+currentPath+'/*']);
+      var currentPathArray = currentPath.split('/');
+
+      // construct a list of possible paths to match
+      // /style-lab/frag1/frag2 =
+      // - /style-lab/frag1/frag2
+      // - /style-lab/frag1
+      // - /style-lab
+      var pathsToMatch = [currentHost+'/'+currentPathArray[0]];
+      for (var i = 1; i < currentPathArray.length; i++) {
+        var tempPath = pathsToMatch[i-1];
+        pathsToMatch.push(tempPath+'/'+currentPathArray[i])
+      }
+
+      for (var i = 0; i < pathsToMatch.length; i++) {
+        // console.log('matching:',pathsToMatch[i]);
+        injectAnnouncements(messages[pathsToMatch[i]]);
+        injectAnnouncements(messages[pathsToMatch[i]+'*']);
+        injectAnnouncements(messages[pathsToMatch[i]+'/*']);
+      }
     }
   }
 
   // once an annocuncement has been matched to the current page, show it (if there is one)
   function injectAnnouncements(message) {
-    console.log(message);
     if (typeof(message) == 'undefined') {
       return false;
     };
@@ -508,8 +519,8 @@ function ebiFrameworkIncludeAnnouncements() {
     var wrapper = document.createElement('div');
     // var inner = document.createElement('div');
 
-    // banner.id = "cookie-banner";
-    banner.className = "row";
+    // banner.id = "";
+    banner.className = "notifications-js row margin-top-medium";
     wrapper.className = "row callout " + (message.priority || "");
     wrapper.innerHTML = "<h3>" + message.headline + "</h3>" +
     message.message +
@@ -536,7 +547,6 @@ function ebiFrameworkIncludeAnnouncements() {
   }
 
   loadRemote('https://dev.ebi.emblstatic.net/announcements.js');
-
 }
 
 /**
