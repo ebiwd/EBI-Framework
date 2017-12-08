@@ -1958,6 +1958,9 @@ a.special {
   border-bottom-width: 3px;
   padding: 0.1em 0.3em; }
 
+a:focus {
+  box-shadow: 0 0 2px rgba(100, 100, 100, 0.5); }
+
 a:hover {
   opacity: .9; }
 
@@ -2555,6 +2558,8 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead-black-bar a,
   .masthead-black-bar a:hover {
     color: white; }
+  .masthead-black-bar a:focus {
+    box-shadow: 0 0 2px #f8f8f8; }
   .masthead-black-bar .global-nav {
     font-size: .9rem; }
     .masthead-black-bar .global-nav a,
