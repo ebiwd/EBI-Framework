@@ -317,8 +317,7 @@ function ebiFrameworkUpdateFooterMeta() {
  * For more info, see: https://gitlab.ebi.ac.uk/ebiwd/ebi.emblstatic.net-root-assets/tree/master/src
  */
 function ebiFrameworkIncludeAnnouncements() {
-  // var downtimeScript =  'http://origin.dev.ebi.emblstatic.net/announcements.js?' + Math.round(new Date().getTime() / 3600000);
-  // var downtimeScript = 'http://origin.dev.ebi.emblstatic.net/announcements.js';
+  // var downtimeScript =  'https://dev.ebi.emblstatic.net/announcements.js?' + Math.round(new Date().getTime() / 3600000);
 
   // are there matching annoucnements for the current URL
   function detectAnnouncements(messages) {
@@ -390,6 +389,6 @@ function ebiFrameworkIncludeAnnouncements() {
     xmlhttp.send();
   }
 
-  loadRemote('http://origin.dev.ebi.emblstatic.net/announcements.js');
+  loadRemote('https://dev.ebi.emblstatic.net/announcements.js');
 
 }
