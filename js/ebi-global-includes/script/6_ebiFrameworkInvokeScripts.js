@@ -15,7 +15,7 @@ function ebiFrameworkInvokeScripts() {
   ebiFrameworkInsertEMBLdropdown();
   ebiFrameworkUpdateFoot();
   ebiFrameworkUpdateFooterMeta();
-  ebiFrameworkIncludeScripts();
+  ebiFrameworkIncludeAnnouncements();
   ebiFrameworkCookieBanner();
 }
 

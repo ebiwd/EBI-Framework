@@ -312,12 +312,84 @@ function ebiFrameworkUpdateFooterMeta() {
   init();
 }
 
-function ebiFrameworkIncludeScripts() {
-  var downtimeScript =  'https://www.ebi.ac.uk/web_guidelines/js/downtime.js?' + Math.round(new Date().getTime() / 3600000);
-  putComment = document.createComment(downtimeScript + ' automatically inserted');
-  putScript = document.createElement('script');
-  putScript.type = 'text/javascript';
-  putScript.src = downtimeScript;
-  document.body.appendChild(putComment);
-  document.body.appendChild(putScript);
+/**
+ * Load the downtime/announcement messages, if any.
+ * For more info, see: https://gitlab.ebi.ac.uk/ebiwd/ebi.emblstatic.net-root-assets/tree/master/src
+ */
+function ebiFrameworkIncludeAnnouncements() {
+  // var downtimeScript =  'http://origin.dev.ebi.emblstatic.net/announcements.js?' + Math.round(new Date().getTime() / 3600000);
+  // var downtimeScript = 'http://origin.dev.ebi.emblstatic.net/announcements.js';
+
+  // are there matching annoucnements for the current URL
+  function detectAnnouncements(messages) {
+
+    var currentHost = window.location.hostname,
+        currentPath = window.location.pathname;
+
+    // don't treat wwwdev as distinct from www
+    currentHost = currentHost.replace(/wwwdev/g , "www");
+
+    // for (var i = 0; i < Object.keys(messages).length; i++) {
+    //    var currentKey = Object.keys(messages)[i]; // www.ebi.ac.uk/*, etc.
+    // }
+
+    // try to show any possible variations of the url
+    // Note: this is pretty simple stupid, but maybe it's more effective than a sophisticated solution?
+    injectAnnouncements(messages[currentHost]);
+    injectAnnouncements(messages[currentHost+'/']);
+    injectAnnouncements(messages[currentHost+'/*']);
+    if (currentPath.length > 1) {
+      // don't try to much no path or '/'
+      injectAnnouncements(messages[currentHost+currentPath]);
+      injectAnnouncements(messages[currentHost+currentPath+'*']);
+      injectAnnouncements(messages[currentHost+currentPath+'/*']);
+    }
+  }
+
+  // once an annocuncement has been matched to the current page, show it (if there is one)
+  function injectAnnouncements(message) {
+    console.log(message);
+    if (typeof(message) == 'undefined') {
+      return false;
+    };
+
+    var container = (document.getElementById('main-content-area') || document.getElementById('main-content') || document.getElementById('main') || document.getElementById('content') || document.getElementById('contentsarea'));
+    if (container == null) {
+      // if no suitable container, warn
+      console.warn('A message needs to be shown on this site, but an appropriate container could not be found. \n Message follows:','\n' + message.headline,'\n' + message.message,'\n' + 'Priority:',message.priority)
+      return false;
+    }
+    var banner = document.createElement('div');
+    var wrapper = document.createElement('div');
+    // var inner = document.createElement('div');
+
+    // banner.id = "cookie-banner";
+    banner.className = "row";
+    wrapper.className = "row callout " + (message.priority || "");
+    wrapper.innerHTML = "<h3>" + message.headline + "</h3>" +
+    message.message +
+    // "<div id='cookie-dismiss'><button class='close-button' style='top: 0.3rem; color:#fff;' aria-label='Close alert' type='button'><span aria-hidden='true'>&times;</span></button></div>" +
+    "";
+
+    container.insertBefore(banner, container.firstChild);
+
+    banner.appendChild(wrapper);
+  }
+
+  function loadRemote(file) {
+    if (window.XMLHttpRequest) {
+      xmlhttp=new XMLHttpRequest();
+    }
+    xmlhttp.onreadystatechange=function() {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+        eval(xmlhttp.responseText);
+        detectAnnouncements(m)
+      }
+    }
+    xmlhttp.open("GET", file, false);
+    xmlhttp.send();
+  }
+
+  loadRemote('http://origin.dev.ebi.emblstatic.net/announcements.js');
+
 }
