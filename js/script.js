@@ -488,7 +488,7 @@ function ebiFrameworkIncludeAnnouncements() {
       // - /style-lab/frag1/frag2
       // - /style-lab/frag1
       // - /style-lab
-      var pathsToMatch = [currentHost+'/'+currentPathArray[0]];
+      var pathsToMatch = [currentHost+currentPathArray[0]];
       for (var i = 1; i < currentPathArray.length; i++) {
         var tempPath = pathsToMatch[i-1];
         pathsToMatch.push(tempPath+'/'+currentPathArray[i])
@@ -508,6 +508,14 @@ function ebiFrameworkIncludeAnnouncements() {
     if (typeof(message) == 'undefined') {
       return false;
     };
+
+    if (typeof(message.processed) != 'undefined') {
+      // don't show a message mroe than once
+      return true;
+    } else {
+      // mark message as shown
+      message.processed=true;
+    }
 
     var container = (document.getElementById('main-content-area') || document.getElementById('main-content') || document.getElementById('main') || document.getElementById('content') || document.getElementById('contentsarea'));
     if (container == null) {
