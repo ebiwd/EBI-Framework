@@ -37,6 +37,12 @@ function elixirBanner() {
             margin: 0 auto 1rem;
           }
 
+          .elixir-ribbon .row::before,
+          .elixir-ribbon .row::after {
+            display: table;
+            content: ' ';
+          }
+
           .elixir-ribbon h5 {
             font-size: 1.3rem;
           }
@@ -80,13 +86,6 @@ function elixirBanner() {
         }
         .elixir-ribbon .readmore {
           border-bottom: 1px dotted #fff;
-        }
-        .elixir-ribbon h5 {
-          margin: .5rem 0 0;
-        }
-        .elixir-ribbon .row::before, .row::after {
-          display: table;
-          content: ' ';
         }
         .elixir-ribbon .elixir-logo-kite {
           background: 80% 58% url("https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/assorted/elixir_kitemark-60px.png") no-repeat;
