@@ -9,7 +9,7 @@
     "END NOTE"
   ],
   "name": "ebi-framework",
-  "version": "1.3.0-alpha.3",
+  "version": "1.3.0-alpha.4",
   "scripts": {
     "test": "npm run libraries && npm run scss && npm run js && npm run documentation",
     "scss": "npm run foundation-scss-full-fat && npm run foundation-scss-lite && npm run foundation-scss-extras && npm run choices-scss",
