@@ -84,6 +84,10 @@ function elixirBanner() {
         .elixir-ribbon h5 {
           margin: .5rem 0 0;
         }
+        .elixir-ribbon .row::before, .row::after {
+          display: table;
+          content: ' ';
+        }
         .elixir-ribbon .elixir-logo-kite {
           background: 80% 58% url("https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/assorted/elixir_kitemark-60px.png") no-repeat;
           position: relative;
