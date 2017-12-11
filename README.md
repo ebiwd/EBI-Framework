@@ -33,7 +33,12 @@ If you're using the EBI Visual Framework v1.1 or v1.2 it is not required that yo
 
 ### How to migrate from v1.2?
 
-Follow the migration guide: [To come]
+Super easy two steps!
+1. Update your `v1.2` asset references to `v1.3`
+2. Remove the reference to `foundation.min.css` or `foundation.css` (this is now included in [`ebi-global.css`](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css))
+3. Bonus: it is recommended you also [begin loading assets from the EMBL-EBI CDN at ebi.emblstatic.net](https://github.com/ebiwd/EBI-Framework/issues/119)
+
+See a [full overview of changes in v1.3 here](https://github.com/ebiwd/EBI-Framework/issues/103).
 
 ## Where to start? How to use this?
 
