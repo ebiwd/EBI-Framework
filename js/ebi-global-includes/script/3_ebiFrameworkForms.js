@@ -10,21 +10,27 @@ function ebiFrameworkManageGlobalSearch() {
       document.body.className += ' no-global-search';
     } else {
       // If the page gets a global search, we specify how the dropdown box should be. #RespectMyAuthoriti
-      var html = '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="large-8 large-push-2">' +
-          '<fieldset>' +
-            '<div class="input-group">' +
-              '<input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">' +
-              '<div class="input-group-button">' +
-                '<input type="submit" name="submit" value="Search" class="button">' +
+      var html = '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="">' +
+          // '<fieldset>' +
+            // '<div class="input-group">' +
+              '<input type="text" name="query" id="global-searchbox" class="" placeholder="Search all of EMBL-EBI">' +
+              // '<div class="input-group-button">' +
+                // '<input type="submit" name="submit" value="Search" class="button">' +
                 '<input type="hidden" name="db" value="allebi" checked="checked">' +
                 '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' +
-              '</div>' +
-            '</div>' +
-          '</fieldset>' +
+              // '</div>' +
+            // '</div>' +
+          // '</fieldset>' +
         '</form>';
       try {
-        var gloablSearch = document.getElementById('search-global-dropdown');
+        var gloablSearch = document.getElementById('search-global-form');
         gloablSearch.innerHTML = html;
+
+        var searchToggle =  document.querySelectorAll('.search-toggle')[0];
+        searchToggle.addEventListener("click", function( event ) {
+          ebiToggleClass(document.getElementById('search-global-form'),'hide');
+        }, false);
+
       } catch (err) {
         setTimeout(init, 500);
       }

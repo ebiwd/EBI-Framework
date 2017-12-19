@@ -91,9 +91,10 @@ function ebiFrameworkPopulateBlackBar() {
           '<button class="button float-right">&nbsp;</button>'+
         '</li>'+
         '<li class="float-right search">'+
-          '<a href="#" data-toggle="search-global-dropdown"><span class="show-for-small-only">Search</span></a>'+
-          '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
-          '</div>'+
+          '<div id="search-global-form" class="inline-block float-left hide"></div>'+
+          '<a href="#" class="inline-block collpased float-left search-toggle"><span class="show-for-small-only">Search</span></a>'+
+          // '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
+          // '</div>'+
         '</li>'+
         '<li class="what about"><a href="https://www.ebi.ac.uk/about">About us</a></li>'+
         '<li class="what training"><a href="https://www.ebi.ac.uk/training">Training</a></li>'+
@@ -265,7 +266,7 @@ function ebiFrameworkInsertEMBLdropdown() {
 
     // reset black bar contenxts when mousing out
     function resetBlackBar() {
-      console.log('purged');
+      // console.log('purged');
       $('#masthead-black-bar .hover').removeClass('hover float-left');
       $('#masthead-black-bar .what').removeClass('hide');
       $('#masthead-black-bar .where').addClass('hide');
