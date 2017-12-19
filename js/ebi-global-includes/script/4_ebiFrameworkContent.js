@@ -13,6 +13,21 @@ function ebiToggleClass(element, toggleClass){
 }
 
 /**
+ * Utility function to add classes (only once).
+ */
+function ebiActivateClass(element, cssClass){
+  element.classList.remove(cssClass);
+  element.classList.add(cssClass);
+}
+
+/**
+ * Utility function to remove classes.
+ */
+function ebiRemoveClass(element, cssClass){
+  element.classList.remove(cssClass);
+}
+
+/**
  * Remove global-nav/global-nav-expanded from header/footer if body.no-global-nav is set
  */
 function ebiFrameworkHideGlobalNav() {
@@ -66,12 +81,12 @@ function ebiFrameworkPopulateBlackBar() {
     barContents.innerHTML = '<nav class="row">'+
       '<ul id="global-nav" class="menu global-nav text-right">'+
         '<li class="home-mobile"><a href="https://www.ebi.ac.uk"></a></li>'+
-        '<li class="location embl hide"><a href="http://www.embl.org">EMBL</a></li>'+
-        '<li class="location barcelona hide"><a href="#">Barcelona</a></li>'+
-        '<li class="location hamburg hide"><a href="#">Hamburg</a></li>'+
-        '<li class="location grenoble hide"><a href="#">Heidelberg</a></li>'+
-        '<li class="location grenoble hide"><a href="#">Grenoble</a></li>'+
-        '<li class="location rome hide"><a href="#">Rome</a></li>'+
+        '<li class="where embl hide"><a href="http://www.embl.org">EMBL</a></li>'+
+        '<li class="where barcelona hide"><a href="#">Barcelona</a></li>'+
+        '<li class="where hamburg hide"><a href="#">Hamburg</a></li>'+
+        '<li class="where grenoble hide"><a href="#">Heidelberg</a></li>'+
+        '<li class="where grenoble hide"><a href="#">Grenoble</a></li>'+
+        '<li class="where rome hide"><a href="#">Rome</a></li>'+
         '<li id="embl-selector" class="float-right show-for-medium embl-selector">'+
           '<button class="button float-right">&nbsp;</button>'+
         '</li>'+
@@ -84,7 +99,7 @@ function ebiFrameworkPopulateBlackBar() {
         '<li class="what training"><a href="https://www.ebi.ac.uk/training">Training</a></li>'+
         '<li class="what research"><a href="https://www.ebi.ac.uk/research">Research</a></li>'+
         '<li class="what services"><a href="https://www.ebi.ac.uk/services">Services</a></li>'+
-        '<li class="location ebi"><a href="https://www.ebi.ac.uk">EMBL-EBI</a></li>'+
+        '<li class="where ebi"><a href="https://www.ebi.ac.uk">EMBL-EBI</a></li>'+
         // '<li class="float-right embl-selector">'+
         //   '<a class="button float-right">&nbsp;</a>'+
         // '</li>'+
@@ -97,39 +112,41 @@ function ebiFrameworkPopulateBlackBar() {
 }
 
 /**
+ * Reusable function to get part of the  black bar
+ */
+function ebiGetFacet(passedAttribute){
+  var tag = "#masthead-black-bar ." + passedAttribute.toLowerCase();
+  return document.querySelectorAll(tag)[0];
+}
+
+/**
  * Active tabs in `#masthead-black-bar` accoriding to metadata
  */
 function ebiFrameworkActivateBlackBar() {
   // Look at the embl:facet-* meta tags to set active states
-  //   <meta name="embl:facet-who"   content="primary" data-tag="Sample group" />
-  //   <meta name="embl:facet-what"  content="parent"  data-tag="Research" />
-  //   <meta name="embl:facet-where" content="parent"  data-tag="EBI" />
+  // <meta name="embl:rational" content="-3" />
+  // <meta name="embl:external" content="8" />
+  // <meta name="embl:active" content="what:*" />
+  // <meta name="embl:parent-1" content="" />
+  // <meta name="embl:parent-2" content="" />
   try {
 
-    function ebiGetFacet(passedAttribute){
-      var tag = "#masthead-black-bar ." + passedAttribute.toLowerCase();
-      return document.querySelectorAll(tag)[0];
-    }
     var metas = document.getElementsByTagName('meta');
     for (var i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute("name") == "embl:facet-who") {
-        if (metas[i].getAttribute("content").toLowerCase() == "parent") {
-          var targetFacet = ebiGetFacet(metas[i].getAttribute("data-tag"));
-          // todo: insert this as a new facet, i think?
-        }
+      if (metas[i].getAttribute("name") == "embl:active") {
+        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
+        ebiRemoveClass(targetFacet,'hide');
+        ebiActivateClass(targetFacet,'active');
       }
-      if (metas[i].getAttribute("name") == "embl:facet-what") {
-        if (metas[i].getAttribute("content").toLowerCase() == "parent") {
-          var targetFacet = ebiGetFacet(metas[i].getAttribute("data-tag"));
-          ebiToggleClass(targetFacet,'active');
-        }
+      if (metas[i].getAttribute("name") == "embl:parent-1") {
+        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
+        ebiRemoveClass(targetFacet,'hide');
+        ebiActivateClass(targetFacet,'active');
       }
-      if (metas[i].getAttribute("name") == "embl:facet-where") {
-        if (metas[i].getAttribute("content").toLowerCase() == "parent") {
-          var targetFacet = ebiGetFacet(metas[i].getAttribute("data-tag"));
-          ebiToggleClass(targetFacet,'active');
-          ebiToggleClass(targetFacet,'hide'); // as we hide these by default
-        }
+      if (metas[i].getAttribute("name") == "embl:parent-2") {
+        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
+        ebiRemoveClass(targetFacet,'hide');
+        ebiActivateClass(targetFacet,'active');
       }
     }
 
@@ -225,34 +242,26 @@ function ebiFrameworkInsertEMBLdropdown() {
       window.scrollTo(0, 0);
     }, false);
 
-    // we do this bit with jquery to prototype, would need ro rewire as vanilla JS..
-    $('#masthead-black-bar .where.active').on('mouseover', function() {
-      emblResetContext(); // clear any other states
-      $('#masthead-black-bar .where.hide').addClass('hover').removeClass('hide');
+    // we do this bit with jquery to prototype; need to rewire as vanilla JS.
+    ebiGetFacet('where.active').addEventListener("mouseenter", function( event ) {
+      $('#masthead-black-bar .where.hide').addClass('hover float-left').removeClass('hide');
       // $('#masthead-black-bar .where.hide').removeClass('hide').addClass('hover');
       $('#masthead-black-bar .what').addClass('hide');
-    });
-    $('#masthead-black-bar .what.active').on('mouseover', function() {
-      emblResetContext(); // clear any other states
-      $('#masthead-black-bar .what.mission').removeClass('hide');
-      $('#masthead-black-bar .what').addClass('hover');
-    });
+    }, false);
+    ebiGetFacet('what.active').addEventListener("mouseenter", function( event ) {
+      $('#masthead-black-bar .what').removeClass('hide float-left');
+      $('#masthead-black-bar .what').addClass('hover float-left');
+      $('#masthead-black-bar .where').addClass('hide');
+    }, false);
 
-
-    // reset when user engages with content
-    function emblResetContext() {
-      // ebiFrameworkActivateBlackBar();
-      $('#masthead-black-bar .where.hover').removeClass('hover').addClass('hide');
+    // reset black bar contenxts when mousing out
+    blackBar.addEventListener("mouseleave", function( event ) {
+      console.log('purged');
+      $('#masthead-black-bar .hover').removeClass('hover float-left');
       $('#masthead-black-bar .what').removeClass('hide');
-      $('#masthead-black-bar .what.mission').addClass('hide');
-      $('#masthead-black-bar .what.hover').removeClass('hover');
-
-      // reset everything on the next mouse into content
-      $('#content').one('mouseover', function() {
-        console.log('purged');
-        emblResetContext();
-      });
-    }
+      $('#masthead-black-bar .where').addClass('hide');
+      ebiFrameworkActivateBlackBar();
+    });
 
   }
   catch(err) {};

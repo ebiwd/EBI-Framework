@@ -144,6 +144,13 @@ We've configured the system to build with NPM (no need for gulp or bower).
 #### Deploying with NPM
 Releases are available via NPM at https://www.npmjs.com/package/ebi-framework
 
+## Developing locally
+1. Edit any CSS or JS and build with `npm run scss` or `npm run js`
+2. Serve index.html with `jekyll serve --port 99`
+3. Open http://127.0.0.1:99/EBI-Framework/
+
+Todo: Run the build process and serve with gulp and browsersync.
+
 ## Roadmap
 - v1.1: Major update to the 2013 look and functionality
 - v1.2: [Major improvements around modularity, structure and visual refinements](https://github.com/ebiwd/EBI-Framework/issues/61)
