@@ -254,14 +254,23 @@ function ebiFrameworkInsertEMBLdropdown() {
       $('#masthead-black-bar .where').addClass('hide');
     }, false);
 
+    // Only reset blackbar after XXXms outside the blackbar
+    var mouseoutTimer;
+    blackBar.addEventListener("mouseenter", function() {
+      window.clearTimeout(mouseoutTimer);
+    }, false);
+    blackBar.addEventListener("mouseleave", function() {
+      mouseoutTimer = window.setTimeout(function(){ resetBlackBar(); }, 500);
+    });
+
     // reset black bar contenxts when mousing out
-    blackBar.addEventListener("mouseleave", function( event ) {
+    function resetBlackBar() {
       console.log('purged');
       $('#masthead-black-bar .hover').removeClass('hover float-left');
       $('#masthead-black-bar .what').removeClass('hide');
       $('#masthead-black-bar .where').addClass('hide');
       ebiFrameworkActivateBlackBar();
-    });
+    }
 
   }
   catch(err) {};
