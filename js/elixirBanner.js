@@ -29,7 +29,7 @@ function elixirBanner() {
       if (divElixirBanner.dataset.useBasicStyles === 'true') {
         basicStylingForNonfoundationSites = `
           .elixir-ribbon {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: Helvetica, Arial, FreeSans, 'Liberation Sans', sans-serif;
           }
 
           .elixir-ribbon .row {
