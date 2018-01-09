@@ -457,7 +457,7 @@ body {
   margin: 0;
   padding: 0;
   background: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #222;
@@ -1334,7 +1334,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   color: inherit;
@@ -4551,7 +4551,7 @@ dl dt {
   text-transform: lowercase; }
 
 .font-embl {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif; }
 
 .font-code {
   font-family: Consolas, "Liberation Mono", Courier, monospace; }
@@ -4560,7 +4560,7 @@ dl dt {
   font-family: "EB Garamond", "georgia", serif; }
 
 .font-sans-serif, .sans-serif {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif; }
 
 .block {
   display: block; }
