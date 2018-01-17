@@ -413,19 +413,25 @@ function ebiFrameworkIncludeAnnouncements() {
     banner.appendChild(wrapper);
   }
 
-  function loadRemote(file) {
+  function loadRemoteAnnouncements(file) {
     if (window.XMLHttpRequest) {
       xmlhttp=new XMLHttpRequest();
     }
     xmlhttp.onreadystatechange=function() {
       if (xmlhttp.readyState==4 && xmlhttp.status==200) {
         eval(xmlhttp.responseText);
-        detectAnnouncements(m)
+        detectAnnouncements(m);
       }
     }
     xmlhttp.open("GET", file, false);
     xmlhttp.send();
   }
 
-  loadRemote('https://dev.ebi.emblstatic.net/announcements.js');
+  if (window.location.hostname.indexOf('wwwdev.') === 0) {
+    // Load test message on wwwdev
+    loadRemoteAnnouncements('https://dev.ebi.emblstatic.net/announcements.js');
+  } else {
+    loadRemoteAnnouncements('https://ebi.emblstatic.net/announcements.js');
+  }
+
 }
