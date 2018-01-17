@@ -106,6 +106,7 @@ function elixirBanner() {
           width: 60px;
           display: inline-block;
           float: left;
+          background-size: 60px;
         }
         </style>
       `;
