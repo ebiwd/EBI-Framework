@@ -7,8 +7,10 @@ function elixirBanner() {
       var defaultName = 'This',
           defaultDescription = 'This is part of the ELIXIR distributed infrastructure for life-science information.',
           basicStylingForNonfoundationSites = '',
+          defaultLogo = 'https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/images/logos/assorted/elixir_kitemark-60px.png',
           defaultLink = 'https://www.elixir-europe.org/about-us/why-needed',
-          defaultColor = 'blue'; // options: orange, grey, green, blue
+          defaultTextColor = '#fff',
+          defaultColor = 'blue'; // options: orange, grey, green, blue, none
 
       if (typeof divElixirBanner.dataset.color !== "undefined") {
         defaultColor = divElixirBanner.dataset.color;
@@ -16,9 +18,14 @@ function elixirBanner() {
         defaultColor = (defaultColor == 'grey' ? 'rgb(77,77,72)' : defaultColor);
         defaultColor = (defaultColor == 'green' ? 'rgb(190,191,50)' : defaultColor);
         defaultColor = (defaultColor == 'blue' ? 'rgb(79,138,156)' : defaultColor);
+        defaultColor = (defaultColor == 'none' ? 'transparent' : defaultColor);
+        defaultTextColor = (defaultColor == 'transparent' ? '#222' : defaultTextColor); // grey text if background is none
       }
       if (typeof divElixirBanner.dataset.name !== "undefined") {
         defaultName = divElixirBanner.dataset.name;
+      }
+      if (divElixirBanner.dataset.useCdrLogo == "true") {
+        defaultLogo = 'https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/ELIXIR/elixir-cdr.gif';
       }
       if (typeof divElixirBanner.dataset.description !== "undefined") {
         defaultDescription = divElixirBanner.dataset.description;
@@ -78,20 +85,20 @@ function elixirBanner() {
         .elixir-ribbon a,
         .elixir-ribbon a:active,
         .elixir-ribbon a:hover {
-          color: #fff;
+          color: `+defaultTextColor+`;
           text-decoration: none;
         }
         .elixir-ribbon a:hover {
           opacity: .8;
         }
         .elixir-ribbon .readmore {
-          border-bottom: 1px dotted #fff;
+          border-bottom: 1px dotted `+defaultTextColor+`;
         }
         .elixir-ribbon h5 {
           margin: 0;
         }
         .elixir-ribbon .elixir-logo-kite {
-          background: 80% 58% url("https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/assorted/elixir_kitemark-60px.png") no-repeat;
+          background: 80% 58% url("`+defaultLogo+`") no-repeat;
           position: relative;
           top: -5px;
           margin: 0 1rem -.5rem 0;
