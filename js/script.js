@@ -71,21 +71,34 @@ function ebiFrameworkManageGlobalSearch() {
       document.body.className += ' no-global-search';
     } else {
       // If the page gets a global search, we specify how the dropdown box should be. #RespectMyAuthoriti
-      var html = '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="large-8 large-push-2">' +
-          '<fieldset>' +
-            '<div class="input-group">' +
-              '<input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">' +
-              '<div class="input-group-button">' +
-                '<input type="submit" name="submit" value="Search" class="button">' +
+      var html = '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="">' +
+          // '<fieldset>' +
+            // '<div class="input-group">' +
+            'going about this the wrong way, should show full search + ue pattern for embl selector'+
+              '<input type="text" name="query" id="global-searchbox" class="" placeholder="Search all of EMBL-EBI">' +
+              // '<div class="input-group-button">' +
+                // '<input type="submit" name="submit" value="Search" class="button">' +
                 '<input type="hidden" name="db" value="allebi" checked="checked">' +
                 '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' +
-              '</div>' +
-            '</div>' +
-          '</fieldset>' +
+              // '</div>' +
+            // '</div>' +
+          // '</fieldset>' +
         '</form>';
       try {
-        var gloablSearch = document.getElementById('search-global-dropdown');
+        var gloablSearch = document.getElementById('search-global-form');
         gloablSearch.innerHTML = html;
+
+        var searchToggle =  document.querySelectorAll('.search-toggle')[0];
+        searchToggle.addEventListener("click", function( event ) {
+          ebiToggleClass(document.getElementById('search-global-form'),'hide');
+
+          if (searchToggle.classList.contains('active')) {
+            document.getElementById('global-search').submit();
+          } else {
+            ebiToggleClass(searchToggle,'active');
+          }
+        }, false);
+
       } catch (err) {
         setTimeout(init, 500);
       }
@@ -159,6 +172,21 @@ function ebiToggleClass(element, toggleClass){
 }
 
 /**
+ * Utility function to add classes (only once).
+ */
+function ebiActivateClass(element, cssClass){
+  element.classList.remove(cssClass);
+  element.classList.add(cssClass);
+}
+
+/**
+ * Utility function to remove classes.
+ */
+function ebiRemoveClass(element, cssClass){
+  element.classList.remove(cssClass);
+}
+
+/**
  * Remove global-nav/global-nav-expanded from header/footer if body.no-global-nav is set
  */
 function ebiFrameworkHideGlobalNav() {
@@ -212,25 +240,26 @@ function ebiFrameworkPopulateBlackBar() {
     barContents.innerHTML = '<nav class="row">'+
       '<ul id="global-nav" class="menu global-nav text-right">'+
         '<li class="home-mobile"><a href="https://www.ebi.ac.uk"></a></li>'+
-        '<li class="location embl hide"><a href="http://www.embl.org">EMBL</a></li>'+
-        '<li class="location barcelona hide"><a href="#">Barcelona</a></li>'+
-        '<li class="location hamburg hide"><a href="#">Hamburg</a></li>'+
-        '<li class="location grenoble hide"><a href="#">Heidelberg</a></li>'+
-        '<li class="location grenoble hide"><a href="#">Grenoble</a></li>'+
-        '<li class="location rome hide"><a href="#">Rome</a></li>'+
+        '<li class="where embl hide"><a href="http://www.embl.org">EMBL</a></li>'+
+        '<li class="where barcelona hide"><a href="#">Barcelona</a></li>'+
+        '<li class="where hamburg hide"><a href="#">Hamburg</a></li>'+
+        '<li class="where grenoble hide"><a href="#">Heidelberg</a></li>'+
+        '<li class="where grenoble hide"><a href="#">Grenoble</a></li>'+
+        '<li class="where rome hide"><a href="#">Rome</a></li>'+
         '<li id="embl-selector" class="float-right show-for-medium embl-selector">'+
           '<button class="button float-right">&nbsp;</button>'+
         '</li>'+
         '<li class="float-right search">'+
-          '<a href="#" data-toggle="search-global-dropdown"><span class="show-for-small-only">Search</span></a>'+
-          '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
-          '</div>'+
+          '<div id="search-global-form" class="inline-block float-left hide"></div>'+
+          '<a href="#" class="inline-block collpased float-left search-toggle"><span class="show-for-small-only">Search</span></a>'+
+          // '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
+          // '</div>'+
         '</li>'+
         '<li class="what about"><a href="https://www.ebi.ac.uk/about">About us</a></li>'+
         '<li class="what training"><a href="https://www.ebi.ac.uk/training">Training</a></li>'+
         '<li class="what research"><a href="https://www.ebi.ac.uk/research">Research</a></li>'+
         '<li class="what services"><a href="https://www.ebi.ac.uk/services">Services</a></li>'+
-        '<li class="location ebi"><a href="https://www.ebi.ac.uk">EMBL-EBI</a></li>'+
+        '<li class="where ebi"><a href="https://www.ebi.ac.uk">EMBL-EBI</a></li>'+
         // '<li class="float-right embl-selector">'+
         //   '<a class="button float-right">&nbsp;</a>'+
         // '</li>'+
@@ -243,39 +272,41 @@ function ebiFrameworkPopulateBlackBar() {
 }
 
 /**
+ * Reusable function to get part of the  black bar
+ */
+function ebiGetFacet(passedAttribute){
+  var tag = "#masthead-black-bar ." + passedAttribute.toLowerCase();
+  return document.querySelectorAll(tag)[0];
+}
+
+/**
  * Active tabs in `#masthead-black-bar` accoriding to metadata
  */
 function ebiFrameworkActivateBlackBar() {
   // Look at the embl:facet-* meta tags to set active states
-  //   <meta name="embl:facet-who"   content="primary" data-tag="Sample group" />
-  //   <meta name="embl:facet-what"  content="parent"  data-tag="Research" />
-  //   <meta name="embl:facet-where" content="parent"  data-tag="EBI" />
+  // <meta name="embl:rational" content="-3" />
+  // <meta name="embl:external" content="8" />
+  // <meta name="embl:active" content="what:*" />
+  // <meta name="embl:parent-1" content="" />
+  // <meta name="embl:parent-2" content="" />
   try {
 
-    function ebiGetFacet(passedAttribute){
-      var tag = "#masthead-black-bar ." + passedAttribute.toLowerCase();
-      return document.querySelectorAll(tag)[0];
-    }
     var metas = document.getElementsByTagName('meta');
     for (var i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute("name") == "embl:facet-who") {
-        if (metas[i].getAttribute("content").toLowerCase() == "parent") {
-          var targetFacet = ebiGetFacet(metas[i].getAttribute("data-tag"));
-          // todo: insert this as a new facet, i think?
-        }
+      if (metas[i].getAttribute("name") == "embl:active") {
+        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
+        ebiRemoveClass(targetFacet,'hide');
+        ebiActivateClass(targetFacet,'active');
       }
-      if (metas[i].getAttribute("name") == "embl:facet-what") {
-        if (metas[i].getAttribute("content").toLowerCase() == "parent") {
-          var targetFacet = ebiGetFacet(metas[i].getAttribute("data-tag"));
-          ebiToggleClass(targetFacet,'active');
-        }
+      if (metas[i].getAttribute("name") == "embl:parent-1") {
+        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
+        ebiRemoveClass(targetFacet,'hide');
+        ebiActivateClass(targetFacet,'active');
       }
-      if (metas[i].getAttribute("name") == "embl:facet-where") {
-        if (metas[i].getAttribute("content").toLowerCase() == "parent") {
-          var targetFacet = ebiGetFacet(metas[i].getAttribute("data-tag"));
-          ebiToggleClass(targetFacet,'active');
-          ebiToggleClass(targetFacet,'hide'); // as we hide these by default
-        }
+      if (metas[i].getAttribute("name") == "embl:parent-2") {
+        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
+        ebiRemoveClass(targetFacet,'hide');
+        ebiActivateClass(targetFacet,'active');
       }
     }
 
@@ -371,33 +402,34 @@ function ebiFrameworkInsertEMBLdropdown() {
       window.scrollTo(0, 0);
     }, false);
 
-    // we do this bit with jquery to prototype, would need ro rewire as vanilla JS..
-    $('#masthead-black-bar .where.active').on('mouseover', function() {
-      emblResetContext(); // clear any other states
-      $('#masthead-black-bar .where.hide').addClass('hover').removeClass('hide');
+    // we do this bit with jquery to prototype; need to rewire as vanilla JS.
+    ebiGetFacet('where.active').addEventListener("mouseenter", function( event ) {
+      $('#masthead-black-bar .where.hide').addClass('hover float-left').removeClass('hide');
       // $('#masthead-black-bar .where.hide').removeClass('hide').addClass('hover');
       $('#masthead-black-bar .what').addClass('hide');
-    });
-    $('#masthead-black-bar .what.active').on('mouseover', function() {
-      emblResetContext(); // clear any other states
-      $('#masthead-black-bar .what.mission').removeClass('hide');
-      $('#masthead-black-bar .what').addClass('hover');
+    }, false);
+    ebiGetFacet('what.active').addEventListener("mouseenter", function( event ) {
+      $('#masthead-black-bar .what').removeClass('hide float-left');
+      $('#masthead-black-bar .what').addClass('hover float-left');
+      $('#masthead-black-bar .where').addClass('hide');
+    }, false);
+
+    // Only reset blackbar after XXXms outside the blackbar
+    var mouseoutTimer;
+    blackBar.addEventListener("mouseenter", function() {
+      window.clearTimeout(mouseoutTimer);
+    }, false);
+    blackBar.addEventListener("mouseleave", function() {
+      mouseoutTimer = window.setTimeout(function(){ resetBlackBar(); }, 500);
     });
 
-
-    // reset when user engages with content
-    function emblResetContext() {
-      // ebiFrameworkActivateBlackBar();
-      $('#masthead-black-bar .where.hover').removeClass('hover').addClass('hide');
+    // reset black bar contenxts when mousing out
+    function resetBlackBar() {
+      // console.log('purged');
+      $('#masthead-black-bar .hover').removeClass('hover float-left');
       $('#masthead-black-bar .what').removeClass('hide');
-      $('#masthead-black-bar .what.mission').addClass('hide');
-      $('#masthead-black-bar .what.hover').removeClass('hover');
-
-      // reset everything on the next mouse into content
-      $('#content').one('mouseover', function() {
-        console.log('purged');
-        emblResetContext();
-      });
+      $('#masthead-black-bar .where').addClass('hide');
+      ebiFrameworkActivateBlackBar();
     }
 
   }
@@ -540,21 +572,27 @@ function ebiFrameworkIncludeAnnouncements() {
     banner.appendChild(wrapper);
   }
 
-  function loadRemote(file) {
+  function loadRemoteAnnouncements(file) {
     if (window.XMLHttpRequest) {
       xmlhttp=new XMLHttpRequest();
     }
     xmlhttp.onreadystatechange=function() {
       if (xmlhttp.readyState==4 && xmlhttp.status==200) {
         eval(xmlhttp.responseText);
-        detectAnnouncements(m)
+        detectAnnouncements(m);
       }
     }
     xmlhttp.open("GET", file, false);
     xmlhttp.send();
   }
 
-  loadRemote('https://dev.ebi.emblstatic.net/announcements.js');
+  if (window.location.hostname.indexOf('wwwdev.') === 0) {
+    // Load test message on wwwdev
+    loadRemoteAnnouncements('https://dev.ebi.emblstatic.net/announcements.js');
+  } else {
+    loadRemoteAnnouncements('https://ebi.emblstatic.net/announcements.js');
+  }
+
 }
 
 /**

@@ -41,7 +41,7 @@ $body-font-color: $ebi-colour-dark;
 $body-font-family: Helvetica, Arial, FreeSans, 'Liberation Sans', sans-serif;
 $body-font-family-serif: 'EB Garamond', 'georgia', serif;
 $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
-$table-font-family: $code-font-family;
+$table-font-family: $body-font-family;
 $table-font-size: 1rem;
 
 // masthead
