@@ -5118,6 +5118,7 @@ ul.menu.dropdown ul.menu.is-dropdown-submenu.js-dropdown-active {
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
   border-color: #FFF transparent transparent; }
 
+.menu > li > a.is-active,
 .menu > li > a.active {
   font-weight: bold; }
 
