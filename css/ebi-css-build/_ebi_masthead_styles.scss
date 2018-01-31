@@ -363,6 +363,7 @@
   .dropdown.menu > li.is-dropdown-submenu-parent > a::after { border-color: #FFF transparent transparent; }
 
   // active sidebar items
+  .menu > li > a.is-active,
   .menu > li > a.active { font-weight: bold; }
 
   // dropdown arrow
