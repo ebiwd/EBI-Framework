@@ -1317,7 +1317,7 @@ i {
 
 strong,
 b {
-  font-weight: 500;
+  font-weight: 600;
   line-height: inherit; }
 
 small {
@@ -1439,7 +1439,7 @@ dl {
   margin-bottom: 1rem; }
   dl dt {
     margin-bottom: 0.3rem;
-    font-weight: 500; }
+    font-weight: 600; }
 
 blockquote {
   margin: 0 0 1rem;

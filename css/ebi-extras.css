@@ -238,7 +238,7 @@ select {
   margin-top: -0.5rem;
   margin-bottom: 1rem;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #ec5840; }
   .form-error.is-visible {
     display: block; }
@@ -2041,7 +2041,7 @@ table {
     background-color: #fefefe; }
   table caption {
     padding: 0.5rem 0.625rem 0.625rem;
-    font-weight: 500; }
+    font-weight: 600; }
   table thead {
     background: #f8f8f8;
     color: #222; }
@@ -2056,7 +2056,7 @@ table {
   table tfoot th,
   table tfoot td {
     padding: 0.5rem 0.625rem 0.625rem;
-    font-weight: 500;
+    font-weight: 600;
     text-align: left; }
   table tbody th,
   table tbody td {
@@ -2210,7 +2210,7 @@ a.thumbnail {
   position: relative;
   display: inline-block;
   border-bottom: dotted 1px #8a8a8a;
-  font-weight: 500;
+  font-weight: 600;
   cursor: help; }
 
 .tooltip {
@@ -2378,7 +2378,7 @@ input.clearable::-ms-clear {
   height: 0; }
 
 table {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif;
   font-size: 1rem; }
 
 body.table-layout table {
