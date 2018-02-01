@@ -23,14 +23,10 @@
     }
 
     .embl-bar {
-      height: 0; overflow: hidden;
-      display: none;
       background-color: #eee;
       color: #222;
-      // color: #fff;
       a {
         color: #222;
-        // border-bottom: 1px dashed #fff;
       }
       a:hover { border-bottom: 1px solid #fff; }
       .youarehere {
@@ -38,10 +34,6 @@
       }
     }
 
-    .embl-bar.active {
-      display: block;
-      height: auto; overflow: visible;
-    }
 
     .dropdown-pane.embl-dropdown {
       left: 0; //fix position of menu, to prevent horizontal scrolling of page

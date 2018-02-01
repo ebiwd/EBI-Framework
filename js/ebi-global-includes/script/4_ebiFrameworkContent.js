@@ -91,7 +91,6 @@ function ebiFrameworkPopulateBlackBar() {
           '<button class="button float-right">&nbsp;</button>'+
         '</li>'+
         '<li class="float-right search">'+
-          '<div id="search-global-form" class="inline-block float-left hide"></div>'+
           '<a href="#" class="inline-block collpased float-left search-toggle"><span class="show-for-small-only">Search</span></a>'+
           // '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
           // '</div>'+
@@ -151,6 +150,38 @@ function ebiFrameworkActivateBlackBar() {
       }
     }
 
+    // add interactivity to facets, so that hovering on what:research shows what:*
+
+    // we do this bit with jquery to prototype; need to rewire as vanilla JS.
+    ebiGetFacet('where.active').addEventListener("mouseenter", function( event ) {
+      $('#masthead-black-bar .where.hide').addClass('hover float-left').removeClass('hide');
+      // $('#masthead-black-bar .where.hide').removeClass('hide').addClass('hover');
+      $('#masthead-black-bar .what').addClass('hide');
+    }, false);
+    ebiGetFacet('what.active').addEventListener("mouseenter", function( event ) {
+      $('#masthead-black-bar .what').removeClass('hide float-left');
+      $('#masthead-black-bar .what').addClass('hover float-left');
+      $('#masthead-black-bar .where').addClass('hide');
+    }, false);
+
+    // Only reset blackbar after XXXms outside the blackbar
+    var mouseoutTimer;
+    blackBar.addEventListener("mouseenter", function() {
+      window.clearTimeout(mouseoutTimer);
+    }, false);
+    blackBar.addEventListener("mouseleave", function() {
+      mouseoutTimer = window.setTimeout(function(){ resetBlackBar(); }, 500);
+    });
+
+    // reset black bar contenxts when mousing out
+    function resetBlackBar() {
+      // console.log('purged');
+      $('#masthead-black-bar .hover').removeClass('hover float-left');
+      $('#masthead-black-bar .what').removeClass('hide');
+      $('#masthead-black-bar .where').addClass('hide');
+      ebiFrameworkActivateBlackBar();
+    }
+
   }
   catch(err) {};
 
@@ -162,12 +193,12 @@ function ebiFrameworkActivateBlackBar() {
 function ebiFrameworkInsertEMBLdropdown() {
   try {
     // remove any current dropdown
-    if ((elem=document.getElementById('embl-dropdown')) !== null) {
-      document.getElementById('embl-dropdown').remove();
+    if ((elem=document.getElementById('embl-bar')) !== null) {
+      document.getElementById('embl-bar').remove();
     }
 
     var dropdownDiv = document.createElement("div");
-    dropdownDiv.innerHTML = '<nav id="embl-bar" class="embl-bar">'+
+    dropdownDiv.innerHTML = '<nav id="embl-bar" class="embl-bar global-masthead-interactive-banner">'+
       '<div class="row padding-bottom-medium">'+
         '<div class="columns padding-top-medium">'+
           '<button class="close-button" aria-label="Close alert" type="button"><span aria-hidden="true">×</span></button>'+
@@ -212,20 +243,14 @@ function ebiFrameworkInsertEMBLdropdown() {
     var emblBarButton = document.querySelectorAll(".embl-selector")[0];
     var blackBar = document.querySelectorAll(".masthead-black-bar")[0];
 
-    // utility function to see if element has a class
-    // hasClass(element, 'class-deska');
-    function hasClass(element, cls) {
-      return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-    }
-
     // add "peeking" animation for embl selector
     emblBarButton.addEventListener("mouseenter", function( event ) {
-      if (hasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
+      if (ebiHasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
         blackBar.className += ' peek';
       }
     }, false);
     emblBarButton.addEventListener("mouseleave", function( event ) {
-      if (hasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
+      if (ebiHasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
         blackBar.classList.remove("peek");
       }
     }, false);
@@ -243,35 +268,6 @@ function ebiFrameworkInsertEMBLdropdown() {
       window.scrollTo(0, 0);
     }, false);
 
-    // we do this bit with jquery to prototype; need to rewire as vanilla JS.
-    ebiGetFacet('where.active').addEventListener("mouseenter", function( event ) {
-      $('#masthead-black-bar .where.hide').addClass('hover float-left').removeClass('hide');
-      // $('#masthead-black-bar .where.hide').removeClass('hide').addClass('hover');
-      $('#masthead-black-bar .what').addClass('hide');
-    }, false);
-    ebiGetFacet('what.active').addEventListener("mouseenter", function( event ) {
-      $('#masthead-black-bar .what').removeClass('hide float-left');
-      $('#masthead-black-bar .what').addClass('hover float-left');
-      $('#masthead-black-bar .where').addClass('hide');
-    }, false);
-
-    // Only reset blackbar after XXXms outside the blackbar
-    var mouseoutTimer;
-    blackBar.addEventListener("mouseenter", function() {
-      window.clearTimeout(mouseoutTimer);
-    }, false);
-    blackBar.addEventListener("mouseleave", function() {
-      mouseoutTimer = window.setTimeout(function(){ resetBlackBar(); }, 500);
-    });
-
-    // reset black bar contenxts when mousing out
-    function resetBlackBar() {
-      // console.log('purged');
-      $('#masthead-black-bar .hover').removeClass('hover float-left');
-      $('#masthead-black-bar .what').removeClass('hide');
-      $('#masthead-black-bar .where').addClass('hide');
-      ebiFrameworkActivateBlackBar();
-    }
 
   }
   catch(err) {};

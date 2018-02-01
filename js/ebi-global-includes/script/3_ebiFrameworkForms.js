@@ -9,26 +9,64 @@ function ebiFrameworkManageGlobalSearch() {
     if (hasLocalSearch || hasLocalEBISearch) {
       document.body.className += ' no-global-search';
     } else {
-      // If the page gets a global search, we specify how the dropdown box should be. #RespectMyAuthoriti
-      var html = '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="">' +
-          // '<fieldset>' +
-            // '<div class="input-group">' +
-              '<input type="text" name="query" id="global-searchbox" class="" placeholder="Search all of EMBL-EBI">' +
-              // '<div class="input-group-button">' +
-                // '<input type="submit" name="submit" value="Search" class="button">' +
-                '<input type="hidden" name="db" value="allebi" checked="checked">' +
-                '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' +
-              // '</div>' +
-            // '</div>' +
-          // '</fieldset>' +
-        '</form>';
       try {
-        var gloablSearch = document.getElementById('search-global-form');
-        gloablSearch.innerHTML = html;
+        // If the page gets a global search, we specify how the dropdown box should be. #RespectMyAuthoriti
+        // remove any current dropdown
+        if ((elem=document.getElementById('search-bar')) !== null) {
+          document.getElementById('search-bar').remove();
+        }
 
-        var searchToggle =  document.querySelectorAll('.search-toggle')[0];
-        searchToggle.addEventListener("click", function( event ) {
-          ebiToggleClass(document.getElementById('search-global-form'),'hide');
+        var dropdownDiv = document.createElement("div");
+        dropdownDiv.innerHTML = '<nav id="search-bar" class="search-bar global-masthead-interactive-banner">'+
+          '<div class="row padding-bottom-medium">'+
+            '<div class="columns padding-top-medium">'+
+              '<button class="close-button" aria-label="Close alert" type="button"><span aria-hidden="true">×</span></button>'+
+            '</div>'+
+          '</div>'+
+          '<div class="row">'+
+          '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="">' +
+              '<fieldset>' +
+                '<div class="input-group">' +
+                  '<input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">' +
+                  '<div class="input-group-button">' +
+                    '<input type="submit" name="submit" value="Search" class="button">' +
+                    '<input type="hidden" name="db" value="allebi" checked="checked">' +
+                    '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' +
+                  '</div>' +
+                '</div>' +
+              '</fieldset>' +
+            '</form>'+
+          '</div>'+
+        '</nav>';
+        document.getElementById("masthead-black-bar").insertBefore(dropdownDiv,document.getElementById("masthead-black-bar").firstChild);
+
+        var searchBar = document.querySelectorAll(".search-bar")[0];
+        var searchBarButton = document.querySelectorAll(".search-toggle")[0];
+        var blackBar = document.querySelectorAll(".masthead-black-bar")[0];
+
+        // add "peeking" animation for embl selector
+        searchBarButton.addEventListener("mouseenter", function( event ) {
+          if (ebiHasClass(document.querySelectorAll(".search-bar")[0], 'active') == false) {
+            blackBar.className += ' peek';
+          }
+        }, false);
+        searchBarButton.addEventListener("mouseleave", function( event ) {
+          if (ebiHasClass(document.querySelectorAll(".search-bar")[0], 'active') == false) {
+            blackBar.classList.remove("peek");
+          }
+        }, false);
+
+        // toggle the .embl-bar
+        var searchSelector = document.querySelectorAll(".search-toggle")[0].addEventListener("click", function( event ) {
+          ebiToggleClass(searchBar,'active');
+          ebiToggleClass(searchBarButton,'active');
+          window.scrollTo(0, 0);
+        }, false);
+
+        var searchSelectorClose = document.querySelectorAll(".search-bar .close-button")[0].addEventListener("click", function( event ) {
+          ebiToggleClass(searchBar,'active');
+          ebiToggleClass(searchBarButton,'active');
+          window.scrollTo(0, 0);
         }, false);
 
       } catch (err) {

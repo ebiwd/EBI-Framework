@@ -22,3 +22,9 @@ function ebiGetParameterByName(name, url) {
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+// utility function to see if element has a class
+// hasClass(element, 'class-deska');
+function ebiHasClass(element, cls) {
+  return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}

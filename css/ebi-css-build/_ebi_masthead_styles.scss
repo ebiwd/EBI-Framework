@@ -50,6 +50,17 @@
       box-shadow: 0 0 2px color-pick-contrast($masthead-font-color, $ebi-colour-light $ebi-colour-dark, 30%);
     }
 
+    .global-masthead-interactive-banner {
+      height: 0; overflow: hidden;
+      display: none;
+      background-color: #000;
+
+      &.active {
+        display: block;
+        height: auto; overflow: visible;
+      }
+    }
+
     .global-nav {
       font-size: .9rem;
 
