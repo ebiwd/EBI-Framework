@@ -23,6 +23,12 @@ function ebiGetParameterByName(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+// utility function to see if element has a class
+// hasClass(element, 'class-deska');
+function ebiHasClass(element, cls) {
+  return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
 /**
  * Mark pdf/doc/txt links with link-pdf/link-doc/link-txt classes.
  */
@@ -70,33 +76,64 @@ function ebiFrameworkManageGlobalSearch() {
     if (hasLocalSearch || hasLocalEBISearch) {
       document.body.className += ' no-global-search';
     } else {
-      // If the page gets a global search, we specify how the dropdown box should be. #RespectMyAuthoriti
-      var html = '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="">' +
-          // '<fieldset>' +
-            // '<div class="input-group">' +
-            'going about this the wrong way, should show full search + ue pattern for embl selector'+
-              '<input type="text" name="query" id="global-searchbox" class="" placeholder="Search all of EMBL-EBI">' +
-              // '<div class="input-group-button">' +
-                // '<input type="submit" name="submit" value="Search" class="button">' +
-                '<input type="hidden" name="db" value="allebi" checked="checked">' +
-                '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' +
-              // '</div>' +
-            // '</div>' +
-          // '</fieldset>' +
-        '</form>';
       try {
-        var gloablSearch = document.getElementById('search-global-form');
-        gloablSearch.innerHTML = html;
+        // If the page gets a global search, we specify how the dropdown box should be. #RespectMyAuthoriti
+        // remove any current dropdown
+        if ((elem=document.getElementById('search-bar')) !== null) {
+          document.getElementById('search-bar').remove();
+        }
 
-        var searchToggle =  document.querySelectorAll('.search-toggle')[0];
-        searchToggle.addEventListener("click", function( event ) {
-          ebiToggleClass(document.getElementById('search-global-form'),'hide');
+        var dropdownDiv = document.createElement("div");
+        dropdownDiv.innerHTML = '<nav id="search-bar" class="search-bar global-masthead-interactive-banner">'+
+          '<div class="row padding-bottom-medium">'+
+            '<div class="columns padding-top-medium">'+
+              '<button class="close-button" aria-label="Close alert" type="button"><span aria-hidden="true">×</span></button>'+
+            '</div>'+
+          '</div>'+
+          '<div class="row">'+
+          '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="">' +
+              '<fieldset>' +
+                '<div class="input-group">' +
+                  '<input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">' +
+                  '<div class="input-group-button">' +
+                    '<input type="submit" name="submit" value="Search" class="button">' +
+                    '<input type="hidden" name="db" value="allebi" checked="checked">' +
+                    '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' +
+                  '</div>' +
+                '</div>' +
+              '</fieldset>' +
+            '</form>'+
+          '</div>'+
+        '</nav>';
+        document.getElementById("masthead-black-bar").insertBefore(dropdownDiv,document.getElementById("masthead-black-bar").firstChild);
 
-          if (searchToggle.classList.contains('active')) {
-            document.getElementById('global-search').submit();
-          } else {
-            ebiToggleClass(searchToggle,'active');
+        var searchBar = document.querySelectorAll(".search-bar")[0];
+        var searchBarButton = document.querySelectorAll(".search-toggle")[0];
+        var blackBar = document.querySelectorAll(".masthead-black-bar")[0];
+
+        // add "peeking" animation for embl selector
+        searchBarButton.addEventListener("mouseenter", function( event ) {
+          if (ebiHasClass(document.querySelectorAll(".search-bar")[0], 'active') == false) {
+            blackBar.className += ' peek';
           }
+        }, false);
+        searchBarButton.addEventListener("mouseleave", function( event ) {
+          if (ebiHasClass(document.querySelectorAll(".search-bar")[0], 'active') == false) {
+            blackBar.classList.remove("peek");
+          }
+        }, false);
+
+        // toggle the .embl-bar
+        var searchSelector = document.querySelectorAll(".search-toggle")[0].addEventListener("click", function( event ) {
+          ebiToggleClass(searchBar,'active');
+          ebiToggleClass(searchBarButton,'active');
+          window.scrollTo(0, 0);
+        }, false);
+
+        var searchSelectorClose = document.querySelectorAll(".search-bar .close-button")[0].addEventListener("click", function( event ) {
+          ebiToggleClass(searchBar,'active');
+          ebiToggleClass(searchBarButton,'active');
+          window.scrollTo(0, 0);
         }, false);
 
       } catch (err) {
@@ -250,7 +287,6 @@ function ebiFrameworkPopulateBlackBar() {
           '<button class="button float-right">&nbsp;</button>'+
         '</li>'+
         '<li class="float-right search">'+
-          '<div id="search-global-form" class="inline-block float-left hide"></div>'+
           '<a href="#" class="inline-block collpased float-left search-toggle"><span class="show-for-small-only">Search</span></a>'+
           // '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
           // '</div>'+
@@ -310,6 +346,38 @@ function ebiFrameworkActivateBlackBar() {
       }
     }
 
+    // add interactivity to facets, so that hovering on what:research shows what:*
+
+    // we do this bit with jquery to prototype; need to rewire as vanilla JS.
+    ebiGetFacet('where.active').addEventListener("mouseenter", function( event ) {
+      $('#masthead-black-bar .where.hide').addClass('hover float-left').removeClass('hide');
+      // $('#masthead-black-bar .where.hide').removeClass('hide').addClass('hover');
+      $('#masthead-black-bar .what').addClass('hide');
+    }, false);
+    ebiGetFacet('what.active').addEventListener("mouseenter", function( event ) {
+      $('#masthead-black-bar .what').removeClass('hide float-left');
+      $('#masthead-black-bar .what').addClass('hover float-left');
+      $('#masthead-black-bar .where').addClass('hide');
+    }, false);
+
+    // Only reset blackbar after XXXms outside the blackbar
+    var mouseoutTimer;
+    blackBar.addEventListener("mouseenter", function() {
+      window.clearTimeout(mouseoutTimer);
+    }, false);
+    blackBar.addEventListener("mouseleave", function() {
+      mouseoutTimer = window.setTimeout(function(){ resetBlackBar(); }, 500);
+    });
+
+    // reset black bar contenxts when mousing out
+    function resetBlackBar() {
+      // console.log('purged');
+      $('#masthead-black-bar .hover').removeClass('hover float-left');
+      $('#masthead-black-bar .what').removeClass('hide');
+      $('#masthead-black-bar .where').addClass('hide');
+      ebiFrameworkActivateBlackBar();
+    }
+
   }
   catch(err) {};
 
@@ -321,12 +389,12 @@ function ebiFrameworkActivateBlackBar() {
 function ebiFrameworkInsertEMBLdropdown() {
   try {
     // remove any current dropdown
-    if ((elem=document.getElementById('embl-dropdown')) !== null) {
-      document.getElementById('embl-dropdown').remove();
+    if ((elem=document.getElementById('embl-bar')) !== null) {
+      document.getElementById('embl-bar').remove();
     }
 
     var dropdownDiv = document.createElement("div");
-    dropdownDiv.innerHTML = '<nav id="embl-bar" class="embl-bar">'+
+    dropdownDiv.innerHTML = '<nav id="embl-bar" class="embl-bar global-masthead-interactive-banner">'+
       '<div class="row padding-bottom-medium">'+
         '<div class="columns padding-top-medium">'+
           '<button class="close-button" aria-label="Close alert" type="button"><span aria-hidden="true">×</span></button>'+
@@ -371,20 +439,14 @@ function ebiFrameworkInsertEMBLdropdown() {
     var emblBarButton = document.querySelectorAll(".embl-selector")[0];
     var blackBar = document.querySelectorAll(".masthead-black-bar")[0];
 
-    // utility function to see if element has a class
-    // hasClass(element, 'class-deska');
-    function hasClass(element, cls) {
-      return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-    }
-
     // add "peeking" animation for embl selector
     emblBarButton.addEventListener("mouseenter", function( event ) {
-      if (hasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
+      if (ebiHasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
         blackBar.className += ' peek';
       }
     }, false);
     emblBarButton.addEventListener("mouseleave", function( event ) {
-      if (hasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
+      if (ebiHasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
         blackBar.classList.remove("peek");
       }
     }, false);
@@ -402,35 +464,6 @@ function ebiFrameworkInsertEMBLdropdown() {
       window.scrollTo(0, 0);
     }, false);
 
-    // we do this bit with jquery to prototype; need to rewire as vanilla JS.
-    ebiGetFacet('where.active').addEventListener("mouseenter", function( event ) {
-      $('#masthead-black-bar .where.hide').addClass('hover float-left').removeClass('hide');
-      // $('#masthead-black-bar .where.hide').removeClass('hide').addClass('hover');
-      $('#masthead-black-bar .what').addClass('hide');
-    }, false);
-    ebiGetFacet('what.active').addEventListener("mouseenter", function( event ) {
-      $('#masthead-black-bar .what').removeClass('hide float-left');
-      $('#masthead-black-bar .what').addClass('hover float-left');
-      $('#masthead-black-bar .where').addClass('hide');
-    }, false);
-
-    // Only reset blackbar after XXXms outside the blackbar
-    var mouseoutTimer;
-    blackBar.addEventListener("mouseenter", function() {
-      window.clearTimeout(mouseoutTimer);
-    }, false);
-    blackBar.addEventListener("mouseleave", function() {
-      mouseoutTimer = window.setTimeout(function(){ resetBlackBar(); }, 500);
-    });
-
-    // reset black bar contenxts when mousing out
-    function resetBlackBar() {
-      // console.log('purged');
-      $('#masthead-black-bar .hover').removeClass('hover float-left');
-      $('#masthead-black-bar .what').removeClass('hide');
-      $('#masthead-black-bar .where').addClass('hide');
-      ebiFrameworkActivateBlackBar();
-    }
 
   }
   catch(err) {};

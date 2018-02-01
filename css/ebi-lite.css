@@ -2560,6 +2560,15 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
     color: white; }
   .masthead-black-bar a:focus {
     box-shadow: 0 0 2px #f8f8f8; }
+  .masthead-black-bar .global-masthead-interactive-banner {
+    height: 0;
+    overflow: hidden;
+    display: none;
+    background-color: #000; }
+    .masthead-black-bar .global-masthead-interactive-banner.active {
+      display: block;
+      height: auto;
+      overflow: visible; }
   .masthead-black-bar .global-nav {
     font-size: .9rem; }
     .masthead-black-bar .global-nav a,
@@ -2947,9 +2956,6 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
     border-left: 0.5px solid rgba(255, 255, 255, 0.5);
     padding-left: 1.5rem; }
   .masthead-black-bar .embl-bar {
-    height: 0;
-    overflow: hidden;
-    display: none;
     background-color: #eee;
     color: #222; }
     .masthead-black-bar .embl-bar a {
@@ -2958,10 +2964,6 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
       border-bottom: 1px solid #fff; }
     .masthead-black-bar .embl-bar .youarehere {
       margin-left: -1.5rem; }
-  .masthead-black-bar .embl-bar.active {
-    display: block;
-    height: auto;
-    overflow: visible; }
   .masthead-black-bar .dropdown-pane.embl-dropdown {
     left: 0;
     background-color: #222;
