@@ -84,6 +84,7 @@ function elixirBanner() {
         .elixir-ribbon h5,
         .elixir-ribbon a,
         .elixir-ribbon a:active,
+        .elixir-ribbon a:visited,
         .elixir-ribbon a:hover {
           color: `+defaultTextColor+`;
           text-decoration: none;
