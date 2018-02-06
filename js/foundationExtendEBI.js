@@ -37,10 +37,10 @@ ebiGaIndicateLoaded(0,2);
 /**
  * Utility method to get the last in an array
  * @returns {var} the last item in the array
- * @example linkName = jQuery(actedOnItem).attr('src').split('/').last();
+ * @example linkName = jQuery(actedOnItem).attr('src').split('/').ebiLast();
  */
-if (!Array.prototype.last){
-  Array.prototype.last = function(){
+if (!Array.prototype.ebiLast){
+  Array.prototype.ebiLast = function(){
     return this[this.length - 1];
   };
 };
@@ -76,7 +76,7 @@ function analyticsTrackInteraction(actedOnItem, parentContainer, customEventName
   } else { // then derive a value
     var linkName = jQuery(actedOnItem).text().toString();
     // if there's no text, it's probably and image
-    if (linkName.length == 0 && jQuery(actedOnItem).attr('src')) linkName = jQuery(actedOnItem).attr('src').split('/').last();
+    if (linkName.length == 0 && jQuery(actedOnItem).attr('src')) linkName = jQuery(actedOnItem).attr('src').split('/').ebiLast();
     if (linkName.length == 0 && jQuery(actedOnItem).val()) linkName = jQuery(actedOnItem).val();
 
     // special things for gloabl search box
