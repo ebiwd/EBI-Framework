@@ -747,7 +747,7 @@ dd {
   font-size: 1.1rem; }
 
 .sans-serif {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif;
   font-size: 1.1rem; }
 
 .serif .sans-serif {

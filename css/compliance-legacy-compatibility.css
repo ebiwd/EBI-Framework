@@ -741,7 +741,7 @@ div.highlight {
      background-color: #1d8086;
      color: #f8f8f8;
      width: 100%;
-     font-family: 'HelveticaNeueLT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif;
      border: 0 none;
      padding: 0;
    }
@@ -1201,7 +1201,7 @@ form legend {font-size:100%;background-color:#e5e5e5;color:#222;padding:0.1em 0.
 form legend span {color:#000;font-size:138.5%;font-weight:bold;margin:0 4px}
 form legend.hide {visibility:hidden}
 form label {display:inline;margin-right:0.3em;font-weight: bold;}
-form input {margin:0.2em 0.1em 0.2em 0.2em;font-family:'Helvetica Neue',Helvetica,sans-serif;vertical-align:middle}
+form input {margin:0.2em 0.1em 0.2em 0.2em;font-family:Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif;vertical-align:middle}
 
 /* OMEGA GRID
    ********** */
