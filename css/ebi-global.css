@@ -114,6 +114,9 @@ a.elixir-background, .elixir-background, .elixir-background.button, .elixir-back
 a.white-background, .white-background, .white-background.button, .white-background.button:hover, .white-background.tag {
   background: white; }
 
+a.black-background, .black-background, .black-background.button, .black-background.button:hover, .black-background.tag {
+  background: #0a0a0a; }
+
 a.secondary-background, .secondary-background, .secondary-background.button, .secondary-background.button:hover, .secondary-background.tag {
   background: #666; }
 
@@ -143,6 +146,9 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
 
 .label.white-color, .button.white-color, a.white-color, a:hover.white-color, .white-color, .white-color cite, .white-color a, .white-color a:hover, .white-color a:visited, .white-color h3, .white-color h4 {
   color: white; }
+
+.label.black-color, .button.black-color, a.black-color, a:hover.black-color, .black-color, .black-color cite, .black-color a, .black-color a:hover, .black-color a:visited, .black-color h3, .black-color h4 {
+  color: #0a0a0a; }
 
 .label.secondary-color, .button.secondary-color, a.secondary-color, a:hover.secondary-color, .secondary-color, .secondary-color cite, .secondary-color a, .secondary-color a:hover, .secondary-color a:visited, .secondary-color h3, .secondary-color h4 {
   color: #666; }
@@ -796,7 +802,7 @@ dd {
   font-size: 1.1rem; }
 
 .sans-serif {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif;
   font-size: 1.1rem; }
 
 .serif .sans-serif {
