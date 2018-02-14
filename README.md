@@ -7,15 +7,15 @@ This, the EBI Visual Framework, is the successor to the current EBI Compliance T
 
 ## Where do I start? How do I use this?
 
-1. Quick start: 
+1. Quick start:
   - see the [HTML demos in the EBI Pattern Library /sample-site directory](https://ebiwd.github.io/EBI-Pattern-library/sample-site/).
-2. Test for compatibility: 
+2. Test for compatibility:
   - if you're migrating an exsisting site [try out the in-browser migration JS](https://github.com/ebiwd/EBI-Pattern-library/blob/gh-pages/sample-site/migrations/testMigration.js).
-3. Import legacy style and grids: 
-  - if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS](https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css).
-4. Guidance: 
+3. Import legacy style and grids:
+  - if you're not able to immediately move away from the exsisting omega grid, or some of the old popular or intro boxes [try loading the legacy CSS](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.1/css/compliance-legacy-compatibility.css).
+4. Guidance:
   - For the updated web guidelines, [check out the pattern library](https://ebiwd.github.io/EBI-Pattern-library/) for guidance on making your site look proper and correct.
-5. Help! 
+5. Help!
   - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) on the Web Development team.
 
 ### Do I need to download this?
@@ -84,7 +84,7 @@ The support for previous major versions (branches) is still being considered, bu
 Where's version 1.0, you ask? Version 1.0 is the [current EBI Compliance theme](https://www.ebi.ac.uk/web_guidelines/html/compliance/).
 
 ### Test releases
-Testing releases will be identified in their tag, a la: `V1.1.0-alpha`, where `.0-alpha` is the tag. `-alpha`, `-beta` and `-dev` are the anticipated tag suffixes. 
+Testing releases will be identified in their tag, a la: `V1.1.0-alpha`, where `.0-alpha` is the tag. `-alpha`, `-beta` and `-dev` are the anticipated tag suffixes.
 
 ### Variant releases
 There are no officially supported variant, however a "lite" version is being considered. With the branch of `v1.1-lite`.
@@ -92,11 +92,11 @@ There are no officially supported variant, however a "lite" version is being con
 ### Deployment
 Files are hosted in this pattern:
 ```
-//www.ebi.ac.uk/web_guidelines/[repo-name]/[branch]/[repo-files]
+//ebi.emblstatic.net/web_guidelines/[repo-name]/[branch]/[repo-files]
 ```
 That is:
 ```
-//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/js/script.js
+//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.1/js/script.js
 ```
 
 ### Building from NPM
@@ -111,4 +111,3 @@ To get started, have a look at `package.json`. Likely the the `npm run scss` com
         Use the masthead image as a skybox promo/feature
 - v1.4: Unit testing
 - v1.5: Add animation guidance and tooling ([see this](https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))
- 
