@@ -10,9 +10,9 @@ This framework has potentially-breaking .x releases every 6 months, the next rel
 v1.2 was released in June 2017.
 
 Code is available for usage at:
-- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/
-- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js
-- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css
+- http://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/
+- http://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/js
+- http://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/css
 
 Guidance on using is available at:
 - https://www.ebi.ac.uk/style-lab/
@@ -124,7 +124,7 @@ Files are hosted in this pattern:
 ```
 That is:
 ```
-//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/script.js
+//ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/js/script.js
 ```
 
 #### Building from NPM
