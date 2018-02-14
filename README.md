@@ -8,9 +8,9 @@ v1.3 is in beta and is targeted for a January 2018 release. Homed here are the v
 To view plans for v1.3 (and to join the discussion), [see issue 103](https://github.com/ebiwd/EBI-Framework/issues/103).
 
 Code is available for usage at:
-- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/
-- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js
-- http://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3
+- http://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/
+- http://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js
+- http://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3
 
 Guidance on using is available at:
 - https://www.ebi.ac.uk/style-lab/
@@ -48,7 +48,7 @@ See a [full overview of changes in v1.3 here](https://github.com/ebiwd/EBI-Frame
   - For web guidelines, [check out the Style Labe](https://www.ebi.ac.uk/style-lab/websites/sample-site/) for guidance on making your site look proper and correct.
 1. Building directly from the CSS and JS:
   - If you'd like to look into making direct use of the CSS and JS, see the programatically built documentation (this is an ongoing effort):
-    - [CSS](http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/styleguide/section-components.html)
+    - [CSS](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/styleguide/section-components.html)
     - [JS](https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/documenation.md#table-of-contents)
 1. Help!
   - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) in the Web Development team.
@@ -126,11 +126,11 @@ There are no officially supported variants. An Angular-specific variant is being
 ### Deployment
 Files are hosted in this pattern:
 ```
-//www.ebi.ac.uk/web_guidelines/[repo-name]/[branch]/[repo-files]
+https://ebi.emblstatic.net/web_guidelines/[repo-name]/[branch]/[repo-files]
 ```
 That is:
 ```
-//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js
+https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js
 ```
 
 #### Building from NPM
