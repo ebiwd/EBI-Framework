@@ -264,24 +264,34 @@ function activateEMBLdropdown(options) {
  */
 function smoothScrollAnchorLinksEBI() {
   (function($) {
+    function ebiSmoothScroll(hash) {
+      var target = $(hash),
+          targetName = hash;
+      target = target.length ? target : $('[name=' + targetName.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 50
+        }, {
+          duration: 1000,
+          complete: function(){ window.location.hash = targetName; }
+        });
+        return false;
+      }
+    }
+
+    // if there's an active anchor in the url, scroll to it
+    if (window.location.hash.length > 0) {
+      ebiSmoothScroll(window.location.hash);
+    }
+
+    // handle clicks within the domain
     $('a[href*=\\#]:not([href=\\#])').on('click', function() {
       // Table compatibility
       if ($(this).parent().parent().hasClass('tabs')) {
         return true; //exit
       }
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash),
-            targetName = this.hash;
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top - 40
-          }, {
-            duration: 1000,
-            complete: function(){ window.location.hash = targetName; }
-          });
-          return false;
-        }
+        ebiSmoothScroll(this.hash);
       }
     });
   }(jQuery));
