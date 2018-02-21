@@ -59,18 +59,20 @@ function elixirBanner() {
       var html = `
         <div id="elixir-ribbon" class="elixir-ribbon">
           <div class="row">
-            <a href="`+defaultLink+`">
-              <div class="elixir-logo-kite"></div>
-              <h5>
-                <span class="elixir-banner-name">`+defaultName+`</span> is part of the ELIXIR infrastructure
-              </h5>
-              <div id="elixir-banner-info">
-                <small>
-                  <span class="elixir-banner-description">`+defaultDescription+`</span>
-                  <span class="readmore">Learn more &#8250;</span>
-                </small>
-              </div>
-            </a>
+            <div class="column">
+              <a href="`+defaultLink+`">
+                <div class="elixir-logo-kite"></div>
+                <h5>
+                  <span class="elixir-banner-name">`+defaultName+`</span> is part of the ELIXIR infrastructure
+                </h5>
+                <div id="elixir-banner-info">
+                  <small>
+                    <span class="elixir-banner-description">`+defaultDescription+`</span>
+                    <span class="readmore">Learn more &#8250;</span>
+                  </small>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
 
