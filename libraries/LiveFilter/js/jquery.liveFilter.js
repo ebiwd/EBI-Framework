@@ -170,7 +170,7 @@
             $(this).hide();
           })
         } else {
-          if (aoptions.nalyticsLogging) {
+          if (options.nalyticsLogging) {
             if ($('body').hasClass('google-analytics-loaded')) {
               analyticsTrackInteraction(filter,'Live filter search');
             }
