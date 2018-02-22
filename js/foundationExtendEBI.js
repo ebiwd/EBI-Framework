@@ -428,6 +428,11 @@ function invokeResponsiveMenuEBI() {
   });
 
   $.fn.foundationExtendEBI = function() {
+    // Warn if inoking this on a near-empty html page
+    if (document.querySelectorAll('body *').length < 5) {
+      console.warn('It looks like you\'ve called foundationExtendEBI() before your body element has been populated with content. Most likely this is as you are using a JS framework, so you might want to read the guidance at https://wwwdev.ebi.ac.uk/style-lab/websites/meta-patterns/js-frameworks.html');
+    }
+
     // Activate EMBL dropdown menu
     activateEMBLdropdown();
 
