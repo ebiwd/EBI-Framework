@@ -44,13 +44,13 @@
       }
     };
 
-    if (analyticsLogging === true && delay < 200) {
-      delay = 150; // don't burn the GA api quota
-    }
-
     // Overwrite default settings with user provided ones. Declare some vars.
     var options = $.extend(defaults, settings);
     var keyDelay, filter, child;
+
+    if (options.analyticsLogging === true && options.delay < 200) {
+      options.delay = 150; // don't burn the GA api quota
+    }
 
     // Cache our wrapper element and find our target list.
     var wrap = $(this);
@@ -170,7 +170,7 @@
             $(this).hide();
           })
         } else {
-          if (analyticsLogging) {
+          if (aoptions.nalyticsLogging) {
             if ($('body').hasClass('google-analytics-loaded')) {
               analyticsTrackInteraction(filter,'Live filter search');
             }
