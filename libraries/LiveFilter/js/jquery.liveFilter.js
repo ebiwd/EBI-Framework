@@ -17,7 +17,7 @@
     var defaults = {
       delay: 50,
       analyticsLogging: false, // log to google analytics through foundationExtendEBI.js
-                               // https://github.com/ebiwd/EBI-Framework/blob/v1.1/js/foundationExtendEBI.js#L20
+                               // https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/foundationExtendEBI.js#L71
       defaultText: 'Type to Filter:',
       resetText: 'Reset',
       noMatches: 'No Matches',
