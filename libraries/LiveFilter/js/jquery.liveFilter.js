@@ -15,7 +15,8 @@
   $.fn.liveFilter = function (settings) {
     // Default settings
     var defaults = {
-      delay: 0,
+      delay: 50,
+      analyticsLogging: false, // log to google analytics through foundationExtendEBI.js
       defaultText: 'Type to Filter:',
       resetText: 'Reset',
       noMatches: 'No Matches',
@@ -116,7 +117,7 @@
       });
 
       input.blur(function() {
-        var currentVal = $(this).val(); 
+        var currentVal = $(this).val();
         if (currentVal === '') {
           $(this).val(options.defaultText);
         }
@@ -141,7 +142,7 @@
       }
 
       // Setting timeout for performance reasons.
-      keyDelay = setTimeout(function () { 
+      keyDelay = setTimeout(function () {
 
         filter = input.val().toLowerCase();
         var visible = 0;
@@ -152,6 +153,11 @@
             $(this).hide();
           })
         } else {
+          if (analyticsLogging) {
+            if ($('body').hasClass('google-analytics-loaded')) {
+              analyticsTrackInteraction(filter,'Live filter search');
+            }
+          }
           // Iterate through list and show/hide the proper elements.
           list.each(function(i) {
             text = $(this).text().toLowerCase();
