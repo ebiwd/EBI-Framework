@@ -11,6 +11,18 @@
   2) https://github.com/mikemerritt/LiveFilter/pull/15
 */
 
+/**
+ * Livefilter from a input box
+ * ---
+ * A simple dom-based search/filter utility. For more guidance, see:
+ * https://www.ebi.ac.uk/style-lab/websites/patterns/live-filter.html
+ * @param {element} actedOnItem
+ * @example
+ * $('#livefilter-element').liveFilter({
+ *   delay: 200, // don't log small changes
+ *   analyticsLogging: true
+ * });
+ */
 (function($){
   $.fn.liveFilter = function (settings) {
     // Default settings
