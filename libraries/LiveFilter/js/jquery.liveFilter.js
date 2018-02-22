@@ -48,8 +48,8 @@
     var options = $.extend(defaults, settings);
     var keyDelay, filter, child;
 
-    if (options.analyticsLogging === true && options.delay < 200) {
-      options.delay = 150; // don't burn the GA api quota
+    if (options.analyticsLogging === true && options.delay < 300) {
+      options.delay = 300; // don't burn the GA api quota
     }
 
     // Cache our wrapper element and find our target list.
