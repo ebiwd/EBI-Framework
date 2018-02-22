@@ -32,6 +32,10 @@
       }
     };
 
+    if (analyticsLogging === true && delay < 200) {
+      delay = 150; // don't burn the GA api quota
+    }
+
     // Overwrite default settings with user provided ones. Declare some vars.
     var options = $.extend(defaults, settings);
     var keyDelay, filter, child;
