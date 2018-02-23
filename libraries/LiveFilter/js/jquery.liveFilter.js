@@ -172,7 +172,7 @@
         } else {
           if (options.analyticsLogging) {
             if ($('body').hasClass('google-analytics-loaded')) {
-              analyticsTrackInteraction(filter,'Live filter search');
+              analyticsTrackInteraction(input,'Live filter search',filter);
             }
           }
           // Iterate through list and show/hide the proper elements.
