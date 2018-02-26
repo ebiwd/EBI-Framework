@@ -40,6 +40,15 @@
   .masthead-black-bar {
     background-color: $ebi-colour-dark;
 
+    > .row {
+      opacity: 0;
+
+      body.ebi-black-bar-loaded & {
+        opacity: 1;
+        opacity: unset; // show the blackbar contents after JS has strapped
+      }
+    }
+
     &,
     a,
     a:hover {
