@@ -4875,6 +4875,11 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
 
 .masthead-black-bar {
   background-color: #222; }
+  .masthead-black-bar > .row {
+    opacity: 0; }
+    body.ebi-black-bar-loaded .masthead-black-bar > .row {
+      opacity: 1;
+      opacity: unset; }
   .masthead-black-bar,
   .masthead-black-bar a,
   .masthead-black-bar a:hover {

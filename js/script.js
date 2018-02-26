@@ -303,6 +303,7 @@ function ebiFrameworkPopulateBlackBar() {
       '</ul>'+
     '</nav>';
     document.getElementById("masthead-black-bar").insertBefore(barContents,document.getElementById("masthead-black-bar").firstChild);
+    document.body.className += ' ebi-black-bar-loaded';
   }
   catch(err) {};
 }
