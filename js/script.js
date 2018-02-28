@@ -525,6 +525,51 @@ function ebiFrameworkUpdateFooterMeta() {
 }
 
 /**
+ * Once an annocuncement has been matched to the current page, show it (if there is one).
+ * @param {Object} message - The message you wish to show on the page.
+ * @param {string} message.headline - The headline to show (text)
+ * @param {string} message.message - The contents of the message (HTML)
+ * @param {string} [message.priority = 'callout'] - Optional class to add to message box. 'alert', 'warning', 'industry-background white-color' 
+ * @example
+ *   injectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
+ */
+function ebiInjectAnnouncements(message) {
+  if (typeof(message) == 'undefined') {
+    return false;
+  };
+
+  if (typeof(message.processed) != 'undefined') {
+    // don't show a message mroe than once
+    return true;
+  } else {
+    // mark message as shown
+    message.processed=true;
+  }
+
+  var container = (document.getElementById('main-content-area') || document.getElementById('main-content') || document.getElementById('main') || document.getElementById('content') || document.getElementById('contentsarea'));
+  if (container == null) {
+    // if no suitable container, warn
+    console.warn('A message needs to be shown on this site, but an appropriate container could not be found. \n Message follows:','\n' + message.headline,'\n' + message.message,'\n' + 'Priority:',message.priority)
+    return false;
+  }
+  var banner = document.createElement('div');
+  var wrapper = document.createElement('div');
+  // var inner = document.createElement('div');
+
+  // banner.id = "";
+  banner.className = "notifications-js row margin-top-medium";
+  wrapper.className = "row callout " + (message.priority || "");
+  wrapper.innerHTML = "<h3>" + message.headline + "</h3>" +
+  message.message +
+  // "<div id='cookie-dismiss'><button class='close-button' style='top: 0.3rem; color:#fff;' aria-label='Close alert' type='button'><span aria-hidden='true'>&times;</span></button></div>" +
+  "";
+
+  container.insertBefore(banner, container.firstChild);
+
+  banner.appendChild(wrapper);
+}
+
+/**
  * Load the downtime/announcement messages, if any.
  * For more info, see: https://gitlab.ebi.ac.uk/ebiwd/ebi.emblstatic.net-root-assets/tree/master/src
  */
@@ -542,9 +587,9 @@ function ebiFrameworkIncludeAnnouncements() {
 
     // try to show any possible variations of the url
     // Note: this is pretty simple stupid, but maybe it's more effective than a sophisticated solution?
-    injectAnnouncements(messages[currentHost]);
-    injectAnnouncements(messages[currentHost+'/']);
-    injectAnnouncements(messages[currentHost+'/*']);
+    ebiInjectAnnouncements(messages[currentHost]);
+    ebiInjectAnnouncements(messages[currentHost+'/']);
+    ebiInjectAnnouncements(messages[currentHost+'/*']);
     if (currentPath.length > 1) {
       // don't try to much no path or '/'
       var currentPathArray = currentPath.split('/');
@@ -562,48 +607,11 @@ function ebiFrameworkIncludeAnnouncements() {
 
       for (var i = 0; i < pathsToMatch.length; i++) {
         // console.log('matching:',pathsToMatch[i]);
-        injectAnnouncements(messages[pathsToMatch[i]]);
-        injectAnnouncements(messages[pathsToMatch[i]+'*']);
-        injectAnnouncements(messages[pathsToMatch[i]+'/*']);
+        ebiInjectAnnouncements(messages[pathsToMatch[i]]);
+        ebiInjectAnnouncements(messages[pathsToMatch[i]+'*']);
+        ebiInjectAnnouncements(messages[pathsToMatch[i]+'/*']);
       }
     }
-  }
-
-  // once an annocuncement has been matched to the current page, show it (if there is one)
-  function injectAnnouncements(message) {
-    if (typeof(message) == 'undefined') {
-      return false;
-    };
-
-    if (typeof(message.processed) != 'undefined') {
-      // don't show a message mroe than once
-      return true;
-    } else {
-      // mark message as shown
-      message.processed=true;
-    }
-
-    var container = (document.getElementById('main-content-area') || document.getElementById('main-content') || document.getElementById('main') || document.getElementById('content') || document.getElementById('contentsarea'));
-    if (container == null) {
-      // if no suitable container, warn
-      console.warn('A message needs to be shown on this site, but an appropriate container could not be found. \n Message follows:','\n' + message.headline,'\n' + message.message,'\n' + 'Priority:',message.priority)
-      return false;
-    }
-    var banner = document.createElement('div');
-    var wrapper = document.createElement('div');
-    // var inner = document.createElement('div');
-
-    // banner.id = "";
-    banner.className = "notifications-js row margin-top-medium";
-    wrapper.className = "row callout " + (message.priority || "");
-    wrapper.innerHTML = "<h3>" + message.headline + "</h3>" +
-    message.message +
-    // "<div id='cookie-dismiss'><button class='close-button' style='top: 0.3rem; color:#fff;' aria-label='Close alert' type='button'><span aria-hidden='true'>&times;</span></button></div>" +
-    "";
-
-    container.insertBefore(banner, container.firstChild);
-
-    banner.appendChild(wrapper);
   }
 
   function loadRemoteAnnouncements(file) {
