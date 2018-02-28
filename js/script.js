@@ -529,9 +529,9 @@ function ebiFrameworkUpdateFooterMeta() {
  * @param {Object} message - The message you wish to show on the page.
  * @param {string} message.headline - The headline to show (text)
  * @param {string} message.message - The contents of the message (HTML)
- * @param {string} [message.priority = 'callout'] - Optional class to add to message box. 'alert', 'warning', 'industry-background white-color' 
+ * @param {string} [message.priority = 'callout'] - Optional class to add to message box. 'alert', 'warning', 'industry-background white-color'
  * @example
- *   injectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
+ *   ebiInjectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
  */
 function ebiInjectAnnouncements(message) {
   if (typeof(message) == 'undefined') {
