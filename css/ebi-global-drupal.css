@@ -1,5 +1,13 @@
 /* Drupal 7/8 specific tweaks -- housed here as a central authority */
 
+/* Pager alignment */
+.item-list .pager li { display: inline-block; }
+.pagination .current  a { color: #fff; border-bottom: none; }
+
+/* Table */
+tbody tr:nth-child(even),
+tr.even, tr.odd { background: none; border-bottom: 1px solid #eee; }
+
 /* Drupal edit/local tabs */
 .button-group { margin-left: 0; margin-top: 2rem;}
 .button-group li { display: inline-block; }
@@ -76,11 +84,13 @@ body.is-reveal-open #status-messages { top: 30% !important; position: fixed !imp
 .shortcuts .menu > li > a,
 .sidebar .menu > li > a { padding-left: .5em }
 
-/* Remove background gunk */
+/* Remove background gunk from modals and messages */
+.callout.success { background-color: #fff; }
 div.warning {
   background: none;
   border: 1px solid rgba(10, 10, 10, 0.25);
 }
+div.warning, .warning { color: #333; }
 
 /* Do not show default page title on panel pages */
 body.page-node h2#page-title { display: none; }
