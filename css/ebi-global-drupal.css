@@ -1,5 +1,36 @@
 /* Drupal 7/8 specific tweaks -- housed here as a central authority */
 
+/* Sort table handles */
+.ief-tabledrag-handle a.tabledrag-handle {
+  border-bottom: 0;
+  padding-top: .25rem;
+  float: left;
+}
+
+a.tabledrag-handle .handle {
+  height: 24px;
+  width: 21px;
+}
+
+span.warning.tabledrag-changed {
+  margin-left: -.75rem;
+  padding-top: 0.25rem;
+  display: inline-block;
+}
+
+/* Workaround for node form buttons that don't have class .button */
+.node-form button:not(.button) {
+  background: #AAA;
+  color: #FFF;
+  padding: .25rem .5rem;
+  margin-bottom: .5rem;
+  cursor: pointer;
+}
+
+.node-form button:not(.button):hover {
+  opacity: .8;
+}
+
 /* Pager alignment */
 .item-list .pager li { display: inline-block; }
 .pagination .current  a { color: #fff; border-bottom: none; }
