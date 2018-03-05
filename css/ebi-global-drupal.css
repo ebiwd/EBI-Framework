@@ -1,18 +1,15 @@
 /* Drupal 7 specific tweaks -- homed here as a central authority */
 
-/* Sort table handles */
-.ief-tabledrag-handle a.tabledrag-handle {
+/* Sort table handles for field-widget-inline-entity-form */
+.field-widget-inline-entity-form .ief-tabledrag-handle a.tabledrag-handle {
   border-bottom: 0;
   padding-top: .25rem;
   float: left;
-}
-
-a.tabledrag-handle .handle {
   height: 24px;
   width: 21px;
 }
 
-span.warning.tabledrag-changed {
+.field-widget-inline-entity-form span.warning.tabledrag-changed {
   margin-left: -0.75rem;
   padding-top: 0.25rem;
   display: inline-block;
