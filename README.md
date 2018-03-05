@@ -7,17 +7,19 @@ v1.3 is in beta and is targeted for a January 2018 release. Homed here are the v
 
 To view plans for v1.3 (and to join the discussion), [see issue 103](https://github.com/ebiwd/EBI-Framework/issues/103).
 
-Code is available for usage at:
-- http://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/
-- http://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js
-- http://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3
+The core files that power the EBI Visual Framework:
+- https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css
+- https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js
+- https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js
+- https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js
 
 Guidance on using is available at:
-- https://www.ebi.ac.uk/style-lab/
 - https://www.ebi.ac.uk/style-lab/websites/
 - https://www.ebi.ac.uk/style-lab/websites/patterns/
 
-### On v1.1? Should you upgrade?
+## Upgrading?
+
+### On v1.1? You should upgrade.
 
 We recommend upgrading to v1.3 in a number of scenarios:
 
@@ -25,18 +27,13 @@ We recommend upgrading to v1.3 in a number of scenarios:
 1. You're a 3rd party site or service and want less of the "EBI look"
 1. More to come.
 
-To review planning for v1.3 (or to add comment), [see issue 103](https://github.com/ebiwd/EBI-Framework/issues/103).
+**Do I have to upgrade?** If you're using the EBI Visual Framework v1.1 or v1.2 it is not required that you upgrade, but there are [a number of improvements](https://github.com/ebiwd/EBI-Framework/issues/103) for sites that show a lot of data.
 
-### Do you have to upgrade?
+### On v1.2? Upgrading is as easy as falling off a log.
 
-If you're using the EBI Visual Framework v1.1 or v1.2 it is not required that you upgrade, but there are [a number of improvements](https://github.com/ebiwd/EBI-Framework/issues/103) for sites that show a lot of data.
-
-### How to migrate from v1.2?
-
-Super easy two steps!
 1. Update your `v1.2` asset references to `v1.3`
 2. Remove the reference to `foundation.min.css` or `foundation.css` (this is now included in [`ebi-global.css`](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css))
-3. Bonus: it is recommended you also [begin loading assets from the EMBL-EBI CDN at ebi.emblstatic.net](https://github.com/ebiwd/EBI-Framework/issues/119)
+3. Bonus: you should also [load assets from the EMBL-EBI CDN at ebi.emblstatic.net](https://github.com/ebiwd/EBI-Framework/issues/119)
 
 See a [full overview of changes in v1.3 here](https://github.com/ebiwd/EBI-Framework/issues/103).
 
