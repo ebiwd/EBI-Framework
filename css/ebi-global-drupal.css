@@ -5,6 +5,9 @@
   border-bottom: 0;
   padding-top: .25rem;
   float: left;
+}
+
+.field-widget-inline-entity-form .ief-tabledrag-handle a.tabledrag-handle .handle {
   height: 24px;
   width: 21px;
 }
