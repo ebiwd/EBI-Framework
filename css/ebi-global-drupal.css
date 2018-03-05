@@ -1,4 +1,4 @@
-/* Drupal 7/8 specific tweaks -- housed here as a central authority */
+/* Drupal 7 specific tweaks -- homed here as a central authority */
 
 /* Sort table handles */
 .ief-tabledrag-handle a.tabledrag-handle {
@@ -13,7 +13,7 @@ a.tabledrag-handle .handle {
 }
 
 span.warning.tabledrag-changed {
-  margin-left: -.75rem;
+  margin-left: -0.75rem;
   padding-top: 0.25rem;
   display: inline-block;
 }
@@ -69,7 +69,7 @@ body .form-actions.form-wrapper button {
   padding: 0.85em 1em;
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
-  }
+}
 
 input[type="checkbox"], input[type="radio"] { vertical-align: text-top; }
 /* no padding on facet checkboxes */
