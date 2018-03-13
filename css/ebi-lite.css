@@ -2059,11 +2059,30 @@ body .thumbnail {
   box-shadow: none; }
 
 .caption {
-  line-height: 1.3em;
-  font-family: sans-serif;
-  font-size: .85rem;
+  line-height: 1.4em;
+  font-size: .9rem;
   opacity: .8;
   overflow: hidden; }
+
+figure.image {
+  display: table;
+  width: 1px;
+  padding-left: .5rem; }
+  figure.image img, figure.image figcaption {
+    max-width: inherit; }
+  figure.image figcaption {
+    margin: .75rem 0;
+    line-height: 1.4em;
+    font-family: sans-serif;
+    font-size: .9rem;
+    opacity: .8;
+    overflow: hidden;
+    display: table-row; }
+  .columns > figure.image,
+  .columns > figure.image img {
+    max-width: 100%;
+    width: auto;
+    display: block; }
 
 a.highlight-caption,
 .highlight-caption {
