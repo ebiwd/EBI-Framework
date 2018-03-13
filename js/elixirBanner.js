@@ -37,6 +37,11 @@ function elixirBanner() {
         basicStylingForNonfoundationSites = `
           .elixir-ribbon {
             font-family: Helvetica, Arial, FreeSans, 'Liberation Sans', sans-serif;
+            clear: both;
+          }
+
+          .elixir-ribbon a, .elixir-ribbon a:active, .elixir-ribbon a:visited, .elixir-ribbon a:hover {
+            border-bottom: none;
           }
 
           .elixir-ribbon .row {
@@ -52,6 +57,8 @@ function elixirBanner() {
 
           .elixir-ribbon h5 {
             font-size: 1.3rem;
+            padding: 0;
+            display: inline-block;
           }
         `;
       }
