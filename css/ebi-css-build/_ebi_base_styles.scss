@@ -116,9 +116,12 @@
       display: table-row;
     }
 
-     // Don't inherit figcaption width when image is responsive
-    .columns > &,
-    .columns > & img {
+    // Don't inherit figcaption width when image is responsive
+    // and account for ckeditor nesting
+    .columns > div.cke_widget_image:first-child > &,
+    .columns > div.cke_widget_image:first-child > & img,
+    .columns > &:first-child,
+    .columns > &:first-child img {
       max-width: 100%;
       width: auto;
       display: block;
