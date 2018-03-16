@@ -2078,8 +2078,10 @@ figure.image {
     opacity: .8;
     overflow: hidden;
     display: table-row; }
-  .columns > figure.image,
-  .columns > figure.image img {
+  .columns > div.cke_widget_image:first-child > figure.image,
+  .columns > div.cke_widget_image:first-child > figure.image img,
+  .columns > figure.image:first-child,
+  .columns > figure.image:first-child img {
     max-width: 100%;
     width: auto;
     display: block; }
