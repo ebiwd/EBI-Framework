@@ -2973,10 +2973,10 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
   color: #777; }
 
 .masthead-black-bar {
-  transition: border-width 0.5s ease-in-out;
+  transition: border-width 0.25s ease-in-out;
   border-top: 0 solid #EEE; }
   .masthead-black-bar.peek {
-    border-top: 1rem solid #EEE; }
+    border-top: 4px solid #EEE; }
   .masthead-black-bar li.embl-selector {
     margin-left: 0.5rem;
     border-left: 0.5px solid rgba(255, 255, 255, 0.5);
@@ -3013,18 +3013,11 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
       display: none;
       width: 0 !important;
       overflow: hidden; } }
-  .masthead-black-bar .embl-selector.embl-ebi .button,
-  .masthead-black-bar .embl-selector.embl-ebi .button.hover,
-  .masthead-black-bar .embl-selector.embl-ebi .button:focus,
-  .masthead-black-bar .embl-selector.embl-ebi .button:hover {
-    background: no-repeat 4px 50% url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
-    padding-left: 95px;
-    background-size: 100px; }
   .masthead-black-bar .embl-selector .button,
   .masthead-black-bar .embl-selector .button.hover,
   .masthead-black-bar .embl-selector .button:focus,
   .masthead-black-bar .embl-selector .button:hover {
-    background: no-repeat 100% 50% url(https://embl-design-language.github.io/Framework-for-Websites/assets/logos/EMBL-white.svg);
+    background: no-repeat 100% 50% url("../images/logos/EMBL/EMBL-white.svg");
     padding-left: 2px;
     background-size: 62px;
     width: 63px;
@@ -3032,6 +3025,7 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
     line-height: 12px; }
   .masthead-black-bar .embl-selector .button.hover,
   .masthead-black-bar .embl-selector .button:hover {
+    cursor: s-resize;
     background-color: transparent; }
   .masthead-black-bar .embl-selector .button[aria-expanded="false"]::after {
     content: '';
@@ -3044,6 +3038,13 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
     position: absolute;
     top: 18px;
     margin-left: 55px; }
+  .masthead-black-bar .embl-selector.embl-ebi .button,
+  .masthead-black-bar .embl-selector.embl-ebi .button.hover,
+  .masthead-black-bar .embl-selector.embl-ebi .button:focus,
+  .masthead-black-bar .embl-selector.embl-ebi .button:hover {
+    background: no-repeat 4px 50% url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
+    padding-left: 95px;
+    background-size: 100px; }
   .masthead-black-bar .embl-selector.active {
     background-color: #ddd;
     padding-right: 1rem; }
@@ -3051,7 +3052,8 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
     .masthead-black-bar .embl-selector.active .button.hover,
     .masthead-black-bar .embl-selector.active .button:focus,
     .masthead-black-bar .embl-selector.active .button:hover {
-      background-image: url(https://embl-design-language.github.io/Framework-for-Websites/assets/logos/EMBL-black.svg); }
+      cursor: n-resize;
+      background-image: url("../images/logos/EMBL/EMBL-black.svg"); }
   @media screen and (max-width: 53em) {
     .masthead-black-bar .embl-selector .button {
       width: 0px;
