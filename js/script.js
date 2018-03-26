@@ -618,14 +618,21 @@ function ebiFrameworkIncludeAnnouncements() {
     if (window.XMLHttpRequest) {
       xmlhttp=new XMLHttpRequest();
     }
-    xmlhttp.onreadystatechange=function() {
-      if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-        eval(xmlhttp.responseText);
-        detectAnnouncements(m);
+    xmlhttp.open("GET", file, true);
+    xmlhttp.onload = function (e) {
+      if (xmlhttp.readyState === 4) {
+        if (xmlhttp.status === 200) {
+          eval(xmlhttp.responseText);
+          detectAnnouncements(m);
+        } else {
+          console.error(xmlhttp.statusText);
+        }
       }
-    }
-    xmlhttp.open("GET", file, false);
-    xmlhttp.send();
+    };
+    xmlhttp.onerror = function (e) {
+      console.error(xmlhttp.statusText);
+    };
+    xmlhttp.send(null);
   }
 
   if (window.location.hostname.indexOf('wwwdev.') === 0) {
