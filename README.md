@@ -1,58 +1,83 @@
 [![Build Status](https://travis-ci.org/ebiwd/EBI-Framework.svg?branch=v1.3)](https://travis-ci.org/ebiwd/EBI-Framework)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/ebiwd/EBI-Framework)
 
-# EBI-Framework v1.3
+# The EBI Visual Framework v1.3
 
-v1.3 is in beta and is targeted for a January 2018 release. Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
+Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).
 
-To view plans for v1.3 (and to join the discussion), [see issue 103](https://github.com/ebiwd/EBI-Framework/issues/103).
-
-The core files that power the EBI Visual Framework:
+These are the core files that power the EBI Visual Framework:
 - https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css
 - https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js
 - https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js
 - https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js
 
-Guidance on using is available at:
+General guidance on using is available at:
 - https://www.ebi.ac.uk/style-lab/websites/
 - https://www.ebi.ac.uk/style-lab/websites/patterns/
 
-## Upgrading?
+## Where to start? How to use this?
 
-### On v1.1? You should upgrade.
+1. Quick start: <br/>
+   See the [HTML boilerplate demos in the EBI Style Lab](https://www.ebi.ac.uk/style-lab/websites/sample-site/).
+1. Guidance: <br/>
+   For web guidelines, [check out the Style Labe](https://www.ebi.ac.uk/style-lab/websites/sample-site/) for guidance on making your site look proper and correct.
+1. Building directly from the CSS and JS:  <br/>
+   If you'd like to look into making direct use of the CSS and JS, see the programatically built documentation (this is an ongoing effort):
+    - [CSS](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/styleguide/section-components.html)
+    - [JS](https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/documenation.md#table-of-contents)
+1. Help!  <br/>
+   Utilise the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) in the Web Development team.
 
-We recommend upgrading to v1.3 in a number of scenarios:
+## What's new in v1.3?
 
-1. You don't want or can't use the Foundation Framework core libraries
-1. You're a 3rd party site or service and want less of the "EBI look"
-1. More to come.
+### Technical changes
 
-**Do I have to upgrade?** If you're using the EBI Visual Framework v1.1 or v1.2 it is not required that you upgrade, but there are [a number of improvements](https://github.com/ebiwd/EBI-Framework/issues/103) for sites that show a lot of data.
-
-### On v1.2? Upgrading is as easy as falling off a log.
-
-1. Update your `v1.2` asset references to `v1.3`
-2. Remove the reference to `foundation.min.css` or `foundation.css` (this is now included in [`ebi-global.css`](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css))
-3. Bonus: you should also [load assets from the EMBL-EBI CDN at ebi.emblstatic.net](https://github.com/ebiwd/EBI-Framework/issues/119)
+Hightlights:
+- Updateds to Zurb Foundation 6.4 ([use of Foundation is largely optional](https://www.ebi.ac.uk/style-lab/websites/sample-site/integrations/lite.html))
+- Offer minified versions of all JS/CSS #100
+- Add 'external' href link style #110
+- Button grid odd right corners #95
+- Announcements improvements: Value prop and efficiency of downtime.js #26
+- Improve loading of foundation, foundationExtendEBI, script.js #77
+- Black bar icons misaligned in v1.2/3 #111
+- Fully manage #masthead-black-bar in script.js #112
+  - Improve presentation of EMBL selector in black bar
+- Reduce number of 'skip-to' links in boilerplate #109
+- Add visibile a:focus style #99
 
 See a [full overview of changes in v1.3 here](https://github.com/ebiwd/EBI-Framework/issues/103).
 
-## Where to start? How to use this?
+### How has the look changed from v1.2?
 
-1. Quick start:
-  - See the [HTML boilerplate demos in the EBI Style Lab](https://www.ebi.ac.uk/style-lab/websites/sample-site/).
-1. Guidance:
-  - For web guidelines, [check out the Style Labe](https://www.ebi.ac.uk/style-lab/websites/sample-site/) for guidance on making your site look proper and correct.
-1. Building directly from the CSS and JS:
-  - If you'd like to look into making direct use of the CSS and JS, see the programatically built documentation (this is an ongoing effort):
-    - [CSS](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/styleguide/section-components.html)
-    - [JS](https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/documenation.md#table-of-contents)
-1. Help!
-  - Check out the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) in the Web Development team.
+Very little. We've focused mainly on architectural changes however there are a number of small improvements around spacing and more consitincey in button states. 
 
-### Do I need to download this?
+Compare a sample page on the three versions: [v1.1](https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/ultra-wide.html), [v1.2](https://www.ebi.ac.uk/style-lab/websites/sample-site-v1.2/boilerplate/ultra-wide.html), [v1.3](https://www.ebi.ac.uk/style-lab/websites/sample-site/boilerplate/ultra-wide.html)
 
-No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page](https://www.ebi.ac.uk/style-lab/websites/sample-site/boilerplate/blank.html).
+## Upgrading?
+
+| Your current version | Effort required | What you'll get |
+| ---- | ---- |
+| v1.1 | 1-2 hours | Better performance, a more functional design |
+| v1.2 | minutes | Better performance, more design flexibility |
+
+### Details on upgrading:
+
+- From v1.2:
+  1. Update your `v1.2` asset references to `v1.3`
+  1. Remove the reference to `foundation.min.css` or `foundation.css` (this is now included in [`ebi-global.css`](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css))
+  1. [Remove the HTML markup](https://github.com/ebiwd/EBI-Style-lab/blob/master/content/pages/websites/sample-site/boilerplate/blank.html#L69) inside your `div#masthead-black-bar`. This will automatically be inserted by `script.js`.
+  1. Bonus: you should also [load assets from the EMBL-EBI CDN at ebi.emblstatic.net](https://github.com/ebiwd/EBI-Framework/issues/119)
+- From v1.1:
+  1. [Follow the update guide from v1.1 to v1.2](https://github.com/ebiwd/EBI-Framework/issues/85)
+  2. Then follow the steps above for updating from v1.2
+
+### Do I have to upgrade?
+
+If you're using the EBI Visual Framework v1.1 or v1.2 it is not required that you upgrade, but there are [a number of improvements](https://github.com/ebiwd/EBI-Framework/issues/103) for:
+
+1. sites that show a lot of data
+1. You don't want or can't use the Foundation Framework core CSS
+1. You're a 3rd party site or service and want less of the "EBI look"
 
 ## About the EBI Visual Framework  
 
@@ -80,17 +105,18 @@ This project continues efforts of the existing guidance by providing:
   - NPM updating (optional)
 - Collaboration: A more collaborative code base (note this is on GitHub) to offer a better path for code collaboration and integration
 
+### Do I need to download this?
+
+No. The vast majority of users should link to the EBI hosted files. You'll load three CSS files, seven JS files, and use a wrapper HTML. Have a look at the source of [the simple boilerplate page](https://www.ebi.ac.uk/style-lab/websites/sample-site/boilerplate/blank.html).
+
 ## Outreach
-Not all developers are in the same place, so we plan to make use of multiple channels:
+Not all developers are in the same place, so we plan  make use of multiple channels:
 
-- Github: Many developers already live in the Github ecosystem, engaging them here will also fit well into the pull request/issue queue ecosystem.
-- Web Guidelines Committee: Not only does this facilitate exposure, but is an active forum for peer review.
-- Slack: A strong space for communication that can happen even in distributed teams.
-- Clinics: An offline space for developers to chat in depth, current thinking is to run in parallel with External Relations' monthly content clinics.
-   - Pattern library workshops: While separate from the core framework, it is interdependent
-- Showing: Launching the corporate site in the new framework will not only increase awareness but also lead by example.
-
-With the exception of clinics, all of these can be ongoing support/outreach efforts. Recommend the clinics continue as long as there is interest.
+- Github: We know many developers already live in the Github ecosystem, so go ahead and [open an issue with your question/comment/concern](https://github.com/ebiwd/EBI-Framework/issues).
+- [Web Guidelines Committee](https://www.ebi.ac.uk/seqdb/confluence/display/WGC/): overseeing the tooling for the look, feel and function of EMBL-EBI websites, the WGC holds meeting on the first Tuesday of each month at 11.00, all teams are invited to send a representative.
+- Gitter: If you want to have a conversation, [chat us on Gitter](https://gitter.im/ebiwd/EBI-Framework).
+- Pattern library workshops: We host periodic workshops to find and document patterns common across EMBL-EBI sites and services.
+- Show-and-tell: [Share your pattern in the EMBL-EBI Style Lab](https://www.ebi.ac.uk/style-lab/websites/patterns/).
 
 ## Versioning
 As not all users of the framework will be able to update to the very latest and we do not wish to hold others back, we are using a semantic versioning style of releases.
@@ -110,7 +136,7 @@ Difference between major, minor releases:
 - Major releases (1.1, 1.2, 1.3...) can have breaking changes and any such changes will be detailed and tested.
 - Minor releases (0.0.X) will not have changes to code structure or parts and will mainly add features or update visual assets (such as logos or icon fonts).
 
-The support for previous major versions (branches) is still being considered, but the current suggestion is that the last three major version will be supported with updates to assets, fonts, and critical EMBl and EBI branding.
+We support the last two major releases with bug fixes and branding. New features will only be added to the current and development versions. 
 
 Where's version 1.0, you ask? Version 1.0 is the [old EBI Compliance theme](https://www.ebi.ac.uk/web_guidelines/html/compliance/).
 
@@ -149,8 +175,5 @@ Releases are available via NPM at https://www.npmjs.com/package/ebi-framework
 Todo: Run the build process and serve with gulp and browsersync.
 
 ## Roadmap
-- v1.1: Major update to the 2013 look and functionality
-- v1.2: [Major improvements around modularity, structure and visual refinements](https://github.com/ebiwd/EBI-Framework/issues/61)
-- v1.3: To come
-- v1.4: Unit testing
-- v1.5: Add animation guidance and tooling ([see this](https://medium.com/@vlh/what-does-disney-know-about-interface-animation-anyway-86b32d01bc4a))
+- v1.4: Documentation, EMBL integration, abstracting core structure into a reusable "Framework for the Life Sciences"
+- v1.5: Patterns, accesibility.
