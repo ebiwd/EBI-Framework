@@ -121,7 +121,7 @@ function ebiGetFacet(passedAttribute){
 }
 
 /**
- * Active tabs in `#masthead-black-bar` accoriding to metadata
+ * Active tabs in `#masthead-black-bar` according to metadata
  */
 function ebiFrameworkActivateBlackBar() {
   // Look at the embl:facet-* meta tags to set active states
@@ -154,16 +154,16 @@ function ebiFrameworkActivateBlackBar() {
     // add interactivity to facets, so that hovering on what:research shows what:*
 
     // we do this bit with jquery to prototype; need to rewire as vanilla JS.
-    ebiGetFacet('where.active').addEventListener("mouseenter", function( event ) {
-      $('#masthead-black-bar .where.hide').addClass('hover float-left').removeClass('hide');
-      // $('#masthead-black-bar .where.hide').removeClass('hide').addClass('hover');
-      $('#masthead-black-bar .what').addClass('hide');
-    }, false);
-    ebiGetFacet('what.active').addEventListener("mouseenter", function( event ) {
-      $('#masthead-black-bar .what').removeClass('hide float-left');
-      $('#masthead-black-bar .what').addClass('hover float-left');
-      $('#masthead-black-bar .where').addClass('hide');
-    }, false);
+    // ebiGetFacet('where.active').addEventListener("mouseenter", function( event ) {
+    //   $('#masthead-black-bar .where.hide').addClass('hover float-left').removeClass('hide');
+    //   // $('#masthead-black-bar .where.hide').removeClass('hide').addClass('hover');
+    //   $('#masthead-black-bar .what').addClass('hide');
+    // }, false);
+    // ebiGetFacet('what.active').addEventListener("mouseenter", function( event ) {
+    //   $('#masthead-black-bar .what').removeClass('hide float-left');
+    //   $('#masthead-black-bar .what').addClass('hover float-left');
+    //   $('#masthead-black-bar .where').addClass('hide');
+    // }, false);
 
     // Only reset blackbar after XXXms outside the blackbar
     var mouseoutTimer;
@@ -174,12 +174,12 @@ function ebiFrameworkActivateBlackBar() {
       mouseoutTimer = window.setTimeout(function(){ resetBlackBar(); }, 500);
     });
 
-    // reset black bar contenxts when mousing out
+    // reset black bar contexts when mousing out
     function resetBlackBar() {
       // console.log('purged');
-      $('#masthead-black-bar .hover').removeClass('hover float-left');
-      $('#masthead-black-bar .what').removeClass('hide');
-      $('#masthead-black-bar .where').addClass('hide');
+      // $('#masthead-black-bar .hover').removeClass('hover float-left');
+      // $('#masthead-black-bar .what').removeClass('hide');
+      // $('#masthead-black-bar .where').addClass('hide');
       ebiFrameworkActivateBlackBar();
     }
 
@@ -212,7 +212,7 @@ function ebiFrameworkInsertEMBLdropdown() {
             '<div class="column padding-bottom-medium"><a class="" href="#research"><h5 class="inline underline">Research</h5> the molecular basis of life</a></div>'+
             '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Services</h5> and infrastructure for research</a></div>'+
             '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Training</h5> and inspiring scientists</a></div>'+
-            '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Transfer</h5> and deverlopment of technology</a></div>'+
+            '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Transfer</h5> and development of technology</a></div>'+
             '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Integrating</h5> life science research in Europe</a></div>'+
           '</div>'+
           '<div class="margin-top-xlarge no-underline">'+
@@ -231,7 +231,7 @@ function ebiFrameworkInsertEMBLdropdown() {
             '<div class="column">'+
               '<h5><a href="https://www.ebi.ac.uk/">Hinxton</a></h5>'+
               '<span class="tag "><i class="icon icon-generic" data-icon="["></i> you are here</span>'+
-              '<p class="small margin-bottom-none">Bioinformatiocs at the EBI</p>'+
+              '<p class="small margin-bottom-none">Bioinformatics at the EBI</p>'+
             '</div>'+
             '<div class="column"><h5><a href="//www.embl.it/">Rome</a></h5><p class="small">Epigenetics and neurobiology</p></div>'+
           '</div>'+
@@ -329,7 +329,7 @@ function ebiFrameworkUpdateFooterMeta() {
 }
 
 /**
- * Once an annocuncement has been matched to the current page, show it (if there is one).
+ * Once an announcement has been matched to the current page, show it (if there is one).
  * @param {Object} message - The message you wish to show on the page.
  * @param {string} message.headline - The headline to show (text)
  * @param {string} message.message - The contents of the message (HTML)
@@ -343,7 +343,7 @@ function ebiInjectAnnouncements(message) {
   };
 
   if (typeof(message.processed) != 'undefined') {
-    // don't show a message mroe than once
+    // don't show a message more than once
     return true;
   } else {
     // mark message as shown
@@ -380,7 +380,7 @@ function ebiInjectAnnouncements(message) {
 function ebiFrameworkIncludeAnnouncements() {
   // var downtimeScript =  'https://dev.ebi.emblstatic.net/announcements.js?' + Math.round(new Date().getTime() / 3600000);
 
-  // are there matching annoucnements for the current URL
+  // are there matching announcements for the current URL
   function detectAnnouncements(messages) {
 
     var currentHost = window.location.hostname,
