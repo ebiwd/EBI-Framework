@@ -255,6 +255,7 @@ $accordion-content-background: $white;
 $accordion-content-border: 1px solid $light-gray;
 $accordion-content-color: foreground($accordion-content-background, $body-font-color);
 $accordion-content-padding: 1rem;
+$accordion-title-font-size: rem-calc(14);
 
 // 8. Accordion Menu
 // -----------------
@@ -565,7 +566,7 @@ $show-header-for-stacked: false;
 $tab-margin: 0;
 $tab-background: $white;
 $tab-background-active: $light-gray;
-$tab-item-font-size: rem-calc(12);
+$tab-item-font-size: rem-calc(14);
 $tab-item-background-hover: $white;
 $tab-item-padding: 1.25rem 1.5rem;
 $tab-expand-max: 6;
