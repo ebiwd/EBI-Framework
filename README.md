@@ -17,17 +17,7 @@ General guidance on using is available at:
 
 ## Where to start? How to use this?
 
-1. Building your first page:
-   - [Read up on the structure of an EMBL-EBI page](https://www.ebi.ac.uk/style-lab/websites/meta-patterns/page-structure.html)
-   - Use [HTML boilerplate demos in the EBI Style Lab](https://www.ebi.ac.uk/style-lab/websites/sample-site/).
-1. Guidance: <br/>
-   For web guidelines, [check out the Style Lab](https://www.ebi.ac.uk/style-lab/websites/sample-site/) for guidance on making your site look proper and correct.
-1. Building directly from the CSS and JS:  <br/>
-   If you'd like to look into making direct use of the CSS and JS, see the programatically built documentation (this is an ongoing effort):
-    - [CSS](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/styleguide/section-components.html)
-    - [JS](https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/documenation.md#table-of-contents)
-1. Help!  <br/>
-   Utilise the [issue queue](https://github.com/ebiwd/EBI-Framework/issues) or contact [Ken Hawkins](https://www.ebi.ac.uk/about/people/ken-hawkins) in the Web Development team.
+Head to the EBI Style Lab and [start at Implementing the EBI Visual Framework](https://www.ebi.ac.uk/style-lab/websites/#implementing-the-ebi-visual-framework).
 
 ## What's new in v1.3?
 
