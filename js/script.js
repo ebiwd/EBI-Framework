@@ -283,7 +283,7 @@ function ebiFrameworkPopulateBlackBar() {
         '<li class="where grenoble hide"><a href="#">Heidelberg</a></li>'+
         '<li class="where grenoble hide"><a href="#">Grenoble</a></li>'+
         '<li class="where rome hide"><a href="#">Rome</a></li>'+
-        '<li id="embl-selector" class="float-right show-for-medium embl-selector">'+
+        '<li id="embl-selector" class="float-right show-for-medium embl-selector embl-ebi">'+
           '<button class="button float-right">&nbsp;</button>'+
         '</li>'+
         '<li class="float-right search">'+
