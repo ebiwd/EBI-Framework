@@ -522,7 +522,7 @@ a.button:hover, a.button:focus {
   padding: 1.25rem 1rem;
   border: 1px solid #e6e6e6;
   border-bottom: 0;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 1;
   color: #007c82; }
   :last-child:not(.is-active) > .accordion-title {
@@ -2138,7 +2138,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   .tabs-title > a {
     display: block;
     padding: 1.25rem 1.5rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     line-height: 1;
     color: #007c82; }
     .tabs-title > a:hover {
