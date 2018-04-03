@@ -20,7 +20,7 @@ General guidance on using is available at:
 1. Quick start: <br/>
    See the [HTML boilerplate demos in the EBI Style Lab](https://www.ebi.ac.uk/style-lab/websites/sample-site/).
 1. Guidance: <br/>
-   For web guidelines, [check out the Style Labe](https://www.ebi.ac.uk/style-lab/websites/sample-site/) for guidance on making your site look proper and correct.
+   For web guidelines, [check out the Style Lab](https://www.ebi.ac.uk/style-lab/websites/sample-site/) for guidance on making your site look proper and correct.
 1. Building directly from the CSS and JS:  <br/>
    If you'd like to look into making direct use of the CSS and JS, see the programatically built documentation (this is an ongoing effort):
     - [CSS](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/styleguide/section-components.html)
@@ -32,8 +32,8 @@ General guidance on using is available at:
 
 ### Technical changes
 
-Hightlights:
-- Updateds to Zurb Foundation 6.4 ([use of Foundation is largely optional](https://www.ebi.ac.uk/style-lab/websites/sample-site/integrations/lite.html))
+Highlights:
+- Updates to Zurb Foundation 6.4 ([use of Foundation is largely optional](https://www.ebi.ac.uk/style-lab/websites/sample-site/integrations/lite.html))
 - Offer minified versions of all JS/CSS #100
 - Add 'external' href link style #110
 - Button grid odd right corners #95
@@ -43,13 +43,13 @@ Hightlights:
 - Fully manage #masthead-black-bar in script.js #112
   - Improve presentation of EMBL selector in black bar
 - Reduce number of 'skip-to' links in boilerplate #109
-- Add visibile a:focus style #99
+- Add visible a:focus style #99
 
 See a [full overview of changes in v1.3 here](https://github.com/ebiwd/EBI-Framework/issues/103).
 
 ### How has the look changed from v1.2?
 
-Very little. We've focused mainly on architectural changes however there are a number of small improvements around spacing and more consitincey in button states. 
+Very little. We've focused mainly on architectural changes however there are a number of small improvements around spacing and more consistency in button states. 
 
 Compare a sample page on the three versions: [v1.1](https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/ultra-wide.html), [v1.2](https://www.ebi.ac.uk/style-lab/websites/sample-site-v1.2/boilerplate/ultra-wide.html), [v1.3](https://www.ebi.ac.uk/style-lab/websites/sample-site/boilerplate/ultra-wide.html)
 
@@ -176,4 +176,4 @@ Todo: Run the build process and serve with gulp and browsersync.
 
 ## Roadmap
 - v1.4: Documentation, EMBL integration, abstracting core structure into a reusable "Framework for the Life Sciences"
-- v1.5: Patterns, accesibility.
+- v1.5: Patterns, accessibility.
