@@ -195,6 +195,17 @@ function ebiFrameworkSearchNullError() {
 }
 
 /**
+ * Utility method to get if it is IE, and what integer version.
+ * via: https://stackoverflow.com/a/15983064
+ * @returns {int} the IE version number
+ * @example if (isIE () && isIE () < 9) { }
+ */
+function isIE () {
+  var myNav = navigator.userAgent.toLowerCase();
+  return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+}
+
+/**
  * Utility function to toggle classes. Chiefly to show the #embl-bar.
  */
 function ebiToggleClass(element, toggleClass){
@@ -740,6 +751,8 @@ function ebiFrameworkInvokeScripts() {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   var bodyData = document.body.dataset;
+  // document.body.dataset not supported in < ie10
+  if (isIE () && isIE () < 10) { bodyData = []; }
   if (bodyData["ebiframeworkinvokescripts"] != "false") {
     ebiFrameworkInvokeScripts();
   }
