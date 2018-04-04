@@ -21,6 +21,8 @@ function ebiFrameworkInvokeScripts() {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   var bodyData = document.body.dataset;
+  // document.body.dataset not supported in < ie10
+  if (isIE () && isIE () < 10) { bodyData = []; }
   if (bodyData["ebiframeworkinvokescripts"] != "false") {
     ebiFrameworkInvokeScripts();
   }
