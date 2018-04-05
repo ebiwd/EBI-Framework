@@ -5375,6 +5375,11 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
     .masthead-black-bar .embl-selector.active .button:hover {
       cursor: n-resize;
       background-image: url("../images/logos/EMBL/EMBL-black.svg"); }
+  .masthead-black-bar .embl-selector.active.embl-ebi .button,
+  .masthead-black-bar .embl-selector.active.embl-ebi .button.hover,
+  .masthead-black-bar .embl-selector.active.embl-ebi .button:focus,
+  .masthead-black-bar .embl-selector.active.embl-ebi .button:hover {
+    background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg"); }
   @media screen and (max-width: 53em) {
     .masthead-black-bar .embl-selector .button {
       width: 0px;
