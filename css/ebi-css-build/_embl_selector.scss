@@ -112,6 +112,15 @@
         }
       }
 
+      &.active.embl-ebi {
+        .button,
+        .button.hover,
+        .button:focus,
+        .button:hover {
+          background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg");
+        }
+      }
+
     }
 
     // begin to hide bits of dropdown toggle as screen shrinks
