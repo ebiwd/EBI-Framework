@@ -411,9 +411,9 @@ function ebiFrameworkInsertEMBLdropdown() {
         '<div class="columns padding-top-medium">'+
           '<button class="close-button" aria-label="Close alert" type="button"><span aria-hidden="true">×</span></button>'+
         '</div>'+
-        '<div class="columns medium-8">'+
-          '<div class="large-8 medium-12">'+
-            '<p><h3 class="no-underline inline"><a href="//embl.org">EMBL</a></h3> was set up in 1974 as Europe’s flagship laboratory for the life sciences – an intergovernmental organisation with more than 80 independent research groups covering the spectrum of molecular biology:</p>'+
+        '<div class="columns medium-7">'+
+          '<div class="large-10 medium-12">'+
+            '<div class="margin-bottom-large padding-top-xsmall margin-top-large"><h3 class="no-underline inline" style="line-height: 1rem;"><a href="//embl.org">EMBL</a></h3> was set up in 1974 as Europe’s flagship laboratory for the life sciences – an intergovernmental organisation with more than 80 independent research groups covering the spectrum of molecular biology:</div>'+
           '</div>'+
           // From: https://www.embl.es/aboutus/general_information/index.html
           '<div class="row large-up-3 medium-up-3 small-up-2 no-underline medium-11">'+
@@ -428,7 +428,7 @@ function ebiFrameworkInsertEMBLdropdown() {
             '<h3><a href="//embl.org" class="readmore">More about EMBL</a></h3>'+
           '</div>'+
         '</div>'+
-        '<div class="columns medium-4">'+
+        '<div class="columns medium-5">'+
           '<div class="large-10 medium-12">'+
             '<h3 class="inline">Six sites</h3><p>represent EMBL in Europe.</p>'+
           '</div>'+
