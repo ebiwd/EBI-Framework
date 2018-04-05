@@ -413,14 +413,16 @@ function ebiFrameworkInsertEMBLdropdown() {
         '</div>'+
         '<div class="columns medium-8">'+
           '<div class="large-8 medium-12">'+
-            '<p><h3 class="inline">EMBL</h3> was founded in 1974 by its member states to promote the molecular life sciences in Europe and beyond.</p>'+
+            '<p><h3 class="no-underline inline"><a href="//embl.org">EMBL</a></h3> was set up in 1974 as Europe’s flagship laboratory for the life sciences – an intergovernmental organisation with more than 80 independent research groups covering the spectrum of molecular biology:</p>'+
           '</div>'+
+          // From: https://www.embl.es/aboutus/general_information/index.html
           '<div class="row large-up-3 medium-up-3 small-up-2 no-underline medium-11">'+
-            '<div class="column padding-bottom-medium"><a class="" href="#research"><h5 class="inline underline">Research</h5> the molecular basis of life</a></div>'+
-            '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Services</h5> and infrastructure for research</a></div>'+
-            '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Training</h5> and inspiring scientists</a></div>'+
-            '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Transfer</h5> and development of technology</a></div>'+
-            '<div class="column padding-bottom-medium"><a class="" href="#"><h5 class="inline underline">Integrating</h5> life science research in Europe</a></div>'+
+            '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/research/index.php"><h5 class="inline underline">Research:</h5> perform basic research in molecular biology</a></div>'+
+            '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/services/index.html"><h5 class="inline underline">Services:</h5> offer vital services to scientists in the member states</a></div>'+
+            '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/training/index.php"><h5 class="inline underline">Training</h5> scientists, students and visitors at all levels</a></div>'+
+            '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/research/tech_transfer/index.html"><h5 class="inline underline">Transfer</h5> and development of technology</a></div>'+
+            '<div class="column padding-bottom-medium"><h5 class="inline underline">Develop</h5> new instruments and methods</div>'+
+            '<div class="column padding-bottom-medium"><h5 class="inline underline">Integrating</h5> life science research in Europe</div>'+
           '</div>'+
           '<div class="margin-top-xlarge no-underline">'+
             '<h3><a href="//embl.org" class="readmore">More about EMBL</a></h3>'+
@@ -428,7 +430,7 @@ function ebiFrameworkInsertEMBLdropdown() {
         '</div>'+
         '<div class="columns medium-4">'+
           '<div class="large-10 medium-12">'+
-            '<p><h3 class="inline">Six locations</h3> represent EMBL across Europe, each has its own focus.</p>'+
+            '<p><h3 class="inline">Six sites</h3> represent EMBL in Europe.</p>'+
           '</div>'+
           '<div class="row large-up-3 medium-up-2 small-up-2">'+
             '<div class="column"><h5><a href="//www.embl-barcelona.es/">Barcelona</a></h5><p class="small">Tissue biology and disease modelling</p></div>'+
@@ -437,8 +439,8 @@ function ebiFrameworkInsertEMBLdropdown() {
             '<div class="column"><h5><a href="//www.embl.de/">Heidelberg</a></h5><p class="small">Main laboratory</p></div>'+
             '<div class="column">'+
               '<h5><a href="https://www.ebi.ac.uk/">Hinxton</a></h5>'+
-              '<span class="tag "><i class="icon icon-generic" data-icon="["></i> you are here</span>'+
-              '<p class="small margin-bottom-none">Bioinformatics at the EBI</p>'+
+              // '<span class="tag "><i class="icon icon-generic" data-icon="["></i> you are here</span>'+
+              '<p class="small margin-bottom-none">EMBL-EBI: European Bioinformatics Institute</p>'+
             '</div>'+
             '<div class="column"><h5><a href="//www.embl.it/">Rome</a></h5><p class="small">Epigenetics and neurobiology</p></div>'+
           '</div>'+
