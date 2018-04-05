@@ -234,19 +234,19 @@ function ebiFrameworkInsertEMBLdropdown() {
         '</div>'+
         '<div class="columns medium-4">'+
           '<div class="large-10 medium-12">'+
-            '<p><h3 class="inline">Six sites</h3> represent EMBL in Europe.</p>'+
+            '<h3 class="inline">Six sites</h3><p>represent EMBL in Europe.</p>'+
           '</div>'+
-          '<div class="row large-up-3 medium-up-2 small-up-2">'+
-            '<div class="column"><h5><a href="//www.embl-barcelona.es/">Barcelona</a></h5><p class="small">Tissue biology and disease modelling</p></div>'+
-            '<div class="column"><h5><a href="//www.embl.fr/">Grenoble</a></h5><p class="small">Structural biology</p></div>'+
-            '<div class="column"><h5><a href="//www.embl-hamburg.de/">Hamburg</a></h5><p class="small">Structural biology</p></div>'+
-            '<div class="column"><h5><a href="//www.embl.de/">Heidelberg</a></h5><p class="small">Main laboratory</p></div>'+
+          '<div class="row medium-up-2 small-up-2">'+
+            '<div class="column"><h5 class="inline"><a href="//www.embl-barcelona.es/">Barcelona</a></h5><p class="">Tissue biology and disease modelling</p></div>'+
+            '<div class="column"><h5 class="inline"><a href="//www.embl.fr/">Grenoble</a></h5><p class="">Structural biology</p></div>'+
+            '<div class="column"><h5 class="inline"><a href="//www.embl-hamburg.de/">Hamburg</a></h5><p class="">Structural biology</p></div>'+
+            '<div class="column"><h5 class="inline"><a href="//www.embl.de/">Heidelberg</a></h5><p class="">Main laboratory</p></div>'+
             '<div class="column">'+
-              '<h5><a href="https://www.ebi.ac.uk/">Hinxton</a></h5>'+
+              '<h5 class="inline"><a href="https://www.ebi.ac.uk/">Hinxton</a></h5>'+
               // '<span class="tag "><i class="icon icon-generic" data-icon="["></i> you are here</span>'+
-              '<p class="small margin-bottom-none">EMBL-EBI: European Bioinformatics Institute</p>'+
+              '<p class="margin-bottom-none">EMBL-EBI: European Bioinformatics Institute</p>'+
             '</div>'+
-            '<div class="column"><h5><a href="//www.embl.it/">Rome</a></h5><p class="small">Epigenetics and neurobiology</p></div>'+
+            '<div class="column"><h5 class="inline"><a href="//www.embl.it/">Rome</a></h5><p class="">Epigenetics and neurobiology</p></div>'+
           '</div>'+
         '</div>'+
       '</div>'+
