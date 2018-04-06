@@ -53,6 +53,8 @@ deploy_live:
 deploy_aws_dev:
   image: ebiwd/alpine-ssh
   stage: deploy
+  tags:
+    - docker
   before_script:
     - add-aws-key ${AWS_KEY} ${AWS_SECRET}
   script: 
@@ -63,6 +65,8 @@ deploy_aws_dev:
 deploy_aws_live:
   image: ebiwd/alpine-ssh
   stage: deploy
+  tags:
+    - docker
   before_script:
     - add-aws-key ${AWS_KEY} ${AWS_SECRET}
   script: 
