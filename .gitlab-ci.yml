@@ -18,6 +18,8 @@ variables:
   
 #setup ssh keys
 .deploy_setup: &deploy_setup
+  tags:
+    - docker
   before_script:
     - mkdir ~/.ssh
     - echo -e "${SSH_KEY}" >> ~/.ssh/${SSH_USER} && chmod 400 ~/.ssh/${SSH_USER}
