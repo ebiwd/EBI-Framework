@@ -25,16 +25,15 @@ Head to the EBI Style Lab and [start at Implementing the EBI Visual Framework](h
 
 Highlights:
 - Updates to Zurb Foundation 6.4 ([use of Foundation is largely optional](https://www.ebi.ac.uk/style-lab/websites/sample-site/integrations/lite.html))
-- Offer minified versions of all JS/CSS #100
-- Add 'external' href link style #110
-- Button grid odd right corners #95
-- Announcements improvements: Value prop and efficiency of downtime.js #26
-- Improve loading of foundation, foundationExtendEBI, script.js #77
-- Black bar icons misaligned in v1.2/3 #111
-- Fully manage #masthead-black-bar in script.js #112
-  - Improve presentation of EMBL selector in black bar
-- Reduce number of 'skip-to' links in boilerplate #109
-- Add visible a:focus style #99
+- Now with minified (.min) versions of all JS/CSS
+- Better loading of Foundation, foundationExtendEBI, and script.js 
+- [A better announcements system](https://www.ebi.ac.uk/style-lab/websites/patterns/announcements.html)
+- [An 'external' href link style](https://www.ebi.ac.uk/style-lab/websites/patterns/formatting.html)
+- [Grids of colour now show better](https://www.ebi.ac.uk/style-lab/websites/patterns/button-grid.html)
+- Fixes alignment of black bar icons
+- Fully manage #masthead-black-bar in script.js 
+- [Reduces bloat in the HTML boilerplates](https://www.ebi.ac.uk/style-lab/websites/sample-site/)
+- Adds a visible a:focus style ([hold down the tab key](https://www.ebi.ac.uk/style-lab/websites/sample-site/)
 
 See a [full overview of changes in v1.3 here](https://github.com/ebiwd/EBI-Framework/issues/103).
 
