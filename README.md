@@ -17,13 +17,10 @@ General guidance on using is available at:
 
 ## Where to start? How to use this?
 
-Head to the EBI Style Lab and [start at Implementing the EBI Visual Framework](https://www.ebi.ac.uk/style-lab/websites/#implementing-the-ebi-visual-framework).
+Head to the EBI Style Lab and [start implementing the EBI Visual Framework](https://www.ebi.ac.uk/style-lab/websites/#implementing-the-ebi-visual-framework).
 
 ## What's new in v1.3?
 
-### Technical changes
-
-Highlights:
 - Updates to Zurb Foundation 6.4 ([use of Foundation is largely optional](https://www.ebi.ac.uk/style-lab/websites/sample-site/integrations/lite.html))
 - Now with minified (.min) versions of all JS/CSS
 - Better loading of Foundation, foundationExtendEBI, and script.js 
@@ -50,7 +47,7 @@ Compare a sample page on the three versions: [v1.1](https://ebiwd.github.io/EBI-
 | v1.1 | 1-2 hours | Better performance, a more functional design |
 | v1.2 | minutes | Better performance, more design flexibility |
 
-### Details on upgrading:
+### Details on upgrading
 
 - From v1.2:
   1. Update your `v1.2` asset references to `v1.3`
