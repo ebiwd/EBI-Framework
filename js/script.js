@@ -571,7 +571,7 @@ function ebiInjectAnnouncements(message) {
 
   // banner.id = "";
   banner.className = "notifications-js row margin-top-medium";
-  wrapper.className = "row callout " + (message.priority || "");
+  wrapper.className = "callout " + (message.priority || "");
   wrapper.innerHTML = "<h3>" + message.headline + "</h3>" +
   message.message +
   // "<div id='cookie-dismiss'><button class='close-button' style='top: 0.3rem; color:#fff;' aria-label='Close alert' type='button'><span aria-hidden='true'>&times;</span></button></div>" +
