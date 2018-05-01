@@ -3060,12 +3060,14 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
   .masthead-black-bar .embl-selector.active.embl-ebi .button:hover {
     background-image: url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_black.svg"); }
   @media screen and (max-width: 53em) {
+    .masthead-black-bar li.embl-selector {
+      padding-left: .5rem; }
     .masthead-black-bar .embl-selector .button {
       width: 0px;
-      padding-right: 0;
+      padding-right: 1rem;
       overflow: hidden; }
     .masthead-black-bar .embl-selector .button:after {
       display: none; }
     .masthead-black-bar nav ul.menu li a {
-      padding-right: .5rem;
-      padding-left: .5rem; } }
+      padding-right: .35rem;
+      padding-left: .35rem; } }
