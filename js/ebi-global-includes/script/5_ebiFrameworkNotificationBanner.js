@@ -1,6 +1,6 @@
 // Injects the Data Protection notice onto sites
 // For guidance on using: https://www.ebi.ac.uk/style-lab/websites/patterns/banner-data-protection.html
-function createDataProtectionBanner() {
+function ebiFrameworkCreateDataProtectionBanner() {
   var banner = document.createElement('div');
   var wrapper = document.createElement('div');
   var inner = document.createElement('div');
@@ -68,7 +68,7 @@ function getCookie(c_name) {
 
 var dataProtectionSettings =  new Object();
 
-function runDataProtectionBanner() {
+function ebiFrameworkRunDataProtectionBanner() {
   try {
     dataProtectionSettings.message = 'This website uses cookies. By continuing to browse this site, you are agreeing to the use of our site cookies. We also collect some information [text goes here, please review and agree]. ';
     dataProtectionSettings.link = 'https://www.ebi.ac.uk/about/link-needed-to-data-protection';
@@ -96,16 +96,16 @@ function runDataProtectionBanner() {
 
     // If this version of banner not accpeted, show it:
     if (getCookie(dataProtectionSettings.cookieName) != "true") {
-      createDataProtectionBanner();
+      ebiFrameworkCreateDataProtectionBanner();
     }
 
-  } catch(err) { setTimeout(runDataProtectionBanner, 100); }
+  } catch(err) { setTimeout(ebiFrameworkRunDataProtectionBanner, 100); }
 }
 
 function resetDataProtectionBanner() {
   document.cookie = dataProtectionSettings.cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=" + document.domain + ";path=/";
-  runDataProtectionBanner();
+  ebiFrameworkRunDataProtectionBanner();
 }
 
 // execute
-runDataProtectionBanner();
+ebiFrameworkRunDataProtectionBanner();
