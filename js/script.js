@@ -670,13 +670,14 @@ function ebiFrameworkCreateDataProtectionBanner() {
   }
 
   banner.id = "data-protection-banner";
-  banner.className = "cookie-banner";
+  banner.className = "data-protection-banner";
+  banner.style = "position: fixed; background-color: #111; width: 100%; padding: .75rem; left: 0; bottom: 0; color: #eee;"
   wrapper.className = "row";
   wrapper.innerHTML = "" +
     "<div class='columns medium-8 large-9'>" +
     dataProtectionSettings.message +
     " To find out more, see our <a target='_blank' href='" + dataProtectionSettings.link + "' class='white-color'>privacy policy</a>.</div>" +
-    "<div class='columns medium-4 large-3 text-right'><a id='data-protection-agree' class=''>I agree, dismiss this banner</a></div>" +
+    "<div class='columns medium-4 large-3 text-right white-color'><a id='data-protection-agree' class=''>I agree, dismiss this banner</a></div>" +
     "";
 
   document.body.appendChild(banner);
@@ -700,10 +701,10 @@ function closeDataProtectionBanner() {
   var height = document.getElementById('data-protection-banner').offsetHeight;
   document.getElementById('data-protection-banner').style.display = 'none';
   document.body.style.paddingBottom = '0';
-  setCookie(dataProtectionSettings.cookieName, 'true', 90);
+  ebiFrameworkSetCookie(dataProtectionSettings.cookieName, 'true', 90);
 }
 
-function setCookie(c_name, value, exdays) {
+function ebiFrameworkSetCookie(c_name, value, exdays) {
   var exdate = new Date();
   var c_value;
   exdate.setDate(exdate.getDate() + exdays);
@@ -713,7 +714,7 @@ function setCookie(c_name, value, exdays) {
   document.cookie = c_name + "=" + c_value;
 }
 
-function getCookie(c_name) {
+function ebiFrameworkGetCookie(c_name) {
   var i, x, y, ARRcookies=document.cookie.split(";");
   for (i=0; i<ARRcookies.length; i++) {
     x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
@@ -754,7 +755,7 @@ function ebiFrameworkRunDataProtectionBanner() {
     dataProtectionSettings.cookieName = dataProtectionSettings.serviceId + "-v" + dataProtectionSettings.dataProtectionVersion + "-data-protection-accepted";
 
     // If this version of banner not accpeted, show it:
-    if (getCookie(dataProtectionSettings.cookieName) != "true") {
+    if (ebiFrameworkGetCookie(dataProtectionSettings.cookieName) != "true") {
       ebiFrameworkCreateDataProtectionBanner();
     }
 
