@@ -2377,6 +2377,15 @@ input.clearable::-ms-clear {
   width: 0;
   height: 0; }
 
+.choices[data-type*=select-multiple] .choices__button {
+  background: none;
+  padding: 0;
+  vertical-align: middle;
+  line-height: 1rem;
+  height: 2rem;
+  padding-left: .25rem;
+  width: 1.5rem; }
+
 table {
   font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif;
   font-size: 1rem; }
