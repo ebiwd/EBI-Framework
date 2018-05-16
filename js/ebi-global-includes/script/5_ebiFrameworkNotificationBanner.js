@@ -17,7 +17,7 @@ function ebiFrameworkCreateDataProtectionBanner() {
   wrapper.innerHTML = "" +
     "<div class='columns medium-8 large-9'>" +
     dataProtectionSettings.message +
-    " To find out more, see our <a target='_blank' href='" + dataProtectionSettings.link + "' class='white-color'>privacy policy</a>.</div>" +
+    "</div>" +
     "<div class='columns medium-4 large-3 text-right white-color'><a id='data-protection-agree' class=''>I agree, dismiss this banner</a></div>" +
     "";
 
@@ -71,8 +71,7 @@ var dataProtectionSettings =  new Object();
 
 function ebiFrameworkRunDataProtectionBanner() {
   try {
-    dataProtectionSettings.message = 'This website uses cookies. By continuing to browse this site, you are agreeing to the use of our site cookies. We also collect some information [text goes here, please review and agree]. ';
-    dataProtectionSettings.link = 'https://www.ebi.ac.uk/about/link-needed-to-data-protection';
+    dataProtectionSettings.message = 'This website requires cookies, and the limited processing of your personal data in order to function. By using the site you are agreeing to this as outlined in our <a target="_blank" href="https://www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website" class="white-color">Privacy Notice</a> and <a target="_blank" href="https://www.ebi.ac.uk/about/terms-of-use" class="white-color">Terms of Use</a>.';
     dataProtectionSettings.serviceId = 'ebi';
     dataProtectionSettings.dataProtectionVersion = '1.0';
 
@@ -81,9 +80,6 @@ function ebiFrameworkRunDataProtectionBanner() {
     if (divDataProtectionBanner !== null) {
       if (typeof divDataProtectionBanner.dataset.message !== "undefined") {
         dataProtectionSettings.message = divDataProtectionBanner.dataset.message;
-      }
-      if (typeof divDataProtectionBanner.dataset.link !== "undefined") {
-        dataProtectionSettings.link = divDataProtectionBanner.dataset.link;
       }
       if (typeof divDataProtectionBanner.dataset.serviceId !== "undefined") {
         dataProtectionSettings.serviceId = divDataProtectionBanner.dataset.serviceId;
