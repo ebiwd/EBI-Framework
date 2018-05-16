@@ -5429,7 +5429,7 @@ input.clearable::-ms-clear {
   width: 0;
   height: 0; }
 
-.choices[data-type*=select-multiple] .choices__button {
+.choices[data-type*=select-multiple] button.choices__button {
   background: none;
   padding: 0;
   vertical-align: middle;
