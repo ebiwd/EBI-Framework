@@ -50,12 +50,12 @@
   (function externalLinks() {
     function isOwnDomain(url) {
       return (url.indexOf('//') === -1 ||
-        url.indexOf('//www.ebi.ac.uk') !== -1 || 
-        url.indexOf('//wwwdev.ebi.ac.uk') !== -1 || 
+        url.indexOf('//www.ebi.ac.uk') !== -1 ||
+        url.indexOf('//wwwdev.ebi.ac.uk') !== -1 ||
         url.indexOf('//srs.ebi.ac.uk') !== -1 ||
-        url.indexOf('//frontier.ebi.ac.uk') !== -1 || 
+        url.indexOf('//frontier.ebi.ac.uk') !== -1 ||
         url.indexOf('//ftp.ebi.ac.uk') !== -1 ||
-        url.indexOf('//intranet.ebi.ac.uk') !== -1 || 
+        url.indexOf('//intranet.ebi.ac.uk') !== -1 ||
         url.indexOf('//pdbe.org') !== -1 ||
         url.indexOf('//' + document.domain) !== -1);
     }
@@ -134,13 +134,13 @@
           var searchError = searchBoxes[searchBox].errorText || 'Please enter a search term';
           var searchAction = (searchForm) ? searchForm.action : '';
           var isEbiSearch = searchAction.indexOf('/ebisearch/') !== -1;
-          
+
           if (searchForm && searchInput && isEbiSearch) {
             // add reference to other items for onsubmit anonymous function
             searchForm.searchInput = searchInput;
             searchForm.searchInputDefault = searchInputDefault;
             searchForm.searchError = searchError;
-            
+
             searchForm.onsubmit = function() {
               searchInput = this.searchInput;
               searchInputDefault = this.searchInputDefault;
@@ -148,7 +148,7 @@
 
               // Ensure input is trimmed
               searchInput.value = searchInput.value.trim();
-              
+
               if (searchInput.value === searchInputDefault || searchInput.value === '') {
                 alert(searchError);
                 return false;
@@ -161,7 +161,7 @@
     }
     catch (err) {}
   })();
-  
+
   // Remove global-nav/global-nav-expanded from header/footer
   // if body.no-global-nav is set
   (function hideGlobalNav() {
@@ -169,7 +169,7 @@
       var hasGlobalMasthead = document.getElementById('global-masthead') !== null;
       var disabled = document.body.className.indexOf('no-global-nav') !== -1;
       var elem;
-      
+
       if (hasGlobalMasthead && disabled) {
         if ((elem=document.getElementById('global-nav')) !== null) {
           elem.parentNode.removeChild(elem);
@@ -181,7 +181,7 @@
     }
     catch (err) {}
   })();
-   
+
   // Tap the location bar to scroll to the top
   // Disabled for v1.1 per https://github.com/ebiwd/EBI-Framework/issues/23
   // (function scrollMeUp() {
@@ -190,7 +190,7 @@
   //     if (e.target.nodeName == 'A')
   //       return;
   //     // if jQuery then do it all pretty like
-  //     if (window.jQuery) {  
+  //     if (window.jQuery) {
   //       $('html,body').animate({
   //         scrollTop: 0
   //       }, 700);
@@ -211,10 +211,25 @@
       localMasthead.style.backgroundColor = localMastheadColor.getAttribute("content");
       localMasthead.className += ' meta-background-color';
     }
-    if (localMastheadImage != null) {      
-      localMasthead.style.backgroundImage = 'url(' + localMastheadImage.getAttribute("content") + ')'; 
+    if (localMastheadImage != null) {
+      localMasthead.style.backgroundImage = 'url(' + localMastheadImage.getAttribute("content") + ')';
       localMasthead.className += ' meta-background-image';
     }
   })();
-  
+
 })();
+
+
+// Use the v1.3 data protection banner on older sites
+function legacyDataProtectionBanner() {
+  var localFrameworkVersion = '1.1'; // 1.1 or 1.2 or compliance or other
+      // if you select compliance or other we will add some helpful
+      // CSS styling, but you may need to add some CSS yourself
+  var newDataProtectionNotificationBanner = document.createElement('script');
+  newDataProtectionNotificationBanner.src = 'https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js?legacyRequest='+localFrameworkVersion;
+  document.head.appendChild(newDataProtectionNotificationBanner);
+  newDataProtectionNotificationBanner.onload = function() {
+    ebiFrameworkRunDataProtectionBanner(); // invoke the banner
+  };
+}
+legacyDataProtectionBanner();
