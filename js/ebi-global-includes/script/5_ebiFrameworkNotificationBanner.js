@@ -104,5 +104,12 @@ function resetDataProtectionBanner() {
   ebiFrameworkRunDataProtectionBanner();
 }
 
+// Fallback for any code that was directly calling the old cookie banner:
+// https://github.com/ebiwd/EBI-Framework/blob/6707eff40e15036f735637413deed0dcb7392818/js/ebi-global-includes/script/5_ebiFrameworkCookieBanner.js
+function ebiFrameworkCookieBanner() {
+  console.warn('You are calling an old function name, update it to ebiFrameworkRunDataProtectionBanner();')
+  ebiFrameworkRunDataProtectionBanner();
+}
+
 // execute
 ebiFrameworkRunDataProtectionBanner();
