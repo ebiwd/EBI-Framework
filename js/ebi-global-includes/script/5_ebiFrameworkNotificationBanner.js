@@ -12,7 +12,7 @@ function ebiFrameworkCreateDataProtectionBanner() {
 
   banner.id = "data-protection-banner";
   banner.className = "data-protection-banner";
-  banner.style = "position: fixed; background-color: #111; width: 98%; padding: .75rem 1%; left: 0; bottom: 0; color: #eee;"
+  banner.style = "position: fixed; background-color: #111; width: 100%; padding: .75rem 1%; left: 0; bottom: 0; color: #eee;"
   wrapper.className = "row";
   wrapper.innerHTML = "" +
     "<div class='columns medium-8 large-9'>" +
@@ -83,6 +83,9 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
 
     var compatibilityStyles = document.createElement('style');
     compatibilityStyles.innerHTML = `
+      .data-protection-banner {
+        box-sizing: border-box;
+      }
       .data-protection-banner a,
       .data-protection-banner a:hover {
         color: #fff;
@@ -94,7 +97,7 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
         width: 24%; float: right; text-align: right;
       }
     `;
-    
+
     // remove any old style cookie banner
     switch (targetedFrameworkVersion) {
       case '1.1':
