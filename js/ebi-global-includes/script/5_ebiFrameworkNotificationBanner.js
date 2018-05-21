@@ -75,8 +75,11 @@ var dataProtectionSettings =  new Object();
  * @param {string} [targetedFrameworkVersion=generic] targeted Framework version; options: 1.1, 1.2, 1.3, compliance
  */
 function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
-  targetedFrameworkVersion = targetedFrameworkVersion || newDataProtectionNotificationBanner.src.split('legacyRequest=')[1] || 'generic';
   try {
+
+    if (typeof newDataProtectionNotificationBanner !== "undefined") {
+      targetedFrameworkVersion = targetedFrameworkVersion || newDataProtectionNotificationBanner.src.split('legacyRequest=')[1] || 'generic';
+    }
 
     // remove any old style cookie banner
     switch (targetedFrameworkVersion) {
@@ -94,7 +97,7 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
         document.body.style.paddingTop = 0;
         break;
       default:
-        console.warn('You should specify the targetedFrameworkVersion');
+        console.warn('You should specify the targeted FrameworkVersion');
     }
 
 
@@ -139,4 +142,4 @@ function ebiFrameworkCookieBanner() {
 }
 
 // execute
-ebiFrameworkRunDataProtectionBanner('1.3');
+// ebiFrameworkRunDataProtectionBanner('1.3');

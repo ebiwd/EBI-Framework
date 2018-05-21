@@ -16,7 +16,7 @@ function ebiFrameworkInvokeScripts() {
   ebiFrameworkUpdateFoot();
   ebiFrameworkUpdateFooterMeta();
   ebiFrameworkIncludeAnnouncements();
-  ebiFrameworkRunDataProtectionBanner();
+  ebiFrameworkRunDataProtectionBanner('1.3');
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
