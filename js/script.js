@@ -671,7 +671,7 @@ function ebiFrameworkCreateDataProtectionBanner() {
 
   banner.id = "data-protection-banner";
   banner.className = "data-protection-banner";
-  banner.style = "position: fixed; background-color: #111; width: 100%; padding: .75rem; left: 0; bottom: 0; color: #eee;"
+  banner.style = "position: fixed; background-color: #111; width: 100%; padding: .75rem 1%; left: 0; bottom: 0; color: #eee;"
   wrapper.className = "row";
   wrapper.innerHTML = "" +
     "<div class='columns medium-8 large-9'>" +
@@ -728,8 +728,65 @@ function ebiFrameworkGetCookie(c_name) {
 
 var dataProtectionSettings =  new Object();
 
-function ebiFrameworkRunDataProtectionBanner() {
+/**
+ * The main 'brain' of the EBI Data Protection banner.
+ * Further documentation at https://www.ebi.ac.uk/style-lab/websites/patterns/banner-data-protection.html
+ * @param {string} [targetedFrameworkVersion=generic] targeted Framework version; options: 1.1, 1.2, 1.3, compliance, other
+ */
+function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
   try {
+
+    if (typeof newDataProtectionNotificationBanner !== "undefined") {
+      targetedFrameworkVersion = newDataProtectionNotificationBanner.src.split('legacyRequest=')[1] || 'generic';
+    }
+
+    var compatibilityStyles = document.createElement('style');
+    compatibilityStyles.innerHTML = `
+      .data-protection-banner {
+        box-sizing: border-box;
+      }
+      .data-protection-banner a,
+      .data-protection-banner a:hover {
+        cursor: pointer;
+        color: #fff;
+        border-bottom-width: 1px;
+        border-bottom-style: dotted;
+        border-bottom-color: inherit;
+        text-decoration: none;
+      }
+      .data-protection-banner .medium-8 {
+        width: 75%; margin-left: 1%; float: left;
+      }
+      .data-protection-banner .medium-4 {
+        width: 23%; margin-right: 1%; float: right; text-align: right;
+      }
+    `;
+
+    // remove any old style cookie banner
+    switch (targetedFrameworkVersion) {
+      case '1.1':
+      case '1.2':
+        if (document.getElementById("cookie-banner") != null) {
+          document.getElementById("cookie-banner").remove();
+        }
+        document.body.style.paddingBottom = 0;
+        break;
+      case 'compliance':
+        if (document.getElementById("cookie-banner") != null) {
+          document.getElementById("cookie-banner").remove();
+        }
+        document.body.style.paddingTop = 0;
+        document.body.appendChild(compatibilityStyles);
+        break;
+      case 'other':
+        // If you're not using any fomally supported framework, we'll do our best to help out
+        document.body.appendChild(compatibilityStyles);
+        break;
+      default:
+        console.warn('You should specify the targeted FrameworkVersion (allowed values: 1.1, 1.2, 1.3, compliance, other). You sent: ' + targetedFrameworkVersion);
+    }
+
+    // Default global values
     dataProtectionSettings.message = 'This website requires cookies, and the limited processing of your personal data in order to function. By using the site you are agreeing to this as outlined in our <a target="_blank" href="https://www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website" class="white-color">Privacy Notice</a> and <a target="_blank" href="https://www.ebi.ac.uk/about/terms-of-use" class="white-color">Terms of Use</a>.';
     dataProtectionSettings.serviceId = 'ebi';
     dataProtectionSettings.dataProtectionVersion = '1.0';
@@ -760,11 +817,18 @@ function ebiFrameworkRunDataProtectionBanner() {
 
 function resetDataProtectionBanner() {
   document.cookie = dataProtectionSettings.cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=" + document.domain + ";path=/";
-  ebiFrameworkRunDataProtectionBanner();
+  ebiFrameworkRunDataProtectionBanner('1.3');
+}
+
+// Fallback for any code that was directly calling the old cookie banner:
+// https://github.com/ebiwd/EBI-Framework/blob/6707eff40e15036f735637413deed0dcb7392818/js/ebi-global-includes/script/5_ebiFrameworkCookieBanner.js
+function ebiFrameworkCookieBanner() {
+  console.warn('You are calling an old function name, update it to ebiFrameworkRunDataProtectionBanner();')
+  ebiFrameworkRunDataProtectionBanner('1.3');
 }
 
 // execute
-ebiFrameworkRunDataProtectionBanner();
+// ebiFrameworkRunDataProtectionBanner('1.3');
 
 /**
  * All scripts are automatically loaded, unless the page asked us not to.
@@ -784,7 +848,7 @@ function ebiFrameworkInvokeScripts() {
   ebiFrameworkUpdateFoot();
   ebiFrameworkUpdateFooterMeta();
   ebiFrameworkIncludeAnnouncements();
-  ebiFrameworkRunDataProtectionBanner();
+  ebiFrameworkRunDataProtectionBanner('1.3');
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
