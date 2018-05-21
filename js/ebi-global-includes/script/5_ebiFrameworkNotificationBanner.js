@@ -94,8 +94,7 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
         width: 24%; float: right; text-align: right;
       }
     `;
-    document.body.appendChild(compatibilityStyles);
-
+    
     // remove any old style cookie banner
     switch (targetedFrameworkVersion) {
       case '1.1':
