@@ -97,7 +97,7 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
         document.body.style.paddingTop = 0;
         break;
       default:
-        console.warn('You should specify the targeted FrameworkVersion');
+        console.warn('You should specify the targeted FrameworkVersion (allowed values: 1.1, 1.2, 1.3, compliance). You sent: ' + targetedFrameworkVersion);
     }
 
 
