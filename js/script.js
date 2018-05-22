@@ -771,6 +771,12 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
         }
         document.body.style.paddingBottom = 0;
         break;
+      case '1.3':
+        // cookie banner really shouldn't be here, but just in case
+        if (document.getElementById("cookie-banner") != null) {
+          document.getElementById("cookie-banner").remove();
+        }
+        break;
       case 'compliance':
         if (document.getElementById("cookie-banner") != null) {
           document.getElementById("cookie-banner").remove();
