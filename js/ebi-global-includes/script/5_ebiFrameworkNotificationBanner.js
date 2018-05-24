@@ -15,7 +15,7 @@ function ebiFrameworkCreateDataProtectionBanner() {
   banner.style = "position: fixed; background-color: #111; width: 100%; padding: .75rem 1%; left: 0; bottom: 0; color: #eee; z-index: 10;"
   wrapper.className = "row";
   wrapper.innerHTML = "" +
-    "<div class='columns medium-8 large-9'>" +
+    "<div class='columns medium-8 large-9 white-color'>" +
     dataProtectionSettings.message +
     "</div>" +
     "<div class='columns medium-4 large-3 text-right white-color'><a id='data-protection-agree' class=''>I agree, dismiss this banner</a></div>" +
@@ -134,7 +134,7 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
     }
 
     // Default global values
-    dataProtectionSettings.message = 'This website requires cookies, and the limited processing of your personal data in order to function. By using the site you are agreeing to this as outlined in our <a target="_blank" href="https://www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website" class="white-color">Privacy Notice</a> and <a target="_blank" href="https://www.ebi.ac.uk/about/terms-of-use" class="white-color">Terms of Use</a>.';
+    dataProtectionSettings.message = 'This website requires cookies, and the limited processing of your personal data in order to function. By using the site you are agreeing to this as outlined in our <a target="_blank" href="https://www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website">Privacy Notice</a> and <a target="_blank" href="https://www.ebi.ac.uk/about/terms-of-use">Terms of Use</a>.';
     dataProtectionSettings.serviceId = 'embl-ebi-public-website'; // use the URL stub from your DP record at http://content.ebi.ac.uk/list-data-protection-records
     dataProtectionSettings.dataProtectionVersion = '1.0';
 
