@@ -671,7 +671,7 @@ function ebiFrameworkCreateDataProtectionBanner() {
 
   banner.id = "data-protection-banner";
   banner.className = "data-protection-banner";
-  banner.style = "position: fixed; background-color: #111; width: 100%; padding: .75rem 1%; left: 0; bottom: 0; color: #eee; z-index: 10;"
+  banner.style.cssText = "position: fixed; background: #111; width: 100%; padding: .75rem 1%; left: 0; bottom: 0; color: #eee; z-index: 10;";
   wrapper.className = "row";
   wrapper.innerHTML = "" +
     "<div class='columns medium-8 large-9 white-color'>" +
@@ -682,6 +682,13 @@ function ebiFrameworkCreateDataProtectionBanner() {
 
   document.body.appendChild(banner);
   banner.appendChild(wrapper);
+
+  // Log acceptance of banner, if GA is set and using EBIFoundationExtend
+  if ((typeof analyticsTrackInteraction == 'function') && (typeof jQuery == 'function')) { 
+    jQuery("body.google-analytics-loaded .data-protection-banner a").on('mousedown', function(e) {
+      analyticsTrackInteraction(e.target,'Data protection banner');
+    });
+  }
 
   openDataProtectionBanner();
 }
@@ -742,6 +749,9 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
 
     var compatibilityStyles = document.createElement('style');
     compatibilityStyles.innerHTML = `
+      #cookie-banner {
+        display: none;
+      }
       .data-protection-banner {
         box-sizing: border-box;
       }
