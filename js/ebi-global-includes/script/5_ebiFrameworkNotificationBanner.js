@@ -24,6 +24,13 @@ function ebiFrameworkCreateDataProtectionBanner() {
   document.body.appendChild(banner);
   banner.appendChild(wrapper);
 
+  // Log acceptance of banner, if GA is set and using EBIFoundationExtend
+  if ((typeof analyticsTrackInteraction == 'function') && (typeof jQuery == 'function')) { 
+    jQuery("body.google-analytics-loaded .data-protection-banner a").on('mousedown', function(e) {
+      analyticsTrackInteraction(e.target,'Data protection banner');
+    });
+  }
+
   openDataProtectionBanner();
 }
 
