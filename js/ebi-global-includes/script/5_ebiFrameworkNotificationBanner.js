@@ -1,5 +1,7 @@
-// Injects the Data Protection notice onto sites
-// For guidance on using: https://www.ebi.ac.uk/style-lab/websites/patterns/banner-data-protection.html
+/**
+ * Injects the Data Protection notice onto sites
+ * For guidance on using: https://www.ebi.ac.uk/style-lab/websites/patterns/banner-data-protection.html
+ */
 function ebiFrameworkCreateDataProtectionBanner() {
   var banner = document.createElement('div');
   var wrapper = document.createElement('div');
@@ -24,16 +26,33 @@ function ebiFrameworkCreateDataProtectionBanner() {
   document.body.appendChild(banner);
   banner.appendChild(wrapper);
 
-  // Log acceptance of banner, if GA is set and using EBIFoundationExtend
-  if ((typeof analyticsTrackInteraction == 'function') && (typeof jQuery == 'function')) { 
-    jQuery("body.google-analytics-loaded .data-protection-banner a").on('mousedown', function(e) {
-      analyticsTrackInteraction(e.target,'Data protection banner');
-    });
-  }
+  ebiFrameworkTrackDataProtectionBanner();
 
   openDataProtectionBanner();
 }
 
+/**
+ * Log acceptance of banner, if GA is set and using EBIFoundationExtend
+ *
+ */
+function ebiFrameworkTrackDataProtectionBanner() {
+  var bannerTrackingEventLoaded = 0; // has the tracking coad loaded?
+  if ((typeof analyticsTrackInteraction == 'function') && (typeof jQuery == 'function')) {
+    bannerTrackingEventLoaded = 1;
+    jQuery("body.google-analytics-loaded .data-protection-banner a").on('mousedown', function(e) {
+      analyticsTrackInteraction(e.target,'Data protection banner');
+    });
+  } else {
+    bannerTrackingEventLoaded --;
+    if (bannerTrackingEventLoaded > -3) { // try up to 3 fails
+      setTimeout(ebiFrameworkTrackDataProtectionBanner, 900); // give a second check if GA was slow to load
+    }
+  }
+}
+
+/**
+ * Shows the data protection banner on screen.
+ */
 function openDataProtectionBanner() {
   var height = document.getElementById('data-protection-banner').offsetHeight || 0;
   document.getElementById('data-protection-banner').style.display = 'block';
@@ -45,6 +64,9 @@ function openDataProtectionBanner() {
   };
 }
 
+/**
+ * Hides the data protection banner from the screen.
+ */
 function closeDataProtectionBanner() {
   var height = document.getElementById('data-protection-banner').offsetHeight;
   document.getElementById('data-protection-banner').style.display = 'none';
@@ -172,13 +194,18 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
   } catch(err) { setTimeout(ebiFrameworkRunDataProtectionBanner, 100); }
 }
 
+/**
+ * Clear the cooke. This is mostly a development tool.
+ */
 function resetDataProtectionBanner() {
   document.cookie = dataProtectionSettings.cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=" + document.domain + ";path=/";
   ebiFrameworkRunDataProtectionBanner('1.3');
 }
 
-// Fallback for any code that was directly calling the old cookie banner:
-// https://github.com/ebiwd/EBI-Framework/blob/6707eff40e15036f735637413deed0dcb7392818/js/ebi-global-includes/script/5_ebiFrameworkCookieBanner.js
+/**
+ * Fallback for any code that was directly calling the old cookie banner:
+ * https://github.com/ebiwd/EBI-Framework/blob/6707eff40e15036f735637413deed0dcb7392818/js/ebi-global-includes/script/5_ebiFrameworkCookieBanner.js
+ */
 function ebiFrameworkCookieBanner() {
   console.warn('You are calling an old function name, update it to ebiFrameworkRunDataProtectionBanner();')
   ebiFrameworkRunDataProtectionBanner('1.3');
