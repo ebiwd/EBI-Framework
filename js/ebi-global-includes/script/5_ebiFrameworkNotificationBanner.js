@@ -38,16 +38,29 @@ function ebiFrameworkCreateDataProtectionBanner() {
 function ebiFrameworkTrackDataProtectionBanner() {
   var bannerTrackingEventLoaded = 0; // has the tracking coad loaded?
   if ((typeof analyticsTrackInteraction == 'function') && (typeof jQuery == 'function')) {
-    bannerTrackingEventLoaded = 1;
-    jQuery("body.google-analytics-loaded .data-protection-banner a").on('mousedown', function(e) {
-      analyticsTrackInteraction(e.target,'Data protection banner');
-    });
-  } else {
-    bannerTrackingEventLoaded --;
-    if (bannerTrackingEventLoaded > -3) { // try up to 3 fails
-      setTimeout(ebiFrameworkTrackDataProtectionBanner, 900); // give a second check if GA was slow to load
+    if (jQuery("body").hasClass("google-analytics-loaded")) {
+      bannerTrackingEventLoaded = 1;
+      jQuery("body.google-analytics-loaded .data-protection-banner a").on('mousedown', function(e) {
+        analyticsTrackInteraction(e.target,'Data protection banner');
+      });
+    } else {
+      bannerTrackingEventLoaded = ebiFrameworkRetryTrackDataProtectionBanner(bannerTrackingEventLoaded);
     }
+  } else {
+    bannerTrackingEventLoaded = ebiFrameworkRetryTrackDataProtectionBanner(bannerTrackingEventLoaded);
   }
+}
+
+/**
+ * Give a second for banner checking if GA was slow to load
+ *
+ */
+function ebiFrameworkRetryTrackDataProtectionBanner(bannerTrackingEventLoaded) {
+  bannerTrackingEventLoaded --;
+  if (bannerTrackingEventLoaded > -3) { // try up to 3 fails
+    setTimeout(ebiFrameworkTrackDataProtectionBanner, 900);
+  }
+  return bannerTrackingEventLoaded;
 }
 
 /**
