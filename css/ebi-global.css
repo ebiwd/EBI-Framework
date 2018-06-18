@@ -5016,7 +5016,7 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   color: #fff; }
 
 @media screen and (max-width: 39.9375em) {
-  .masthead ul.menu.dropdown.float-right > li {
+  .masthead ul.menu.dropdown.float-right > li:last-child {
     margin-bottom: -50px; }
   .masthead-black-bar nav ul.menu {
     text-align: right; }
