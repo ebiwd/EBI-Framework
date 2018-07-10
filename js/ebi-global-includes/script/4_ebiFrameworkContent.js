@@ -433,7 +433,7 @@ function ebiFrameworkIncludeAnnouncements() {
 
   function loadRemoteAnnouncements(file) {
     if (window.XMLHttpRequest) {
-      xmlhttp=new XMLHttpRequest();
+      var xmlhttp=new XMLHttpRequest();
     }
     xmlhttp.open("GET", file, true);
     xmlhttp.onload = function (e) {
