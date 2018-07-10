@@ -36,23 +36,16 @@ function ebiFrameworkExternalLinks() {
   // exclude links with images
   // include only links to own domains
   function isOwnDomain(url) {
-    return (url.indexOf('//') === -1 ||
-      url.indexOf('//www.ebi.ac.uk') !== -1 ||
-      url.indexOf('//wwwdev.ebi.ac.uk') !== -1 ||
-      url.indexOf('//srs.ebi.ac.uk') !== -1 ||
-      url.indexOf('//ftp.ebi.ac.uk') !== -1 ||
-      url.indexOf('//intranet.ebi.ac.uk') !== -1 ||
-      url.indexOf('//pdbe.org') !== -1 ||
-      url.indexOf('//' + document.domain) !== -1);
+    return url.indexOf('//') === -1 || url.indexOf('//www.ebi.ac.uk') !== -1 || url.indexOf('//wwwdev.ebi.ac.uk') !== -1 || url.indexOf('//srs.ebi.ac.uk') !== -1 || url.indexOf('//ftp.ebi.ac.uk') !== -1 || url.indexOf('//intranet.ebi.ac.uk') !== -1 || url.indexOf('//pdbe.org') !== -1 || url.indexOf('//' + document.domain) !== -1;
   }
   function isFileType(url, type) {
-    return url.indexOf(type, url.length-type.length)!==-1;
+    return url.indexOf(type, url.length - type.length) !== -1;
   }
   try {
     var alist = document.getElementsByTagName('a');
     var fileTypes = ['pdf', 'doc', 'txt'];
     var i, icon;
-    for (i=0; i<alist.length; i++) {
+    for (i = 0; i < alist.length; i++) {
       for (var type in fileTypes) {
         if (alist[i].innerHTML.indexOf('<span class="link-' + fileTypes[type] + '"></span>') === -1 && alist[i].innerHTML.indexOf('<img') === -1 && isFileType(alist[i].href, fileTypes[type]) && isOwnDomain(alist[i].href)) {
           icon = document.createElement('span');
@@ -61,8 +54,7 @@ function ebiFrameworkExternalLinks() {
         }
       }
     }
-  }
-  catch(err) {}
+  } catch (err) {}
 }
 
 /**
@@ -79,69 +71,47 @@ function ebiFrameworkManageGlobalSearch() {
       try {
         // If the page gets a global search, we specify how the dropdown box should be. #RespectMyAuthoriti
         // remove any current dropdown
-        if ((elem=document.getElementById('search-bar')) !== null) {
+        if ((elem = document.getElementById('search-bar')) !== null) {
           document.getElementById('search-bar').remove();
         }
 
         var dropdownDiv = document.createElement("div");
-        dropdownDiv.innerHTML = '<nav id="search-bar" class="search-bar global-masthead-interactive-banner">'+
-          '<div class="row padding-bottom-medium">'+
-            '<div class="columns padding-top-medium">'+
-              '<button class="close-button" aria-label="Close alert" type="button"><span aria-hidden="true">×</span></button>'+
-            '</div>'+
-          '</div>'+
-          '<div class="row">'+
-          '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="">' +
-              '<fieldset>' +
-                '<div class="input-group">' +
-                  '<input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">' +
-                  '<div class="input-group-button">' +
-                    '<input type="submit" name="submit" value="Search" class="button">' +
-                    '<input type="hidden" name="db" value="allebi" checked="checked">' +
-                    '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' +
-                  '</div>' +
-                '</div>' +
-              '</fieldset>' +
-            '</form>'+
-          '</div>'+
-        '</nav>';
-        document.getElementById("masthead-black-bar").insertBefore(dropdownDiv,document.getElementById("masthead-black-bar").firstChild);
+        dropdownDiv.innerHTML = '<nav id="search-bar" class="search-bar global-masthead-interactive-banner">' + '<div class="row padding-bottom-medium">' + '<div class="columns padding-top-medium">' + '<button class="close-button" aria-label="Close alert" type="button"><span aria-hidden="true">×</span></button>' + '</div>' + '</div>' + '<div class="row">' + '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="">' + '<fieldset>' + '<div class="input-group">' + '<input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">' + '<div class="input-group-button">' + '<input type="submit" name="submit" value="Search" class="button">' + '<input type="hidden" name="db" value="allebi" checked="checked">' + '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' + '</div>' + '</div>' + '</fieldset>' + '</form>' + '</div>' + '</nav>';
+        document.getElementById("masthead-black-bar").insertBefore(dropdownDiv, document.getElementById("masthead-black-bar").firstChild);
 
         var searchBar = document.querySelectorAll(".search-bar")[0];
         var searchBarButton = document.querySelectorAll(".search-toggle")[0];
         var blackBar = document.querySelectorAll(".masthead-black-bar")[0];
 
         // add "peeking" animation for embl selector
-        searchBarButton.addEventListener("mouseenter", function( event ) {
+        searchBarButton.addEventListener("mouseenter", function (event) {
           if (ebiHasClass(document.querySelectorAll(".search-bar")[0], 'active') == false) {
             blackBar.className += ' peek';
           }
         }, false);
-        searchBarButton.addEventListener("mouseleave", function( event ) {
+        searchBarButton.addEventListener("mouseleave", function (event) {
           if (ebiHasClass(document.querySelectorAll(".search-bar")[0], 'active') == false) {
             blackBar.classList.remove("peek");
           }
         }, false);
 
         // toggle the .embl-bar
-        var searchSelector = document.querySelectorAll(".search-toggle")[0].addEventListener("click", function( event ) {
-          ebiToggleClass(searchBar,'active');
-          ebiToggleClass(searchBarButton,'active');
+        var searchSelector = document.querySelectorAll(".search-toggle")[0].addEventListener("click", function (event) {
+          ebiToggleClass(searchBar, 'active');
+          ebiToggleClass(searchBarButton, 'active');
           window.scrollTo(0, 0);
         }, false);
 
-        var searchSelectorClose = document.querySelectorAll(".search-bar .close-button")[0].addEventListener("click", function( event ) {
-          ebiToggleClass(searchBar,'active');
-          ebiToggleClass(searchBarButton,'active');
+        var searchSelectorClose = document.querySelectorAll(".search-bar .close-button")[0].addEventListener("click", function (event) {
+          ebiToggleClass(searchBar, 'active');
+          ebiToggleClass(searchBarButton, 'active');
           window.scrollTo(0, 0);
         }, false);
-
       } catch (err) {
         setTimeout(init, 500);
       }
     }
-  }
-  catch (err) {}
+  } catch (err) {}
 }
 
 /**
@@ -152,20 +122,19 @@ function ebiFrameworkSearchNullError() {
   try {
     var disabled = document.body.className.indexOf('no-search-error') !== -1;
     // Array of search box definition objects, specify inputNode, defaultText (optional, default ''), errorText (optional, default 'Please enter a search term')
-    var searchBoxes = [
-      { inputNode: document.getElementById('global-searchbox') }, // in global masthead
-      { inputNode: document.getElementById('local-searchbox') }, // in local masthead
-      { inputNode: document.body.className.indexOf('front') !== -1 ? document.getElementById('query') : null }, // on home page
-      { inputNode: document.getElementById('people-groups') ? document.getElementById('people-groups').getElementsByTagName('input')[0] : null } // on people and group page
-    ];
+    var searchBoxes = [{ inputNode: document.getElementById('global-searchbox') }, // in global masthead
+    { inputNode: document.getElementById('local-searchbox') }, // in local masthead
+    { inputNode: document.body.className.indexOf('front') !== -1 ? document.getElementById('query') : null }, // on home page
+    { inputNode: document.getElementById('people-groups') ? document.getElementById('people-groups').getElementsByTagName('input')[0] : null // on people and group page
+    }];
 
     if (!disabled) {
       for (searchBox in searchBoxes) {
         var searchInput = searchBoxes[searchBox].inputNode;
-        var searchForm = (searchInput) ? searchInput.form : null;
+        var searchForm = searchInput ? searchInput.form : null;
         var searchInputDefault = searchBoxes[searchBox].defaultText || '';
         var searchError = searchBoxes[searchBox].errorText || 'Please enter a search term';
-        var searchAction = (searchForm) ? searchForm.action : '';
+        var searchAction = searchForm ? searchForm.action : '';
         var isEbiSearch = searchAction.indexOf('/ebisearch/') !== -1;
 
         if (searchForm && searchInput && isEbiSearch) {
@@ -174,7 +143,7 @@ function ebiFrameworkSearchNullError() {
           searchForm.searchInputDefault = searchInputDefault;
           searchForm.searchError = searchError;
 
-          searchForm.onsubmit = function() {
+          searchForm.onsubmit = function () {
             searchInput = this.searchInput;
             searchInputDefault = this.searchInputDefault;
             searchError = this.searchError;
@@ -190,8 +159,7 @@ function ebiFrameworkSearchNullError() {
         }
       }
     }
-  }
-  catch (err) {}
+  } catch (err) {}
 }
 
 /**
@@ -200,29 +168,30 @@ function ebiFrameworkSearchNullError() {
  * @returns {int} the IE version number
  * @example if (isIE () && isIE () < 9) { }
  */
-function isIE () {
+function isIE() {
   var myNav = navigator.userAgent.toLowerCase();
-  return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+  return myNav.indexOf('msie') != -1 ? parseInt(myNav.split('msie')[1]) : false;
 }
 
 /**
  * Utility function to toggle classes. Chiefly to show the #embl-bar.
  */
-function ebiToggleClass(element, toggleClass){
-   var currentClass = element.className;
-   var newClass;
-   if(currentClass.split(" ").indexOf(toggleClass) > -1){ // has class
-      newClass = currentClass.replace(new RegExp('\\b'+toggleClass+'\\b','g'),"")
-   } else{
-      newClass = currentClass + " " + toggleClass;
-   }
-   element.className = newClass.trim();
+function ebiToggleClass(element, toggleClass) {
+  var currentClass = element.className;
+  var newClass;
+  if (currentClass.split(" ").indexOf(toggleClass) > -1) {
+    // has class
+    newClass = currentClass.replace(new RegExp('\\b' + toggleClass + '\\b', 'g'), "");
+  } else {
+    newClass = currentClass + " " + toggleClass;
+  }
+  element.className = newClass.trim();
 }
 
 /**
  * Utility function to add classes (only once).
  */
-function ebiActivateClass(element, cssClass){
+function ebiActivateClass(element, cssClass) {
   element.classList.remove(cssClass);
   element.classList.add(cssClass);
 }
@@ -230,7 +199,7 @@ function ebiActivateClass(element, cssClass){
 /**
  * Utility function to remove classes.
  */
-function ebiRemoveClass(element, cssClass){
+function ebiRemoveClass(element, cssClass) {
   element.classList.remove(cssClass);
 }
 
@@ -244,15 +213,14 @@ function ebiFrameworkHideGlobalNav() {
     var elem;
 
     if (hasGlobalMasthead && disabled) {
-      if ((elem=document.getElementById('global-nav')) !== null) {
+      if ((elem = document.getElementById('global-nav')) !== null) {
         elem.parentNode.removeChild(elem);
       }
-      if ((elem=document.getElementById('global-nav-expanded')) !== null) {
+      if ((elem = document.getElementById('global-nav-expanded')) !== null) {
         elem.parentNode.removeChild(elem);
       }
     }
-  }
-  catch (err) {}
+  } catch (err) {}
 }
 
 /**
@@ -280,49 +248,29 @@ function ebiFrameworkAssignImageByMetaTags() {
 function ebiFrameworkPopulateBlackBar() {
   try {
     // Clear any existing black bar contents
-    if ((elem=document.getElementById('masthead-black-bar')) !== null) {
+    if ((elem = document.getElementById('masthead-black-bar')) !== null) {
       document.getElementById('masthead-black-bar').innerHTML = "";
     }
 
     var barContents = document.createElement("div");
-    barContents.innerHTML = '<nav class="row">'+
-      '<ul id="global-nav" class="menu global-nav text-right">'+
-        '<li class="home-mobile"><a href="https://www.ebi.ac.uk"></a></li>'+
-        '<li class="where embl hide"><a href="http://www.embl.org">EMBL</a></li>'+
-        '<li class="where barcelona hide"><a href="#">Barcelona</a></li>'+
-        '<li class="where hamburg hide"><a href="#">Hamburg</a></li>'+
-        '<li class="where grenoble hide"><a href="#">Heidelberg</a></li>'+
-        '<li class="where grenoble hide"><a href="#">Grenoble</a></li>'+
-        '<li class="where rome hide"><a href="#">Rome</a></li>'+
-        '<li id="embl-selector" class="float-right show-for-medium embl-selector embl-ebi">'+
-          '<button class="button float-right">&nbsp;</button>'+
-        '</li>'+
-        '<li class="float-right search">'+
-          '<a href="#" class="inline-block collpased float-left search-toggle"><span class="show-for-small-only">Search</span></a>'+
-          // '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
-          // '</div>'+
-        '</li>'+
-        '<li class="what about"><a href="https://www.ebi.ac.uk/about">About us</a></li>'+
-        '<li class="what training"><a href="https://www.ebi.ac.uk/training">Training</a></li>'+
-        '<li class="what research"><a href="https://www.ebi.ac.uk/research">Research</a></li>'+
-        '<li class="what services"><a href="https://www.ebi.ac.uk/services">Services</a></li>'+
-        '<li class="where ebi"><a href="https://www.ebi.ac.uk">EMBL-EBI</a></li>'+
-        // '<li class="float-right embl-selector">'+
-        //   '<a class="button float-right">&nbsp;</a>'+
-        // '</li>'+
-        // '<li class="what mission hide"><a href="//www.embl.org">More mission areas:</a></li>'+
-      '</ul>'+
-    '</nav>';
-    document.getElementById("masthead-black-bar").insertBefore(barContents,document.getElementById("masthead-black-bar").firstChild);
+    barContents.innerHTML = '<nav class="row">' + '<ul id="global-nav" class="menu global-nav text-right">' + '<li class="home-mobile"><a href="https://www.ebi.ac.uk"></a></li>' + '<li class="where embl hide"><a href="http://www.embl.org">EMBL</a></li>' + '<li class="where barcelona hide"><a href="#">Barcelona</a></li>' + '<li class="where hamburg hide"><a href="#">Hamburg</a></li>' + '<li class="where grenoble hide"><a href="#">Heidelberg</a></li>' + '<li class="where grenoble hide"><a href="#">Grenoble</a></li>' + '<li class="where rome hide"><a href="#">Rome</a></li>' + '<li id="embl-selector" class="float-right show-for-medium embl-selector embl-ebi">' + '<button class="button float-right">&nbsp;</button>' + '</li>' + '<li class="float-right search">' + '<a href="#" class="inline-block collpased float-left search-toggle"><span class="show-for-small-only">Search</span></a>' +
+    // '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
+    // '</div>'+
+    '</li>' + '<li class="what about"><a href="https://www.ebi.ac.uk/about">About us</a></li>' + '<li class="what training"><a href="https://www.ebi.ac.uk/training">Training</a></li>' + '<li class="what research"><a href="https://www.ebi.ac.uk/research">Research</a></li>' + '<li class="what services"><a href="https://www.ebi.ac.uk/services">Services</a></li>' + '<li class="where ebi"><a href="https://www.ebi.ac.uk">EMBL-EBI</a></li>' +
+    // '<li class="float-right embl-selector">'+
+    //   '<a class="button float-right">&nbsp;</a>'+
+    // '</li>'+
+    // '<li class="what mission hide"><a href="//www.embl.org">More mission areas:</a></li>'+
+    '</ul>' + '</nav>';
+    document.getElementById("masthead-black-bar").insertBefore(barContents, document.getElementById("masthead-black-bar").firstChild);
     document.body.className += ' ebi-black-bar-loaded';
-  }
-  catch(err) {};
+  } catch (err) {};
 }
 
 /**
  * Reusable function to get part of the  black bar
  */
-function ebiGetFacet(passedAttribute){
+function ebiGetFacet(passedAttribute) {
   var tag = "#masthead-black-bar ." + passedAttribute.toLowerCase();
   return document.querySelectorAll(tag)[0];
 }
@@ -342,19 +290,19 @@ function ebiFrameworkActivateBlackBar() {
     var metas = document.getElementsByTagName('meta');
     for (var i = 0; i < metas.length; i++) {
       if (metas[i].getAttribute("name") == "embl:active") {
-        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
-        ebiRemoveClass(targetFacet,'hide');
-        ebiActivateClass(targetFacet,'active');
+        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':', '.'));
+        ebiRemoveClass(targetFacet, 'hide');
+        ebiActivateClass(targetFacet, 'active');
       }
       if (metas[i].getAttribute("name") == "embl:parent-1") {
-        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
-        ebiRemoveClass(targetFacet,'hide');
-        ebiActivateClass(targetFacet,'active');
+        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':', '.'));
+        ebiRemoveClass(targetFacet, 'hide');
+        ebiActivateClass(targetFacet, 'active');
       }
       if (metas[i].getAttribute("name") == "embl:parent-2") {
-        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
-        ebiRemoveClass(targetFacet,'hide');
-        ebiActivateClass(targetFacet,'active');
+        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':', '.'));
+        ebiRemoveClass(targetFacet, 'hide');
+        ebiActivateClass(targetFacet, 'active');
       }
     }
 
@@ -374,11 +322,13 @@ function ebiFrameworkActivateBlackBar() {
 
     // Only reset blackbar after XXXms outside the blackbar
     var mouseoutTimer;
-    blackBar.addEventListener("mouseenter", function() {
+    blackBar.addEventListener("mouseenter", function () {
       window.clearTimeout(mouseoutTimer);
     }, false);
-    blackBar.addEventListener("mouseleave", function() {
-      mouseoutTimer = window.setTimeout(function(){ resetBlackBar(); }, 500);
+    blackBar.addEventListener("mouseleave", function () {
+      mouseoutTimer = window.setTimeout(function () {
+        resetBlackBar();
+      }, 500);
     });
 
     // reset black bar contexts when mousing out
@@ -389,10 +339,7 @@ function ebiFrameworkActivateBlackBar() {
       // $('#masthead-black-bar .where').addClass('hide');
       ebiFrameworkActivateBlackBar();
     }
-
-  }
-  catch(err) {};
-
+  } catch (err) {};
 }
 
 /**
@@ -401,111 +348,54 @@ function ebiFrameworkActivateBlackBar() {
 function ebiFrameworkInsertEMBLdropdown() {
   try {
     // remove any current dropdown
-    if ((elem=document.getElementById('embl-bar')) !== null) {
+    if ((elem = document.getElementById('embl-bar')) !== null) {
       document.getElementById('embl-bar').remove();
     }
 
     var dropdownDiv = document.createElement("div");
-    dropdownDiv.innerHTML = '<nav id="embl-bar" class="embl-bar global-masthead-interactive-banner">'+
-      '<div class="row padding-bottom-medium">'+
-        '<div class="columns padding-top-medium">'+
-          '<button class="close-button" aria-label="Close alert" type="button"><span aria-hidden="true">×</span></button>'+
-        '</div>'+
-        '<div class="columns medium-7">'+
-          '<div class="large-10 medium-12">'+
-            '<div class="margin-bottom-large padding-top-xsmall margin-top-large"><h3 class="no-underline inline" style="line-height: 1rem;"><a href="//embl.org">EMBL</a></h3> was set up in 1974 as Europe’s flagship laboratory for the life sciences – an intergovernmental organisation with more than 80 independent research groups covering the spectrum of molecular biology:</div>'+
-          '</div>'+
-          // From: https://www.embl.es/aboutus/general_information/index.html
-          '<div class="row large-up-3 medium-up-3 small-up-2 no-underline medium-11">'+
-            '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/research/index.php"><h5 class="inline underline">Research:</h5> perform basic research in molecular biology</a></div>'+
-            '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/services/index.html"><h5 class="inline underline">Services:</h5> offer vital services to scientists in the member states</a></div>'+
-            '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/training/index.php"><h5 class="inline underline">Training</h5> scientists, students and visitors at all levels</a></div>'+
-            '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/research/tech_transfer/index.html"><h5 class="inline underline">Transfer</h5> and development of technology</a></div>'+
-            '<div class="column padding-bottom-medium"><h5 class="inline underline">Develop</h5> new instruments and methods</div>'+
-            '<div class="column padding-bottom-medium"><h5 class="inline underline">Integrating</h5> life science research in Europe</div>'+
-          '</div>'+
-          '<div class="margin-top-xlarge no-underline">'+
-            '<h3><a href="//embl.org" class="readmore">More about EMBL</a></h3>'+
-          '</div>'+
-        '</div>'+
-        '<div class="columns medium-5">'+
-          '<div class="large-10 medium-12">'+
-            '<h3 class="inline">Six sites</h3><p>represent EMBL in Europe.</p>'+
-          '</div>'+
-          '<div class="row medium-up-2 small-up-2">'+
-            '<div class="column"><h5 class="inline"><a href="//www.embl-barcelona.es/">Barcelona</a></h5><p class="">Tissue biology and disease modelling</p></div>'+
-            '<div class="column"><h5 class="inline"><a href="//www.embl.fr/">Grenoble</a></h5><p class="">Structural biology</p></div>'+
-            '<div class="column"><h5 class="inline"><a href="//www.embl-hamburg.de/">Hamburg</a></h5><p class="">Structural biology</p></div>'+
-            '<div class="column"><h5 class="inline"><a href="//www.embl.de/">Heidelberg</a></h5><p class="">Main laboratory</p></div>'+
-            '<div class="column">'+
-              '<h5 class="inline"><a href="https://www.ebi.ac.uk/">Hinxton</a></h5>'+
-              // '<span class="tag "><i class="icon icon-generic" data-icon="["></i> you are here</span>'+
-              '<p class="margin-bottom-none">EMBL-EBI: European Bioinformatics Institute</p>'+
-            '</div>'+
-            '<div class="column"><h5 class="inline"><a href="//www.embl.it/">Rome</a></h5><p class="">Epigenetics and neurobiology</p></div>'+
-          '</div>'+
-        '</div>'+
-      '</div>'+
-    '</nav>';
-    document.getElementById("masthead-black-bar").insertBefore(dropdownDiv,document.getElementById("masthead-black-bar").firstChild);
+    dropdownDiv.innerHTML = '<nav id="embl-bar" class="embl-bar global-masthead-interactive-banner">' + '<div class="row padding-bottom-medium">' + '<div class="columns padding-top-medium">' + '<button class="close-button" aria-label="Close alert" type="button"><span aria-hidden="true">×</span></button>' + '</div>' + '<div class="columns medium-7">' + '<div class="large-10 medium-12">' + '<div class="margin-bottom-large padding-top-xsmall margin-top-large"><h3 class="no-underline inline" style="line-height: 1rem;"><a href="//embl.org">EMBL</a></h3> was set up in 1974 as Europe’s flagship laboratory for the life sciences – an intergovernmental organisation with more than 80 independent research groups covering the spectrum of molecular biology:</div>' + '</div>' +
+    // From: https://www.embl.es/aboutus/general_information/index.html
+    '<div class="row large-up-3 medium-up-3 small-up-2 no-underline medium-11">' + '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/research/index.php"><h5 class="inline underline">Research:</h5> perform basic research in molecular biology</a></div>' + '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/services/index.html"><h5 class="inline underline">Services:</h5> offer vital services to scientists in the member states</a></div>' + '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/training/index.php"><h5 class="inline underline">Training</h5> scientists, students and visitors at all levels</a></div>' + '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/research/tech_transfer/index.html"><h5 class="inline underline">Transfer</h5> and development of technology</a></div>' + '<div class="column padding-bottom-medium"><h5 class="inline underline">Develop</h5> new instruments and methods</div>' + '<div class="column padding-bottom-medium"><h5 class="inline underline">Integrating</h5> life science research in Europe</div>' + '</div>' + '<div class="margin-top-xlarge no-underline">' + '<h3><a href="//embl.org" class="readmore">More about EMBL</a></h3>' + '</div>' + '</div>' + '<div class="columns medium-5">' + '<div class="large-10 medium-12">' + '<h3 class="inline">Six sites</h3><p>represent EMBL in Europe.</p>' + '</div>' + '<div class="row medium-up-2 small-up-2">' + '<div class="column"><h5 class="inline"><a href="//www.embl-barcelona.es/">Barcelona</a></h5><p class="">Tissue biology and disease modelling</p></div>' + '<div class="column"><h5 class="inline"><a href="//www.embl.fr/">Grenoble</a></h5><p class="">Structural biology</p></div>' + '<div class="column"><h5 class="inline"><a href="//www.embl-hamburg.de/">Hamburg</a></h5><p class="">Structural biology</p></div>' + '<div class="column"><h5 class="inline"><a href="//www.embl.de/">Heidelberg</a></h5><p class="">Main laboratory</p></div>' + '<div class="column">' + '<h5 class="inline"><a href="https://www.ebi.ac.uk/">Hinxton</a></h5>' +
+    // '<span class="tag "><i class="icon icon-generic" data-icon="["></i> you are here</span>'+
+    '<p class="margin-bottom-none">EMBL-EBI: European Bioinformatics Institute</p>' + '</div>' + '<div class="column"><h5 class="inline"><a href="//www.embl.it/">Rome</a></h5><p class="">Epigenetics and neurobiology</p></div>' + '</div>' + '</div>' + '</div>' + '</nav>';
+    document.getElementById("masthead-black-bar").insertBefore(dropdownDiv, document.getElementById("masthead-black-bar").firstChild);
 
     var emblBar = document.querySelectorAll(".embl-bar")[0];
     var emblBarButton = document.querySelectorAll(".embl-selector")[0];
     var blackBar = document.querySelectorAll(".masthead-black-bar")[0];
 
     // add "peeking" animation for embl selector
-    emblBarButton.addEventListener("mouseenter", function( event ) {
+    emblBarButton.addEventListener("mouseenter", function (event) {
       if (ebiHasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
         blackBar.className += ' peek';
       }
     }, false);
-    emblBarButton.addEventListener("mouseleave", function( event ) {
+    emblBarButton.addEventListener("mouseleave", function (event) {
       if (ebiHasClass(document.querySelectorAll(".embl-bar")[0], 'active') == false) {
         blackBar.classList.remove("peek");
       }
     }, false);
 
     // toggle the .embl-bar
-    var emblSelector = document.querySelectorAll(".embl-selector")[0].addEventListener("click", function( event ) {
-      ebiToggleClass(emblBar,'active');
-      ebiToggleClass(emblBarButton,'active');
+    var emblSelector = document.querySelectorAll(".embl-selector")[0].addEventListener("click", function (event) {
+      ebiToggleClass(emblBar, 'active');
+      ebiToggleClass(emblBarButton, 'active');
       window.scrollTo(0, 0);
     }, false);
 
-    var emblSelectorClose = document.querySelectorAll(".embl-bar .close-button")[0].addEventListener("click", function( event ) {
-      ebiToggleClass(emblBar,'active');
-      ebiToggleClass(emblBarButton,'active');
+    var emblSelectorClose = document.querySelectorAll(".embl-bar .close-button")[0].addEventListener("click", function (event) {
+      ebiToggleClass(emblBar, 'active');
+      ebiToggleClass(emblBarButton, 'active');
       window.scrollTo(0, 0);
     }, false);
-
-
-  }
-  catch(err) {};
+  } catch (err) {};
 }
 
 /**
  * Insert EBI Footer into `#global-nav-expanded`
  */
 function ebiFrameworkUpdateFoot() {
-  var html = '<div class="columns small-12">' +
-    '<h4 class="inline-block"><a href="https://www.ebi.ac.uk" class="no-underline" title="EMBL-EBI">EMBL-EBI</a></h4>' +
-    '<span class="small inline-block padding-left-large"><a class="readmore" href="http://intranet.ebi.ac.uk"><span class="icon icon-functional" data-icon="L"></span> Intranet for staff</a></span>' +
-  '</div>' +
-  '<div class="medium-up-5 small-up-2">' +
-    '<div class="column">' +
-      '<h5 class="services"><a class="services-color" href="https://www.ebi.ac.uk/services">Services</a></h5><ul>' + ' <li class="first"><a href="https://www.ebi.ac.uk/services">By topic</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/services/all">By name (A-Z)</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/support">Help &amp; Support</a></li> ' + '</ul></div>' +
-    '<div class="column">' +
-      '<h5 class="research"><a class="research-color" href="https://www.ebi.ac.uk/research">Research</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/research/publications">Publications</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/research/groups">Research groups</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="https://www.ebi.ac.uk/research/eipp">PhDs</a></li> ' +
-    '</ul></div>' +
-    '<div class="column"> ' +
-      '<h5 class="training"><a class="training-color" href="https://www.ebi.ac.uk/training">Training</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/training/handson">Train at EBI</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/training/online">Train online</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/training/contact-us">Contact organisers</a></li> ' +
-    '</ul></div> ' +
-    '<div class="column"> ' +
-      '<h5 class="industry"><a class="industry-color" href="https://www.ebi.ac.uk/industry">Industry</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/industry/private">Members Area</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/industry/workshops">Workshops</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li> ' + '</ul></div> ' +
-    '<div class="column"> ' +
-      '<h5 class="about"><a class="ebi-color" href="https://www.ebi.ac.uk/about">About</a></h5><ul> ' + ' <li><a href="https://www.ebi.ac.uk/about/contact">Contact us</a>' + '<li><a href="https://www.ebi.ac.uk/about/events">Events</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li> ' + ' <li class="first"><a href="https://www.ebi.ac.uk/about/news">News</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/about/people">People &amp; groups</a></li> ' +
-    '</ul></div>' +
-    '</div>';
+  var html = '<div class="columns small-12">' + '<h4 class="inline-block"><a href="https://www.ebi.ac.uk" class="no-underline" title="EMBL-EBI">EMBL-EBI</a></h4>' + '<span class="small inline-block padding-left-large"><a class="readmore" href="http://intranet.ebi.ac.uk"><span class="icon icon-functional" data-icon="L"></span> Intranet for staff</a></span>' + '</div>' + '<div class="medium-up-5 small-up-2">' + '<div class="column">' + '<h5 class="services"><a class="services-color" href="https://www.ebi.ac.uk/services">Services</a></h5><ul>' + ' <li class="first"><a href="https://www.ebi.ac.uk/services">By topic</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/services/all">By name (A-Z)</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/support">Help &amp; Support</a></li> ' + '</ul></div>' + '<div class="column">' + '<h5 class="research"><a class="research-color" href="https://www.ebi.ac.uk/research">Research</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/research/publications">Publications</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/research/groups">Research groups</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="https://www.ebi.ac.uk/research/eipp">PhDs</a></li> ' + '</ul></div>' + '<div class="column"> ' + '<h5 class="training"><a class="training-color" href="https://www.ebi.ac.uk/training">Training</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/training/handson">Train at EBI</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/training/online">Train online</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/training/contact-us">Contact organisers</a></li> ' + '</ul></div> ' + '<div class="column"> ' + '<h5 class="industry"><a class="industry-color" href="https://www.ebi.ac.uk/industry">Industry</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/industry/private">Members Area</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/industry/workshops">Workshops</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li> ' + '</ul></div> ' + '<div class="column"> ' + '<h5 class="about"><a class="ebi-color" href="https://www.ebi.ac.uk/about">About</a></h5><ul> ' + ' <li><a href="https://www.ebi.ac.uk/about/contact">Contact us</a>' + '<li><a href="https://www.ebi.ac.uk/about/events">Events</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li> ' + ' <li class="first"><a href="https://www.ebi.ac.uk/about/news">News</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/about/people">People &amp; groups</a></li> ' + '</ul></div>' + '</div>';
 
   function init() {
     try {
@@ -523,16 +413,17 @@ function ebiFrameworkUpdateFoot() {
  */
 function ebiFrameworkUpdateFooterMeta() {
   var d = new Date();
-  var html = '<div class="columns">' +
-                '<p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK. +44 (0)1223 49 44 44</p> <p class="legal">Copyright &copy; EMBL-EBI ' + d.getFullYear() + ' | EMBL-EBI is <a href="http://www.embl.org/">part of the European Molecular Biology Laboratory</a> | <a href="https://www.ebi.ac.uk/about/terms-of-use">Terms of use</a>' +
-                // '<a class="readmore float-right" href="http://intranet.ebi.ac.uk">Intranet</a>' +
-              '</p></div>';
+  var html = '<div class="columns">' + '<p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK. +44 (0)1223 49 44 44</p> <p class="legal">Copyright &copy; EMBL-EBI ' + d.getFullYear() + ' | EMBL-EBI is <a href="http://www.embl.org/">part of the European Molecular Biology Laboratory</a> | <a href="https://www.ebi.ac.uk/about/terms-of-use">Terms of use</a>' +
+  // '<a class="readmore float-right" href="http://intranet.ebi.ac.uk">Intranet</a>' +
+  '</p></div>';
 
   function init() {
     try {
       var foot = document.getElementById('ebi-footer-meta');
       foot.innerHTML = html;
-    } catch (err) { setTimeout(init, 500); }
+    } catch (err) {
+      setTimeout(init, 500);
+    }
   }
   init();
 }
@@ -547,22 +438,22 @@ function ebiFrameworkUpdateFooterMeta() {
  *   ebiInjectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
  */
 function ebiInjectAnnouncements(message) {
-  if (typeof(message) == 'undefined') {
+  if (typeof message == 'undefined') {
     return false;
   };
 
-  if (typeof(message.processed) != 'undefined') {
+  if (typeof message.processed != 'undefined') {
     // don't show a message more than once
     return true;
   } else {
     // mark message as shown
-    message.processed=true;
+    message.processed = true;
   }
 
-  var container = (document.getElementById('main-content-area') || document.getElementById('main-content') || document.getElementById('main') || document.getElementById('content') || document.getElementById('contentsarea'));
+  var container = document.getElementById('main-content-area') || document.getElementById('main-content') || document.getElementById('main') || document.getElementById('content') || document.getElementById('contentsarea');
   if (container == null) {
     // if no suitable container, warn
-    console.warn('A message needs to be shown on this site, but an appropriate container could not be found. \n Message follows:','\n' + message.headline,'\n' + message.message,'\n' + 'Priority:',message.priority)
+    console.warn('A message needs to be shown on this site, but an appropriate container could not be found. \n Message follows:', '\n' + message.headline, '\n' + message.message, '\n' + 'Priority:', message.priority);
     return false;
   }
   var banner = document.createElement('div');
@@ -572,8 +463,7 @@ function ebiInjectAnnouncements(message) {
   // banner.id = "";
   banner.className = "notifications-js row margin-top-medium";
   wrapper.className = "callout " + (message.priority || "");
-  wrapper.innerHTML = "<h3>" + message.headline + "</h3>" +
-  message.message +
+  wrapper.innerHTML = "<h3>" + message.headline + "</h3>" + message.message +
   // "<div id='cookie-dismiss'><button class='close-button' style='top: 0.3rem; color:#fff;' aria-label='Close alert' type='button'><span aria-hidden='true'>&times;</span></button></div>" +
   "";
 
@@ -596,13 +486,13 @@ function ebiFrameworkIncludeAnnouncements() {
         currentPath = window.location.pathname;
 
     // don't treat wwwdev as distinct from www
-    currentHost = currentHost.replace(/wwwdev/g , "www");
+    currentHost = currentHost.replace(/wwwdev/g, "www");
 
     // try to show any possible variations of the url
     // Note: this is pretty simple stupid, but maybe it's more effective than a sophisticated solution?
     ebiInjectAnnouncements(messages[currentHost]);
-    ebiInjectAnnouncements(messages[currentHost+'/']);
-    ebiInjectAnnouncements(messages[currentHost+'/*']);
+    ebiInjectAnnouncements(messages[currentHost + '/']);
+    ebiInjectAnnouncements(messages[currentHost + '/*']);
     if (currentPath.length > 1) {
       // don't try to much no path or '/'
       var currentPathArray = currentPath.split('/');
@@ -612,24 +502,24 @@ function ebiFrameworkIncludeAnnouncements() {
       // - /style-lab/frag1/frag2
       // - /style-lab/frag1
       // - /style-lab
-      var pathsToMatch = [currentHost+currentPathArray[0]];
+      var pathsToMatch = [currentHost + currentPathArray[0]];
       for (var i = 1; i < currentPathArray.length; i++) {
-        var tempPath = pathsToMatch[i-1];
-        pathsToMatch.push(tempPath+'/'+currentPathArray[i])
+        var tempPath = pathsToMatch[i - 1];
+        pathsToMatch.push(tempPath + '/' + currentPathArray[i]);
       }
 
       for (var i = 0; i < pathsToMatch.length; i++) {
         // console.log('matching:',pathsToMatch[i]);
         ebiInjectAnnouncements(messages[pathsToMatch[i]]);
-        ebiInjectAnnouncements(messages[pathsToMatch[i]+'*']);
-        ebiInjectAnnouncements(messages[pathsToMatch[i]+'/*']);
+        ebiInjectAnnouncements(messages[pathsToMatch[i] + '*']);
+        ebiInjectAnnouncements(messages[pathsToMatch[i] + '/*']);
       }
     }
   }
 
   function loadRemoteAnnouncements(file) {
     if (window.XMLHttpRequest) {
-      xmlhttp=new XMLHttpRequest();
+      xmlhttp = new XMLHttpRequest();
     }
     xmlhttp.open("GET", file, true);
     xmlhttp.onload = function (e) {
@@ -654,7 +544,6 @@ function ebiFrameworkIncludeAnnouncements() {
   } else {
     loadRemoteAnnouncements('https://ebi.emblstatic.net/announcements.js');
   }
-
 }
 
 /**
@@ -675,12 +564,7 @@ function ebiFrameworkCreateDataProtectionBanner() {
   banner.className = "data-protection-banner";
   banner.style.cssText = "position: fixed; background: #111; width: 100%; padding: .75rem 1%; left: 0; bottom: 0; color: #eee; z-index: 10;";
   wrapper.className = "row";
-  wrapper.innerHTML = "" +
-    "<div class='columns medium-8 large-9 white-color'>" +
-    dataProtectionSettings.message +
-    "</div>" +
-    "<div class='columns medium-4 large-3 text-right white-color'><a id='data-protection-agree' class=''>I agree, dismiss this banner</a></div>" +
-    "";
+  wrapper.innerHTML = "" + "<div class='columns medium-8 large-9 white-color'>" + dataProtectionSettings.message + "</div>" + "<div class='columns medium-4 large-3 text-right white-color'><a id='data-protection-agree' class=''>I agree, dismiss this banner</a></div>" + "";
 
   document.body.appendChild(banner);
   banner.appendChild(wrapper);
@@ -696,11 +580,11 @@ function ebiFrameworkCreateDataProtectionBanner() {
  */
 function ebiFrameworkTrackDataProtectionBanner() {
   var bannerTrackingEventLoaded = 0; // has the tracking coad loaded?
-  if ((typeof analyticsTrackInteraction == 'function') && (typeof jQuery == 'function')) {
+  if (typeof analyticsTrackInteraction == 'function' && typeof jQuery == 'function') {
     if (jQuery("body").hasClass("google-analytics-loaded")) {
       bannerTrackingEventLoaded = 1;
-      jQuery("body.google-analytics-loaded .data-protection-banner a").on('mousedown', function(e) {
-        analyticsTrackInteraction(e.target,'Data protection banner');
+      jQuery("body.google-analytics-loaded .data-protection-banner a").on('mousedown', function (e) {
+        analyticsTrackInteraction(e.target, 'Data protection banner');
       });
     } else {
       bannerTrackingEventLoaded = ebiFrameworkRetryTrackDataProtectionBanner(bannerTrackingEventLoaded);
@@ -715,8 +599,9 @@ function ebiFrameworkTrackDataProtectionBanner() {
  *
  */
 function ebiFrameworkRetryTrackDataProtectionBanner(bannerTrackingEventLoaded) {
-  bannerTrackingEventLoaded --;
-  if (bannerTrackingEventLoaded > -3) { // try up to 3 fails
+  bannerTrackingEventLoaded--;
+  if (bannerTrackingEventLoaded > -3) {
+    // try up to 3 fails
     setTimeout(ebiFrameworkTrackDataProtectionBanner, 900);
   }
   return bannerTrackingEventLoaded;
@@ -728,9 +613,9 @@ function ebiFrameworkRetryTrackDataProtectionBanner(bannerTrackingEventLoaded) {
 function openDataProtectionBanner() {
   var height = document.getElementById('data-protection-banner').offsetHeight || 0;
   document.getElementById('data-protection-banner').style.display = 'block';
-  document.body.style.paddingBottom = height+'px';
+  document.body.style.paddingBottom = height + 'px';
 
-  document.getElementById('data-protection-agree').onclick = function() {
+  document.getElementById('data-protection-agree').onclick = function () {
     closeDataProtectionBanner();
     return false;
   };
@@ -752,23 +637,26 @@ function ebiFrameworkSetCookie(c_name, value, exdays) {
   exdate.setDate(exdate.getDate() + exdays);
   // c_value = escape(value) + ((exdays===null) ? "" : ";expires=" + exdate.toUTCString()) + ";domain=.ebi.ac.uk;path=/";
   // document.cookie = c_name + "=" + c_value;
-  c_value = escape(value) + ((exdays===null) ? "" : ";expires=" + exdate.toUTCString()) + ";domain=" + document.domain + ";path=/";
+  c_value = escape(value) + (exdays === null ? "" : ";expires=" + exdate.toUTCString()) + ";domain=" + document.domain + ";path=/";
   document.cookie = c_name + "=" + c_value;
 }
 
 function ebiFrameworkGetCookie(c_name) {
-  var i, x, y, ARRcookies=document.cookie.split(";");
-  for (i=0; i<ARRcookies.length; i++) {
+  var i,
+      x,
+      y,
+      ARRcookies = document.cookie.split(";");
+  for (i = 0; i < ARRcookies.length; i++) {
     x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
-    y = ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-    x = x.replace(/^\s+|\s+$/g,"");
-    if (x===c_name) {
+    y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+    x = x.replace(/^\s+|\s+$/g, "");
+    if (x === c_name) {
       return unescape(y);
     }
   }
 }
 
-var dataProtectionSettings =  new Object();
+var dataProtectionSettings = new Object();
 
 /**
  * The main 'brain' of the EBI Data Protection banner.
@@ -862,8 +750,9 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
     if (ebiFrameworkGetCookie(dataProtectionSettings.cookieName) != "true") {
       ebiFrameworkCreateDataProtectionBanner();
     }
-
-  } catch(err) { setTimeout(ebiFrameworkRunDataProtectionBanner, 100); }
+  } catch (err) {
+    setTimeout(ebiFrameworkRunDataProtectionBanner, 100);
+  }
 }
 
 /**
@@ -879,7 +768,7 @@ function resetDataProtectionBanner() {
  * https://github.com/ebiwd/EBI-Framework/blob/6707eff40e15036f735637413deed0dcb7392818/js/ebi-global-includes/script/5_ebiFrameworkCookieBanner.js
  */
 function ebiFrameworkCookieBanner() {
-  console.warn('You are calling an old function name, update it to ebiFrameworkRunDataProtectionBanner();')
+  console.warn('You are calling an old function name, update it to ebiFrameworkRunDataProtectionBanner();');
   ebiFrameworkRunDataProtectionBanner('1.3');
 }
 
@@ -907,10 +796,12 @@ function ebiFrameworkInvokeScripts() {
   ebiFrameworkRunDataProtectionBanner('1.3');
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
   var bodyData = document.body.dataset;
   // document.body.dataset not supported in < ie10
-  if (isIE () && isIE () <= 10) { bodyData = []; }
+  if (isIE() && isIE() <= 10) {
+    bodyData = [];
+  }
   if (bodyData["ebiframeworkinvokescripts"] != "false") {
     ebiFrameworkInvokeScripts();
   }
