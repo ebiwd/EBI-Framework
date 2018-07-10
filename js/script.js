@@ -528,6 +528,7 @@ function ebiFrameworkIncludeAnnouncements() {
       if (xmlhttp.readyState === 4) {
         if (xmlhttp.status === 200) {
           eval(xmlhttp.responseText);
+          var m = m || '';
           detectAnnouncements(m);
         } else {
           console.error(xmlhttp.statusText);

@@ -440,6 +440,7 @@ function ebiFrameworkIncludeAnnouncements() {
       if (xmlhttp.readyState === 4) {
         if (xmlhttp.status === 200) {
           eval(xmlhttp.responseText);
+          var m = m || ''; // make sure the message isn't null
           detectAnnouncements(m);
         } else {
           console.error(xmlhttp.statusText);
