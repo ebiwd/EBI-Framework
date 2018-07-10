@@ -50,6 +50,7 @@
   "author": "EBI Web Development <khawkins@ebi.ac.uk> (https://github.com/ebiwd)",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
     "concat-cli": "^4.0.0",
     "concatenate-files": "^0.1.1",
     "cpx": "^1.3.1",
