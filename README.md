@@ -23,12 +23,12 @@ Head to the EBI Style Lab and [start implementing the EBI Visual Framework](http
 
 - Updates to Zurb Foundation 6.4 ([use of Foundation is largely optional](https://www.ebi.ac.uk/style-lab/websites/sample-site/integrations/lite.html))
 - Now with minified (.min) versions of all JS/CSS
-- Better loading of Foundation, foundationExtendEBI, and script.js 
+- Better loading of Foundation, foundationExtendEBI, and script.js
 - [A better announcements system](https://www.ebi.ac.uk/style-lab/websites/patterns/announcements.html)
 - [An 'external' href link style](https://www.ebi.ac.uk/style-lab/websites/patterns/formatting.html)
 - [Grids of colour now show better](https://www.ebi.ac.uk/style-lab/websites/patterns/button-grid.html)
 - Fixes alignment of black bar icons
-- Fully manage #masthead-black-bar in script.js 
+- Fully manage #masthead-black-bar in script.js
 - [Reduces bloat in the HTML boilerplates](https://www.ebi.ac.uk/style-lab/websites/sample-site/)
 - Adds a visible a:focus style ([hold down the tab key](https://www.ebi.ac.uk/style-lab/websites/sample-site/)
 
@@ -36,7 +36,7 @@ See a [full overview of changes in v1.3 here](https://github.com/ebiwd/EBI-Frame
 
 ### How has the look changed from v1.2?
 
-Very little. We've focused mainly on architectural changes however there are a number of small improvements around spacing and more consistency in button states. 
+Very little. We've focused mainly on architectural changes however there are a number of small improvements around spacing and more consistency in button states.
 
 Compare a sample page on the three versions: [v1.1](https://ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/ultra-wide.html), [v1.2](https://www.ebi.ac.uk/style-lab/websites/sample-site-v1.2/boilerplate/ultra-wide.html), [v1.3](https://www.ebi.ac.uk/style-lab/websites/sample-site/boilerplate/ultra-wide.html)
 
@@ -123,7 +123,7 @@ Difference between major, minor releases:
 - Major releases (1.1, 1.2, 1.3...) can have breaking changes and any such changes will be detailed and tested.
 - Minor releases (0.0.X) will not have changes to code structure or parts and will mainly add features or update visual assets (such as logos or icon fonts).
 
-We support the last two major releases with bug fixes and branding. New features will only be added to the current and development versions. 
+We support the last two major releases with bug fixes and branding. New features will only be added to the current and development versions.
 
 Where's version 1.0, you ask? Version 1.0 is the [old EBI Compliance theme](https://www.ebi.ac.uk/web_guidelines/html/compliance/).
 
@@ -148,8 +148,10 @@ We expect the vast majority of users to link to the built CSS and JS files (as s
 
 We've configured the system to build with NPM (no need for gulp or bower).
 
+1. You need to [install node](https://nodejs.org/en/download/).
+1. Install `npx` with `npm install -g npx`
 1. Start with `npm install && npm run motion-ui-update`.
-2. For the rest, have a look at `package.json`. Likely the the `npm run scss` command will cover 90% of use cases.
+1. For the rest, have a look at `package.json`. Likely `npm run scss` command will cover 90% of use cases.
 
 #### Deploying with NPM
 Releases are available via NPM at https://www.npmjs.com/package/ebi-framework
