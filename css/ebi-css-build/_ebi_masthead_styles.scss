@@ -70,6 +70,12 @@
       }
     }
 
+    .search-bar {
+      .close-button:hover, .close-button:focus {
+        color: #fff;
+      }
+    }
+
     .global-nav {
       font-size: .9rem;
 
