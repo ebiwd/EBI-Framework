@@ -2595,6 +2595,8 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
       display: block;
       height: auto;
       overflow: visible; }
+  .masthead-black-bar .search-bar .close-button:hover, .masthead-black-bar .search-bar .close-button:focus {
+    color: #fff; }
   .masthead-black-bar .global-nav {
     font-size: .9rem; }
     .masthead-black-bar .global-nav a,
