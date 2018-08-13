@@ -97,12 +97,14 @@ function ebiFrameworkManageGlobalSearch() {
 
         // toggle the .embl-bar
         var searchSelector = document.querySelectorAll(".search-toggle")[0].addEventListener("click", function (event) {
+          event.preventDefault();
           ebiToggleClass(searchBar, 'active');
           ebiToggleClass(searchBarButton, 'active');
           window.scrollTo(0, 0);
         }, false);
 
         var searchSelectorClose = document.querySelectorAll(".search-bar .close-button")[0].addEventListener("click", function (event) {
+          event.preventDefault();
           ebiToggleClass(searchBar, 'active');
           ebiToggleClass(searchBarButton, 'active');
           window.scrollTo(0, 0);
