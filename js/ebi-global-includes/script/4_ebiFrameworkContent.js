@@ -273,12 +273,14 @@ function ebiFrameworkInsertEMBLdropdown() {
     var emblSelector = document.querySelectorAll(".embl-selector")[0].addEventListener("click", function( event ) {
       ebiToggleClass(emblBar,'active');
       ebiToggleClass(emblBarButton,'active');
+      event.preventDefault();
       window.scrollTo(0, 0);
     }, false);
 
     var emblSelectorClose = document.querySelectorAll(".embl-bar .close-button")[0].addEventListener("click", function( event ) {
       ebiToggleClass(emblBar,'active');
       ebiToggleClass(emblBarButton,'active');
+      event.preventDefault();
       window.scrollTo(0, 0);
     }, false);
 
