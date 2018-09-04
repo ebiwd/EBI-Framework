@@ -604,7 +604,7 @@ div.highlight {
      text-align: left;
      padding-right: 0;
      border-bottom: none;
-     background-color: #FFF;
+     background-color: rgb(233,180,0);
      color: #222;
      border-bottom: 1px solid rgb(233,180,0);
    }
