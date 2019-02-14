@@ -1,10 +1,10 @@
-/*! Widget: filter, select2 formatter function - updated 7/11/2016 (v2.26.6) *//*
+/*! Widget: filter, select2 formatter function - updated 1/18/2018 (v2.29.4) *//*
  * requires: jQuery 1.7.2+, tableSorter (FORK) 2.16+, filter widget 2.16+
  and select2 v3.4.6+ plugin (this code is NOT compatible with select2 v4+)
  */
 /*jshint browser:true, jquery:true, unused:false */
 /*global jQuery: false */
-;(function($){
+;(function($) {
 	'use strict';
 
 	var ts = $.tablesorter || {};
@@ -33,7 +33,7 @@
 		$input = $('<input class="filter" type="hidden">')
 			.appendTo($cell)
 			// hidden filter update namespace trigger by filter widget
-			.bind('change' + c.namespace + 'filter', function(){
+			.bind('change' + c.namespace + 'filter', function() {
 				var val = convertRegex(this.value);
 				c.$table.find('.select2col' + indx + ' .select2').select2('val', val);
 				updateSelect2();
@@ -70,7 +70,7 @@
 			if (arry) {
 				v = v.split('\u0000');
 			}
-			if (!ts.isEmptyObject($input.find('.select2').data())) {
+			if (!ts.isEmptyObject($cell.find('.select2').data())) {
 				$input
 					// add regex, so we filter exact numbers
 					.val(
@@ -78,8 +78,8 @@
 							'/(' + matchPrefix + (v || []).join(matchSuffix + '|' + matchPrefix) + matchSuffix + ')/' + flags :
 							''
 					)
-					.trigger('search').end()
-					.find('.select2').select2('val', v);
+					.trigger('search');
+				$cell.find('.select2').select2('val', v);
 				// update sticky header cell
 				if (c.widgetOptions.$sticky) {
 					c.widgetOptions.$sticky.find('.select2col' + indx + ' .select2').select2('val', v);
@@ -88,11 +88,11 @@
 		},
 
 		// get options from table cell content or filter_selectSource (v2.16)
-		updateOptions = function(){
+		updateOptions = function() {
 			data = [];
 			arry = ts.filter.getOptionSource(c.$table[0], indx, onlyAvail) || [];
 			// build select2 data option
-			$.each(arry, function(i, v){
+			$.each(arry, function(i, v) {
 				// getOptionSource returns { parsed: "value", text: "value" } in v2.24.4
 				data.push({ id: '' + v.parsed, text: v.text });
 			});
@@ -109,7 +109,7 @@
 		// data options are already defined
 		if (!(o.ajax && !$.isEmptyObject(o.ajax)) && !o.data) {
 			updateOptions();
-			c.$table.bind('filterEnd', function(){
+			c.$table.bind('filterEnd', function() {
 				updateOptions();
 				c.$table
 					.find('.select2col' + indx)
@@ -123,7 +123,7 @@
 			.val(o.value)
 			.appendTo($cell)
 			.select2(o)
-			.bind('change', function(){
+			.bind('change', function() {
 				updateSelect2();
 			});
 
@@ -138,14 +138,14 @@
 		});
 
 		// has sticky headers?
-		c.$table.bind('stickyHeadersInit', function(){
+		c.$table.bind('stickyHeadersInit', function() {
 			var $shcell = c.widgetOptions.$sticky.find('.select2col' + indx).empty();
 			// add a select2!
 			$('<input class="select2 select2-' + indx + '" type="hidden">')
 				.val(o.value)
 				.appendTo($shcell)
 				.select2(o)
-				.bind('change', function(){
+				.bind('change', function() {
 					c.$table.find('.select2col' + indx)
 						.find('.select2')
 						.select2('val', c.widgetOptions.$sticky.find('.select2col' + indx + ' .select2').select2('val') );
@@ -157,9 +157,9 @@
 		});
 
 		// on reset
-		c.$table.bind('filterReset', function(){
+		c.$table.bind('filterReset', function() {
 			c.$table.find('.select2col' + indx).find('.select2').select2('val', o.value || '');
-			setTimeout(function(){
+			setTimeout(function() {
 				updateSelect2();
 			}, 0);
 		});
