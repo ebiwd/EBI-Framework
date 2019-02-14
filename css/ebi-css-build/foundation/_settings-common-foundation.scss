@@ -69,7 +69,7 @@
 
 // Include Foundation dependencies in the build
 // Via: https://github.com/zurb/foundation-sites/issues/9467#issuecomment-267598540
-@import 'node_modules/foundation-sites/_vendor/normalize-scss/sass/normalize';
+@import 'node_modules/foundation-sites/scss/vendor/normalize';
 @import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
 @import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/true';
 @import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/purge';
