@@ -1020,7 +1020,7 @@ a.button:hover, a.button:focus {
   outline: 0; }
 
 .dropdown.menu > li > a {
-  background: #fefefe;
+  background: none;
   padding: 0.7rem 1rem; }
 
 .dropdown.menu > li.is-active > a {
