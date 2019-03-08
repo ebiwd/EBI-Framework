@@ -4,7 +4,7 @@
  * @returns {int} the IE version number
  * @example if (isIE () && isIE () < 9) { }
  */
-function isIE () {
+function isIE() {
   var myNav = navigator.userAgent.toLowerCase();
   return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
 }
@@ -143,24 +143,25 @@ function ebiFrameworkActivateBlackBar() {
   // <meta name="embl:parent-2" content="" />
   try {
 
-    var metas = document.getElementsByTagName('meta');
-    for (var i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute("name") == "embl:active") {
-        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
-        ebiRemoveClass(targetFacet,'hide');
-        ebiActivateClass(targetFacet,'active');
-      }
-      if (metas[i].getAttribute("name") == "embl:parent-1") {
-        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
-        ebiRemoveClass(targetFacet,'hide');
-        ebiActivateClass(targetFacet,'active');
-      }
-      if (metas[i].getAttribute("name") == "embl:parent-2") {
-        var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
-        ebiRemoveClass(targetFacet,'hide');
-        ebiActivateClass(targetFacet,'active');
-      }
-    }
+    // This meta navigation concept has been deprecated in favour of the VF 2.0
+    // var metas = document.getElementsByTagName('meta');
+    // for (var i = 0; i < metas.length; i++) {
+    //   if (metas[i].getAttribute("name") == "embl:active") {
+    //     var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
+    //     ebiRemoveClass(targetFacet,'hide');
+    //     ebiActivateClass(targetFacet,'active');
+    //   }
+    //   if (metas[i].getAttribute("name") == "embl:parent-1") {
+    //     var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
+    //     ebiRemoveClass(targetFacet,'hide');
+    //     ebiActivateClass(targetFacet,'active');
+    //   }
+    //   if (metas[i].getAttribute("name") == "embl:parent-2") {
+    //     var targetFacet = ebiGetFacet(metas[i].getAttribute("content").replace(':','.'));
+    //     ebiRemoveClass(targetFacet,'hide');
+    //     ebiActivateClass(targetFacet,'active');
+    //   }
+    // }
 
     // add interactivity to facets, so that hovering on what:research shows what:*
 
@@ -193,7 +194,6 @@ function ebiFrameworkActivateBlackBar() {
       // $('#masthead-black-bar .where').addClass('hide');
       ebiFrameworkActivateBlackBar();
     }
-
   }
   catch(err) {};
 
