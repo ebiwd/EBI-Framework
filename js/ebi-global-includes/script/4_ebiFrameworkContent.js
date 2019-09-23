@@ -237,7 +237,7 @@ function ebiFrameworkInsertEMBLdropdown() {
             '<h3 class="inline">Six sites</h3><p>represent EMBL in Europe.</p>'+
           '</div>'+
           '<div class="row medium-up-2 small-up-2">'+
-            '<div class="column"><h5 class="inline"><a href="//www.embl-barcelona.es/">Barcelona</a></h5><p class="">Tissue biology and disease modelling</p></div>'+
+            '<div class="column"><h5 class="inline"><a href="//www.embl.es/">Barcelona</a></h5><p class="">Tissue biology and disease modelling</p></div>'+
             '<div class="column"><h5 class="inline"><a href="//www.embl.fr/">Grenoble</a></h5><p class="">Structural biology</p></div>'+
             '<div class="column"><h5 class="inline"><a href="//www.embl-hamburg.de/">Hamburg</a></h5><p class="">Structural biology</p></div>'+
             '<div class="column"><h5 class="inline"><a href="//www.embl.de/">Heidelberg</a></h5><p class="">Main laboratory</p></div>'+
@@ -330,7 +330,7 @@ function ebiFrameworkUpdateFoot() {
 function ebiFrameworkUpdateFooterMeta() {
   var d = new Date();
   var html = '<div class="columns">' +
-                '<p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK. +44 (0)1223 49 44 44</p> <p class="legal">Copyright &copy; EMBL-EBI ' + d.getFullYear() + ' | EMBL-EBI is <a href="http://www.embl.org/">part of the European Molecular Biology Laboratory</a> | <a href="https://www.ebi.ac.uk/about/terms-of-use">Terms of use</a>' +
+                '<p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK. +44 (0)1223 49 44 44</p> <p class="legal">Copyright &copy; EMBL ' + d.getFullYear() + ' | EMBL-EBI is <a href="http://www.embl.org/">part of the European Molecular Biology Laboratory</a> | <a href="https://www.ebi.ac.uk/about/terms-of-use">Terms of use</a>' +
                 // '<a class="readmore float-right" href="http://intranet.ebi.ac.uk">Intranet</a>' +
               '</p></div>';
 
