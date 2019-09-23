@@ -167,7 +167,7 @@ if (jQuery('body').hasClass('google-analytics-loaded')) {
                       '<div class="small">Main laboratory</div>' +
                     '</div>' +
                     '<div class="columns small-7 padding-bottom-medium">' +
-                      '<a href="http://www.embl-barcelona.es/">Barcelona</a>' +
+                      '<a href="http://www.embl.es/">Barcelona</a>' +
                       '<div class="small">Tissue biology and disease modelling</div>' +
                     '</div>' +
                     '<div class="columns small-5 padding-bottom-medium">' +
