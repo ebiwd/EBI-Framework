@@ -11,3 +11,8 @@ config.gypi
 CVS
 npm-debug.log
 
+# Tablesorter's package.json disrupts storing some files in npm
+libraries/tablesorter/package.json
+libraries/tablesorter/docs
+
+libraries/motion-ui/motion-ui-*

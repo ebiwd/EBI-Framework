@@ -18,7 +18,7 @@ libraries/tablesorter
 !libraries/tablesorter/js
 !libraries/tablesorter/css
 
-# Jekull stuff
+# Jekyll stuff
 _site/
 .sass-cache/
 .jekyll-metadata
