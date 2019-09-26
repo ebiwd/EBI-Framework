@@ -9,22 +9,14 @@ libraries/foundation-6
 !libraries/foundation-6/LICENSE
 
 # Ignore all of foundation moutionui contrib but a few custom things
-libraries/motion-ui/.*
-libraries/motion-ui/src
-libraries/motion-ui/docs
-libraries/motion-ui/motion-ui*
-libraries/motion-ui/test
+libraries/motion-ui
+!libraries/motion-ui/dist
+!libraries/motion-ui/LICENSE
 
 # Ignore all of tablesorter contrib but a few custom things
-libraries/tablesorter/addons
-libraries/tablesorter/beta*
-libraries/tablesorter/docs
-libraries/tablesorter/testing
-libraries/tablesorter/.*
-libraries/tablesorter/AUTHORS
-libraries/tablesorter/bower*
-libraries/tablesorter/composer*
-libraries/tablesorter/test.html
+libraries/tablesorter
+!libraries/tablesorter/js
+!libraries/tablesorter/css
 
 # Jekull stuff
 _site/
