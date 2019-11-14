@@ -1,55 +1,13 @@
-image: netroby/alpine-rsync
-
-#project specific variables can be defines here, or overridden project settings
 variables:
-  SERVER_DEV: ebi-cli.ebi.ac.uk
   S3_BUCKET_DEV: origin.dev.ebi.emblstatic.net
-  SCRIPT_DEV: ~/bin/update-ebi-framework
-  DEV_URL: http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework
-  SERVER_PROD: ebi-cli.ebi.ac.uk
   S3_BUCKET_PROD: origin.ebi.emblstatic.net
-  SCRIPT_PROD: ~/bin/update-ebi-framework-prod
-  PROD_URL: http://www.ebi.ac.uk/web_guidelines/EBI-Framework
 # do not define here, put in project variables
-  SSH_USER: username
-  SSH_KEY: secret-key
   AWS_KEY: key
   AWS_SECRET: secret-key
   
-#setup ssh keys
-.deploy_setup: &deploy_setup
-  tags:
-    - docker
-  before_script:
-    - mkdir ~/.ssh
-    - echo -e "${SSH_KEY}" >> ~/.ssh/${SSH_USER} && chmod 400 ~/.ssh/${SSH_USER}
-    - echo -e "Host *\n\tIdentityFile ~/.ssh/%r\n\tStrictHostKeyChecking no" >> ~/.ssh/config
-    
 stages:
   - deploy
-  
-deploy_dev:
-  <<: *deploy_setup
-  stage: deploy
-  script: 
-    - ssh -t ${SSH_USER}@${SERVER_DEV} ${SCRIPT_DEV}
-  only: 
-    - branches
-  environment: 
-    name: dev
-    url: ${DEV_URL}
-    
-deploy_live:
-  <<: *deploy_setup
-  stage: deploy
-  script: 
-    - ssh -t ${SSH_USER}@${SERVER_PROD} ${SCRIPT_PROD}
-  only: 
-    - tags
-  environment: 
-    name: live
-    url: ${LIVE_URL}
-    
+      
 deploy_aws_dev:
   image: ebiwd/alpine-ssh
   stage: deploy
