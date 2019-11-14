@@ -18,7 +18,10 @@ deploy_aws_dev:
   script: 
     - bin/deploy-aws
   only: 
-    - branches
+    - v1.1
+    - v1.1-lite
+    - v1.2
+    - v1.3
 
 deploy_aws_live:
   image: ebiwd/alpine-ssh
