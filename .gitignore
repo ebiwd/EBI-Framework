@@ -3,10 +3,9 @@ node_modules
 npm-debug.log
 
 # Ignore all of foundation contrib but a few custom things
-libraries/foundation-6
-!libraries/foundation-6/js
-!libraries/foundation-6/css
-!libraries/foundation-6/LICENSE
+libraries/foundation-6/_vendor
+libraries/foundation-6/dist
+libraries/foundation-6/foundation-sites*
 
 # Ignore all of foundation moutionui contrib but a few custom things
 libraries/motion-ui
