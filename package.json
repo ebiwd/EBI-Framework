@@ -27,7 +27,7 @@
     "ebi-js": "concat-cli -f js/ebi-global-includes/script/*.js -o js/script.js",
     "ebi-js-min": "npx babel js/script.js --out-file js/script.js && uglifyjs js/script.js -o js/script.min.js --compress && uglifyjs js/foundationExtendEBI.js -o js/foundationExtendEBI.min.js --compress && uglifyjs js/elixirBanner.js -o js/elixirBanner.min.js --compress",
     "js": "npm run foundation-js && npm run ebi-js && npm run ebi-js-min && npm run documentation",
-    "foundation-js": "cpx './node_modules/foundation-sites/dist/js/*.js' ./libraries/foundation-6/js",
+    "foundation-js": "cpx './node_modules/foundation-sites/dist/js/*' ./libraries/foundation-6/js",
     "//@30": [
       "-- Our buildscript: With this line we concat all libraries to be installed at once --"
     ],
