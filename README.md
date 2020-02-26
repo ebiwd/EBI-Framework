@@ -164,5 +164,4 @@ Releases are available via NPM at https://www.npmjs.com/package/ebi-framework
 Todo: Run the build process and serve with gulp and browsersync.
 
 ## Roadmap
-- v1.4: Documentation, EMBL integration, abstracting core structure into a reusable "Framework for the Life Sciences"
-- v1.5: Patterns, accessibility.
+- v1.4: Transition to [the Visual Framework 2.0](https://visual-framework.github.io/vf-welcome/)

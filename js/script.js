@@ -479,6 +479,7 @@ function ebiInjectAnnouncements(message) {
 
 /**
  * Load the downtime/announcement messages, if any.
+ * We do match not by comparison but by find a url as an array key.
  * For more info, see: https://gitlab.ebi.ac.uk/ebiwd/ebi.emblstatic.net-root-assets/tree/master/src
  */
 function ebiFrameworkIncludeAnnouncements() {
@@ -490,16 +491,18 @@ function ebiFrameworkIncludeAnnouncements() {
     var currentHost = window.location.hostname,
         currentPath = window.location.pathname;
 
-    // don't treat wwwdev as distinct from www
+    // don't treat `wwwdev` as distinct from `www`
     currentHost = currentHost.replace(/wwwdev/g, "www");
 
-    // try to show any possible variations of the url
-    // Note: this is pretty simple stupid, but maybe it's more effective than a sophisticated solution?
-    ebiInjectAnnouncements(messages[currentHost]);
-    ebiInjectAnnouncements(messages[currentHost + '/']);
-    ebiInjectAnnouncements(messages[currentHost + '/*']);
+    // if the page has a path, try to make matches
+    // don't try to much no path or '/'
     if (currentPath.length > 1) {
-      // don't try to much no path or '/'
+      // Is there an exact match
+      // console.log('matching:', currentHost+currentPath);
+      ebiInjectAnnouncements(messages[currentHost + currentPath]);
+      ebiInjectAnnouncements(messages[currentHost + currentPath + '/']);
+
+      // Handle wildcard matches like `/about/*`
       var currentPathArray = currentPath.split('/');
 
       // construct a list of possible paths to match
@@ -513,12 +516,20 @@ function ebiFrameworkIncludeAnnouncements() {
         pathsToMatch.push(tempPath + '/' + currentPathArray[i]);
       }
 
+      // console.log(pathsToMatch);
       for (var i = 0; i < pathsToMatch.length; i++) {
-        // console.log('matching:',pathsToMatch[i]);
-        ebiInjectAnnouncements(messages[pathsToMatch[i]]);
+        // console.log('matching:', pathsToMatch[i]+'*');
+        // we only match partial paths if they end in *
         ebiInjectAnnouncements(messages[pathsToMatch[i] + '*']);
         ebiInjectAnnouncements(messages[pathsToMatch[i] + '/*']);
       }
+    } else {
+      // no current path means we're on the root domain
+      // `https://www.ebi.ac.uk` should match `www.ebi.ac.uk` and `www.ebi.ac.uk/` and `www.ebi.ac.uk/*`
+      // console.log('matching:', currentHost);
+      ebiInjectAnnouncements(messages[currentHost]);
+      ebiInjectAnnouncements(messages[currentHost + '/']);
+      ebiInjectAnnouncements(messages[currentHost + '/*']);
     }
   }
 
