@@ -39,7 +39,7 @@ $tag-radius: $global-radius !default;
     color: $tag-color;
     border-bottom-style: none;
   }
-  .tag {
+  .tag:not(body) {
     @include tag;
 
     background: $tag-background;
