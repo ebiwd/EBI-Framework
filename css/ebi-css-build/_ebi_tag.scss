@@ -39,6 +39,7 @@ $tag-radius: $global-radius !default;
     color: $tag-color;
     border-bottom-style: none;
   }
+  // sometimes .tag can exist on <body> (particularly in wordpress)
   .tag:not(body) {
     @include tag;
 
