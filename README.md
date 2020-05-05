@@ -89,7 +89,7 @@ This project continues efforts of the existing guidance by providing:
 - Page lifecycle tracking: An improved meta-tag based model for maintaining and tracking content freshness, ownership, and intent
 - Regular updates: A versioning system for the framework to help track changes, features, and usage
   - Sass support (optional)
-  - NPM updating (optional)
+  - npm updating (optional)
 - Collaboration: A more collaborative code base (note this is on GitHub) to offer a better path for code collaboration and integration
 
 ### Do I need to download this?
@@ -143,18 +143,18 @@ That is:
 https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js
 ```
 
-#### Building from NPM
+#### Building from npm
 We expect the vast majority of users to link to the built CSS and JS files (as shown in the sample HTML files), however some teams may want to download the EBI Framework and modify it for performance or deeper appearance issues.
 
-We've configured the system to build with NPM (no need for gulp or bower).
+We've configured the system to build with npm (no need for gulp or bower).
 
 1. You need to [install node](https://nodejs.org/en/download/)
 1. Install `npx` with `npm install -g npx`
 1. Start with `npm install && npm run motion-ui-update`
 1. For the rest, have a look at `package.json`. Likely `npm run scss` command will cover 90% of use cases
 
-#### Deploying with NPM
-Releases are available via NPM at https://www.npmjs.com/package/ebi-framework
+#### Deploying with npm
+Releases are available via npm at https://www.npmjs.com/package/ebi-framework
 
 ## Developing locally
 1. Edit any CSS or JS and build with `npm run scss` or `npm run js`
