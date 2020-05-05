@@ -3,8 +3,8 @@ language: node_js
 node_js:
   - "12"
 
-before_install:
-  - npm install -g npx
+# before_install:
+#   - npm install -g npx
 
 install:
   - npm install
