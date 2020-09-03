@@ -72,6 +72,7 @@
 @import 'node_modules/foundation-sites/scss/vendor/normalize';
 @import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
 @import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/true';
+@import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/contain';
 @import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/purge';
 @import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/remove';
 @import 'node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/replace';
@@ -85,12 +86,12 @@
 @import 'node_modules/foundation-sites/scss/components/float';
 @import 'node_modules/foundation-sites/scss/components/button';
 @import 'node_modules/foundation-sites/scss/components/button-group';
+@import 'node_modules/foundation-sites/scss/components/close-button';
 @import 'node_modules/foundation-sites/scss/components/accordion-menu';
 @import 'node_modules/foundation-sites/scss/components/accordion';
 // @import 'node_modules/foundation-sites/scss/components/badge'; // EBI override to remove sizing spec
 @import 'node_modules/foundation-sites/scss/components/breadcrumbs';
 @import 'node_modules/foundation-sites/scss/components/callout';
-@import 'node_modules/foundation-sites/scss/components/close-button';
 @import 'node_modules/foundation-sites/scss/components/drilldown';
 @import 'node_modules/foundation-sites/scss/components/dropdown-menu';
 @import 'node_modules/foundation-sites/scss/components/dropdown';
@@ -324,13 +325,24 @@ $callout-font-color-alt: $body-background;
 $callout-radius: $global-radius;
 $callout-link-tint: 30%;
 
-// 14. Close Button
+// Close Button
 // ----------------
 
-$closebutton-position: right top;
-$closebutton-offset-horizontal: 1rem;
-$closebutton-offset-vertical: 0.5rem;
-$closebutton-size: 2em;
+$closebutton-position: right top; 
+$closebutton-z-index: 10;
+$closebutton-default-size: medium;
+$closebutton-offset-horizontal: (
+  small: 0.66rem,
+  medium: 1rem,
+);
+$closebutton-offset-vertical: (
+  small: 0.33em,
+  medium: 0.5rem,
+);
+$closebutton-size: (
+  small: 1.5em,
+  medium: 2em,
+);
 $closebutton-lineheight: 1;
 $closebutton-color: $dark-gray;
 $closebutton-color-hover: $black;
