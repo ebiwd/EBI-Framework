@@ -2,44 +2,26 @@
   Colour palette: EMBL-EBI Training
 */
 
-a {
-  color: #222;
-}
-
-dl dt a,
-a.label,
-.label,
-a:hover,
-a:focus,
-a:active {
-  color: rgb(233,180,0);
-}
-
-h1 { color: #f7f7f7; }
-h2 { color: rgb(233,180,0); }
-h3 { color: #444444; }
-h4 { color: #222; }
-
-a.special { background-color: #7cd17c; }
+h2 { color: rgb(239, 192, 110); }
 
 .menu .active > a,
 .tag,
 .tabs-title > a:hover,
 .button,
 .button.primary {
-  background-color: rgb(233,180,0);
+  background-color: rgb(239, 192, 110);
 }
 a.tag:hover { color: #fff; }
 
 .tabs-title > a:hover,
 .button.primary:hover,
-.button.primary:focus { background: rgba(233,180,0,.9); }
+.button.primary:focus { background: rgba(239, 192, 110,.9); }
 .tabs-title > a:focus,
 .tabs-title > a[aria-selected='true'] {
   color: #fff;
   background: #666; }
 
-.masthead { background-color: rgb(233,180,0); }
+.masthead { background-color: rgb(239, 192, 110); }
 
 body main.row { margin-top: 1.5rem; }
 body .form-checkboxes .form-item,
