@@ -6,8 +6,10 @@
 
   // GLOBAL FOOTER
   .global-footer {
-    border-top: 5px solid #eee;
+    border-top: 5px solid $ebi-colour-light-green;
+    background-color: $ebi-colour-dark;
     padding-top: 1.5rem;
+    color: $white;
 
     h5 {
       margin-top: 1.25rem;
@@ -36,15 +38,18 @@
       list-style: none;
     }
 
-    a {
-      color: $ebi-colour-dark-grey;
+    a,
+    a:visited {
+      color: $white;
+      text-decoration: none;
+      border: none;
     }
 
     a:hover,
     a:focus,
     a:active{
-      color: $ebi-colour-dark-grey;
-      border-bottom: 1px dashed #e4e4e4;
+      color: $white;
+      text-decoration: underline;
     }
   } // END .global-footer
 
