@@ -9,7 +9,7 @@
     "END NOTE"
   ],
   "name": "ebi-framework",
-  "version": "1.3.17",
+  "version": "1.4.0",
   "scripts": {
     "test": "npm run libraries && npm run scss && npm run js && npm run documentation",
     "scss": "npm run foundation-scss-full-fat && npm run foundation-scss-lite && npm run foundation-scss-extras && npm run choices-scss",
@@ -25,7 +25,7 @@
     "foundation-scss-extras": "node-sass ./css/ebi-css-build/foundation/_settings-extras.scss ./css/ebi-extras.css && csso ./css/ebi-extras.css --output ./css/ebi-extras.min.css",
     "choices-scss": "node-sass ./libraries/Choices/assets/styles/scss/choices.scss ./libraries/Choices/assets/styles/css/choices.css && csso ./libraries/Choices/assets/styles/css/choices.css --output ./libraries/Choices/assets/styles/css/choices.min.css",
     "ebi-js": "concat-cli -f js/ebi-global-includes/script/*.js -o js/script.js",
-    "ebi-js-min": "npx babel js/script.js --out-file js/script.js && uglifyjs js/script.js -o js/script.min.js --compress && uglifyjs js/foundationExtendEBI.js -o js/foundationExtendEBI.min.js --compress && uglifyjs js/elixirBanner.js -o js/elixirBanner.min.js --compress",
+    "ebi-js-min": "babel js/script.js --out-file js/script.js && uglifyjs js/script.js -o js/script.min.js --compress && uglifyjs js/foundationExtendEBI.js -o js/foundationExtendEBI.min.js --compress && uglifyjs js/elixirBanner.js -o js/elixirBanner.min.js --compress",
     "js": "npm run foundation-js && npm run ebi-js && npm run ebi-js-min && npm run documentation",
     "foundation-js": "cpx './node_modules/foundation-sites/dist/js/*' ./libraries/foundation-6/js",
     "//@30": [
@@ -38,7 +38,7 @@
     "tablesorter": "wget https://github.com/Mottie/tablesorter/archive/master.zip -d ./libraries/tablesorter.zip && extract-zip ./libraries/tablesorter.zip ./libraries/ && del ./libraries/tablesorter && mve ./libraries/tablesorter-master ./libraries/tablesorter && del ./libraries/tablesorter.zip && del ./libraries/tablesorter/package.json",
     "foundation-update": "npm install foundation-sites && echo \"Latest version of foundation downloaded, you'll need to run 'npm run scss' and 'npm run js' to build\"",
     "motion-ui-update": "wget https://github.com/zurb/motion-ui/archive/v1.2.2.zip -d ./libraries/motion-ui.zip && del ./libraries/motion-ui && extract-zip ./libraries/motion-ui.zip ./libraries/motion-ui/ && del ./libraries/motion-ui.zip && echo \"Copying Motion UI files one level up as they've moved...\" && ncp ./libraries/motion-ui/motion-ui-1.2.2/ ./libraries/motion-ui/ && del ./libraries/motion-ui/motion-ui-master/ && echo \"Latest version of Motion UI downloaded, you'll need to run 'npm run scss' to build\"",
-    "documentation": " ./node_modules/documentation/bin/documentation.js build ./js/** -f md -o js/documenation.md -g && echo \"Updated JS docs.\" && kss --source ./css --destination ./css/styleguide --css https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css && echo \"Updated CSS docs.\"",
+    "documentation": " ./node_modules/documentation/bin/documentation.js build ./js/** -f md -o js/documenation.md -g && echo \"Updated JS docs.\" && kss --source ./css --destination ./css/styleguide --css https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css && echo \"Updated CSS docs.\"",
     "message_finished": "echo \"All done\""
   },
   "description": "Homed here are the various assets that make the EBI Visual Framework (CSS, JS, and a few images and build scripts).",
@@ -59,7 +59,7 @@
     "del-cli": "^0.2.0",
     "documentation": "^5.3.0",
     "extract-zip": "1.6.0",
-    "foundation-sites": "6.6.3",
+    "foundation-sites": "^6.6.3",
     "kss": "^3.0.1",
     "mve": "^0.1.2",
     "ncp": "^2.0.0",

@@ -2,24 +2,7 @@
   Colour palette: EMBL-EBI Green
 */
 
-a {
-  color: #222;
-}
-
-dl dt a,
-a.label,
-.label,
-a:hover,
-a:focus,
-a:active {
-  color: rgb(116,179,96);
-}
-
-h1 { color: #f7f7f7; }
 h2 { color: rgb(116,179,96); }
-h3 { color: #444444; }
-
-a.special { background-color: #7cd17c; }
 
 .menu .active > a,
 .tag,

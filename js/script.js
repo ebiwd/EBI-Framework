@@ -400,7 +400,7 @@ function ebiFrameworkInsertEMBLdropdown() {
  * Insert EBI Footer into `#global-nav-expanded`
  */
 function ebiFrameworkUpdateFoot() {
-  var html = '<div class="columns small-12">' + '<h4 class="inline-block"><a href="https://www.ebi.ac.uk" class="no-underline" title="EMBL-EBI">EMBL-EBI</a></h4>' + '<span class="small inline-block padding-left-large"><a class="readmore" href="http://intranet.ebi.ac.uk"><span class="icon icon-functional" data-icon="L"></span> Intranet for staff</a></span>' + '</div>' + '<div class="medium-up-5 small-up-2">' + '<div class="column">' + '<h5 class="services"><a class="services-color" href="https://www.ebi.ac.uk/services">Services</a></h5><ul>' + ' <li class="first"><a href="https://www.ebi.ac.uk/services">By topic</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/services/all">By name (A-Z)</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/support">Help &amp; Support</a></li> ' + '</ul></div>' + '<div class="column">' + '<h5 class="research"><a class="research-color" href="https://www.ebi.ac.uk/research">Research</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/research/publications">Publications</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/research/groups">Research groups</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="https://www.ebi.ac.uk/research/eipp">PhDs</a></li> ' + '</ul></div>' + '<div class="column"> ' + '<h5 class="training"><a class="training-color" href="https://www.ebi.ac.uk/training">Training</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/training/handson">Train at EBI</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/training/online">Train online</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/training/contact-us">Contact organisers</a></li> ' + '</ul></div> ' + '<div class="column"> ' + '<h5 class="industry"><a class="industry-color" href="https://www.ebi.ac.uk/industry">Industry</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/industry/private">Members Area</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/industry/workshops">Workshops</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li> ' + '</ul></div> ' + '<div class="column"> ' + '<h5 class="about"><a class="ebi-color" href="https://www.ebi.ac.uk/about">About</a></h5><ul> ' + ' <li><a href="https://www.ebi.ac.uk/about/contact">Contact us</a>' + '<li><a href="https://www.ebi.ac.uk/about/events">Events</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li> ' + ' <li class="first"><a href="https://www.ebi.ac.uk/about/news">News</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/about/people">People &amp; groups</a></li> ' + '</ul></div>' + '</div>';
+  var html = '<div class="columns small-12">' + '<h4 class="inline-block"><a href="https://www.ebi.ac.uk" class="no-underline" title="EMBL-EBI">EMBL-EBI</a></h4>' + '<span class="small inline-block padding-left-large"><a class="readmore" href="http://intranet.ebi.ac.uk"><span class="icon icon-functional" data-icon="L"></span> Intranet for staff</a></span>' + '</div>' + '<div class="medium-up-5 small-up-2">' + '<div class="column">' + '<h5 class="services"><a class="" href="https://www.ebi.ac.uk/services">Services</a></h5><ul>' + ' <li class="first"><a href="https://www.ebi.ac.uk/services">By topic</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/services/all">By name (A-Z)</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/support">Help &amp; Support</a></li> ' + '</ul></div>' + '<div class="column">' + '<h5 class="research"><a class="" href="https://www.ebi.ac.uk/research">Research</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/research/publications">Publications</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/research/groups">Research groups</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="https://www.ebi.ac.uk/research/eipp">PhDs</a></li> ' + '</ul></div>' + '<div class="column"> ' + '<h5 class="training"><a class="" href="https://www.ebi.ac.uk/training">Training</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/training/handson">Train at EBI</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/training/online">Train online</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/training/contact-us">Contact organisers</a></li> ' + '</ul></div> ' + '<div class="column"> ' + '<h5 class="industry"><a class="" href="https://www.ebi.ac.uk/industry">Industry</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/industry/private">Members Area</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/industry/workshops">Workshops</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li> ' + '</ul></div> ' + '<div class="column"> ' + '<h5 class="about"><a class="" href="https://www.ebi.ac.uk/about">About</a></h5><ul> ' + ' <li><a href="https://www.ebi.ac.uk/about/contact">Contact us</a>' + '<li><a href="https://www.ebi.ac.uk/about/events">Events</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li> ' + ' <li class="first"><a href="https://www.ebi.ac.uk/about/news">News</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/about/people">People &amp; groups</a></li> ' + '</ul></div>' + '</div>';
 
   function init() {
     try {
@@ -579,7 +579,7 @@ function ebiFrameworkCreateDataProtectionBanner() {
 
   banner.id = "data-protection-banner";
   banner.className = "data-protection-banner";
-  banner.style.cssText = "position: fixed; background: #111; width: 100%; padding: .75rem 1%; left: 0; bottom: 0; color: #eee; z-index: 10;";
+  banner.style.cssText = "position: fixed; background: #707372; width: 100%; padding: .75rem 1%; left: 0; bottom: 0; border-top: 1px solid #373a36; color: #eee; z-index: 10;";
   wrapper.className = "row";
   wrapper.innerHTML = "" + "<div class='columns medium-8 large-9 white-color'>" + dataProtectionSettings.message + "</div>" + "<div class='columns medium-4 large-3 text-right white-color'><a id='data-protection-agree' class=''>I agree, dismiss this banner</a></div>" + "";
 
@@ -678,7 +678,7 @@ var dataProtectionSettings = new Object();
 /**
  * The main 'brain' of the EBI Data Protection banner.
  * Further documentation at https://www.ebi.ac.uk/style-lab/websites/patterns/banner-data-protection.html
- * @param {string} [targetedFrameworkVersion=generic] targeted Framework version; options: 1.1, 1.2, 1.3, compliance, other
+ * @param {string} [targetedFrameworkVersion=generic] targeted Framework version; options: 1.1, 1.2, 1.3, 1.4, compliance, other
  */
 function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
   try {
@@ -700,6 +700,7 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
         document.body.style.paddingBottom = 0;
         break;
       case '1.3':
+      case '1.4':
         // cookie banner really shouldn't be here, but just in case
         if (document.getElementById("cookie-banner") != null) {
           document.getElementById("cookie-banner").remove();
@@ -713,11 +714,11 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
         document.body.appendChild(compatibilityStyles);
         break;
       case 'other':
-        // If you're not using any fomally supported framework, we'll do our best to help out
+        // If you're not using any formally supported framework, we'll do our best to help out
         document.body.appendChild(compatibilityStyles);
         break;
       default:
-        console.warn('You should specify the targeted FrameworkVersion (allowed values: 1.1, 1.2, 1.3, compliance, other). You sent: ' + targetedFrameworkVersion);
+        console.warn('You should specify the targeted FrameworkVersion (allowed values: 1.1, 1.2, 1.3, 1.4, compliance, other). You sent: ' + targetedFrameworkVersion);
     }
 
     // Default global values
@@ -755,7 +756,7 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
  */
 function resetDataProtectionBanner() {
   document.cookie = dataProtectionSettings.cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=" + document.domain + ";path=/";
-  ebiFrameworkRunDataProtectionBanner('1.3');
+  ebiFrameworkRunDataProtectionBanner('1.4');
 }
 
 /**
@@ -764,11 +765,11 @@ function resetDataProtectionBanner() {
  */
 function ebiFrameworkCookieBanner() {
   console.warn('You are calling an old function name, update it to ebiFrameworkRunDataProtectionBanner();');
-  ebiFrameworkRunDataProtectionBanner('1.3');
+  ebiFrameworkRunDataProtectionBanner('1.4');
 }
 
 // execute
-// ebiFrameworkRunDataProtectionBanner('1.3');
+// ebiFrameworkRunDataProtectionBanner('1.4');
 
 /**
  * All scripts are automatically loaded, unless the page asked us not to.
@@ -788,7 +789,7 @@ function ebiFrameworkInvokeScripts() {
   ebiFrameworkUpdateFoot();
   ebiFrameworkUpdateFooterMeta();
   ebiFrameworkIncludeAnnouncements();
-  ebiFrameworkRunDataProtectionBanner('1.3');
+  ebiFrameworkRunDataProtectionBanner('1.4');
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {

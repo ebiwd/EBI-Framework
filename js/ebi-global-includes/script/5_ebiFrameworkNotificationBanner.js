@@ -14,7 +14,7 @@ function ebiFrameworkCreateDataProtectionBanner() {
 
   banner.id = "data-protection-banner";
   banner.className = "data-protection-banner";
-  banner.style.cssText = "position: fixed; background: #111; width: 100%; padding: .75rem 1%; left: 0; bottom: 0; color: #eee; z-index: 10;";
+  banner.style.cssText = "position: fixed; background: #707372; width: 100%; padding: .75rem 1%; left: 0; bottom: 0; border-top: 1px solid #373a36; color: #eee; z-index: 10;";
   wrapper.className = "row";
   wrapper.innerHTML = "" +
     "<div class='columns medium-8 large-9 white-color'>" +
@@ -114,7 +114,7 @@ var dataProtectionSettings =  new Object();
 /**
  * The main 'brain' of the EBI Data Protection banner.
  * Further documentation at https://www.ebi.ac.uk/style-lab/websites/patterns/banner-data-protection.html
- * @param {string} [targetedFrameworkVersion=generic] targeted Framework version; options: 1.1, 1.2, 1.3, compliance, other
+ * @param {string} [targetedFrameworkVersion=generic] targeted Framework version; options: 1.1, 1.2, 1.3, 1.4, compliance, other
  */
 function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
   try {
@@ -158,6 +158,7 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
         document.body.style.paddingBottom = 0;
         break;
       case '1.3':
+      case '1.4':
         // cookie banner really shouldn't be here, but just in case
         if (document.getElementById("cookie-banner") != null) {
           document.getElementById("cookie-banner").remove();
@@ -171,11 +172,11 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
         document.body.appendChild(compatibilityStyles);
         break;
       case 'other':
-        // If you're not using any fomally supported framework, we'll do our best to help out
+        // If you're not using any formally supported framework, we'll do our best to help out
         document.body.appendChild(compatibilityStyles);
         break;
       default:
-        console.warn('You should specify the targeted FrameworkVersion (allowed values: 1.1, 1.2, 1.3, compliance, other). You sent: ' + targetedFrameworkVersion);
+        console.warn('You should specify the targeted FrameworkVersion (allowed values: 1.1, 1.2, 1.3, 1.4, compliance, other). You sent: ' + targetedFrameworkVersion);
     }
 
     // Default global values
@@ -212,7 +213,7 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
  */
 function resetDataProtectionBanner() {
   document.cookie = dataProtectionSettings.cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=" + document.domain + ";path=/";
-  ebiFrameworkRunDataProtectionBanner('1.3');
+  ebiFrameworkRunDataProtectionBanner('1.4');
 }
 
 /**
@@ -221,8 +222,8 @@ function resetDataProtectionBanner() {
  */
 function ebiFrameworkCookieBanner() {
   console.warn('You are calling an old function name, update it to ebiFrameworkRunDataProtectionBanner();')
-  ebiFrameworkRunDataProtectionBanner('1.3');
+  ebiFrameworkRunDataProtectionBanner('1.4');
 }
 
 // execute
-// ebiFrameworkRunDataProtectionBanner('1.3');
+// ebiFrameworkRunDataProtectionBanner('1.4');
