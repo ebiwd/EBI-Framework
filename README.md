@@ -39,7 +39,7 @@ This project helps ensure brand consistency and the easy use of modern web desig
 Not all developers are in the same place, so we plan  make use of multiple channels:
 
 - Github: We know many developers already live in the Github ecosystem, so go ahead and [open an issue with your question/comment/concern](https://github.com/ebiwd/EBI-Framework/issues).
-- [Web Guidelines Committee](https://www.ebi.ac.uk/seqdb/confluence/display/WGC/): overseeing the tooling for the look, feel and function of EMBL-EBI websites, the WGC holds meeting on the first Tuesday of each month at 11.00, all teams are invited to send a representative.
+- [Web Guidelines Committee](https://www.ebi.ac.uk/seqdb/confluence/display/WGC/): overseeing the tooling for the look, feel and function of EMBL-EBI websites
 
 #### Deploying with npm
 
@@ -47,7 +47,7 @@ Releases are available via npm at https://www.npmjs.com/package/ebi-framework
 
 ## Developing locally
 
-1. Edit any CSS or JS and build with `npm run scss` or `npm run js`
+1. Edit any CSS or JS and build with `npm run scss` and `npm run js`
 2. Serve index.html 
   - `npm install -g browser-sync`
   - `browser-sync start --files index.html  --server` OR:
