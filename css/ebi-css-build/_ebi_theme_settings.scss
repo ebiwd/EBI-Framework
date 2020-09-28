@@ -1,16 +1,17 @@
 // Colours
 // https://wwwdev.ebi.ac.uk/style-lab/general/#embl-ebi-official-colours
-$ebi-colour-dark: #222;
+// https://wwwdev.embl.org/guidelines/design/brand-guidelines/colour/
+$ebi-colour-dark: #373a36;
 $ebi-colour-light: #f8f8f8;
 $ebi-colour-dark-grey: #555;
 $ebi-colour-medium-grey: #777;
 $ebi-colour-light-grey: #eaeaea;
-$ebi-colour-light-green: rgb(109,171,73);
-$ebi-colour-dark-green: rgb(56,145,152);
+$ebi-colour-light-green: rgb(0, 159, 77);
+$ebi-colour-dark-green: rgb(0, 123, 83);
 $ebi-colour-petrol: rgb(0,124,130);
-$ebi-colour-gold: rgb(233,180,0);
-$ebi-colour-orange: rgb(251,106,42);
-$ebi-colour-blue: rgb(0,134,180);
+$ebi-colour-gold: rgb(239, 192, 110);
+$ebi-colour-orange: rgb(255, 163, 0);
+$ebi-colour-blue: rgb(49, 122, 226);
 $ebi-colour-white: rgb(255,255,255);
 
 $primary-color: $ebi-colour-petrol;
