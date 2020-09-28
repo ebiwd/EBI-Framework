@@ -19,6 +19,8 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap");
 @media print, screen and (min-width: 40em) {
   .reveal, .reveal.tiny, .reveal.small, .reveal.large {
     right: auto;
@@ -452,7 +454,7 @@ a.button:hover, a.button:focus {
   border: 1px solid #e6e6e6;
   border-bottom: 0;
   background-color: #fefefe;
-  color: #222; }
+  color: #373a36; }
   :last-child > .accordion-content:last-child {
     border-bottom: 1px solid #e6e6e6; }
 
@@ -786,26 +788,26 @@ a.button:hover, a.button:focus {
   border: 1px solid rgba(10, 10, 10, 0.25);
   border-radius: 0;
   background-color: white;
-  color: #222; }
+  color: #373a36; }
   .callout > :first-child {
     margin-top: 0; }
   .callout > :last-child {
     margin-bottom: 0; }
   .callout.primary {
     background-color: #c6fcff;
-    color: #222; }
+    color: #373a36; }
   .callout.secondary {
     background-color: #ebebeb;
-    color: #222; }
+    color: #373a36; }
   .callout.success {
     background-color: #e1faea;
-    color: #222; }
+    color: #373a36; }
   .callout.warning {
     background-color: #fff3d9;
-    color: #222; }
+    color: #373a36; }
   .callout.alert {
     background-color: #fce6e2;
-    color: #222; }
+    color: #373a36; }
   .callout.small {
     padding-top: 0.5rem;
     padding-right: 0.5rem;
@@ -1004,7 +1006,7 @@ a.button:hover, a.button:focus {
 
 .dropdown.menu > li.is-active > a {
   background: transparent;
-  color: #222; }
+  color: #373a36; }
 
 .no-js .dropdown.menu ul {
   display: none; }
@@ -1901,21 +1903,21 @@ html.is-reveal-open {
   @media print, screen and (min-width: 40em) {
     .reveal {
       width: 600px;
-      max-width: 80rem; } }
+      max-width: 81.25em; } }
   .reveal.collapse {
     padding: 0; }
   @media print, screen and (min-width: 40em) {
     .reveal.tiny {
       width: 30%;
-      max-width: 80rem; } }
+      max-width: 81.25em; } }
   @media print, screen and (min-width: 40em) {
     .reveal.small {
       width: 50%;
-      max-width: 80rem; } }
+      max-width: 81.25em; } }
   @media print, screen and (min-width: 40em) {
     .reveal.large {
       width: 90%;
-      max-width: 80rem; } }
+      max-width: 81.25em; } }
   .reveal.full {
     top: 0;
     right: 0;
@@ -2067,10 +2069,10 @@ table {
     font-weight: 600; }
   thead {
     background: #f8f8f8;
-    color: #222; }
+    color: #373a36; }
   tfoot {
     background: #f1f1f1;
-    color: #222; }
+    color: #373a36; }
   thead tr,
   tfoot tr {
     background: transparent; }
@@ -2175,7 +2177,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   border: 1px solid #e6e6e6;
   border-top: 0;
   background: #fefefe;
-  color: #222;
+  color: #373a36;
   transition: all 0.5s ease; }
 
 .tabs-content.vertical {
@@ -2410,7 +2412,7 @@ input.clearable::-ms-clear {
   width: 1.5rem; }
 
 table {
-  font-family: Helvetica, Arial, FreeSans, "Liberation Sans", sans-serif;
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 1rem; }
 
 body.table-layout table {
@@ -2482,7 +2484,7 @@ table.data-table thead {
   background: #eaeaea; }
 
 .code {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: "IBM Plex Mono", Monaco, Consolas, "Lucida Console", monospace;
   font-weight: normal;
   color: #0a0a0a;
   background-color: #e6e6e6;
@@ -2504,10 +2506,10 @@ pre > code {
 .kbd {
   margin: 0;
   color: #0a0a0a;
-  font-family: Consolas, "Liberation Mono", Courier, monospace; }
+  font-family: "IBM Plex Mono", Monaco, Consolas, "Lucida Console", monospace; }
 
 .related {
-  background: #222;
+  background: #373a36;
   margin-top: 4.25rem;
   color: white;
   padding: .5rem 0 0 1.1rem; }
