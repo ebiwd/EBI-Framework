@@ -48,5 +48,7 @@ Releases are available via npm at https://www.npmjs.com/package/ebi-framework
 ## Developing locally
 
 1. Edit any CSS or JS and build with `npm run scss` or `npm run js`
-2. Serve index.html with `jekyll serve --port 99`
-3. Open http://127.0.0.1:99/EBI-Framework/
+2. Serve index.html 
+  - `npm install -g browser-sync`
+  - `browser-sync start --files index.html  --server`
+    - https://www.browsersync.io/docs/command-line
