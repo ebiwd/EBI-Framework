@@ -27,6 +27,13 @@
   @include embl-selector;
 }
 @if $include-ebi-extra-styles {
+  // Plex fonts
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap');
+
+  // Alternatively we could use the CDN, but for legacy v1.x sites, google fonts will be cleaner
+  // @import url('https://dev.assets.emblstatic.net/vf/v2.1.0/assets/vf-font-plex-sans/vf-font-plex-sans.css');
+  // @import url('https://dev.assets.emblstatic.net/vf/v2.1.0/assets/vf-font-plex-mono/vf-font-plex-mono.css');
   @include ebi-print-styles;
   @include ebi-clearable-inputs;
   @include ebi-table-styles;
