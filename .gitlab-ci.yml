@@ -22,6 +22,7 @@ deploy_aws_dev:
     - v1.1-lite
     - v1.2
     - v1.3
+    - v1.4
 
 deploy_aws_live:
   image: ebiwd/alpine-ssh

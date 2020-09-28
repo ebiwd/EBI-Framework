@@ -25,7 +25,7 @@ function elixirBanner() {
         defaultName = divElixirBanner.dataset.name;
       }
       if (divElixirBanner.dataset.useCdrLogo == "true") {
-        defaultLogo = 'https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/images/logos/ELIXIR/elixir-cdr.gif';
+        defaultLogo = 'https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/ELIXIR/elixir-cdr.gif';
       }
       if (typeof divElixirBanner.dataset.description !== "undefined") {
         defaultDescription = divElixirBanner.dataset.description;
