@@ -118,7 +118,6 @@ var dataProtectionSettings =  new Object();
  */
 function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
   try {
-
     if (typeof newDataProtectionNotificationBanner !== "undefined") {
       targetedFrameworkVersion = newDataProtectionNotificationBanner.src.split('legacyRequest=')[1] || 'generic';
     }
@@ -184,6 +183,18 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
     dataProtectionSettings.serviceId = 'embl-ebi-public-website'; // use the URL stub from your DP record at http://content.ebi.ac.uk/list-data-protection-records
     dataProtectionSettings.dataProtectionVersion = '1.0';
 
+    // A method to disable the DP banner.
+    // Particularly suited for using 1.4 along side 2.0 and you don't want two cookie banners
+    // Example: <body data-protection-message-disable="true"></body>
+    var disableDataProtectionBanner = false;
+    var divDataProtectionBannerDisable = document.querySelectorAll('[data-protection-message-disable]');
+    if (divDataProtectionBannerDisable.length > 0) {
+      divDataProtectionBannerDisable = divDataProtectionBannerDisable[0];
+      if (divDataProtectionBannerDisable.dataset.protectionMessageDisable == "true") {
+        disableDataProtectionBanner = true;
+      }
+    }
+
     // If there's a div#data-protection-message-configuration, override defaults
     var divDataProtectionBanner = document.getElementById('data-protection-message-configuration');
     if (divDataProtectionBanner !== null) {
@@ -200,12 +211,14 @@ function ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion) {
 
     dataProtectionSettings.cookieName = dataProtectionSettings.serviceId + "-v" + dataProtectionSettings.dataProtectionVersion + "-data-protection-accepted";
 
-    // If this version of banner not accpeted, show it:
-    if (ebiFrameworkGetCookie(dataProtectionSettings.cookieName) != "true") {
+    // If this version of banner not accepted, show it:
+    if (ebiFrameworkGetCookie(dataProtectionSettings.cookieName) != "true" && disableDataProtectionBanner === false) {
       ebiFrameworkCreateDataProtectionBanner();
     }
 
-  } catch(err) { setTimeout(ebiFrameworkRunDataProtectionBanner, 100); }
+  } catch(err) { setTimeout(function(){
+    ebiFrameworkRunDataProtectionBanner(targetedFrameworkVersion)
+  }, 100); }
 }
 
 /**
