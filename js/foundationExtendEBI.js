@@ -1,4 +1,4 @@
-// Copyright (c) EMBL-EBI 2017
+// Copyright (c) EMBL-EBI 2021
 // Authors:
 // - Ken Hawkins (khawkins@ebi.ac.uk)
 // Documentation generated with: https://github.com/documentationjs/documentation#documentation

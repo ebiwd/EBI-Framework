@@ -473,4 +473,3 @@ function ebiFrameworkIncludeAnnouncements() {
     loadRemoteAnnouncements('https://ebi.emblstatic.net/announcements.js');
   }
 }
-
