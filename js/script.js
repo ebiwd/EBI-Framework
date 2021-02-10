@@ -118,7 +118,7 @@ function ebiFrameworkManageGlobalSearch() {
 
 /**
  * Add error alerts for 'no input' on search boxes.<br/>
- * Todo: this, perhaps, shoule be moved to a value-add script file
+ * Todo: this, perhaps, should be moved to a value-add script file
  */
 function ebiFrameworkSearchNullError() {
   try {
