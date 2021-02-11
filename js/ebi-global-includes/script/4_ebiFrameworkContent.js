@@ -88,8 +88,9 @@ function ebiFrameworkPopulateBlackBar() {
       document.getElementById('masthead-black-bar').innerHTML = "";
     }
 
+    var isExpanded = document.getElementById('masthead-black-bar').className.split(/\s+/).indexOf('expanded') >= 0;
     var barContents = document.createElement("div");
-    barContents.innerHTML = '<nav class="row">'+
+    barContents.innerHTML = '<nav class="row' + (isExpanded ? ' expanded' : '' ) + '">'+
       '<ul id="global-nav" class="menu global-nav text-right">'+
         '<li class="home-mobile"><a href="https://www.ebi.ac.uk"></a></li>'+
         '<li class="where embl hide"><a href="http://www.embl.org">EMBL</a></li>'+
