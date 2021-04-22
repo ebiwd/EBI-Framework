@@ -4160,7 +4160,16 @@ body .thumbnail {
 figure.image {
   display: table;
   width: 1px;
-  padding-left: .5rem; }
+}
+
+figure.image.float-left {
+  padding-right: 1rem;
+}
+
+figure.image.float-right {
+  padding-left: 1rem;
+}
+
   figure.image img, figure.image figcaption {
     max-width: inherit; }
   figure.image figcaption {
