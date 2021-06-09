@@ -183,7 +183,7 @@ body {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
-  color: #373a36;
+  color: #0a0a0a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -2640,13 +2640,13 @@ body header nav .menu.dropdown > .has-submenu.is-down-arrow > a::after {
   margin-bottom: 9px; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #373a36; }
+  color: #0a0a0a; }
 
 a,
 a:hover,
 a:focus,
 a:active {
-  color: #373a36; }
+  color: #0a0a0a; }
 
 a:visited {
   color: #555; }

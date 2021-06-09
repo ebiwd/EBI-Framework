@@ -454,7 +454,7 @@ a.button:hover, a.button:focus {
   border: 1px solid #e6e6e6;
   border-bottom: 0;
   background-color: #fefefe;
-  color: #373a36; }
+  color: #0a0a0a; }
   :last-child > .accordion-content:last-child {
     border-bottom: 1px solid #e6e6e6; }
 
@@ -788,26 +788,26 @@ a.button:hover, a.button:focus {
   border: 1px solid rgba(10, 10, 10, 0.25);
   border-radius: 0;
   background-color: white;
-  color: #373a36; }
+  color: #0a0a0a; }
   .callout > :first-child {
     margin-top: 0; }
   .callout > :last-child {
     margin-bottom: 0; }
   .callout.primary {
     background-color: #c6fcff;
-    color: #373a36; }
+    color: #0a0a0a; }
   .callout.secondary {
     background-color: #ebebeb;
-    color: #373a36; }
+    color: #0a0a0a; }
   .callout.success {
     background-color: #e1faea;
-    color: #373a36; }
+    color: #0a0a0a; }
   .callout.warning {
     background-color: #fff3d9;
-    color: #373a36; }
+    color: #0a0a0a; }
   .callout.alert {
     background-color: #fce6e2;
-    color: #373a36; }
+    color: #0a0a0a; }
   .callout.small {
     padding-top: 0.5rem;
     padding-right: 0.5rem;
@@ -2069,10 +2069,10 @@ table {
     font-weight: 600; }
   thead {
     background: #f8f8f8;
-    color: #373a36; }
+    color: #0a0a0a; }
   tfoot {
     background: #f1f1f1;
-    color: #373a36; }
+    color: #0a0a0a; }
   thead tr,
   tfoot tr {
     background: transparent; }
