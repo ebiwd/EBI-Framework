@@ -205,12 +205,12 @@ function ebiFrameworkUpdateFoot() {
     '<a href="//www.ebi.ac.uk" title="EMBL-EBI"><span class="ebi-logo"></span></a>'  +
   '</div>' +
   '<div class="columns small-6 medium-2">' +
-    '<h5 class="services"><a class="services-color" href="//www.ebi.ac.uk/services">Services</a></h5><ul>' + ' <li class="first"><a href="//www.ebi.ac.uk/services">By topic</a></li> ' + ' <li><a href="//www.ebi.ac.uk/services/all">By name (A-Z)</a></li> ' + ' <li class="last"><a href="//www.ebi.ac.uk/support">Help &amp; Support</a></li> ' + '</ul></div>' +
+    '<h5 class="services"><a class="services-color" href="//www.ebi.ac.uk/services">Services</a></h5><ul>' + ' <li class="first"><a href="//www.ebi.ac.uk/services">By topic</a></li> ' + ' <li><a href="//www.ebi.ac.uk/services/all">By name (A-Z)</a></li> ' + ' <li><a href="//www.ebi.ac.uk/support">Help &amp; Support</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/licencing">Licencing</a></li> ' + '</ul></div>' +
   '<div class="columns small-6 medium-2">' +
     '<h5 class="research"><a class="research-color" href="//www.ebi.ac.uk/research">Research</a></h5><ul>' + ' <li><a href="//www.ebi.ac.uk/research/publications">Publications</a></li> ' + ' <li><a href="//www.ebi.ac.uk/research/groups">Research groups</a></li> ' + ' <li class="last"><a href="//www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="//www.ebi.ac.uk/research/eipp">PhDs</a></li> ' +
   '</ul></div>' +
   '<div class="columns small-6 medium-2"> ' +
-    '<h5 class="training"><a class="training-color" href="//www.ebi.ac.uk/training">Training</a></h5><ul>' + ' <li><a href="//www.ebi.ac.uk/training/live-events">Live training</a></li> ' + ' <li><a href="//www.ebi.ac.uk/training/on-demand">On-demand training</a></li> ' + ' <li><a href="//www.ebi.ac.uk/training/trainer-support">Support for trainers</a></li> ' + ' <li><a href="//www.ebi.ac.uk/training/contact-us">Contact organisers</a></li> ' +
+    '<h5 class="training"><a class="training-color" href="//www.ebi.ac.uk/training">Training</a></h5><ul>' + ' <li><a href="//www.ebi.ac.uk/training/live-events">Live training</a></li> ' + ' <li><a href="//www.ebi.ac.uk/training/on-demand">On-demand training</a></li> ' + ' <li><a href="//www.ebi.ac.uk/training/trainer-support">Support for trainers</a></li> ' +
   '</ul></div> ' +
   '<div class="columns small-6 medium-2"> ' +
     '<h5 class="industry"><a class="industry-color" href="//www.ebi.ac.uk/industry">Industry</a></h5><ul>' + ' <li><a href="//www.ebi.ac.uk/industry/private">Members Area</a></li> ' + ' <li><a href="//www.ebi.ac.uk/industry/workshops">Workshops</a></li> ' + ' <li><a href="//www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li> ' + ' <li class="last"><a href="//www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li> ' + '</ul></div> ' +
