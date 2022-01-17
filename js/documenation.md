@@ -870,162 +870,162 @@ Background: [https://github.com/ebiwd/EBI-Framework/issues/77][151]
 
 [74]: #addexternal
 
-[75]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/1_about.js#L16-L24 "Source code on GitHub"
+[75]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/1_about.js#L16-L24 "Source code on GitHub"
 
 [76]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[77]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L16-L24 "Source code on GitHub"
+[77]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L16-L24 "Source code on GitHub"
 
-[78]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/2_ebiFrameworkExternalLinks.js#L4-L35 "Source code on GitHub"
+[78]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/2_ebiFrameworkExternalLinks.js#L4-L35 "Source code on GitHub"
 
-[79]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L35-L58 "Source code on GitHub"
+[79]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L35-L58 "Source code on GitHub"
 
-[80]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/3_ebiFrameworkForms.js#L5-L80 "Source code on GitHub"
+[80]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/3_ebiFrameworkForms.js#L5-L80 "Source code on GitHub"
 
-[81]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L64-L117 "Source code on GitHub"
+[81]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L64-L117 "Source code on GitHub"
 
-[82]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/3_ebiFrameworkForms.js#L86-L130 "Source code on GitHub"
+[82]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/3_ebiFrameworkForms.js#L86-L130 "Source code on GitHub"
 
-[83]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L123-L165 "Source code on GitHub"
+[83]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L123-L165 "Source code on GitHub"
 
-[84]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L7-L10 "Source code on GitHub"
+[84]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L7-L10 "Source code on GitHub"
 
 [85]: https://stackoverflow.com/a/15983064
 
-[86]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L173-L176 "Source code on GitHub"
+[86]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L173-L176 "Source code on GitHub"
 
-[87]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L15-L24 "Source code on GitHub"
+[87]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L15-L24 "Source code on GitHub"
 
-[88]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L181-L191 "Source code on GitHub"
+[88]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L181-L191 "Source code on GitHub"
 
-[89]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L29-L32 "Source code on GitHub"
+[89]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L29-L32 "Source code on GitHub"
 
-[90]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L196-L199 "Source code on GitHub"
+[90]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L196-L199 "Source code on GitHub"
 
-[91]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L37-L39 "Source code on GitHub"
+[91]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L37-L39 "Source code on GitHub"
 
-[92]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L204-L206 "Source code on GitHub"
+[92]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L204-L206 "Source code on GitHub"
 
-[93]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L44-L60 "Source code on GitHub"
+[93]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L44-L60 "Source code on GitHub"
 
-[94]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L211-L226 "Source code on GitHub"
+[94]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L211-L226 "Source code on GitHub"
 
-[95]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L65-L79 "Source code on GitHub"
+[95]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L65-L79 "Source code on GitHub"
 
-[96]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L231-L245 "Source code on GitHub"
+[96]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L231-L245 "Source code on GitHub"
 
-[97]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L84-L124 "Source code on GitHub"
+[97]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L84-L124 "Source code on GitHub"
 
-[98]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L250-L270 "Source code on GitHub"
+[98]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L250-L270 "Source code on GitHub"
 
-[99]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L129-L132 "Source code on GitHub"
+[99]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L129-L132 "Source code on GitHub"
 
-[100]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L275-L278 "Source code on GitHub"
+[100]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L275-L278 "Source code on GitHub"
 
-[101]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L137-L200 "Source code on GitHub"
+[101]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L137-L200 "Source code on GitHub"
 
-[102]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L283-L346 "Source code on GitHub"
+[102]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L283-L346 "Source code on GitHub"
 
-[103]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L205-L290 "Source code on GitHub"
+[103]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L205-L290 "Source code on GitHub"
 
-[104]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L351-L397 "Source code on GitHub"
+[104]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L351-L397 "Source code on GitHub"
 
-[105]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L295-L325 "Source code on GitHub"
+[105]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L295-L325 "Source code on GitHub"
 
-[106]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L402-L414 "Source code on GitHub"
+[106]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L402-L414 "Source code on GitHub"
 
-[107]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L330-L344 "Source code on GitHub"
+[107]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L330-L344 "Source code on GitHub"
 
-[108]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L419-L434 "Source code on GitHub"
+[108]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L419-L434 "Source code on GitHub"
 
-[109]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L355-L389 "Source code on GitHub"
+[109]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L355-L389 "Source code on GitHub"
 
 [110]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-[111]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L445-L478 "Source code on GitHub"
+[111]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L445-L478 "Source code on GitHub"
 
-[112]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L396-L475 "Source code on GitHub"
+[112]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/4_ebiFrameworkContent.js#L396-L475 "Source code on GitHub"
 
 [113]: https://gitlab.ebi.ac.uk/ebiwd/ebi.emblstatic.net-root-assets/tree/master/src
 
-[114]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L485-L564 "Source code on GitHub"
+[114]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L485-L564 "Source code on GitHub"
 
-[115]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L5-L32 "Source code on GitHub"
+[115]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L5-L32 "Source code on GitHub"
 
 [116]: https://www.ebi.ac.uk/style-lab/websites/patterns/banner-data-protection.html
 
-[117]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L570-L592 "Source code on GitHub"
+[117]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L570-L592 "Source code on GitHub"
 
-[118]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L38-L52 "Source code on GitHub"
+[118]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L38-L52 "Source code on GitHub"
 
-[119]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L598-L612 "Source code on GitHub"
+[119]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L598-L612 "Source code on GitHub"
 
-[120]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L58-L64 "Source code on GitHub"
+[120]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L58-L64 "Source code on GitHub"
 
-[121]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L618-L625 "Source code on GitHub"
+[121]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L618-L625 "Source code on GitHub"
 
-[122]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L69-L78 "Source code on GitHub"
+[122]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L69-L78 "Source code on GitHub"
 
-[123]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L630-L639 "Source code on GitHub"
+[123]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L630-L639 "Source code on GitHub"
 
-[124]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L83-L88 "Source code on GitHub"
+[124]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L83-L88 "Source code on GitHub"
 
-[125]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L644-L649 "Source code on GitHub"
+[125]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L644-L649 "Source code on GitHub"
 
-[126]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L119-L222 "Source code on GitHub"
+[126]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L119-L222 "Source code on GitHub"
 
-[127]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L683-L765 "Source code on GitHub"
+[127]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L683-L765 "Source code on GitHub"
 
-[128]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L227-L230 "Source code on GitHub"
+[128]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L227-L230 "Source code on GitHub"
 
-[129]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L770-L773 "Source code on GitHub"
+[129]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L770-L773 "Source code on GitHub"
 
-[130]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L236-L239 "Source code on GitHub"
+[130]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js#L236-L239 "Source code on GitHub"
 
 [131]: https://github.com/ebiwd/EBI-Framework/blob/6707eff40e15036f735637413deed0dcb7392818/js/ebi-global-includes/script/5_ebiFrameworkCookieBanner.js
 
-[132]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L779-L782 "Source code on GitHub"
+[132]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L779-L782 "Source code on GitHub"
 
-[133]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/ebi-global-includes/script/6_ebiFrameworkInvokeScripts.js#L7-L20 "Source code on GitHub"
+[133]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/ebi-global-includes/script/6_ebiFrameworkInvokeScripts.js#L7-L20 "Source code on GitHub"
 
-[134]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/script.js#L793-L806 "Source code on GitHub"
+[134]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/script.js#L793-L806 "Source code on GitHub"
 
-[135]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L12-L34 "Source code on GitHub"
+[135]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L12-L34 "Source code on GitHub"
 
 [136]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[137]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L19-L26 "Source code on GitHub"
+[137]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L19-L26 "Source code on GitHub"
 
-[138]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L42-L46 "Source code on GitHub"
+[138]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L42-L46 "Source code on GitHub"
 
-[139]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L52-L52 "Source code on GitHub"
+[139]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L52-L52 "Source code on GitHub"
 
 [140]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date
 
-[141]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L71-L102 "Source code on GitHub"
+[141]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L71-L102 "Source code on GitHub"
 
 [142]: https://developer.mozilla.org/docs/Web/API/Element
 
-[143]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L111-L194 "Source code on GitHub"
+[143]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L111-L194 "Source code on GitHub"
 
-[144]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L200-L207 "Source code on GitHub"
+[144]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L200-L207 "Source code on GitHub"
 
-[145]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L213-L218 "Source code on GitHub"
+[145]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L213-L218 "Source code on GitHub"
 
-[146]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L231-L260 "Source code on GitHub"
+[146]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L231-L260 "Source code on GitHub"
 
-[147]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L265-L298 "Source code on GitHub"
+[147]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L265-L298 "Source code on GitHub"
 
-[148]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L303-L411 "Source code on GitHub"
+[148]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L303-L411 "Source code on GitHub"
 
-[149]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L416-L511 "Source code on GitHub"
+[149]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L416-L511 "Source code on GitHub"
 
-[150]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L483-L483 "Source code on GitHub"
+[150]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L483-L483 "Source code on GitHub"
 
 [151]: https://github.com/ebiwd/EBI-Framework/issues/77
 
-[152]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L488-L492 "Source code on GitHub"
+[152]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L488-L492 "Source code on GitHub"
 
-[153]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L497-L501 "Source code on GitHub"
+[153]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L497-L501 "Source code on GitHub"
 
-[154]: https://git@github.com/:ebiwd/EBI-Framework/blob/e057e3f930d956849005e24decdeb48212ff79dc/js/foundationExtendEBI.js#L506-L509 "Source code on GitHub"
+[154]: https://git@github.com/:ebiwd/EBI-Framework/blob/01f71d41e9306c4418bea0b01abc3f5bae91b9ad/js/foundationExtendEBI.js#L506-L509 "Source code on GitHub"
