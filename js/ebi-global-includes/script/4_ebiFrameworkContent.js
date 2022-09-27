@@ -299,7 +299,7 @@ function ebiFrameworkUpdateFoot() {
   '</div>' +
   '<div class="medium-up-5 small-up-2">' +
     '<div class="column">' +
-      '<h5 class="services"><a class="" href="https://www.ebi.ac.uk/services">Services</a></h5><ul>' + ' <li class="first"><a href="https://www.ebi.ac.uk/services">By topic</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/services/all">By name (A-Z)</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/support">Help &amp; Support</a></li> ' + ' <li class="first"><a href="https://www.ebi.ac.uk/licencing">Licensing</a></li> ' + '</ul></div>' +
+      '<h5 class="services"><a class="" href="https://www.ebi.ac.uk/services">Services</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/services/data-resources-and-tools">Data resources and tools</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/submission/">Data submission</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/support">Help &amp; Support</a></li> ' + ' <li class="first"><a href="https://www.ebi.ac.uk/licencing">Licensing</a></li> ' + '</ul></div>' +
     '<div class="column">' +
       '<h5 class="research"><a class="" href="https://www.ebi.ac.uk/research">Research</a></h5><ul>' + ' <li><a href="https://www.ebi.ac.uk/research/publications">Publications</a></li> ' + ' <li><a href="https://www.ebi.ac.uk/research/groups">Research groups</a></li> ' + ' <li class="last"><a href="https://www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="https://www.ebi.ac.uk/research/eipp">PhDs</a></li> ' +
     '</ul></div>' +
