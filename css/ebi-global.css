@@ -828,8 +828,8 @@ blockquote.float-left {
 
 blockquote.lead {
   margin-left: 1rem;
-  border-left-color: transparent;
-  border-right-color: transparent; }
+  border-left-color: rgba(0, 0, 0, 0);
+  border-right-color: rgba(0, 0, 0, 0); }
 
 blockquote.lead.quote:before {
   content: "“";
