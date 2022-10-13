@@ -4653,6 +4653,15 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none; }
 
+.custom-ebi-logo-bg {
+  background: no-repeat 3px 48% url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
+  background-size: 90px;
+  padding-left: 95px;
+  width: 105px; }
+
+.custom-ebi-logo-bg-transparent-text {
+  color: transparent !important; }
+
 li {
   word-wrap: break-word; }
 
