@@ -403,3 +403,13 @@
     border-color: #fff transparent transparent;
   }
 }
+
+// Fix to remove the 'x' button overlapping on search button in header section
+.ebi-header-footer .input-group {
+  width: 97% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ebi-header-footer .close-button {
+  right: -1rem !important;
+}
