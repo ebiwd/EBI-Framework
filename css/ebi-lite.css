@@ -2308,6 +2308,14 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none; }
 
+.ebi-header-footer .input-group {
+  width: 97% !important;
+  margin-left: auto;
+  margin-right: auto; }
+
+.ebi-header-footer .close-button {
+  right: -1rem !important; }
+
 .custom-ebi-logo-bg {
   background: no-repeat 3px 48% url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
   background-size: 90px;
