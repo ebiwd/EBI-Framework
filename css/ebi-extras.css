@@ -3027,15 +3027,6 @@ a.thumbnail {
     width: 88%  !important;
     margin-left: -19%  !important; } }
 
-@media only screen and (min-width: 600px) {
-  .input-group {
-    width: 84%  !important; } }
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .input-group {
-    width: 84%  !important; } }
-
 /* print styles */
 @media print {
   a, a:visited {
