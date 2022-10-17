@@ -142,3 +142,13 @@
   color: transparent !important;
   //font-size: 0 !important;
 }
+.input-group {
+  display: inline-flex !important;
+  width: 95%;
+}
+@media only screen and (max-width: 600px) {
+  .input-group {
+    width: 88%  !important;
+    margin-left: -19%  !important;
+  }
+}
