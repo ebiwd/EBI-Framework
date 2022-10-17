@@ -3018,6 +3018,15 @@ a.thumbnail {
 .custom-ebi-logo-bg-transparent-text {
   color: transparent !important; }
 
+.input-group {
+  display: inline-flex !important;
+  width: 95%; }
+
+@media only screen and (max-width: 600px) {
+  .input-group {
+    width: 88%  !important;
+    margin-left: -19%  !important; } }
+
 /* print styles */
 @media print {
   a, a:visited {

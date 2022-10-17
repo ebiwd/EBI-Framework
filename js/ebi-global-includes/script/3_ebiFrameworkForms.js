@@ -25,8 +25,9 @@ function ebiFrameworkManageGlobalSearch() {
           '</div>'+
           '<div class="row">'+
           '<form id="global-search" name="global-search" action="/ebisearch/search.ebi" method="GET" class="">' +
-              '<fieldset>' +
+              '<div>' +
                 '<div class="input-group">' +
+                  '<label class="vf-form__label vf-u-sr-only" for="global-searchbox">Search all of EMBL-EBI</label>' +
                   '<input type="text" name="query" id="global-searchbox" class="input-group-field" placeholder="Search all of EMBL-EBI">' +
                   '<div class="input-group-button">' +
                     '<input type="submit" name="submit" value="Search" class="button">' +
@@ -34,7 +35,7 @@ function ebiFrameworkManageGlobalSearch() {
                     '<input type="hidden" name="requestFrom" value="masthead-black-bar" checked="checked">' +
                   '</div>' +
                 '</div>' +
-              '</fieldset>' +
+              '</div>' +
             '</form>'+
           '</div>'+
         '</nav>';
