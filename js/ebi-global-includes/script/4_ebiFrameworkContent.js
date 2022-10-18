@@ -90,7 +90,7 @@ function ebiFrameworkPopulateBlackBar() {
 
     var barContents = document.createElement("div");
     barContents.innerHTML = '<nav class="row">'+
-      '<ul id="global-nav" class="menu global-nav text-right">'+
+        '<ul id="global-nav" class="menu global-nav text-right" data-vf-google-analytics-region="Black bar">'+
         // '<li class="home-mobile"><a href="https://www.ebi.ac.uk"></a></li>'+
         // '<li class="where embl hide"><a href="http://www.embl.org">EMBL</a></li>'+
         // '<li class="where barcelona hide"><a href="#">Barcelona</a></li>'+
@@ -98,7 +98,7 @@ function ebiFrameworkPopulateBlackBar() {
         // '<li class="where grenoble hide"><a href="#">Heidelberg</a></li>'+
         // '<li class="where grenoble hide"><a href="#">Grenoble</a></li>'+
         // '<li class="where rome hide"><a href="#">Rome</a></li>'+
-        '<li id="embl-selector" class="float-right show-for-medium embl-selector embl-ebi">' + '<a class="inline-block custom-ebi-logo-bg custom-ebi-logo-bg-transparent-text" href="https://www.ebi.ac.uk">EMBL-EBI</a>' + '</li>'+
+        '<li id="embl-selector" class="float-right show-for-medium embl-selector embl-ebi">' + '<a class="inline-block custom-ebi-logo-bg custom-ebi-logo-bg-transparent-text" href="https://www.ebi.ac.uk">EMBL-EBI Logo</a>' + '</li>'+
         '<li class="float-right search">'+
           '<a href="#" class="inline-block collpased float-left search-toggle"><span class="show-for-small-only">Search</span></a>'+
           // '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
@@ -249,6 +249,7 @@ function ebiFrameworkInsertEMBLdropdown() {
         '</div>'+
       '</div>'+
     '</nav>';
+    dropdownDiv.innerHTML = "";
     document.getElementById("masthead-black-bar").insertBefore(dropdownDiv,document.getElementById("masthead-black-bar").firstChild);
 
     var emblBar = document.querySelectorAll(".embl-bar")[0];

@@ -2320,7 +2320,7 @@ select {
   background: no-repeat 3px 48% url("../images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg");
   background-size: 90px;
   padding-left: 95px;
-  width: 105px; }
+  width: 133px; }
 
 .custom-ebi-logo-bg-transparent-text {
   color: transparent !important; }
@@ -3111,7 +3111,8 @@ body.no-global-search .masthead-black-bar ul#global-nav.menu li.search {
   .masthead ul.menu.dropdown.float-right > li:last-child {
     margin-bottom: -50px; }
   .masthead-black-bar nav ul.menu {
-    text-align: right; }
+    text-align: right;
+    padding-right: 30px !important; }
     .masthead-black-bar nav ul.menu li {
       float: none;
       display: inline-block; }
@@ -3393,9 +3394,7 @@ a.medium-gray-background, .medium-gray-background, .medium-gray-background.butto
   .masthead-black-bar.peek {
     border-top: 4px solid #EEE; }
   .masthead-black-bar li.embl-selector {
-    margin-left: 0.5rem;
-    border-left: 0.5px solid rgba(255, 255, 255, 0.5);
-    padding-left: 1.5rem; }
+    padding-left: 0.5rem; }
   .masthead-black-bar .embl-bar {
     background-color: #eee;
     color: #222; }
