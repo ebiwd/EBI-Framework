@@ -255,7 +255,7 @@ function ebiFrameworkPopulateBlackBar() {
     }
 
     var barContents = document.createElement("div");
-    barContents.innerHTML = '<nav class="row">' + '<ul id="global-nav" class="menu global-nav text-right">' +
+    barContents.innerHTML = '<nav class="row">' + '<ul id="global-nav" class="menu global-nav text-right" data-vf-google-analytics-region="Black bar">' +
     // '<li class="home-mobile"><a href="https://www.ebi.ac.uk"></a></li>'+
     // '<li class="where embl hide"><a href="http://www.embl.org">EMBL</a></li>'+
     // '<li class="where barcelona hide"><a href="#">Barcelona</a></li>'+
@@ -263,7 +263,7 @@ function ebiFrameworkPopulateBlackBar() {
     // '<li class="where grenoble hide"><a href="#">Heidelberg</a></li>'+
     // '<li class="where grenoble hide"><a href="#">Grenoble</a></li>'+
     // '<li class="where rome hide"><a href="#">Rome</a></li>'+
-    '<li id="embl-selector" class="float-right show-for-medium embl-selector embl-ebi">' + '<a class="inline-block custom-ebi-logo-bg custom-ebi-logo-bg-transparent-text" href="https://www.ebi.ac.uk">EMBL-EBI</a>' + '</li>' + '<li class="float-right search">' + '<a href="#" class="inline-block collpased float-left search-toggle"><span class="show-for-small-only">Search</span></a>' +
+    '<li id="embl-selector" class="float-right show-for-medium embl-selector embl-ebi">' + '<a class="inline-block custom-ebi-logo-bg custom-ebi-logo-bg-transparent-text" href="https://www.ebi.ac.uk">EMBL-EBI Logo</a>' + '</li>' + '<li class="float-right search">' + '<a href="#" class="inline-block collpased float-left search-toggle"><span class="show-for-small-only">Search</span></a>' +
     // '<div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">'+
     // '</div>'+
     '</li>' + '<li class="what about"><a href="https://www.ebi.ac.uk/about">About us</a></li>' + '<li class="what training"><a href="https://www.ebi.ac.uk/training">Training</a></li>' + '<li class="what research"><a href="https://www.ebi.ac.uk/research">Research</a></li>' + '<li class="what services"><a href="https://www.ebi.ac.uk/services">Services</a></li>' + '<li class="where ebi"><a href="https://www.ebi.ac.uk">EMBL-EBI</a></li>' +
@@ -369,6 +369,7 @@ function ebiFrameworkInsertEMBLdropdown() {
     '<div class="row large-up-3 medium-up-3 small-up-2 no-underline medium-11">' + '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/research/index.php"><h5 class="inline underline">Research:</h5> perform basic research in molecular biology</a></div>' + '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/services/index.html"><h5 class="inline underline">Services:</h5> offer vital services to scientists in the member states</a></div>' + '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/training/index.php"><h5 class="inline underline">Training</h5> scientists, students and visitors at all levels</a></div>' + '<div class="column padding-bottom-medium"><a class="" href="https://www.embl.de/research/tech_transfer/index.html"><h5 class="inline underline">Transfer</h5> and development of technology</a></div>' + '<div class="column padding-bottom-medium"><h5 class="inline underline">Develop</h5> new instruments and methods</div>' + '<div class="column padding-bottom-medium"><h5 class="inline underline">Integrating</h5> life science research in Europe</div>' + '</div>' + '<div class="margin-top-xlarge no-underline">' + '<h3><a href="//embl.org" class="readmore">More about EMBL</a></h3>' + '</div>' + '</div>' + '<div class="columns medium-5">' + '<div class="large-10 medium-12">' + '<h3 class="inline">Six sites</h3><p>represent EMBL in Europe.</p>' + '</div>' + '<div class="row medium-up-2 small-up-2">' + '<div class="column"><h5 class="inline"><a href="//www.embl.es/">Barcelona</a></h5><p class="">Tissue biology and disease modelling</p></div>' + '<div class="column"><h5 class="inline"><a href="//www.embl.fr/">Grenoble</a></h5><p class="">Structural biology</p></div>' + '<div class="column"><h5 class="inline"><a href="//www.embl-hamburg.de/">Hamburg</a></h5><p class="">Structural biology</p></div>' + '<div class="column"><h5 class="inline"><a href="//www.embl.de/">Heidelberg</a></h5><p class="">Main laboratory</p></div>' + '<div class="column">' + '<h5 class="inline"><a href="https://www.ebi.ac.uk/">Hinxton</a></h5>' +
     // '<span class="tag "><i class="icon icon-generic" data-icon="["></i> you are here</span>'+
     '<p class="margin-bottom-none">EMBL-EBI: European Bioinformatics Institute</p>' + '</div>' + '<div class="column"><h5 class="inline"><a href="//www.embl.it/">Rome</a></h5><p class="">Epigenetics and neurobiology</p></div>' + '</div>' + '</div>' + '</div>' + '</nav>';
+    dropdownDiv.innerHTML = "";
     document.getElementById("masthead-black-bar").insertBefore(dropdownDiv, document.getElementById("masthead-black-bar").firstChild);
 
     var emblBar = document.querySelectorAll(".embl-bar")[0];
