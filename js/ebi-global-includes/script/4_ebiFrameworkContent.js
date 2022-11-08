@@ -108,7 +108,7 @@ function ebiFrameworkPopulateBlackBar() {
         '<li class="what training"><a href="https://www.ebi.ac.uk/training">Training</a></li>'+
         '<li class="what research"><a href="https://www.ebi.ac.uk/research">Research</a></li>'+
         '<li class="what services"><a href="https://www.ebi.ac.uk/services">Services</a></li>'+
-        '<li class="where ebi"><a href="https://www.ebi.ac.uk">EMBL-EBI</a></li>'+
+        '<li class="where ebi"><a href="https://www.ebi.ac.uk">EMBL-EBI home</a></li>'+
         // '<li class="float-right embl-selector">'+
         //   '<a class="button float-right">&nbsp;</a>'+
         // '</li>'+
