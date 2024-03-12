@@ -1,3 +1,6 @@
+# This repository and old EBI framework is not supported anymore, please update your websites to use new Visual Framework - https://stable.visual-framework.dev/
+
+
 [![Build Status](https://travis-ci.org/ebiwd/EBI-Framework.svg?branch=v1.4)](https://travis-ci.org/ebiwd/EBI-Framework)
 [![Chat for support on Slack](https://img.shields.io/static/v1?label=chat&message=Slack&color=blue)](https://join.slack.com/t/visual-framework/shared_invite/enQtNDAxNzY0NDg4NTY0LWFhMjEwNGY3ZTk3NWYxNWVjOWQ1ZWE4YjViZmY1YjBkMDQxMTNlNjQ0N2ZiMTQ1ZTZiMGM4NjU5Y2E0MjM3ZGQ)
 
