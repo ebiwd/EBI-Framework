@@ -1,3 +1,6 @@
+# This repository and old EBI framework is not supported anymore, please update your websites to use new Visual Framework - https://stable.visual-framework.dev/
+
+
 # Framework v1.2 beta coming soon
 The EBI Visual Framework v1.2 is under active development and will enter beta testing in May. [Learn more about v1.2](https://github.com/ebiwd/EBI-Framework/tree/v1.2)
 
