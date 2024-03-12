@@ -1,3 +1,6 @@
+# This repository and old EBI framework is not supported anymore, please update your websites to use new Visual Framework - https://stable.visual-framework.dev/
+
+
 [![Build Status](https://travis-ci.org/ebiwd/EBI-Framework.svg?branch=v1.2)](https://travis-ci.org/ebiwd/EBI-Framework)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/ebiwd/EBI-Framework)
 
